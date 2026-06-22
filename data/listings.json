@@ -20,12 +20,12 @@
       "address": "20/10 Gow Street",
       "suburb": "Balmain",
       "postcode": "2041",
-      "property_type": "apartment",
+      "property_type": "apartment / unit / flat",
       "beds": 3,
       "baths": 2,
       "parking": 1,
       "internal_m2": 111,
-      "price_guide_text": "Guide $1,600,000",
+      "price_guide_text": "$1,600,000 (hidden guide)",
       "price_min": 1600000,
       "price_max": 1600000,
       "agent": "Harris Partners Real Estate",
@@ -33,7 +33,7 @@
       "cover_image": "https://rimh2.domainstatic.com.au/mwvkq6nagDLbnQVFnfORP9sPfzM=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2019707022_8_1_250211_113426-w5610-h3777",
       "open_homes": [],
       "auction": null,
-      "description": "Top-floor apartment in the waterfront 'Tarrawonga' community with superb water views across the bay to Cockatoo Island; north/NE aspect with excellent natural light. Features list Water Views and Area Views.",
+      "description": "Property DescriptionStunning water viewsAn exceptional apartment that rests within the highly sought after waterfront community of 'Tarrawonga'. Enjoying a top floor setting with superb vistas that span across the bay to Cockatoo Island, the apartment delivers a spacious floor plan with a stunning north and N/E exposure offering excellent natural light. An inspired and neat presentation throughout, it promises immediate enjoyment plusRead more",
       "outlook": {
         "class": "water",
         "basis": "Top-floor unit with water views across the bay to Cockatoo Island; listed feature 'Water Views'."
@@ -90,7 +90,15 @@
       "lat": -33.8531312,
       "lon": 151.1759746,
       "status": "interested",
-      "note": ""
+      "note": "",
+      "features": [
+        "Balcony / Deck*",
+        "Area Views",
+        "Close to transport",
+        "Close to shops",
+        "Close to schools",
+        "Water Views"
+      ]
     },
     {
       "url": "https://www.domain.com.au/16-162-166-victoria-road-drummoyne-nsw-2047-2020632210",
