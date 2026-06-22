@@ -15,7 +15,8 @@ Endpoints:
     GET  /                -> index.html
     GET  /data/...        -> static data files (listings.json, notes.json, ...)
     POST /api/save-notes  -> overwrites data/notes.json with the posted JSON body
-    GET  /api/health      -> {"ok": true}
+    POST /api/refresh     -> geocode missing coords + re-score all listings
+    GET  /api/health      -> {"ok": true, "refresh_available": true}
 
 The dashboard auto-detects whether it is being served (notes save to disk) or
 opened as a bare file (notes export as a downloadable notes.json instead).
@@ -24,11 +25,20 @@ opened as a bare file (notes export as a downloadable notes.json instead).
 from __future__ import annotations
 import json
 import os
+import sys
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 PORT = int(os.environ.get("DASHBOARD_PORT", "8777"))
-DASH_DIR = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+HERE = os.path.dirname(os.path.abspath(__file__))
+DASH_DIR = os.path.normpath(os.path.join(HERE, ".."))
 NOTES_PATH = os.path.join(DASH_DIR, "data", "notes.json")
+LISTINGS_PATH = os.path.join(DASH_DIR, "data", "listings.json")
+OSM_PATH = os.path.join(DASH_DIR, "data", "osm_amenities.geojson")
+
+# Import scoring and geocoding modules
+sys.path.insert(0, HERE)
+import score as score_mod
+import geocode as geocode_mod
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -46,10 +56,50 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == "/api/health":
-            return self._json(200, {"ok": True, "served": True})
+            return self._json(200, {"ok": True, "served": True, "refresh_available": True})
         return super().do_GET()
 
+    def _handle_refresh(self):
+        """Geocode missing coords and re-score all listings."""
+        try:
+            # Load listings
+            with open(LISTINGS_PATH, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+            listings = data.get("listings", [])
+
+            # Geocode any missing
+            geocoded_count, geocode_fails = geocode_mod.geocode_listings(listings)
+
+            # Load amenities and re-score
+            if os.path.exists(OSM_PATH):
+                amenities = score_mod.load_amenities(OSM_PATH)
+            else:
+                amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
+
+            for l in listings:
+                score_mod.score_listing(l, amenities)
+
+            # Update counts
+            active = [l for l in listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
+            data["counts"]["tier1_pass"] = sum(1 for l in active if l.get("tier1", {}).get("pass"))
+
+            # Write back
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as fh:
+                json.dump(data, fh, indent=2, ensure_ascii=False)
+
+            return self._json(200, {
+                "ok": True,
+                "geocoded": geocoded_count,
+                "geocode_failed": geocode_fails,
+                "total": len(listings),
+                "tier1_pass": data["counts"]["tier1_pass"]
+            })
+        except Exception as exc:
+            return self._json(500, {"ok": False, "error": str(exc)})
+
     def do_POST(self):
+        if self.path == "/api/refresh":
+            return self._handle_refresh()
         if self.path != "/api/save-notes":
             return self._json(404, {"ok": False, "error": "unknown endpoint"})
         try:

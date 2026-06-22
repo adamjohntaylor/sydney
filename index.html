@@ -413,9 +413,24 @@ document.getElementById("tierInfoBtn").addEventListener("click",()=>document.get
 document.getElementById("closeTierModal").addEventListener("click",()=>document.getElementById("tierModal").classList.add("hidden"));
 document.getElementById("tierModal").addEventListener("click",e=>{if(e.target.id==="tierModal")document.getElementById("tierModal").classList.add("hidden");});
 document.getElementById("refreshBtn").addEventListener("click",async()=>{
-  document.getElementById("saveState").textContent="reloading data…";
-  await load(); document.getElementById("saveState").textContent="reloaded.";
-  setTimeout(()=>document.getElementById("saveState").textContent="",2000);
+  const st=document.getElementById("saveState");
+  if(SERVED){
+    st.textContent="geocoding + scoring…";
+    try{
+      const r=await fetch("/api/refresh",{method:"POST"});
+      const j=await r.json();
+      if(j.ok){
+        st.textContent=`refreshed (${j.geocoded} geocoded, ${j.tier1_pass} T1 pass)`;
+        await load();
+      }else{
+        st.textContent="refresh failed: "+j.error;
+      }
+    }catch(e){st.textContent="refresh error: "+e.message;}
+  }else{
+    st.textContent="reloading data…";
+    await load(); st.textContent="reloaded.";
+  }
+  setTimeout(()=>st.textContent="",4000);
 });
 
 load();
