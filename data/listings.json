@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 92,
-    "tier1_pass": 92,
-    "new": 92,
+    "total": 107,
+    "tier1_pass": 104,
+    "new": 107,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -816,29 +816,30 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 47,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 8.8,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
@@ -1002,20 +1003,21 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -1083,13 +1085,13 @@
         "pass": true
       },
       "tier2": {
-        "score": 41,
+        "score": 47,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 8.8,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
@@ -1148,13 +1150,13 @@
         "pass": true
       },
       "tier2": {
-        "score": 41,
+        "score": 47,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 8.8,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
@@ -1321,20 +1323,21 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -1355,7 +1358,10 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
       "change_flag": "NEW",
-      "url": "https://www.domain.com.au/25-callan-street-rozelle-nsw-2039-2020922787"
+      "url": "https://www.domain.com.au/25-callan-street-rozelle-nsw-2039-2020922787",
+      "cover_image": "https://rimh2.domainstatic.com.au/K1zXuFZLvpDIhNUzsweF9uT3fNo=/1680x720/filters:format(webp):quality(85)/2020922787_1_1_260617_053117-w8192-h5464",
+      "property_type": "house",
+      "description": "Property DescriptionElevated Family Haven in a Prized Rozelle PocketPositioned in a tightly held pocket of Rozelle and elevated to capture a desirable north-west aspect, this beautifully maintained c1912 freestanding cottage offers effortless single-level living with exciting scope to further enhance and extend upwards (STCA). Combining timeless character with modern comfort, the home also benefits from generous under-house and attic storage, providing exceptionalRead more"
     },
     {
       "address": "19 Day Street",
@@ -1540,7 +1546,7 @@
     {
       "address": "38/20 Pyrmont Bridge Road",
       "suburb": "Camperdown",
-      "source": "domain_search",
+      "source": "domain",
       "price_guide_text": "$500,000",
       "price_min": 500000,
       "price_max": 500000,
@@ -1579,13 +1585,13 @@
         "pass": true
       },
       "tier2": {
-        "score": 41,
+        "score": 45,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
@@ -1597,7 +1603,10 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
       "change_flag": "NEW",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=38+20+pyrmont+bridge+road+camperdown"
+      "url": "https://www.domain.com.au/38-20-pyrmont-bridge-road-camperdown-nsw-2050-2020920092",
+      "cover_image": "https://rimh2.domainstatic.com.au/1YzE7uMpnRqP3S4tCV1gzAGG1CU=/1680x720/filters:format(webp):quality(85)/2020920092_1_1_260616_064508-w2560-h1708",
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionStriking penthouse-style living in landmark warehouse conversionHolding a prized top-floor corner position to the quiet rear of the acclaimed 'Venables' conversion, this beautifully updated residence combines warehouse scale, contemporary refinement and all-day northern sunshine. Spanning two generous levels, it delivers impressive proportions, abundant natural light and seamless indoor-outdoor living in one of Inner Sydney's most sought-after lifestyleRead more"
     },
     {
       "address": "3 Blairgowrie Street",
@@ -5558,6 +5567,916 @@
           "pool": 0,
           "parks": 0,
           "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "40 High Street",
+      "suburb": "Balmain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=40+high+street+balmain",
+      "source": "domain_search",
+      "price_guide_text": "$2,050,000",
+      "price_min": 2050000,
+      "price_max": 2050000,
+      "lat": -33.8587221,
+      "lon": 151.1736149,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 141,
+          "supermarket": 347,
+          "pool": 393,
+          "park": 121,
+          "restaurants": 261
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11+70+wigram+road+glebe",
+      "source": "domain_search",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.8782927,
+      "lon": 151.1835125,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 13,
+          "supermarket": 189,
+          "pool": 708,
+          "park": 98,
+          "restaurants": 167
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "115 Sydenham Road",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=115+sydenham+road+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.9110238,
+      "lon": 151.1640279,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 214,
+          "supermarket": 228,
+          "pool": 918,
+          "park": 176,
+          "restaurants": 28
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "24/1 Gibbens Street",
+      "suburb": "Camperdown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=24+1+gibbens+street+camperdown",
+      "source": "domain_search",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.8908812,
+      "lon": 151.1769533,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 75,
+          "supermarket": 470,
+          "pool": 465,
+          "park": 198,
+          "restaurants": 84
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "4/6 Turner Street",
+      "suburb": "Balmain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4+6+turner+street+balmain",
+      "source": "domain_search",
+      "price_guide_text": "$2,000,000",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "lat": -33.8548723,
+      "lon": 151.177015,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 99,
+          "supermarket": 221,
+          "pool": 295,
+          "park": 130,
+          "restaurants": 236
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "38/20 Pyrmont Bridge Road",
+      "suburb": "Camperdown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=38+20+pyrmont+bridge+road+camperdown",
+      "source": "domain_search",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.8850051,
+      "lon": 151.1771737,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 34,
+          "supermarket": 163,
+          "pool": 264,
+          "park": 94,
+          "restaurants": 24
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "14/19-21 Myra Road",
+      "suburb": "Dulwich Hill",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14+19+21+myra+road+dulwich+hill",
+      "source": "domain_search",
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "325/4 Elger Street",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325+4+elger+street+glebe",
+      "source": "domain_search",
+      "price_guide_text": "$1,450,000",
+      "price_min": 1450000,
+      "price_max": 1450000,
+      "lat": -33.880528,
+      "lon": 151.1932147,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 340,
+          "supermarket": 297,
+          "pool": 625,
+          "park": 144,
+          "restaurants": 115
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "13/36-46 Briggs Street",
+      "suburb": "Camperdown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13+36+46+briggs+street+camperdown",
+      "source": "domain_search",
+      "price_guide_text": "$1,450,000",
+      "price_min": 1450000,
+      "price_max": 1450000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "2H Wentworth Park Road",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe",
+      "source": "domain_search",
+      "price_guide_text": "$1,450,000",
+      "price_min": 1450000,
+      "price_max": 1450000,
+      "lat": -33.8757797,
+      "lon": 151.1901672,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 118,
+          "supermarket": 491,
+          "pool": 821,
+          "park": 177,
+          "restaurants": 114
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "04/222 Flood St Allen Street",
+      "suburb": "Leichhardt",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=04+222+flood+st+allen+street+leichhardt",
+      "source": "domain_search",
+      "price_guide_text": "$1,550,00 - $1,650,000",
+      "price_min": 155000,
+      "price_max": 155000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "63 Newman Street",
+      "suburb": "Newtown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+newman+street+newtown",
+      "source": "domain_search",
+      "price_guide_text": "$180,000 - $195,000",
+      "price_min": 180000,
+      "price_max": 180000,
+      "lat": -33.8990374,
+      "lon": 151.1808704,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 170,
+          "supermarket": 92,
+          "pool": 1156,
+          "park": 140,
+          "restaurants": 184
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "110 Palace Street",
+      "suburb": "Petersham",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=110+palace+street+petersham",
+      "source": "domain_search",
+      "price_guide_text": "$1,800,000",
+      "price_min": 1800000,
+      "price_max": 1800000,
+      "lat": -33.8899273,
+      "lon": 151.1543749,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 115,
+          "supermarket": 443,
+          "pool": 316,
+          "park": 225,
+          "restaurants": 134
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "12/72 Wrights Road",
+      "suburb": "Drummoyne",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12+72+wrights+road+drummoyne",
+      "source": "domain_search",
+      "price_guide_text": "$1,800,000",
+      "price_min": 1800000,
+      "price_max": 1800000,
+      "lat": -33.84595,
+      "lon": 151.1519808,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 113,
+          "supermarket": 598,
+          "pool": 410,
+          "park": 189,
+          "restaurants": 513
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "405/15 Ralph Street",
+      "suburb": "Alexandria",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=405+15+ralph+street+alexandria",
+      "source": "domain_search",
+      "price_guide_text": "$1,550,00 - $1,650,000",
+      "price_min": 155000,
+      "price_max": 155000,
+      "lat": -33.9182852,
+      "lon": 151.1980643,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 105,
+          "supermarket": 98,
+          "pool": 1142,
+          "park": 504,
+          "restaurants": 156
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
