@@ -413,12 +413,12 @@
       "address": "1001/2 Cowper Street",
       "suburb": "Glebe",
       "postcode": "2037",
-      "property_type": "apartment",
+      "property_type": "apartment / unit / flat",
       "beds": 3,
       "baths": 2,
       "parking": 1,
       "internal_m2": 149,
-      "price_guide_text": "Contact Agent (no guide published)",
+      "price_guide_text": "$1,898,000 (hidden guide)",
       "price_min": null,
       "price_max": null,
       "agent": "Lily Tsui",
@@ -426,7 +426,7 @@
       "cover_image": "https://rimh2.domainstatic.com.au/3ai7qr8tWt83E04O1Bth5FlS5QI=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020094347_1_1_250724_055602-w1101-h741",
       "open_homes": [],
       "auction": null,
-      "description": "North-facing penthouse in 'Mezzo' overlooking Wentworth Park, capturing stunning city views while enjoying suburb tranquility. Listed features include Park-facing North aspect, City Views and Water Views. Penthouse (floor 10) - lift present but confirm. No price guide published; confirm it sits within budget.",
+      "description": "Property DescriptionStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkThis exquisite north-facing 3-bedroom penthouse located in 'Mezzo' has it all. With its one-of-a-kind central location, it's perfectly positioned on the verge between Glebe & Pyrmont. Overlooking Wentworth Park, it captures stunning views to Sydney's CBD while still enjoying the peace and tranquility of the suburb ofRead",
       "outlook": {
         "class": "park",
         "basis": "North aspect overlooking Wentworth Park; also city and water views per feature list."
@@ -490,12 +490,12 @@
       "address": "706/3 Cary Street",
       "suburb": "Drummoyne",
       "postcode": "2047",
-      "property_type": "apartment",
+      "property_type": "apartment / unit / flat",
       "beds": 3,
       "baths": 2,
-      "parking": 2,
+      "parking": 3,
       "internal_m2": null,
-      "price_guide_text": "Auction - No price guide offered",
+      "price_guide_text": "$2,000,000 (hidden guide)",
       "price_min": null,
       "price_max": null,
       "agent": "Mario Carbone",
@@ -505,7 +505,7 @@
         "2026-06-23T17:00:00+10:00"
       ],
       "auction": null,
-      "description": "Seventh-floor apartment with sweeping water views and abundant light; open-plan living flowing to a generous balcony; pool and gym in complex. Going to auction - no guide published, confirm within budget.",
+      "description": "Property DescriptionElevated Living with Sweeping Water Views in a Prime Drummoyne SettingPositioned high on the seventh floor of a contemporary complex, this beautifully appointed apartment delivers an exceptional lifestyle of comfort, convenience and breathtaking outlooks. Showcasing expansive water views and an abundance of natural light, the open-plan living and dining area flows seamlessly to a generous balcony-perfect for entertaining or unwinding while enjoying the ever-changingRead more",
       "outlook": {
         "class": "water",
         "basis": "Seventh floor with expansive sweeping water views; listed feature 'Water Views'."
@@ -569,20 +569,20 @@
       "address": "1/48-50 Bayswater Street",
       "suburb": "Drummoyne",
       "postcode": "2047",
-      "property_type": "apartment",
+      "property_type": "apartment / unit / flat",
       "beds": 2,
       "baths": 2,
       "parking": 2,
       "internal_m2": 273,
-      "price_guide_text": "Auction - No price guide offered",
+      "price_guide_text": "$2,050,000 (hidden guide)",
       "price_min": null,
       "price_max": null,
       "agent": "Adrienne Williams",
       "agency": "BresicWhitney Balmain",
-      "cover_image": "https://rimh2.domainstatic.com.au/HAM85mxNhbCNR1ngSz9KP-Wylks=/1680x720/filters:format(webp):quality(85)/2020876929_4_1_260610_055010-w2560-h1708",
+      "cover_image": "https://rimh2.domainstatic.com.au/gEvIS2-YeHladFWJPs4sRCkm6oM=/1680x720/filters:format(webp):quality(85)/2020876929_1_1_260528_050939-w2560-h1708",
       "open_homes": [],
       "auction": "2026-06-27T12:45:00+10:00",
-      "description": "Oversized luxury residence in 'The Bayswater' (one of only eight) overlooking the greenery of Drummoyne Oval and Taplin Park and the boat-filled waters of Five Dock Bay; wrap-around indoor/outdoor entertaining. Very large 273 m2. Auction Sat 27 Jun - no guide; large/luxury, confirm within budget.",
+      "description": "Property DescriptionLuxury residence with wrap-around entertaining & bay viewsOverlooking the greenery of Drummoyne Oval, Taplin Park and the boat-filled waters of Five Dock Bay, this oversized residence within 'The Bayswater' delivers an exceptional sense of space, privacy and resort-style living. One of only eight residences within the tightly held building, it combines expansive indoor/outdoor entertaining with sweeping water outlooks and beautifully manicured surroundsRead more",
       "outlook": {
         "class": "water",
         "basis": "Overlooks Five Dock Bay waters plus Drummoyne Oval/Taplin Park greenery."
@@ -1125,7 +1125,7 @@
       "beds": 2,
       "baths": 2,
       "parking": 1,
-      "price_guide_text": "Auction - No price guide offered",
+      "price_guide_text": "$1,800,000 (hidden guide)",
       "status": "interested",
       "note": ""
     },
@@ -1263,7 +1263,7 @@
       "parking": 1,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionPeaceful lifestyle haven on tree-lined streetWarm and inviting, this lovely two-bedder sits within an intimate boutique block where leafy outlooks pour through generous picture windows, and a rare sense of calm pervades every room. Ideally placed between Marrickville and Dulwich Hill, it enjoys a rare dual-village lifestyle.- Lovely ground-floor retreat in small block of 6- Ceiling fans & timber floors t/out, 56sqm total- Bright openRead more",
-      "price_guide_text": "Auction - No price guide offered",
+      "price_guide_text": "$775,000 (hidden guide)",
       "outlook": {
         "class": "leafy",
         "basis": "Auto-detected from description"
@@ -1666,7 +1666,11 @@
       "url": "https://www.domain.com.au/38-20-pyrmont-bridge-road-camperdown-nsw-2050-2020920092",
       "cover_image": "https://rimh2.domainstatic.com.au/1YzE7uMpnRqP3S4tCV1gzAGG1CU=/1680x720/filters:format(webp):quality(85)/2020920092_1_1_260616_064508-w2560-h1708",
       "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionStriking penthouse-style living in landmark warehouse conversionHolding a prized top-floor corner position to the quiet rear of the acclaimed 'Venables' conversion, this beautifully updated residence combines warehouse scale, contemporary refinement and all-day northern sunshine. Spanning two generous levels, it delivers impressive proportions, abundant natural light and seamless indoor-outdoor living in one of Inner Sydney's most sought-after lifestyleRead more"
+      "description": "Property DescriptionStriking penthouse-style living in landmark warehouse conversionHolding a prized top-floor corner position to the quiet rear of the acclaimed 'Venables' conversion, this beautifully updated residence combines warehouse scale, contemporary refinement and all-day northern sunshine. Spanning two generous levels, it delivers impressive proportions, abundant natural light and seamless indoor-outdoor living in one of Inner Sydney's most sought-after lifestyleRead more",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "price_guide_text": "$1,400,000 (hidden guide)"
     },
     {
       "address": "3 Blairgowrie Street",

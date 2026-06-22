@@ -125,41 +125,65 @@
       data.property_type = propType.textContent.toLowerCase().trim();
     }
 
-    // Price - check top portion of page, avoid historical "sold for" prices
-    const topText = document.body.innerText.substring(0, 2500);
+    // Price - first try to find hidden price in page source (Domain uses "exact" field)
+    let foundPrice = false;
+    const pageSource = document.documentElement.innerHTML;
 
-    // Remove historical price info (anything after "sold in/for/on")
-    const cleanText = topText.replace(/(?:last\s+)?sold\s+(?:in|for|on)[^]*/i, '');
-
-    // Try to find a price guide first
-    const pricePatterns = [
-      /(?:Price Guide|Guide)[:\s]*\$([\d,]+)/i,
-      /(?:Offers? (?:Over|Above|From))[:\s]*\$([\d,]+)/i,
-      /\$([\d,]+)\s*(?:to|-)\s*\$([\d,]+)/i
+    // Look for hidden price fields in Domain's source
+    const hiddenPricePatterns = [
+      /"exactPriceV2"\s*:\s*(\d+)/i,
+      /"exactPrice"\s*:\s*(\d+)/i,
+      /"exact"\s*:\s*(\d+)/i,
+      /"priceInt"\s*:\s*(\d+)/i,
+      /"priceFrom"\s*:\s*(\d+)/i
     ];
 
-    let foundPrice = false;
-    for (const pattern of pricePatterns) {
-      const match = cleanText.match(pattern);
-      if (match && match[1]) {
-        const num = parseInt(match[1].replace(/,/g, ''));
+    for (const pattern of hiddenPricePatterns) {
+      const match = pageSource.match(pattern);
+      if (match) {
+        const num = parseInt(match[1]);
         if (num >= 100000 && num <= 50000000) {
-          data.price_guide_text = match[0].trim();
-          console.log('Found price:', data.price_guide_text);
+          data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
+          console.log('Found hidden price:', pattern, data.price_guide_text);
           foundPrice = true;
           break;
         }
       }
     }
 
-    // If no price found, check if it's an Auction or Contact Agent
+    // Fall back to visible text on page
     if (!foundPrice) {
-      if (/\bAuction\b/i.test(cleanText)) {
-        data.price_guide_text = 'Auction - No price guide offered';
-        console.log('Detected Auction with no price guide');
-      } else if (/\bContact\s*Agent\b/i.test(cleanText)) {
-        data.price_guide_text = 'Contact Agent';
-        console.log('Detected Contact Agent');
+      const topText = document.body.innerText.substring(0, 2500);
+      const cleanText = topText.replace(/(?:last\s+)?sold\s+(?:in|for|on)[^]*/i, '');
+
+      const pricePatterns = [
+        /(?:Price Guide|Guide)[:\s]*\$([\d,]+)/i,
+        /(?:Offers? (?:Over|Above|From))[:\s]*\$([\d,]+)/i,
+        /\$([\d,]+)\s*(?:to|-)\s*\$([\d,]+)/i
+      ];
+
+      for (const pattern of pricePatterns) {
+        const match = cleanText.match(pattern);
+        if (match && match[1]) {
+          const num = parseInt(match[1].replace(/,/g, ''));
+          if (num >= 100000 && num <= 50000000) {
+            data.price_guide_text = match[0].trim();
+            console.log('Found visible price:', data.price_guide_text);
+            foundPrice = true;
+            break;
+          }
+        }
+      }
+
+      // If no price found, check if it's an Auction or Contact Agent
+      if (!foundPrice) {
+        if (/\bAuction\b/i.test(cleanText)) {
+          data.price_guide_text = 'Auction - No price guide offered';
+          console.log('Detected Auction with no price guide');
+        } else if (/\bContact\s*Agent\b/i.test(cleanText)) {
+          data.price_guide_text = 'Contact Agent';
+          console.log('Detected Contact Agent');
+        }
       }
     }
 
@@ -231,29 +255,60 @@
       data.property_type = typeEl.textContent.toLowerCase().trim();
     }
 
-    // Price - only capture valid property prices
-    const reaPriceSelectors = [
-      '[class*="property-price"]',
-      '[class*="Price__price"]',
-      '[data-testid="price"]'
-    ];
-    for (const sel of reaPriceSelectors) {
-      const priceEl = document.querySelector(sel);
-      if (priceEl) {
-        const priceText = priceEl.textContent.trim();
-        // Only accept if it contains $ followed by digits, or specific keywords
-        if (/\$[\d,]+/.test(priceText)) {
-          const numMatch = priceText.match(/\$([\d,]+)/);
-          if (numMatch) {
-            const num = parseInt(numMatch[1].replace(/,/g, ''));
-            if (num >= 100000 && num <= 50000000) {
-              data.price_guide_text = priceText;
-              break;
+    // Price - first try hidden price in REA source (uses "marketing_price" field)
+    let reaFoundPrice = false;
+    const reaPageSource = document.documentElement.innerHTML;
+
+    // Look for hidden "marketing_price" in REA's source
+    const marketingMatch = reaPageSource.match(/"marketing_price"\s*:\s*"?\$?([\d,]+)/i);
+    if (marketingMatch) {
+      const num = parseInt(marketingMatch[1].replace(/,/g, ''));
+      if (num >= 100000 && num <= 50000000) {
+        data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
+        console.log('Found hidden marketing_price:', data.price_guide_text);
+        reaFoundPrice = true;
+      }
+    }
+
+    // Also try "price" fields in JSON
+    if (!reaFoundPrice) {
+      const reaPriceMatch = reaPageSource.match(/"(?:price|priceText|displayPrice)"\s*:\s*"?\$?([\d,]+)/i);
+      if (reaPriceMatch) {
+        const num = parseInt(reaPriceMatch[1].replace(/,/g, ''));
+        if (num >= 100000 && num <= 50000000) {
+          data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
+          console.log('Found hidden REA price:', data.price_guide_text);
+          reaFoundPrice = true;
+        }
+      }
+    }
+
+    // Fall back to visible price on page
+    if (!reaFoundPrice) {
+      const reaPriceSelectors = [
+        '[class*="property-price"]',
+        '[class*="Price__price"]',
+        '[data-testid="price"]'
+      ];
+      for (const sel of reaPriceSelectors) {
+        const priceEl = document.querySelector(sel);
+        if (priceEl) {
+          const priceText = priceEl.textContent.trim();
+          if (/\$[\d,]+/.test(priceText)) {
+            const numMatch = priceText.match(/\$([\d,]+)/);
+            if (numMatch) {
+              const num = parseInt(numMatch[1].replace(/,/g, ''));
+              if (num >= 100000 && num <= 50000000) {
+                data.price_guide_text = priceText;
+                reaFoundPrice = true;
+                break;
+              }
             }
+          } else if (/^\s*(contact|auction|offers|expressions)/i.test(priceText)) {
+            data.price_guide_text = priceText;
+            reaFoundPrice = true;
+            break;
           }
-        } else if (/^\s*(contact|auction|offers|expressions)/i.test(priceText)) {
-          data.price_guide_text = priceText;
-          break;
         }
       }
     }
