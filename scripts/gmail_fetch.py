@@ -263,7 +263,8 @@ def parse_emails_for_listings(emails):
 
         # If no URLs found, try extracting by address (for tracking-redirect emails)
         if not listings:
-            listings = extract_by_address(email["body"])
+            email_source = email.get("from", "domain")
+            listings = extract_by_address(email["body"], email_source)
             for lst in listings:
                 key = f"{lst.get('address', '')}|{lst.get('suburb', '')}"
                 all_listings.setdefault(key, lst)
@@ -271,21 +272,27 @@ def parse_emails_for_listings(emails):
     return list(all_listings.values())
 
 
-def generate_search_url(address: str, suburb: str) -> str:
-    """Generate a Domain search URL from address and suburb."""
+def generate_search_url(address: str, suburb: str, source: str = "domain") -> str:
+    """Generate a search URL from address and suburb for Domain or REA."""
     import re
-    # Combine address and suburb, lowercase
-    full = f"{address} {suburb}".lower()
-    # Replace slashes, hyphens, commas with spaces
-    full = re.sub(r'[/,\-]+', ' ', full)
-    # Keep only alphanumeric and spaces
-    full = re.sub(r'[^a-z0-9\s]', '', full)
-    # Collapse multiple spaces and convert to +
-    full = re.sub(r'\s+', '+', full.strip())
-    return f"https://www.domain.com.au/sale/?excludeunderoffer=1&street={full}"
+
+    if "realestate" in source.lower():
+        # REA pattern: realestate.com.au/buy?searchTerm={address}+{suburb}+NSW
+        full = f"{address} {suburb} NSW"
+        full = re.sub(r'[/,\-]+', ' ', full)
+        full = re.sub(r'[^a-zA-Z0-9\s]', '', full)
+        full = re.sub(r'\s+', '+', full.strip())
+        return f"https://www.realestate.com.au/buy?searchTerm={full}"
+    else:
+        # Domain pattern: domain.com.au/sale/?excludeunderoffer=1&street={address}+{suburb}
+        full = f"{address} {suburb}".lower()
+        full = re.sub(r'[/,\-]+', ' ', full)
+        full = re.sub(r'[^a-z0-9\s]', '', full)
+        full = re.sub(r'\s+', '+', full.strip())
+        return f"https://www.domain.com.au/sale/?excludeunderoffer=1&street={full}"
 
 
-def extract_by_address(body):
+def extract_by_address(body, email_source="domain"):
     """Extract listings by address when emails use tracking redirects instead of direct URLs."""
     import re
     import html
@@ -328,11 +335,13 @@ def extract_by_address(body):
         context = text[start:match.end() + 100]
         price_match = PRICE_RE.search(context)
 
+        # Determine source based on email sender
+        is_rea = "realestate" in email_source.lower()
         lst = {
             "address": address,
             "suburb": suburb,
-            "url": generate_search_url(address, suburb),
-            "source": "domain_search",
+            "url": generate_search_url(address, suburb, email_source),
+            "source": "rea_search" if is_rea else "domain_search",
         }
 
         if price_match:
