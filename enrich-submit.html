@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Saving Listing...</title>
+<style>
+body { font-family: system-ui, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; text-align: center; }
+.success { color: #166534; background: #dcfce7; padding: 20px; border-radius: 8px; }
+.error { color: #991b1b; background: #fee2e2; padding: 20px; border-radius: 8px; }
+.loading { color: #666; }
+h2 { margin-top: 0; }
+.details { text-align: left; margin-top: 15px; font-size: 14px; color: #666; }
+button { margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="status" class="loading">
+<h2>Saving listing data...</h2>
+<p>Please wait...</p>
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const dataStr = params.get('data');
+
+if (!dataStr) {
+  document.getElementById('status').innerHTML = '<div class="error"><h2>No data received</h2><p>Use the bookmarklet from a listing page.</p></div>';
+} else {
+  try {
+    const data = JSON.parse(decodeURIComponent(dataStr));
+
+    fetch('/api/enrich-listing', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(r => r.json())
+    .then(result => {
+      if (result.ok) {
+        document.getElementById('status').innerHTML = `
+          <div class="success">
+            <h2>Saved!</h2>
+            <p>Matched: <strong>${result.matched}</strong></p>
+            <div class="details">
+              <strong>Enriched fields:</strong><br>
+              ${result.enriched.join(', ')}
+            </div>
+          </div>
+          <button onclick="window.close()">Close</button>
+        `;
+      } else {
+        document.getElementById('status').innerHTML = `
+          <div class="error">
+            <h2>Error</h2>
+            <p>${result.error}</p>
+            <div class="details">
+              <strong>Extracted:</strong><br>
+              Address: ${data.address || 'none'}<br>
+              Suburb: ${data.suburb || 'none'}
+            </div>
+          </div>
+          <button onclick="window.close()">Close</button>
+        `;
+      }
+    })
+    .catch(err => {
+      document.getElementById('status').innerHTML = `
+        <div class="error">
+          <h2>Connection Error</h2>
+          <p>${err.message}</p>
+        </div>
+        <button onclick="window.close()">Close</button>
+      `;
+    });
+  } catch (e) {
+    document.getElementById('status').innerHTML = `
+      <div class="error">
+        <h2>Invalid data</h2>
+        <p>${e.message}</p>
+      </div>
+      <button onclick="window.close()">Close</button>
+    `;
+  }
+}
+</script>
+</body>
+</html>

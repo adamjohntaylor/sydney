@@ -23,13 +23,37 @@
       } catch (e) {}
     }
 
-    // Cover image - try og:image first, then gallery
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      data.cover_image = ogImage.content;
-    } else {
-      const galleryImg = document.querySelector('[data-testid="listing-details__gallery"] img, .listing-details__gallery img, picture img');
-      if (galleryImg) data.cover_image = galleryImg.src;
+    // Cover image - find the actual listing photo, not generic Domain images
+    // Try gallery images first (most reliable)
+    const gallerySelectors = [
+      '[data-testid="gallery"] img',
+      '[data-testid="listing-details__gallery"] img',
+      '.listing-details__gallery img',
+      '[class*="gallery"] img',
+      '[class*="carousel"] img',
+      '[class*="hero"] img',
+      'picture source[type="image/webp"]',
+      'picture img'
+    ];
+
+    for (const sel of gallerySelectors) {
+      const el = document.querySelector(sel);
+      if (el) {
+        const src = el.srcset ? el.srcset.split(',').pop().trim().split(' ')[0] : (el.src || el.getAttribute('srcset'));
+        // Only use if it's a Domain static image (rimh2.domainstatic.com.au)
+        if (src && src.includes('domainstatic.com.au')) {
+          data.cover_image = src;
+          break;
+        }
+      }
+    }
+
+    // Fallback to og:image only if it's a property image
+    if (!data.cover_image) {
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      if (ogImage && ogImage.content.includes('domainstatic.com.au')) {
+        data.cover_image = ogImage.content;
+      }
     }
 
     // Address from URL or title
@@ -97,13 +121,33 @@
   } else if (isREA) {
     // Extract from REA listing page
 
-    // Cover image
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      data.cover_image = ogImage.content;
-    } else {
-      const heroImg = document.querySelector('[class*="hero"] img, [class*="gallery"] img, [class*="carousel"] img');
-      if (heroImg) data.cover_image = heroImg.src;
+    // Cover image - find actual listing photo
+    const reaSelectors = [
+      '[class*="gallery"] img',
+      '[class*="carousel"] img',
+      '[class*="hero"] img',
+      '[class*="media"] img',
+      'picture img'
+    ];
+
+    for (const sel of reaSelectors) {
+      const el = document.querySelector(sel);
+      if (el) {
+        const src = el.src || el.getAttribute('srcset')?.split(',').pop().trim().split(' ')[0];
+        // REA images come from their CDN
+        if (src && (src.includes('reastatic.net') || src.includes('realestate.com.au'))) {
+          data.cover_image = src;
+          break;
+        }
+      }
+    }
+
+    // Fallback to og:image
+    if (!data.cover_image) {
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      if (ogImage && !ogImage.content.includes('logo')) {
+        data.cover_image = ogImage.content;
+      }
     }
 
     // Address from breadcrumb or title
@@ -155,21 +199,7 @@
   // Show what we found
   console.log('Extracted data:', data);
 
-  // Send to local server
-  fetch('http://localhost:8777/api/enrich-listing', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(r => r.json())
-  .then(result => {
-    if (result.ok) {
-      alert('Saved! Matched: ' + result.matched + '\n\nEnriched: ' + result.enriched.join(', '));
-    } else {
-      alert('Error: ' + result.error + '\n\nExtracted address: ' + (data.address || 'none') + ', ' + (data.suburb || 'none'));
-    }
-  })
-  .catch(err => {
-    alert('Error connecting to local server.\n\nMake sure python scripts/serve.py is running.\n\n' + err.message);
-  });
+  // Encode data and open localhost page (avoids HTTPS->HTTP fetch blocking)
+  const encoded = encodeURIComponent(JSON.stringify(data));
+  window.open('http://localhost:8777/enrich-submit.html?data=' + encoded, '_blank', 'width=500,height=400');
 })();
