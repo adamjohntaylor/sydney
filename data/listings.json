@@ -40,49 +40,55 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 312,
+          "supermarket": 435,
+          "pool": 120,
+          "park": 159,
+          "restaurants": 452
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 51,
+        "score": 78,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
           "living_area": 14.6,
           "warehouse_character": 0,
           "light_aspect": 6.6,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.8531312,
+      "lon": 151.1759746
     },
     {
       "url": "https://www.domain.com.au/16-162-166-victoria-road-drummoyne-nsw-2047-2020632210",
@@ -112,49 +118,55 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 9,
+          "supermarket": 85,
+          "pool": 391,
+          "park": 160,
+          "restaurants": 91
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 55,
+        "score": 82,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
           "living_area": 18.4,
           "warehouse_character": 0,
           "light_aspect": 6.6,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.8526667,
+      "lon": 151.1561084
     },
     {
       "url": "https://www.domain.com.au/301-5-yara-avenue-rozelle-nsw-2039-2020919085",
@@ -184,49 +196,55 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 92,
+          "supermarket": 416,
+          "pool": 313,
+          "park": 58,
+          "restaurants": 186
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 49,
+        "score": 76,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
           "living_area": 15.7,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.8610161,
+      "lon": 151.1667228
     },
     {
       "url": "https://www.domain.com.au/404-42c-formosa-street-drummoyne-nsw-2047-2020757988",
@@ -256,49 +274,55 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 52,
+          "supermarket": 91,
+          "pool": 573,
+          "park": 158,
+          "restaurants": 73
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 37,
+        "score": 64,
         "leading": "living-area scale",
         "components": {
           "outlook": 13.5,
           "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.8518083,
+      "lon": 151.1544237
     },
     {
       "url": "https://www.domain.com.au/60-24-buchanan-street-balmain-nsw-2041-2020779667",
@@ -332,48 +356,53 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 345,
+          "supermarket": 536,
+          "pool": 284,
+          "park": 87,
+          "restaurants": 597
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": true,
         "accessibility": true,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [
-          "transport",
-          "supplies"
-        ],
+        "unverified": [],
         "pass": true
       },
       "tier2": {
-        "score": 38,
+        "score": 65,
         "leading": "living-area scale",
         "components": {
           "outlook": 15.0,
           "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.8631843,
+      "lon": 151.1802214
     },
     {
       "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
@@ -401,50 +430,56 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 209,
+          "supermarket": 210,
+          "pool": 509,
+          "park": 98,
+          "restaurants": 183
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 53,
+        "score": 80,
         "leading": "outlook: park",
         "components": {
           "outlook": 24.0,
           "living_area": 19.9,
           "warehouse_character": 0,
           "light_aspect": 8.8,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.881512,
+      "lon": 151.1924243
     },
     {
       "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
@@ -474,50 +509,56 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 85,
+          "supermarket": 155,
+          "pool": 45,
+          "park": 68,
+          "restaurants": 192
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 45,
+        "score": 72,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 6.6,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.8566229,
+      "lon": 151.1610806
     },
     {
       "url": "https://www.domain.com.au/1-48-50-bayswater-street-drummoyne-nsw-2047-2020876929",
@@ -545,50 +586,56 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 110,
+          "supermarket": 214,
+          "pool": 791,
+          "park": 91,
+          "restaurants": 166
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 53,
+        "score": 80,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
           "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.8515261,
+      "lon": 151.1519194
     },
     {
       "url": "https://www.domain.com.au/102-106-elliott-street-balmain-nsw-2041-2020889759",
@@ -616,49 +663,55 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 170,
+          "supermarket": 617,
+          "pool": 108,
+          "park": 87,
+          "restaurants": 248
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.855651,
+      "lon": 151.1702111
     },
     {
       "url": "https://www.domain.com.au/21-59-wrights-road-drummoyne-nsw-2047-2020691952",
@@ -686,50 +739,56 @@
       },
       "warehouse_character": false,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 113,
+          "supermarket": 598,
+          "pool": 888,
+          "park": 189,
+          "restaurants": 513
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 26,
+        "score": 53,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.84595,
+      "lon": 151.1519808
     }
   ]
 }
