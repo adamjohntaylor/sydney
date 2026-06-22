@@ -62,9 +62,37 @@ if (!dataStr) {
     .then(r => r.json())
     .then(result => {
       if (result.ok) {
+        // Tier 1 verdict after the re-score
+        const t1ok = result.tier1_pass;
+        const t1Line = `<p style="margin-top:12px; font-weight:600; color:${t1ok ? '#166534' : '#991b1b'}">`
+          + `Tier 1: ${t1ok ? 'PASSES' : 'fails'}`
+          + (Array.isArray(result.tier1_fails) && result.tier1_fails.length ? ` (fails: ${result.tier1_fails.join(', ')})` : '')
+          + `</p>`;
+
+        // Criteria the new data just resolved (? -> pass/fail)
+        let resolvedLine = '';
+        if (Array.isArray(result.resolved) && result.resolved.length) {
+          const parts = result.resolved.map(r =>
+            `${r.criterion} ${r.state === 'pass' ? '&#10003;' : '&#10007;'}`);
+          resolvedLine = `<p style="margin-top:8px; font-size:13px; color:#333;">`
+            + `<strong>Resolved by this update:</strong> ${parts.join(', ')}</p>`;
+        }
+
+        // Still-unverified criteria (e.g. accessibility, zoning, walkability)
+        let unverifiedLine = '';
+        if (Array.isArray(result.tier1_unverified) && result.tier1_unverified.length) {
+          unverifiedLine = `<p style="margin-top:6px; font-size:12px; color:#92400e;">`
+            + `Still needs manual check: ${result.tier1_unverified.join(', ')}</p>`;
+        }
+
+        // Push status (auto-push; non-fatal)
+        const pushLine = (result.pushed
+          ? `<p style="margin-top:8px; font-size:12px; color:#166534;">GitHub: ${result.push_message || 'pushed'}</p>`
+          : `<p style="margin-top:8px; font-size:12px; color:#991b1b;">GitHub push failed (saved locally): ${result.push_message || 'unknown error'}</p>`);
+
         document.getElementById('status').innerHTML = `
           <div class="success">
-            <h2>Saved!</h2>
+            <h2>Saved &amp; re-scored</h2>
             <p>Matched: <strong>${result.matched}</strong></p>
             <div class="details">
               ${field('Address', data.address)}
@@ -76,7 +104,12 @@ if (!dataStr) {
               ${field('Property Type', data.property_type)}
               ${field('Cover Image', data.cover_image ? 'Yes' : null)}
             </div>
-            <p style="margin-top:15px; font-size:12px; color:#166534;"><strong>Updated:</strong> ${result.enriched.join(', ') || 'none'}</p>
+            ${t1Line}
+            ${resolvedLine}
+            ${unverifiedLine}
+            <p style="margin-top:10px; font-size:12px; color:#475569;">Re-scored ${result.rescored} listings &middot; ${result.tier1_pass_count} now pass Tier 1</p>
+            ${pushLine}
+            <p style="margin-top:10px; font-size:12px; color:#475569;">Reload the dashboard tab to see the updated marks.</p>
           </div>
           <button onclick="window.close()">Close</button>
         `;

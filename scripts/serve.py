@@ -41,6 +41,7 @@ import score as score_mod
 import geocode as geocode_mod
 import gmail_fetch as gmail_mod
 import sweep as sweep_mod
+import parse_alert_email as alert_mod
 import datetime as dt
 
 SNAP_DIR = os.path.join(DASH_DIR, "data", "snapshots")
@@ -78,40 +79,44 @@ class Handler(SimpleHTTPRequestHandler):
             return self._json(200, {"ok": True, "served": True, "refresh_available": True})
         return super().do_GET()
 
-    def _handle_push(self):
-        """Commit and push changes to GitHub."""
+    def _commit_and_push(self):
+        """Commit and push changes to GitHub. Returns (ok: bool, message: str).
+
+        Non-fatal helper: callers (e.g. enrichment) can report a push failure
+        without losing the local save that already succeeded.
+        """
         import subprocess
         try:
-            # Check if there are changes
             status = subprocess.run(
                 ["git", "status", "--porcelain"],
                 cwd=DASH_DIR, capture_output=True, text=True
             )
             if not status.stdout.strip():
-                return self._json(200, {"ok": True, "message": "Nothing to push - already up to date"})
+                return True, "Nothing to push - already up to date"
 
-            # Add all changes
             subprocess.run(["git", "add", "-A"], cwd=DASH_DIR, check=True)
-
-            # Commit
             subprocess.run(
                 ["git", "commit", "-m", "Update listings from dashboard"],
                 cwd=DASH_DIR, check=True
             )
-
-            # Push
             result = subprocess.run(
                 ["git", "push"],
                 cwd=DASH_DIR, capture_output=True, text=True
             )
             if result.returncode != 0:
-                return self._json(500, {"ok": False, "error": result.stderr})
-
-            return self._json(200, {"ok": True, "message": "Pushed to GitHub"})
+                return False, (result.stderr.strip() or "git push failed")
+            return True, "Pushed to GitHub"
         except subprocess.CalledProcessError as e:
-            return self._json(500, {"ok": False, "error": str(e)})
+            return False, str(e)
         except Exception as e:
-            return self._json(500, {"ok": False, "error": str(e)})
+            return False, str(e)
+
+    def _handle_push(self):
+        """Commit and push changes to GitHub (manual 'Push to GitHub' button)."""
+        ok, msg = self._commit_and_push()
+        if ok:
+            return self._json(200, {"ok": True, "message": msg})
+        return self._json(500, {"ok": False, "error": msg})
 
     def _handle_refresh(self):
         """Full refresh: fetch emails, geocode, score, detect changes, archive snapshot."""
@@ -341,6 +346,11 @@ class Handler(SimpleHTTPRequestHandler):
                     "error": f"No matching listing found for {address}, {suburb}"
                 })
 
+            # Snapshot the target's Tier 1 BEFORE enrichment, so we can report
+            # which criteria the new data resolved (? -> pass/fail).
+            before_t1 = dict(target.get("tier1") or {})
+            before_unverified = set(before_t1.get("unverified", []))
+
             # Update listing with enrichment data
             if item.get("url"):
                 target["url"] = item["url"]
@@ -362,6 +372,14 @@ class Handler(SimpleHTTPRequestHandler):
             new_price = item.get("price_guide_text", "")
             if new_price and ("$" in new_price or "contact" in new_price.lower() or "auction" in new_price.lower()):
                 target["price_guide_text"] = new_price
+                # Parse numeric bounds so the Tier 1 budget criterion can resolve.
+                # "Auction"/"Contact Agent" with no number -> Nones, leaving the
+                # numeric fields untouched so budget stays an honest "?".
+                _ptext, pmin, pmax = alert_mod.parse_price(new_price)
+                if pmin is not None:
+                    target["price_min"] = pmin
+                if pmax is not None:
+                    target["price_max"] = pmax
 
             # Update source to reflect direct listing
             if "domain.com.au" in item.get("url", ""):
@@ -369,14 +387,59 @@ class Handler(SimpleHTTPRequestHandler):
             elif "realestate.com.au" in item.get("url", ""):
                 target["source"] = "realestate"
 
-            # Save
+            # Re-score ALL listings (Adam's choice) so the new data flips the
+            # Tier 1 marks and any scoring-logic changes propagate globally.
+            if os.path.exists(OSM_PATH):
+                amenities = score_mod.load_amenities(OSM_PATH)
+            else:
+                amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
+            for l in listings:
+                score_mod.score_listing(l, amenities)
+
+            # Carry forward Adam's notes (status/free-text) by URL.
+            sweep_mod.carry_notes(listings, NOTES_PATH)
+
+            # Recompute header counts; preserve the last-sweep metadata
+            # (enrichment is not a new sweep, so generated_at_* stay as-is).
+            active = [l for l in listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
+            data["counts"] = sweep_mod.build_counts(active)
+
+            # Save listings.json
             with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
+
+            # Regenerate 07-property-shortlist.md so the pushed state is consistent.
+            try:
+                import render as render_mod
+                with open(SHORTLIST_PATH, "w", encoding="utf-8") as fh:
+                    fh.write(render_mod.render(data))
+            except Exception:
+                pass  # render is optional
+
+            # Which Tier 1 criteria did the new data resolve?
+            after_t1 = target.get("tier1", {})
+            after_unverified = set(after_t1.get("unverified", []))
+            after_fails = set(after_t1.get("fails", []))
+            resolved = [
+                {"criterion": k, "state": ("fail" if k in after_fails else "pass")}
+                for k in sorted(before_unverified - after_unverified)
+            ]
+
+            # Auto-push to GitHub (non-fatal: local save already succeeded).
+            push_ok, push_msg = self._commit_and_push()
 
             return self._json(200, {
                 "ok": True,
                 "matched": f"{target.get('address')}, {target.get('suburb')}",
-                "enriched": list(item.keys())
+                "enriched": list(item.keys()),
+                "rescored": len(listings),
+                "tier1_pass": bool(after_t1.get("pass")),
+                "tier1_fails": after_t1.get("fails", []),
+                "tier1_unverified": after_t1.get("unverified", []),
+                "tier1_pass_count": data["counts"]["tier1_pass"],
+                "resolved": resolved,
+                "pushed": push_ok,
+                "push_message": push_msg,
             })
         except Exception as e:
             return self._json(500, {"ok": False, "error": str(e)})

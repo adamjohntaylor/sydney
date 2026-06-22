@@ -80,6 +80,14 @@ WAREHOUSE_TOKENS = re.compile(
     r"high ceilings?|soaring ceilings?|industrial (?:heritage|character|chic))\b",
     re.I,
 )
+# Positive accessibility phrases. These are a WEAK HINT only - surfaced to prompt
+# Adam to confirm; they never set the Tier 1 accessibility verdict on their own
+# (a deal-breaker must not pass on agent marketing copy). Absence is never a fail.
+ACCESS_TOKENS = re.compile(
+    r"\b(lift|elevator|level[- ]access|step[- ]free|single[- ]level|single storey|"
+    r"single-storey|no stairs|ground floor|wheelchair|ramp access|disabled access)\b",
+    re.I,
+)
 
 # Outlook detection patterns - order matters (water > park > elevated > leafy > city)
 OUTLOOK_PATTERNS = [

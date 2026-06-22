@@ -27,8 +27,26 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DASH = os.path.join(HERE, "..")
 DATA = os.path.join(DASH, "data")
 LISTINGS_PATH = os.path.join(DATA, "listings.json")
+OSM_PATH = os.path.join(DATA, "osm_amenities.geojson")
 
 REQUEST_DELAY = 2.0  # Be nice to Domain
+
+
+def _rescore_all(data):
+    """Re-score every listing in `data` in place, so a CLI enrichment refreshes
+    the Tier 1/Tier 2 marks the same way the dashboard server's enrich path does.
+    Pure/local; falls back to empty amenities if the OSM cache isn't built."""
+    try:
+        import score as score_mod
+    except Exception:
+        return  # scoring optional; never block a save
+    listings = data.get("listings", [])
+    if os.path.exists(OSM_PATH):
+        amenities = score_mod.load_amenities(OSM_PATH)
+    else:
+        amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
+    for l in listings:
+        score_mod.score_listing(l, amenities)
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -205,6 +223,7 @@ def enrich_listings(dry_run=False, limit=None):
         time.sleep(REQUEST_DELAY)
 
     if not dry_run and enriched_count > 0:
+        _rescore_all(data)
         with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         print(f"\nEnriched {enriched_count} listings.", file=sys.stderr)
@@ -274,6 +293,9 @@ def add_url_to_listing(url: str, address: str = None, suburb: str = None):
             if not l.get("url"):
                 print(f"  - {l.get('address')}, {l.get('suburb')}", file=sys.stderr)
         return False
+
+    # Re-score so Tier 1/Tier 2 marks stay consistent with the server path.
+    _rescore_all(data)
 
     # Save
     with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
