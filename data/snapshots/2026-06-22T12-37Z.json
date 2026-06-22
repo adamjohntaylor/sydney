@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-22T12:38:34.233821+00:00",
-  "generated_at_sydney": "2026-06-22 22:38 UTC+10:00 (Sydney)",
+  "generated_at": "2026-06-22T12:37:42.183412+00:00",
+  "generated_at_sydney": "2026-06-22 22:37 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
@@ -1106,11 +1106,7 @@
       "url": "https://www.domain.com.au/24-1-gibbens-street-camperdown-nsw-2050-2020926921",
       "cover_image": "https://rimh2.domainstatic.com.au/Zy0Imd7g1mm5li1tMSIo69Zrka0=/1680x720/filters:format(webp):quality(85)/2020926921_1_1_260618_073133-w2048-h1365",
       "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionHigh-end designer living in the award-winning Sugarmill conversionShowcasing the scale, character and individuality synonymous with the award-winning Sugarmill conversion, this exceptional apartment delivers a sophisticated urban lifestyle in a peaceful cul-de-sac setting. Walls of glass and soaring vaulted ceilings enhance the sense of volume throughout, drawing in abundant natural light and highlighting the building's original warehouse influences. StrikingRead more",
-      "beds": 2,
-      "baths": 2,
-      "parking": 1,
-      "price_guide_text": "Auction - No price guide offered"
+      "description": "Property DescriptionHigh-end designer living in the award-winning Sugarmill conversionShowcasing the scale, character and individuality synonymous with the award-winning Sugarmill conversion, this exceptional apartment delivers a sophisticated urban lifestyle in a peaceful cul-de-sac setting. Walls of glass and soaring vaulted ceilings enhance the sense of volume throughout, drawing in abundant natural light and highlighting the building's original warehouse influences. StrikingRead more"
     },
     {
       "address": "4/6 Turner Street",

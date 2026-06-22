@@ -81,6 +81,40 @@ WAREHOUSE_TOKENS = re.compile(
     re.I,
 )
 
+# Outlook detection patterns - order matters (water > park > elevated > leafy > city)
+OUTLOOK_PATTERNS = [
+    ("water", re.compile(
+        r"\b(water\s*views?|harbour\s*(?:views?|bridge)|bridge\s*views?|ocean\s*views?|"
+        r"bay\s*views?|river\s*views?|waterfront|harbourside|waterside|"
+        r"sweeping\s*(?:water|harbour|ocean|bay)|panoramic\s*(?:water|harbour))\b", re.I)),
+    ("park", re.compile(
+        r"\b(park\s*views?|parkland\s*views?|overlook(?:s|ing)?\s*(?:the\s*)?park|"
+        r"green\s*views?|parkside|facing\s*(?:the\s*)?park)\b", re.I)),
+    ("elevated_district", re.compile(
+        r"\b(district\s*views?|sweeping\s*views?|panoramic\s*views?|"
+        r"elevated\s*(?:views?|position)|commanding\s*views?|uninterrupted\s*views?|"
+        r"breathtaking\s*views?|spectacular\s*views?)\b", re.I)),
+    ("leafy", re.compile(
+        r"\b(leafy\s*(?:outlook|views?|street)?|tree[- ]?lined|garden\s*views?|"
+        r"green\s*outlook|treetop\s*views?|private\s*(?:leafy|green))\b", re.I)),
+    ("city", re.compile(
+        r"\b(city\s*(?:views?|skyline|glimpses?)|skyline\s*views?|urban\s*views?|"
+        r"CBD\s*views?|city\s*lights?)\b", re.I)),
+]
+
+
+def detect_outlook_from_text(listing):
+    """Auto-detect outlook class from description text."""
+    desc = listing.get("description", "") or ""
+    # Also check any outlook basis text that might have been manually entered
+    outlook_basis = (listing.get("outlook") or {}).get("basis", "") or ""
+    text = f"{desc} {outlook_basis}".lower()
+
+    for outlook_class, pattern in OUTLOOK_PATTERNS:
+        if pattern.search(text):
+            return outlook_class
+    return None
+
 
 # ---------------------------------------------------------------------------
 # Geometry - Euclidean (great-circle) 1,500 m test  (Adam Q3 = b)
@@ -280,8 +314,17 @@ def detect_warehouse_character(listing):
 
 def tier2(listing, t1):
     comp = {}
-    # Outlook (leading)
+    # Outlook (leading) - auto-detect from description if not manually set
     oc = (listing.get("outlook") or {}).get("class")
+    if not oc or oc == "none":
+        detected = detect_outlook_from_text(listing)
+        if detected:
+            oc = detected
+            # Update the listing with detected outlook
+            if "outlook" not in listing:
+                listing["outlook"] = {}
+            listing["outlook"]["class"] = detected
+            listing["outlook"]["basis"] = f"Auto-detected from description"
     o_factor = OUTLOOK_SCORE.get(oc, OUTLOOK_SCORE[None])
     comp["outlook"] = o_factor * WEIGHTS["outlook"]
 

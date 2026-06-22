@@ -82,8 +82,10 @@
       }
     }
 
-    // Beds, baths, parking from features
-    const features = document.querySelectorAll('[data-testid="property-features__feature"], .property-features__feature, [class*="property-feature"]');
+    // Beds, baths, parking - try multiple methods
+
+    // Method 1: Look for feature elements
+    const features = document.querySelectorAll('[data-testid="property-features__feature"], .property-features__feature, [class*="property-feature"], [class*="Feature"]');
     features.forEach(f => {
       const text = f.textContent.toLowerCase();
       const num = parseInt(f.textContent);
@@ -94,7 +96,24 @@
       }
     });
 
-    // Also try structured data
+    // Method 2: Search page text for patterns like "3 Beds" or "3 bed"
+    if (!data.beds || !data.baths || !data.parking) {
+      const pageText = document.body.innerText;
+      if (!data.beds) {
+        const bedMatch = pageText.match(/(\d+)\s*[Bb]ed/);
+        if (bedMatch) data.beds = parseInt(bedMatch[1]);
+      }
+      if (!data.baths) {
+        const bathMatch = pageText.match(/(\d+)\s*[Bb]ath/);
+        if (bathMatch) data.baths = parseInt(bathMatch[1]);
+      }
+      if (!data.parking) {
+        const parkMatch = pageText.match(/(\d+)\s*(?:[Pp]arking|[Cc]ar|[Gg]arage)/);
+        if (parkMatch) data.parking = parseInt(parkMatch[1]);
+      }
+    }
+
+    // Method 3: Try structured data
     if (structured) {
       if (!data.beds && structured.numberOfBedrooms) data.beds = structured.numberOfBedrooms;
       if (!data.baths && structured.numberOfBathroomsTotal) data.baths = structured.numberOfBathroomsTotal;

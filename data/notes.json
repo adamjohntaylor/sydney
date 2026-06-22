@@ -1,1 +1,17 @@
-{}
+{
+  "https://www.domain.com.au/21-59-wrights-road-drummoyne-nsw-2047-2020691952": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-06-22T12:39:26.456Z"
+  },
+  "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-06-22T12:39:50.288Z"
+  },
+  "https://www.domain.com.au/24-1-gibbens-street-camperdown-nsw-2050-2020926921": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-06-22T12:40:39.304Z"
+  }
+}

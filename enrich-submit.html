@@ -4,12 +4,15 @@
 <meta charset="utf-8">
 <title>Saving Listing...</title>
 <style>
-body { font-family: system-ui, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; text-align: center; }
+body { font-family: system-ui, sans-serif; max-width: 500px; margin: 20px auto; padding: 20px; text-align: center; }
 .success { color: #166534; background: #dcfce7; padding: 20px; border-radius: 8px; }
 .error { color: #991b1b; background: #fee2e2; padding: 20px; border-radius: 8px; }
 .loading { color: #666; }
 h2 { margin-top: 0; }
-.details { text-align: left; margin-top: 15px; font-size: 14px; color: #666; }
+.details { text-align: left; margin-top: 15px; font-size: 13px; line-height: 1.8; }
+.field-name { color: #666; }
+.field-value { color: #333; font-weight: 500; }
+.field-value.empty { color: #999; font-style: italic; font-weight: normal; }
 button { margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
 </style>
 </head>
@@ -29,6 +32,28 @@ if (!dataStr) {
   try {
     const data = JSON.parse(decodeURIComponent(dataStr));
 
+    // Helper to format field display
+    function field(name, value) {
+      const isEmpty = !value || value === 'null' || value === 'undefined';
+      return `<span class="field-name">${name}:</span> <span class="field-value ${isEmpty ? 'empty' : ''}">${isEmpty ? '(not found)' : value}</span><br>`;
+    }
+
+    // Show extracted data immediately
+    document.getElementById('status').innerHTML = `
+      <h2>Extracted Data</h2>
+      <div class="details">
+        ${field('Address', data.address)}
+        ${field('Suburb', data.suburb)}
+        ${field('Price', data.price_guide_text)}
+        ${field('Beds', data.beds)}
+        ${field('Baths', data.baths)}
+        ${field('Parking', data.parking)}
+        ${field('Property Type', data.property_type)}
+        ${field('Cover Image', data.cover_image ? 'Yes' : null)}
+      </div>
+      <p style="color:#666; font-size:12px;">Saving...</p>
+    `;
+
     fetch('/api/enrich-listing', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -42,9 +67,16 @@ if (!dataStr) {
             <h2>Saved!</h2>
             <p>Matched: <strong>${result.matched}</strong></p>
             <div class="details">
-              <strong>Enriched fields:</strong><br>
-              ${result.enriched.join(', ')}
+              ${field('Address', data.address)}
+              ${field('Suburb', data.suburb)}
+              ${field('Price', data.price_guide_text)}
+              ${field('Beds', data.beds)}
+              ${field('Baths', data.baths)}
+              ${field('Parking', data.parking)}
+              ${field('Property Type', data.property_type)}
+              ${field('Cover Image', data.cover_image ? 'Yes' : null)}
             </div>
+            <p style="margin-top:15px; font-size:12px; color:#166534;"><strong>Updated:</strong> ${result.enriched.join(', ') || 'none'}</p>
           </div>
           <button onclick="window.close()">Close</button>
         `;
@@ -54,9 +86,9 @@ if (!dataStr) {
             <h2>Error</h2>
             <p>${result.error}</p>
             <div class="details">
-              <strong>Extracted:</strong><br>
-              Address: ${data.address || 'none'}<br>
-              Suburb: ${data.suburb || 'none'}
+              ${field('Address', data.address)}
+              ${field('Suburb', data.suburb)}
+              ${field('Price', data.price_guide_text)}
             </div>
           </div>
           <button onclick="window.close()">Close</button>
