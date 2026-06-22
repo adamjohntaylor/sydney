@@ -421,14 +421,14 @@ document.getElementById("refreshBtn").addEventListener("click",async()=>{
     }catch(e){ canRefresh = false; }
   }
   if(canRefresh){
-    st.textContent="geocoding + scoring…";
+    st.textContent="fetching emails + scoring…";
     try{
       const r=await fetch("/api/refresh",{method:"POST"});
       const j=await r.json();
       if(j.ok){
-        let msg = `rescored ${j.rescored} listings`;
-        if(j.newly_geocoded > 0) msg += `, ${j.newly_geocoded} newly geocoded`;
-        if(j.geocode_failed > 0) msg += `, ${j.geocode_failed} geocode failed`;
+        let msg = `rescored ${j.rescored}`;
+        if(j.new_from_email > 0) msg += `, ${j.new_from_email} new from email`;
+        if(j.newly_geocoded > 0) msg += `, ${j.newly_geocoded} geocoded`;
         msg += ` (${j.tier1_pass} T1 pass)`;
         st.textContent = msg;
         await load();

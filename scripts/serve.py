@@ -39,6 +39,7 @@ OSM_PATH = os.path.join(DASH_DIR, "data", "osm_amenities.geojson")
 sys.path.insert(0, HERE)
 import score as score_mod
 import geocode as geocode_mod
+import gmail_fetch as gmail_mod
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -60,9 +61,22 @@ class Handler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
     def _handle_refresh(self):
-        """Geocode missing coords and re-score all listings."""
+        """Fetch new emails, geocode missing coords, and re-score all listings."""
         try:
-            # Load listings
+            # First, try to fetch new listings from Gmail
+            new_from_email = 0
+            gmail_error = None
+            if os.path.exists(gmail_mod.IMAP_CREDS_PATH):
+                try:
+                    emails = gmail_mod.fetch_via_imap(days_back=3)
+                    if emails:
+                        parsed = gmail_mod.parse_emails_for_listings(emails)
+                        if parsed:
+                            new_from_email = gmail_mod.merge_new_listings(parsed, dry_run=False)
+                except Exception as e:
+                    gmail_error = str(e)
+
+            # Load listings (may have been updated by gmail fetch)
             with open(LISTINGS_PATH, "r", encoding="utf-8") as fh:
                 data = json.load(fh)
             listings = data.get("listings", [])
@@ -88,15 +102,19 @@ class Handler(SimpleHTTPRequestHandler):
                 json.dump(data, fh, indent=2, ensure_ascii=False)
 
             already_geocoded = sum(1 for l in listings if l.get("lat") and l.get("lon")) - geocoded_count
-            return self._json(200, {
+            result = {
                 "ok": True,
+                "new_from_email": new_from_email,
                 "newly_geocoded": geocoded_count,
                 "already_geocoded": already_geocoded,
                 "geocode_failed": geocode_fails,
                 "total": len(listings),
                 "rescored": len(listings),
                 "tier1_pass": data["counts"]["tier1_pass"]
-            })
+            }
+            if gmail_error:
+                result["gmail_error"] = gmail_error
+            return self._json(200, result)
         except Exception as exc:
             return self._json(500, {"ok": False, "error": str(exc)})
 
