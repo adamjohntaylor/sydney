@@ -106,33 +106,38 @@
       data.property_type = propType.textContent.toLowerCase().trim();
     }
 
-    // Price - only capture if it looks like a real price
-    const priceSelectors = [
-      '[data-testid="listing-details__summary-title-price"]',
-      '.listing-details__summary-title-price',
-      '[data-testid="listing-details__summary-price"]'
+    // Price - find price in page text (most reliable)
+    const allText = document.body.innerText;
+    const pricePatterns = [
+      /(?:Price Guide|Guide)[:\s]*\$([\d,]+)/i,
+      /(?:Offers? (?:Over|Above|From))[:\s]*\$([\d,]+)/i,
+      /(?:For Sale)[:\s]*\$([\d,]+)/i,
+      /\$([\d,]+)\s*(?:to|-)\s*\$([\d,]+)/i,  // Range like $1,000,000 - $1,100,000
+      /(?:Auction|Contact Agent)/i
     ];
-    for (const sel of priceSelectors) {
-      const priceEl = document.querySelector(sel);
-      if (priceEl) {
-        const priceText = priceEl.textContent.trim();
-        // Only accept if it contains $ followed by digits, or specific keywords
-        if (/\$[\d,]+/.test(priceText) || /^\s*(contact|auction|price guide|offers|expressions)/i.test(priceText)) {
-          // Validate it's a reasonable property price ($100k - $50m)
-          const numMatch = priceText.match(/\$([\d,]+)/);
-          if (numMatch) {
-            const num = parseInt(numMatch[1].replace(/,/g, ''));
-            if (num >= 100000 && num <= 50000000) {
-              data.price_guide_text = priceText;
-              break;
-            }
-          } else if (/contact|auction/i.test(priceText)) {
-            // Accept "Contact Agent" or "Auction" without a price
-            data.price_guide_text = priceText;
+
+    for (const pattern of pricePatterns) {
+      const match = allText.match(pattern);
+      if (match) {
+        if (match[1]) {
+          // Has a number
+          const num = parseInt(match[1].replace(/,/g, ''));
+          if (num >= 100000 && num <= 50000000) {
+            data.price_guide_text = match[0].trim();
+            console.log('Using price from text:', data.price_guide_text);
             break;
           }
+        } else {
+          // Auction/Contact Agent - normalize to standard message
+          const rawText = match[0].trim().toLowerCase();
+          if (rawText.includes('auction')) {
+            data.price_guide_text = 'Auction - No price guide offered';
+          } else {
+            data.price_guide_text = 'Contact Agent';
+          }
+          console.log('Using price from text:', data.price_guide_text);
+          break;
         }
-        break;
       }
     }
 

@@ -183,6 +183,53 @@ class Handler(SimpleHTTPRequestHandler):
             print("Step 9: Carrying forward notes...", file=sys.stderr, flush=True)
             sweep_mod.carry_notes(all_listings, NOTES_PATH)
 
+            # Step 9b: Remove duplicates (by address+suburb, keeping best data)
+            print("Step 9b: Removing duplicates...", file=sys.stderr, flush=True)
+            seen = {}
+            no_address = []  # Keep listings without addresses
+            for l in all_listings:
+                addr = l.get("address", "").lower().strip()
+                suburb = l.get("suburb", "").lower().strip()
+                if not addr:
+                    no_address.append(l)
+                    continue
+                key = f"{addr}|{suburb}"
+
+                if key not in seen:
+                    seen[key] = l
+                else:
+                    # Keep the one with better data (photo, direct URL, beds info)
+                    existing = seen[key]
+                    existing_score = sum([
+                        10 if existing.get("cover_image") else 0,
+                        5 if existing.get("url") and "excludeunderoffer" not in existing.get("url", "") else 0,
+                        2 if existing.get("beds") else 0,
+                        1 if existing.get("price_guide_text") else 0,
+                    ])
+                    new_score = sum([
+                        10 if l.get("cover_image") else 0,
+                        5 if l.get("url") and "excludeunderoffer" not in l.get("url", "") else 0,
+                        2 if l.get("beds") else 0,
+                        1 if l.get("price_guide_text") else 0,
+                    ])
+                    if new_score > existing_score:
+                        seen[key] = l
+                        print(f"  Replaced duplicate: {addr}, {suburb}", file=sys.stderr, flush=True)
+                    else:
+                        print(f"  Removed duplicate: {addr}, {suburb}", file=sys.stderr, flush=True)
+
+            dupes_removed = len(all_listings) - len(seen) - len(no_address)
+            all_listings = list(seen.values()) + no_address
+            if dupes_removed:
+                print(f"  Removed {dupes_removed} duplicates", file=sys.stderr, flush=True)
+
+            # Step 9c: Normalize Auction prices
+            for l in all_listings:
+                price = l.get("price_guide_text", "").strip().lower()
+                # If it's just "Auction" or similar without a price guide
+                if price and "auction" in price and not any(c.isdigit() for c in price):
+                    l["price_guide_text"] = "Auction - No price guide offered"
+
             # Step 10: Build output data
             print("Step 10: Building output...", file=sys.stderr, flush=True)
             active = [l for l in all_listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
@@ -229,6 +276,7 @@ class Handler(SimpleHTTPRequestHandler):
                 "newly_geocoded": geocoded_count,
                 "already_geocoded": already_geocoded,
                 "geocode_failed": geocode_fails,
+                "duplicates_removed": dupes_removed,
                 "total": len(all_listings),
                 "rescored": len(all_listings),
                 "tier1_pass": out["counts"]["tier1_pass"],

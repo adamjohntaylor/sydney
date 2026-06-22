@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-22T12:13:24.517031+00:00",
-  "generated_at_sydney": "2026-06-22 22:13 UTC+10:00 (Sydney)",
+  "generated_at": "2026-06-22T12:03:16.437816+00:00",
+  "generated_at_sydney": "2026-06-22 22:03 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 63,
-    "tier1_pass": 58,
+    "total": 74,
+    "tier1_pass": 70,
     "new": 18,
     "price_changed": 0,
     "sold": 0,
@@ -492,7 +492,7 @@
       "baths": 2,
       "parking": 2,
       "internal_m2": null,
-      "price_guide_text": "Auction - No price guide offered",
+      "price_guide_text": "Auction (no guide published)",
       "price_min": null,
       "price_max": null,
       "agent": "Mario Carbone",
@@ -571,7 +571,7 @@
       "baths": 2,
       "parking": 2,
       "internal_m2": 273,
-      "price_guide_text": "Auction - No price guide offered",
+      "price_guide_text": "Contact agent (auction; no guide published)",
       "price_min": null,
       "price_max": null,
       "agent": "Adrienne Williams",
@@ -1619,8 +1619,8 @@
     {
       "address": "3 Blairgowrie Street",
       "suburb": "Dulwich Hill",
-      "url": "https://www.domain.com.au/3-blairgowrie-street-dulwich-hill-nsw-2203-2020919249",
-      "source": "domain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3+blairgowrie+street+dulwich+hill",
+      "source": "domain_search",
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -1638,22 +1638,21 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": false,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [
-          "property_type"
-        ],
+        "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility",
           "bedrooms"
         ],
-        "pass": false
+        "pass": true
       },
       "tier2": {
         "score": 41,
@@ -1676,11 +1675,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.8960572,
-      "lon": 151.1400035,
-      "cover_image": "https://rimh2.domainstatic.com.au/D--2A3D6DxRnvqOYS1coI7lbf8U=/1680x720/filters:format(webp):quality(85)/2020919249_1_1_260616_044025-w2048-h1366",
-      "property_type": "house",
-      "description": "Property DescriptionTurn-Key Home in a Convenient Transport LocationSet in the heart of Dulwich Hill, this beautifully presented home combines timeless character with modern updates in a highly convenient inner-west location.Inside, the home features three generously sized bedrooms, all with built-in wardrobes, complemented by striking high, original ceilings that enhance the sense of space and light throughout.At its heart is a recently renovated kitchenRead more",
-      "price_guide_text": "$790,000 - $830,000"
+      "lon": 151.1400035
     },
     {
       "address": "2712/6 Grove Street",
@@ -2190,48 +2185,44 @@
       "price_min": 920000,
       "price_max": 920000,
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 104,
-          "supermarket": 35,
-          "pool": 872,
-          "park": 46,
-          "restaurants": 53
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -2240,9 +2231,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "lat": -33.8959429,
-      "lon": 151.1823277
+      "days_on_market": 0
     },
     {
       "address": "802/6 Paul Street",
@@ -2929,6 +2918,59 @@
       "days_on_market": 0
     },
     {
+      "url": "https://www.realestate.com.au/sold/property-house-vic-parkville-151316176",
+      "source": "realestate",
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
       "address": "14/19-21 Myra Road",
       "suburb": "Dulwich Hill",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14+19+21+myra+road+dulwich+hill",
@@ -3434,8 +3476,441 @@
       "days_on_market": 0
     },
     {
-      "url": "https://www.realestate.com.au/sold/property-house-vic-parkville-151316176",
-      "source": "realestate",
+      "address": "40 High Street",
+      "suburb": "Balmain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=40+high+street+balmain",
+      "source": "domain_search",
+      "price_guide_text": "$2,050,000",
+      "price_min": 2050000,
+      "price_max": 2050000,
+      "lat": -33.8589614,
+      "lon": 151.1741629,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 193,
+          "supermarket": 334,
+          "pool": 336,
+          "park": 81,
+          "restaurants": 305
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11+70+wigram+road+glebe",
+      "source": "domain_search",
+      "lat": -33.8792428,
+      "lon": 151.1813574,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 184,
+          "supermarket": 358,
+          "pool": 758,
+          "park": 127,
+          "restaurants": 368
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "115 Sydenham Road",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=115+sydenham+road+marrickville",
+      "source": "domain_search",
+      "lat": -33.9091623,
+      "lon": 151.1616236,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 96,
+          "supermarket": 68,
+          "pool": 947,
+          "park": 146,
+          "restaurants": 66
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "24/1 Gibbens Street",
+      "suburb": "Camperdown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=24+1+gibbens+street+camperdown",
+      "source": "domain_search",
+      "lat": -33.8907113,
+      "lon": 151.1763679,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 105,
+          "supermarket": 455,
+          "pool": 470,
+          "park": 165,
+          "restaurants": 41
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "4/6 Turner Street",
+      "suburb": "Balmain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4+6+turner+street+balmain",
+      "source": "domain_search",
+      "price_guide_text": "$2,000,000",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "lat": -33.8545863,
+      "lon": 151.1769232,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 130,
+          "supermarket": 252,
+          "pool": 263,
+          "park": 116,
+          "restaurants": 268
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "25 Callan Street",
+      "suburb": "Rozelle",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=25+callan+street+rozelle",
+      "source": "domain_search",
+      "lat": -33.8627206,
+      "lon": 151.1655171,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 151,
+          "supermarket": 396,
+          "pool": 528,
+          "park": 103,
+          "restaurants": 334
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "19 Day Street",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19+day+street+marrickville",
+      "source": "domain_search",
+      "lat": -33.9187579,
+      "lon": 151.1482122,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 145,
+          "supermarket": 313,
+          "pool": 1003,
+          "park": 85,
+          "restaurants": 251
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "38/20 Pyrmont Bridge Road",
+      "suburb": "Camperdown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=38+20+pyrmont+bridge+road+camperdown",
+      "source": "domain_search",
       "catchments": {
         "transport": null,
         "supermarket": null,
@@ -3457,6 +3932,63 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "301/5 Yara Avenue",
+      "suburb": "Rozelle",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=301+5+yara+avenue+rozelle",
+      "source": "domain_search",
+      "price_guide_text": "$1,400,000",
+      "price_min": 1400000,
+      "price_max": 1400000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
           "property_type",
           "accessibility",
           "bedrooms",
@@ -3881,6 +4413,124 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "103/12 Marsden Street",
+      "suburb": "Camperdown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=103+12+marsden+street+camperdown",
+      "source": "domain_search",
+      "lat": -33.8871885,
+      "lon": 151.1784585,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 103,
+          "supermarket": 146,
+          "pool": 36,
+          "park": 143,
+          "restaurants": 122
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 0
+    },
+    {
+      "address": "3/58 Warren Road",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3+58+warren+road+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$1,000,000",
+      "price_min": 1000000,
+      "price_max": 1000000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
           "property_type",
           "accessibility",
           "bedrooms",
