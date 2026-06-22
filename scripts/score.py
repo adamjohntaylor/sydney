@@ -258,7 +258,9 @@ def tier1(listing):
         if ACCESS_TOKENS.search(desc_acc):
             c["accessibility_hint"] = True
 
-    # Bedrooms - apartments >=2, cottages 2.
+    # Bedrooms - apartments >=2 (2 min, 3 preferred); houses/cottages exactly 2.
+    # Confirmed 23 June 2026 (decision #28) after considering, then rejecting, a
+    # uniform >=2 rule: a 3-bed house is out of brief on both bedrooms and type.
     beds = listing.get("beds")
     if beds is None:
         c["bedrooms"] = None
