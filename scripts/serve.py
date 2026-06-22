@@ -35,11 +35,16 @@ NOTES_PATH = os.path.join(DASH_DIR, "data", "notes.json")
 LISTINGS_PATH = os.path.join(DASH_DIR, "data", "listings.json")
 OSM_PATH = os.path.join(DASH_DIR, "data", "osm_amenities.geojson")
 
-# Import scoring and geocoding modules
+# Import scoring, geocoding, and sweep modules
 sys.path.insert(0, HERE)
 import score as score_mod
 import geocode as geocode_mod
 import gmail_fetch as gmail_mod
+import sweep as sweep_mod
+import datetime as dt
+
+SNAP_DIR = os.path.join(DASH_DIR, "data", "snapshots")
+SHORTLIST_PATH = os.path.join(DASH_DIR, "..", "07-property-shortlist.md")
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -109,61 +114,116 @@ class Handler(SimpleHTTPRequestHandler):
             return self._json(500, {"ok": False, "error": str(e)})
 
     def _handle_refresh(self):
-        """Fetch new emails, geocode missing coords, and re-score all listings."""
+        """Full refresh: fetch emails, geocode, score, detect changes, archive snapshot."""
         try:
-            # First, try to fetch new listings from Gmail
+            syd = sweep_mod.now_sydney()
+            today = syd.date().isoformat()
+
+            # Step 1: Fetch new listings from Gmail
             new_from_email = 0
             gmail_error = None
+            new_listings_raw = []
             if os.path.exists(gmail_mod.IMAP_CREDS_PATH):
                 try:
                     emails = gmail_mod.fetch_via_imap(days_back=3)
                     if emails:
-                        parsed = gmail_mod.parse_emails_for_listings(emails)
-                        if parsed:
-                            new_from_email = gmail_mod.merge_new_listings(parsed, dry_run=False)
+                        new_listings_raw = gmail_mod.parse_emails_for_listings(emails)
                 except Exception as e:
                     gmail_error = str(e)
 
-            # Load listings (may have been updated by gmail fetch)
-            with open(LISTINGS_PATH, "r", encoding="utf-8") as fh:
-                data = json.load(fh)
-            listings = data.get("listings", [])
+            # Step 2: Load existing listings
+            prior_listings = []
+            if os.path.exists(LISTINGS_PATH):
+                with open(LISTINGS_PATH, "r", encoding="utf-8") as fh:
+                    prior_data = json.load(fh)
+                prior_listings = prior_data.get("listings", [])
 
-            # Geocode any missing
-            geocoded_count, geocode_fails = geocode_mod.geocode_listings(listings)
+            # Step 3: Geocode new listings
+            if new_listings_raw:
+                geocode_mod.geocode_listings(new_listings_raw, max_per_run=10)
 
-            # Load amenities and re-score
+            # Step 4: Load amenities for scoring
             if os.path.exists(OSM_PATH):
                 amenities = score_mod.load_amenities(OSM_PATH)
             else:
                 amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
 
-            for l in listings:
+            # Step 5: Score new listings
+            for l in new_listings_raw:
                 score_mod.score_listing(l, amenities)
 
-            # Update counts
-            active = [l for l in listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
-            data["counts"]["tier1_pass"] = sum(1 for l in active if l.get("tier1", {}).get("pass"))
+            # Step 6: Merge new into existing (incremental mode - no WITHDRAWN on absence)
+            if new_listings_raw:
+                all_listings = sweep_mod.merge_incremental(new_listings_raw, prior_listings, today)
+                new_from_email = len([l for l in all_listings if l.get("change_flag") == "NEW"]) - \
+                                 len([l for l in prior_listings if l.get("change_flag") == "NEW"])
+                new_from_email = max(0, new_from_email)
+            else:
+                all_listings = prior_listings
 
-            # Write back
+            # Step 7: Re-geocode any still missing coords
+            geocoded_count, geocode_fails = geocode_mod.geocode_listings(all_listings, max_per_run=10)
+
+            # Step 8: Re-score all listings
+            for l in all_listings:
+                score_mod.score_listing(l, amenities)
+
+            # Step 9: Carry forward notes
+            sweep_mod.carry_notes(all_listings, NOTES_PATH)
+
+            # Step 10: Build output data
+            active = [l for l in all_listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
+            out = {
+                "schema_version": 1,
+                "generated_at": syd.astimezone(dt.timezone.utc).isoformat(),
+                "generated_at_sydney": syd.strftime("%Y-%m-%d %H:%M %Z (Sydney)"),
+                "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
+                "budget_ceiling": score_mod.BUDGET_CEILING,
+                "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
+                "counts": sweep_mod.build_counts(active),
+                "listings": all_listings,
+            }
+
+            # Step 11: Write listings.json
             with open(LISTINGS_PATH, "w", encoding="utf-8") as fh:
-                json.dump(data, fh, indent=2, ensure_ascii=False)
+                json.dump(out, fh, indent=2, ensure_ascii=False)
 
-            already_geocoded = sum(1 for l in listings if l.get("lat") and l.get("lon")) - geocoded_count
+            # Step 12: Archive snapshot
+            os.makedirs(SNAP_DIR, exist_ok=True)
+            snap_name = syd.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H-%M") + "Z.json"
+            with open(os.path.join(SNAP_DIR, snap_name), "w", encoding="utf-8") as fh:
+                json.dump(out, fh, indent=2, ensure_ascii=False)
+
+            # Step 13: Regenerate 07-property-shortlist.md
+            shortlist_updated = False
+            try:
+                import render as render_mod
+                md = render_mod.render(out)
+                with open(SHORTLIST_PATH, "w", encoding="utf-8") as fh:
+                    fh.write(md)
+                shortlist_updated = True
+            except Exception:
+                pass  # render is optional
+
+            already_geocoded = sum(1 for l in all_listings if l.get("lat") and l.get("lon")) - geocoded_count
             result = {
                 "ok": True,
                 "new_from_email": new_from_email,
                 "newly_geocoded": geocoded_count,
                 "already_geocoded": already_geocoded,
                 "geocode_failed": geocode_fails,
-                "total": len(listings),
-                "rescored": len(listings),
-                "tier1_pass": data["counts"]["tier1_pass"]
+                "total": len(all_listings),
+                "rescored": len(all_listings),
+                "tier1_pass": out["counts"]["tier1_pass"],
+                "snapshot": snap_name,
+                "shortlist_updated": shortlist_updated
             }
             if gmail_error:
                 result["gmail_error"] = gmail_error
             return self._json(200, result)
         except Exception as exc:
+            import traceback
+            traceback.print_exc()
             return self._json(500, {"ok": False, "error": str(exc)})
 
     def _handle_enrich_listing(self):

@@ -1366,7 +1366,7 @@
     {
       "address": "19 Day Street",
       "suburb": "Marrickville",
-      "source": "domain_search",
+      "source": "domain",
       "price_guide_text": "$775,000",
       "price_min": 775000,
       "price_max": 775000,
@@ -1423,7 +1423,10 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
       "change_flag": "NEW",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19+day+street+marrickville"
+      "url": "https://www.domain.com.au/19-day-street-marrickville-nsw-2204-2020921673",
+      "cover_image": "https://rimh2.domainstatic.com.au/NKhVUXSODoNc-vTQvrJxCqWuons=/1680x720/filters:format(webp):quality(85)/2020921673_1_1_260617_021711-w3748-h2502",
+      "property_type": "house",
+      "description": "Property DescriptionOutstanding family haven near Cooks RiverWithin the coveted 'Warren Estate,' this skylit Federation semi has been beautifully reimagined for the modern family, its entire top floor devoted to a private parents' sanctuary with a balcony, ensuite and home office. Steel Park and the new Metro shape the neighbourhood just beyond.- Exceptional Federation semi on 188sqm parcel- Architect-designed renovation by Studio Prineas - TimberRead more"
     },
     {
       "address": "27/486-488 Illawarra Road",
