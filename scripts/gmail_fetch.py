@@ -346,8 +346,7 @@ def extract_by_address(body, email_source="domain"):
 
         if price_match:
             price_text = price_match.group(0)
-            lst["price_guide_text"] = price_text
-            # Parse numeric price
+            # Parse numeric price and validate it's reasonable for Sydney property
             nums = re.findall(r"[\d,]+", price_text.replace(",", ""))
             if nums:
                 try:
@@ -358,8 +357,11 @@ def extract_by_address(body, email_source="domain"):
                         val = int(val * 1_000)
                     elif val < 10000:  # Likely millions written as 1.5 etc
                         val = int(val * 1_000_000)
-                    lst["price_min"] = val
-                    lst["price_max"] = val
+                    # Only accept prices in reasonable Sydney range ($800k - $10m)
+                    if 800_000 <= val <= 10_000_000:
+                        lst["price_guide_text"] = price_text
+                        lst["price_min"] = val
+                        lst["price_max"] = val
                 except ValueError:
                     pass
 
@@ -377,13 +379,25 @@ def merge_new_listings(new_listings, dry_run=False):
     if os.path.exists(LISTINGS_PATH):
         with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
-        existing = {l.get("url"): l for l in data.get("listings", [])}
+        existing_by_url = {l.get("url"): l for l in data.get("listings", []) if l.get("url")}
+        existing_by_addr = {f"{l.get('address', '').lower()}|{l.get('suburb', '').lower()}": l
+                           for l in data.get("listings", []) if l.get("address")}
     else:
         data = {"listings": [], "counts": {}}
-        existing = {}
+        existing_by_url = {}
+        existing_by_addr = {}
 
-    # Find truly new listings
-    truly_new = [l for l in new_listings if l.get("url") not in existing]
+    # Find truly new listings (check both URL and address+suburb)
+    truly_new = []
+    for l in new_listings:
+        url = l.get("url", "")
+        addr_key = f"{l.get('address', '').lower()}|{l.get('suburb', '').lower()}"
+
+        if url in existing_by_url:
+            continue  # Already have this URL
+        if addr_key in existing_by_addr:
+            continue  # Already have this address
+        truly_new.append(l)
     print(f"Found {len(truly_new)} new listings (of {len(new_listings)} parsed)", file=sys.stderr)
 
     if not truly_new:
