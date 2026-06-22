@@ -101,9 +101,12 @@ absence. Don't use it with new-only alert data.)*
 ## The criteria, as encoded (see `scripts/score.py`)
 
 **Tier 1 (pass/fail; `None` = can't tell → flagged, never a silent fail):**
-budget ≤ $2.2M · property type (apartment / ≤2BR cottage / warehouse-conversion;
-raw shells excluded, Q2) · step-free + lift · beds (apt ≥2, cottage 2) · transport
-≤1.5km · daily supplies ≤1.5km · in target area · zoning E1/E2/MU1 for warehouse stock.
+budget ≤ $2.2M · property type (apartment, warehouse-conversion, OR freestanding
+house/cottage/semi/terrace/townhouse — decision #28 lifted the ≤2BR-cottage cap;
+raw shells excluded; type label matched by token, so "apartment / unit / flat"
+resolves) · step-free + lift · beds **≥2 for all types** (decision #28; 3 preferred
+for apartments) · transport ≤1.5km · daily supplies ≤1.5km · in target area ·
+zoning E1/E2/MU1 for warehouse stock.
 
 **Step-free / lift** resolves in priority order: (1) your **manual verdict** in the
 listing drawer (Step-free / Lift = yes/no/unknown, saved to `notes.json`) is

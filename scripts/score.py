@@ -209,19 +209,28 @@ def tier1(listing):
     guide = pmin if pmin is not None else pmax
     c["budget"] = (guide is not None and guide <= BUDGET_CEILING) if guide is not None else None
 
-    # Property type (Adam Q2): apartment, OR 2BR brick/stone cottage, OR
-    # warehouse-conversion apartment meeting Tier 1. Raw shells excluded.
-    ptype = (listing.get("property_type") or "").lower()
+    # Property type: apartment, warehouse-conversion apartment, OR a freestanding
+    # house / cottage. The earlier ≤2-bedroom cottage cap was LIFTED 23 June 2026
+    # (decision #28) - houses are now an admissible type in their own right; the
+    # ≥2 bedroom floor is enforced by the bedrooms criterion below, exactly as for
+    # apartments. Raw shells remain excluded; unknown/empty stays None (?).
+    #
+    # Matching is TOKEN-BASED, not exact: listings carry compound labels like
+    # "apartment / unit / flat" (Domain's category string), which an exact-equality
+    # test missed - leaving property type as "?" across most of the board. We test
+    # for any known dwelling token as a substring instead.
+    ptype = (listing.get("property_type") or "").lower().strip()
     is_shell = bool(listing.get("is_raw_shell"))
+    APT_TOKENS = ("apartment", "unit", "flat", "studio", "penthouse", "warehouse")
+    HOUSE_TOKENS = ("house", "cottage", "semi", "duplex", "terrace", "villa", "townhouse")
+    is_apt_type = any(t in ptype for t in APT_TOKENS)
+    is_residential = is_apt_type or any(t in ptype for t in HOUSE_TOKENS)
     if is_shell:
         c["property_type"] = False
-    elif ptype in ("apartment", "unit", "flat", "warehouse_conversion", "townhouse"):
-        c["property_type"] = True
-    elif ptype in ("house", "cottage", "semi", "duplex"):
-        beds = listing.get("beds")
-        c["property_type"] = (beds is not None and beds <= 2)
-    elif ptype == "":
+    elif not ptype:
         c["property_type"] = None
+    elif is_residential:
+        c["property_type"] = True
     else:
         c["property_type"] = None
 
@@ -234,7 +243,7 @@ def tier1(listing):
     #      needs an inspection). Flagged accessibility_provisional for the UI.
     #   3. Otherwise unknown (None). A positive description phrase sets accessibility_hint
     #      (a prompt to confirm) but never the verdict itself.
-    apt_type = ptype in ("apartment", "unit", "flat", "warehouse_conversion")
+    apt_type = is_apt_type  # building-type dwelling (lift required); set above
     acc = listing.get("accessibility")  # expected: True / False / None / dict
     if isinstance(acc, dict):
         step_free = acc.get("step_free")
@@ -258,14 +267,13 @@ def tier1(listing):
         if ACCESS_TOKENS.search(desc_acc):
             c["accessibility_hint"] = True
 
-    # Bedrooms - apartments >=2 (2 min, 3 preferred); houses/cottages exactly 2.
-    # Confirmed 23 June 2026 (decision #28) after considering, then rejecting, a
-    # uniform >=2 rule: a 3-bed house is out of brief on both bedrooms and type.
+    # Bedrooms - 2 or more for all dwelling types (apartments and houses/cottages
+    # alike); 1 (or 0) fails; unknown -> None. House ≥2 set 23 June 2026 (decision
+    # #28). NB: property_type separately still caps houses at ≤2 beds unless that
+    # cap is also lifted.
     beds = listing.get("beds")
     if beds is None:
         c["bedrooms"] = None
-    elif ptype in ("house", "cottage", "semi", "duplex"):
-        c["bedrooms"] = beds == 2
     else:
         c["bedrooms"] = beds >= 2
 

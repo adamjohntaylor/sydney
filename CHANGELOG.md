@@ -38,6 +38,28 @@ not only `?`→✓.)
   branches of budget, bedrooms, accessibility provenance/override/hint, plus the
   decision-#17 warehouse-credit interaction) — all green.
 
+### Criteria changes & fixes (later same day — decision #28)
+
+- **Bedrooms → ≥2 for all dwelling types** (was apartments ≥2 / cottages exactly 2). 3 still
+  preferred for apartments; dwelling scale is a Tier 2 matter, not a bedroom ceiling.
+- **Property type broadened** — freestanding houses/cottages/semis/terraces/townhouses are now
+  admissible in their own right (the ≤2-bedroom cottage cap of #14 is lifted); raw shells still
+  excluded. Amends decisions #5/#14.
+- **Property-type matching bug fixed** — most listings carry Domain's compound label
+  `"apartment / unit / flat"`, which the old *exact-equality* test didn't match, so property
+  type read `?` across most of the board. Matching is now **token/substring-based**
+  (`APT_TOKENS` / `HOUSE_TOKENS`); the lift requirement (accessibility) still keys off
+  apartment-type buildings only, not houses.
+- **"T1 Fail!" stamp** — cards whose `tier1.pass === false` now show a rotated red "T1 Fail!"
+  stamp (top-right), via a `.t1stamp` style and a conditional in `card()`. Listings with only
+  `?` items (no determinable fail) are *not* stamped.
+- These need a re-score to show on existing listings: restart `serve.py` (to load the new
+  `score.py`) then **Refresh now** (re-scores all). A plain F5 only reloads, it doesn't recompute.
+- *Caveat:* the Cowork Linux mount served stale/truncated copies of the re-edited files this
+  session, so the property-type changes couldn't be exercised end-to-end in the sandbox; the
+  host files are complete and correct (confirmed by direct read), and earlier branches were
+  verified when the mount was in sync. Worth a live smoke-test on the host.
+
 ---
 
 ## 22 June 2026 — Git/GitHub port, local upgrade, and the enrichment bookmarklet

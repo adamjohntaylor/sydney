@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-22T22:56:22.738042+00:00",
-  "generated_at_sydney": "2026-06-23 08:56 UTC+10:00 (Sydney)",
+  "generated_at": "2026-06-22T22:47:24.294512+00:00",
+  "generated_at_sydney": "2026-06-23 08:47 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 63,
-    "tier1_pass": 59,
+    "tier1_pass": 54,
     "new": 18,
     "price_changed": 0,
     "sold": 0,
@@ -214,7 +214,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -223,6 +223,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -448,7 +449,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -458,6 +459,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -527,7 +529,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -537,6 +539,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -604,7 +607,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -614,6 +617,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -681,7 +685,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -690,6 +694,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -757,7 +762,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -767,6 +772,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -820,18 +826,20 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
           "accessibility"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 47,
@@ -883,7 +891,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
@@ -893,6 +901,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility",
           "bedrooms"
         ],
@@ -946,7 +955,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -956,6 +965,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -1011,19 +1021,21 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
           "budget",
           "accessibility"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -1076,7 +1088,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -1086,6 +1098,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -1146,7 +1159,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
@@ -1155,6 +1168,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility",
           "bedrooms"
         ],
@@ -1212,7 +1226,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -1222,6 +1236,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -1282,7 +1297,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": false,
         "transport": true,
@@ -1293,6 +1308,7 @@
           "bedrooms"
         ],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": false
@@ -1354,7 +1370,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": false,
         "accessibility": null,
         "accessibility_hint": true,
         "bedrooms": null,
@@ -1362,13 +1378,15 @@
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
           "budget",
           "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -1418,20 +1436,22 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
           "budget",
           "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -1482,7 +1502,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": false,
         "transport": true,
@@ -1493,6 +1513,7 @@
           "bedrooms"
         ],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": false
@@ -1551,7 +1572,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": false,
         "transport": true,
@@ -1562,6 +1583,7 @@
           "bedrooms"
         ],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": false
@@ -1622,7 +1644,7 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -1632,6 +1654,7 @@
         "fails": [],
         "unverified": [
           "budget",
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -1686,19 +1709,21 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": true,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
           "budget",
           "accessibility"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -1755,7 +1780,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -1764,6 +1789,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -1826,7 +1852,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": false,
         "transport": true,
@@ -1837,6 +1863,7 @@
           "bedrooms"
         ],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": false
@@ -1895,7 +1922,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
@@ -1904,6 +1931,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility",
           "bedrooms"
         ],
@@ -2275,7 +2303,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -2284,6 +2312,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -2342,7 +2371,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -2351,6 +2380,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": true
@@ -2783,7 +2813,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
         "bedrooms": true,
         "transport": true,
@@ -2792,6 +2822,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
+          "property_type",
           "accessibility"
         ],
         "pass": true
