@@ -125,38 +125,41 @@
       data.property_type = propType.textContent.toLowerCase().trim();
     }
 
-    // Price - find price in page text (most reliable)
-    const allText = document.body.innerText;
+    // Price - check top portion of page, avoid historical "sold for" prices
+    const topText = document.body.innerText.substring(0, 2500);
+
+    // Remove historical price info (anything after "sold in/for/on")
+    const cleanText = topText.replace(/(?:last\s+)?sold\s+(?:in|for|on)[^]*/i, '');
+
+    // Try to find a price guide first
     const pricePatterns = [
       /(?:Price Guide|Guide)[:\s]*\$([\d,]+)/i,
       /(?:Offers? (?:Over|Above|From))[:\s]*\$([\d,]+)/i,
-      /(?:For Sale)[:\s]*\$([\d,]+)/i,
-      /\$([\d,]+)\s*(?:to|-)\s*\$([\d,]+)/i,  // Range like $1,000,000 - $1,100,000
-      /(?:Auction|Contact Agent)/i
+      /\$([\d,]+)\s*(?:to|-)\s*\$([\d,]+)/i
     ];
 
+    let foundPrice = false;
     for (const pattern of pricePatterns) {
-      const match = allText.match(pattern);
-      if (match) {
-        if (match[1]) {
-          // Has a number
-          const num = parseInt(match[1].replace(/,/g, ''));
-          if (num >= 100000 && num <= 50000000) {
-            data.price_guide_text = match[0].trim();
-            console.log('Using price from text:', data.price_guide_text);
-            break;
-          }
-        } else {
-          // Auction/Contact Agent - normalize to standard message
-          const rawText = match[0].trim().toLowerCase();
-          if (rawText.includes('auction')) {
-            data.price_guide_text = 'Auction - No price guide offered';
-          } else {
-            data.price_guide_text = 'Contact Agent';
-          }
-          console.log('Using price from text:', data.price_guide_text);
+      const match = cleanText.match(pattern);
+      if (match && match[1]) {
+        const num = parseInt(match[1].replace(/,/g, ''));
+        if (num >= 100000 && num <= 50000000) {
+          data.price_guide_text = match[0].trim();
+          console.log('Found price:', data.price_guide_text);
+          foundPrice = true;
           break;
         }
+      }
+    }
+
+    // If no price found, check if it's an Auction or Contact Agent
+    if (!foundPrice) {
+      if (/\bAuction\b/i.test(cleanText)) {
+        data.price_guide_text = 'Auction - No price guide offered';
+        console.log('Detected Auction with no price guide');
+      } else if (/\bContact\s*Agent\b/i.test(cleanText)) {
+        data.price_guide_text = 'Contact Agent';
+        console.log('Detected Contact Agent');
       }
     }
 

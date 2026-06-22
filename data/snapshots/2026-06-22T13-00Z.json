@@ -928,7 +928,7 @@
     {
       "address": "1/19-21 Larkin Street",
       "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F19-21+larkin+street&suburb=camperdown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+19+21+larkin+street+camperdown",
       "source": "domain_search",
       "lat": -33.8851192,
       "lon": 151.1804933,
@@ -1463,7 +1463,7 @@
     {
       "address": "27/486-488 Illawarra Road",
       "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27%2F486-488+illawarra+road&suburb=marrickville-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+486+488+illawarra+road+marrickville",
       "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
@@ -1526,7 +1526,7 @@
     {
       "address": "13/30 Ewart street",
       "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F30+ewart+street&suburb=marrickville-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13+30+ewart+street+marrickville",
       "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
@@ -1718,7 +1718,7 @@
     {
       "address": "2712/6 Grove Street",
       "suburb": "Dulwich Hill",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2712%2F6+grove+street&suburb=dulwich-hill-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2712+6+grove+street+dulwich+hill",
       "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
@@ -1781,7 +1781,7 @@
     {
       "address": "1009/1 Sterling Circuit",
       "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1009%2F1+sterling+circuit&suburb=camperdown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1009+1+sterling+circuit+camperdown",
       "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
@@ -1910,7 +1910,7 @@
     {
       "address": "89 Denison Street",
       "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=89+denison+street&suburb=camperdown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=89+denison+street+camperdown",
       "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
@@ -1973,7 +1973,7 @@
     {
       "address": "1/136 Livingstone Road",
       "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F136+livingstone+road&suburb=marrickville-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+136+livingstone+road+marrickville",
       "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
@@ -2036,7 +2036,7 @@
     {
       "address": "130 Epsom Road",
       "suburb": "Zetland",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+epsom+road&suburb=zetland-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+epsom+road+zetland",
       "source": "domain_search",
       "catchments": {
         "transport": true,
@@ -2097,7 +2097,7 @@
     {
       "address": "9 Metters Street",
       "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street&suburb=erskineville-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street+erskineville",
       "source": "domain_search",
       "price_guide_text": "$920,000",
       "price_min": 920000,
@@ -2160,7 +2160,7 @@
     {
       "address": "4/18 Leichhardt Street",
       "suburb": "Leichhardt",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F18+leichhardt+street&suburb=leichhardt-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4+18+leichhardt+street+leichhardt",
       "source": "domain_search",
       "price_guide_text": "$920,000",
       "price_min": 920000,
@@ -2291,7 +2291,7 @@
     {
       "address": "802/6 Paul Street",
       "suburb": "Zetland",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=802%2F6+paul+street&suburb=zetland-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=802+6+paul+street+zetland",
       "source": "domain_search",
       "price_guide_text": "$2,050,000",
       "price_min": 2050000,
@@ -2354,7 +2354,7 @@
     {
       "address": "63 Rofe Street",
       "suburb": "Leichhardt",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+rofe+street&suburb=leichhardt-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+rofe+street+leichhardt",
       "source": "domain_search",
       "price_guide_text": "$2,050,000",
       "price_min": 2050000,
@@ -2417,7 +2417,7 @@
     {
       "address": "8 Park Street",
       "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8+park+street&suburb=erskineville-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8+park+street+erskineville",
       "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
@@ -2480,7 +2480,7 @@
     {
       "address": "201/1 Brightwell Lane",
       "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=201%2F1+brightwell+lane&suburb=erskineville-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=201+1+brightwell+lane+erskineville",
       "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
@@ -2543,7 +2543,7 @@
     {
       "address": "94/155 Missenden Road",
       "suburb": "Newtown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=94%2F155+missenden+road&suburb=newtown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=94+155+missenden+road+newtown",
       "source": "domain_search",
       "price_guide_text": "$1,275,000",
       "price_min": 1275000,
@@ -2606,7 +2606,7 @@
     {
       "address": "58/30 Gadigal Avenue",
       "suburb": "Zetland",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=58%2F30+gadigal+avenue&suburb=zetland-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=58+30+gadigal+avenue+zetland",
       "source": "domain_search",
       "price_guide_text": "$1,100,000 - $1,200,000",
       "price_min": 1100000,
@@ -2669,7 +2669,7 @@
     {
       "address": "61A Albany Road",
       "suburb": "Stanmore",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=61a+albany+road&suburb=stanmore-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=61a+albany+road+stanmore",
       "source": "domain_search",
       "price_guide_text": "$1,100,000 - $1,200,000",
       "price_min": 1100000,
@@ -2732,7 +2732,7 @@
     {
       "address": "9/63-69 Lord Street",
       "suburb": "Newtown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F63-69+lord+street&suburb=newtown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+63+69+lord+street+newtown",
       "source": "domain_search",
       "price_guide_text": "$1,100,000 - $1,200,000",
       "price_min": 1100000,
@@ -2795,7 +2795,7 @@
     {
       "address": "1/17-19 Westbourne Street",
       "suburb": "Drummoyne",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F17-19+westbourne+street&suburb=drummoyne-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+17+19+westbourne+street+drummoyne",
       "source": "domain_search",
       "price_guide_text": "$1.8m",
       "price_min": 1000000,
@@ -2858,7 +2858,7 @@
     {
       "address": "113 Albermarle Street",
       "suburb": "Newtown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=113+albermarle+street&suburb=newtown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=113+albermarle+street+newtown",
       "source": "domain_search",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
@@ -2921,7 +2921,7 @@
     {
       "address": "26C Morrissey Road",
       "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26c+morrissey+road&suburb=erskineville-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26c+morrissey+road+erskineville",
       "source": "domain_search",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
@@ -2978,7 +2978,7 @@
     {
       "address": "109 Wyndham Street",
       "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+wyndham+street&suburb=alexandria-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+wyndham+street+alexandria",
       "source": "domain_search",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
@@ -3035,7 +3035,7 @@
     {
       "address": "14/19-21 Myra Road",
       "suburb": "Dulwich Hill",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F19-21+myra+road&suburb=dulwich-hill-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14+19+21+myra+road+dulwich+hill",
       "source": "domain_search",
       "catchments": {
         "transport": null,
@@ -3090,7 +3090,7 @@
     {
       "address": "325/4 Elger Street",
       "suburb": "Glebe",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2F4+elger+street&suburb=glebe-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325+4+elger+street+glebe",
       "source": "domain_search",
       "price_guide_text": "$1,450,000",
       "price_min": 1450000,
@@ -3147,7 +3147,7 @@
     {
       "address": "13/36-46 Briggs Street",
       "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F36-46+briggs+street&suburb=camperdown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13+36+46+briggs+street+camperdown",
       "source": "domain_search",
       "price_guide_text": "$1,450,000",
       "price_min": 1450000,
@@ -3204,7 +3204,7 @@
     {
       "address": "2H Wentworth Park Road",
       "suburb": "Glebe",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road&suburb=glebe-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe",
       "source": "domain_search",
       "price_guide_text": "$1,450,000",
       "price_min": 1450000,
@@ -3261,7 +3261,7 @@
     {
       "address": "04/222 Flood St Allen Street",
       "suburb": "Leichhardt",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=04%2F222+flood+st+allen+street&suburb=leichhardt-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=04+222+flood+st+allen+street+leichhardt",
       "source": "domain_search",
       "catchments": {
         "transport": null,
@@ -3316,7 +3316,7 @@
     {
       "address": "63 Newman Street",
       "suburb": "Newtown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+newman+street&suburb=newtown-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+newman+street+newtown",
       "source": "domain_search",
       "catchments": {
         "transport": null,
@@ -3371,7 +3371,7 @@
     {
       "address": "110 Palace Street",
       "suburb": "Petersham",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=110+palace+street&suburb=petersham-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=110+palace+street+petersham",
       "source": "domain_search",
       "price_guide_text": "$1,800,000",
       "price_min": 1800000,
@@ -3428,7 +3428,7 @@
     {
       "address": "12/72 Wrights Road",
       "suburb": "Drummoyne",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F72+wrights+road&suburb=drummoyne-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12+72+wrights+road+drummoyne",
       "source": "domain_search",
       "price_guide_text": "$1,800,000",
       "price_min": 1800000,
@@ -3485,7 +3485,7 @@
     {
       "address": "405/15 Ralph Street",
       "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=405%2F15+ralph+street&suburb=alexandria-nsw",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=405+15+ralph+street+alexandria",
       "source": "domain_search",
       "catchments": {
         "transport": null,

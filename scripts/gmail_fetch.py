@@ -284,12 +284,13 @@ def generate_search_url(address: str, suburb: str, source: str = "domain") -> st
         full = re.sub(r'\s+', '+', full.strip())
         return f"https://www.realestate.com.au/buy?searchTerm={full}"
     else:
-        # Domain pattern: domain.com.au/sale/?excludeunderoffer=1&street={address}+{suburb}
-        full = f"{address} {suburb}".lower()
-        full = re.sub(r'[/,\-]+', ' ', full)
-        full = re.sub(r'[^a-z0-9\s]', '', full)
-        full = re.sub(r'\s+', '+', full.strip())
-        return f"https://www.domain.com.au/sale/?excludeunderoffer=1&street={full}"
+        # Domain pattern: domain.com.au/sale/?excludeunderoffer=1&street={address}&suburb={suburb}-nsw
+        import urllib.parse
+        # Keep slashes and hyphens in address, URL-encode properly
+        addr_clean = address.lower().strip()
+        addr_encoded = urllib.parse.quote(addr_clean, safe='').replace('%20', '+')
+        suburb_clean = suburb.lower().strip().replace(' ', '-')
+        return f"https://www.domain.com.au/sale/?excludeunderoffer=1&street={addr_encoded}&suburb={suburb_clean}-nsw"
 
 
 def extract_by_address(body, email_source="domain"):
