@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 63,
-    "tier1_pass": 55,
+    "tier1_pass": 54,
     "new": 18,
     "price_changed": 0,
     "sold": 0,
@@ -1298,22 +1298,22 @@
         "geocoded": true
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": null,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms"
         ],
-        "pass": true
+        "unverified": [
+          "property_type",
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -1338,11 +1338,16 @@
       "cover_image": "https://rimh2.domainstatic.com.au/mdRaVKFvujTRID-UGGMZkTwvrcM=/1680x720/filters:format(webp):quality(85)/2020923696_1_1_260617_075142-w2560-h1707",
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionModern courtyard residence with direct garden accessThis contemporary residence stands apart from its neighbours for its oversized terrace with private access to the central courtyard, a home of house-like flow and imaginative design details. Timber ceiling panels bring inviting warmth to the spacious open plan with its polished concrete floors and leafy garden backdrops. Moments to Parramatta Road transport, Camperdown Park and both the universityRead more",
-      "price_guide_text": "Guide $775,000",
+      "price_guide_text": "$775,000 (hidden guide)",
       "outlook": {
         "class": "leafy",
         "basis": "Auto-detected from description"
-      }
+      },
+      "beds": 1,
+      "baths": 1,
+      "parking": 1,
+      "price_min": 775000,
+      "price_max": 775000
     },
     {
       "address": "25 Callan Street",

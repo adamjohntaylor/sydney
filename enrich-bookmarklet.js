@@ -325,5 +325,5 @@
 
   // Encode data and open localhost page (avoids HTTPS->HTTP fetch blocking)
   const encoded = encodeURIComponent(JSON.stringify(data));
-  window.open('http://localhost:8777/enrich-submit.html?data=' + encoded, '_blank', 'width=500,height=400');
+  window.open('http://localhost:8777/enrich-submit.html?data=' + encoded, '_blank', 'width=500,height=760');
 })();
