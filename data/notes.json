@@ -13,5 +13,15 @@
     "status": "interested",
     "note": "",
     "updated": "2026-06-22T12:40:39.304Z"
+  },
+  "https://www.domain.com.au/9-63-69-lord-street-newtown-nsw-2042-2020926028": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-06-22T13:09:33.704Z"
+  },
+  "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513": {
+    "status": "needs decision",
+    "note": "",
+    "updated": "2026-06-22T13:12:02.464Z"
   }
 }
