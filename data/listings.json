@@ -804,7 +804,7 @@
       "address": "40 High Street",
       "suburb": "Balmain",
       "source": "domain",
-      "price_guide_text": "$2,050,000",
+      "price_guide_text": "$2,050,000 (hidden guide)",
       "price_min": 2050000,
       "price_max": 2050000,
       "lat": -33.8587221,
@@ -828,17 +828,17 @@
         "budget": true,
         "property_type": false,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
-          "property_type"
+          "property_type",
+          "bedrooms"
         ],
         "unverified": [
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": false
       },
@@ -864,7 +864,10 @@
       "url": "https://www.domain.com.au/40-high-street-balmain-nsw-2041-2020928899",
       "cover_image": "https://rimh2.domainstatic.com.au/G49VKsqLYgJVT1Lj1z-qLnU25Yo=/1680x720/filters:format(webp):quality(85)/2020928899_1_1_260619_040826-w2560-h1708",
       "property_type": "house",
-      "description": "Property DescriptionAttractive character semi / NE courtyard / future potentialBeautifully presented and filled with natural light, this charming semi-detached residence blends timeless appeal with modern comfort in a home that feels immediately welcoming. Behind its classic façade, warm interiors and timber floors, an ideal northeast aspect draws sunlight deep into the home. Flowing seamlessly to a private paved courtyard, it's rich in character and ready to enjoy, whileRead more"
+      "description": "Property DescriptionAttractive character semi / NE courtyard / future potentialBeautifully presented and filled with natural light, this charming semi-detached residence blends timeless appeal with modern comfort in a home that feels immediately welcoming. Behind its classic façade, warm interiors and timber floors, an ideal northeast aspect draws sunlight deep into the home. Flowing seamlessly to a private paved courtyard, it's rich in character and ready to enjoy, whileRead more",
+      "beds": 3,
+      "baths": 2,
+      "parking": 1
     },
     {
       "address": "11/70 Wigram Road",
