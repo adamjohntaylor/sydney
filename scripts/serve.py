@@ -87,11 +87,14 @@ class Handler(SimpleHTTPRequestHandler):
             with open(LISTINGS_PATH, "w", encoding="utf-8") as fh:
                 json.dump(data, fh, indent=2, ensure_ascii=False)
 
+            already_geocoded = sum(1 for l in listings if l.get("lat") and l.get("lon")) - geocoded_count
             return self._json(200, {
                 "ok": True,
-                "geocoded": geocoded_count,
+                "newly_geocoded": geocoded_count,
+                "already_geocoded": already_geocoded,
                 "geocode_failed": geocode_fails,
                 "total": len(listings),
+                "rescored": len(listings),
                 "tier1_pass": data["counts"]["tier1_pass"]
             })
         except Exception as exc:

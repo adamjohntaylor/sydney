@@ -417,7 +417,11 @@ document.getElementById("refreshBtn").addEventListener("click",async()=>{
       const r=await fetch("/api/refresh",{method:"POST"});
       const j=await r.json();
       if(j.ok){
-        st.textContent=`refreshed (${j.geocoded} geocoded, ${j.tier1_pass} T1 pass)`;
+        let msg = `rescored ${j.rescored} listings`;
+        if(j.newly_geocoded > 0) msg += `, ${j.newly_geocoded} newly geocoded`;
+        if(j.geocode_failed > 0) msg += `, ${j.geocode_failed} geocode failed`;
+        msg += ` (${j.tier1_pass} T1 pass)`;
+        st.textContent = msg;
         await load();
       }else{
         st.textContent="refresh failed: "+j.error;
