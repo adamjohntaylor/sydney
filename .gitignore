@@ -1,0 +1,8 @@
+# Gmail credentials (sensitive)
+data/.gmail_credentials.json
+data/.gmail_token.json
+data/.gmail_oauth.json
+
+# Python cache
+__pycache__/
+scripts/__pycache__/
