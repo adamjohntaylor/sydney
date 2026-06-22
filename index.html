@@ -74,6 +74,9 @@
       <option value="SOLD">Sold</option><option value="WITHDRAWN">Withdrawn</option>
     </select>
     <label class="flex items-center gap-1"><input type="checkbox" id="fTier1"> Tier 1 pass only</label>
+    <button id="tierInfoBtn" class="text-slate-400 hover:text-slate-600" title="What are Tiers?">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><path stroke-width="2" d="M12 16v-4m0-4h.01"/></svg>
+    </button>
     <label class="flex items-center gap-1"><input type="checkbox" id="fWarehouse"> Warehouse character</label>
     <span class="ml-auto flex items-center gap-1">Sort
       <select id="fSort" class="border rounded px-2 py-1">
@@ -94,6 +97,40 @@
   <div id="cards" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
   <div id="emptyState" class="hidden text-center text-slate-500 py-20"></div>
 </main>
+
+<!-- ===== Tier info modal ===== -->
+<div id="tierModal" class="fixed inset-0 bg-black/40 z-50 hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-5 relative">
+    <button id="closeTierModal" class="absolute top-3 right-3 text-slate-400 hover:text-slate-700 text-xl leading-none">&times;</button>
+    <h2 class="text-lg font-bold mb-3">How the Tiers Work</h2>
+    <div class="space-y-3 text-sm text-slate-700">
+      <div>
+        <h3 class="font-semibold text-slate-900">Tier 1 — Deal-breakers</h3>
+        <p class="mt-1">Binary pass/fail criteria. A property must meet <em>all</em> of these or it's out:</p>
+        <ul class="mt-1 ml-4 list-disc text-xs text-slate-600">
+          <li>Budget ≤$2.2M</li>
+          <li>Step-free access / lift</li>
+          <li>Transport ≤1.5km</li>
+          <li>Daily supplies walkable</li>
+          <li>In target area</li>
+          <li>Lawful residential zoning</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900">Tier 2 — Scoring discriminators</h3>
+        <p class="mt-1">For properties that <em>pass</em> Tier 1, these rank them by quality:</p>
+        <ul class="mt-1 ml-4 list-disc text-xs text-slate-600">
+          <li><strong>Outlook</strong> (leading) — water, park, or elevated views</li>
+          <li>Living area ≥115 m²</li>
+          <li>Light and aspect</li>
+          <li>Warehouse character</li>
+          <li>Nearby pool, parks, restaurants</li>
+        </ul>
+      </div>
+      <p class="text-xs text-slate-500 pt-2 border-t">The "Tier 1 pass only" checkbox filters to show only viable options. The Tier 2 score helps you choose between them.</p>
+    </div>
+  </div>
+</div>
 
 <!-- ===== Detail drawer ===== -->
 <div id="overlay" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
@@ -372,6 +409,9 @@ document.querySelectorAll(".tabBtn").forEach(b=>b.addEventListener("click",()=>{
 ["fSuburb","fPrice","fBeds","fStatus","fFlag","fSort"].forEach(id=>document.getElementById(id).addEventListener("change",render));
 ["fTier1","fWarehouse"].forEach(id=>document.getElementById(id).addEventListener("change",render));
 document.getElementById("overlay").addEventListener("click",closeDrawer);
+document.getElementById("tierInfoBtn").addEventListener("click",()=>document.getElementById("tierModal").classList.remove("hidden"));
+document.getElementById("closeTierModal").addEventListener("click",()=>document.getElementById("tierModal").classList.add("hidden"));
+document.getElementById("tierModal").addEventListener("click",e=>{if(e.target.id==="tierModal")document.getElementById("tierModal").classList.add("hidden");});
 document.getElementById("refreshBtn").addEventListener("click",async()=>{
   document.getElementById("saveState").textContent="reloading data…";
   await load(); document.getElementById("saveState").textContent="reloaded.";
