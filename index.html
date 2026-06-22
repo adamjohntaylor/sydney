@@ -411,7 +411,16 @@ document.getElementById("closeTierModal").addEventListener("click",()=>document.
 document.getElementById("tierModal").addEventListener("click",e=>{if(e.target.id==="tierModal")document.getElementById("tierModal").classList.add("hidden");});
 document.getElementById("refreshBtn").addEventListener("click",async()=>{
   const st=document.getElementById("saveState");
+  // Check if local server with refresh endpoint is available
+  let canRefresh = false;
   if(SERVED){
+    try{
+      const h = await fetch("/api/health");
+      const hj = await h.json();
+      canRefresh = hj.refresh_available === true;
+    }catch(e){ canRefresh = false; }
+  }
+  if(canRefresh){
     st.textContent="geocoding + scoring…";
     try{
       const r=await fetch("/api/refresh",{method:"POST"});
