@@ -60,6 +60,41 @@ class Handler(SimpleHTTPRequestHandler):
             return self._json(200, {"ok": True, "served": True, "refresh_available": True})
         return super().do_GET()
 
+    def _handle_push(self):
+        """Commit and push changes to GitHub."""
+        import subprocess
+        try:
+            # Check if there are changes
+            status = subprocess.run(
+                ["git", "status", "--porcelain"],
+                cwd=DASH_DIR, capture_output=True, text=True
+            )
+            if not status.stdout.strip():
+                return self._json(200, {"ok": True, "message": "Nothing to push - already up to date"})
+
+            # Add all changes
+            subprocess.run(["git", "add", "-A"], cwd=DASH_DIR, check=True)
+
+            # Commit
+            subprocess.run(
+                ["git", "commit", "-m", "Update listings from dashboard"],
+                cwd=DASH_DIR, check=True
+            )
+
+            # Push
+            result = subprocess.run(
+                ["git", "push"],
+                cwd=DASH_DIR, capture_output=True, text=True
+            )
+            if result.returncode != 0:
+                return self._json(500, {"ok": False, "error": result.stderr})
+
+            return self._json(200, {"ok": True, "message": "Pushed to GitHub"})
+        except subprocess.CalledProcessError as e:
+            return self._json(500, {"ok": False, "error": str(e)})
+        except Exception as e:
+            return self._json(500, {"ok": False, "error": str(e)})
+
     def _handle_refresh(self):
         """Fetch new emails, geocode missing coords, and re-score all listings."""
         try:
@@ -121,6 +156,8 @@ class Handler(SimpleHTTPRequestHandler):
     def do_POST(self):
         if self.path == "/api/refresh":
             return self._handle_refresh()
+        if self.path == "/api/push":
+            return self._handle_push()
         if self.path != "/api/save-notes":
             return self._json(404, {"ok": False, "error": "unknown endpoint"})
         try:
