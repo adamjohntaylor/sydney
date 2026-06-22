@@ -31,9 +31,10 @@ USER_AGENT = "SydneyPropertyDashboard/1.0 (personal use; adam@adam.taylor.name)"
 REQUEST_DELAY = 1.1  # seconds between requests (Nominatim requires <=1/sec)
 
 
-def geocode_address(address: str, suburb: str, postcode: str = None) -> tuple[float, float] | None:
+def geocode_address(address: str, suburb: str, postcode: str = None, retry_count: int = 0) -> tuple[float, float] | None:
     """
     Query Nominatim for an address. Returns (lat, lon) or None if not found.
+    Handles rate limiting with exponential backoff.
     """
     # Build a full address string
     parts = [address]
@@ -59,13 +60,23 @@ def geocode_address(address: str, suburb: str, postcode: str = None) -> tuple[fl
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError) as e:
+    except urllib.error.HTTPError as e:
+        if e.code == 429 and retry_count < 3:
+            # Rate limited - back off exponentially
+            wait = (2 ** retry_count) * 5  # 5s, 10s, 20s
+            print(f"rate limited, waiting {wait}s...", end=" ", file=sys.stderr)
+            time.sleep(wait)
+            return geocode_address(address, suburb, postcode, retry_count + 1)
+        print(f"  ERROR geocoding '{query}': {e}", file=sys.stderr)
+        return None
+    except (urllib.error.URLError, json.JSONDecodeError) as e:
         print(f"  ERROR geocoding '{query}': {e}", file=sys.stderr)
         return None
 
     if not data:
         # Try a simpler query with just suburb
         if suburb:
+            time.sleep(REQUEST_DELAY)  # Rate limit before retry
             params["q"] = f"{address}, {suburb}, Australia"
             url = NOMINATIM_URL + "?" + urllib.parse.urlencode(params)
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -86,31 +97,37 @@ def geocode_address(address: str, suburb: str, postcode: str = None) -> tuple[fl
         return None
 
 
-def geocode_listings(listings: list[dict], dry_run: bool = False) -> tuple[int, int]:
+def geocode_listings(listings: list[dict], dry_run: bool = False, max_per_run: int = 20) -> tuple[int, int]:
     """
-    Geocode all listings that are missing lat/lon.
+    Geocode listings that are missing lat/lon.
     Returns (success_count, fail_count).
+
+    Args:
+        max_per_run: Limit geocoding to avoid rate limits (0 = no limit)
     """
     need_geocoding = [l for l in listings if l.get("lat") is None or l.get("lon") is None]
+    # Filter out listings with no address
+    need_geocoding = [l for l in need_geocoding if l.get("address") or l.get("address_text")]
 
     if not need_geocoding:
         print("All listings already have coordinates.", file=sys.stderr)
         return (0, 0)
 
-    print(f"Geocoding {len(need_geocoding)} listings (of {len(listings)} total)...", file=sys.stderr)
+    # Limit per run to avoid rate limiting
+    if max_per_run and len(need_geocoding) > max_per_run:
+        print(f"Geocoding {max_per_run} of {len(need_geocoding)} listings (limited to avoid rate limits)...", file=sys.stderr)
+        need_geocoding = need_geocoding[:max_per_run]
+    else:
+        print(f"Geocoding {len(need_geocoding)} listings (of {len(listings)} total)...", file=sys.stderr)
 
     success = 0
     fail = 0
+    consecutive_fails = 0
 
     for i, listing in enumerate(need_geocoding, 1):
         address = listing.get("address") or listing.get("address_text", "")
         suburb = listing.get("suburb", "")
         postcode = listing.get("postcode", "")
-
-        if not address:
-            print(f"  [{i}/{len(need_geocoding)}] SKIP - no address: {listing.get('url', '?')}", file=sys.stderr)
-            fail += 1
-            continue
 
         display = f"{address}, {suburb}" if suburb else address
         print(f"  [{i}/{len(need_geocoding)}] {display}...", end=" ", file=sys.stderr)
@@ -126,13 +143,20 @@ def geocode_listings(listings: list[dict], dry_run: bool = False) -> tuple[int, 
             listing["lon"] = coords[1]
             print(f"OK ({coords[0]:.5f}, {coords[1]:.5f})", file=sys.stderr)
             success += 1
+            consecutive_fails = 0
         else:
             print("NOT FOUND", file=sys.stderr)
             fail += 1
+            consecutive_fails += 1
 
-        # Rate limiting - be nice to Nominatim
+            # Stop if we get too many consecutive failures (likely rate limited)
+            if consecutive_fails >= 5:
+                print(f"Stopping early - {consecutive_fails} consecutive failures (likely rate limited)", file=sys.stderr)
+                break
+
+        # Rate limiting - be nice to Nominatim (1.5s to be safe)
         if i < len(need_geocoding):
-            time.sleep(REQUEST_DELAY)
+            time.sleep(1.5)
 
     return (success, fail)
 
