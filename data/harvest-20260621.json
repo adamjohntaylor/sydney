@@ -1,0 +1,127 @@
+{
+  "generated_at_sydney": "2026-06-21 (manual seed sweep)",
+  "sweep_provenance": "Manual seed sweep, 21 June 2026, via Claude web_fetch of Domain listing pages (page-read extension access was unavailable; portal alert feed not yet populated). Prices are agents' guides; re-verify before any action.",
+  "listings": [
+    {
+      "url": "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935",
+      "source": "domain", "address": "20/10 Gow Street", "suburb": "Balmain", "postcode": "2041",
+      "property_type": "apartment", "beds": 3, "baths": 2, "parking": 1, "internal_m2": 111,
+      "price_guide_text": "Guide $1,600,000", "price_min": 1600000, "price_max": 1600000,
+      "agent": "Harris Partners Real Estate", "agency": "Harris Partners",
+      "cover_image": "https://rimh2.domainstatic.com.au/mwvkq6nagDLbnQVFnfORP9sPfzM=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2019707022_8_1_250211_113426-w5610-h3777",
+      "open_homes": [], "auction": null,
+      "description": "Top-floor apartment in the waterfront 'Tarrawonga' community with superb water views across the bay to Cockatoo Island; north/NE aspect with excellent natural light. Features list Water Views and Area Views.",
+      "outlook": {"class": "water", "basis": "Top-floor unit with water views across the bay to Cockatoo Island; listed feature 'Water Views'."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/16-162-166-victoria-road-drummoyne-nsw-2047-2020632210",
+      "source": "domain", "address": "16/162-166 Victoria Road", "suburb": "Drummoyne", "postcode": "2047",
+      "property_type": "apartment", "beds": 2, "baths": 2, "parking": 2, "internal_m2": 136,
+      "price_guide_text": "$1,585,000 - $1,650,000", "price_min": 1585000, "price_max": 1650000,
+      "agent": "Simone Azzi", "agency": "Belle Property Annandale",
+      "cover_image": "https://rimh2.domainstatic.com.au/5Xgf4DWvOP4avrumWlSEiHSMBE0=/1680x720/filters:format(webp):quality(85)/2020632210_1_1_260224_065139-w4724-h3149",
+      "open_homes": ["2026-06-27T10:00:00+10:00"], "auction": null,
+      "description": "Top-floor apartment in 'The Drummoyne' (17 residences) with northeast outlooks to the water, the Sydney city skyline and the Harbour Bridge; serene elevation and private aspect.",
+      "outlook": {"class": "water", "basis": "Top floor with NE outlook to water, city skyline and Harbour Bridge."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/301-5-yara-avenue-rozelle-nsw-2039-2020919085",
+      "source": "domain", "address": "301/5 Yara Avenue", "suburb": "Rozelle", "postcode": "2039",
+      "property_type": "apartment", "beds": 2, "baths": 2, "parking": 1, "internal_m2": 114,
+      "price_guide_text": "Guide $1,700,000", "price_min": 1700000, "price_max": 1700000,
+      "agent": "Scott Robertson", "agency": "Balmain Realty",
+      "cover_image": "https://rimh2.domainstatic.com.au/_evphlZUGbBai_4NO9--bsz6VH8=/1680x720/filters:format(webp):quality(85)/2020919085_1_1_260616_041740-w3008-h2005",
+      "open_homes": ["2026-06-24T11:00:00+10:00"], "auction": null,
+      "description": "Top-floor corner apartment with distant water views and leafy garden surrounds; resort-style complex with pool; short stroll to Darling Street cafes, waterfront parklands and express transport. Feature list includes Water Views and Swimming Pool.",
+      "outlook": {"class": "water", "basis": "Top-floor corner with distant water views; listed feature 'Water Views'."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/404-42c-formosa-street-drummoyne-nsw-2047-2020757988",
+      "source": "domain", "address": "404/42C Formosa Street", "suburb": "Drummoyne", "postcode": "2047",
+      "property_type": "apartment", "beds": 3, "baths": 2, "parking": 2, "internal_m2": 180,
+      "price_guide_text": "$1,795,000", "price_min": 1795000, "price_max": 1795000,
+      "agent": "Joe Kanaan", "agency": "The Agency Inner West",
+      "cover_image": "https://rimh2.domainstatic.com.au/Rb_giX2_DCoRJXi70YecEdowSUY=/1680x720/filters:format(webp):quality(85)/2019953713_12_1_250428_063904-w3873-h2583",
+      "open_homes": ["2026-06-27T11:00:00+10:00"], "auction": null,
+      "description": "Elevated apartment with far-reaching district vistas panning to the iconic Sydney city skyline; open-plan with relaxed balcony. Large 180 m2 internal.",
+      "outlook": {"class": "city", "basis": "Elevated, far-reaching district vistas to the Sydney city skyline."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/60-24-buchanan-street-balmain-nsw-2041-2020779667",
+      "source": "domain", "address": "60/24 Buchanan Street", "suburb": "Balmain", "postcode": "2041",
+      "property_type": "apartment", "beds": 2, "baths": 2, "parking": 1, "internal_m2": 176,
+      "price_guide_text": "$1,530,000 - $1,570,000", "price_min": 1530000, "price_max": 1570000,
+      "agent": "Rebecca Williams", "agency": "Belle Property Balmain",
+      "cover_image": "https://rimh2.domainstatic.com.au/0Dy3CE_r_Lvzd5bD_ljzmQ7Zleg=/1680x720/filters:format(webp):quality(85)/2020779667_5_1_260421_112520-w4500-h3000",
+      "open_homes": ["2026-06-27T13:00:00+10:00"], "auction": null,
+      "description": "Oversized garden-level apartment in the 'Waterdale' complex with private LEVEL ENTRY, a courtyard and large wraparound terrace; house-like living with apartment convenience near-bayside. Listed features include 'Lift Installed' and below-ground swimming pool. Large 176 m2.",
+      "outlook": {"class": "leafy", "basis": "Garden-level with courtyard/terrace beside communal gardens; near-bayside but not elevated."},
+      "accessibility": {"step_free": true, "lift": true},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
+      "source": "domain", "address": "1001/2 Cowper Street", "suburb": "Glebe", "postcode": "2037",
+      "property_type": "apartment", "beds": 3, "baths": 2, "parking": 1, "internal_m2": 149,
+      "price_guide_text": "Contact Agent (no guide published)", "price_min": null, "price_max": null,
+      "agent": "Lily Tsui", "agency": "Elite Real Property",
+      "cover_image": "https://rimh2.domainstatic.com.au/3ai7qr8tWt83E04O1Bth5FlS5QI=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020094347_1_1_250724_055602-w1101-h741",
+      "open_homes": [], "auction": null,
+      "description": "North-facing penthouse in 'Mezzo' overlooking Wentworth Park, capturing stunning city views while enjoying suburb tranquility. Listed features include Park-facing North aspect, City Views and Water Views. Penthouse (floor 10) - lift present but confirm. No price guide published; confirm it sits within budget.",
+      "outlook": {"class": "park", "basis": "North aspect overlooking Wentworth Park; also city and water views per feature list."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
+      "source": "domain", "address": "706/3 Cary Street", "suburb": "Drummoyne", "postcode": "2047",
+      "property_type": "apartment", "beds": 3, "baths": 2, "parking": 2, "internal_m2": null,
+      "price_guide_text": "Auction (no guide published)", "price_min": null, "price_max": null,
+      "agent": "Mario Carbone", "agency": "Ray White Drummoyne",
+      "cover_image": "https://rimh2.domainstatic.com.au/vSmvsu2aQH-43cGOJMh1tiC_ZYs=/1680x720/filters:format(webp):quality(85)/2020765918_3_1_260415_115115-w8192-h5464",
+      "open_homes": ["2026-06-23T17:00:00+10:00"], "auction": null,
+      "description": "Seventh-floor apartment with sweeping water views and abundant light; open-plan living flowing to a generous balcony; pool and gym in complex. Going to auction - no guide published, confirm within budget.",
+      "outlook": {"class": "water", "basis": "Seventh floor with expansive sweeping water views; listed feature 'Water Views'."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/1-48-50-bayswater-street-drummoyne-nsw-2047-2020876929",
+      "source": "domain", "address": "1/48-50 Bayswater Street", "suburb": "Drummoyne", "postcode": "2047",
+      "property_type": "apartment", "beds": 2, "baths": 2, "parking": 2, "internal_m2": 273,
+      "price_guide_text": "Contact agent (auction; no guide published)", "price_min": null, "price_max": null,
+      "agent": "Adrienne Williams", "agency": "BresicWhitney Balmain",
+      "cover_image": "https://rimh2.domainstatic.com.au/HAM85mxNhbCNR1ngSz9KP-Wylks=/1680x720/filters:format(webp):quality(85)/2020876929_4_1_260610_055010-w2560-h1708",
+      "open_homes": [], "auction": "2026-06-27T12:45:00+10:00",
+      "description": "Oversized luxury residence in 'The Bayswater' (one of only eight) overlooking the greenery of Drummoyne Oval and Taplin Park and the boat-filled waters of Five Dock Bay; wrap-around indoor/outdoor entertaining. Very large 273 m2. Auction Sat 27 Jun - no guide; large/luxury, confirm within budget.",
+      "outlook": {"class": "water", "basis": "Overlooks Five Dock Bay waters plus Drummoyne Oval/Taplin Park greenery."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/102-106-elliott-street-balmain-nsw-2041-2020889759",
+      "source": "domain", "address": "102/106 Elliott Street", "suburb": "Balmain", "postcode": "2041",
+      "property_type": "apartment", "beds": 2, "baths": 2, "parking": 1, "internal_m2": null,
+      "price_guide_text": "Auction Guide $1,800,000", "price_min": 1800000, "price_max": 1800000,
+      "agent": "Belle Property Balmain", "agency": "Belle Property Balmain",
+      "cover_image": null,
+      "open_homes": [], "auction": null,
+      "description": "Balmain apartment, auction guide $1.8M (lightly profiled in this seed pass - full description, size and outlook to be enriched on the next sweep).",
+      "outlook": {"class": "none", "basis": "Not yet enriched - outlook unverified."},
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/21-59-wrights-road-drummoyne-nsw-2047-2020691952",
+      "source": "domain", "address": "21/59 Wrights Road", "suburb": "Drummoyne", "postcode": "2047",
+      "property_type": "apartment", "beds": 3, "baths": 2, "parking": 2, "internal_m2": 162,
+      "price_guide_text": "Contact Agent (no guide published)", "price_min": null, "price_max": null,
+      "agent": "Ray White Drummoyne", "agency": "Ray White Drummoyne",
+      "cover_image": null,
+      "open_homes": [], "auction": null,
+      "description": "Drummoyne apartment, 162 m2 (lightly profiled in this seed pass - full description, price and outlook to be enriched on the next sweep).",
+      "outlook": {"class": "none", "basis": "Not yet enriched - outlook unverified."},
+      "warehouse_character": false
+    }
+  ]
+}

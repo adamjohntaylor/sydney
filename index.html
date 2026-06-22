@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sydney Inner West - Live Properties Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .pill { font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 9999px; font-weight: 600; }
+  .drawer { transition: transform .25s ease; }
+  .tick { color:#16a34a; } .cross { color:#dc2626; } .qm { color:#d97706; }
+  .scrollbar-thin::-webkit-scrollbar{width:8px;height:8px}
+  .scrollbar-thin::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:8px}
+</style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+<!-- ===== Header ===== -->
+<header class="bg-slate-900 text-white sticky top-0 z-30 shadow">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <div class="flex flex-wrap items-center justify-between gap-2">
+      <div>
+        <h1 class="text-lg font-bold leading-tight">Sydney Inner West &mdash; Live Properties</h1>
+        <p class="text-xs text-slate-300">Watchlist of on-market dwellings &le; $2.2M against the project criteria. Prices are agents' guides &mdash; re-verify before any action.</p>
+      </div>
+      <div class="text-right text-xs">
+        <div id="lastRefreshed" class="text-slate-300">Loading&hellip;</div>
+        <div class="mt-1 flex gap-2 justify-end" id="headerCounts"></div>
+        <button id="refreshBtn" class="mt-1 text-sky-300 hover:text-sky-100 underline text-xs">Refresh now</button>
+        <span id="saveState" class="ml-2 text-slate-400"></span>
+      </div>
+    </div>
+  </div>
+  <!-- Tabs -->
+  <div class="bg-slate-800">
+    <div class="max-w-7xl mx-auto px-4 flex gap-1 text-sm overflow-x-auto">
+      <button data-tab="all" class="tabBtn px-3 py-2 border-b-2 border-sky-400 text-white font-medium whitespace-nowrap">All candidates</button>
+      <button data-tab="saturday" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">This Saturday's inspections</button>
+      <button data-tab="auction" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Auction calendar</button>
+      <button data-tab="gone" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Withdrawn / sold</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Filter bar ===== -->
+<div class="bg-white border-b shadow-sm sticky top-[104px] z-20">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap gap-2 items-center text-sm">
+    <select id="fSuburb" class="border rounded px-2 py-1"><option value="">All suburbs</option></select>
+    <select id="fPrice" class="border rounded px-2 py-1">
+      <option value="">Any price</option>
+      <option value="0-1500000">&le; $1.5M</option>
+      <option value="1500000-1800000">$1.5M&ndash;$1.8M</option>
+      <option value="1800000-2000000">$1.8M&ndash;$2.0M</option>
+      <option value="2000000-2200000">$2.0M&ndash;$2.2M</option>
+    </select>
+    <select id="fBeds" class="border rounded px-2 py-1">
+      <option value="">Any beds</option><option value="2">2+ beds</option><option value="3">3+ beds</option>
+    </select>
+    <select id="fStatus" class="border rounded px-2 py-1">
+      <option value="">Any status</option>
+      <option value="needs decision">Needs decision</option>
+      <option value="interested">Interested</option>
+      <option value="inspected">Inspected</option>
+      <option value="shortlist">Shortlist</option>
+      <option value="rejected">Rejected</option>
+      <option value="sold-without-us">Sold without us</option>
+      <option value="__none">(unmarked)</option>
+    </select>
+    <select id="fFlag" class="border rounded px-2 py-1">
+      <option value="">Any change</option>
+      <option value="NEW">New</option><option value="PRICE_CHANGED">Price changed</option>
+      <option value="OPEN_HOME_ADDED">Open home added</option>
+      <option value="SOLD">Sold</option><option value="WITHDRAWN">Withdrawn</option>
+    </select>
+    <label class="flex items-center gap-1"><input type="checkbox" id="fTier1"> Tier 1 pass only</label>
+    <label class="flex items-center gap-1"><input type="checkbox" id="fWarehouse"> Warehouse character</label>
+    <span class="ml-auto flex items-center gap-1">Sort
+      <select id="fSort" class="border rounded px-2 py-1">
+        <option value="score">Tier 2 score</option>
+        <option value="open">Next open-home</option>
+        <option value="price">Price</option>
+        <option value="flag">Change flag</option>
+        <option value="dom">Days on market</option>
+      </select>
+    </span>
+    <span id="resultCount" class="text-slate-500"></span>
+  </div>
+</div>
+
+<!-- ===== Main grid ===== -->
+<main class="max-w-7xl mx-auto px-4 py-4">
+  <div id="banner"></div>
+  <div id="cards" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+  <div id="emptyState" class="hidden text-center text-slate-500 py-20"></div>
+</main>
+
+<!-- ===== Detail drawer ===== -->
+<div id="overlay" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
+<aside id="drawer" class="drawer fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl translate-x-full overflow-y-auto scrollbar-thin">
+  <div id="drawerBody" class="p-5"></div>
+</aside>
+
+<footer class="max-w-7xl mx-auto px-4 py-6 text-xs text-slate-400">
+  Encodes Tier 1 / Tier 2 criteria from <code>02-location-and-property-criteria.md</code> and decisions #5,#9,#14,#15,#17.
+  Walkability = Euclidean 1,500 m (Adam Q3). Outlook auto-classified at sweep time (Q4). Zoning auto-checked for warehouse stock (Q5).
+  This dashboard is the live record; <code>07-property-shortlist.md</code> is regenerated each sweep for sharing (Q7).
+</footer>
+
+<script>
+const STATUS_STYLES = {
+  "needs decision":"bg-amber-100 text-amber-800",
+  "interested":"bg-sky-100 text-sky-800",
+  "inspected":"bg-violet-100 text-violet-800",
+  "shortlist":"bg-emerald-100 text-emerald-800",
+  "rejected":"bg-slate-200 text-slate-600",
+  "sold-without-us":"bg-rose-100 text-rose-700"
+};
+const FLAG_STYLES = {
+  NEW:"bg-emerald-500 text-white", PRICE_CHANGED:"bg-amber-500 text-white",
+  OPEN_HOME_ADDED:"bg-sky-500 text-white", SOLD:"bg-rose-600 text-white",
+  WITHDRAWN:"bg-slate-500 text-white", UNCHANGED:"bg-slate-200 text-slate-600"
+};
+const T1_LABELS = {budget:"Budget &le;$2.2M", property_type:"Property type", accessibility:"Step-free / lift",
+  bedrooms:"Bedrooms", transport:"Transport &le;1.5km", supplies:"Daily supplies", location:"In target area", zoning:"Zoning (E1/E2/MU1)"};
+const CATCH_LABELS = {transport:"Transport", supermarket:"Supermarket", pool:"Pool", park:"Park", restaurants:"Restaurants"};
+
+let DATA = {listings:[]}, NOTES = {}, SERVED = false, TAB = "all";
+
+function fmtPrice(l){
+  if(l.price_guide_text) return l.price_guide_text;
+  if(l.price_min&&l.price_max&&l.price_min!==l.price_max) return "$"+(l.price_min/1e6).toFixed(2)+"M-$"+(l.price_max/1e6).toFixed(2)+"M";
+  if(l.price_min) return "$"+(l.price_min/1e6).toFixed(2)+"M";
+  return "Price n/a";
+}
+function key(l){ return l.url || (l.address+"|"+l.suburb); }
+function nextOpen(l){
+  const now=new Date();
+  const future=(l.open_homes||[]).map(s=>new Date(s)).filter(d=>!isNaN(d)&&d>=new Date(now.toDateString())).sort((a,b)=>a-b);
+  return future[0]||null;
+}
+function fmtDateTime(d){ return d? d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short",hour:"numeric",minute:"2-digit"}):""; }
+function isThisSaturday(d){
+  if(!d) return false;
+  const now=new Date(); const sat=new Date(now); sat.setDate(now.getDate()+((6-now.getDay()+7)%7));
+  return d.getFullYear()===sat.getFullYear()&&d.getMonth()===sat.getMonth()&&d.getDate()===sat.getDate();
+}
+
+async function load(){
+  SERVED = location.protocol==="http:"||location.protocol==="https:";
+  try{
+    DATA = await (await fetch("data/listings.json",{cache:"no-store"})).json();
+    NOTES = await (await fetch("data/notes.json",{cache:"no-store"})).json();
+  }catch(e){
+    document.getElementById("banner").innerHTML =
+      `<div class="bg-rose-50 border border-rose-200 text-rose-800 rounded p-4 mb-4 text-sm">
+       Could not load <code>data/listings.json</code>. For notes to save and data to load reliably, run
+       <code>python scripts/serve.py</code> in the <code>dashboard</code> folder and open
+       <a class="underline" href="http://localhost:8777/">http://localhost:8777/</a>.
+       <div class="mt-2">Or load a sweep file manually:
+       <input type="file" id="manualFile" accept=".json"></div></div>`;
+    document.getElementById("manualFile")?.addEventListener("change",ev=>{
+      const fr=new FileReader(); fr.onload=()=>{DATA=JSON.parse(fr.result);render();}; fr.readAsText(ev.target.files[0]);
+    });
+  }
+  // merge notes onto listings
+  DATA.listings.forEach(l=>{ const n=NOTES[key(l)]; if(n){l.status=n.status;l.note=n.note;} });
+  buildSuburbFilter();
+  render();
+  header();
+}
+
+function header(){
+  const g = DATA.generated_at_sydney || "not yet swept";
+  document.getElementById("lastRefreshed").textContent = "Last sweep: "+g + (SERVED?"  (served)":"  (file mode)");
+  const c = DATA.counts||{};
+  const hc = document.getElementById("headerCounts");
+  const chip=(n,t,cls)=> n?`<span class="pill ${cls}">${n} ${t}</span>`:"";
+  hc.innerHTML = chip(c.new,"new","bg-emerald-500 text-white")+chip(c.price_changed,"price&Delta;","bg-amber-500 text-white")+chip(c.sold,"sold","bg-rose-600 text-white")+chip(c.tier1_pass,"T1 pass","bg-sky-600 text-white");
+}
+
+function buildSuburbFilter(){
+  const subs=[...new Set(DATA.listings.map(l=>l.suburb).filter(Boolean))].sort();
+  const sel=document.getElementById("fSuburb");
+  subs.forEach(s=>{const o=document.createElement("option");o.value=s;o.textContent=s;sel.appendChild(o);});
+}
+
+function passesFilters(l){
+  const v=id=>document.getElementById(id).value;
+  if(v("fSuburb") && l.suburb!==v("fSuburb")) return false;
+  if(v("fPrice")){const[a,b]=v("fPrice").split("-").map(Number);const p=l.price_min||l.price_max||0;if(p<a||p>b)return false;}
+  if(v("fBeds") && (l.beds||0)<Number(v("fBeds"))) return false;
+  if(v("fStatus")){ if(v("fStatus")==="__none"){if(l.status)return false;} else if(l.status!==v("fStatus"))return false; }
+  if(v("fFlag") && l.change_flag!==v("fFlag")) return false;
+  if(document.getElementById("fTier1").checked && !(l.tier1&&l.tier1.pass)) return false;
+  if(document.getElementById("fWarehouse").checked && !l.warehouse_character) return false;
+  return true;
+}
+
+function tabFilter(l){
+  if(TAB==="gone") return ["SOLD","WITHDRAWN"].includes(l.change_flag);
+  if(["SOLD","WITHDRAWN"].includes(l.change_flag)) return false;
+  if(TAB==="saturday") return (l.tier1&&l.tier1.pass) && isThisSaturday(nextOpen(l));
+  if(TAB==="auction") return !!l.auction;
+  return true;
+}
+
+function sortListings(arr){
+  const s=document.getElementById("fSort").value;
+  const cmp={
+    score:(a,b)=>(b.tier2?.score||0)-(a.tier2?.score||0),
+    price:(a,b)=>(a.price_min||9e9)-(b.price_min||9e9),
+    open:(a,b)=>((nextOpen(a)||9e15)-(nextOpen(b)||9e15)),
+    flag:(a,b)=>(a.change_flag||"").localeCompare(b.change_flag||""),
+    dom:(a,b)=>(b.days_on_market||0)-(a.days_on_market||0)
+  }[s];
+  if(s==="auction"||TAB==="auction") return arr.sort((a,b)=>new Date(a.auction||9e15)-new Date(b.auction||9e15));
+  return arr.sort(cmp);
+}
+
+function t1Marks(l){
+  const t1=l.tier1||{}; let out="";
+  for(const k of Object.keys(T1_LABELS)){
+    const v=t1[k]; if(v==="n/a") continue;
+    const sym = v===true?'<span class="tick">&#10003;</span>': v===false?'<span class="cross">&#10007;</span>':'<span class="qm">?</span>';
+    out+=`<span class="inline-block mr-2 whitespace-nowrap" title="${T1_LABELS[k]}">${sym} <span class="text-[11px] text-slate-500">${T1_LABELS[k]}</span></span>`;
+  }
+  return out;
+}
+
+function card(l){
+  const t1=l.tier1||{}, t2=l.t2||l.tier2||{};
+  const passCls = t1.pass?"border-emerald-300":"border-slate-200";
+  const open=nextOpen(l);
+  const flag=l.change_flag&&l.change_flag!=="UNCHANGED"?`<span class="pill ${FLAG_STYLES[l.change_flag]||''}">${l.change_flag.replace('_',' ')}</span>`:"";
+  const status=l.status?`<span class="pill ${STATUS_STYLES[l.status]||'bg-slate-200'}">${l.status}</span>`:"";
+  const outlook=(l.outlook&&l.outlook.class)?l.outlook.class:"&mdash;";
+  const z=l.zoning||{}; const zoning = (l.warehouse_character)?
+     `<div class="text-xs mt-1">Zoning: <b class="${z.verdict==='pass'?'tick':z.verdict==='fail'?'cross':'qm'}">${z.code||z.verdict||'unverified'}</b></div>`:"";
+  const cat=l.catchments||{};
+  const catLine=Object.keys(CATCH_LABELS).map(k=>{const kk=k==='restaurants'?'restaurants':k;const ok=cat[kk];return `<span title="${CATCH_LABELS[k]}${cat.nearest_m&&cat.nearest_m[kk]?' '+cat.nearest_m[kk]+'m':''}" class="${ok?'tick':'text-slate-300'}">&#9679;</span>`;}).join(" ");
+  const img=l.cover_image?`<img src="${l.cover_image}" class="w-full h-40 object-cover rounded-t" loading="lazy" onerror="this.style.display='none'">`:"";
+  return `<div class="bg-white rounded-lg shadow border ${passCls} flex flex-col cursor-pointer hover:shadow-lg" data-key="${key(l)}">
+    ${img}
+    <div class="p-3 flex-1 flex flex-col">
+      <div class="flex justify-between items-start gap-2">
+        <div><div class="font-semibold leading-tight">${l.address||'?'}</div><div class="text-xs text-slate-500">${l.suburb||''} &middot; ${l.property_type||''}</div></div>
+        <div class="text-right shrink-0"><div class="font-bold text-slate-900">${fmtPrice(l)}</div>${flag}</div>
+      </div>
+      <div class="flex gap-3 text-xs text-slate-600 mt-2">
+        <span>${l.beds??'-'} bd</span><span>${l.baths??'-'} ba</span><span>${l.parking??'-'} car</span>
+        <span>${l.internal_m2?l.internal_m2+' m&sup2;':'- m&sup2;'}</span>${l.strata_pa?`<span>$${(l.strata_pa/1000).toFixed(0)}k strata</span>`:""}
+      </div>
+      <div class="mt-2 text-xs"><b>Outlook:</b> ${outlook} ${l.tier2?`<span class="ml-2 pill bg-slate-800 text-white">T2 ${l.tier2.score}</span>`:""}</div>
+      <div class="text-[11px] text-slate-500">${l.tier2?l.tier2.leading:''}</div>
+      ${zoning}
+      <div class="mt-2 leading-5">${t1Marks(l)}</div>
+      <div class="mt-2 text-xs text-slate-600">Walk: ${catLine}</div>
+      <div class="mt-auto pt-2 flex justify-between items-center text-xs">
+        <span class="text-slate-600">${l.auction?('Auction '+fmtDateTime(new Date(l.auction))):(open?('Open '+fmtDateTime(open)):'No open home listed')}</span>
+        ${status}
+      </div>
+    </div></div>`;
+}
+
+function render(){
+  const cards=document.getElementById("cards"), empty=document.getElementById("emptyState");
+  let arr=DATA.listings.filter(tabFilter).filter(passesFilters);
+  arr=sortListings(arr);
+  document.getElementById("resultCount").textContent=arr.length+" shown";
+  if(DATA.listings.length===0){
+    cards.innerHTML="";empty.classList.remove("hidden");
+    empty.innerHTML=`<div class="text-lg font-medium mb-2">No sweep yet</div>
+      <p>Run the initial sweep to populate the watchlist: a Claude-in-Chrome Domain harvest, then<br>
+      <code class="bg-slate-200 px-1 rounded">python scripts/sweep.py harvest.json</code>. Or wait for the scheduled Tue/Fri 06:30 Sydney sweep.</p>`;
+    return;
+  }
+  empty.classList.add("hidden");
+  cards.innerHTML = arr.length?arr.map(card).join(""):`<div class="col-span-full text-center text-slate-400 py-16">No listings match these filters.</div>`;
+  cards.querySelectorAll("[data-key]").forEach(el=>el.addEventListener("click",()=>openDrawer(el.dataset.key)));
+}
+
+function openDrawer(k){
+  const l=DATA.listings.find(x=>key(x)===k); if(!l)return;
+  const cat=l.catchments||{}; const t2=l.tier2||{};
+  const comps=t2.components?Object.entries(t2.components).map(([a,b])=>`<tr><td class="pr-3 text-slate-500">${a.replace('_',' ')}</td><td class="text-right">${b}</td></tr>`).join(""):"";
+  const catRows=Object.keys(CATCH_LABELS).map(kk=>{const m=cat.nearest_m&&cat.nearest_m[kk];const ok=cat[kk];return `<tr><td class="pr-3">${CATCH_LABELS[kk]}</td><td class="${ok?'tick':'cross'}">${ok?'within 1.5km':'outside'}</td><td class="text-right text-slate-500">${m?m+' m':'-'}</td></tr>`;}).join("");
+  const z=l.zoning||{};
+  const maps=l.lat?`https://www.google.com/maps/search/?api=1&query=${l.lat},${l.lon}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((l.address||'')+' '+(l.suburb||''))}`;
+  const cur=NOTES[key(l)]||{status:l.status||"",note:l.note||""};
+  const statusOpts=["","needs decision","interested","inspected","shortlist","rejected","sold-without-us"]
+    .map(s=>`<option value="${s}" ${cur.status===s?'selected':''}>${s||'(none)'}</option>`).join("");
+  document.getElementById("drawerBody").innerHTML=`
+    <div class="flex justify-between items-start">
+      <h2 class="text-lg font-bold">${l.address||'?'}<div class="text-sm font-normal text-slate-500">${l.suburb||''} &middot; ${fmtPrice(l)}</div></h2>
+      <button id="closeDrawer" class="text-slate-400 hover:text-slate-700 text-2xl leading-none">&times;</button>
+    </div>
+    ${l.cover_image?`<img src="${l.cover_image}" class="w-full h-44 object-cover rounded mt-3" onerror="this.style.display='none'">`:""}
+    <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+      <div>${l.beds??'-'} bed &middot; ${l.baths??'-'} bath &middot; ${l.parking??'-'} car</div>
+      <div class="text-right">${l.internal_m2?l.internal_m2+' m&sup2; internal':''}</div>
+    </div>
+    <div class="mt-3"><span class="pill bg-slate-800 text-white">Tier 2: ${t2.score??'-'}</span>
+      <span class="ml-2 text-xs text-slate-500">leading: ${t2.leading||''}</span></div>
+    <div class="mt-1 text-sm"><b>Outlook:</b> ${(l.outlook&&l.outlook.class)||'-'}
+      <div class="text-xs text-slate-500">${(l.outlook&&l.outlook.basis)||''}</div></div>
+
+    <h3 class="mt-4 font-semibold text-sm">Tier 1</h3>
+    <div class="mt-1 text-sm">${t1Marks(l)}</div>
+    ${l.tier1&&l.tier1.fails&&l.tier1.fails.length?`<div class="text-xs text-rose-600 mt-1">Fails: ${l.tier1.fails.join(", ")}</div>`:""}
+    ${l.tier1&&l.tier1.unverified&&l.tier1.unverified.length?`<div class="text-xs text-amber-600 mt-1">Needs manual check: ${l.tier1.unverified.join(", ")}</div>`:""}
+
+    ${l.warehouse_character?`<h3 class="mt-4 font-semibold text-sm">Zoning</h3>
+      <div class="text-sm">Code <b class="${z.verdict==='pass'?'tick':z.verdict==='fail'?'cross':'qm'}">${z.code||'unverified'}</b> &mdash; ${z.verdict||'unknown'}.
+      ${z.viewer_url?`<a class="underline text-sky-600" target="_blank" href="${z.viewer_url}">NSW Planning Portal</a>`:''}</div>`:""}
+
+    <h3 class="mt-4 font-semibold text-sm">Walkability (Euclidean 1.5km)</h3>
+    <table class="text-xs mt-1 w-full">${catRows}</table>
+
+    ${comps?`<h3 class="mt-4 font-semibold text-sm">Tier 2 components</h3><table class="text-xs mt-1 w-full">${comps}</table>`:""}
+
+    ${l.description?`<h3 class="mt-4 font-semibold text-sm">Description</h3><p class="text-sm text-slate-600 mt-1 whitespace-pre-line">${l.description}</p>`:""}
+
+    <div class="mt-4 flex gap-3 text-sm">
+      ${l.url?`<a class="underline text-sky-600" target="_blank" href="${l.url}">Open listing</a>`:""}
+      <a class="underline text-sky-600" target="_blank" href="${maps}">Map</a>
+    </div>
+
+    <h3 class="mt-5 font-semibold text-sm">Your notes</h3>
+    <label class="block text-xs mt-2">Status
+      <select id="noteStatus" class="border rounded px-2 py-1 w-full mt-1">${statusOpts}</select></label>
+    <label class="block text-xs mt-2">Note
+      <textarea id="noteText" rows="4" class="border rounded px-2 py-1 w-full mt-1">${cur.note||""}</textarea></label>
+    <button id="saveNote" class="mt-2 bg-slate-900 text-white px-4 py-1.5 rounded text-sm">Save note</button>
+    <span id="noteSaved" class="ml-2 text-xs text-emerald-600"></span>
+  `;
+  document.getElementById("overlay").classList.remove("hidden");
+  document.getElementById("drawer").classList.remove("translate-x-full");
+  document.getElementById("closeDrawer").onclick=closeDrawer;
+  document.getElementById("saveNote").onclick=()=>saveNote(l);
+}
+function closeDrawer(){document.getElementById("overlay").classList.add("hidden");document.getElementById("drawer").classList.add("translate-x-full");}
+
+async function saveNote(l){
+  const k=key(l);
+  const status=document.getElementById("noteStatus").value;
+  const note=document.getElementById("noteText").value;
+  if(status||note) NOTES[k]={status,note,updated:new Date().toISOString()}; else delete NOTES[k];
+  l.status=status; l.note=note;
+  const ok=document.getElementById("noteSaved");
+  if(SERVED){
+    try{
+      const r=await fetch("/api/save-notes",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(NOTES)});
+      const j=await r.json(); ok.textContent=j.ok?"Saved to disk.":"Save failed: "+j.error;
+    }catch(e){ ok.textContent="Save failed: "+e.message; }
+  }else{
+    const blob=new Blob([JSON.stringify(NOTES,null,2)],{type:"application/json"});
+    const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="notes.json";a.click();
+    ok.textContent="Downloaded notes.json - save it over dashboard/data/notes.json.";
+  }
+  render();
+}
+
+// tab + control wiring
+document.querySelectorAll(".tabBtn").forEach(b=>b.addEventListener("click",()=>{
+  TAB=b.dataset.tab;
+  document.querySelectorAll(".tabBtn").forEach(x=>{x.classList.remove("border-sky-400","text-white","font-medium");x.classList.add("border-transparent","text-slate-300");});
+  b.classList.add("border-sky-400","text-white","font-medium");b.classList.remove("border-transparent","text-slate-300");
+  if(TAB==="auction")document.getElementById("fSort").value="open";
+  render();
+}));
+["fSuburb","fPrice","fBeds","fStatus","fFlag","fSort"].forEach(id=>document.getElementById(id).addEventListener("change",render));
+["fTier1","fWarehouse"].forEach(id=>document.getElementById(id).addEventListener("change",render));
+document.getElementById("overlay").addEventListener("click",closeDrawer);
+document.getElementById("refreshBtn").addEventListener("click",async()=>{
+  document.getElementById("saveState").textContent="reloading data…";
+  await load(); document.getElementById("saveState").textContent="reloaded.";
+  setTimeout(()=>document.getElementById("saveState").textContent="",2000);
+});
+
+load();
+</script>
+</body>
+</html>
