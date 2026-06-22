@@ -153,6 +153,94 @@ class Handler(SimpleHTTPRequestHandler):
         except Exception as exc:
             return self._json(500, {"ok": False, "error": str(exc)})
 
+    def _handle_enrich_listing(self):
+        """Enrich a single listing with data from bookmarklet."""
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length)
+            item = json.loads(raw.decode("utf-8"))
+
+            with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            listings = data.get("listings", [])
+
+            # Find matching listing by address or URL
+            address = item.get("address", "").lower().strip()
+            suburb = item.get("suburb", "").lower().strip()
+            listing_url = item.get("url", "")
+
+            target = None
+            for l in listings:
+                l_addr = l.get("address", "").lower()
+                l_suburb = l.get("suburb", "").lower()
+                l_url = l.get("url", "")
+
+                # Match by address+suburb or by URL containing same property ID
+                if (address and address in l_addr and suburb and suburb == l_suburb):
+                    target = l
+                    break
+                # Also try matching by property ID in URL (the numeric suffix)
+                if listing_url and l_url:
+                    import re
+                    new_id = re.search(r'-(\d{7,12})$', listing_url)
+                    old_id = re.search(r'-(\d{7,12})$', l_url)
+                    if new_id and old_id and new_id.group(1) == old_id.group(1):
+                        target = l
+                        break
+
+            if not target:
+                # Try looser match - just address
+                for l in listings:
+                    l_addr = l.get("address", "").lower()
+                    if address and address in l_addr:
+                        target = l
+                        break
+
+            if not target:
+                return self._json(404, {
+                    "ok": False,
+                    "error": f"No matching listing found for {address}, {suburb}"
+                })
+
+            # Update listing with enrichment data
+            if item.get("url"):
+                target["url"] = item["url"]
+            if item.get("cover_image"):
+                target["cover_image"] = item["cover_image"]
+            if item.get("beds") is not None:
+                target["beds"] = item["beds"]
+            if item.get("baths") is not None:
+                target["baths"] = item["baths"]
+            if item.get("parking") is not None:
+                target["parking"] = item["parking"]
+            if item.get("property_type"):
+                target["property_type"] = item["property_type"]
+            if item.get("description"):
+                target["description"] = item["description"]
+            if item.get("internal_m2"):
+                target["internal_m2"] = item["internal_m2"]
+            if item.get("price_guide_text"):
+                target["price_guide_text"] = item["price_guide_text"]
+
+            # Update source to reflect direct listing
+            if "domain.com.au" in item.get("url", ""):
+                target["source"] = "domain"
+            elif "realestate.com.au" in item.get("url", ""):
+                target["source"] = "realestate"
+
+            # Save
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+
+            return self._json(200, {
+                "ok": True,
+                "matched": f"{target.get('address')}, {target.get('suburb')}",
+                "enriched": list(item.keys())
+            })
+        except Exception as e:
+            return self._json(500, {"ok": False, "error": str(e)})
+
     def _handle_enrich_batch(self):
         """Add URLs to multiple listings at once."""
         try:
@@ -205,6 +293,8 @@ class Handler(SimpleHTTPRequestHandler):
             return self._handle_push()
         if self.path == "/api/enrich-batch":
             return self._handle_enrich_batch()
+        if self.path == "/api/enrich-listing":
+            return self._handle_enrich_listing()
         if self.path != "/api/save-notes":
             return self._json(404, {"ok": False, "error": "unknown endpoint"})
         try:

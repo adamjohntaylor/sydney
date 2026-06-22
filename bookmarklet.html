@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Listing Enrichment Bookmarklet</title>
+<style>
+body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+h1 { color: #1e3a5f; }
+.bookmarklet { display: inline-block; padding: 12px 24px; background: #1e3a5f; color: white !important; text-decoration: none; border-radius: 8px; font-size: 18px; margin: 20px 0; }
+.bookmarklet:hover { background: #2d4a6f; }
+.steps { background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.steps li { margin: 10px 0; }
+code { background: #e5e5e5; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+.note { background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; }
+</style>
+</head>
+<body>
+<h1>Listing Enrichment Bookmarklet</h1>
+
+<p>This bookmarklet extracts listing details (photo, beds, baths, etc.) from Domain or REA listing pages and saves them to your dashboard.</p>
+
+<h2>Installation</h2>
+<p>Drag this button to your bookmarks bar:</p>
+
+<a class="bookmarklet" href="javascript:(function(){const s=document.createElement('script');s.src='http://localhost:8777/enrich-bookmarklet.js?t='+Date.now();document.body.appendChild(s);})();">Enrich Listing</a>
+
+<div class="note">
+<strong>Note:</strong> The local server must be running (<code>python scripts/serve.py</code>) for this to work.
+</div>
+
+<h2>How to Use</h2>
+<ol class="steps">
+<li>Make sure the local server is running</li>
+<li>Open the dashboard and click "Open listing" on any property</li>
+<li>When the Domain/REA listing page loads, click the <strong>Enrich Listing</strong> bookmark</li>
+<li>A popup will confirm what was saved</li>
+<li>Refresh the dashboard to see the updated listing with photo</li>
+</ol>
+
+<h2>What Gets Extracted</h2>
+<ul>
+<li>Cover photo URL</li>
+<li>Beds, baths, parking</li>
+<li>Property type</li>
+<li>Price guide</li>
+<li>Description</li>
+<li>Direct listing URL (replaces search URL)</li>
+</ul>
+
+<p><a href="/">Back to Dashboard</a></p>
+</body>
+</html>
