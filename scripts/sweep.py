@@ -181,6 +181,22 @@ def carry_notes(listings, notes_path):
                 l["accessibility"] = acc
 
 
+def is_empty_listing(l):
+    """True for a placeholder shell carrying no usable identity: no address AND no
+    bedroom count AND no price (neither numeric bounds nor a digit in the guide text).
+    These come from alert parsing that found a link/fragment but no real data, and
+    should be flushed rather than shown."""
+    if (l.get("address") or "").strip():
+        return False
+    if l.get("beds"):                       # any positive bedroom count
+        return False
+    if l.get("price_min") or l.get("price_max"):
+        return False
+    if any(ch.isdigit() for ch in (l.get("price_guide_text") or "")):
+        return False
+    return True
+
+
 def build_counts(active):
     return {
         "total": len(active),
@@ -238,6 +254,10 @@ def main(argv):
 
     # (3) notes
     carry_notes(active + carried, os.path.join(DATA, "notes.json"))
+
+    # (3b) flush empty placeholder shells (no address / price / beds)
+    active = [l for l in active if not is_empty_listing(l)]
+    carried = [l for l in carried if not is_empty_listing(l)]
 
     # (4) assemble + write
     all_listings = active + [c for c in carried if c.get("change_flag") in ("WITHDRAWN", "SOLD")]

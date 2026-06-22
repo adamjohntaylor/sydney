@@ -197,10 +197,17 @@ class Handler(SimpleHTTPRequestHandler):
             for l in all_listings:
                 score_mod.score_listing(l, amenities)
 
+            # Step 9a: Flush empty placeholder shells (no address / price / beds).
+            before_empty = len(all_listings)
+            all_listings = [l for l in all_listings if not sweep_mod.is_empty_listing(l)]
+            empties_removed = before_empty - len(all_listings)
+            if empties_removed:
+                print(f"Step 9a: Flushed {empties_removed} empty listings", file=sys.stderr, flush=True)
+
             # Step 9b: Remove duplicates (by address+suburb, keeping best data)
             print("Step 9b: Removing duplicates...", file=sys.stderr, flush=True)
             seen = {}
-            no_address = []  # Keep listings without addresses
+            no_address = []  # keep address-less listings that still carry real data
             for l in all_listings:
                 addr = l.get("address", "").lower().strip()
                 suburb = l.get("suburb", "").lower().strip()
@@ -291,6 +298,7 @@ class Handler(SimpleHTTPRequestHandler):
                 "already_geocoded": already_geocoded,
                 "geocode_failed": geocode_fails,
                 "duplicates_removed": dupes_removed,
+                "empties_removed": empties_removed,
                 "total": len(all_listings),
                 "rescored": len(all_listings),
                 "tier1_pass": out["counts"]["tier1_pass"],
@@ -512,6 +520,9 @@ class Handler(SimpleHTTPRequestHandler):
         with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
         listings = data.get("listings", [])
+        # Flush empty placeholder shells (no address / price / beds).
+        listings = [l for l in listings if not sweep_mod.is_empty_listing(l)]
+        data["listings"] = listings
         # Carry FIRST so the accessibility override feeds scoring.
         sweep_mod.carry_notes(listings, NOTES_PATH)
         if os.path.exists(OSM_PATH):

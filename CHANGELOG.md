@@ -81,6 +81,11 @@ not only `?`→✓.)
   merges them, and the drawer shows them (accessibility-relevant chips highlighted).
 - **"Needs access check" filter** — toolbar checkbox surfacing listings whose step-free/lift is `?`
   or only provisional (not manually confirmed), as a verification worklist.
+- **Flush empty placeholder listings** — `sweep.is_empty_listing` drops shells with no address AND no
+  price AND no bedroom count (alert-parsing fragments that rendered as blank "Price n/a / ? / - bd" cards).
+  Applied in the Refresh pipeline, the save-notes re-score, and the scheduled sweep, so they're removed
+  and stay out (refresh reports `empties_removed`). The previous code deliberately *preserved* every
+  address-less record; now address-less records are kept only if they still carry real data.
 - **Description capture raised 500 → 2000 chars, plus a full-text lift/step-free safety net** — long
   descriptions put the "- … lift access …" bullet beyond the old 500-char cap (e.g. 16/162-166 Victoria
   Rd, where the lift was only in the bullets and not a structured feature chip). The bookmarklet now
