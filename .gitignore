@@ -1,7 +1,8 @@
-# Gmail credentials (sensitive)
+# Credentials (sensitive)
 data/.gmail_credentials.json
 data/.gmail_token.json
 data/.gmail_oauth.json
+data/.geocode_config.json
 
 # Python cache
 __pycache__/
