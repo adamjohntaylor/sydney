@@ -57,7 +57,8 @@ SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
 # Alert senders to search for
 ALERT_SENDERS = ["noreply@domain.com.au", "noreply@realestate.com.au",
-                 "alerts@domain.com.au", "alerts@realestate.com.au"]
+                 "alerts@domain.com.au", "alerts@realestate.com.au",
+                 "email@campaign.realestate.com.au"]
 
 
 def fetch_via_imap(days_back=3):
@@ -251,15 +252,96 @@ def parse_emails_for_listings(emails):
     """Parse email bodies to extract listings using parse_alert_email logic."""
     sys.path.insert(0, HERE)
     import parse_alert_email as parser
+    import re
 
     all_listings = {}
     for email in emails:
+        # First try the standard URL-based parser
         listings = parser.extract(email["body"])
         for lst in listings:
-            # De-duplicate by URL
             all_listings.setdefault(lst["url"], lst)
 
+        # If no URLs found, try extracting by address (for tracking-redirect emails)
+        if not listings:
+            listings = extract_by_address(email["body"])
+            for lst in listings:
+                key = f"{lst.get('address', '')}|{lst.get('suburb', '')}"
+                all_listings.setdefault(key, lst)
+
     return list(all_listings.values())
+
+
+def extract_by_address(body):
+    """Extract listings by address when emails use tracking redirects instead of direct URLs."""
+    import re
+    import html
+
+    # Target suburbs
+    SUBURBS = r"(Zetland|Alexandria|Erskineville|Newtown|Camperdown|Glebe|Annandale|Leichhardt|Lilyfield|Rozelle|Balmain|Birchgrove|Marrickville|Dulwich Hill|Petersham|Stanmore|Enmore|Drummoyne)"
+
+    # Address pattern: number/number Street Name, Suburb
+    ADDRESS_RE = re.compile(
+        rf"(\d+[A-Za-z]?(?:/\d+(?:-\d+)?)?)\s+([A-Za-z][A-Za-z\s]+?(?:Street|St|Road|Rd|Avenue|Ave|Lane|Ln|Place|Pl|Drive|Dr|Crescent|Cr|Parade|Pde|Way|Close|Cl|Court|Ct|Circuit|Boulevard|Blvd|Terrace|Tce))\s*,?\s*{SUBURBS}",
+        re.I
+    )
+
+    # Price pattern
+    PRICE_RE = re.compile(r"\$[\d,]+(?:\.\d+)?(?:\s*[kKmM]|(?:\s*-\s*\$[\d,]+(?:\.\d+)?)?)?")
+
+    # Strip tags but keep structure
+    text = re.sub(r"<[^>]+>", " ", body)
+    text = html.unescape(text)
+    text = re.sub(r"\s+", " ", text)
+
+    listings = []
+    seen = set()
+
+    for match in ADDRESS_RE.finditer(text):
+        unit_street = match.group(1)
+        street_name = match.group(2).strip()
+        suburb = match.group(3).strip().title()
+
+        address = f"{unit_street} {street_name}"
+
+        # De-duplicate
+        key = f"{address.lower()}|{suburb.lower()}"
+        if key in seen:
+            continue
+        seen.add(key)
+
+        # Look for price nearby (within 200 chars before)
+        start = max(0, match.start() - 200)
+        context = text[start:match.end() + 100]
+        price_match = PRICE_RE.search(context)
+
+        lst = {
+            "address": address,
+            "suburb": suburb,
+            "source": "domain_email",
+        }
+
+        if price_match:
+            price_text = price_match.group(0)
+            lst["price_guide_text"] = price_text
+            # Parse numeric price
+            nums = re.findall(r"[\d,]+", price_text.replace(",", ""))
+            if nums:
+                try:
+                    val = int(nums[0])
+                    if "m" in price_text.lower():
+                        val = int(val * 1_000_000)
+                    elif "k" in price_text.lower():
+                        val = int(val * 1_000)
+                    elif val < 10000:  # Likely millions written as 1.5 etc
+                        val = int(val * 1_000_000)
+                    lst["price_min"] = val
+                    lst["price_max"] = val
+                except ValueError:
+                    pass
+
+        listings.append(lst)
+
+    return listings
 
 
 def merge_new_listings(new_listings, dry_run=False):
@@ -287,7 +369,10 @@ def merge_new_listings(new_listings, dry_run=False):
     if dry_run:
         print("\nDry run - would add these listings:", file=sys.stderr)
         for l in truly_new:
-            print(f"  - {l.get('address_text', l.get('url'))}", file=sys.stderr)
+            addr = l.get('address') or l.get('address_text') or l.get('url', '?')
+            suburb = l.get('suburb', '')
+            price = l.get('price_guide_text', '')
+            print(f"  - {addr}, {suburb} {price}", file=sys.stderr)
         return len(truly_new)
 
     # Geocode new listings

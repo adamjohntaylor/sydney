@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 10,
-    "tier1_pass": 10,
-    "new": 10,
+    "total": 46,
+    "tier1_pass": 46,
+    "new": 46,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -789,6 +789,2176 @@
       "change_flag": "NEW",
       "lat": -33.84595,
       "lon": 151.1519808
+    },
+    {
+      "address": "40 High Street",
+      "suburb": "Balmain",
+      "source": "domain_email",
+      "price_guide_text": "$2,050,000",
+      "price_min": 2050000,
+      "price_max": 2050000,
+      "lat": -33.8587221,
+      "lon": 151.1736149,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 141,
+          "supermarket": 347,
+          "pool": 393,
+          "park": 121,
+          "restaurants": 261
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe",
+      "source": "domain_email",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.8793204,
+      "lon": 151.1817153,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 160,
+          "supermarket": 341,
+          "pool": 771,
+          "park": 94,
+          "restaurants": 351
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "1/19-21 Larkin Street",
+      "suburb": "Camperdown",
+      "source": "domain_email",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "115 Sydenham Road",
+      "suburb": "Marrickville",
+      "source": "domain_email",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.9025131,
+      "lon": 151.1543323,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 97,
+          "supermarket": 677,
+          "pool": 382,
+          "park": 433,
+          "restaurants": 434
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "24/1 Gibbens Street",
+      "suburb": "Camperdown",
+      "source": "domain_email",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.8908812,
+      "lon": 151.1769533,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 75,
+          "supermarket": 470,
+          "pool": 465,
+          "park": 198,
+          "restaurants": 84
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "4/6 Turner Street",
+      "suburb": "Balmain",
+      "source": "domain_email",
+      "price_guide_text": "$2,000,000",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "lat": -33.8548723,
+      "lon": 151.177015,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 99,
+          "supermarket": 221,
+          "pool": 295,
+          "park": 130,
+          "restaurants": 236
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "3/12 George Street",
+      "suburb": "Marrickville",
+      "source": "domain_email",
+      "price_guide_text": "$720,000",
+      "price_min": 720000,
+      "price_max": 720000,
+      "lat": -33.9049685,
+      "lon": 151.150272,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 276,
+          "supermarket": 676,
+          "pool": 160,
+          "park": 473,
+          "restaurants": 486
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "103/12 Marsden Street",
+      "suburb": "Camperdown",
+      "source": "domain_email",
+      "price_guide_text": "$720,000",
+      "price_min": 720000,
+      "price_max": 720000,
+      "lat": -33.8873796,
+      "lon": 151.1788082,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 89,
+          "supermarket": 145,
+          "pool": 45,
+          "park": 158,
+          "restaurants": 119
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "25 Callan Street",
+      "suburb": "Rozelle",
+      "source": "domain_email",
+      "price_guide_text": "$775,000",
+      "price_min": 775000,
+      "price_max": 775000,
+      "lat": -33.8621103,
+      "lon": 151.1665695,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 43,
+          "supermarket": 364,
+          "pool": 415,
+          "park": 16,
+          "restaurants": 217
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "19 Day Street",
+      "suburb": "Marrickville",
+      "source": "domain_email",
+      "price_guide_text": "$775,000",
+      "price_min": 775000,
+      "price_max": 775000,
+      "lat": -33.9193672,
+      "lon": 151.1488629,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 221,
+          "supermarket": 339,
+          "pool": 1058,
+          "park": 171,
+          "restaurants": 291
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "27/486-488 Illawarra Road",
+      "suburb": "Marrickville",
+      "source": "domain_email",
+      "price_guide_text": "$2,000,000",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "13/30 Ewart street",
+      "suburb": "Marrickville",
+      "source": "domain_email",
+      "price_guide_text": "$2,000,000",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "lat": -33.914533,
+      "lon": 151.1428264,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 49,
+          "supermarket": 464,
+          "pool": 883,
+          "park": 279,
+          "restaurants": 377
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "38/20 Pyrmont Bridge Road",
+      "suburb": "Camperdown",
+      "source": "domain_email",
+      "price_guide_text": "$500,000",
+      "price_min": 500000,
+      "price_max": 500000,
+      "lat": -33.8845969,
+      "lon": 151.1782004,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 63,
+          "supermarket": 69,
+          "pool": 269,
+          "park": 102,
+          "restaurants": 111
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "3 Blairgowrie Street",
+      "suburb": "Dulwich Hill",
+      "source": "domain_email",
+      "price_guide_text": "$669,000",
+      "price_min": 669000,
+      "price_max": 669000,
+      "lat": -33.8962872,
+      "lon": 151.1397185,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 155,
+          "supermarket": 107,
+          "pool": 160,
+          "park": 156,
+          "restaurants": 409
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "301/5 Yara Avenue",
+      "suburb": "Rozelle",
+      "source": "domain_email",
+      "price_guide_text": "$1,400,000",
+      "price_min": 1400000,
+      "price_max": 1400000,
+      "lat": -33.8610161,
+      "lon": 151.1667228,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 92,
+          "supermarket": 416,
+          "pool": 313,
+          "park": 58,
+          "restaurants": 186
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "2712/6 Grove Street",
+      "suburb": "Dulwich Hill",
+      "source": "domain_email",
+      "price_guide_text": "$1,700,000",
+      "price_min": 1700000,
+      "price_max": 1700000,
+      "lat": -33.9017684,
+      "lon": 151.1391706,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 99,
+          "supermarket": 296,
+          "pool": 473,
+          "park": 131,
+          "restaurants": 85
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "1009/1 Sterling Circuit",
+      "suburb": "Camperdown",
+      "source": "domain_email",
+      "price_guide_text": "$1,700,000",
+      "price_min": 1700000,
+      "price_max": 1700000,
+      "lat": -33.8833192,
+      "lon": 151.1777167,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 152,
+          "supermarket": 161,
+          "pool": 417,
+          "park": 29,
+          "restaurants": 181
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "3/58 Warren Road",
+      "suburb": "Marrickville",
+      "source": "domain_email",
+      "price_guide_text": "$1,000,000",
+      "price_min": 1000000,
+      "price_max": 1000000,
+      "lat": -33.9174934,
+      "lon": 151.1530204,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 297,
+          "supermarket": 263,
+          "pool": 719,
+          "park": 428,
+          "restaurants": 273
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "89 Denison Street",
+      "suburb": "Camperdown",
+      "source": "domain_email",
+      "price_guide_text": "$1,700,000",
+      "price_min": 1700000,
+      "price_max": 1700000,
+      "lat": -33.8894896,
+      "lon": 151.1744736,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 259,
+          "supermarket": 275,
+          "pool": 484,
+          "park": 153,
+          "restaurants": 191
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "1/136 Livingstone Road",
+      "suburb": "Marrickville",
+      "source": "domain_email",
+      "price_guide_text": "$1,700,000",
+      "price_min": 1700000,
+      "price_max": 1700000,
+      "lat": -33.9189522,
+      "lon": 151.1433665,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 161,
+          "supermarket": 698,
+          "pool": 1204,
+          "park": 263,
+          "restaurants": 190
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "130 Epsom Road",
+      "suburb": "Zetland",
+      "source": "domain_email",
+      "lat": -33.9108295,
+      "lon": 151.2072089,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 114,
+          "supermarket": 104,
+          "pool": 206,
+          "park": 191,
+          "restaurants": 105
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "9 Metters Street",
+      "suburb": "Erskineville",
+      "source": "domain_email",
+      "price_guide_text": "$920,000",
+      "price_min": 920000,
+      "price_max": 920000,
+      "lat": -33.9030888,
+      "lon": 151.1865586,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 266,
+          "supermarket": 333,
+          "pool": 1146,
+          "park": 112,
+          "restaurants": 133
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "4/18 Leichhardt Street",
+      "suburb": "Leichhardt",
+      "source": "domain_email",
+      "price_guide_text": "$920,000",
+      "price_min": 920000,
+      "price_max": 920000,
+      "lat": -33.8835192,
+      "lon": 151.1592697,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 160,
+          "supermarket": 256,
+          "pool": 1155,
+          "park": 178,
+          "restaurants": 232
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "9/70-74 Wilson Street",
+      "suburb": "Newtown",
+      "source": "domain_email",
+      "price_guide_text": "$920,000",
+      "price_min": 920000,
+      "price_max": 920000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "802/6 Paul Street",
+      "suburb": "Zetland",
+      "source": "domain_email",
+      "price_guide_text": "$2,050,000",
+      "price_min": 2050000,
+      "price_max": 2050000,
+      "lat": -33.9078837,
+      "lon": 151.2047126,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 180,
+          "supermarket": 197,
+          "pool": 302,
+          "park": 71,
+          "restaurants": 81
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "63 Rofe Street",
+      "suburb": "Leichhardt",
+      "source": "domain_email",
+      "price_guide_text": "$2,050,000",
+      "price_min": 2050000,
+      "price_max": 2050000,
+      "lat": -33.888295,
+      "lon": 151.1552179,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 44,
+          "supermarket": 307,
+          "pool": 506,
+          "park": 243,
+          "restaurants": 110
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "8 Park Street",
+      "suburb": "Erskineville",
+      "source": "domain_email",
+      "price_guide_text": "$2,000,000",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "lat": -33.8994988,
+      "lon": 151.189411,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 106,
+          "supermarket": 449,
+          "pool": 743,
+          "park": 158,
+          "restaurants": 89
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "201/1 Brightwell Lane",
+      "suburb": "Erskineville",
+      "source": "domain_email",
+      "price_guide_text": "$2,000,000",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "lat": -33.9044727,
+      "lon": 151.1854365,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 204,
+          "supermarket": 416,
+          "pool": 1316,
+          "park": 74,
+          "restaurants": 71
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "94/155 Missenden Road",
+      "suburb": "Newtown",
+      "source": "domain_email",
+      "price_guide_text": "$1,275,000",
+      "price_min": 1275000,
+      "price_max": 1275000,
+      "lat": -33.8916785,
+      "lon": 151.1828017,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 46,
+          "supermarket": 187,
+          "pool": 450,
+          "park": 47,
+          "restaurants": 64
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "58/30 Gadigal Avenue",
+      "suburb": "Zetland",
+      "source": "domain_email",
+      "price_guide_text": "$1,100,000 - $1,200,000",
+      "price_min": 1100000,
+      "price_max": 1100000,
+      "lat": -33.9042307,
+      "lon": 151.2124938,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 109,
+          "supermarket": 32,
+          "pool": 371,
+          "park": 211,
+          "restaurants": 78
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "61A Albany Road",
+      "suburb": "Stanmore",
+      "source": "domain_email",
+      "price_guide_text": "$1,100,000 - $1,200,000",
+      "price_min": 1100000,
+      "price_max": 1100000,
+      "lat": -33.8903773,
+      "lon": 151.1707179,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 114,
+          "supermarket": 493,
+          "pool": 833,
+          "park": 187,
+          "restaurants": 64
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "9/63-69 Lord Street",
+      "suburb": "Newtown",
+      "source": "domain_email",
+      "price_guide_text": "$1,100,000 - $1,200,000",
+      "price_min": 1100000,
+      "price_max": 1100000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "1/17-19 Westbourne Street",
+      "suburb": "Drummoyne",
+      "source": "domain_email",
+      "price_guide_text": "$1.8m",
+      "price_min": 1000000,
+      "price_max": 1000000,
+      "lat": -33.8474571,
+      "lon": 151.1517047,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 61,
+          "supermarket": 456,
+          "pool": 578,
+          "park": 296,
+          "restaurants": 363
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "113 Albermarle Street",
+      "suburb": "Newtown",
+      "source": "domain_email",
+      "price_guide_text": "$1.75m",
+      "price_min": 1000000,
+      "price_max": 1000000,
+      "lat": -33.8956327,
+      "lon": 151.1760327,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 312,
+          "supermarket": 27,
+          "pool": 983,
+          "park": 152,
+          "restaurants": 234
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "26C Morrissey Road",
+      "suburb": "Erskineville",
+      "source": "domain_email",
+      "price_guide_text": "$1.75m",
+      "price_min": 1000000,
+      "price_max": 1000000,
+      "lat": -33.9015854,
+      "lon": 151.1835951,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 170,
+          "supermarket": 205,
+          "pool": 1274,
+          "park": 103,
+          "restaurants": 191
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "109 Wyndham Street",
+      "suburb": "Alexandria",
+      "source": "domain_email",
+      "price_guide_text": "$1.75m",
+      "price_min": 1000000,
+      "price_max": 1000000,
+      "lat": -33.9058628,
+      "lon": 151.2021422,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 46,
+          "supermarket": 90,
+          "pool": 184,
+          "park": 208,
+          "restaurants": 126
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
     }
   ]
 }
