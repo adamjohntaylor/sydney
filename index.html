@@ -481,14 +481,20 @@ document.getElementById("refreshBtn").addEventListener("click",async()=>{
   }
   setTimeout(()=>st.textContent="",4000);
 });
+let PUSHING=false;
 document.getElementById("pushBtn").addEventListener("click",async()=>{
   const st=document.getElementById("saveState");
+  if(PUSHING){ return; }          // ignore re-clicks while a push is in flight
+  PUSHING=true;
+  const btn=document.getElementById("pushBtn");
+  btn.disabled=true; btn.classList.add("opacity-50");
   st.textContent="pushing to GitHub…";
   try{
     const r=await fetch("/api/push",{method:"POST"});
     const j=await r.json();
     st.textContent=j.ok?j.message:("push failed: "+j.error);
   }catch(e){st.textContent="push error: "+e.message;}
+  finally{ PUSHING=false; btn.disabled=false; btn.classList.remove("opacity-50"); }
   setTimeout(()=>st.textContent="",4000);
 });
 

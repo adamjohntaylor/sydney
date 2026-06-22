@@ -53,6 +53,13 @@ not only `?`→✓.)
 - **"T1 Fail!" stamp** — cards whose `tier1.pass === false` now show a rotated red "T1 Fail!"
   stamp (top-right), via a `.t1stamp` style and a conditional in `card()`. Listings with only
   `?` items (no determinable fail) are *not* stamped.
+- **Budget self-heals from price text** — `score.py` now back-fills numeric `price_min`/`price_max`
+  from `price_guide_text` (new `price_bounds_from_text`) when the numbers are missing, so the
+  budget mark resolves on *any* re-score. Fixes listings (e.g. `21/59 Wrights Road`) whose price
+  text was set by an enrichment predating the price-parsing, leaving `price_min: null` and budget `?`.
+- **Server resilience** — `_json` swallows client-disconnect errors (`ConnectionError`/`BrokenPipeError`)
+  instead of logging a traceback (the slow `/api/push` was triggering `WinError 10053` when the
+  browser hung up early); the Push button is now disabled while a push is in flight.
 - These need a re-score to show on existing listings: restart `serve.py` (to load the new
   `score.py`) then **Refresh now** (re-scores all). A plain F5 only reloads, it doesn't recompute.
 - *Caveat:* the Cowork Linux mount served stale/truncated copies of the re-edited files this

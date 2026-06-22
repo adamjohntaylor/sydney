@@ -88,6 +88,35 @@ ACCESS_TOKENS = re.compile(
     r"single-storey|no stairs|ground floor|wheelchair|ramp access|disabled access)\b",
     re.I,
 )
+# Dollar amounts in a price-guide string, e.g. "$1,950,000 (hidden guide)" or
+# "$1.8M - $1.95M". Used to back-fill numeric price_min/price_max when only the
+# text is present (so the budget criterion resolves on any re-score, not just at
+# enrichment time).
+_PRICE_NUM_RE = re.compile(r"\$\s*([\d][\d,]*(?:\.\d+)?)\s*([kKmM]|million)?", re.I)
+
+
+def price_bounds_from_text(text):
+    """Return (min, max) dollar amounts parsed from a price-guide string, or
+    (None, None) if it carries no usable number (e.g. 'Auction', 'Contact Agent')."""
+    if not text:
+        return (None, None)
+    nums = []
+    for m in _PRICE_NUM_RE.finditer(text):
+        try:
+            v = float(m.group(1).replace(",", ""))
+        except ValueError:
+            continue
+        unit = (m.group(2) or "").lower()
+        if unit in ("m", "million"):
+            v *= 1_000_000
+        elif unit == "k":
+            v *= 1_000
+        v = int(v)
+        if v >= 10_000:                 # ignore stray small matches
+            nums.append(v)
+    if not nums:
+        return (None, None)
+    return (min(nums), max(nums))
 
 # Outlook detection patterns - order matters (water > park > elevated > leafy > city)
 OUTLOOK_PATTERNS = [
@@ -203,9 +232,17 @@ def tier1(listing):
     """
     c = {}
 
-    # Budget - use the lower bound of the guide if a range is given.
+    # Budget - use the lower bound of the guide if a range is given. If the numeric
+    # bounds are missing but a price-guide text is present (e.g. a listing whose
+    # text was set before price-parsing existed), back-fill them from the text so
+    # the criterion resolves on any re-score rather than staying "?".
     pmin = listing.get("price_min")
     pmax = listing.get("price_max")
+    if pmin is None and pmax is None:
+        b_min, b_max = price_bounds_from_text(listing.get("price_guide_text"))
+        if b_min is not None:
+            listing["price_min"] = pmin = b_min
+            listing["price_max"] = pmax = b_max
     guide = pmin if pmin is not None else pmax
     c["budget"] = (guide is not None and guide <= BUDGET_CEILING) if guide is not None else None
 
