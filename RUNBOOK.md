@@ -16,6 +16,14 @@ Built from `SCOPE.md` with Adam's §4 resolutions applied.
    apartments + houses), turn on email alerts, and connect **Gmail** or
    **Microsoft 365 (Outlook)** so the sweep can read them. (We ingest alert
    emails, not scraped pages - see "Ingestion" below.)
+   - **Optional accessibility shortcut:** on the realestate.com.au saved search,
+     also tick the **"step-free entry"** and **"elevator"** accessibility filters,
+     then set `"rea_search_has_accessibility_filter": true` in
+     `data/accessibility_config.json`. REA-sourced alert listings are then tagged
+     `accessibility_source="rea_filter"` and scored as a **provisional** step-free/
+     lift pass (the agent tagged the feature; you still verify entry and the
+     surrounding terrain at inspection). Domain has no such filter, so Domain
+     listings stay `?` until you confirm them. Your manual verdict always wins.
 3. **Open the dashboard** (so notes save to disk):
    ```
    python scripts\serve.py                # then open http://localhost:8777/
@@ -94,9 +102,25 @@ absence. Don't use it with new-only alert data.)*
 
 **Tier 1 (pass/fail; `None` = can't tell → flagged, never a silent fail):**
 budget ≤ $2.2M · property type (apartment / ≤2BR cottage / warehouse-conversion;
-raw shells excluded, Q2) · step-free + lift (usually unverifiable from a listing →
-shown as `?`) · beds (apt ≥2, cottage 2) · transport ≤1.5km · daily supplies ≤1.5km ·
-in target area · zoning E1/E2/MU1 for warehouse stock.
+raw shells excluded, Q2) · step-free + lift · beds (apt ≥2, cottage 2) · transport
+≤1.5km · daily supplies ≤1.5km · in target area · zoning E1/E2/MU1 for warehouse stock.
+
+**Step-free / lift** resolves in priority order: (1) your **manual verdict** in the
+listing drawer (Step-free / Lift = yes/no/unknown, saved to `notes.json`) is
+authoritative; (2) else **filter provenance** — if a listing came via an REA search
+carrying the accessibility filters (`accessibility_source="rea_filter"`), it scores a
+**provisional ✓** (shown with a "verify at inspection" note); (3) else `?`, with a
+**keyword hint** surfaced in the drawer if the description mentions a lift/level-access
+phrase (a prompt to confirm — it never sets the verdict itself). A deal-breaker is
+never passed on agent marketing copy alone, and silence is never a fail.
+
+**Enrichment → re-score → publish.** New data injected from the browser bookmarklet
+(`/api/enrich-listing`) is merged, the price text is parsed to numeric bounds, **all**
+listings are re-scored (so budget/bedrooms/etc. marks resolve), `07` is regenerated,
+and the change is committed + pushed to GitHub automatically (push failures are
+non-fatal — the local save still stands). Saving an accessibility verdict
+(`/api/save-notes`) re-scores locally so the mark updates on reload (no push — notes
+are personal). The manual `enrich.py` CLI re-scores on the same shared path.
 
 **Tier 2 (0–100, outlook leading):** outlook 30 · living-area ≥115 m² 20 ·
 warehouse-conversion character 12 (only if step-free not failed) · light/aspect 11 ·

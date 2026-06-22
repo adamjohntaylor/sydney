@@ -1,0 +1,4 @@
+{
+  "rea_search_has_accessibility_filter": false,
+  "_comment": "Set rea_search_has_accessibility_filter to true ONCE you have added realestate.com.au's 'step-free entry' and 'elevator' accessibility filters to the saved search that feeds the alert emails. When true, REA-sourced alert listings are tagged accessibility_source='rea_filter' and score.py marks their Tier 1 accessibility as a PROVISIONAL pass (entry/lift tagged by the agent; flat surrounding terrain still needs an inspection). Domain has no structured accessibility filter, so Domain-sourced listings are never auto-passed. Adam's manual Step-free/Lift verdict in the dashboard drawer always overrides this."
+}

@@ -328,6 +328,10 @@ function openDrawer(k){
   const cur=NOTES[key(l)]||{status:l.status||"",note:l.note||""};
   const statusOpts=["","needs decision","interested","inspected","shortlist","rejected","sold-without-us"]
     .map(s=>`<option value="${s}" ${cur.status===s?'selected':''}>${s||'(none)'}</option>`).join("");
+  const curAcc=(NOTES[key(l)]&&NOTES[key(l)].accessibility)||{};
+  const triOpts=v=>["unknown","yes","no"].map(o=>{
+    const sel=((v===true&&o==='yes')||(v===false&&o==='no')||((v===null||v===undefined)&&o==='unknown'))?'selected':'';
+    return `<option value="${o}" ${sel}>${o}</option>`;}).join("");
   document.getElementById("drawerBody").innerHTML=`
     <div class="flex justify-between items-start">
       <h2 class="text-lg font-bold">${l.address||'?'}<div class="text-sm font-normal text-slate-500">${l.suburb||''} &middot; ${fmtPrice(l)}</div></h2>
@@ -347,6 +351,8 @@ function openDrawer(k){
     <div class="mt-1 text-sm">${t1Marks(l)}</div>
     ${l.tier1&&l.tier1.fails&&l.tier1.fails.length?`<div class="text-xs text-rose-600 mt-1">Fails: ${l.tier1.fails.join(", ")}</div>`:""}
     ${l.tier1&&l.tier1.unverified&&l.tier1.unverified.length?`<div class="text-xs text-amber-600 mt-1">Needs manual check: ${l.tier1.unverified.join(", ")}</div>`:""}
+    ${l.tier1&&l.tier1.accessibility_provisional?`<div class="text-xs text-sky-700 mt-1">Step-free/lift: <b>provisional &#10003;</b> via REA accessibility filter &mdash; verify entry &amp; surrounding terrain at inspection.</div>`:""}
+    ${l.tier1&&l.tier1.accessibility_hint&&!l.tier1.accessibility_provisional?`<div class="text-xs text-slate-500 mt-1">Step-free/lift: description mentions an accessibility feature &mdash; confirm below.</div>`:""}
 
     ${l.warehouse_character?`<h3 class="mt-4 font-semibold text-sm">Zoning</h3>
       <div class="text-sm">Code <b class="${z.verdict==='pass'?'tick':z.verdict==='fail'?'cross':'qm'}">${z.code||'unverified'}</b> &mdash; ${z.verdict||'unknown'}.
@@ -363,6 +369,15 @@ function openDrawer(k){
       ${l.url?`<a class="underline text-sky-600" target="_blank" href="${l.url}">Open listing</a>`:""}
       <a class="underline text-sky-600" target="_blank" href="${maps}">Map</a>
     </div>
+
+    <h3 class="mt-5 font-semibold text-sm">Accessibility (your verification)</h3>
+    <div class="grid grid-cols-2 gap-2 mt-1">
+      <label class="block text-xs">Step-free access
+        <select id="accStepFree" class="border rounded px-2 py-1 w-full mt-1">${triOpts(curAcc.step_free)}</select></label>
+      <label class="block text-xs">Lift (apartments)
+        <select id="accLift" class="border rounded px-2 py-1 w-full mt-1">${triOpts(curAcc.lift)}</select></label>
+    </div>
+    <p class="text-[11px] text-slate-500 mt-1">Your verdict is authoritative &mdash; it overrides any provisional filter pass. Saved with your note.</p>
 
     <h3 class="mt-5 font-semibold text-sm">Your notes</h3>
     <label class="block text-xs mt-2">Status
@@ -383,13 +398,26 @@ async function saveNote(l){
   const k=key(l);
   const status=document.getElementById("noteStatus").value;
   const note=document.getElementById("noteText").value;
-  if(status||note) NOTES[k]={status,note,updated:new Date().toISOString()}; else delete NOTES[k];
+  const triVal=id=>{const v=document.getElementById(id).value;return v==='yes'?true:v==='no'?false:null;};
+  const acc={step_free:triVal("accStepFree"),lift:triVal("accLift")};
+  const hasAcc=acc.step_free!==null||acc.lift!==null;
+  const rec={status,note,updated:new Date().toISOString()};
+  if(hasAcc) rec.accessibility=acc;
+  if(status||note||hasAcc) NOTES[k]=rec; else delete NOTES[k];
   l.status=status; l.note=note;
   const ok=document.getElementById("noteSaved");
   if(SERVED){
     try{
       const r=await fetch("/api/save-notes",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(NOTES)});
-      const j=await r.json(); ok.textContent=j.ok?"Saved to disk.":"Save failed: "+j.error;
+      const j=await r.json();
+      if(j.ok){
+        // The server re-scored, so reload and re-open the drawer to show the
+        // refreshed Step-free/lift mark.
+        await load();
+        openDrawer(k);
+        return;
+      }
+      ok.textContent="Save failed: "+j.error;
     }catch(e){ ok.textContent="Save failed: "+e.message; }
   }else{
     const blob=new Blob([JSON.stringify(NOTES,null,2)],{type:"application/json"});

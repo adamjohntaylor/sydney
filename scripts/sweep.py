@@ -171,6 +171,14 @@ def carry_notes(listings, notes_path):
         if n:
             l["status"] = n.get("status")
             l["note"] = n.get("note")
+            # Adam's manual accessibility verdict (authoritative). Shape:
+            # {"step_free": true/false/null, "lift": true/false/null}. Applied
+            # onto the listing so score.py's Tier 1 accessibility consumes it.
+            # Callers must carry_notes BEFORE scoring for this to take effect.
+            acc = n.get("accessibility")
+            if isinstance(acc, dict) and (acc.get("step_free") is not None
+                                          or acc.get("lift") is not None):
+                l["accessibility"] = acc
 
 
 def build_counts(active):
@@ -268,3 +276,4 @@ def main(argv):
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv))
+# (accessibility override applied via carry_notes before scoring; see RUNBOOK)

@@ -179,14 +179,15 @@ class Handler(SimpleHTTPRequestHandler):
             print(f"Step 7: Re-geocoding missing coords...", file=sys.stderr, flush=True)
             geocoded_count, geocode_fails = geocode_mod.geocode_listings(all_listings, max_per_run=10)
 
-            # Step 8: Re-score all listings
-            print(f"Step 8: Re-scoring {len(all_listings)} listings...", file=sys.stderr, flush=True)
+            # Step 8: Carry forward notes + manual accessibility override FIRST,
+            # so the override feeds the re-score below.
+            print("Step 8: Carrying forward notes...", file=sys.stderr, flush=True)
+            sweep_mod.carry_notes(all_listings, NOTES_PATH)
+
+            # Step 9: Re-score all listings
+            print(f"Step 9: Re-scoring {len(all_listings)} listings...", file=sys.stderr, flush=True)
             for l in all_listings:
                 score_mod.score_listing(l, amenities)
-
-            # Step 9: Carry forward notes
-            print("Step 9: Carrying forward notes...", file=sys.stderr, flush=True)
-            sweep_mod.carry_notes(all_listings, NOTES_PATH)
 
             # Step 9b: Remove duplicates (by address+suburb, keeping best data)
             print("Step 9b: Removing duplicates...", file=sys.stderr, flush=True)
@@ -387,6 +388,10 @@ class Handler(SimpleHTTPRequestHandler):
             elif "realestate.com.au" in item.get("url", ""):
                 target["source"] = "realestate"
 
+            # Carry Adam's notes + manual accessibility override FIRST, so the
+            # override feeds scoring on this same pass.
+            sweep_mod.carry_notes(listings, NOTES_PATH)
+
             # Re-score ALL listings (Adam's choice) so the new data flips the
             # Tier 1 marks and any scoring-logic changes propagate globally.
             if os.path.exists(OSM_PATH):
@@ -395,9 +400,6 @@ class Handler(SimpleHTTPRequestHandler):
                 amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
             for l in listings:
                 score_mod.score_listing(l, amenities)
-
-            # Carry forward Adam's notes (status/free-text) by URL.
-            sweep_mod.carry_notes(listings, NOTES_PATH)
 
             # Recompute header counts; preserve the last-sweep metadata
             # (enrichment is not a new sweep, so generated_at_* stay as-is).
@@ -489,6 +491,35 @@ class Handler(SimpleHTTPRequestHandler):
         except Exception as e:
             return self._json(500, {"ok": False, "error": str(e)})
 
+    def _apply_notes_and_rescore(self):
+        """Apply notes (incl. manual accessibility override) and re-score all
+        listings, rewriting listings.json + regenerating 07. Local only, no push.
+        Returns the number of listings re-scored (0 if listings.json absent)."""
+        if not os.path.exists(LISTINGS_PATH):
+            return 0
+        with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        listings = data.get("listings", [])
+        # Carry FIRST so the accessibility override feeds scoring.
+        sweep_mod.carry_notes(listings, NOTES_PATH)
+        if os.path.exists(OSM_PATH):
+            amenities = score_mod.load_amenities(OSM_PATH)
+        else:
+            amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
+        for l in listings:
+            score_mod.score_listing(l, amenities)
+        active = [l for l in listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
+        data["counts"] = sweep_mod.build_counts(active)
+        with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        try:
+            import render as render_mod
+            with open(SHORTLIST_PATH, "w", encoding="utf-8") as fh:
+                fh.write(render_mod.render(data))
+        except Exception:
+            pass
+        return len(listings)
+
     def do_POST(self):
         if self.path == "/api/refresh":
             return self._handle_refresh()
@@ -511,7 +542,11 @@ class Handler(SimpleHTTPRequestHandler):
             with open(tmp, "w", encoding="utf-8") as fh:
                 json.dump(notes, fh, indent=2, ensure_ascii=False)
             os.replace(tmp, NOTES_PATH)
-            return self._json(200, {"ok": True, "count": len(notes)})
+            # Re-score so a manual accessibility verdict in the notes takes effect
+            # immediately (carry_notes applies the override, then score). Local
+            # only - notes are personal, so no auto-push here.
+            rescored = self._apply_notes_and_rescore()
+            return self._json(200, {"ok": True, "count": len(notes), "rescored": rescored})
         except Exception as exc:  # noqa: BLE001
             return self._json(400, {"ok": False, "error": str(exc)})
 

@@ -7,6 +7,39 @@ of how the code got to its current shape.
 
 ---
 
+## 23 June 2026 — Enrichment now resolves Tier 1 marks (price, bedrooms, accessibility)
+
+Closed the gap where bookmarklet/enrichment data updated a listing's fields but left
+the Tier 1 ✓/✗/? marks frozen. Enrichment now re-scores, so newly-known facts resolve
+the marks. (Marks resolve to their *true* state — an over-budget guide flips `?`→✗,
+not only `?`→✓.)
+
+- **Price** (`serve.py` `_handle_enrich_listing`): the bookmarklet's `price_guide_text`
+  is parsed (reusing `parse_alert_email.parse_price`) into numeric `price_min`/`price_max`,
+  which the budget criterion reads. "Auction"/"Contact Agent" with no number leave the
+  numbers unset, so budget stays an honest `?`.
+- **Re-score all + auto-push** (Adam's choices): every enrichment re-scores all listings,
+  regenerates `07-property-shortlist.md`, and commits + pushes to GitHub. Push is
+  **non-fatal** — a failed push never loses the local save. `_handle_push` was refactored
+  to share a `_commit_and_push()` helper.
+- **Bedrooms** needed no new code — `beds` is already captured as an integer and read by
+  the criterion, so the same re-score resolves it.
+- **Accessibility** (`score.py`, `gmail_fetch.py`, `sweep.py`, `index.html`): a deal-breaker
+  listings rarely state, so resolved by *confirmation*, not scraping. Three paths, in
+  priority: (1) **manual verdict** — new Step-free / Lift controls in the drawer save to
+  `notes.json`, applied by `carry_notes` before scoring (authoritative); (2) **filter
+  provenance** — REA listings from an accessibility-filtered saved search are tagged
+  `accessibility_source="rea_filter"` and scored a *provisional* ✓ (gated by
+  `data/accessibility_config.json`, default off); (3) **keyword hint** — a positive phrase
+  in the description prompts confirmation but never sets the verdict. `carry_notes` now runs
+  *before* scoring in the enrich/refresh/save-notes paths so overrides take effect on the
+  same pass; `/api/save-notes` re-scores locally (no push).
+- **Verified** via `score.tier1` + `parse_alert_email.parse_price` on crafted cases (all
+  branches of budget, bedrooms, accessibility provenance/override/hint, plus the
+  decision-#17 warehouse-credit interaction) — all green.
+
+---
+
 ## 22 June 2026 — Git/GitHub port, local upgrade, and the enrichment bookmarklet
 
 All of the following happened in a single session on 22 June 2026 (38 commits,

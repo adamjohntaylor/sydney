@@ -226,21 +226,37 @@ def tier1(listing):
         c["property_type"] = None
 
     # Accessibility - step-free + lift for apartments. Rarely stated in a
-    # listing; default to None (unverified) unless flags are explicitly set.
+    # listing, so resolved in priority order:
+    #   1. Adam's manual verdict (listing['accessibility'] bool or dict) - authoritative.
+    #   2. Filter provenance: listing['accessibility_source'] == 'rea_filter' means the
+    #      listing was returned by an REA saved search carrying the step-free + elevator
+    #      filters, so treat as a PROVISIONAL pass (entry/lift tagged; terrain still
+    #      needs an inspection). Flagged accessibility_provisional for the UI.
+    #   3. Otherwise unknown (None). A positive description phrase sets accessibility_hint
+    #      (a prompt to confirm) but never the verdict itself.
+    apt_type = ptype in ("apartment", "unit", "flat", "warehouse_conversion")
     acc = listing.get("accessibility")  # expected: True / False / None / dict
     if isinstance(acc, dict):
         step_free = acc.get("step_free")
         lift = acc.get("lift")
-        if step_free is False or (ptype in ("apartment", "unit", "flat",
-                                            "warehouse_conversion") and lift is False):
-            c["accessibility"] = False
-        elif step_free is True and (ptype not in ("apartment", "unit", "flat",
-                                                  "warehouse_conversion") or lift is True):
-            c["accessibility"] = True
+        if step_free is False or (apt_type and lift is False):
+            acc_val = False
+        elif step_free is True and (not apt_type or lift is True):
+            acc_val = True
         else:
-            c["accessibility"] = None
+            acc_val = None
     else:
-        c["accessibility"] = acc if acc in (True, False) else None
+        acc_val = acc if acc in (True, False) else None
+
+    if acc_val is None and listing.get("accessibility_source") == "rea_filter":
+        acc_val = True
+        c["accessibility_provisional"] = True
+    c["accessibility"] = acc_val
+
+    if acc_val is None:
+        desc_acc = listing.get("description") or ""
+        if ACCESS_TOKENS.search(desc_acc):
+            c["accessibility_hint"] = True
 
     # Bedrooms - apartments >=2, cottages 2.
     beds = listing.get("beds")

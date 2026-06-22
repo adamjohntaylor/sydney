@@ -51,6 +51,19 @@ OAUTH_CREDS_PATH = os.path.join(DATA, ".gmail_oauth.json")
 TOKEN_PATH = os.path.join(DATA, ".gmail_token.json")
 LISTINGS_PATH = os.path.join(DATA, "listings.json")
 OSM_PATH = os.path.join(DATA, "osm_amenities.geojson")
+ACCESS_CONFIG_PATH = os.path.join(DATA, "accessibility_config.json")
+
+
+def rea_filter_enabled():
+    """True if the REA saved search carries the step-free + elevator accessibility
+    filters (Adam sets this in data/accessibility_config.json once he's added them).
+    When true, REA-sourced alert listings are tagged accessibility_source='rea_filter'
+    so score.py treats them as a PROVISIONAL accessibility pass."""
+    try:
+        with open(ACCESS_CONFIG_PATH, "r", encoding="utf-8") as fh:
+            return bool(json.load(fh).get("rea_search_has_accessibility_filter"))
+    except (ValueError, OSError):
+        return False
 
 # Gmail API scopes - read-only access to emails
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
@@ -269,7 +282,18 @@ def parse_emails_for_listings(emails):
                 key = f"{lst.get('address', '')}|{lst.get('suburb', '')}"
                 all_listings.setdefault(key, lst)
 
-    return list(all_listings.values())
+    result = list(all_listings.values())
+
+    # Filter-provenance: if the REA saved search carries the accessibility
+    # filters, tag REA-sourced listings as a provisional accessibility pass.
+    if rea_filter_enabled():
+        for lst in result:
+            src = (lst.get("source") or "").lower()
+            url = (lst.get("url") or "").lower()
+            if "rea" in src or "realestate" in src or "realestate.com.au" in url:
+                lst["accessibility_source"] = "rea_filter"
+
+    return result
 
 
 def generate_search_url(address: str, suburb: str, source: str = "domain") -> str:
