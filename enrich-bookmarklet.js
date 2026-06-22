@@ -190,7 +190,7 @@
     // Description
     const desc = document.querySelector('[data-testid="listing-details__description"], .listing-details__description');
     if (desc) {
-      data.description = desc.textContent.trim().substring(0, 500);
+      data.description = desc.textContent.trim().substring(0, 2000);
     }
 
   } else if (isREA) {
@@ -316,7 +316,7 @@
     // Description
     const descEl = document.querySelector('[class*="description"]');
     if (descEl) {
-      data.description = descEl.textContent.trim().substring(0, 500);
+      data.description = descEl.textContent.trim().substring(0, 2000);
     }
   }
 
@@ -349,6 +349,19 @@
       });
     } catch (e) {}
   });
+  // Accessibility safety net: scan the FULL description text (not the truncated
+  // copy) for a building lift / step-free phrasing and record it as a feature, so
+  // the signal survives even when "lift access" sits deep in a long bullet list.
+  const descFull = document.querySelector(
+    '[data-testid="listing-details__description"], .listing-details__description, [class*="description"]');
+  const fullText = (descFull ? descFull.textContent : document.body.innerText) || '';
+  if (/\b(?:lift\s+(?:access|lobby|to\s+(?:all|every|each|the|both|ground))|elevator|(?:secure|internal|passenger|residents'?|building'?s?|common)\s+lift|with\s+(?:a\s+)?lift)\b/i.test(fullText)
+      && !/\b(?:no\s+lift|without\s+(?:a\s+)?lift|walk[\s-]?up)\b/i.test(fullText)) {
+    features.add('Lift (listed)');
+  }
+  if (/\b(?:step[\s-]?free|level access|wheelchair access|disabled access|ramp access)\b/i.test(fullText)) {
+    features.add('Step-free access (listed)');
+  }
   if (features.size) data.features = Array.from(features).slice(0, 40);
 
   // Show what we found

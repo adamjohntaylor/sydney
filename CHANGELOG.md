@@ -81,6 +81,11 @@ not only `?`→✓.)
   merges them, and the drawer shows them (accessibility-relevant chips highlighted).
 - **"Needs access check" filter** — toolbar checkbox surfacing listings whose step-free/lift is `?`
   or only provisional (not manually confirmed), as a verification worklist.
+- **Description capture raised 500 → 2000 chars, plus a full-text lift/step-free safety net** — long
+  descriptions put the "- … lift access …" bullet beyond the old 500-char cap (e.g. 16/162-166 Victoria
+  Rd, where the lift was only in the bullets and not a structured feature chip). The bookmarklet now
+  scans the *full* description for a building-lift / step-free phrase and records a synthetic
+  `Lift (listed)` / `Step-free access (listed)` feature, so the signal survives truncation.
 - **REA filter-provenance (suggestion 6)** — mechanism already wired; documented the enable steps in
   the RUNBOOK. The `accessibility_config.json` flag stays **off** until the filters are actually added
   to the saved search (turning it on early would assert false provisional passes).
