@@ -60,6 +60,30 @@ not only `?`→✓.)
 - **Server resilience** — `_json` swallows client-disconnect errors (`ConnectionError`/`BrokenPipeError`)
   instead of logging a traceback (the slow `/api/push` was triggering `WinError 10053` when the
   browser hung up early); the Push button is now disabled while a push is in flight.
+- **Accessibility auto-detection from description** — for apartment-type dwellings, a lift/elevator
+  mentioned *in context* (`LIFT_CONTEXT_RE`) now scores a **provisional ✓** for step-free/lift, and an
+  explicit "no lift" / "walk-up" (`LIFT_NEGATIVE_RE`) a **provisional ✗**. Context-aware: matches a
+  building lift as a noun, not the verb ("lifts your lifestyle") nor "stairlift"/"facelift"/"uplifting".
+  Each provisional verdict carries a `accessibility_basis` string shown in the drawer; a manual verdict
+  overrides; gated to apartments (a lift is moot for a single-level house). Verified on positive,
+  negative, and false-positive phrasings.
+
+### Accessibility automation expanded (suggestions 1-6)
+
+- **Unified `score._auto_accessibility`** — resolves step-free/lift from the structured **features
+  list** (weighted first) and the description, after manual verdict + REA provenance: a `Lift`/`Elevator`
+  feature chip or an explicit step-free/level-access phrase, a **ground/street-level** dwelling, an
+  apartment lift-in-context, or a **house single-level / level-entry** → provisional ✓; "no lift"/"walk-up"
+  or **stairs-to-entry / steep approach** → provisional ✗; colliding signals → left `?` (ambiguous).
+  Manual verdict still wins (auto sits under `elif acc_val is None`). 11-case standalone test green.
+- **Bookmarklet captures the Property features list + JSON-LD** (`data.features`, `data.floor`) from
+  Domain/REA — structured chips ("Lift", "Intercom", …) are far more reliable than prose; `serve.py`
+  merges them, and the drawer shows them (accessibility-relevant chips highlighted).
+- **"Needs access check" filter** — toolbar checkbox surfacing listings whose step-free/lift is `?`
+  or only provisional (not manually confirmed), as a verification worklist.
+- **REA filter-provenance (suggestion 6)** — mechanism already wired; documented the enable steps in
+  the RUNBOOK. The `accessibility_config.json` flag stays **off** until the filters are actually added
+  to the saved search (turning it on early would assert false provisional passes).
 - These need a re-score to show on existing listings: restart `serve.py` (to load the new
   `score.py`) then **Refresh now** (re-scores all). A plain F5 only reloads, it doesn't recompute.
 - *Caveat:* the Cowork Linux mount served stale/truncated copies of the re-edited files this

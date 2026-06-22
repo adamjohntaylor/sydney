@@ -2,7 +2,11 @@
   "https://www.domain.com.au/21-59-wrights-road-drummoyne-nsw-2047-2020691952": {
     "status": "interested",
     "note": "",
-    "updated": "2026-06-22T12:39:26.456Z"
+    "updated": "2026-06-22T23:25:18.212Z",
+    "accessibility": {
+      "step_free": true,
+      "lift": true
+    }
   },
   "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935": {
     "status": "interested",

@@ -320,6 +320,37 @@
     }
   }
 
+  // Property features list (structured chips) + JSON-LD amenities. These are far
+  // more reliable than parsing prose for accessibility signals like "Lift".
+  const features = new Set();
+  const featSelectors = [
+    '[data-testid="listing-details__additional-features"] li',
+    '[class*="additional-features"] li',
+    '[data-testid="property-features"] li',
+    '[class*="property-features"] li',
+    '[class*="featureList"] li',
+    '[class*="feature-list"] li',
+    'ul[class*="feature"] li'
+  ];
+  featSelectors.forEach(sel => {
+    document.querySelectorAll(sel).forEach(li => {
+      const t = (li.textContent || '').trim();
+      if (t && t.length <= 40) features.add(t);
+    });
+  });
+  // JSON-LD amenityFeature (any ld+json block on the page; also grabs numberOfRooms etc.)
+  document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
+    try {
+      let j = JSON.parse(s.textContent);
+      (Array.isArray(j) ? j : [j]).forEach(o => {
+        const af = o && o.amenityFeature;
+        if (Array.isArray(af)) af.forEach(a => { if (a && a.name) features.add(String(a.name).trim()); });
+        if (o && o.floorLevel) data.floor = String(o.floorLevel).trim();
+      });
+    } catch (e) {}
+  });
+  if (features.size) data.features = Array.from(features).slice(0, 40);
+
   // Show what we found
   console.log('Extracted data:', data);
 

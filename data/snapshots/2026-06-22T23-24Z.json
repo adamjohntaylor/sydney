@@ -98,7 +98,7 @@
       "address": "16/162-166 Victoria Road",
       "suburb": "Drummoyne",
       "postcode": "2047",
-      "property_type": "apartment / unit / flat",
+      "property_type": "apartment",
       "beds": 2,
       "baths": 2,
       "parking": 2,
@@ -113,7 +113,7 @@
         "2026-06-27T10:00:00+10:00"
       ],
       "auction": null,
-      "description": "Property DescriptionTop Floor Apartment with Iconic Sydney ViewsOn the eastern side of Victoria Road, facing Renwick Street at the rear and with northeast outlooks to the water, city skyline and Sydney Harbour Bridge, this spacious modern apartment provides serene elevation with a private aspect and spectacular views. The apartment occupies a quiet top floor position in 'The Drummoyne', a prestigious security building featuring just 17 private residences, and combines sleek designer interiors wi",
+      "description": "Top-floor apartment in 'The Drummoyne' (17 residences) with northeast outlooks to the water, the Sydney city skyline and the Harbour Bridge; serene elevation and private aspect.",
       "outlook": {
         "class": "water",
         "basis": "Top floor with NE outlook to water, city skyline and Harbour Bridge."
@@ -755,14 +755,16 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": true,
+        "accessibility": null,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "accessibility"
+        ],
         "pass": true
       },
       "tier2": {
@@ -786,11 +788,7 @@
       "lat": -33.84595,
       "lon": 151.1519808,
       "status": "interested",
-      "note": "",
-      "accessibility": {
-        "step_free": true,
-        "lift": true
-      }
+      "note": ""
     },
     {
       "address": "40 High Street",

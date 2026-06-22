@@ -88,6 +88,91 @@ ACCESS_TOKENS = re.compile(
     r"single-storey|no stairs|ground floor|wheelchair|ramp access|disabled access)\b",
     re.I,
 )
+
+# Context-aware lift/elevator detection (apartments). Matches a building lift as a
+# NOUN, not the verb "lift" ("lifts your lifestyle"), and not "stairlift" /
+# "facelift" / "uplifting" (no word boundary). "elevator" is unambiguous; bare
+# "lift" only counts with a building/access qualifier before or after it.
+LIFT_CONTEXT_RE = re.compile(
+    r"\belevator\b"
+    r"|\b(?:secure|internal|building'?s?|residents?'?|resident's|passenger|common|private|"
+    r"on-?site|level|level[- ]access|disabled|wheelchair)\s+lift\b"
+    r"|\blift\s+(?:access|lobby|services?|servicing)\b"
+    r"|\blift\s+to\s+(?:all|every|each|the|both|ground)\b"
+    r"|\blift\s+to\s+all\s+(?:floors|levels)\b"
+    r"|\b(?:with|has|have|featuring|features?|including|includes?|boasts?|plus)\s+"
+    r"(?:a\s+|an\s+)?(?:secure\s+|internal\s+|passenger\s+)?lift\b",
+    re.I,
+)
+# Strong negatives - an apartment explicitly described as having no lift / being a
+# walk-up. These DISQUALIFY (and suppress any positive match in the same text).
+LIFT_NEGATIVE_RE = re.compile(
+    r"\bno\s+(?:lift|elevator)\b"
+    r"|\bwithout\s+(?:a\s+)?(?:lift|elevator)\b"
+    r"|\bwalk[\s-]?up\b"
+    r"|\bstairs\s+only\b"
+    r"|\b(?:first|second|third|top)\s+floor\s+walk[\s-]?up\b",
+    re.I,
+)
+# Direct accessibility claims - assert step-free access regardless of dwelling type.
+DIRECT_ACCESS_RE = re.compile(
+    r"\b(?:step[\s-]?free|level[\s-]?access|wheel[\s-]?chair[\s-]?access|"
+    r"disabled access|ramp access|no stairs|no steps)\b", re.I)
+# Ground / street-level dwelling - step-free regardless of any lift (any type).
+GROUND_FLOOR_RE = re.compile(
+    r"\b(?:ground[\s-]?floor|ground[\s-]?level|street[\s-]?level)\b", re.I)
+# Single-level / level-entry - relevant to HOUSES (an apartment is single-level by
+# default, so this says nothing about building access for apartments).
+SINGLE_LEVEL_RE = re.compile(
+    r"\b(?:single[\s-]?level|single[\s-]?storey|single-storey|one[\s-]?level|"
+    r"all on one level|level entry|level-entry)\b", re.I)
+# Entry-specific negatives - stairs up to the door, steep approach (any type).
+STEP_FREE_NEG_RE = re.compile(
+    r"\b(?:stairs\s+(?:up\s+)?to\s+(?:the\s+)?(?:entry|entrance|front\s+door)|"
+    r"staircase\s+to\s+(?:the\s+)?entr|steep\s+(?:driveway|block|site|access|hill|approach))\b",
+    re.I)
+
+
+def _auto_accessibility(listing, apt_type):
+    """Infer a PROVISIONAL step-free/lift verdict from the structured features list
+    and the description. Returns (True/False, basis) or (None, None). Never consulted
+    until a manual verdict and REA filter-provenance have been ruled out (caller does
+    that), so a manual verdict always wins. Features are weighted above prose.
+
+    Signals (suggestions 1-3): a 'Lift'/'Elevator' feature chip or an explicit
+    step-free/level-access phrase; a ground/street-level dwelling; an apartment lift
+    in context; a house described as single-level / level-entry. Negatives: an
+    apartment 'no lift'/'walk-up', or stairs-to-entry / steep approach (any type).
+    If positive and negative signals collide, returns None (ambiguous -> needs check).
+    """
+    feats = listing.get("features") or []
+    feat_text = " ".join(str(f) for f in feats).lower()
+    desc = listing.get("description") or ""
+    blob = feat_text + "\n" + desc
+
+    pos = None
+    if apt_type and re.search(r"\b(?:lift|elevator)\b", feat_text):
+        pos = "lift in features list"
+    elif DIRECT_ACCESS_RE.search(blob):
+        pos = "step-free / level access stated"
+    elif GROUND_FLOOR_RE.search(blob):
+        pos = "ground / street level"
+    elif apt_type and LIFT_CONTEXT_RE.search(desc):
+        pos = "lift / elevator in description"
+    elif (not apt_type) and SINGLE_LEVEL_RE.search(desc):
+        pos = "single-level / level-entry"
+
+    neg = None
+    if apt_type and LIFT_NEGATIVE_RE.search(desc):
+        neg = "no lift / walk-up"
+    elif STEP_FREE_NEG_RE.search(blob):
+        neg = "stairs / steep entry"
+
+    if pos and not neg:
+        return (True, pos)
+    if neg and not pos:
+        return (False, neg)
+    return (None, None)
 # Dollar amounts in a price-guide string, e.g. "$1,950,000 (hidden guide)" or
 # "$1.8M - $1.95M". Used to back-fill numeric price_min/price_max when only the
 # text is present (so the budget criterion resolves on any re-score, not just at
@@ -274,12 +359,14 @@ def tier1(listing):
     # Accessibility - step-free + lift for apartments. Rarely stated in a
     # listing, so resolved in priority order:
     #   1. Adam's manual verdict (listing['accessibility'] bool or dict) - authoritative.
-    #   2. Filter provenance: listing['accessibility_source'] == 'rea_filter' means the
-    #      listing was returned by an REA saved search carrying the step-free + elevator
-    #      filters, so treat as a PROVISIONAL pass (entry/lift tagged; terrain still
-    #      needs an inspection). Flagged accessibility_provisional for the UI.
-    #   3. Otherwise unknown (None). A positive description phrase sets accessibility_hint
-    #      (a prompt to confirm) but never the verdict itself.
+    #   2. Filter provenance: listing['accessibility_source'] == 'rea_filter' (returned by
+    #      an REA saved search carrying the step-free + elevator filters) -> PROVISIONAL pass.
+    #   3. Description signal (apartments): an explicit lift/elevator in context -> PROVISIONAL
+    #      pass; an explicit "no lift" / "walk-up" -> PROVISIONAL fail.
+    #   4. Otherwise unknown (None), with a soft accessibility_hint if a phrase is present.
+    # Provisional verdicts (2 & 3) are text/filter-derived: they satisfy the lift limb but
+    # entry & surrounding terrain still want an inspection - hence the "provisional" flag and
+    # the basis string surfaced in the UI. A manual verdict always overrides them.
     apt_type = is_apt_type  # building-type dwelling (lift required); set above
     acc = listing.get("accessibility")  # expected: True / False / None / dict
     if isinstance(acc, dict):
@@ -294,15 +381,24 @@ def tier1(listing):
     else:
         acc_val = acc if acc in (True, False) else None
 
+    desc_acc = listing.get("description") or ""
     if acc_val is None and listing.get("accessibility_source") == "rea_filter":
         acc_val = True
         c["accessibility_provisional"] = True
+        c["accessibility_basis"] = "REA accessibility filter"
+    elif acc_val is None:
+        # Auto-detect from the structured features list + description (suggestions
+        # 1-3). Provisional: satisfies the lift/step-free limb; entry & terrain still
+        # want an inspection. A manual verdict (handled above) always overrides.
+        v, basis = _auto_accessibility(listing, apt_type)
+        if v is not None:
+            acc_val = v
+            c["accessibility_provisional"] = True
+            c["accessibility_basis"] = basis
     c["accessibility"] = acc_val
 
-    if acc_val is None:
-        desc_acc = listing.get("description") or ""
-        if ACCESS_TOKENS.search(desc_acc):
-            c["accessibility_hint"] = True
+    if acc_val is None and ACCESS_TOKENS.search(desc_acc):
+        c["accessibility_hint"] = True
 
     # Bedrooms - 2 or more for all dwelling types (apartments and houses/cottages
     # alike); 1 (or 0) fails; unknown -> None. House ≥2 set 23 June 2026 (decision

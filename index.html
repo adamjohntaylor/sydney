@@ -84,6 +84,7 @@
       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/></svg>
     </button>
     <label class="flex items-center gap-1"><input type="checkbox" id="fWarehouse"> Warehouse character</label>
+    <label class="flex items-center gap-1" title="Step-free/lift not yet confirmed: unknown (?) or only a provisional auto/filter verdict"><input type="checkbox" id="fAccessCheck"> Needs access check</label>
     <span class="ml-auto flex items-center gap-1">Sort
       <select id="fSort" class="border rounded px-2 py-1">
         <option value="score">Tier 2 score</option>
@@ -237,6 +238,13 @@ function passesFilters(l){
   if(v("fFlag") && l.change_flag!==v("fFlag")) return false;
   if(document.getElementById("fTier1").checked && !(l.tier1&&l.tier1.pass)) return false;
   if(document.getElementById("fWarehouse").checked && !l.warehouse_character) return false;
+  if(document.getElementById("fAccessCheck").checked){
+    const x=l.tier1||{};
+    // "needs check" = step-free/lift not yet confirmed by you: either unknown (?)
+    // or only a provisional (auto/filter-derived) verdict, not a manual one.
+    const needs = (x.accessibility===null||x.accessibility===undefined||x.accessibility_provisional===true);
+    if(!needs) return false;
+  }
   return true;
 }
 
@@ -358,7 +366,7 @@ function openDrawer(k){
     <div class="mt-1 text-sm">${t1Marks(l)}</div>
     ${l.tier1&&l.tier1.fails&&l.tier1.fails.length?`<div class="text-xs text-rose-600 mt-1">Fails: ${l.tier1.fails.join(", ")}</div>`:""}
     ${l.tier1&&l.tier1.unverified&&l.tier1.unverified.length?`<div class="text-xs text-amber-600 mt-1">Needs manual check: ${l.tier1.unverified.join(", ")}</div>`:""}
-    ${l.tier1&&l.tier1.accessibility_provisional?`<div class="text-xs text-sky-700 mt-1">Step-free/lift: <b>provisional &#10003;</b> via REA accessibility filter &mdash; verify entry &amp; surrounding terrain at inspection.</div>`:""}
+    ${(()=>{const x=l.tier1||{};if(!x.accessibility_provisional)return"";const pass=x.accessibility===true;const sym=pass?'&#10003;':'&#10007;';const col=pass?'text-sky-700':'text-rose-700';return `<div class="text-xs ${col} mt-1">Step-free/lift: <b>provisional ${sym}</b> &mdash; ${x.accessibility_basis||'inferred'}; verify entry &amp; surrounding terrain at inspection.</div>`;})()}
     ${l.tier1&&l.tier1.accessibility_hint&&!l.tier1.accessibility_provisional?`<div class="text-xs text-slate-500 mt-1">Step-free/lift: description mentions an accessibility feature &mdash; confirm below.</div>`:""}
 
     ${l.warehouse_character?`<h3 class="mt-4 font-semibold text-sm">Zoning</h3>
@@ -369,6 +377,8 @@ function openDrawer(k){
     <table class="text-xs mt-1 w-full">${catRows}</table>
 
     ${comps?`<h3 class="mt-4 font-semibold text-sm">Tier 2 components</h3><table class="text-xs mt-1 w-full">${comps}</table>`:""}
+
+    ${(l.features&&l.features.length)?`<h3 class="mt-4 font-semibold text-sm">Features</h3><div class="mt-1 flex flex-wrap gap-1">${l.features.map(f=>`<span class="px-2 py-0.5 bg-slate-100 rounded text-xs ${/\b(lift|elevator|step|level access|wheelchair|disabled|ramp)\b/i.test(f)?'ring-1 ring-sky-300 text-sky-800':'text-slate-600'}">${f}</span>`).join("")}</div>`:""}
 
     ${l.description?`<h3 class="mt-4 font-semibold text-sm">Description</h3><p class="text-sm text-slate-600 mt-1 whitespace-pre-line">${l.description}</p>`:""}
 
@@ -443,7 +453,7 @@ document.querySelectorAll(".tabBtn").forEach(b=>b.addEventListener("click",()=>{
   render();
 }));
 ["fSuburb","fPrice","fBeds","fStatus","fFlag","fSort"].forEach(id=>document.getElementById(id).addEventListener("change",render));
-["fTier1","fWarehouse"].forEach(id=>document.getElementById(id).addEventListener("change",render));
+["fTier1","fWarehouse","fAccessCheck"].forEach(id=>document.getElementById(id).addEventListener("change",render));
 document.getElementById("overlay").addEventListener("click",closeDrawer);
 document.getElementById("tierInfoBtn").addEventListener("click",()=>document.getElementById("tierModal").classList.remove("hidden"));
 document.getElementById("closeTierModal").addEventListener("click",()=>document.getElementById("tierModal").classList.add("hidden"));

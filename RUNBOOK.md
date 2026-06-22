@@ -108,14 +108,36 @@ resolves) · step-free + lift · beds **≥2 for all types** (decision #28; 3 pr
 for apartments) · transport ≤1.5km · daily supplies ≤1.5km · in target area ·
 zoning E1/E2/MU1 for warehouse stock.
 
-**Step-free / lift** resolves in priority order: (1) your **manual verdict** in the
-listing drawer (Step-free / Lift = yes/no/unknown, saved to `notes.json`) is
-authoritative; (2) else **filter provenance** — if a listing came via an REA search
-carrying the accessibility filters (`accessibility_source="rea_filter"`), it scores a
-**provisional ✓** (shown with a "verify at inspection" note); (3) else `?`, with a
-**keyword hint** surfaced in the drawer if the description mentions a lift/level-access
-phrase (a prompt to confirm — it never sets the verdict itself). A deal-breaker is
-never passed on agent marketing copy alone, and silence is never a fail.
+**Step-free / lift** resolves in priority order (`score._auto_accessibility`):
+
+1. **Manual verdict** — your Step-free / Lift answer in the drawer (yes/no/unknown,
+   saved to `notes.json`). Authoritative; overrides everything below.
+2. **Filter provenance** — a listing from an REA search carrying the accessibility
+   filters (`accessibility_source="rea_filter"`) → **provisional ✓**.
+3. **Auto-detect** from the bookmarklet's structured **features list** (weighted first)
+   and the **description**:
+   - a `Lift`/`Elevator` feature chip (apartments), or an explicit step-free / level-access /
+     wheelchair-access phrase (any type) → **provisional ✓**;
+   - a **ground/street-level** dwelling → **provisional ✓** (step-free regardless of a lift);
+   - an apartment **lift in context** (`LIFT_CONTEXT_RE` — a building lift as a noun, not the
+     verb "lift", not "stairlift"/"facelift"/"uplifting") → **provisional ✓**;
+   - a house described **single-level / level-entry** → **provisional ✓**;
+   - negatives: an apartment **"no lift" / "walk-up"**, or **stairs-to-entry / steep approach**
+     (any type) → **provisional ✗**;
+   - positive *and* negative signals colliding → left `?` (ambiguous → needs a look).
+4. else `?`, with a soft **keyword hint** in the drawer.
+
+Provisional verdicts (2-3) carry a **basis** string and a "verify entry & terrain at
+inspection" note in the drawer; a manual verdict always overrides them. Silence is never a
+fail. The **"Needs access check"** filter in the toolbar surfaces every listing whose
+step-free/lift is unresolved — i.e. `?` or only provisional (not manually confirmed) — as a
+verification worklist.
+
+**Enabling REA filter-provenance (suggestion 6):** on the realestate.com.au saved search add
+the **"step-free entry"** and **"elevator"** accessibility filters, then set
+`"rea_search_has_accessibility_filter": true` in `data/accessibility_config.json`. It ships
+**off** — turning it on before the filters are actually on the saved search would mark every
+REA listing a provisional ✓ falsely.
 
 **Enrichment → re-score → publish.** New data injected from the browser bookmarklet
 (`/api/enrich-listing`) is merged, the price text is parsed to numeric bounds, **all**

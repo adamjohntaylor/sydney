@@ -377,6 +377,10 @@ class Handler(SimpleHTTPRequestHandler):
                 target["description"] = item["description"]
             if item.get("internal_m2"):
                 target["internal_m2"] = item["internal_m2"]
+            if item.get("features"):
+                target["features"] = item["features"]
+            if item.get("floor") is not None:
+                target["floor"] = item["floor"]
             # Only update price if it's a valid price (contains $ and digits, or specific keywords)
             new_price = item.get("price_guide_text", "")
             if new_price and ("$" in new_price or "contact" in new_price.lower() or "auction" in new_price.lower()):
