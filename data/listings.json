@@ -793,7 +793,7 @@
     {
       "address": "40 High Street",
       "suburb": "Balmain",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,050,000",
       "price_min": 2050000,
       "price_max": 2050000,
@@ -849,12 +849,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=40+high+street+balmain"
     },
     {
       "address": "11/70 Wigram Road",
       "suburb": "Glebe",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$500,000",
       "price_min": 500000,
       "price_max": 500000,
@@ -910,12 +911,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11+70+wigram+road+glebe"
     },
     {
       "address": "1/19-21 Larkin Street",
       "suburb": "Camperdown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$500,000",
       "price_min": 500000,
       "price_max": 500000,
@@ -965,12 +967,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+19+21+larkin+street+camperdown"
     },
     {
       "address": "115 Sydenham Road",
       "suburb": "Marrickville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$500,000",
       "price_min": 500000,
       "price_max": 500000,
@@ -1026,12 +1029,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=115+sydenham+road+marrickville"
     },
     {
       "address": "24/1 Gibbens Street",
       "suburb": "Camperdown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$500,000",
       "price_min": 500000,
       "price_max": 500000,
@@ -1087,12 +1091,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=24+1+gibbens+street+camperdown"
     },
     {
       "address": "4/6 Turner Street",
       "suburb": "Balmain",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
       "price_max": 2000000,
@@ -1148,12 +1153,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4+6+turner+street+balmain"
     },
     {
       "address": "3/12 George Street",
       "suburb": "Marrickville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$720,000",
       "price_min": 720000,
       "price_max": 720000,
@@ -1209,12 +1215,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3+12+george+street+marrickville"
     },
     {
       "address": "103/12 Marsden Street",
       "suburb": "Camperdown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$720,000",
       "price_min": 720000,
       "price_max": 720000,
@@ -1270,12 +1277,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=103+12+marsden+street+camperdown"
     },
     {
       "address": "25 Callan Street",
       "suburb": "Rozelle",
-      "source": "domain_email",
+      "source": "domain",
       "price_guide_text": "$775,000",
       "price_min": 775000,
       "price_max": 775000,
@@ -1331,12 +1339,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/25-callan-street-rozelle-nsw-2039-2020922787"
     },
     {
       "address": "19 Day Street",
       "suburb": "Marrickville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$775,000",
       "price_min": 775000,
       "price_max": 775000,
@@ -1392,12 +1401,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19+day+street+marrickville"
     },
     {
       "address": "27/486-488 Illawarra Road",
       "suburb": "Marrickville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
       "price_max": 2000000,
@@ -1447,12 +1457,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+486+488+illawarra+road+marrickville"
     },
     {
       "address": "13/30 Ewart street",
       "suburb": "Marrickville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
       "price_max": 2000000,
@@ -1508,12 +1519,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13+30+ewart+street+marrickville"
     },
     {
       "address": "38/20 Pyrmont Bridge Road",
       "suburb": "Camperdown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$500,000",
       "price_min": 500000,
       "price_max": 500000,
@@ -1569,12 +1581,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=38+20+pyrmont+bridge+road+camperdown"
     },
     {
       "address": "3 Blairgowrie Street",
       "suburb": "Dulwich Hill",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$669,000",
       "price_min": 669000,
       "price_max": 669000,
@@ -1630,12 +1643,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3+blairgowrie+street+dulwich+hill"
     },
     {
       "address": "301/5 Yara Avenue",
       "suburb": "Rozelle",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,400,000",
       "price_min": 1400000,
       "price_max": 1400000,
@@ -1691,12 +1705,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=301+5+yara+avenue+rozelle"
     },
     {
       "address": "2712/6 Grove Street",
       "suburb": "Dulwich Hill",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
       "price_max": 1700000,
@@ -1752,12 +1767,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2712+6+grove+street+dulwich+hill"
     },
     {
       "address": "1009/1 Sterling Circuit",
       "suburb": "Camperdown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
       "price_max": 1700000,
@@ -1813,12 +1829,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1009+1+sterling+circuit+camperdown"
     },
     {
       "address": "3/58 Warren Road",
       "suburb": "Marrickville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,000,000",
       "price_min": 1000000,
       "price_max": 1000000,
@@ -1874,12 +1891,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3+58+warren+road+marrickville"
     },
     {
       "address": "89 Denison Street",
       "suburb": "Camperdown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
       "price_max": 1700000,
@@ -1935,12 +1953,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=89+denison+street+camperdown"
     },
     {
       "address": "1/136 Livingstone Road",
       "suburb": "Marrickville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
       "price_max": 1700000,
@@ -1996,12 +2015,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+136+livingstone+road+marrickville"
     },
     {
       "address": "130 Epsom Road",
       "suburb": "Zetland",
-      "source": "domain_email",
+      "source": "domain_search",
       "lat": -33.9108295,
       "lon": 151.2072089,
       "catchments": {
@@ -2055,12 +2075,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+epsom+road+zetland"
     },
     {
       "address": "9 Metters Street",
       "suburb": "Erskineville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$920,000",
       "price_min": 920000,
       "price_max": 920000,
@@ -2116,12 +2137,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street+erskineville"
     },
     {
       "address": "4/18 Leichhardt Street",
       "suburb": "Leichhardt",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$920,000",
       "price_min": 920000,
       "price_max": 920000,
@@ -2177,12 +2199,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4+18+leichhardt+street+leichhardt"
     },
     {
       "address": "9/70-74 Wilson Street",
       "suburb": "Newtown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$920,000",
       "price_min": 920000,
       "price_max": 920000,
@@ -2232,12 +2255,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+70+74+wilson+street+newtown"
     },
     {
       "address": "802/6 Paul Street",
       "suburb": "Zetland",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,050,000",
       "price_min": 2050000,
       "price_max": 2050000,
@@ -2293,12 +2317,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=802+6+paul+street+zetland"
     },
     {
       "address": "63 Rofe Street",
       "suburb": "Leichhardt",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,050,000",
       "price_min": 2050000,
       "price_max": 2050000,
@@ -2354,12 +2379,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+rofe+street+leichhardt"
     },
     {
       "address": "8 Park Street",
       "suburb": "Erskineville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
       "price_max": 2000000,
@@ -2415,12 +2441,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8+park+street+erskineville"
     },
     {
       "address": "201/1 Brightwell Lane",
       "suburb": "Erskineville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$2,000,000",
       "price_min": 2000000,
       "price_max": 2000000,
@@ -2476,12 +2503,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=201+1+brightwell+lane+erskineville"
     },
     {
       "address": "94/155 Missenden Road",
       "suburb": "Newtown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,275,000",
       "price_min": 1275000,
       "price_max": 1275000,
@@ -2537,12 +2565,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=94+155+missenden+road+newtown"
     },
     {
       "address": "58/30 Gadigal Avenue",
       "suburb": "Zetland",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,100,000 - $1,200,000",
       "price_min": 1100000,
       "price_max": 1100000,
@@ -2598,12 +2627,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=58+30+gadigal+avenue+zetland"
     },
     {
       "address": "61A Albany Road",
       "suburb": "Stanmore",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,100,000 - $1,200,000",
       "price_min": 1100000,
       "price_max": 1100000,
@@ -2659,12 +2689,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=61a+albany+road+stanmore"
     },
     {
       "address": "9/63-69 Lord Street",
       "suburb": "Newtown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1,100,000 - $1,200,000",
       "price_min": 1100000,
       "price_max": 1100000,
@@ -2714,12 +2745,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+63+69+lord+street+newtown"
     },
     {
       "address": "1/17-19 Westbourne Street",
       "suburb": "Drummoyne",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1.8m",
       "price_min": 1000000,
       "price_max": 1000000,
@@ -2775,12 +2807,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+17+19+westbourne+street+drummoyne"
     },
     {
       "address": "113 Albermarle Street",
       "suburb": "Newtown",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
       "price_max": 1000000,
@@ -2836,12 +2869,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=113+albermarle+street+newtown"
     },
     {
       "address": "26C Morrissey Road",
       "suburb": "Erskineville",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
       "price_max": 1000000,
@@ -2897,12 +2931,13 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26c+morrissey+road+erskineville"
     },
     {
       "address": "109 Wyndham Street",
       "suburb": "Alexandria",
-      "source": "domain_email",
+      "source": "domain_search",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
       "price_max": 1000000,
@@ -2958,7 +2993,8 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+wyndham+street+alexandria"
     },
     {
       "url": "https://www.realestate.com.au/sold/property-house-vic-parkville-151316176",

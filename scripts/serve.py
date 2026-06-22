@@ -153,11 +153,58 @@ class Handler(SimpleHTTPRequestHandler):
         except Exception as exc:
             return self._json(500, {"ok": False, "error": str(exc)})
 
+    def _handle_enrich_batch(self):
+        """Add URLs to multiple listings at once."""
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length)
+            items = json.loads(raw.decode("utf-8"))
+
+            if not isinstance(items, list):
+                return self._json(400, {"ok": False, "error": "Expected array of items"})
+
+            with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            listings = data.get("listings", [])
+            updated = 0
+
+            for item in items:
+                url = item.get("url", "").strip()
+                address = item.get("address", "").lower().strip()
+                suburb = item.get("suburb", "").lower().strip()
+
+                if not url or not address:
+                    continue
+
+                # Find matching listing
+                for l in listings:
+                    l_addr = l.get("address", "").lower()
+                    l_suburb = l.get("suburb", "").lower()
+                    if address in l_addr and suburb == l_suburb:
+                        l["url"] = url
+                        if "domain.com.au" in url:
+                            l["source"] = "domain"
+                        elif "realestate.com.au" in url:
+                            l["source"] = "realestate"
+                        updated += 1
+                        break
+
+            # Save
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+
+            return self._json(200, {"ok": True, "count": updated})
+        except Exception as e:
+            return self._json(500, {"ok": False, "error": str(e)})
+
     def do_POST(self):
         if self.path == "/api/refresh":
             return self._handle_refresh()
         if self.path == "/api/push":
             return self._handle_push()
+        if self.path == "/api/enrich-batch":
+            return self._handle_enrich_batch()
         if self.path != "/api/save-notes":
             return self._json(404, {"ok": False, "error": "unknown endpoint"})
         try:

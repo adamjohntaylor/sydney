@@ -271,6 +271,20 @@ def parse_emails_for_listings(emails):
     return list(all_listings.values())
 
 
+def generate_search_url(address: str, suburb: str) -> str:
+    """Generate a Domain search URL from address and suburb."""
+    import re
+    # Combine address and suburb, lowercase
+    full = f"{address} {suburb}".lower()
+    # Replace slashes, hyphens, commas with spaces
+    full = re.sub(r'[/,\-]+', ' ', full)
+    # Keep only alphanumeric and spaces
+    full = re.sub(r'[^a-z0-9\s]', '', full)
+    # Collapse multiple spaces and convert to +
+    full = re.sub(r'\s+', '+', full.strip())
+    return f"https://www.domain.com.au/sale/?excludeunderoffer=1&street={full}"
+
+
 def extract_by_address(body):
     """Extract listings by address when emails use tracking redirects instead of direct URLs."""
     import re
@@ -317,7 +331,8 @@ def extract_by_address(body):
         lst = {
             "address": address,
             "suburb": suburb,
-            "source": "domain_email",
+            "url": generate_search_url(address, suburb),
+            "source": "domain_search",
         }
 
         if price_match:
