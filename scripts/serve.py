@@ -116,10 +116,12 @@ class Handler(SimpleHTTPRequestHandler):
     def _handle_refresh(self):
         """Full refresh: fetch emails, geocode, score, detect changes, archive snapshot."""
         try:
+            print("\n=== REFRESH STARTED ===")
             syd = sweep_mod.now_sydney()
             today = syd.date().isoformat()
 
             # Step 1: Fetch new listings from Gmail
+            print("Step 1: Fetching Gmail alerts...")
             new_from_email = 0
             gmail_error = None
             new_listings_raw = []
@@ -132,6 +134,7 @@ class Handler(SimpleHTTPRequestHandler):
                     gmail_error = str(e)
 
             # Step 2: Load existing listings
+            print(f"Step 2: Loading existing listings...")
             prior_listings = []
             if os.path.exists(LISTINGS_PATH):
                 with open(LISTINGS_PATH, "r", encoding="utf-8") as fh:
@@ -139,20 +142,24 @@ class Handler(SimpleHTTPRequestHandler):
                 prior_listings = prior_data.get("listings", [])
 
             # Step 3: Geocode new listings
+            print(f"Step 3: Geocoding {len(new_listings_raw)} new listings...")
             if new_listings_raw:
                 geocode_mod.geocode_listings(new_listings_raw, max_per_run=10)
 
             # Step 4: Load amenities for scoring
+            print("Step 4: Loading amenities...")
             if os.path.exists(OSM_PATH):
                 amenities = score_mod.load_amenities(OSM_PATH)
             else:
                 amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
 
             # Step 5: Score new listings
+            print(f"Step 5: Scoring {len(new_listings_raw)} new listings...")
             for l in new_listings_raw:
                 score_mod.score_listing(l, amenities)
 
             # Step 6: Merge new into existing (incremental mode - no WITHDRAWN on absence)
+            print("Step 6: Merging listings...")
             if new_listings_raw:
                 all_listings = sweep_mod.merge_incremental(new_listings_raw, prior_listings, today)
                 new_from_email = len([l for l in all_listings if l.get("change_flag") == "NEW"]) - \
@@ -162,16 +169,20 @@ class Handler(SimpleHTTPRequestHandler):
                 all_listings = prior_listings
 
             # Step 7: Re-geocode any still missing coords
+            print(f"Step 7: Re-geocoding missing coords...")
             geocoded_count, geocode_fails = geocode_mod.geocode_listings(all_listings, max_per_run=10)
 
             # Step 8: Re-score all listings
+            print(f"Step 8: Re-scoring {len(all_listings)} listings...")
             for l in all_listings:
                 score_mod.score_listing(l, amenities)
 
             # Step 9: Carry forward notes
+            print("Step 9: Carrying forward notes...")
             sweep_mod.carry_notes(all_listings, NOTES_PATH)
 
             # Step 10: Build output data
+            print("Step 10: Building output...")
             active = [l for l in all_listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
             out = {
                 "schema_version": 1,
@@ -185,16 +196,19 @@ class Handler(SimpleHTTPRequestHandler):
             }
 
             # Step 11: Write listings.json
+            print("Step 11: Writing listings.json...")
             with open(LISTINGS_PATH, "w", encoding="utf-8") as fh:
                 json.dump(out, fh, indent=2, ensure_ascii=False)
 
             # Step 12: Archive snapshot
+            print("Step 12: Archiving snapshot...")
             os.makedirs(SNAP_DIR, exist_ok=True)
             snap_name = syd.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H-%M") + "Z.json"
             with open(os.path.join(SNAP_DIR, snap_name), "w", encoding="utf-8") as fh:
                 json.dump(out, fh, indent=2, ensure_ascii=False)
 
             # Step 13: Regenerate 07-property-shortlist.md
+            print("Step 13: Regenerating shortlist...")
             shortlist_updated = False
             try:
                 import render as render_mod
@@ -206,6 +220,7 @@ class Handler(SimpleHTTPRequestHandler):
                 pass  # render is optional
 
             already_geocoded = sum(1 for l in all_listings if l.get("lat") and l.get("lon")) - geocoded_count
+            print(f"=== REFRESH COMPLETE === ({len(all_listings)} listings, {out['counts']['tier1_pass']} T1 pass)")
             result = {
                 "ok": True,
                 "new_from_email": new_from_email,
@@ -394,7 +409,9 @@ class Handler(SimpleHTTPRequestHandler):
         super().end_headers()
 
     def log_message(self, fmt, *args):
-        pass  # quiet
+        # Log API calls but skip static file requests
+        if '/api/' in (args[0] if args else ''):
+            print(f"[{self.log_date_time_string()}] {fmt % args}")
 
 
 def main():

@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 107,
+    "total": 108,
     "tier1_pass": 104,
-    "new": 107,
+    "new": 108,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -1389,20 +1389,21 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": false,
         "accessibility": null,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "property_type"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -6480,6 +6481,62 @@
           "pool": 9,
           "parks": 9,
           "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "19 Day Street",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19+day+street+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$775,000",
+      "price_min": 775000,
+      "price_max": 775000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
