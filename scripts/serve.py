@@ -233,8 +233,10 @@ class Handler(SimpleHTTPRequestHandler):
                 target["description"] = item["description"]
             if item.get("internal_m2"):
                 target["internal_m2"] = item["internal_m2"]
-            if item.get("price_guide_text"):
-                target["price_guide_text"] = item["price_guide_text"]
+            # Only update price if it's a valid price (contains $ and digits, or specific keywords)
+            new_price = item.get("price_guide_text", "")
+            if new_price and ("$" in new_price or "contact" in new_price.lower() or "auction" in new_price.lower()):
+                target["price_guide_text"] = new_price
 
             # Update source to reflect direct listing
             if "domain.com.au" in item.get("url", ""):

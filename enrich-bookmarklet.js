@@ -106,10 +106,34 @@
       data.property_type = propType.textContent.toLowerCase().trim();
     }
 
-    // Price
-    const price = document.querySelector('[data-testid="listing-details__summary-title-price"], .listing-details__summary-title-price, [class*="price"]');
-    if (price) {
-      data.price_guide_text = price.textContent.trim();
+    // Price - only capture if it looks like a real price
+    const priceSelectors = [
+      '[data-testid="listing-details__summary-title-price"]',
+      '.listing-details__summary-title-price',
+      '[data-testid="listing-details__summary-price"]'
+    ];
+    for (const sel of priceSelectors) {
+      const priceEl = document.querySelector(sel);
+      if (priceEl) {
+        const priceText = priceEl.textContent.trim();
+        // Only accept if it contains $ followed by digits, or specific keywords
+        if (/\$[\d,]+/.test(priceText) || /^\s*(contact|auction|price guide|offers|expressions)/i.test(priceText)) {
+          // Validate it's a reasonable property price ($100k - $50m)
+          const numMatch = priceText.match(/\$([\d,]+)/);
+          if (numMatch) {
+            const num = parseInt(numMatch[1].replace(/,/g, ''));
+            if (num >= 100000 && num <= 50000000) {
+              data.price_guide_text = priceText;
+              break;
+            }
+          } else if (/contact|auction/i.test(priceText)) {
+            // Accept "Contact Agent" or "Auction" without a price
+            data.price_guide_text = priceText;
+            break;
+          }
+        }
+        break;
+      }
     }
 
     // Description
@@ -180,12 +204,30 @@
       data.property_type = typeEl.textContent.toLowerCase().trim();
     }
 
-    // Price
-    const priceEl = document.querySelector('[class*="price"], [class*="Price"]');
-    if (priceEl) {
-      const priceText = priceEl.textContent.trim();
-      if (priceText.includes('$') || priceText.toLowerCase().includes('guide') || priceText.toLowerCase().includes('contact')) {
-        data.price_guide_text = priceText;
+    // Price - only capture valid property prices
+    const reaPriceSelectors = [
+      '[class*="property-price"]',
+      '[class*="Price__price"]',
+      '[data-testid="price"]'
+    ];
+    for (const sel of reaPriceSelectors) {
+      const priceEl = document.querySelector(sel);
+      if (priceEl) {
+        const priceText = priceEl.textContent.trim();
+        // Only accept if it contains $ followed by digits, or specific keywords
+        if (/\$[\d,]+/.test(priceText)) {
+          const numMatch = priceText.match(/\$([\d,]+)/);
+          if (numMatch) {
+            const num = parseInt(numMatch[1].replace(/,/g, ''));
+            if (num >= 100000 && num <= 50000000) {
+              data.price_guide_text = priceText;
+              break;
+            }
+          }
+        } else if (/^\s*(contact|auction|offers|expressions)/i.test(priceText)) {
+          data.price_guide_text = priceText;
+          break;
+        }
       }
     }
 
