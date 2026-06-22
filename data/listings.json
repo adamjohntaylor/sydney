@@ -428,7 +428,7 @@
       "cover_image": "https://rimh2.domainstatic.com.au/3ai7qr8tWt83E04O1Bth5FlS5QI=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020094347_1_1_250724_055602-w1101-h741",
       "open_homes": [],
       "auction": null,
-      "description": "Property DescriptionStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkThis exquisite north-facing 3-bedroom penthouse located in 'Mezzo' has it all. With its one-of-a-kind central location, it's perfectly positioned on the verge between Glebe & Pyrmont. Overlooking Wentworth Park, it captures stunning views to Sydney's CBD while still enjoying the peace and tranquility of the suburb ofRead",
+      "description": "Property DescriptionStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkThis exquisite north-facing 3-bedroom penthouse located in 'Mezzo' has it all. With its one-of-a-kind central location, it's perfectly positioned on the verge between Glebe & Pyrmont. Overlooking Wentworth Park, it captures stunning views to Sydney's CBD while still enjoying the peace and tranquility of the suburb ofRead more",
       "outlook": {
         "class": "park",
         "basis": "North aspect overlooking Wentworth Park; also city and water views per feature list."
@@ -483,7 +483,33 @@
       "last_seen": "2026-06-21",
       "change_flag": "NEW",
       "lat": -33.881512,
-      "lon": 151.1924243
+      "lon": 151.1924243,
+      "features": [
+        "Internal Laundry*",
+        "Air conditioning",
+        "Ensuite",
+        "Floorboards",
+        "Indoor Spa",
+        "Gym",
+        "Alarm System",
+        "Intercom",
+        "Built in wardrobes",
+        "Cable or Satellite",
+        "Broadband internet access",
+        "Gas",
+        "Double glazed windows",
+        "Water efficient appliances",
+        "City Views",
+        "North Facing",
+        "Water Views",
+        "Bath",
+        "Separate Dining Room",
+        "Heating",
+        "Dishwasher",
+        "Secure Parking",
+        "Balcony / Deck",
+        "Garden / Courtyard"
+      ]
     },
     {
       "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
