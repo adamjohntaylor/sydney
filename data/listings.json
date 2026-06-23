@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 77,
-    "tier1_pass": 69,
-    "new": 41,
+    "total": 78,
+    "tier1_pass": 70,
+    "new": 42,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5155,6 +5155,73 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 11.0,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/316-1-wattle-crescent-pyrmont-nsw-2009-2020910983",
+      "address": "316/1 Wattle Crescent",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://rimh2.domainstatic.com.au/sG6GvZ1q_nsg2w2R9rqrpLdueTs=/1680x720/filters:format(webp):quality(85)/2020910983_1_1_260611_094507-w1600-h1067",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionLifestyle City Living Opposite Fish MarketThis stunning 2-bedroom, 2-bathroom apartment is the perfect urban oasis for those looking for a modern and convenient city lifestyle. It is at the heart of everything and is opposite to Sydney Fish Market and Wentworth Park, over viewing the sparkling waters of Black wattle Bay and Anzac bridge. Short walk to Darling Harbour, Casino, and just minute stroll to light rail station.Located in aRead more",
+      "price_guide_text": "Contact Agent",
+      "source": "domain",
+      "lat": -33.8739413,
+      "lon": 151.1931929,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 93,
+          "supermarket": 251,
+          "pool": 583,
+          "park": 154,
+          "restaurants": 81
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
