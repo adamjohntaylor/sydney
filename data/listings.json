@@ -4394,8 +4394,8 @@
     {
       "address": "81 Garden Street",
       "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81+garden+street+alexandria",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381",
+      "source": "domain",
       "price_guide_text": "$1,595,000",
       "price_min": 1595000,
       "price_max": 1595000,
@@ -4410,28 +4410,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 35,
+        "leading": "outlook: park",
         "components": {
-          "outlook": 3.0,
+          "outlook": 24.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
@@ -4445,7 +4443,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-23",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "cover_image": "https://rimh2.domainstatic.com.au/B9YhZjTEb9cZU0BxjMW-rQ-RfRQ=/1680x720/filters:format(webp):quality(85)/2020908381_1_1_260611_013947-w3780-h2522",
+      "beds": 3,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "house",
+      "description": "Property DescriptionCharacterful terrace in leafy parkside settingResting on a leafy, park-flanked street, this charming terrace offers an uncommon sense of serenity in the well-regarded Alexandria. Beautifully refreshed throughout, yet full of potential, Waterloo Metro Station, The Grounds, and city buses are all on the doorstep of a life well-lived. - Updated Victorian terrace on tree-lined street- Refreshed facade with porch & estab. garden- FreshlyRead more",
+      "outlook": {
+        "class": "park",
+        "basis": "Auto-detected from description"
+      }
     },
     {
       "address": "12/58 Bayswater Street",
