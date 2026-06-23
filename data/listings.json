@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 73,
-    "tier1_pass": 65,
-    "new": 37,
+    "total": 74,
+    "tier1_pass": 66,
+    "new": 38,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -4875,6 +4875,78 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 6.6,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/208-1-9-pyrmont-bridge-road-pyrmont-nsw-2009-2020693826",
+      "address": "208/1-9 Pyrmont Bridge Road",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://rimh2.domainstatic.com.au/mySFP9banroRtfcabWuEMQUZbpg=/1680x720/filters:format(webp):quality(85)/2020693826_3_1_260319_012018-w6048-h4032",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionNorth-West Facing Apartment with Iconic Sunset Views-Currently leased at $1100.00 per week until May 2027Bathed in natural light, this north-west facing two-bedroom apartment delivers an exceptional inner-city lifestyle in one of Pyrmont's most desirable pockets. Enjoy striking sunset views over the Anzac Bridge, complemented by a vibrant surrounds of waterfront parks, chic cafés and renowned dining, all just moments from your door.• Light-filled interiors enhanced by quality finishes and timelessRead more",
+      "price_guide_text": "$1,200,000 (hidden guide)",
+      "price_min": 1200000,
+      "price_max": 1200000,
+      "source": "domain",
+      "lat": -33.8701982,
+      "lon": 151.1972076,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 92,
+          "supermarket": 44,
+          "pool": 175,
+          "park": 218,
+          "restaurants": 49
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 74,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 8.8,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
