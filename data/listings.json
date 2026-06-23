@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 83,
-    "tier1_pass": 74,
-    "new": 34,
+    "total": 84,
+    "tier1_pass": 75,
+    "new": 35,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5697,6 +5697,81 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150907668",
+      "address": "602/11 Wentworth Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://i2.au.reastatic.net/310x175/1442e6a1fffba5d67076ca8b5f134289f60ea6964fe6f7b1f15a126a0cfc6a1b/image.jpg",
+      "property_type": "apartment",
+      "description": "Tired of high-rise living? Check out this seven-story \"The Foundry, West End Residences\", located in an unbeatable area, facing the skyline of Sydney, the site sits within an area provided with all types of services undergoing transformation. This corner set apartment gives you the perfect place to live. Wake up to warm sunlight on your face and a cool harbourside breeze drifting through your private balcony, you can unwind and take in breathtaking cityscape views. \n\n- 3-bedroom w/ built-in robes and main w/ bathtub,  plus a dedicated study-ideal for flexible living space.\n- 3 generous North Facing beds, offering sunshine on your bed-a true personal sanctuary\n- Oak engineered floorboards throughout hallway and living dinning area\n- Floor-to-ceiling glass sliders for in/outdoor flow\n- Sunlit open layout extends to glorious balcony\n- Steps to common rooftop garden located right next to the apartment. Enjoy  a peaceful greenery escape and a stunning skyline without paying any extra fee.\n- Two car spacege w/ storage cage\n- Wentworth park across the road & close to light rail\n- Steps to waterfront areas, local cafes, Broadway Shopping Centre, UTS, and Chinatown. \n- Strata size 151sqm\n-  Council $333| Water $200 | Strata $3,507 p/q\n\nPositioned directly opposite the Sydney Fish Market new development, this spacious,unbeatable value,three-bedroom plus study apartment offers an exceptional lifestyle opportunity at a highly accessible price point. This is a rare opportunity to acquire a substantial apartment in a tightly held pocket, priced well below neighbouring Pyrmont and Haymarket equivalents. Investors, owner-occupiers, and downsizers are encouraged to inspect without delay.\n\nVistor parking available via  Stirling St\n\nDisclaimer: All information provided in this advertisement is obtained from sources believed to be reliable. However, accuracy cannot be guaranteed, and prospective buyers are advised to carry out their own investigations during inspections. Thank you for ",
+      "features": [
+        "3",
+        "2",
+        "151m²",
+        "1"
+      ],
+      "price_guide_text": "Contact Agent",
+      "source": "realestate",
+      "lat": -33.8802978,
+      "lon": 151.193307,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 366,
+          "supermarket": 318,
+          "pool": 609,
+          "park": 125,
+          "restaurants": 90
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 76,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 11.0,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
