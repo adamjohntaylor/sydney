@@ -4998,7 +4998,7 @@
       "warehouse_character": false
     },
     {
-      "url": "https://www.domain.com.au/1306-21-cadigal-avenue-pyrmont-nsw-2009-2020816079",
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
       "address": "1306/21 Cadigal Avenue",
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
@@ -5006,25 +5006,23 @@
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2009",
-      "cover_image": "https://rimh2.domainstatic.com.au/umzUA_Yoi6BDsmRWBQJMPRamPBw=/1680x720/filters:format(webp):quality(85)/2020816079_1_1_260505_054711-w6000-h4000",
+      "cover_image": "https://i2.au.reastatic.net/310x175/d2b109475227182a5d84b18b06c4015057dc915b7c0c0575cbbfe2b1917a6736/image.jpg",
       "beds": 2,
       "baths": 2,
       "parking": 1,
-      "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionElevated  Living with Iconic Panoramic VistasEnjoying expansive outlooks across Blackwattle Bay extending toward the ANZAC Bridge and Jones Bay, this spacious, sundrenched apartment is positioned high within the tightly held McCafferys Tower at Jacksons Landing. Showcasing generous singlelevel proportions, it delivers a wonderful sense of openness, privacy and relaxed harbourside living within this prestigious waterfront community.- OpenRead more",
+      "property_type": "apartment",
+      "description": "Enjoying expansive outlooks across Blackwattle Bay extending toward the ANZAC Bridge and Jones Bay, this spacious, sun‑drenched apartment is positioned high within the tightly held McCafferys Tower at Jacksons Landing. Showcasing generous single‑level proportions, it delivers a wonderful sense of openness, privacy and relaxed harbourside living within this prestigious waterfront community.\n\n- Open plan living and dining zone flowing seamlessly to a broad balcony with far‑reaching vistas\n- Contemporary kitchen appointed with stone benchtops, quality gas appliances and excellent storage\n- Generous master retreat featuring walk‑through wardrobe and private ensuite\n- Oversized second bedroom enjoying outlooks and built‑in storage\n- Internal laundry, ducted reverse‑cycle air conditioning throughout\n- Secure car space, separate storage cage plus ample visitor parking\n- Secure building with level lift access and video security intercom\n- Exclusive facilities two indoor pools, two gyms, tennis courts spa and sauna\n\nSet within the award-winning Jacksons Landing precinct, this residence is surrounded by lush gardens and moments from Pyrmont's vibrant café culture, The Star, Darling Square, Sydney Fish Market, light rail and the upcoming Metro Station. Just minutes to the CBD, yet worlds away in serenity, Residence 1306 is the ultimate haven for those seeking prestige, privacy and perfection.\n\nOutgoings:\nWater Rates: $177 Quarterly approx\nCouncil Rates: $275 Quarterly approx\nStrata Levies: $3,228 Quarterly approx",
       "features": [
-        "Air conditioning",
-        "Area Views",
-        "Tennis Court",
-        "Ensuite",
-        "Furnished",
-        "Car Parking - Basement",
-        "Balcony"
+        "2",
+        "1",
+        "106m²",
+        "3",
+        "Lift (listed)"
       ],
-      "price_guide_text": "$2,190,000 (hidden guide)",
+      "price_guide_text": "Asking price: $2,190,000",
       "price_min": 2190000,
       "price_max": 2190000,
-      "source": "domain",
+      "source": "realestate",
       "lat": -33.8685702,
       "lon": 151.1914044,
       "catchments": {
@@ -5049,26 +5047,26 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility_provisional": true,
+        "accessibility_basis": "lift in features list",
+        "accessibility": true,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [
-          "accessibility"
-        ],
+        "unverified": [],
         "pass": true
       },
       "tier2": {
-        "score": 72,
+        "score": 68,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 6.6,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
