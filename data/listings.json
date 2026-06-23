@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 80,
-    "tier1_pass": 72,
-    "new": 44,
+    "total": 81,
+    "tier1_pass": 73,
+    "new": 45,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5393,6 +5393,90 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 8.8,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/12-29-cook-street-glebe-nsw-2037-2020656242",
+      "address": "12/29 Cook Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://rimh2.domainstatic.com.au/w5FBD4K2I4A2m6qJ7YGgPX91mfI=/1680x720/filters:format(webp):quality(85)/2020656242_9_1_260606_092314-w1920-h1280",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionWaterfront Living with Breathtaking City, Bridge & Bay ViewsExperience the ultimate in harbourside living with this stylish two-bedroom apartment in the prestigious Watermark complex, showcasing uninterrupted views of the City skyline, Anzac Bridge, and Blackwattle Bay.Perfectly positioned on the waterfront, this residence offers a seamless blend of tranquillity and convenience - just moments from Blackwattle Bay Ferry, the light rail, and scenicRead more",
+      "features": [
+        "Air conditioning",
+        "Area Views",
+        "Built in wardrobes",
+        "Close to transport",
+        "Close to shops",
+        "Swimming Pool",
+        "Water Front",
+        "Intercom",
+        "Close to schools",
+        "City Views"
+      ],
+      "price_guide_text": "$1,550,000 (hidden guide)",
+      "price_min": 1550000,
+      "price_max": 1550000,
+      "source": "domain",
+      "lat": -33.8730108,
+      "lon": 151.1855348,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 183,
+          "supermarket": 351,
+          "pool": 475,
+          "park": 113,
+          "restaurants": 192
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 68,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
