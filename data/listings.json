@@ -2440,9 +2440,9 @@
     {
       "address": "63 Rofe Street",
       "suburb": "Leichhardt",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+rofe+street+leichhardt",
-      "source": "domain_search",
-      "price_guide_text": "$2,050,000",
+      "url": "https://www.domain.com.au/63-rofe-street-leichhardt-nsw-2040-2020927950",
+      "source": "domain",
+      "price_guide_text": "Auction - No price guide offered",
       "price_min": 2050000,
       "price_max": 2050000,
       "catchments": {
@@ -2462,29 +2462,27 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 57,
+        "leading": "outlook: leafy",
         "components": {
-          "outlook": 3.0,
+          "outlook": 15.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
@@ -2498,7 +2496,27 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8860916,
-      "lon": 151.1550966
+      "lon": 151.1550966,
+      "cover_image": "https://rimh2.domainstatic.com.au/3nbkRVHt-8EkwZ1Cltk2h4no_JY=/1680x720/filters:format(webp):quality(85)/2020927950_1_1_260619_010726-w2048-h1365",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "house",
+      "description": "Property DescriptionA Stunning Transformation of a Character Filled HomeA creative new renovation and extension has completely transformed this traditional semi and created a superb contemporary living space with many high-quality inclusions and luxury finishes throughout. Displaying a flowing and bright interior layout, it offers an inspired living environment embracing low-care in/outdoor entertaining, as it comes with a leafy courtgarden at the rear. ThisRead more",
+      "features": [
+        "Air conditioning",
+        "Built in wardrobes",
+        "Close to transport",
+        "Close to shops",
+        "Close to schools",
+        "Courtyard",
+        "Dishwasher",
+        "Floorboards"
+      ],
+      "outlook": {
+        "class": "leafy",
+        "basis": "Auto-detected from description"
+      }
     },
     {
       "address": "8 Park Street",
