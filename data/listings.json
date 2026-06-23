@@ -342,8 +342,8 @@
       "lon": 151.1544237
     },
     {
-      "url": "https://www.domain.com.au/60-24-buchanan-street-balmain-nsw-2041-2020779667",
-      "source": "domain",
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150961828",
+      "source": "realestate",
       "address": "60/24 Buchanan Street",
       "suburb": "Balmain",
       "postcode": "2041",
@@ -352,17 +352,17 @@
       "baths": 2,
       "parking": 1,
       "internal_m2": 176,
-      "price_guide_text": "$1,530,000 - $1,570,000",
+      "price_guide_text": "For Sale $1,530,000 - $1,570,000",
       "price_min": 1530000,
       "price_max": 1570000,
       "agent": "Rebecca Williams",
       "agency": "Belle Property Balmain",
-      "cover_image": "https://rimh2.domainstatic.com.au/0Dy3CE_r_Lvzd5bD_ljzmQ7Zleg=/1680x720/filters:format(webp):quality(85)/2020779667_5_1_260421_112520-w4500-h3000",
+      "cover_image": "https://i2.au.reastatic.net/800x600/79c8220a3bc4649907d682fb627c64ac1c4a2ab482208b9152821ac9ab2783df/image.jpg",
       "open_homes": [
         "2026-06-27T13:00:00+10:00"
       ],
       "auction": null,
-      "description": "Oversized garden-level apartment in the 'Waterdale' complex with private LEVEL ENTRY, a courtyard and large wraparound terrace; house-like living with apartment convenience near-bayside. Listed features include 'Lift Installed' and below-ground swimming pool. Large 176 m2.",
+      "description": "Tucked away and quietly positioned at the rear of the well-maintained 'Waterdale' complex, this spacious garden level residence offers a distinct sense of house-like living but with the low upkeep and convenience of an apartment. It features private level entry and includes both a courtyard area and large wraparound terrace for entertaining just footsteps from communal gardens and a residents' barbecue area. The apartment comes with a wide security car space and large adjoining lock-up storeroom, while a heated indoor swimming pool/spa, sauna and gymnasium further enhance the resort aspect. Situated on the 'city side' of Balmain near White Bay, the home is only 550m from the exciting future Metro precinct, and within 950m of city buses and the heart of Darling Street village.\n\n- Solid brick and concrete construction with no common walls\n- Living and dining areas open into the courtyard and terrace\n- Gas kitchen with s/steel appliances including a dishwasher\n- Two bedrooms providing built-ins and with terrace access\n- Ensuite with bath and laundry separate to main bathroom\n- Ducted reverse cycle air conditioning and  gas bayonet\n- Floorboards to living areas and quality carpet in bedrooms\n- Lifestyle amenities and basement car space with storeroom",
       "outlook": {
         "class": "leafy",
         "basis": "Garden-level with courtyard/terrace beside communal gardens; near-bayside but not elevated."
@@ -421,7 +421,12 @@
       "lat": -33.8631843,
       "lon": 151.1802214,
       "status": "interested",
-      "note": ""
+      "note": "",
+      "features": [
+        "2",
+        "1",
+        "176m²"
+      ]
     },
     {
       "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
