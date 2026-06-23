@@ -2060,11 +2060,11 @@
     {
       "address": "1/136 Livingstone Road",
       "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/1-136-livingstone-road-marrickville-nsw-2204-2020907220",
-      "source": "domain",
-      "price_guide_text": "Guide $1,200,000",
-      "price_min": 1200000,
-      "price_max": 1200000,
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F136+livingstone+road+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$1,700,000",
+      "price_min": 1700000,
+      "price_max": 1700000,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -2082,16 +2082,18 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": true,
+        "property_type": null,
         "accessibility": null,
-        "bedrooms": true,
+        "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "property_type",
+          "accessibility",
+          "bedrooms"
         ],
         "pass": true
       },
@@ -2116,13 +2118,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9050174,
-      "lon": 151.1534639,
-      "cover_image": "https://rimh2.domainstatic.com.au/TvOIEVjcvTDXofZIzuS6h0guelY=/1680x720/filters:format(webp):quality(85)/2020907220_1_1_260610_085720-w3834-h2558",
-      "beds": 2,
-      "baths": 1,
-      "parking": 1,
-      "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionThoughtfully updated Art Deco retreat with garageCapturing the classic grandeur of the Art Deco era, this character-laden two-bedder sits within an intimate Art Deco block of just four and has been beautifully brought forward by a considered renovation. Steps to the village and beside the popular Valentinas Sydney Right, it's central to the best of Marrickville. - Renovated apartment in boutique block of 4- Split system a/c, ceiling fans andRead more"
+      "lon": 151.1534639
     },
     {
       "address": "130 Epsom Road",
