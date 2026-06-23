@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 69,
+    "total": 70,
     "tier1_pass": 64,
-    "new": 33,
+    "new": 34,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -4568,6 +4568,80 @@
         "leading": "outlook: elevated_district",
         "components": {
           "outlook": 19.5,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/17f-2-watermans-quay-barangaroo-nsw-2000-2020936803",
+      "address": "17F/2 Watermans Quay",
+      "suburb": "Barangaroo",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2000",
+      "cover_image": "https://rimh2.domainstatic.com.au/YIjCsCE7ADAsp5OiZW6BHvbQco8=/1680x720/filters:format(webp):quality(85)/2020936803_1_1_260623_053125-w2000-h1333",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionONE SYDNEY HARBOUR | Waterfront Apartment Forever Water ViewsWelcome to extraordinary One Sydney Harbour one of Australia's most exclusive residential addresses. Designed by Renzo Piano and developed by Lendlease, this magnificent residence defines modern elegance and harbourside sophisticationSituated in Barangaroo's glittering waterfront, this residence commands panoramic west facing water views of Darling Harbour, Pyrmont, Anzac Bridge and beyondRead more",
+      "price_guide_text": "$3,800,000 (hidden guide)",
+      "price_min": 3800000,
+      "price_max": 3800000,
+      "source": "domain",
+      "lat": -33.8631339,
+      "lon": 151.2020967,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 116,
+          "supermarket": 162,
+          "pool": 309,
+          "park": 59,
+          "restaurants": 31
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": false,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [
+          "budget"
+        ],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
+      },
+      "tier2": {
+        "score": 68,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
