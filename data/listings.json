@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 79,
-    "tier1_pass": 70,
-    "new": 30,
+    "total": 80,
+    "tier1_pass": 71,
+    "new": 31,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5387,6 +5387,82 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-unit-nsw-glebe-150824100",
+      "address": "32/13-17 Stewart Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://i2.au.reastatic.net/310x175/78cc2823b63e1f148fea867f7791540e829e1fd6c91c1613f927efdd2291bf8f/image.jpg",
+      "property_type": "unit",
+      "description": "A sunlit peninsula sanctuary with panoramic northerly views over Rozelle Bay, this bayside apartment captures the essence of relaxed harbourside living on the shores of Blackwattle Bay. Positioned on the top floor of a tightly held security building at the prized northern end of Glebe Point, the two-bedroom residence is bathed in natural light with a sweeping outlook to the Anzac Bridge that transforms into a dazzling night-time vista. Freshly updated interiors offer a sense of ease and comfort, with generous proportions and a layout designed to maximise light and outlook. A rare highlight is the oversized double lock-up garage with plentiful storage space, an invaluable asset in this tightly held enclave. Enjoy the best of lifestyle and convenience, with Bicentennial Park leading to Jubilee Park light rail and the Tramsheds dining precinct just 650m away, or stroll 450m through award-winning waterfront parkland to Blackwattle Bay Wharf and along the foreshore to the new world-class Sydney Fish Market.\n\n- Top floor of Creebank, a well-maintained security block\n- North facing with sweeping water views over Anzac Bridge\n- Clean lines, roomy interiors, entry hall with built-in storage\n- 2 bedrooms, king-sized main with built-ins and water views\n- Spacious living and sun-filled dining, north-facing balcony \n- Modern stone-topped gas kitchen overlooking Rozelle Bay\n- Renovated bathroom with a bath and stone-topped vanity \n- Separate internal laundry with storage, reverse cycle air \n- 31sqm approx tandem double garage with a storage area \n- 300m to Glebe Point Diner, stroll to scenic waterfront parkland\n- 650m to Jubilee Park Light Rail and 800m to Tramsheds \n- Rates: Water $185pq, Council $264pq, Strata $1643pq (All approx.) \n\nOur recommended mortgage broker: Tommy Nguyen (https://broker.loanmarket.com.au/double-bay/about/tommy-nguyen/)",
+      "features": [
+        "2",
+        "1",
+        "105m²",
+        "3"
+      ],
+      "price_guide_text": "For Sale $1,275,000",
+      "price_min": 1275000,
+      "price_max": 1275000,
+      "source": "realestate",
+      "lat": -33.8728156,
+      "lon": 151.1832268,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 131,
+          "supermarket": 356,
+          "pool": 261,
+          "park": 61,
+          "restaurants": 210
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 76,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 11.0,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
