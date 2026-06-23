@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 74,
-    "tier1_pass": 66,
-    "new": 38,
+    "total": 75,
+    "tier1_pass": 67,
+    "new": 39,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -4947,6 +4947,74 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 8.8,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
+      "address": "509/1 Wattle Crescent",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://rimh2.domainstatic.com.au/FEjNaRxzXAMCEQN2wP-RqJtUNx4=/1680x720/filters:format(webp):quality(85)/2020804907_1_1_260430_112723-w3500-h2334",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionContemporary living positioned for convenienceOccupying a premier position in 'Pier 99', this exceptional residence defines affordable luxury living without compromise. Finished to the most exacting of standards with a superior attention to detail, it is literally moments to the sparkling harbour foreshore and recently completed Sydney Fish Market. - Designer living with an understated modern aesthetic- Views overlook Anzac BridgeRead more",
+      "price_guide_text": "$1,150,000 (hidden guide)",
+      "price_min": 1150000,
+      "price_max": 1150000,
+      "source": "domain",
+      "lat": -33.8739413,
+      "lon": 151.1931929,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 93,
+          "supermarket": 251,
+          "pool": 583,
+          "park": 154,
+          "restaurants": 81
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
