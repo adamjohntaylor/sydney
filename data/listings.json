@@ -3051,8 +3051,8 @@
     {
       "address": "26C Morrissey Road",
       "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26c+morrissey+road+erskineville",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/26c-morrissey-road-erskineville-nsw-2043-2020910022",
+      "source": "domain",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
       "price_max": 1000000,
@@ -3067,18 +3067,16 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
@@ -3103,7 +3101,13 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-23",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "cover_image": "https://rimh2.domainstatic.com.au/8ncSNi0CCVn0S4ylYELLVd21rBg=/1680x720/filters:format(webp):quality(85)/2020910022_1_1_260611_055828-w4600-h3067",
+      "beds": 3,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "house",
+      "description": "Property DescriptionA tranquil haven footsteps to village lifeA harmonious fusion of Victorian and contemporary influences instil a sense of calm and wellbeing in this classically inspired terrace. In one of the quietest spots in Erskineville village, with the cafe-lined Erko hub at the top of the one-way street, this three-storey home is set in a boutique row designed to integrate with the heritage character of its streetscape while offering all theRead more"
     },
     {
       "address": "109 Wyndham Street",
