@@ -2442,9 +2442,9 @@
       "suburb": "Leichhardt",
       "url": "https://www.domain.com.au/63-rofe-street-leichhardt-nsw-2040-2020927950",
       "source": "domain",
-      "price_guide_text": "$1,700,000 (hidden guide)",
-      "price_min": 1700000,
-      "price_max": 1700000,
+      "price_guide_text": "Auction - No price guide offered",
+      "price_min": 2050000,
+      "price_max": 2050000,
       "catchments": {
         "transport": true,
         "supermarket": true,
