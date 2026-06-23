@@ -3517,8 +3517,8 @@
     {
       "address": "110 Palace Street",
       "suburb": "Petersham",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=110+palace+street+petersham",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/110-palace-street-petersham-nsw-2049-2020880275",
+      "source": "domain",
       "price_guide_text": "$1,800,000",
       "price_min": 1800000,
       "price_max": 1800000,
@@ -3533,18 +3533,17 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
+        "property_type": true,
+        "accessibility_provisional": true,
+        "accessibility_basis": "single-level / level-entry",
+        "accessibility": true,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
@@ -3569,7 +3568,17 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-23",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "cover_image": "https://rimh2.domainstatic.com.au/kTezDAtPU57FhGR5yOngh67HTgY=/1680x720/filters:format(webp):quality(85)/2020880275_1_1_260529_070100-w2560-h1707",
+      "beds": 3,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "house",
+      "description": "Property DescriptionCharacter home / corner position / future potentialOffering all the foundations for something truly special, this single-level character home combines generous proportions, side access and a flexible detached laundry/studio within one of the Inner West's most connected lifestyle pockets. Comfortable as is and filled with charm, it presents exciting scope to further enhance and personalise over time. Positioned footsteps to Petersham stationRead more",
+      "features": [
+        "Renovation Potential",
+        "Shed"
+      ]
     },
     {
       "address": "12/72 Wrights Road",
