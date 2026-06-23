@@ -415,7 +415,9 @@
       "last_seen": "2026-06-21",
       "change_flag": "NEW",
       "lat": -33.8631843,
-      "lon": 151.1802214
+      "lon": 151.1802214,
+      "status": "interested",
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
@@ -747,7 +749,9 @@
       "last_seen": "2026-06-21",
       "change_flag": "NEW",
       "lat": -33.855651,
-      "lon": 151.1702111
+      "lon": 151.1702111,
+      "status": "interested",
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/21-59-wrights-road-drummoyne-nsw-2047-2020691952",
