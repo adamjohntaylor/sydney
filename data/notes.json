@@ -51,5 +51,28 @@
     "status": "interested",
     "note": "",
     "updated": "2026-06-23T11:57:29.751Z"
+  },
+  "https://www.domain.com.au/12-29-cook-street-glebe-nsw-2037-2020656242": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-06-23T21:38:36.820Z"
+  },
+  "https://www.domain.com.au/19-day-street-marrickville-nsw-2204-2020921673": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-23T21:39:40.300Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.domain.com.au/3-blairgowrie-street-dulwich-hill-nsw-2203-2020919249": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-23T21:41:03.556Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }

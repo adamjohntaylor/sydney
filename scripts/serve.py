@@ -575,6 +575,97 @@ class Handler(SimpleHTTPRequestHandler):
         except Exception as e:
             return self._json(500, {"ok": False, "error": str(e)})
 
+    @staticmethod
+    def _listing_key(l):
+        """Mirror the dashboard's JS key(l): URL if present, else address|suburb."""
+        return l.get("url") or f"{l.get('address', '')}|{l.get('suburb', '')}"
+
+    def _handle_delete_listing(self):
+        """Permanently remove one listing from listings.json.
+
+        Body: {"key": "<the dashboard key>"}  (URL, or "address|suburb").
+        Removes the matching listing, drops its note from notes.json, recomputes
+        header counts, rewrites listings.json, regenerates 07, and pushes to
+        GitHub (non-fatal). Unlike the /api/refresh empty/duplicate flush, this is
+        a deliberate, user-driven deletion of a specific entry.
+        """
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length)
+            body = json.loads(raw.decode("utf-8")) if raw else {}
+            target_key = (body.get("key") or "").strip()
+            if not target_key:
+                return self._json(400, {"ok": False, "error": "Missing 'key' in request body."})
+
+            with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            listings = data.get("listings", [])
+
+            kept, removed = [], []
+            for l in listings:
+                if self._listing_key(l) == target_key:
+                    removed.append(l)
+                else:
+                    kept.append(l)
+
+            if not removed:
+                return self._json(404, {
+                    "ok": False,
+                    "error": "No listing matched that key; nothing deleted.",
+                })
+
+            data["listings"] = kept
+
+            # Drop any annotation for the deleted listing(s) so notes.json doesn't
+            # accumulate orphans.
+            notes_changed = False
+            try:
+                if os.path.exists(NOTES_PATH):
+                    with open(NOTES_PATH, "r", encoding="utf-8") as nf:
+                        notes = json.load(nf)
+                    if isinstance(notes, dict) and target_key in notes:
+                        del notes[target_key]
+                        tmp = NOTES_PATH + ".tmp"
+                        with open(tmp, "w", encoding="utf-8") as nf:
+                            json.dump(notes, nf, indent=2, ensure_ascii=False)
+                        os.replace(tmp, NOTES_PATH)
+                        notes_changed = True
+            except Exception as ne:  # noqa: BLE001
+                sys.stderr.write(f"[note cleanup failed for deleted listing: {ne}]\n")
+                sys.stderr.flush()
+
+            # Recompute header counts over the surviving active listings.
+            active = [l for l in kept if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
+            data["counts"] = sweep_mod.build_counts(active)
+
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+
+            # Regenerate 07-property-shortlist.md so the pushed state is consistent.
+            try:
+                import render as render_mod
+                with open(SHORTLIST_PATH, "w", encoding="utf-8") as fh:
+                    fh.write(render_mod.render(data))
+            except Exception:
+                pass  # render is optional
+
+            # Auto-push to GitHub (non-fatal: local save already succeeded).
+            push_ok, push_msg = self._commit_and_push()
+
+            removed_label = f"{removed[0].get('address') or '?'}, {removed[0].get('suburb') or ''}".strip(", ")
+            return self._json(200, {
+                "ok": True,
+                "deleted": len(removed),
+                "removed": removed_label,
+                "notes_cleaned": notes_changed,
+                "total": len(kept),
+                "tier1_pass_count": data["counts"]["tier1_pass"],
+                "pushed": push_ok,
+                "push_message": push_msg,
+            })
+        except Exception as e:  # noqa: BLE001
+            return self._json(500, {"ok": False, "error": str(e)})
+
     def _apply_notes_and_rescore(self):
         """Apply notes (incl. manual accessibility override) and re-score all
         listings, rewriting listings.json + regenerating 07. Local only, no push.
@@ -616,6 +707,8 @@ class Handler(SimpleHTTPRequestHandler):
             return self._handle_enrich_batch()
         if self.path == "/api/enrich-listing":
             return self._handle_enrich_listing()
+        if self.path == "/api/delete-listing":
+            return self._handle_delete_listing()
         if self.path != "/api/save-notes":
             return self._json(404, {"ok": False, "error": "unknown endpoint"})
         try:
