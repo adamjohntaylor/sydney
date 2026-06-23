@@ -917,19 +917,17 @@
         "geocoded": true
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
@@ -955,7 +953,13 @@
       "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
       "cover_image": "https://rimh2.domainstatic.com.au/d8Zl_9w1xDjM0emAFfn5Otxek8g=/1680x720/filters:format(webp):quality(85)/2020928696_1_1_260619_032942-w4600-h3067",
       "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionTimeless Elegance in a Landmark Sydney BuildingRecognised as one of Sydney's most distinguished apartment buildings, Ravenscourt blends timeless heritage character with refined contemporary design. This beautifully restored, strata-titled studio apartment offers a rare opportunity to secure a residence within this iconic landmark.Showcasing a master-crafted restoration, the apartment features elegant period detailing paired seamlessly withRead more"
+      "description": "Property DescriptionTimeless Elegance in a Landmark Sydney BuildingRecognised as one of Sydney's most distinguished apartment buildings, Ravenscourt blends timeless heritage character with refined contemporary design. This beautifully restored, strata-titled studio apartment offers a rare opportunity to secure a residence within this iconic landmark.Showcasing a master-crafted restoration, the apartment features elegant period detailing paired seamlessly withRead more",
+      "beds": 3,
+      "baths": 1,
+      "parking": 1,
+      "price_guide_text": "$620,000 (hidden guide)",
+      "price_min": 620000,
+      "price_max": 620000
     },
     {
       "address": "1/19-21 Larkin Street",
