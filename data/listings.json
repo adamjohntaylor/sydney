@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 82,
-    "tier1_pass": 73,
-    "new": 33,
+    "total": 83,
+    "tier1_pass": 74,
+    "new": 34,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5621,6 +5621,79 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 11.0,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
+      "address": "Terrace 6 Wentworth Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://i2.au.reastatic.net/800x600/164b9375914f5f3071f86bcf10f313dbeef8441386654b53ccc9cb04da5e6c92/image.jpg",
+      "property_type": "terrace",
+      "description": "******Photos(Furniture) For Reference Only******\n\nAdmirable and impressive 2-bedroom terrace with 1 bathroom & 2 toliets.in a prime inner-city location. Stroll to Wentworth Park, Blackwattle Bay, Fish Markets, Broadway Shopping Centre, Glebe Point Road eateries, Sydney University, and University of Technology Sydney. \n\nThe building was completed in Nov 2018.  \n\nAnd for fitness enthusiasts: \n- Join membership or casual visits at King Beats Fitness Gym located within the complex. \n- Ian Thorpe Aquatic Centre (includes impressive 50m indoor pool with 8 lanes for lap swimming, and health and fitness centre with cardio equipment and weights)\n\nFor little ones and youth, stroll to Glebe Public School, Sydney Secondary College Blackwattle Bay High School, International Grammar School Ultimo, and Ultimo Primary School.\n\nFeatures:\n- 1 bathroom, 2 toilets.\n- First-level outdoor porch.\n- Second-level balcony.\n- 2 spacious bedrooms with wardrobes.\n- Open plan lounge, dining, and premium kitchen equipped with high quality appliances including gas cooktop and oven, and island bench.\n- Access to spectacular roof top terrace garden with barbeque facilities and expansive City, Harbour and Parkland views.\n- Secure building access to basement car space.\n\nApprox. Outgoings:\n- Strata: $1781.55 Per Quarter\n- Council: $308.40 Per Quarter\n- Water: $179.90 Per Quarter\n\nIf you are interested in viewing more properties, please visit our website: da8.com.au\n\nPlease contact Diana Wong on 0432 372 876 or Cherry Qiu on 0405 379 952 for more information!",
+      "features": [
+        "2",
+        "1"
+      ],
+      "price_guide_text": "Contact Agent",
+      "source": "realestate",
+      "lat": -33.8800738,
+      "lon": 151.194377,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 448,
+          "supermarket": 283,
+          "pool": 513,
+          "park": 181,
+          "restaurants": 58
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "park",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 62,
+        "leading": "outlook: park",
+        "components": {
+          "outlook": 24.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
