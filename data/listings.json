@@ -4450,8 +4450,8 @@
     {
       "address": "12/58 Bayswater Street",
       "suburb": "Drummoyne",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F58+bayswater+street+drummoyne",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/12-58-bayswater-street-drummoyne-nsw-2047-2020812069",
+      "source": "domain",
       "price_guide_text": "$1,595,000",
       "price_min": 1595000,
       "price_max": 1595000,
@@ -4466,28 +4466,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 31,
+        "leading": "outlook: elevated_district",
         "components": {
-          "outlook": 3.0,
+          "outlook": 19.5,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
@@ -4501,7 +4499,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-23",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "cover_image": "https://rimh2.domainstatic.com.au/U7GdOSKkmRbncfjsZMU2fDo8DsQ=/1680x720/filters:format(webp):quality(85)/2020812069_1_1_260504_040708-w1950-h1302",
+      "beds": 3,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionTop Floor Apartment with Panoramic Bay ViewsEnjoy magical sunsets across the water from this top floor apartment in a peaceful, Drummoyne complex. Set to the rear in a private position, the three-bedroom home delivers stunning panoramic views that take in the Chiswick foreshore, Gladesville Bridge, and the sparkling waters of Five Dock Bay. Well-presented with modern upgrades, such as sleek designer kitchen and contemporary bathroom, theRead more",
+      "outlook": {
+        "class": "elevated_district",
+        "basis": "Auto-detected from description"
+      }
     }
   ]
 }
