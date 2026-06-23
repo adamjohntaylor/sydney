@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 80,
-    "tier1_pass": 71,
-    "new": 31,
+    "total": 81,
+    "tier1_pass": 72,
+    "new": 32,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5468,6 +5468,84 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 11.0,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151119724",
+      "address": "2/6 Cross Street",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://i2.au.reastatic.net/310x175/dfcf7ef99289cace7ce1d791553af94276a8c1850b732141747c2af17c6b8f1b/image.jpg",
+      "property_type": "apartment",
+      "description": "Offering a rare sense of space, privacy and adaptability, this peaceful split‑level residence in \"The Point\" enjoys a leafy corner position that feels more like a townhouse than an apartment. Spread across two well‑defined levels, the versatile layout allows the home to function comfortably as either a generous two‑bedroom with separate living zones or a flexible three‑bedroom configuration, ideal for families, professionals or investors alike. Recently refreshed throughout and set moments from the harbour foreshore, parks and dining precincts, this is a superb opportunity to secure a unique home on Pyrmont's highly sought‑after northern peninsula.\n\n- Versatile split‑level floorplan offering the flexibility of 2 or 3 bedrooms\n- Peaceful corner position with leafy green surrounds and excellent privacy\n- Recently refreshed throughout with new paint, new carpet, kitchen repaint, updated light fittings and new kitchen flooring\n- Lower‑level lounge /dining area opening to a covered balcony\n- Spacious open‑plan living and dining area with separation between zones\n- Two full bathrooms plus a convenient downstairs washroom/powder room\n- Private main bedroom with robe and ensuite bathroom contains bathtub\n- Internal laundry, security intercom system, lift access\n- Dedicated study nook cleverly concealed within a cupboard\n- Secure lock‑up garage offering excellent security and additional storage\n- Well‑maintained building with lift access, pool and gym facilities, building manager\n\nPositioned on Pyrmont's prized northern end, this home is just moments from the waterfront, Pirrama Park, Johnstons Bay foreshore walks and some of Sydney's best cafes and dining. Light rail, buses and the CBD are all within easy reach, while the nearby Sydney Fish Market precinct and future metro station further enhance long‑term lifestyle appeal and investment potential.\n\nOutgoings:\nWater Rates: $177 Quarterly approx\nCouncil Rates: $335 Quarterly approx\nStrata Levies: Currently $6,000 Quarterly a",
+      "features": [
+        "3",
+        "1",
+        "90m²",
+        "2",
+        "Lift (listed)"
+      ],
+      "price_guide_text": "Asking price: $1,090,000",
+      "price_min": 1090000,
+      "price_max": 1090000,
+      "source": "realestate",
+      "lat": -33.8661881,
+      "lon": 151.1930763,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 93,
+          "supermarket": 86,
+          "pool": 169,
+          "park": 55,
+          "restaurants": 75
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility_provisional": true,
+        "accessibility_basis": "lift in features list",
+        "accessibility": true,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 68,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
