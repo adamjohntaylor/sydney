@@ -74,5 +74,14 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.domain.com.au/113-albermarle-street-newtown-nsw-2042-2020925413": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-23T21:44:27.084Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }

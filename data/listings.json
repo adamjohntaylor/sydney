@@ -6,8 +6,8 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 78,
-    "tier1_pass": 71,
+    "total": 77,
+    "tier1_pass": 69,
     "new": 28,
     "price_changed": 0,
     "sold": 0,
@@ -968,73 +968,6 @@
       "price_guide_text": "$620,000 (hidden guide)",
       "price_min": 620000,
       "price_max": 620000
-    },
-    {
-      "address": "1/19-21 Larkin Street",
-      "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/1-19-21-larkin-street-camperdown-nsw-2050-2020928376",
-      "source": "domain",
-      "lat": -33.8851192,
-      "lon": 151.1804933,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 85,
-          "supermarket": 168,
-          "pool": 254,
-          "park": 72,
-          "restaurants": 120
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "accessibility"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "cover_image": "https://rimh2.domainstatic.com.au/GG_6OKyGsGRYxnr_OdLMnFJNM2g=/1680x720/filters:format(webp):quality(85)/2020928376_1_1_260619_022407-w2560-h1708",
-      "beds": 2,
-      "baths": 1,
-      "parking": 1,
-      "property_type": "studio",
-      "description": "Property DescriptionCourtyard retreat and unique indoor/outdoor homeDefined by its private entry, oversized courtyard and seamless connection between indoor and outdoor space, this contemporary residence offers a rare sense of retreat in one of Sydney's most vibrant city-fringe locations. Offering a peaceful cul-de-sac and NE-facing aspect of great morning sun, the home unfolds with a house-like feel, its generous living area flowing to walled entertaining spaceRead more",
-      "price_guide_text": "Guide $500,000",
-      "price_min": 500000,
-      "price_max": 500000
     },
     {
       "address": "115 Sydenham Road",
@@ -3035,17 +2968,17 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 45,
@@ -3074,7 +3007,13 @@
       "property_type": "house",
       "description": "Property DescriptionClassic end terrace with parking close to Newtown's heartEnviably located just 450m from where King Street meets Enmore Road, this late-Victorian end terrace enjoys all the benefits of a prime lifestyle position approx. 7 min. walk from the vibrant centre of Newtown. The home blends space and charm over two light filled levels with timeless character features throughout including a traditional lace balcony, is only attached to one adjoining property andRead more",
       "lat": -33.8961631,
-      "lon": 151.1737341
+      "lon": 151.1737341,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "26C Morrissey Road",
