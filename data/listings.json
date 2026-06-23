@@ -685,25 +685,25 @@
       "lon": 151.1519194
     },
     {
-      "url": "https://www.domain.com.au/102-106-elliott-street-balmain-nsw-2041-2020889759",
-      "source": "domain",
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-151387764",
+      "source": "realestate",
       "address": "102/106 Elliott Street",
       "suburb": "Balmain",
       "postcode": "2041",
-      "property_type": "apartment / unit / flat",
+      "property_type": "apartment",
       "beds": 2,
       "baths": 2,
       "parking": 1,
       "internal_m2": null,
-      "price_guide_text": "Guide $1,800,000",
-      "price_min": 1800000,
-      "price_max": 1800000,
+      "price_guide_text": "For Sale $1,890,000",
+      "price_min": 1890000,
+      "price_max": 1890000,
       "agent": "Belle Property Balmain",
       "agency": "Belle Property Balmain",
-      "cover_image": "https://rimh2.domainstatic.com.au/SLtkraGOjR3Bd3-gZUyj3bo9p2Y=/1680x720/filters:format(webp):quality(85)/2020889759_1_1_260603_054717-w2100-h1400",
+      "cover_image": "https://i2.au.reastatic.net/800x600/f71de18b08a86f97b46606df7b4cfd6f07d1346f9a46f92a3a1ff42a5efcab74/image.jpg",
       "open_homes": [],
       "auction": null,
-      "description": "Property DescriptionVersatile contemporary apartment in sought-after harbourside locationExperience resort-like living at the water's edge with this stylish modern apartment in exclusive 'Marina Cove', part of the prestigious Harbourside Balmain development by award winning architects Bates Smart. Situated in a cul-de-sac street between Balmain Cove and Elkington Park, just 80m from Balmain West Ferry Wharf, the apartment occupies a first floor position and showcases sophisticatedRead more",
+      "description": "Experience resort-like living at the water's edge with this stylish modern apartment in exclusive 'Marina Cove', part of the prestigious Harbourside Balmain development by award winning architects Bates Smart.  Situated in a cul-de-sac street between Balmain Cove and Elkington Park, just 80m from Balmain West Ferry Wharf, the apartment occupies a first floor position and showcases sophisticated interiors with premium finishes and a sizeable terrace together creating seamless indoor/outdoor flow for private relaxation and entertaining. Featuring direct access to foreshore walks from within the complex, use of excellent facilities and within 850m of Balmain and Rozelle shops and cafes along Darling Street, it promises an idyllic lifestyle in one of the area's most picturesque waterfront settings.    \n\n- Lift access, engineered oak floors, ducted r/c air conditioning \n- Open plan living wrapped in glass with generous alfresco area\n- Gas kitchen has stone benchtops, integrated Miele appliances\n- Two bedrooms providing built-ins plus ensuite to the master\n- Flexibility of both a home office/guest area and a study space\n- Chic modern bathroom and separate European-style laundry\n- On-site management, basement car space and visitor parking\n- Residents' foreshore garden, BBQ area, gymnasium and pool\n- City buses at top of Elliott St, zoned for Rozelle Public School",
       "outlook": {
         "class": "water",
         "basis": "Auto-detected from description"
@@ -727,16 +727,16 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility_provisional": true,
+        "accessibility_basis": "lift in features list",
+        "accessibility": true,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [
-          "accessibility"
-        ],
+        "unverified": [],
         "pass": true
       },
       "tier2": {
@@ -760,7 +760,12 @@
       "lat": -33.855651,
       "lon": 151.1702111,
       "status": "interested",
-      "note": ""
+      "note": "",
+      "features": [
+        "2",
+        "1",
+        "Lift (listed)"
+      ]
     },
     {
       "url": "https://www.domain.com.au/21-59-wrights-road-drummoyne-nsw-2047-2020691952",
