@@ -3165,8 +3165,8 @@
     {
       "address": "14/19-21 Myra Road",
       "suburb": "Dulwich Hill",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F19-21+myra+road+dulwich+hill",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/14-19-21-myra-road-dulwich-hill-nsw-2203-2020933163",
+      "source": "domain",
       "catchments": {
         "transport": null,
         "supermarket": null,
@@ -3178,9 +3178,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
@@ -3188,22 +3188,20 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 34,
+        "leading": "outlook: elevated_district",
         "components": {
-          "outlook": 3.0,
+          "outlook": 19.5,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 6.6,
           "pool": 0,
           "parks": 0,
           "restaurants": 0
@@ -3215,7 +3213,25 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-23",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "cover_image": "https://rimh2.domainstatic.com.au/vt4_2cAzVBN9GItNRetxKuWFsJ8=/1680x720/filters:format(webp):quality(85)/2020933163_1_1_260622_040149-w3867-h2579",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionStylish, Renovated Top Floor ApartmentShowcasing a complete contemporary renovation and an abundance of natural light, this stylish top floor apartment offers effortless modern living in an ultra convenient lifestyle location. Positioned at the rear of a boutique block of just 14 residences, it combines privacy, comfort and elevated district views with easy access to transport, cafés, shops and parklands. Designed for low maintenanceRead more",
+      "features": [
+        "Air conditioning",
+        "Built in wardrobes",
+        "Close to transport",
+        "Close to shops",
+        "Intercom",
+        "Close to schools"
+      ],
+      "outlook": {
+        "class": "elevated_district",
+        "basis": "Auto-detected from description"
+      }
     },
     {
       "address": "325/4 Elger Street",
