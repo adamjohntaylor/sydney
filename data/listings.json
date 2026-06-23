@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 79,
-    "tier1_pass": 71,
-    "new": 43,
+    "total": 80,
+    "tier1_pass": 72,
+    "new": 44,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5303,6 +5303,96 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 6.6,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
+      "address": "601/320 Harris Street",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://rimh2.domainstatic.com.au/aFpt87MhQS1wB1BTUrLhpXjrA1g=/1680x720/filters:format(webp):quality(85)/2020727214_1_1_260401_041543-w3500-h2335",
+      "beds": 3,
+      "baths": 3,
+      "parking": 2,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionStylish Top-Floor Living in M-CentralPositioned in the highly sought-after M-Central development, this stunning three-bedroom apartment delivers a perfect blend of luxury, space, and convenience. Set on the top floor, it enjoys expansive district views, abundant natural light, and exceptional indoor-outdoor living. The striking open-plan living area flows seamlessly onto an expansive sun-drenched entertainer's courtyard-ideal forRead more",
+      "features": [
+        "Air conditioning",
+        "Floorboards",
+        "Intercom",
+        "Built in wardrobes",
+        "Internal Laundry",
+        "Pets Allowed",
+        "Cable or Satellite",
+        "Gas",
+        "Broadband internet access",
+        "Bath",
+        "Dishwasher",
+        "Study",
+        "Secure Parking",
+        "Balcony / Deck",
+        "Garden / Courtyard",
+        "City Views"
+      ],
+      "price_guide_text": "$1,650,000 (hidden guide)",
+      "price_min": 1650000,
+      "price_max": 1650000,
+      "source": "domain",
+      "lat": -33.8735402,
+      "lon": 151.1965295,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 42,
+          "supermarket": 46,
+          "pool": 475,
+          "park": 247,
+          "restaurants": 53
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "elevated_district",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 63,
+        "leading": "outlook: elevated_district",
+        "components": {
+          "outlook": 19.5,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 8.8,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
