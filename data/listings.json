@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 78,
-    "tier1_pass": 69,
-    "new": 29,
+    "total": 79,
+    "tier1_pass": 70,
+    "new": 30,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5312,6 +5312,81 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 8.8,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
+      "address": "T04/1 Distillery Drive",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://i2.au.reastatic.net/310x175/353bb3d82aacc725bc6bb1e363095882e37e8be34d96eac9dbc1dd4ca8fced0a/image.jpg",
+      "property_type": "apartment",
+      "description": "Privately positioned within the highly sought-after 'Antias' building, this two-bedroom townhouse style apartment enjoys a prized setting at the end of an exclusive cul-de-sac. Showcasing uninterrupted views across the Anzac Bridge and Blackwattle Bay, this exceptional residence delivers a rare combination of quality, outlook and low-maintenance luxury living.\n\n- Expertly crafted with a focus on contemporary style and comfort\n- Sleek open-plan kitchen featuring Caesarstone benchtops and gas cooking \n- Beautifully appointed with high-end designer finishes throughout\n- Generous master retreat with built-in wardrobe and ensuite with bathtub\n- Spacious second bedroom with built-ins, serviced by a stylish adjacent bathroom\n- Double glazing, ducted reverse-cycle air conditioning and internal laundry\n- Rear-lane access to parks and waterfront \n- Lock-up garage with internal access and ample visitor parking\n- 5-Star NABERS Energy rating and 3.5-Star Water rating\n- Green Star-rated building, EV-ready with new common area solar\n\nResidents enjoy access to the Jacksons Landing resort-style facilities including: building management, a heated indoor pool, gymnasium, tennis courts and 24-hour on-site security.\n\nOffering a lifestyle of complete comfort and convenience, the home is within walking distance of the new Sydney Fish Market, vibrant dining precincts, The Star entertainment complex, public transport and the CBD/Barangaroo. Surrounded by parklands, it also provides easy access to local village cafés, the light rail and direct city bus connections.\n\nOutgoings:\nStrata: $1,945p/q approx.\nWater: $209p/q approx.\nCouncil: $320p/q approx.\n\nTotal on Title: 136sqm approx.",
+      "features": [
+        "2",
+        "1",
+        "3"
+      ],
+      "price_guide_text": "Price Guide $1,775,000",
+      "price_min": 1775000,
+      "price_max": 1775000,
+      "source": "realestate",
+      "lat": -33.8688279,
+      "lon": 151.1882976,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 379,
+          "supermarket": 413,
+          "pool": 73,
+          "park": 92,
+          "restaurants": 194
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 68,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
