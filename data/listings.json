@@ -2838,9 +2838,9 @@
       "suburb": "Newtown",
       "url": "https://www.domain.com.au/9-63-69-lord-street-newtown-nsw-2042-2020926028",
       "source": "domain",
-      "price_guide_text": "Auction - No price guide offered",
-      "price_min": 1100000,
-      "price_max": 1100000,
+      "price_guide_text": "$840,000 (hidden guide)",
+      "price_min": 840000,
+      "price_max": 840000,
       "catchments": {
         "transport": true,
         "supermarket": true,
