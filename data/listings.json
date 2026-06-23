@@ -5751,7 +5751,7 @@
         "budget": null,
         "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5759,8 +5759,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
@@ -5779,7 +5778,10 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "beds": 3,
+      "baths": 2,
+      "parking": 2
     }
   ]
 }

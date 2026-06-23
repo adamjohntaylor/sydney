@@ -27,13 +27,14 @@ script in the link itself and works on REA and Domain alike.
 <p>This bookmarklet extracts listing details (photo, beds, baths, etc.) from Domain or REA listing pages and saves them to your dashboard. If the listing is already tracked it is enriched in place; if it is <strong>not yet in the dashboard, it is added automatically as a new entry</strong> (geocoded and Tier-1 scored on the spot).</p>
 
 <h2>Installation</h2>
-<p>Drag this button to your bookmarks bar:</p>
-
-<a class="bookmarklet" href="javascript:(function(){const s=document.createElement('script');s.src='http://localhost:8777/enrich-bookmarklet.js?t='+Date.now();document.body.appendChild(s);})();">Enrich Listing</a>
-
-<div class="note">
-<strong>Note:</strong> The local server must be running (<code>python scripts/serve.py</code>) for this to work.
+<div class="note" style="background:#fee2e2;border-left-color:#dc2626;">
+<strong>This loader version is deprecated — it does not work on realestate.com.au.</strong>
+REA's Content-Security-Policy silently blocks the external script it injects ("nothing happens").
+Use the <a href="/bookmarklet"><strong>inline bookmarklet</strong></a> instead — it works on both
+Domain and REA. The draggable button has been removed here to avoid installing the wrong one.
 </div>
+
+<p style="margin-top:16px;"><a class="bookmarklet" href="/bookmarklet">Go to the inline bookmarklet →</a></p>
 
 <h2>How to Use</h2>
 <ol class="steps">

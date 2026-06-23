@@ -100,6 +100,35 @@ refuses the script silently. (Domain's CSP is permissive, so the loader works th
   REA. (The sandbox mount was serving a stale pre-edit copy of `enrich-bookmarklet.js`, so the
   inline link had to be built server-side from the real file rather than in the sandbox.)
 
+### Follow-up 3 (same day) — REA beds/baths/parking + never-silent hardening
+
+Inline bookmarklet now runs on REA, but beds/baths/parking came back empty: the REA branch read
+them via `[class*="feature"]` selectors that don't match REA's current markup. Replaced with a
+multi-strategy reader that doesn't depend on REA's CSS classes:
+
+- **`enrich-bookmarklet.js`** REA beds/baths/parking/size: (1) REA's embedded data layer via regex
+  on the page source — both the nested `"generalFeatures":{"bedrooms":{"value":N}…}` /
+  `"propertySizes":{"building":{"displayValue":"N"}}` shape and a flat `"bedrooms":N` /
+  `"parkingSpaces":N` / `"carspaces":N` shape; (2) element **aria-labels** (`"2 bedrooms"`,
+  `"1 car space"` — REA's accessibility labels are stable); (3) the old class scan as a last
+  resort. Each value is filled only if still missing, and bounded (0–20) to reject garbage.
+- **Never-silent hardening** (added when REA gave "nothing"): the whole extraction is wrapped in
+  try/catch and the submit popup now **always** opens — with a same-tab fallback if the popup is
+  blocked, and a clear alert if the local server is unreachable. A failed selector on an
+  unfamiliar layout can no longer abort the run with no feedback.
+- **Verified**: the new block syntax-checked and run against simulated REA data — nested
+  `generalFeatures`+`propertySizes`, flat keys, and aria-labels-only all yield beds 2 / baths 2 /
+  parking 1 / 106 m². The live REA page still can't be inspected from here — the browser tools
+  block realestate.com.au for both navigation *and* in-page reads — so the reader targets REA's
+  standard data shapes; **confirm on the real listing** (the popup shows Beds/Baths/Parking).
+- **Install de-duplication**: a recurring "nothing happens" turned out to be the *old loader*
+  bookmark being clicked instead of the inline one (both were labelled "Enrich Listing"). The
+  inline button is now labelled "⭐ Enrich Listing (INLINE — use this one)" with a red "delete your
+  old bookmark first" warning, and `bookmarklet.html` no longer exposes a draggable loader — it
+  only links to `/bookmarklet`. Confirmed via the live data that the inline bookmarklet does work:
+  it had already created `1101/89 Bay Street, Glebe` (source realestate, flag NEW) — only the
+  beds/baths/parking were missing, which is what the reader above fixes.
+
 ## 23 June 2026 (pm) — Hidden price persists "over the top of" a no-price auction guide
 
 Auction / "Contact Agent" listings publish no price, but the agent's guide is usually

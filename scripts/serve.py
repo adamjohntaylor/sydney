@@ -127,15 +127,21 @@ h1 {{ color: #1e3a5f; }}
 code {{ background: #e5e5e5; padding: 2px 6px; border-radius: 4px; }}
 </style></head><body>
 <h1>Enrich Listing — inline bookmarklet</h1>
-<p>Drag this button to your bookmarks bar. Unlike the original loader, it carries the
-whole script inside the link, so it also works on sites with a strict Content-Security-Policy
-(<strong>realestate.com.au</strong>), where the loader version is silently blocked.</p>
-<p><a class="bookmarklet" href="{href_attr}">Enrich Listing</a></p>
+<div class="note" style="background:#fee2e2;border-left-color:#dc2626;">
+<strong>First: delete any existing "Enrich Listing" bookmark you already have.</strong> The old
+loader bookmark and this inline one look identical but behave differently — the old one is silently
+blocked on realestate.com.au (its Content-Security-Policy refuses the external script it loads).
+Keeping both is the usual cause of "nothing happens". Remove the old one, then drag the button below.
+</div>
+<p>Drag this button to your bookmarks bar. It carries the whole script inside the link, so it
+works on sites with a strict Content-Security-Policy (<strong>realestate.com.au</strong>) where the
+loader version is silently blocked.</p>
+<p><a class="bookmarklet" href="{href_attr}">⭐ Enrich Listing (INLINE — use this one)</a></p>
 <div class="note"><strong>Note:</strong> the local server must be running
-(<code>python scripts/serve.py</code>) when you click it, because it still opens
-<code>http://localhost:8777/enrich-submit.html</code> to save. This link is generated from the
-current <code>enrich-bookmarklet.js</code> — after any change to that file, reload this page and
-re-drag the button. (<a href="/bookmarklet.html">old loader version</a>)</div>
+(<code>python scripts/serve.py</code>) when you click it, because it opens
+<code>http://localhost:8777/enrich-submit.html</code> to save. This link is generated fresh from the
+current <code>enrich-bookmarklet.js</code> on each page load — after any change to that file, reload
+this page and re-drag the button (the code is baked into the link, so it does not auto-update).</div>
 </body></html>"""
         body = page.encode("utf-8")
         self.send_response(200)

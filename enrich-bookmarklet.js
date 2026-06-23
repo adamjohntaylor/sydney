@@ -309,18 +309,70 @@
       }
     }
 
-    // Features
-    const featureEls = document.querySelectorAll('[class*="feature"], [class*="general-features"] span');
-    featureEls.forEach(f => {
-      const text = f.textContent.toLowerCase();
-      const numMatch = text.match(/(\d+)/);
-      if (numMatch) {
-        const num = parseInt(numMatch[1]);
-        if (text.includes('bed')) data.beds = num;
-        else if (text.includes('bath')) data.baths = num;
-        else if (text.includes('car') || text.includes('parking') || text.includes('garage')) data.parking = num;
+    // Beds / baths / parking / size. REA renders these as SVG-icon chips whose
+    // CSS classes change frequently, so we read REA's OWN embedded data layer and
+    // element aria-labels (its accessibility labels are stable) rather than
+    // fragile class selectors. Tried in order of reliability.
+    const reaSrc = document.documentElement.innerHTML;
+    const grabNum = (patterns, lo, hi) => {
+      for (const re of patterns) {
+        const m = reaSrc.match(re);
+        if (m) { const n = parseInt(m[1], 10); if (n >= lo && n <= hi) return n; }
       }
-    });
+      return null;
+    };
+    // 1) Embedded data layer. Handles both the nested
+    //    "generalFeatures":{"bedrooms":{"value":2},...} shape and a flat
+    //    "bedrooms":2 / "parkingSpaces":1 / "carspaces":1 shape.
+    if (data.beds == null) data.beds = grabNum([
+      /"bedrooms"\s*:\s*\{[^{}]*?"value"\s*:\s*"?(\d+)/i,
+      /"bedrooms"\s*:\s*"?(\d+)"?/i,
+      /"beds"\s*:\s*"?(\d+)"?/i
+    ], 0, 20);
+    if (data.baths == null) data.baths = grabNum([
+      /"bathrooms"\s*:\s*\{[^{}]*?"value"\s*:\s*"?(\d+)/i,
+      /"bathrooms"\s*:\s*"?(\d+)"?/i,
+      /"baths"\s*:\s*"?(\d+)"?/i
+    ], 0, 20);
+    if (data.parking == null) data.parking = grabNum([
+      /"parkingSpaces"\s*:\s*\{[^{}]*?"value"\s*:\s*"?(\d+)/i,
+      /"parkingSpaces"\s*:\s*"?(\d+)"?/i,
+      /"carspaces"\s*:\s*"?(\d+)"?/i,
+      /"carSpaces"\s*:\s*"?(\d+)"?/i
+    ], 0, 20);
+    if (!data.internal_m2) {
+      const m2 = grabNum([
+        /"building"\s*:\s*\{[^{}]*?"(?:displayValue|value)"\s*:\s*"?(\d+)/i,
+        /"buildingSize"\s*:\s*\{[^{}]*?"value"\s*:\s*"?(\d+)/i,
+        /"propertySizes"\s*:\s*\{[^{}]*?"(?:displayValue|value)"\s*:\s*"?(\d+)/i
+      ], 10, 100000);
+      if (m2) data.internal_m2 = m2;
+    }
+    // 2) aria-label / title fallback - REA's accessible feature chips, e.g.
+    //    "2 bedrooms", "2 Bathrooms", "1 car space".
+    if (data.beds == null || data.baths == null || data.parking == null) {
+      document.querySelectorAll('[aria-label],[title]').forEach(el => {
+        const l = (el.getAttribute('aria-label') || el.getAttribute('title') || '').toLowerCase();
+        if (l.length > 40) return;
+        const m = l.match(/(\d+)/); if (!m) return;
+        const n = parseInt(m[1], 10); if (n < 0 || n > 20) return;
+        if (data.beds == null && /\bbed(?:room)?s?\b/.test(l)) data.beds = n;
+        else if (data.baths == null && /\bbath(?:room)?s?\b/.test(l)) data.baths = n;
+        else if (data.parking == null && /\b(?:car|parking|garage)\b/.test(l)) data.parking = n;
+      });
+    }
+    // 3) Last resort: the old class-based chip scan (kept as a final fallback).
+    if (data.beds == null || data.baths == null || data.parking == null) {
+      document.querySelectorAll('[class*="feature"], [class*="general-features"] span').forEach(f => {
+        const text = (f.textContent || '').toLowerCase();
+        const numMatch = text.match(/(\d+)/);
+        if (!numMatch) return;
+        const num = parseInt(numMatch[1], 10);
+        if (data.beds == null && text.includes('bed')) data.beds = num;
+        else if (data.baths == null && text.includes('bath')) data.baths = num;
+        else if (data.parking == null && (text.includes('car') || text.includes('parking') || text.includes('garage'))) data.parking = num;
+      });
+    }
 
     // Property type
     const typeEl = document.querySelector('[class*="property-type"]');
