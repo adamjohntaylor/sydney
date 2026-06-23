@@ -1983,8 +1983,8 @@
     {
       "address": "89 Denison Street",
       "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=89+denison+street+camperdown",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/89-denison-street-camperdown-nsw-2050-2020912353",
+      "source": "domain",
       "price_guide_text": "$1,700,000",
       "price_min": 1700000,
       "price_max": 1700000,
@@ -2005,29 +2005,27 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 57,
+        "leading": "outlook: leafy",
         "components": {
-          "outlook": 3.0,
+          "outlook": 15.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
@@ -2041,7 +2039,17 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8909539,
-      "lon": 151.174934
+      "lon": 151.174934,
+      "cover_image": "https://rimh2.domainstatic.com.au/qGOYPI3do1J7Q8GGcvccfFNsEAg=/1680x720/filters:format(webp):quality(85)/2020912353_1_1_260612_034132-w3746-h2503",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "house",
+      "description": "Property DescriptionCharming c1900 terrace with outdoor flowAiry, light-filled, and blessed with exceptional indoor-outdoor flow, this charming terrace sits on a tranquil, tree-lined street, with O'Dea Reserve accessible directly through its own rear gate. Newtown's only a stroll away, while the city is a short stretch beyond.- Timeless c1900 terrace on 107sqm parcel - East-facing facade w/ quaint estab. garden- Timber floorboards, split a/c & highRead more",
+      "outlook": {
+        "class": "leafy",
+        "basis": "Auto-detected from description"
+      }
     },
     {
       "address": "1/136 Livingstone Road",
