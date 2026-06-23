@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 84,
-    "tier1_pass": 75,
-    "new": 35,
+    "total": 85,
+    "tier1_pass": 76,
+    "new": 36,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5782,6 +5782,76 @@
       "beds": 3,
       "baths": 2,
       "parking": 2
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
+      "address": "B503/89 Bay Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://i2.au.reastatic.net/310x175/2fdd7559d0b5ef6dad3a93a8f1b9a2416c83b9ea6ef0bcf21b33ae479671e5cc/image.jpg",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment",
+      "description": "Stunning 2 Bed, 2 Bath, 1 Car space plus storage, located in the prestigious, multi-award winning Mezzo complex by renowned Chrofi and Kannfinch architects. \n\nFeatures\n- North-facing balcony overlooking the Wentworth Park.\n- Bright & sunny living areas with wrap around windows.\n- Two generous bedrooms, both with floorboards and built-ins, master with ensuite\n- Gourmet kitchen with mosaic tiled splashback, Miele stainless steel appliances.\n- Two designer bathrooms with black and grey marble tiles and quality finishes\n- Internal laundry, reverse cycle ducted air-conditioning\n- Secure intercom and car space with storage cage\n- Immediate access to the CBD, Chinatown, Broadway shopping centre\n- Stroll to Sydney University, UTS and Darling Harbour and the Fish Markets\n\nStrata:    $1,689 pq\nCouncil: $   295 pq\nWater:    $  169 pq \n\nPlease contact Pilar Fox on 0435 773 048 at any time for a private viewing.",
+      "features": [
+        "2",
+        "1"
+      ],
+      "source": "realestate",
+      "lat": -33.8796962,
+      "lon": 151.1944632,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 430,
+          "supermarket": 259,
+          "pool": 483,
+          "park": 180,
+          "restaurants": 48
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 49,
+        "leading": "light & aspect",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 11.0,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
     }
   ]
 }
