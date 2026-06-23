@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 77,
-    "tier1_pass": 69,
+    "tier1_pass": 68,
     "new": 28,
     "price_changed": 0,
     "sold": 0,
@@ -927,17 +927,17 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -967,7 +967,13 @@
       "parking": 1,
       "price_guide_text": "$620,000 (hidden guide)",
       "price_min": 620000,
-      "price_max": 620000
+      "price_max": 620000,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "115 Sydenham Road",

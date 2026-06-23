@@ -83,5 +83,14 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-23T21:46:53.516Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }
