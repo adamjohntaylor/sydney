@@ -2231,8 +2231,8 @@
     {
       "address": "4/18 Leichhardt Street",
       "suburb": "Leichhardt",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F18+leichhardt+street+leichhardt",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/4-18-leichhardt-street-leichhardt-nsw-2040-2020930992",
+      "source": "domain",
       "price_guide_text": "$920,000",
       "price_min": 920000,
       "price_max": 920000,
@@ -2253,29 +2253,27 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 49,
+        "leading": "light & aspect",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 11.0,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
@@ -2289,7 +2287,19 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8831772,
-      "lon": 151.1604229
+      "lon": 151.1604229,
+      "cover_image": "https://rimh2.domainstatic.com.au/tAt9_r2l36Orw2f3TG2BYheX4As=/1680x720/filters:format(webp):quality(85)/2020930992_1_1_260620_035509-w3264-h2176",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionCONVENIENTLY LOCATEDEnjoy the vibrant Leichhardt lifestyle from this first-floor apartment, perfectly positioned within a well-maintained security building. Offering light-filled interiors, generous proportions, this apartment presents an outstanding opportunity for first-home buyers and investors alike.Designed for comfortable living, the apartment features a bright and airy open-plan lounge and dining area thatRead more",
+      "features": [
+        "Balcony",
+        "Secure Parking",
+        "Built in wardrobes",
+        "Intercom"
+      ]
     },
     {
       "address": "9/70-74 Wilson Street",
