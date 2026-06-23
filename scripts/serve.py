@@ -28,6 +28,7 @@ import os
 import sys
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
+# (auto-add of bookmarklet-scraped listings not yet in the DB: see _handle_enrich_listing)
 PORT = int(os.environ.get("DASHBOARD_PORT", "8777"))
 HERE = os.path.dirname(os.path.abspath(__file__))
 DASH_DIR = os.path.normpath(os.path.join(HERE, ".."))
@@ -357,11 +358,47 @@ class Handler(SimpleHTTPRequestHandler):
                         target = l
                         break
 
+            # No existing listing matched -> CREATE a new entry from the scraped
+            # data (decision 24 Jun 2026: the bookmarklet auto-adds any clicked
+            # listing not already in the DB). Mirrors gmail_fetch.merge_new_listings:
+            # mint the canonical shape, geocode, then ride the shared re-score /
+            # counts / regenerate-07 / push tail below. A bookmarklet scrape carries
+            # far more than an email alert (beds/baths/price/features/photo), so the
+            # blank target is fully populated by the enrichment block that follows.
+            created = False
             if not target:
-                return self._json(404, {
-                    "ok": False,
-                    "error": f"No matching listing found for {address}, {suburb}"
-                })
+                # Refuse a shell with no usable identity (no address AND no beds
+                # AND no price number) rather than storing an un-scoreable blank.
+                _pt, _pmin, _pmax = alert_mod.parse_price(item.get("price_guide_text") or "")
+                provisional = {
+                    "address": (item.get("address") or "").strip(),
+                    "beds": item.get("beds"),
+                    "price_min": _pmin,
+                    "price_max": _pmax,
+                    "price_guide_text": item.get("price_guide_text") or "",
+                }
+                if sweep_mod.is_empty_listing(provisional):
+                    return self._json(422, {
+                        "ok": False,
+                        "created": False,
+                        "error": ("Could not extract enough to add this listing "
+                                  "(no address, bedrooms, or price found on the "
+                                  "page). Nothing was saved."),
+                    })
+                syd_today = sweep_mod.now_sydney().date().isoformat()
+                target = {
+                    "url": item.get("url", ""),
+                    "address": (item.get("address") or "").strip(),
+                    "suburb": (item.get("suburb") or "").strip(),
+                    "first_seen": syd_today,
+                    "last_seen": syd_today,
+                    "change_flag": "NEW",
+                    "open_homes": [],
+                }
+                if item.get("postcode"):
+                    target["postcode"] = str(item["postcode"]).strip()
+                listings.append(target)
+                created = True
 
             # Snapshot the target's Tier 1 BEFORE enrichment, so we can report
             # which criteria the new data resolved (? -> pass/fail).
@@ -422,6 +459,18 @@ class Handler(SimpleHTTPRequestHandler):
             elif "realestate.com.au" in item.get("url", ""):
                 target["source"] = "realestate"
 
+            # A brand-new listing has no lat/lon, so its transport/supplies/
+            # walkability catchments would score "?" until the next sweep. Geocode
+            # it now (best-effort, as /api/refresh does) so the new entry gets a
+            # fair Tier 1 read on this same pass. Non-fatal: a geocode failure just
+            # leaves the catchments unverified, never blocks the save.
+            if created and (target.get("lat") is None or target.get("lon") is None):
+                try:
+                    geocode_mod.geocode_listings([target], max_per_run=1)
+                except Exception as ge:  # noqa: BLE001
+                    sys.stderr.write(f"[geocode failed for new listing: {ge}]\n")
+                    sys.stderr.flush()
+
             # Carry Adam's notes + manual accessibility override FIRST, so the
             # override feeds scoring on this same pass.
             sweep_mod.carry_notes(listings, NOTES_PATH)
@@ -466,6 +515,7 @@ class Handler(SimpleHTTPRequestHandler):
 
             return self._json(200, {
                 "ok": True,
+                "created": created,
                 "matched": f"{target.get('address')}, {target.get('suburb')}",
                 "enriched": list(item.keys()),
                 "rescored": len(listings),

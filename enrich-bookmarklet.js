@@ -56,19 +56,49 @@
       }
     }
 
-    // Address from URL or title
-    const urlMatch = location.pathname.match(/\/([^\/]+)-(\d{7,12})$/);
-    if (urlMatch) {
-      const addrSlug = urlMatch[1];
-      // Parse address from slug: "40-high-street-balmain-nsw-2041"
-      const parts = addrSlug.split('-');
-      const postcodeIdx = parts.findIndex(p => /^\d{4}$/.test(p));
-      if (postcodeIdx > 0) {
-        const stateIdx = postcodeIdx - 1;
-        const suburbStart = parts.slice(0, stateIdx).findIndex(p => /^[a-z]+$/.test(p) && !['street','st','road','rd','avenue','ave','lane','drive','place','crescent','parade','way','close','court','circuit','boulevard','terrace'].includes(p));
-        // This is tricky - let's use the page title instead
+    // Address / suburb / postcode from the Domain URL slug. Domain listing URLs
+    // end "/<address>-<suburb>-<state>-<postcode>-<id>" (e.g.
+    // "/40-high-street-balmain-nsw-2041-2019123456"), which is the single most
+    // reliable identity source on the page - the visible heading is sometimes
+    // truncated or absent. We use it as a FALLBACK (page title parsed first,
+    // below) and always to back-fill the postcode, which geocoding relies on.
+    // This matters most for the auto-add path: a new entry with no address can be
+    // neither geocoded nor de-duplicated.
+    const slugParse = (function () {
+      const STATES = ['nsw', 'vic', 'qld', 'act', 'sa', 'wa', 'tas', 'nt'];
+      const STREET_TYPES = ['street', 'st', 'road', 'rd', 'avenue', 'ave', 'lane',
+        'ln', 'drive', 'dr', 'place', 'pl', 'crescent', 'cres', 'cr', 'parade',
+        'pde', 'way', 'close', 'cl', 'court', 'ct', 'circuit', 'cct', 'boulevard',
+        'blvd', 'terrace', 'tce', 'grove', 'gr', 'esplanade', 'esp', 'highway',
+        'hwy', 'square', 'sq', 'row', 'walk', 'rise', 'glade', 'mews', 'quay',
+        'crest', 'circle', 'cove', 'grange', 'gardens', 'gdns'];
+      const m = location.pathname.match(/\/([a-z0-9\-]+?)-(\d{7,12})\/?$/i);
+      if (!m) return null;
+      const parts = m[1].toLowerCase().split('-').filter(Boolean);
+      const stateIdx = parts.findIndex(p => STATES.includes(p));
+      if (stateIdx < 1) return null;
+      const postcode = /^\d{4}$/.test(parts[stateIdx + 1] || '') ? parts[stateIdx + 1] : null;
+      // Last street-type token before the state marks the address/suburb boundary.
+      let stIdx = -1;
+      for (let i = stateIdx - 1; i >= 0; i--) {
+        if (STREET_TYPES.includes(parts[i])) { stIdx = i; break; }
       }
-    }
+      const titleCase = a => a.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+      let address = null, suburb = null;
+      if (stIdx >= 0 && stIdx < stateIdx - 1) {
+        let addrTokens = parts.slice(0, stIdx + 1);
+        // Unit form "5-40-high-street" -> "5/40 High Street".
+        if (addrTokens.length >= 2 && /^\d+[a-z]?$/.test(addrTokens[0]) && /^\d+[a-z]?$/.test(addrTokens[1])) {
+          addrTokens = [addrTokens[0] + '/' + addrTokens[1]].concat(addrTokens.slice(2));
+        }
+        address = titleCase(addrTokens);
+        suburb = titleCase(parts.slice(stIdx + 1, stateIdx));
+      } else {
+        // No recognised street-type: treat everything before the state as suburb.
+        suburb = titleCase(parts.slice(0, stateIdx));
+      }
+      return { address, suburb, postcode };
+    })();
 
     // Address from page title or heading
     const title = document.querySelector('h1[data-testid="listing-details__summary-title"], h1.listing-details__summary-title, h1');
@@ -80,6 +110,14 @@
         data.address = addrMatch[1].trim();
         data.suburb = addrMatch[2].trim();
       }
+    }
+
+    // Back-fill from the URL slug where the heading parse left a gap. Postcode is
+    // only available from the slug, so always take it from there when present.
+    if (slugParse) {
+      if (!data.address && slugParse.address) data.address = slugParse.address;
+      if (!data.suburb && slugParse.suburb) data.suburb = slugParse.suburb;
+      if (slugParse.postcode) data.postcode = slugParse.postcode;
     }
 
     // Beds, baths, parking - try multiple methods

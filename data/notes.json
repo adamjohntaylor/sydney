@@ -7,7 +7,11 @@
   "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935": {
     "status": "interested",
     "note": "",
-    "updated": "2026-06-22T12:39:50.288Z"
+    "updated": "2026-06-23T20:50:55.411Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": true
+    }
   },
   "https://www.domain.com.au/24-1-gibbens-street-camperdown-nsw-2050-2020926921": {
     "status": "interested",
@@ -22,7 +26,11 @@
   "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513": {
     "status": "needs decision",
     "note": "",
-    "updated": "2026-06-22T13:12:02.464Z"
+    "updated": "2026-06-23T20:50:06.579Z",
+    "accessibility": {
+      "step_free": true,
+      "lift": true
+    }
   },
   "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F30+ewart+street+marrickville": {
     "status": "rejected",

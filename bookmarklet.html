@@ -17,7 +17,7 @@ code { background: #e5e5e5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <body>
 <h1>Listing Enrichment Bookmarklet</h1>
 
-<p>This bookmarklet extracts listing details (photo, beds, baths, etc.) from Domain or REA listing pages and saves them to your dashboard.</p>
+<p>This bookmarklet extracts listing details (photo, beds, baths, etc.) from Domain or REA listing pages and saves them to your dashboard. If the listing is already tracked it is enriched in place; if it is <strong>not yet in the dashboard, it is added automatically as a new entry</strong> (geocoded and Tier-1 scored on the spot).</p>
 
 <h2>Installation</h2>
 <p>Drag this button to your bookmarks bar:</p>
@@ -44,8 +44,11 @@ code { background: #e5e5e5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <li>Property type</li>
 <li>Price guide</li>
 <li>Description</li>
+<li>Address, suburb and postcode (from the listing heading, with the URL slug as a fallback)</li>
 <li>Direct listing URL (replaces search URL)</li>
 </ul>
+
+<p>When the page isn't already tracked, these same fields are used to mint a brand-new dashboard entry. The popup tells you whether the listing was <strong>matched</strong> to an existing one or <strong>added as new</strong>.</p>
 
 <p><a href="/">Back to Dashboard</a></p>
 </body>

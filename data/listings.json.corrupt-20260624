@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 69,
-    "tier1_pass": 64,
-    "new": 33,
+    "total": 68,
+    "tier1_pass": 63,
+    "new": 32,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -125,7 +125,7 @@
         "2026-06-27T10:00:00+10:00"
       ],
       "auction": null,
-      "description": "Property DescriptionTop Floor Apartment with Iconic Sydney ViewsOn the eastern side of Victoria Road, facing Renwick Street at the rear and with northeast outlooks to the water, city skyline and Sydney Harbour Bridge, this spacious modern apartment provides serene elevation with a private aspect and spectacular views. The apartment occupies a quiet top floor position in 'The Drummoyne', a prestigious security building featuring just 17 private residences, and combines sleek designer interiors with a generous terrace and balcony, secure parking and proximity to all the amenities Drummoyne has to offer. Located in the heart of the village close to shops and cafes, Harris Farm Markets, Church Street Laneway eateries and city buses, it's also just 750m from the Bay Run at Brett Park and 1.0km from Drummoyne Wharf for frequent ferries to Barangaroo and Circular Quay.- Intercom security, lift access and ducted r/c air conditioning throughout- Open living-dining and covered northeast terrace with amazing views- Views include Spectacle/Cockatoo Islands, city and northern skylines- Modern stone kitchen with s/steel appliances, gas and ample storage- Bedrooms have built-in wardrobes, ceiling fans and harbour views from balcony- Fully tiled rain shower ensuite and main bathroom, Euro-style laundry- Stylish floating floorboards to living areas and carpet in both bedrooms- Access via Renwick St to secure parking for two cars and storage cage- Generous visitor parking spaces, city buses footsteps from the building- 160m from Harris Farm Markets, 250m to Church St Laneway precinct- 750m Birkenhead Pt and Bay Run, 1.0km to Drummoyne Ferry WharfRead less",
+      "description": "Property DescriptionTop Floor Apartment with Iconic Sydney ViewsOn the eastern side of Victoria Road, facing Renwick Street at the rear and with northeast outlooks to the water, city skyline and Sydney Harbour Bridge, this spacious modern apartment provides serene elevation with a private aspect and spectacular views. The apartment occupies a quiet top floor position in 'The Drummoyne', a prestigious security building featuring just 17 private residences, andRead more",
       "outlook": {
         "class": "water",
         "basis": "Top floor with NE outlook to water, city skyline and Harbour Bridge."
@@ -2068,11 +2068,11 @@
     {
       "address": "1/136 Livingstone Road",
       "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F136+livingstone+road+marrickville",
-      "source": "domain_search",
-      "price_guide_text": "$1,700,000",
-      "price_min": 1700000,
-      "price_max": 1700000,
+      "url": "https://www.domain.com.au/1-136-livingstone-road-marrickville-nsw-2204-2020907220",
+      "source": "domain",
+      "price_guide_text": "Guide $1,200,000",
+      "price_min": 1200000,
+      "price_max": 1200000,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -2090,18 +2090,16 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
@@ -2126,7 +2124,13 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9050174,
-      "lon": 151.1534639
+      "lon": 151.1534639,
+      "cover_image": "https://rimh2.domainstatic.com.au/TvOIEVjcvTDXofZIzuS6h0guelY=/1680x720/filters:format(webp):quality(85)/2020907220_1_1_260610_085720-w3834-h2558",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionThoughtfully updated Art Deco retreat with garageCapturing the classic grandeur of the Art Deco era, this character-laden two-bedder sits within an intimate Art Deco block of just four and has been beautifully brought forward by a considered renovation. Steps to the village and beside the popular Valentinas Sydney Right, it's central to the best of Marrickville. - Renovated apartment in boutique block of 4- Split system a/c, ceiling fans andRead more"
     },
     {
       "address": "130 Epsom Road",
@@ -2675,8 +2679,8 @@
     {
       "address": "94/155 Missenden Road",
       "suburb": "Newtown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=94%2F155+missenden+road+newtown",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/94-155-missenden-road-newtown-nsw-2042-2020926728",
+      "source": "domain",
       "price_guide_text": "$1,275,000",
       "price_min": 1275000,
       "price_max": 1275000,
@@ -2697,18 +2701,17 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "accessibility_hint": true,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
@@ -2733,7 +2736,13 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8919109,
-      "lon": 151.1827073
+      "lon": 151.1827073,
+      "cover_image": "https://rimh2.domainstatic.com.au/xMPNgDuKX82K_OfJpDsWxGPpR0M=/1680x720/filters:format(webp):quality(85)/2020926728_1_1_260618_065327-w2000-h1333",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionEasy Style in a Re-Energised Newtown ApartmentA modern revamp has given this two-bedroom `Chancellory' apartment a smart new look and produced a stylish home that's full of light and energy. It offers the complete package for low-maintenance lifestyle seekers because of its fresh feel, easy single-level design and fantastic location that's close to everything. This highly regarded security complex is well-placed just 450m to King Street'sRead more"
     },
     {
       "address": "58/30 Gadigal Avenue",
@@ -3758,827 +3767,4 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "186C Victoria Road",
-      "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=186c+victoria+road+marrickville",
-      "source": "domain_search",
-      "price_guide_text": "$850,000",
-      "price_min": 850000,
-      "price_max": 850000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "324B Marrickville Road",
-      "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=324b+marrickville+road+marrickville",
-      "source": "domain_search",
-      "price_guide_text": "$850,000",
-      "price_min": 850000,
-      "price_max": 850000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "3/151-153 Illawarra Road",
-      "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F151-153+illawarra+road+marrickville",
-      "source": "domain_search",
-      "price_guide_text": "$1,595,000",
-      "price_min": 1595000,
-      "price_max": 1595000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "8/69-71 Parramatta Road",
-      "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F69-71+parramatta+road+camperdown",
-      "source": "domain_search",
-      "price_guide_text": "$1,595,000",
-      "price_min": 1595000,
-      "price_max": 1595000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "17/142 Stanmore Road",
-      "suburb": "Stanmore",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F142+stanmore+road+stanmore",
-      "source": "domain_search",
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "88 Ryan Street",
-      "suburb": "Lilyfield",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=88+ryan+street+lilyfield",
-      "source": "domain_search",
-      "price_guide_text": "$1,800,000",
-      "price_min": 1800000,
-      "price_max": 1800000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "107 Lennox Street",
-      "suburb": "Newtown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=107+lennox+street+newtown",
-      "source": "domain_search",
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "16/16 Hosking Street",
-      "suburb": "Balmain",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F16+hosking+street+balmain",
-      "source": "domain_search",
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "121/23 Corunna Road",
-      "suburb": "Stanmore",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=121%2F23+corunna+road+stanmore",
-      "source": "domain_search",
-      "price_guide_text": "$1.45m",
-      "price_min": 1000000,
-      "price_max": 1000000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "1006/5 Joynton Avenue",
-      "suburb": "Zetland",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1006%2F5+joynton+avenue+zetland",
-      "source": "domain_search",
-      "price_guide_text": "$1,400,000",
-      "price_min": 1400000,
-      "price_max": 1400000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "8/51 College Street",
-      "suburb": "Drummoyne",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F51+college+street+drummoyne",
-      "source": "domain_search",
-      "price_guide_text": "$1,595,000",
-      "price_min": 1595000,
-      "price_max": 1595000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "81 Garden Street",
-      "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81+garden+street+alexandria",
-      "source": "domain_search",
-      "price_guide_text": "$1,595,000",
-      "price_min": 1595000,
-      "price_max": 1595000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "address": "12/58 Bayswater Street",
-      "suburb": "Drummoyne",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F58+bayswater+street+drummoyne",
-      "source": "domain_search",
-      "price_guide_text": "$1,595,000",
-      "price_min": 1595000,
-      "price_max": 1595000,
-      "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": null,
-        "supplies": null,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "change_flag": "NEW"
-    },
-    {
-      "url": "https://www.domain.com.au/79a-2-watermans-quay-barangaroo-nsw-2000-2019934722?topspot=1",
-      "address": "79A/2 Watermans Quay",
-      "suburb": "Barangaroo",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
-      "change_flag": "NEW",
-      "open_homes": [],
-      "postcode": "2000",
-      "cover_image": "https://rimh2.domainstatic.com.au/EyvVokSlAhjvaQ-qoB0SQm6Nf1c=/1680x720/filters:format(webp):quality(85)/2019934722_5_1_250416_034638-w4134-h2756",
-      "beds": 3,
-      "baths": 3,
-      "parking": 2,
-      "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionThe Pinnacle of Luxury with Spectacular Sydney-wide ViewsCapturing breathtaking views of iconic Sydney landmarks and skyline, this exclusive residence in the 'Luxury Collection' of coveted Tower 2 of 'One Sydney Harbour' redefines luxury living. De-signed by Pritzker Prize-winning architect Renzo Piano, it embodies sophistication, innovation, and prestige at an unmatched level. Breathtaking views over iconic Sydney landmarks and beyond MeticulouslyRead more",
-      "price_guide_text": "Contact Agent",
-      "source": "domain",
-      "lat": -33.8631339,
-      "lon": 151.2020967,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 116,
-          "supermarket": 162,
-          "pool": 309,
-          "park": 59,
-          "restaurants": 31
-        },
-        "geocoded": true
-      },
-      "outlook": {
-        "class": "elevated_district",
-        "basis": "Auto-detected from description"
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "accessibility"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 58,
-        "leading": "outlook: elevated_district",
-        "components": {
-          "outlook": 19.5,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false
-    }
-  ]
-}
+          "bud

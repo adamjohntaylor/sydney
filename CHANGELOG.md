@@ -7,6 +7,50 @@ of how the code got to its current shape.
 
 ---
 
+## 24 June 2026 — Bookmarklet auto-adds an unmatched listing as a new entry
+
+The enrichment bookmarklet previously only updated a property already in `listings.json`;
+running it on a page the dashboard didn't know about returned a 404. It now **creates** the
+listing when there's no match, so a single click both discovers and files a property. (Decision
+#30.)
+
+- **Create-on-no-match** (`serve.py` `_handle_enrich_listing`): the old "no match → 404" branch
+  now mints a new entry from the scraped data. It parses the price guide to numeric bounds
+  (reusing `parse_alert_email.parse_price`), stamps `change_flag:"NEW"` / `first_seen` /
+  `last_seen` / `source`, geocodes the new entry best-effort (so its transport/supplies/
+  walkability catchments score on the same pass rather than waiting for the next sweep), then
+  rides the **existing** re-score-all → rebuild-counts → regenerate-`07` → auto-push tail. This
+  is the same shape and code path `gmail_fetch.merge_new_listings` and `/api/refresh` already
+  use for email-ingested listings, so a bookmarklet-born entry is indistinguishable downstream.
+  Listings stay keyed by URL; a later click on the same property matches by URL-id and enriches
+  in place instead of duplicating.
+- **Empty-shell guard**: an extraction with no usable identity — no address **and** no beds
+  **and** no price number — is refused with HTTP **422** and nothing is stored, rather than
+  inserting an un-scoreable blank (mirrors `sweep.is_empty_listing`). A price-less but identified
+  listing (e.g. "Contact Agent" with beds + address) **is** added, with budget left an honest `?`.
+- **Scope** (Adam's choice): **any** deliberately-clicked listing is added regardless of area or
+  budget — the scorer still marks Tier 1 and target-area honestly — rather than gating creation
+  on Inner West + ≤$2.2M, so a mis-parsed suburb can't silently drop a property Adam wanted.
+- **Bookmarklet address hardening** (`enrich-bookmarklet.js`): the dead Domain URL-slug stub was
+  replaced with a working parser used as a fallback after the page-heading parse. It pulls
+  address, multiword suburb and **postcode** from the Domain slug (`…-suburb-nsw-postcode-id`),
+  handling unit `5/40` and alpha `12a` forms. This matters specifically for new entries, which
+  can't be geocoded or de-duplicated without an address. Scoped to Domain pages, so REA URLs are
+  untouched.
+- **Submit popup** (`enrich-submit.html`): now branches on `result.created` to show "**Added as
+  a NEW listing**" vs "Matched an existing listing"; `bookmarklet.html` install/usage copy
+  updated to describe the auto-add.
+- **Data fix**: `data/listings.json` was found **truncated/corrupt** on disk (invalid JSON,
+  mid-record at line 3770) — every `/api` handler `json.load`s it first, so the next enrich or
+  refresh would have 500'd. Restored from the `2026-06-23T11-36Z` snapshot (68 listings, 64 Tier
+  1 pass); the corrupt file is preserved as `data/listings.json.corrupt-20260624`.
+- **Verified**: the create / enrich-existing / empty-shell-refused / price-less-but-identified
+  branches and counts checked against the real `sweep` + `parse_alert_email` modules, and the
+  slug parser against five Domain URLs via Node — all green. (Note: the Linux bash mount again
+  served truncated/garbled copies of `serve.py` and `score.py` this session, so the literal
+  server couldn't be run end-to-end in the sandbox; the host files are complete, and the
+  unchanged scorer is exercised identically by the existing new-listing paths.)
+
 ## 23 June 2026 (pm) — Hidden price persists "over the top of" a no-price auction guide
 
 Auction / "Contact Agent" listings publish no price, but the agent's guide is usually
