@@ -1396,21 +1396,18 @@
         "geocoded": true
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
         "accessibility_provisional": true,
         "accessibility_basis": "single-level / level-entry",
         "accessibility": true,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [
-          "budget",
-          "bedrooms"
-        ],
+        "unverified": [],
         "pass": true
       },
       "tier2": {
@@ -1436,7 +1433,12 @@
       "cover_image": "https://rimh2.domainstatic.com.au/K1zXuFZLvpDIhNUzsweF9uT3fNo=/1680x720/filters:format(webp):quality(85)/2020922787_1_1_260617_053117-w8192-h5464",
       "property_type": "house",
       "description": "Property DescriptionElevated Family Haven in a Prized Rozelle PocketPositioned in a tightly held pocket of Rozelle and elevated to capture a desirable north-west aspect, this beautifully maintained c1912 freestanding cottage offers effortless single-level living with exciting scope to further enhance and extend upwards (STCA). Combining timeless character with modern comfort, the home also benefits from generous under-house and attic storage, providing exceptionalRead more",
-      "price_guide_text": "Contact Agent"
+      "price_guide_text": "$2,100,000 (hidden guide)",
+      "beds": 3,
+      "baths": 1,
+      "parking": 1,
+      "price_min": 2100000,
+      "price_max": 2100000
     },
     {
       "address": "19 Day Street",
