@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 75,
-    "tier1_pass": 67,
-    "new": 39,
+    "total": 76,
+    "tier1_pass": 68,
+    "new": 40,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5015,6 +5015,78 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/704-18-20-allen-street-pyrmont-nsw-2009-2020761520",
+      "address": "704/18-20 Allen Street",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://rimh2.domainstatic.com.au/735Va8UG_6Cp4O4l3jiaRlhPXCQ=/1680x720/filters:format(webp):quality(85)/2020761520_3_1_260415_124535-w4134-h2754",
+      "beds": 3,
+      "baths": 2,
+      "parking": 2,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionStylish LivingLocated in the modern AE building, this stylish 3 bedroom apartment offers luxurious spaces with contemporary design and quality finishes.- Generous living and dining area with enviable north-east aspect- Semi-enclosed balcony ideal for all weather entertaining, capturing views to the city skyline- Gourmet gas kitchen with granite finish, stainless steel appliances and ample storage- 3 doubleRead more",
+      "price_guide_text": "$1,295,000 - $1,345,000",
+      "price_min": 1295000,
+      "price_max": 1345000,
+      "source": "domain",
+      "lat": -33.873038,
+      "lon": 151.1965053,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 49,
+          "supermarket": 41,
+          "pool": 437,
+          "park": 207,
+          "restaurants": 48
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "city",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 55,
+        "leading": "outlook: city",
+        "components": {
+          "outlook": 13.5,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
