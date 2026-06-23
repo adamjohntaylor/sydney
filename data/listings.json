@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 70,
+    "total": 71,
     "tier1_pass": 64,
-    "new": 34,
+    "new": 35,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -4645,6 +4645,80 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/73a-2-watermans-quay-barangaroo-nsw-2000-2020930166",
+      "address": "73A/2 Watermans Quay",
+      "suburb": "Barangaroo",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2000",
+      "cover_image": "https://rimh2.domainstatic.com.au/Ypz_Efv9XIbQkZQyAC5ZjfFL65E=/1680x720/filters:format(webp):quality(85)/2020930166_1_1_260619_073927-w4134-h2756",
+      "beds": 3,
+      "baths": 3,
+      "parking": 2,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionHigh-Level Luxury Apartment with Iconic Harbour Views at One Sydney HarbourPositioned high within the acclaimed 'One Sydney Harbour' by Pritzker Prize-winning architect Renzo Piano, this exceptional north-east corner apartment in Tower 2 represents the pinnacle of waterfront living. Showcasing world-class finishes, breathtaking harbour panoramas and unrivalled six-star amenities, it offers a lifestyle of extraordinary luxury and prestige. - Prestigious north-eastRead more",
+      "price_guide_text": "$13,500,000 (hidden guide)",
+      "price_min": 13500000,
+      "price_max": 13500000,
+      "source": "domain",
+      "lat": -33.8631339,
+      "lon": 151.2020967,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 116,
+          "supermarket": 162,
+          "pool": 309,
+          "park": 59,
+          "restaurants": 31
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": false,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [
+          "budget"
+        ],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
+      },
+      "tier2": {
+        "score": 72,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
