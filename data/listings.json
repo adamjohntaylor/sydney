@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 81,
-    "tier1_pass": 72,
-    "new": 32,
+    "total": 82,
+    "tier1_pass": 73,
+    "new": 33,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5546,6 +5546,81 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648",
+      "address": "1003b/89 bay Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://i2.au.reastatic.net/310x175/908e9d43d1bc1c14f5ff5a7dd4729113204072359d0d46a9f64607443d64a593/image.jpg",
+      "property_type": "apartment",
+      "description": "Overlooking the lush expanse of Wentworth Park, just moments from the CBD, this bright and sunny, contemporary two-bedroom apartment distills the essence of convenience, luxury and vibrant city living. Located on the sub-penthouse level of the prestigious, multi-award winning Mezzo complex by renowned Chrofi and Kannfinch architects, the apartment exudes a charming and inviting ambience.\n\nDefined by sleek lines, high-quality appliances, bespoke fittings, and stylish timber finishes, the apartment has a uniquely alluring quality. The open-plan living, dining and kitchen area flows through large, retractable doors onto a north-facing entertainer's balcony overlooking the verdant greenery below, with city skyline views.\n\nThe gourmet kitchen features timeless stone benchtops and integrated premium Miele appliances, designed for effortless workflow without compromising on style. Both bedrooms are bathed in the morning sunlight, and feature ample built-in wardrobes. There are two elegant bathrooms, each with mosaic tiles and contemporary designer finishes that create a sense of style and luxury.\n\nThe apartment offers immediate access to a vibrant village café culture, with some of Sydney's best eateries just minutes from the front door. The Sydney CBD, Chinatown, the Fish Markets and Broadway shopping centre are all just moments away. With immediate access to Sydney University, the University of Technology (UTS), Notre Dame University and a range of top schools, this magnificent abode enjoys unrivalled convenience. It is sure to be equally appealing to the professional couple or the astute investor seeking to maximise returns.\n\n\nFeatures\n- North-facing balcony with lush outlook over Wentworth Park and city skyline views\n- Bright and airy with large windows and inviting ambience\n- Two generous carpeted bedrooms, both with built-ins, master with ensuite\n- Bespoke kitchen with mosaic tiled splashback, Miele appliances and stone benchtop\n- Two designer bathrooms with black an",
+      "features": [
+        "2",
+        "1",
+        "3",
+        "Lift (listed)"
+      ],
+      "source": "realestate",
+      "lat": -33.8796962,
+      "lon": 151.1944632,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 430,
+          "supermarket": 259,
+          "pool": 483,
+          "park": 180,
+          "restaurants": 48
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "city",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility_provisional": true,
+        "accessibility_basis": "lift in features list",
+        "accessibility": true,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 60,
+        "leading": "outlook: city",
+        "components": {
+          "outlook": 13.5,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 11.0,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
