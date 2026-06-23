@@ -51,6 +51,55 @@ listing when there's no match, so a single click both discovers and files a prop
   server couldn't be run end-to-end in the sandbox; the host files are complete, and the
   unchanged scorer is exercised identically by the existing new-listing paths.)
 
+### Follow-up (same day) — realestate.com.au support
+
+Auto-add worked on Domain but **not on REA**: REA renders client-side and renames its CSS
+classes, so the bookmarklet's class-based address selectors missed, leaving address/suburb empty,
+and (unlike Domain) there was no URL fallback — so the server rejected the listing as
+unidentifiable. Fixed with two **markup-independent** sources plus a guard relaxation:
+
+- **Shared schema.org JSON-LD extractor** (`enrich-bookmarklet.js`, runs for both sites): walks
+  every `ld+json` block (incl. `@graph`) and back-fills `address` (`streetAddress`), `suburb`
+  (`addressLocality`), `postcode` (`postalCode`), `beds`/`baths` and — when present — `geo`
+  lat/lon, *only* where the site-specific scrape left a gap. The geo coords let a brand-new
+  listing be Tier-1 scored without the server geocoder.
+- **REA URL parser** (`enrich-bookmarklet.js`): `/property-<type>-<state>-<suburb>-<id>` yields
+  the suburb and property type reliably (handles multiword suburbs like `dulwich-hill`), so a REA
+  listing always has at least a suburb + type identity even when JSON-LD and the DOM both miss.
+- **Identity guard relaxed** (`serve.py` create branch): a deliberate click on a real listing URL
+  (numeric id) **plus** a suburb or address is now sufficient to create, even when beds/price
+  weren't read on the first click; genuine junk (no id, or no place) is still refused (422).
+- **Verified**: the REA URL parser and JSON-LD walker against the reported URL
+  (`…glebe-150693264`) and crafted JSON-LD (address/beds/baths/geo, `@graph` nesting, gap-fill,
+  no-clobber) via Node — 6/6; and the relaxed guard against the real `sweep`/`parse_alert_email`
+  (REA-thin accepted, junk refused) — 6/6. The live REA page itself couldn't be inspected — both
+  the browser and fetch tools block realestate.com.au — so the fix keys off standards-based
+  sources rather than REA's markup; **worth a quick confirm on a real REA listing.**
+
+### Follow-up 2 (same day) — REA blocked the loader entirely (CSP); inline bookmarklet added
+
+The extraction fix above was moot on REA because the bookmarklet never *ran* there: "nothing
+happens" on click. Cause: the installed bookmarklet injects an external
+`<script src="http://localhost:8777/enrich-bookmarklet.js">`, and **realestate.com.au serves a
+strict Content-Security-Policy** whose `script-src` doesn't whitelist localhost, so the browser
+refuses the script silently. (Domain's CSP is permissive, so the loader works there;
+`http://localhost` is exempt from mixed-content blocking, which is why it loads at all.)
+
+- **Inline bookmarklet** (`serve.py` new `GET /bookmarklet` route): serves a page whose draggable
+  link carries the **entire** `enrich-bookmarklet.js` inside a `javascript:` URL (percent-encoded
+  whole, so newlines survive as `%0A` and the `//` line comments stay terminated). An inlined
+  bookmarklet loads no external script, so CSP `script-src` can't block it, and it runs
+  synchronously inside the click gesture, so the result popup isn't popup-blocked either. The page
+  is generated **from the file on disk on each request**, so it always reflects the latest code —
+  re-drag the link after any change to `enrich-bookmarklet.js`. `bookmarklet.html` now banners a
+  link to it for REA users; the old loader remains for reference.
+- **Verified**: the encode→decode→execute round-trip (Python `quote(safe="")` → Node
+  `decodeURIComponent` + eval, mirroring how a browser runs a `javascript:` URL) — the IIFE runs,
+  comments don't eat code, and the `enrich-submit.html?data=` popup URL is built correctly.
+- Adam: open <code>http://localhost:8777/bookmarklet</code>, drag the new button, and use it on
+  REA. (The sandbox mount was serving a stale pre-edit copy of `enrich-bookmarklet.js`, so the
+  inline link had to be built server-side from the real file rather than in the sandbox.)
+
 ## 23 June 2026 (pm) — Hidden price persists "over the top of" a no-price auction guide
 
 Auction / "Contact Agent" listings publish no price, but the agent's guide is usually

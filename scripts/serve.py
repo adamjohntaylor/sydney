@@ -86,7 +86,64 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/api/health":
             return self._json(200, {"ok": True, "served": True, "refresh_available": True})
+        if self.path.split("?")[0] in ("/bookmarklet", "/bookmarklet/"):
+            return self._handle_bookmarklet_page()
         return super().do_GET()
+
+    def _handle_bookmarklet_page(self):
+        """Serve a page with an INLINED bookmarklet built from the live
+        enrich-bookmarklet.js on disk.
+
+        Why inline: the original bookmarklet injects an external
+        <script src="http://localhost:8777/enrich-bookmarklet.js">. realestate.com.au
+        serves a strict Content-Security-Policy whose script-src does not whitelist
+        localhost, so that external script is refused and "nothing happens"
+        (Domain's CSP is permissive, so the loader works there). An inlined
+        javascript: bookmarklet carries the code in the URL itself - it loads no
+        external script, so CSP script-src can't block it, and it runs
+        synchronously inside the click gesture (so the result popup isn't
+        popup-blocked either). Built server-side from the file on disk so it always
+        reflects the latest code - re-drag the link after any change.
+        """
+        import html as _html
+        import urllib.parse as _url
+        js_path = os.path.join(DASH_DIR, "enrich-bookmarklet.js")
+        try:
+            with open(js_path, "r", encoding="utf-8") as fh:
+                js = fh.read()
+        except OSError as exc:
+            return self._json(500, {"ok": False, "error": f"cannot read bookmarklet: {exc}"})
+        # The file is already an IIFE; percent-encode it whole (newlines -> %0A, so
+        # the // line comments stay terminated) and prefix the javascript: scheme.
+        href = "javascript:" + _url.quote(js, safe="")
+        href_attr = href.replace("&", "&amp;").replace('"', "&quot;")
+        page = f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Enrich Listing — inline bookmarklet</title>
+<style>
+body {{ font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }}
+h1 {{ color: #1e3a5f; }}
+.bookmarklet {{ display: inline-block; padding: 12px 24px; background: #1e3a5f; color: #fff !important; text-decoration: none; border-radius: 8px; font-size: 18px; margin: 16px 0; }}
+.note {{ background: #fef3c7; padding: 14px; border-radius: 8px; border-left: 4px solid #f59e0b; }}
+code {{ background: #e5e5e5; padding: 2px 6px; border-radius: 4px; }}
+</style></head><body>
+<h1>Enrich Listing — inline bookmarklet</h1>
+<p>Drag this button to your bookmarks bar. Unlike the original loader, it carries the
+whole script inside the link, so it also works on sites with a strict Content-Security-Policy
+(<strong>realestate.com.au</strong>), where the loader version is silently blocked.</p>
+<p><a class="bookmarklet" href="{href_attr}">Enrich Listing</a></p>
+<div class="note"><strong>Note:</strong> the local server must be running
+(<code>python scripts/serve.py</code>) when you click it, because it still opens
+<code>http://localhost:8777/enrich-submit.html</code> to save. This link is generated from the
+current <code>enrich-bookmarklet.js</code> — after any change to that file, reload this page and
+re-drag the button. (<a href="/bookmarklet.html">old loader version</a>)</div>
+</body></html>"""
+        body = page.encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(body)
 
     def _commit_and_push(self):
         """Commit and push changes to GitHub. Returns (ok: bool, message: str).
@@ -367,8 +424,14 @@ class Handler(SimpleHTTPRequestHandler):
             # blank target is fully populated by the enrichment block that follows.
             created = False
             if not target:
-                # Refuse a shell with no usable identity (no address AND no beds
-                # AND no price number) rather than storing an un-scoreable blank.
+                # Identity guard. Normally we require address OR beds OR a price
+                # number so a stray fragment isn't stored. BUT a deliberate
+                # bookmarklet click on a real listing page is itself strong
+                # evidence: a listing URL carrying a numeric id PLUS a suburb (or
+                # address) is enough to create, even when the page scrape is thin.
+                # This is what lets REA listings through - REA renders client-side
+                # and renames its CSS classes, so the address often only resolves
+                # from the URL/JSON-LD, leaving beds/price unread on first click.
                 _pt, _pmin, _pmax = alert_mod.parse_price(item.get("price_guide_text") or "")
                 provisional = {
                     "address": (item.get("address") or "").strip(),
@@ -377,13 +440,18 @@ class Handler(SimpleHTTPRequestHandler):
                     "price_max": _pmax,
                     "price_guide_text": item.get("price_guide_text") or "",
                 }
-                if sweep_mod.is_empty_listing(provisional):
+                import re as _re
+                _has_listing_id = bool(_re.search(r'(?:-|/)(\d{6,12})/?$', item.get("url") or ""))
+                _has_place = bool((item.get("suburb") or "").strip()
+                                  or (item.get("address") or "").strip())
+                if sweep_mod.is_empty_listing(provisional) and not (_has_listing_id and _has_place):
                     return self._json(422, {
                         "ok": False,
                         "created": False,
-                        "error": ("Could not extract enough to add this listing "
-                                  "(no address, bedrooms, or price found on the "
-                                  "page). Nothing was saved."),
+                        "error": ("Could not extract enough to identify this "
+                                  "listing (no address, suburb, beds, or price, "
+                                  "and no recognisable listing URL). Nothing was "
+                                  "saved."),
                     })
                 syd_today = sweep_mod.now_sydney().date().isoformat()
                 target = {

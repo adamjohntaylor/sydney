@@ -10,6 +10,11 @@
 
   const data = { url: location.href };
 
+  // Everything that reads the page is wrapped so a single failed selector on an
+  // unfamiliar layout (REA changes its markup often) can never abort the whole
+  // run silently - we still open the submit popup below with whatever we have.
+  try {
+
   if (isDomain) {
     // Extract from Domain listing page
 
@@ -407,7 +412,67 @@
     if (descEl) {
       data.description = descEl.textContent.trim().substring(0, 2000);
     }
+
+    // REA URL fallback. realestate.com.au listing URLs are
+    // "/property-<type>-<state>-<suburb>-<id>" (e.g.
+    // "/property-apartment-nsw-glebe-150693264"). They carry no street address or
+    // postcode, but the suburb and type are reliable - and REA renders
+    // client-side and renames its CSS classes often, so the DOM selectors above
+    // routinely miss. Use the URL so a REA listing always has at least a suburb +
+    // type identity (the JSON-LD block below adds the street address when present).
+    if (!data.suburb || !data.property_type) {
+      const m = location.pathname.match(/\/property-([a-z]+)-[a-z]{2,3}-([a-z0-9-]+?)-(\d{6,12})\/?$/i);
+      if (m) {
+        const tc = s => s.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+        if (!data.property_type && m[1]) data.property_type = m[1].toLowerCase();
+        if (!data.suburb && m[2]) data.suburb = tc(m[2]);
+      }
+    }
   }
+
+  // Cross-site structured-data fallback (schema.org JSON-LD). REA in particular
+  // renders client-side and changes its CSS class names, so the markup-based
+  // selectors above miss; the embedded JSON-LD is the stable, standards-based
+  // source. We back-fill address / suburb / postcode / beds / baths / geo ONLY
+  // where the site-specific extraction left a gap, walking @graph and nested
+  // arrays so it survives either site's envelope shape. geo coords, when present,
+  // let a brand-new listing be Tier-1 scored without the server-side geocoder.
+  (function () {
+    const want = k => data[k] === undefined || data[k] === null || data[k] === '';
+    const nodes = [];
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
+      try {
+        const push = o => {
+          if (!o || typeof o !== 'object') return;
+          nodes.push(o);
+          if (Array.isArray(o['@graph'])) o['@graph'].forEach(push);
+        };
+        const j = JSON.parse(s.textContent);
+        (Array.isArray(j) ? j : [j]).forEach(push);
+      } catch (e) {}
+    });
+    for (const o of nodes) {
+      const a = o.address && typeof o.address === 'object'
+        ? (Array.isArray(o.address) ? o.address[0] : o.address) : null;
+      if (a) {
+        if (want('address') && a.streetAddress) data.address = String(a.streetAddress).trim();
+        if (want('suburb') && a.addressLocality) data.suburb = String(a.addressLocality).trim();
+        if (want('postcode') && a.postalCode) data.postcode = String(a.postalCode).trim();
+      }
+      if (want('beds') && o.numberOfBedrooms != null) {
+        const n = parseInt(o.numberOfBedrooms, 10); if (!isNaN(n)) data.beds = n;
+      }
+      if (want('baths')) {
+        const rawB = o.numberOfBathroomsTotal != null ? o.numberOfBathroomsTotal : o.numberOfBathrooms;
+        if (rawB != null) { const n = parseInt(rawB, 10); if (!isNaN(n)) data.baths = n; }
+      }
+      const g = o.geo && typeof o.geo === 'object' ? o.geo : null;
+      if (g && want('lat') && g.latitude != null && g.longitude != null) {
+        const la = parseFloat(g.latitude), lo = parseFloat(g.longitude);
+        if (!isNaN(la) && !isNaN(lo)) { data.lat = la; data.lon = lo; }
+      }
+    }
+  })();
 
   // Property features list (structured chips) + JSON-LD amenities. These are far
   // more reliable than parsing prose for accessibility signals like "Lift".
@@ -456,7 +521,27 @@
   // Show what we found
   console.log('Extracted data:', data);
 
-  // Encode data and open localhost page (avoids HTTPS->HTTP fetch blocking)
-  const encoded = encodeURIComponent(JSON.stringify(data));
-  window.open('http://localhost:8777/enrich-submit.html?data=' + encoded, '_blank', 'width=500,height=760');
+  } catch (e) {
+    // Record the failure but DON'T abort - still hand off whatever we collected.
+    data._error = String((e && e.message) || e);
+    console.error('Enrich bookmarklet extraction error:', e);
+  }
+
+  // Encode data and open the localhost submit page. This ALWAYS runs (even if
+  // extraction threw above), so a click is never a silent no-op. window.open of a
+  // top-level localhost URL is not subject to mixed-content/CSP; if the popup is
+  // nonetheless blocked, fall back to navigating this tab.
+  try {
+    const encoded = encodeURIComponent(JSON.stringify(data));
+    const submitUrl = 'http://localhost:8777/enrich-submit.html?data=' + encoded;
+    const w = window.open(submitUrl, '_blank', 'width=500,height=760');
+    if (!w) {
+      if (confirm('Could not open the dashboard popup (popup blocked?).\nClick OK to open it in this tab instead.')) {
+        location.href = submitUrl;
+      }
+    }
+  } catch (e2) {
+    alert('Enrich bookmarklet could not reach the dashboard at http://localhost:8777 .\n'
+        + 'Is the local server running (python scripts/serve.py)?\n\n' + ((e2 && e2.message) || e2));
+  }
 })();

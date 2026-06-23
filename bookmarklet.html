@@ -17,6 +17,13 @@ code { background: #e5e5e5; padding: 2px 6px; border-radius: 4px; font-size: 14p
 <body>
 <h1>Listing Enrichment Bookmarklet</h1>
 
+<div class="note" style="background:#dcfce7;border-left-color:#16a34a;">
+<strong>On realestate.com.au?</strong> Use the <a href="/bookmarklet"><strong>inline bookmarklet</strong></a>
+instead. REA's Content-Security-Policy silently blocks the loader version below (it injects an
+external script REA won't allow), so "nothing happens". The inline version carries the whole
+script in the link itself and works on REA and Domain alike.
+</div>
+
 <p>This bookmarklet extracts listing details (photo, beds, baths, etc.) from Domain or REA listing pages and saves them to your dashboard. If the listing is already tracked it is enriched in place; if it is <strong>not yet in the dashboard, it is added automatically as a new entry</strong> (geocoded and Tier-1 scored on the spot).</p>
 
 <h2>Installation</h2>

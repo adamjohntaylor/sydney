@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 77,
-    "tier1_pass": 68,
-    "new": 28,
+    "total": 78,
+    "tier1_pass": 69,
+    "new": 29,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -2081,7 +2081,9 @@
       "baths": 1,
       "parking": 1,
       "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionThoughtfully updated Art Deco retreat with garageCapturing the classic grandeur of the Art Deco era, this character-laden two-bedder sits within an intimate Art Deco block of just four and has been beautifully brought forward by a considered renovation. Steps to the village and beside the popular Valentinas Sydney Right, it's central to the best of Marrickville. - Renovated apartment in boutique block of 4- Split system a/c, ceiling fans andRead more"
+      "description": "Property DescriptionThoughtfully updated Art Deco retreat with garageCapturing the classic grandeur of the Art Deco era, this character-laden two-bedder sits within an intimate Art Deco block of just four and has been beautifully brought forward by a considered renovation. Steps to the village and beside the popular Valentinas Sydney Right, it's central to the best of Marrickville. - Renovated apartment in boutique block of 4- Split system a/c, ceiling fans andRead more",
+      "status": "interested",
+      "note": ""
     },
     {
       "address": "130 Epsom Road",
@@ -5246,6 +5248,78 @@
       "warehouse_character": false,
       "status": "interested",
       "note": ""
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264",
+      "address": "1101/89 Bay Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://i2.au.reastatic.net/800x600/1347bec2ed91fe4cefe120e2eeea373c83f98bfc5d1e851373d93792593ea8d3/image.jpg",
+      "property_type": "apartment",
+      "description": "Perfectly positioned in the heart of the action, this sun-drenched top-floor apartment offers a lifestyle of convenience and comfort. With sweeping city skyline vistas from every room, this residence is ideal for professionals, investors, or students seeking proximity to Sydney's premier universities and attractions.\n\nProperty Highlights:\n•\tUnbeatable Location: Enjoy a pedestrian-friendly lifestyle just moments from Darling Harbour, the Sydney CBD, Broadway Shopping Centre, and the brand-new Fish Market precinct.\n•\tStunning City Vistas: Wake up to breathtaking city views from the comfort of your bedroom and living area.\n•\tTop-Fill Living: Positioned on the top floor, this unit is flooded with natural light and offers a peaceful, private retreat.\n•\tConvenient Layout: Featuring 2 generously sized bedrooms with built-in robes, 2 modern bathrooms (including an ensuite), and a secure car space.\n•\tProximity to Education: A short stroll to the University of Sydney (USYD) and University of Technology Sydney (UTS).\n•\tOutdoor Recreation: Step out to Wentworth Park, featuring children's playgrounds and expansive sports fields, right on your doorstep.\n\nIdeal For: First-home buyers, city workers, and investors looking for a high-yield asset in a prime location.\n\nContact  Jef 0402 988 630\n\nDisclaimer: All information contained herein is gathered from sources we believe reliable. However we cannot guarantee its accuracy and interested party should make and rely on their own enquiries",
+      "features": [
+        "2",
+        "1"
+      ],
+      "source": "realestate",
+      "lat": -33.8799021,
+      "lon": 151.1943466,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 449,
+          "supermarket": 278,
+          "pool": 504,
+          "park": 176,
+          "restaurants": 44
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "city",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 57,
+        "leading": "outlook: city",
+        "components": {
+          "outlook": 13.5,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 8.8,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
     }
   ]
 }
