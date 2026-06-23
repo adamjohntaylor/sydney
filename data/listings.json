@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 76,
-    "tier1_pass": 68,
-    "new": 40,
+    "total": 77,
+    "tier1_pass": 69,
+    "new": 41,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5087,6 +5087,74 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 6.6,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/70-152-164-bulwara-road-pyrmont-nsw-2009-2020919435",
+      "address": "70/152-164 Bulwara Road",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://rimh2.domainstatic.com.au/_N4AGdqkt4yyxebyC5Q4DlIga8g=/1680x720/filters:format(webp):quality(85)/2020919435_1_1_260616_051116-w4134-h2757",
+      "beds": 3,
+      "baths": 2,
+      "parking": 2,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionIdeal family HomePerched on a high floor offering abundant natural light, this generous apartment offers 165m2 of quality living space with enviable northeast aspect.• Expansive living and dining area with porcelain tiles throughout• Sun drenched balcony ideal for alfresco dining and outdoor entertaining• Gourmet gas kitchen with stone finish, stainless steel appliances and ample storage• 3 Generous bedroomsRead more",
+      "price_guide_text": "$1,575,000 - $1,675,000",
+      "price_min": 1575000,
+      "price_max": 1675000,
+      "source": "domain",
+      "lat": -33.8732871,
+      "lon": 151.1951,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 69,
+          "supermarket": 65,
+          "pool": 464,
+          "park": 200,
+          "restaurants": 73
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 49,
+        "leading": "light & aspect",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 11.0,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
