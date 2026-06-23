@@ -4172,8 +4172,8 @@
     {
       "address": "16/16 Hosking Street",
       "suburb": "Balmain",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F16+hosking+street+balmain",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/16-16-hosking-street-balmain-east-nsw-2041-2020909848",
+      "source": "domain",
       "catchments": {
         "transport": null,
         "supermarket": null,
@@ -4185,9 +4185,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
@@ -4195,22 +4195,20 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 45,
+        "leading": "outlook: water",
         "components": {
-          "outlook": 3.0,
+          "outlook": 30.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 6.6,
           "pool": 0,
           "parks": 0,
           "restaurants": 0
@@ -4221,7 +4219,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-23",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "cover_image": "https://rimh2.domainstatic.com.au/Tn1730iFXuvi7KdIxm-JskdcYgM=/1680x720/filters:format(webp):quality(85)/2020909848_1_1_260611_053115-w5475-h3652",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionWaterfront magic in Balmain East with unobstructed viewsA breathtaking harbour panorama and an extraordinary sense of connection to Sydney's iconic waterfront combine in this renovated apartment to create a lifestyle of rare distinction. Occupying a prized corner position high in Tourmaline Court, the two-bedroom residence is immersed in uninterrupted 180-degree views across the harbour to the bright lights of the city with the constant movement ofRead more",
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      }
     },
     {
       "address": "121/23 Corunna Road",
