@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 79,
+    "total": 78,
     "tier1_pass": 71,
-    "new": 29,
+    "new": 28,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -4603,80 +4603,6 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false
-    },
-    {
-      "url": "https://www.domain.com.au/25-1-27-murray-street-pyrmont-nsw-2009-2020923935",
-      "address": "25/1-27 Murray Street",
-      "suburb": "Pyrmont",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
-      "change_flag": "NEW",
-      "open_homes": [],
-      "postcode": "2009",
-      "cover_image": "https://rimh2.domainstatic.com.au/_glyXP9tGsTQPc-AgJFA0AjNj7A=/1680x720/filters:format(webp):quality(85)/2020923935_1_1_260617_091320-w7360-h4912",
-      "beds": 3,
-      "baths": 2,
-      "parking": 2,
-      "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionRare North Facing Harbourfront Residence in Mirvac's Prestigious Gateway  Views, Privacy & Unmatched ConveniencePositioned in the highly sought after Gateway development by Mirvac, this exceptional three bedroom residence offers an enviable lifestyle on the doorstep of Sydney Harbour, combining breathtaking views, generous proportions, and premium resort style amenities.Overlooking Pyrmont Bay Park and the sparkling waters of Darling Harbour towards Barangaroo, the apartment enjoys an approximateRead more",
-      "price_guide_text": "$2,850,000 (hidden guide)",
-      "price_min": 2850000,
-      "price_max": 2850000,
-      "source": "domain",
-      "lat": -33.8688718,
-      "lon": 151.1975646,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 62,
-          "supermarket": 129,
-          "pool": 168,
-          "park": 98,
-          "restaurants": 84
-        },
-        "geocoded": true
-      },
-      "outlook": {
-        "class": "elevated_district",
-        "basis": "Auto-detected from description"
-      },
-      "tier1": {
-        "budget": false,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "budget"
-        ],
-        "unverified": [
-          "accessibility"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 61,
-        "leading": "outlook: elevated_district",
-        "components": {
-          "outlook": 19.5,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
