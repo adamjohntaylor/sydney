@@ -2990,8 +2990,8 @@
     {
       "address": "113 Albermarle Street",
       "suburb": "Newtown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=113+albermarle+street+newtown",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/113-albermarle-street-newtown-nsw-2042-2020925413",
+      "source": "domain",
       "price_guide_text": "$1.75m",
       "price_min": 1000000,
       "price_max": 1000000,
@@ -3006,31 +3006,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
+        "score": 18,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 6.6,
           "pool": 0,
           "parks": 0,
           "restaurants": 0
@@ -3042,7 +3040,13 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-23",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "cover_image": "https://rimh2.domainstatic.com.au/BXV9UDaPDJieRbtIE_Kng9-y9A4=/1680x720/filters:format(webp):quality(85)/2020925413_1_1_260618_025442-w4500-h3000",
+      "beds": 3,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "house",
+      "description": "Property DescriptionClassic end terrace with parking close to Newtown's heartEnviably located just 450m from where King Street meets Enmore Road, this late-Victorian end terrace enjoys all the benefits of a prime lifestyle position approx. 7 min. walk from the vibrant centre of Newtown. The home blends space and charm over two light filled levels with timeless character features throughout including a traditional lace balcony, is only attached to one adjoining property andRead more"
     },
     {
       "address": "26C Morrissey Road",
