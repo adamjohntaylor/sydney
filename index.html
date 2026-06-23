@@ -88,6 +88,7 @@
     <span class="ml-auto flex items-center gap-1">Sort
       <select id="fSort" class="border rounded px-2 py-1">
         <option value="score">Tier 2 score</option>
+        <option value="status">Status (decision priority)</option>
         <option value="open">Next open-home</option>
         <option value="price">Price</option>
         <option value="flag">Change flag</option>
@@ -156,6 +157,17 @@ const STATUS_STYLES = {
   "shortlist":"bg-emerald-100 text-emerald-800",
   "rejected":"bg-slate-200 text-slate-600",
   "sold-without-us":"bg-rose-100 text-rose-700"
+};
+// Decision-workflow ordering: action items first, dispositioned items last.
+// Unmarked listings sit between the active set and the rejected/gone set.
+const STATUS_RANK = {
+  "needs decision":0,
+  "shortlist":1,
+  "interested":2,
+  "inspected":3,
+  "":4,                 // unmarked
+  "rejected":5,
+  "sold-without-us":6
 };
 const FLAG_STYLES = {
   NEW:"bg-emerald-500 text-white", PRICE_CHANGED:"bg-amber-500 text-white",
@@ -258,8 +270,10 @@ function tabFilter(l){
 
 function sortListings(arr){
   const s=document.getElementById("fSort").value;
+  const rank=l=>{const r=STATUS_RANK[l.status||""];return r===undefined?4:r;};
   const cmp={
     score:(a,b)=>(b.tier2?.score||0)-(a.tier2?.score||0),
+    status:(a,b)=>rank(a)-rank(b)||(b.tier2?.score||0)-(a.tier2?.score||0),
     price:(a,b)=>(a.price_min||9e9)-(b.price_min||9e9),
     open:(a,b)=>((nextOpen(a)||9e15)-(nextOpen(b)||9e15)),
     flag:(a,b)=>(a.change_flag||"").localeCompare(b.change_flag||""),
