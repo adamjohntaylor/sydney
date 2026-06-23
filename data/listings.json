@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 78,
-    "tier1_pass": 70,
-    "new": 42,
+    "total": 79,
+    "tier1_pass": 71,
+    "new": 43,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5222,6 +5222,87 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.domain.com.au/1306-21-cadigal-avenue-pyrmont-nsw-2009-2020816079",
+      "address": "1306/21 Cadigal Avenue",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://rimh2.domainstatic.com.au/umzUA_Yoi6BDsmRWBQJMPRamPBw=/1680x720/filters:format(webp):quality(85)/2020816079_1_1_260505_054711-w6000-h4000",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionElevated  Living with Iconic Panoramic VistasEnjoying expansive outlooks across Blackwattle Bay extending toward the ANZAC Bridge and Jones Bay, this spacious, sundrenched apartment is positioned high within the tightly held McCafferys Tower at Jacksons Landing. Showcasing generous singlelevel proportions, it delivers a wonderful sense of openness, privacy and relaxed harbourside living within this prestigious waterfront community.- OpenRead more",
+      "features": [
+        "Air conditioning",
+        "Area Views",
+        "Tennis Court",
+        "Ensuite",
+        "Furnished",
+        "Car Parking - Basement",
+        "Balcony"
+      ],
+      "price_guide_text": "$2,190,000 (hidden guide)",
+      "price_min": 2190000,
+      "price_max": 2190000,
+      "source": "domain",
+      "lat": -33.8685702,
+      "lon": 151.1914044,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 140,
+          "supermarket": 179,
+          "pool": 127,
+          "park": 72,
+          "restaurants": 108
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 72,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
