@@ -7,6 +7,38 @@ of how the code got to its current shape.
 
 ---
 
+## 23 June 2026 (pm) — Hidden price persists "over the top of" a no-price auction guide
+
+Auction / "Contact Agent" listings publish no price, but the agent's guide is usually
+embedded in the page JSON. We already mined it; this change makes a mined hidden price
+**stick** — a later price-less update (a repeat enrichment, or a re-ingested auction
+alert email) can no longer revert it to "no price". Per the project's accuracy rule,
+mined figures stay tagged `(hidden guide)` so they read as guides needing re-verification.
+
+- **Bookmarklet** (`enrich-bookmarklet.js`): hidden-price mining broadened for both
+  Domain and REA. Added Schema.org `offers.price` (JSON-LD, the most reliable structured
+  source — present even on auction listings) ahead of the regex layer, plus a few more
+  Domain embedded-JSON fields (`priceTo`, `displayPriceFrom`, `searchPrice`,
+  `price.from`). All kept under the $100k–$50M guard and 6–8-digit bounds so a stray
+  strata / land / sold figure can't slip through. Still flagged `(hidden guide)`.
+- **Enrich merge** (`serve.py` `_handle_enrich_listing`): price merge is now
+  **one-directional**. A discovered numeric price always overwrites the text and refreshes
+  `price_min`/`price_max`; a no-number placeholder ("Auction…", "Contact Agent") is written
+  **only** when no better price is on file, so it can never clobber a hidden guide we've
+  already found.
+- **Re-ingestion** (`sweep.py` `merge_incremental` + new `_preserve_enrichment`): when a
+  saved-search alert re-lists an already-enriched property with no number, the prior
+  record's price (and other email-absent enrichment — photo, beds/baths, description,
+  features, direct URL) is carried onto the new record instead of being wiped. No false
+  `PRICE_CHANGED` flag fires in that case; a genuinely different new number still wins and
+  still flags.
+- **Verified**: `_has_price_number`, `_preserve_enrichment`, `merge_incremental`, and the
+  serve.py merge branch checked on crafted cases (hidden-over-auction, placeholder-can't-
+  revert, genuine-new-number-wins, re-ingestion-preserves, `parse_price` on the
+  `(hidden guide)` tag) — all green. (Note: the Linux bash mount again served a truncated
+  `serve.py`; the host copy is complete — verification ran on the synced functions + a
+  faithful replica of the edited branch.)
+
 ## 23 June 2026 — Enrichment now resolves Tier 1 marks (price, bedrooms, accessibility)
 
 Closed the gap where bookmarklet/enrichment data updated a listing's fields but left

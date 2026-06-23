@@ -389,18 +389,32 @@ class Handler(SimpleHTTPRequestHandler):
                 target["features"] = item["features"]
             if item.get("floor") is not None:
                 target["floor"] = item["floor"]
-            # Only update price if it's a valid price (contains $ and digits, or specific keywords)
+            # Price merge is ONE-DIRECTIONAL: better data always wins, and a
+            # no-number placeholder ("Auction - No price guide", "Contact Agent")
+            # must NEVER overwrite a price we have already discovered. This is what
+            # lets a hidden/mined price "update over the top of" the original
+            # no-price guide, and stops a later price-less enrichment (or a
+            # re-ingested auction email) from reverting it back to "no price".
             new_price = item.get("price_guide_text", "")
             if new_price and ("$" in new_price or "contact" in new_price.lower() or "auction" in new_price.lower()):
-                target["price_guide_text"] = new_price
-                # Parse numeric bounds so the Tier 1 budget criterion can resolve.
-                # "Auction"/"Contact Agent" with no number -> Nones, leaving the
-                # numeric fields untouched so budget stays an honest "?".
                 _ptext, pmin, pmax = alert_mod.parse_price(new_price)
-                if pmin is not None:
+                target_has_number = (
+                    target.get("price_min") is not None
+                    or target.get("price_max") is not None
+                    or any(ch.isdigit() for ch in (target.get("price_guide_text") or ""))
+                )
+                if pmin is not None or pmax is not None:
+                    # Incoming carries a real number (e.g. a mined hidden guide):
+                    # always overwrite the text and refresh the numeric bounds.
+                    target["price_guide_text"] = new_price
                     target["price_min"] = pmin
-                if pmax is not None:
                     target["price_max"] = pmax
+                elif not target_has_number:
+                    # Incoming is a no-number placeholder AND we have no better
+                    # price on file -> record the placeholder (budget stays an
+                    # honest "?"). If we already hold a number, keep it.
+                    target["price_guide_text"] = new_price
+                # else: keep the existing numeric price; ignore the placeholder.
 
             # Update source to reflect direct listing
             if "domain.com.au" in item.get("url", ""):

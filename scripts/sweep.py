@@ -120,6 +120,42 @@ def diff_and_flag(new_listings, prior_data, today):
     return new_listings, carried
 
 
+def _has_price_number(rec):
+    """True if a record carries an actual price number (bounds or digits in text),
+    as opposed to a bare 'Auction'/'Contact Agent' placeholder."""
+    if rec.get("price_min") is not None or rec.get("price_max") is not None:
+        return True
+    return any(ch.isdigit() for ch in (rec.get("price_guide_text") or ""))
+
+
+# Enrichment fields a saved-search alert email never supplies, so a re-ingested
+# alert must not blank them out on an already-enriched listing.
+_ENRICH_FIELDS = (
+    "cover_image", "beds", "baths", "parking", "property_type",
+    "description", "features", "floor", "internal_m2",
+)
+
+
+def _preserve_enrichment(new_rec, old_rec):
+    """Carry previously-discovered data from old_rec onto new_rec where the new
+    (email-derived) record left a gap. Price is the priority: a mined hidden guide
+    must survive an auction re-list that arrives with no number."""
+    # Price: keep the old number if the new record has none. This is the rule that
+    # stops a no-price auction alert reverting a discovered hidden price.
+    if _has_price_number(old_rec) and not _has_price_number(new_rec):
+        new_rec["price_guide_text"] = old_rec.get("price_guide_text")
+        new_rec["price_min"] = old_rec.get("price_min")
+        new_rec["price_max"] = old_rec.get("price_max")
+    # Other enrichment: fill only where the new record is missing the field.
+    for f in _ENRICH_FIELDS:
+        if new_rec.get(f) in (None, "", []) and old_rec.get(f) not in (None, "", []):
+            new_rec[f] = old_rec[f]
+    # Prefer an already-resolved direct listing URL over an alert/search URL.
+    old_url, new_url = old_rec.get("url", ""), new_rec.get("url", "")
+    if old_url and ("/results" in new_url or "excludeunderoffer" in new_url or not new_url):
+        new_rec["url"] = old_url
+
+
 def merge_incremental(new_scored, prior_listings, today):
     """Merge mode for email-alert ingestion (route A). Alert emails list only NEW
     matches, not the full current field, so we MUST NOT infer withdrawals from
@@ -137,6 +173,12 @@ def merge_incremental(new_scored, prior_listings, today):
             l["change_flag"] = "NEW"
         else:
             l["first_seen"] = old.get("first_seen", today)
+            # Alert emails carry only URL/price/suburb; an auction re-list usually
+            # arrives with NO number. Never let that revert a price (or other
+            # enrichment) we have already discovered: carry the prior record's
+            # enriched fields onto the new one where the email left a gap. The
+            # discovered hidden price stays "over the top of" the no-price original.
+            _preserve_enrichment(l, old)
             flag = "UNCHANGED"
             if (l.get("price_min") != old.get("price_min")
                     or l.get("price_max") != old.get("price_max")):

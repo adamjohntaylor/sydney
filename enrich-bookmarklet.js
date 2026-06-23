@@ -125,28 +125,58 @@
       data.property_type = propType.textContent.toLowerCase().trim();
     }
 
-    // Price - first try to find hidden price in page source (Domain uses "exact" field)
+    // Price - first try to find a HIDDEN price in the page source. Auction /
+    // "Contact Agent" listings routinely omit the public guide but still embed the
+    // agent's guide in the page JSON. We mine that and flag it "(hidden guide)" so
+    // it shows as a guide needing re-verification, never a confirmed figure.
     let foundPrice = false;
     const pageSource = document.documentElement.innerHTML;
+    const inGuard = (n) => Number.isFinite(n) && n >= 100000 && n <= 50000000;
 
-    // Look for hidden price fields in Domain's source
+    // 1) Schema.org offers.price from any JSON-LD block (most reliable, structured).
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
+      if (foundPrice) return;
+      try {
+        let j = JSON.parse(s.textContent);
+        (Array.isArray(j) ? j : [j]).forEach(o => {
+          if (foundPrice || !o) return;
+          const offers = Array.isArray(o.offers) ? o.offers[0] : o.offers;
+          const raw = offers && (offers.price != null ? offers.price : offers.lowPrice);
+          const num = parseInt(String(raw).replace(/[^\d]/g, ''), 10);
+          if (inGuard(num)) {
+            data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
+            console.log('Found hidden price (JSON-LD offers):', data.price_guide_text);
+            foundPrice = true;
+          }
+        });
+      } catch (e) {}
+    });
+
+    // 2) Hidden price fields in Domain's embedded JSON (__NEXT_DATA__/dataLayer).
+    //    Kept guard-railed so a stray strata/land/sold number can't slip through.
     const hiddenPricePatterns = [
-      /"exactPriceV2"\s*:\s*(\d+)/i,
-      /"exactPrice"\s*:\s*(\d+)/i,
-      /"exact"\s*:\s*(\d+)/i,
-      /"priceInt"\s*:\s*(\d+)/i,
-      /"priceFrom"\s*:\s*(\d+)/i
+      /"exactPriceV2"\s*:\s*"?(\d{6,8})/i,
+      /"exactPrice"\s*:\s*"?(\d{6,8})/i,
+      /"exact"\s*:\s*"?(\d{6,8})/i,
+      /"priceInt"\s*:\s*"?(\d{6,8})/i,
+      /"priceFrom"\s*:\s*"?(\d{6,8})/i,
+      /"priceTo"\s*:\s*"?(\d{6,8})/i,
+      /"displayPriceFrom"\s*:\s*"?(\d{6,8})/i,
+      /"searchPrice"\s*:\s*"?(\d{6,8})/i,
+      /"price"\s*:\s*\{\s*"from"\s*:\s*"?(\d{6,8})/i
     ];
 
-    for (const pattern of hiddenPricePatterns) {
-      const match = pageSource.match(pattern);
-      if (match) {
-        const num = parseInt(match[1]);
-        if (num >= 100000 && num <= 50000000) {
-          data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
-          console.log('Found hidden price:', pattern, data.price_guide_text);
-          foundPrice = true;
-          break;
+    if (!foundPrice) {
+      for (const pattern of hiddenPricePatterns) {
+        const match = pageSource.match(pattern);
+        if (match) {
+          const num = parseInt(match[1]);
+          if (inGuard(num)) {
+            data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
+            console.log('Found hidden price:', pattern, data.price_guide_text);
+            foundPrice = true;
+            break;
+          }
         }
       }
     }
@@ -258,9 +288,30 @@
     // Price - first try hidden price in REA source (uses "marketing_price" field)
     let reaFoundPrice = false;
     const reaPageSource = document.documentElement.innerHTML;
+    const reaInGuard = (n) => Number.isFinite(n) && n >= 100000 && n <= 50000000;
+
+    // Schema.org offers.price from JSON-LD (reliable, structured) - mined even for
+    // auction/contact-agent listings and flagged "(hidden guide)".
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
+      if (reaFoundPrice) return;
+      try {
+        let j = JSON.parse(s.textContent);
+        (Array.isArray(j) ? j : [j]).forEach(o => {
+          if (reaFoundPrice || !o) return;
+          const offers = Array.isArray(o.offers) ? o.offers[0] : o.offers;
+          const raw = offers && (offers.price != null ? offers.price : offers.lowPrice);
+          const num = parseInt(String(raw).replace(/[^\d]/g, ''), 10);
+          if (reaInGuard(num)) {
+            data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
+            console.log('Found hidden price (REA JSON-LD offers):', data.price_guide_text);
+            reaFoundPrice = true;
+          }
+        });
+      } catch (e) {}
+    });
 
     // Look for hidden "marketing_price" in REA's source
-    const marketingMatch = reaPageSource.match(/"marketing_price"\s*:\s*"?\$?([\d,]+)/i);
+    const marketingMatch = reaFoundPrice ? null : reaPageSource.match(/"marketing_price"\s*:\s*"?\$?([\d,]+)/i);
     if (marketingMatch) {
       const num = parseInt(marketingMatch[1].replace(/,/g, ''));
       if (num >= 100000 && num <= 50000000) {
