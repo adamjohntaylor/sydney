@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 89,
-    "tier1_pass": 80,
-    "new": 40,
+    "total": 90,
+    "tier1_pass": 81,
+    "new": 41,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -6150,6 +6150,82 @@
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
+      "address": "50/110  Reynolds Street",
+      "suburb": "Balmain",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2041",
+      "cover_image": "https://i2.au.reastatic.net/800x600/3f50cd109f007b423300812e7eae976ffe95431fb3bdd2cb05bf3ed0da427104/image.jpg",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment",
+      "description": "This well-appointed 2-bedroom, 2-bathroom apartment offers a tranquil living experience with a beautiful leafy outlook. As you step inside, you'll be greeted by a spacious open-plan living area with a warm and inviting atmosphere. \n\nThe modern kitchen is equipped with all the necessary appliances, making it perfect for cooking and entertaining.  Each of the two well-sized bedrooms provides ample space and privacy, making it ideal for families or roommates. The apartment features two stylish bathrooms, adding convenience to your daily routine. \n\nOne of the standout features of this property is the outdoor space, where you can enjoy your morning coffee or unwind after a long day while taking in the serene views of the surrounding greenery and park life.\n\nLocated close to parks, cafes, and public transport, this apartment is perfect for those seeking a peaceful yet connected lifestyle. Whether you’re a first-time buyer or an investor looking for a lucrative rental opportunity, this apartment has everything you need.\n\nFor investors this property is currently tenanted till 13th July 2026.  Tenants would love to stay. \n\nFor more information or to arrange a viewing, please contact us 0417 798 654",
+      "features": [
+        "2",
+        "1"
+      ],
+      "price_guide_text": "Guide $1,450,000",
+      "price_min": 1450000,
+      "price_max": 1450000,
+      "source": "realestate",
+      "lat": -33.8624748,
+      "lon": 151.1810104,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 405,
+          "supermarket": 505,
+          "pool": 344,
+          "park": 16,
+          "restaurants": 503
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "leafy",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 53,
+        "leading": "outlook: leafy",
+        "components": {
+          "outlook": 15.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
