@@ -6,10 +6,10 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 103,
+    "total": 102,
     "tier1_pass": 92,
     "new": 53,
-    "price_changed": 2,
+    "price_changed": 1,
     "sold": 0,
     "withdrawn": 0
   },
@@ -2771,77 +2771,6 @@
       "days_on_market": 2,
       "lat": -33.9072562,
       "lon": 151.2083325
-    },
-    {
-      "address": "61A Albany Road",
-      "suburb": "Stanmore",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=61a+albany+road+stanmore",
-      "source": "domain_search",
-      "price_guide_text": "$1,450,000",
-      "price_min": 1450000,
-      "price_max": 1450000,
-      "lat": -33.8910419,
-      "lon": 151.1673196,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 102,
-          "supermarket": 418,
-          "pool": 1148,
-          "park": 112,
-          "restaurants": 291
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": false,
-        "bedrooms": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "accessibility"
-        ],
-        "unverified": [
-          "property_type",
-          "bedrooms"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-22",
-      "last_seen": "2026-06-25",
-      "prior_price_text": "$1,100,000 - $1,200,000",
-      "change_flag": "PRICE_CHANGED",
-      "days_on_market": 3,
-      "status": "",
-      "note": "",
-      "accessibility": {
-        "step_free": false,
-        "lift": null
-      }
     },
     {
       "address": "9/63-69 Lord Street",
