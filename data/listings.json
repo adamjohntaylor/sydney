@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 102,
-    "tier1_pass": 92,
-    "new": 52,
+    "total": 103,
+    "tier1_pass": 93,
+    "new": 53,
     "price_changed": 2,
     "sold": 0,
     "withdrawn": 0
@@ -7021,6 +7021,76 @@
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
       "change_flag": "NEW"
+    },
+    {
+      "url": "https://www.domain.com.au/2-61a-albany-road-stanmore-nsw-2048-2020926120?topspot=1",
+      "address": "2/61A Albany Road",
+      "suburb": "Stanmore",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2048",
+      "cover_image": "https://rimh2.domainstatic.com.au/O9Hjxl9Asbyfgp3VXJCoD2wUINE=/1680x720/filters:format(webp):quality(85)/2020926120_1_1_260618_050515-w5481-h3657",
+      "beds": 2,
+      "baths": 2,
+      "parking": 2,
+      "property_type": "house",
+      "description": "Property DescriptionStyle, sophistication and serious lifestyle appealOversized 2 bedroom home with beautifully renovated interiors, a two-storey layout and multiple alfresco spaces combine in this Torrens-title light filled townhome to deliver a stylish low-maintenance home and superb entertainer. Facing north and capturing city glimpses from a tree-framed balcony, the gabled-fronted residence makes a fine addition to the streetscape with its sandstone-walled entryRead more",
+      "source": "domain",
+      "lat": -33.8908742,
+      "lon": 151.1673441,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 117,
+          "supermarket": 433,
+          "pool": 1139,
+          "park": 120,
+          "restaurants": 304
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "city",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 55,
+        "leading": "outlook: city",
+        "components": {
+          "outlook": 13.5,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 6.6,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
     }
   ]
 }
