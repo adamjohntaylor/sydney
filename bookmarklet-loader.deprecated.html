@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Listing Enrichment Bookmarklet</title>
+<style>
+body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+h1 { color: #1e3a5f; }
+.bookmarklet { display: inline-block; padding: 12px 24px; background: #1e3a5f; color: white !important; text-decoration: none; border-radius: 8px; font-size: 18px; margin: 20px 0; }
+.bookmarklet:hover { background: #2d4a6f; }
+.steps { background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.steps li { margin: 10px 0; }
+code { background: #e5e5e5; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+.note { background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; }
+</style>
+</head>
+<body>
+<h1>Listing Enrichment Bookmarklet</h1>
+
+<div class="note" style="background:#dcfce7;border-left-color:#16a34a;">
+<strong>On realestate.com.au?</strong> Use the <a href="http://localhost:8777/bookmarklet"><strong>inline bookmarklet</strong></a>
+instead. REA's Content-Security-Policy silently blocks the loader version below (it injects an
+external script REA won't allow), so "nothing happens". The inline version carries the whole
+script in the link itself and works on REA and Domain alike.
+</div>
+
+<p>This bookmarklet extracts listing details (photo, beds, baths, etc.) from Domain or REA listing pages and saves them to your dashboard. If the listing is already tracked it is enriched in place; if it is <strong>not yet in the dashboard, it is added automatically as a new entry</strong> (geocoded and Tier-1 scored on the spot).</p>
+
+<h2>Installation</h2>
+<div class="note" style="background:#fee2e2;border-left-color:#dc2626;">
+<strong>This loader version is deprecated — it does not work on realestate.com.au.</strong>
+REA's Content-Security-Policy silently blocks the external script it injects ("nothing happens").
+Use the <a href="http://localhost:8777/bookmarklet"><strong>inline bookmarklet</strong></a> instead — it works on both
+Domain and REA. The draggable button has been removed here to avoid installing the wrong one.
+</div>
+
+<p style="margin-top:16px;"><a class="bookmarklet" href="http://localhost:8777/bookmarklet">Go to the inline bookmarklet →</a></p>
+
+<h2>How to Use</h2>
+<ol class="steps">
+<li>Make sure the local server is running</li>
+<li>Open the dashboard and click "Open listing" on any property</li>
+<li>When the Domain/REA listing page loads, click the <strong>Enrich Listing</strong> bookmark</li>
+<li>A popup will confirm what was saved</li>
+<li>Refresh the dashboard to see the updated listing with photo</li>
+</ol>
+
+<h2>What Gets Extracted</h2>
+<ul>
+<li>Cover photo URL</li>
+<li>Beds, baths, parking</li>
+<li>Property type</li>
+<li>Price guide</li>
+<li>Description</li>
+<li>Address, suburb and postcode (from the listing heading, with the URL slug as a fallback)</li>
+<li>Direct listing URL (replaces search URL)</li>
+</ul>
+
+<p>When the page isn't already tracked, these same fields are used to mint a brand-new dashboard entry. The popup tells you whether the listing was <strong>matched</strong> to an existing one or <strong>added as new</strong>.</p>
+
+<p><a href="/">Back to Dashboard</a></p>
+</body>
+</html>

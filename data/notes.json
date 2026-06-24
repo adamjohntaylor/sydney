@@ -97,5 +97,14 @@
     "status": "interested",
     "note": "",
     "updated": "2026-06-23T21:50:29.956Z"
+  },
+  "https://www.domain.com.au/2-61a-albany-road-stanmore-nsw-2048-2020926120?topspot=1": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-24T21:20:45.517Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }

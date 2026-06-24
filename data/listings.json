@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 102,
-    "tier1_pass": 92,
+    "tier1_pass": 91,
     "new": 53,
     "price_changed": 1,
     "sold": 0,
@@ -6996,20 +6996,19 @@
         "basis": "Auto-detected from description"
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 55,
@@ -7026,7 +7025,16 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      },
+      "price_guide_text": "$1,800,000 (hidden guide)",
+      "price_min": 1800000,
+      "price_max": 1800000
     }
   ]
 }

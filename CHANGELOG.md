@@ -146,6 +146,26 @@ immediately after the key, so it never matched REA's `"price":{…}` and price s
   server's `parse_price` still turns `$1.85m`/ranges into bounds and the one-directional price merge
   keeps a real number over a "Contact Agent" placeholder.
 
+### Follow-up 6 (same day) — reconciled to a single bookmarklet page
+
+Two install pages had accumulated (`bookmarklet.html` the deprecated loader, `bookmarklet-inline.html`
+the server-written inline copy), which was confusing. Reconciled to **one** canonical page,
+`bookmarklet.html`, that always carries every upgrade:
+
+- `serve.py` now writes the generated inline page to **`bookmarklet.html`** (was
+  `bookmarklet-inline.html`) and serves the live page at `/bookmarklet`, `/bookmarklet.html`, and
+  `/bookmarklet-inline.html` (old links still resolve). The page is generated from the current
+  `enrich-bookmarklet.js`, so the one file is always up to date; it is rewritten on every visit.
+- The two old files were renamed for reference only: `bookmarklet-loader.deprecated.html` and
+  `bookmarklet-inline.deprecated.html`.
+- A static seed `bookmarklet.html` was committed for the GitHub Pages / file:// case; it redirects to
+  the live `/bookmarklet` when the local server is up, and `serve.py` overwrites it with the baked
+  button on first visit.
+- **Verified** on the running server: `/bookmarklet` and `/bookmarklet.html` both return the inline
+  button (200); the regenerated `bookmarklet.html` (~55 KB) decodes to a 29,726-char script that
+  parses clean and contains all fixes — REA nested-price (`numPats`), Domain Buyer's Guide,
+  beds/baths reader (`grabNum`), and the always-open hardening.
+
 ### Follow-up 5 (same day) — Domain "Buyer's Guide" + abbreviated amounts
 
 A Domain price written `Buyer's Guide $1.8m` wasn't picked up. The visible-price regex captured
