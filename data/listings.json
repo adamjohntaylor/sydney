@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 85,
-    "tier1_pass": 76,
-    "new": 36,
+    "total": 86,
+    "tier1_pass": 77,
+    "new": 37,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5832,6 +5832,80 @@
         "fails": [],
         "unverified": [
           "budget",
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 49,
+        "leading": "light & aspect",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 11.0,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151021716",
+      "address": "263/102 Miller Street",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://i2.au.reastatic.net/310x175/63513b97465ddf643b464d87f107521e8a34595fe1b5b85cbdb8513c6b149bac/image.jpg",
+      "beds": 3,
+      "baths": 2,
+      "parking": 2,
+      "property_type": "apartment",
+      "description": "Positioned within the prestigious 'Palladium' building, this expansive residence delivers a refined inner city lifestyle defined by scale, sophistication and effortless convenience. A rare dual aspect layout captures natural light from both east and west, creating a bright, airy living environment with excellent cross-flow ventilation, further enhanced by quality double glazed windows that provide superior thermal comfort and acoustic insulation for year-round enjoyment. Generously proportioned interiors, considered design and an enviable Pyrmont location combine to deliver a home of enduring appeal, perfectly suited to modern urban living. This is a truly rare opportunity to secure a substantial residence of this scale in the heart of Pyrmont, ideal for families or those seeking additional space in a premium inner city setting.\n\n• Expansive open plan living and dining with seamless indoor outdoor flow\n• Sunlit courtyard creating an inviting space for entertaining or retreat\n• Spacious covered balcony designed for relaxed outdoor living year round\n• Modern kitchen appointed with gas cooking and generous storage space\n• Three well proportioned bedrooms each featuring built in wardrobes\n• Private master suite complete with ensuite and full size bathtub\n• Well appointed bathrooms paired with a separate internal laundry\n• Secure intercom entry complemented by excellent storage throughout\n• Double tandem lock up garage adding valuable inner city convenience\n• Excellent investment opportunity with scope to enhance over time\n• Internal laundry providing everyday practicality and added convenience\n• Access to indoor pool, two gyms, spa and sauna facilities\n• Secure building with on site reception and evening staff presence\n\nPerfectly positioned in the heart of the city, this residence places Sydney's most iconic lifestyle attractions within easy reach, including Darling Harbour, the Sydney CBD, Sydney Fish Market, Union Square and excellent public transport connections, all",
+      "features": [
+        "3",
+        "2",
+        "164m²",
+        "1"
+      ],
+      "price_guide_text": "For Sale $1,690,000 | Sami Yildiz",
+      "price_min": 1690000,
+      "price_max": 1690000,
+      "source": "realestate",
+      "lat": -33.8696929,
+      "lon": 151.191898,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 90,
+          "supermarket": 117,
+          "pool": 175,
+          "park": 67,
+          "restaurants": 77
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
           "accessibility"
         ],
         "pass": true
