@@ -86,8 +86,7 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/api/health":
             return self._json(200, {"ok": True, "served": True, "refresh_available": True})
-        if self.path.split("?")[0] in ("/bookmarklet", "/bookmarklet/",
-                                       "/bookmarklet.html", "/bookmarklet-inline.html"):
+        if self.path.split("?")[0] in ("/bookmarklet", "/bookmarklet/", "/bookmarklet.html"):
             return self._handle_bookmarklet_page()
         return super().do_GET()
 
@@ -144,18 +143,12 @@ loader version is silently blocked.</p>
 current <code>enrich-bookmarklet.js</code> on each page load — after any change to that file, reload
 this page and re-drag the button (the code is baked into the link, so it does not auto-update).</div>
 </body></html>"""
-        # Persist the canonical static copy to disk (bookmarklet.html) so the one
-        # bookmarklet page also exists as a real file - viewable from GitHub Pages /
-        # file:// where this dynamic route does not run. This is the SINGLE
-        # reconciled install page; the old bookmarklet-loader.deprecated.html and
-        # bookmarklet-inline.deprecated.html are retained only for reference. The
-        # button is self-contained; it still needs the local server up at click
-        # time to POST. Best-effort; never blocks the response.
-        try:
-            with open(os.path.join(DASH_DIR, "bookmarklet.html"), "w", encoding="utf-8") as _fh:
-                _fh.write(page)
-        except OSError:
-            pass
+        # NOTE: this route is the single source of truth - it does NOT write any
+        # file to disk. (An earlier version persisted a static copy, which caused
+        # file churn and stray duplicates.) The static bookmarklet.html on disk is a
+        # small redirect/install page; on localhost this route also answers
+        # /bookmarklet.html, so the live button is always served fresh from the
+        # current enrich-bookmarklet.js without rewriting anything.
         body = page.encode("utf-8")
         self.send_response(200)
         self.send_header("Content-Type", "text/html; charset=utf-8")

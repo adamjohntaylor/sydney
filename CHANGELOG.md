@@ -152,19 +152,21 @@ Two install pages had accumulated (`bookmarklet.html` the deprecated loader, `bo
 the server-written inline copy), which was confusing. Reconciled to **one** canonical page,
 `bookmarklet.html`, that always carries every upgrade:
 
-- `serve.py` now writes the generated inline page to **`bookmarklet.html`** (was
-  `bookmarklet-inline.html`) and serves the live page at `/bookmarklet`, `/bookmarklet.html`, and
-  `/bookmarklet-inline.html` (old links still resolve). The page is generated from the current
-  `enrich-bookmarklet.js`, so the one file is always up to date; it is rewritten on every visit.
+- `serve.py` serves the live inline page at `/bookmarklet` and `/bookmarklet.html`, generated from
+  the current `enrich-bookmarklet.js` (so it always carries every upgrade). The route is the single
+  source of truth and **writes no file** — an earlier version persisted a static copy on every
+  visit, which caused file churn and a stray `bookmarklet-inline.html` duplicate; that behaviour was
+  removed and the orphan deleted.
+- `bookmarklet.html` is a small, stable static install page: on localhost the route above answers
+  `/bookmarklet.html` directly with the live button; viewed statically (GitHub Pages / file://) it
+  redirects to the live `/bookmarklet` when the local server is up, else shows instructions.
 - The two old files were renamed for reference only: `bookmarklet-loader.deprecated.html` and
   `bookmarklet-inline.deprecated.html`.
-- A static seed `bookmarklet.html` was committed for the GitHub Pages / file:// case; it redirects to
-  the live `/bookmarklet` when the local server is up, and `serve.py` overwrites it with the baked
-  button on first visit.
-- **Verified** on the running server: `/bookmarklet` and `/bookmarklet.html` both return the inline
-  button (200); the regenerated `bookmarklet.html` (~55 KB) decodes to a 29,726-char script that
-  parses clean and contains all fixes — REA nested-price (`numPats`), Domain Buyer's Guide,
-  beds/baths reader (`grabNum`), and the always-open hardening.
+- **Verified** earlier on the running server that the generated button decodes to a ~29.7k-char
+  script that parses clean and contains all fixes — REA nested-price (`numPats`), Domain Buyer's
+  Guide, beds/baths reader (`grabNum`), and the always-open hardening. (Requires a `serve.py`
+  restart to load the no-write version; until restarted, the old instance still recreates
+  `bookmarklet-inline.html` on a `/bookmarklet` visit.)
 
 ### Follow-up 5 (same day) — Domain "Buyer's Guide" + abbreviated amounts
 
