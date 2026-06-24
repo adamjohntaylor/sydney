@@ -145,6 +145,22 @@ immediately after the key, so it never matched REA's `"price":{…}` and price s
   are range-guarded ($100k–$50M, 5–8 digits) so a stray strata/land figure can't slip in. The
   server's `parse_price` still turns `$1.85m`/ranges into bounds and the one-directional price merge
   keeps a real number over a "Contact Agent" placeholder.
+
+### Follow-up 5 (same day) — Domain "Buyer's Guide" + abbreviated amounts
+
+A Domain price written `Buyer's Guide $1.8m` wasn't picked up. The visible-price regex captured
+`\$([\d,]+)`, which stops at the decimal — so `$1.8m` was read as "$1" and rejected by the
+$100k floor — and the label list didn't include "Buyer's Guide". Rewrote the Domain visible-price
+fallback (`enrich-bookmarklet.js`): an `AMT` token that matches `$1,800,000` / `$1.8m` /
+`$1.8 million` / `$950k`; a label list covering Buyer's Guide / Price Guide / Guide / Offers
+Over-Above-From / Asking / EOI / Expressions of Interest, allowing a short connector ("of"/":"/"-")
+between label and amount; range support; and a `toNum` that resolves m/mil/million/k for the
+sanity guard. A bare `$x – $y` range with no label is still caught; a single unlabelled `$x` is
+deliberately not (avoids grabbing strata/median figures — the hidden-price miner handles genuine
+flat prices). **Verified** against 14 cases in Node — Buyer's-Guide/abbreviated/range/million all
+extract; a `$1,250 per quarter` strata line and an unrelated "buyer's guide to financing" sentence
+both correctly yield nothing. (Couldn't confirm on the live page — Domain in-page exec was denied
+this time — but the example `8 Park Street, Erskineville` matches the handled shapes.)
 - **Verified**: the matcher against nine REA price shapes (nested value, nested `$`/Contact-Agent
   display, `priceDetails`, flat numeric, flat `$` string, range, auction text) — 8 extract correctly
   and a strata/land-price decoy correctly yields nothing; full file re-parsed clean via the live

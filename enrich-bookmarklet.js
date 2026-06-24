@@ -226,24 +226,48 @@
 
     // Fall back to visible text on page
     if (!foundPrice) {
-      const topText = document.body.innerText.substring(0, 2500);
+      const topText = document.body.innerText.substring(0, 3000);
       const cleanText = topText.replace(/(?:last\s+)?sold\s+(?:in|for|on)[^]*/i, '');
 
-      const pricePatterns = [
-        /(?:Price Guide|Guide)[:\s]*\$([\d,]+)/i,
-        /(?:Offers? (?:Over|Above|From))[:\s]*\$([\d,]+)/i,
-        /\$([\d,]+)\s*(?:to|-)\s*\$([\d,]+)/i
-      ];
+      // A dollar amount written any common way: $1,800,000 / $1.8m / $1.8 million / $950k.
+      // The old `\$([\d,]+)` capture stopped at the decimal, so "Buyer's Guide $1.8m"
+      // was read as "$1" and rejected by the guard. AMT captures decimals + suffix.
+      const AMT = "\\$\\s*[\\d,]+(?:\\.\\d+)?\\s*(?:million|mil|m|k)?";
+      const toNum = (s) => {
+        if (!s) return null;
+        s = String(s).toLowerCase().replace(/[\$,\s]/g, '');
+        let mult = 1;
+        if (/(?:million|mil|m)$/.test(s)) { mult = 1e6; s = s.replace(/(?:million|mil|m)$/, ''); }
+        else if (/k$/.test(s)) { mult = 1e3; s = s.replace(/k$/, ''); }
+        const v = parseFloat(s);
+        return isNaN(v) ? null : Math.round(v * mult);
+      };
 
-      for (const pattern of pricePatterns) {
-        const match = cleanText.match(pattern);
-        if (match && match[1]) {
-          const num = parseInt(match[1].replace(/,/g, ''));
-          if (num >= 100000 && num <= 50000000) {
-            data.price_guide_text = match[0].trim();
-            console.log('Found visible price:', data.price_guide_text);
+      // (1) A labelled guide - now incl. "Buyer's Guide" and abbreviated/range amounts.
+      const labelRe = new RegExp(
+        "(?:buyer'?s?\\s+guide|price\\s+guide|guide|offers?\\s+(?:over|above|from)|asking|eoi|expressions?\\s+of\\s+interest)" +
+        "[^$\\d\\n]{0,15}(" + AMT + "(?:\\s*(?:to|-|\\u2013|\\u2014)\\s*" + AMT + ")?)", "i");
+      const lm = cleanText.match(labelRe);
+      if (lm && lm[1]) {
+        const firstAmt = (lm[1].match(new RegExp(AMT, "i")) || [])[0];
+        const n = toNum(firstAmt);
+        if (n && n >= 100000 && n <= 50000000) {
+          data.price_guide_text = lm[0].replace(/\s+/g, ' ').trim();
+          console.log('Found visible price (label):', data.price_guide_text);
+          foundPrice = true;
+        }
+      }
+
+      // (2) A bare $amount range with no label (e.g. "$1,800,000 - $1,900,000").
+      if (!foundPrice) {
+        const rangeRe = new RegExp("(" + AMT + ")\\s*(?:to|-|\\u2013|\\u2014)\\s*(" + AMT + ")", "i");
+        const rm = cleanText.match(rangeRe);
+        if (rm) {
+          const n = toNum((rm[0].match(new RegExp(AMT, "i")) || [])[0]);
+          if (n && n >= 100000 && n <= 50000000) {
+            data.price_guide_text = rm[0].replace(/\s+/g, ' ').trim();
+            console.log('Found visible price (range):', data.price_guide_text);
             foundPrice = true;
-            break;
           }
         }
       }

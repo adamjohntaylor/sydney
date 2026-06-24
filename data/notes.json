@@ -97,5 +97,14 @@
     "status": "interested",
     "note": "",
     "updated": "2026-06-23T21:50:29.956Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=61a+albany+road+stanmore": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-24T21:13:59.262Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }

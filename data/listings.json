@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 103,
-    "tier1_pass": 93,
+    "tier1_pass": 92,
     "new": 53,
     "price_changed": 2,
     "sold": 0,
@@ -2800,19 +2800,20 @@
       "tier1": {
         "budget": true,
         "property_type": null,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "accessibility"
+        ],
         "unverified": [
           "property_type",
-          "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -2834,7 +2835,13 @@
       "last_seen": "2026-06-25",
       "prior_price_text": "$1,100,000 - $1,200,000",
       "change_flag": "PRICE_CHANGED",
-      "days_on_market": 3
+      "days_on_market": 3,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "9/63-69 Lord Street",
