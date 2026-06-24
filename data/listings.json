@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 88,
-    "tier1_pass": 79,
-    "new": 39,
+    "total": 89,
+    "tier1_pass": 80,
+    "new": 40,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -6077,6 +6077,82 @@
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 6.6,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
+      "address": "120/102 Miller Street",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://i2.au.reastatic.net/800x600/669af5fcf8f7a6a0c46cf6840301d069001ba9675a69f38f73f011774e966061/image.jpg",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment",
+      "description": "Positioned in the highly sought‑after Palladium complex, this spacious two‑bedroom apartment offers exceptional convenience and lifestyle in the heart of Pyrmont. \nFeaturing a generous open‑plan layout, light‑filled interiors and a private balcony, it presents an ideal opportunity for both owner‑occupiers and investors seeking a quality residence moment from Darling Harbour and the Sydney CBD.\n\nThe apartment includes a well‑appointed kitchen with ample storage, two spacious bedrooms with built‑in wardrobes, and a master suite with walk‑in robe and ensuite. Additional features include internal laundry, secure parking and air conditioning for year‑round comfort.\n\nResidents enjoy access to premium resort‑style facilities including a swimming pool, gym, sauna, on‑site management and secure building access. With cafés, shopping, waterfront parks, light rail and bus services at your doorstep, this property delivers unbeatable urban convenience. Future connectivity will be further enhanced by the upcoming Sydney Metro West Pyrmont Station (anticipated 2032).\n\nKey Features\n\nSpacious two‑bedroom apartment in the renowned Palladium complex\n\nMaster bedroom with walk‑in wardrobe and ensuite\n\nExpansive open‑plan living and dining area\n\nPrivate balcony ideal for entertaining\n\nWell‑appointed kitchen with ample storage\n\nTwo bathrooms plus internal laundry\n\nSecure parking space\n\nAir conditioning\n\nSecurity building with intercom access\n\nResort‑style facilities: pool, gym, sauna\n\nOn‑site building management and concierge\n\nLocation Highlights\nWalk to Darling Harbour, The Star, Sydney Fish Market, Pirrama Park and the CBD\n\nOpposite local cafés, dining and shopping\n\nExcellent public transport: light rail and bus services\n\nFuture Sydney Metro West Pyrmont Station to further boost accessibility\n\nA premium lifestyle opportunity in one of Pyrmont’s most convenient and desirable locations, offering strong appeal for both homeowners and investors.",
+      "features": [
+        "2",
+        "1"
+      ],
+      "price_guide_text": "$ 1,250,000",
+      "source": "realestate",
+      "lat": -33.8701401,
+      "lon": 151.1922114,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 40,
+          "supermarket": 73,
+          "pool": 212,
+          "park": 124,
+          "restaurants": 33
+        },
+        "geocoded": true
+      },
+      "price_min": 1250000,
+      "price_max": 1250000,
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 68,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
