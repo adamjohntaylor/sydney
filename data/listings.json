@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 87,
-    "tier1_pass": 78,
-    "new": 38,
+    "total": 88,
+    "tier1_pass": 79,
+    "new": 39,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5984,9 +5984,11 @@
         "transport": true,
         "supplies": true,
         "location": true,
-        "zoning": "n/a",
+        "zoning": null,
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "zoning"
+        ],
         "pass": true
       },
       "tier2": {
@@ -6005,6 +6007,84 @@
         "warehouse_character": true
       },
       "warehouse_character": true
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151018088",
+      "address": "72/152-164 Bulwara Road",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://i2.au.reastatic.net/310x175/45c9ac0f3264145c0ac18bcf4a69a1a27650f737ba862ed005cae79b84b998df/image.jpg",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "apartment",
+      "description": "Perfectly positioned in the highly regarded 'The Darlington' complex just moments from the new Sydney Fish Market. This contemporary apartment offers the ultimate in lifestyle and convenience. With a light-filled layout designed for seamless indoor-outdoor living, it's an exceptional opportunity for professionals or downsizers seeking modern comfort, panoramic views, and unbeatable walkability. Set in a sought-after complex with premium resort-style amenities, this home ticks all the boxes for luxury urban living. \n\n- Sleek, modern interiors with quality floorboards throughout \n- Spacious open-plan living and dining area designed for entertaining \n- Stylish kitchen with large stone benchtops and high-end appliances \n- Large entertainer's balcony with breathtaking views of Blackwattle Bay and the Anzac Bridge \n- Two generous bedrooms, master with walk-in wardrobe and A/C, second with mirrored built-ins and A/C\n- Internal laundry, ample storage and timber flooring in the living area\n- Secure basement parking with direct lift access and building manager on-site\n- Resort-style amenities: swimming pool, fully equipped gym, and rooftop BBQ area with city views \n\nEmbrace the vibrant village lifestyle with a variety of cafes, restaurants, and public transport at your front door. This sought-after location offers proximity to the CBD, Darling Harbour, Barangaroo, the new Sydney Fish Market, The Star, and scenic harbour front promenades.\n\nOutgoings:\nStrata: $2,554p/q approx.\nWater: $210p/q approx.\nCouncil: $335p/q approx.\n\nArea:\nApartment Living: 109sqm approx.\nTotal on Title: 125sqm approx.",
+      "features": [
+        "2",
+        "1",
+        "3",
+        "Lift (listed)"
+      ],
+      "price_guide_text": "Contact Agent",
+      "source": "realestate",
+      "lat": -33.8732871,
+      "lon": 151.1951,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 69,
+          "supermarket": 65,
+          "pool": 464,
+          "park": 200,
+          "restaurants": 73
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "elevated_district",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility_provisional": true,
+        "accessibility_basis": "lift in features list",
+        "accessibility": true,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 61,
+        "leading": "outlook: elevated_district",
+        "components": {
+          "outlook": 19.5,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 6.6,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
     }
   ]
 }
