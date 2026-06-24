@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 86,
-    "tier1_pass": 77,
-    "new": 37,
+    "total": 87,
+    "tier1_pass": 78,
+    "new": 38,
     "price_changed": 0,
     "sold": 0,
     "withdrawn": 0
@@ -5926,6 +5926,85 @@
         "warehouse_character": false
       },
       "warehouse_character": false
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151024140",
+      "address": "103/135 Point Street",
+      "suburb": "Pyrmont",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2009",
+      "cover_image": "https://i2.au.reastatic.net/310x175/716a3deac2a31f0fac35ed7efc172fc9475138ba291a9d0fd7355bb74cc06e98/image.jpg",
+      "beds": 3,
+      "baths": 2,
+      "parking": 2,
+      "property_type": "apartment",
+      "description": "Perfectly positioned within the highly desired northern Pyrmont peninsula this spectacularly spacious contemporary home offers house like proportions and private courtyard with verdant surrounds. Encapsulating Pyrmont's ultimate urban village lifestyle, this versatile home offers space, location and amenities. Take pleasure in this modern and private residence and benefit from the pristine inclusions that surround you.\n\n- Exclusive private entry lift lobby on title\n- Expansive living/dining flows to outdoor entertaining\n- Sundrenched and private north facing courtyard\n- Separate master suite with marble ensuite with bathtub\n- Separate wing offering double bedrooms, marble bathroom\n- Unique features include floor to ceiling glass enhancing light\n- Roof top plunge pool, spa, gym and landscaped decking\n- Polished timber floors, gas fireplace, high ceilings and C-Bus\n- European appliances, stone benches and ample storage\n- Secure dual parking, storage and visitor parking\n\nThis sublime apartment has all the virtues of a suburban house setting with easy access to Sydney's landmark harbour attractions. Strolling distance to Sydney CBD, Star Casino and the upcoming state-of-the-art Sydney Fish Markets and Harbourside Darling Harbour.\n\nOutgoings:\nWater Rates: $177 p/q (approx)\nCouncil Rates: $330 p/q (approx)\nStrata Levies: $3298 p/q (approx)",
+      "features": [
+        "3",
+        "2",
+        "171m²",
+        "1",
+        "Lift (listed)"
+      ],
+      "price_guide_text": "Asking price: $1,950,000",
+      "price_min": 1950000,
+      "price_max": 1950000,
+      "source": "realestate",
+      "lat": -33.8667478,
+      "lon": 151.1931271,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 85,
+          "supermarket": 89,
+          "pool": 174,
+          "park": 41,
+          "restaurants": 25
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": true,
+        "accessibility_provisional": true,
+        "accessibility_basis": "lift in features list",
+        "accessibility": true,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [],
+        "pass": true
+      },
+      "tier2": {
+        "score": 88,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 12,
+          "light_aspect": 11.0,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": true
+      },
+      "warehouse_character": true
     }
   ]
 }
