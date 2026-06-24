@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 102,
-    "tier1_pass": 93,
+    "tier1_pass": 92,
     "new": 52,
     "price_changed": 2,
     "sold": 0,
@@ -2099,7 +2099,7 @@
       "address": "130 Epsom Road",
       "suburb": "Zetland",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+epsom+road+zetland",
-      "source": "domain_search",
+      "source": "domain",
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -2119,19 +2119,20 @@
         "budget": null,
         "property_type": null,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
           "budget",
           "property_type",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -2156,7 +2157,12 @@
       "note": "Median Price 825,000",
       "days_on_market": 2,
       "lat": -33.9112217,
-      "lon": 151.2106444
+      "lon": 151.2106444,
+      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "beds": 1,
+      "baths": 1,
+      "parking": 1,
+      "price_guide_text": "Contact Agent"
     },
     {
       "address": "9 Metters Street",
