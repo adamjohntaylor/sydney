@@ -129,6 +129,28 @@ multi-strategy reader that doesn't depend on REA's CSS classes:
   it had already created `1101/89 Bay Street, Glebe` (source realestate, flag NEW) — only the
   beds/baths/parking were missing, which is what the reader above fixes.
 
+### Follow-up 4 (same day) — REA price (nested object, unlike Domain's flat field)
+
+Price came back empty on REA. Cause: Domain leaks a **flat** numeric (`"exactPrice":1850000`),
+but REA **nests** it — `"price":{"value":1850000,"display":"$1,850,000"}` / `"priceDetails":{...}`
+— and/or exposes only a display string. REA's old regex `"price":\s*"?\$?([\d,]+)` matched a number
+immediately after the key, so it never matched REA's `"price":{…}` and price stayed blank.
+
+- **`enrich-bookmarklet.js`** REA price now mines, in order: (a) a numeric value inside a nested
+  `price`/`priceDetails` object or a flat numeric field (`displayPrice`/`exactPrice`/`searchPrice`/…),
+  flagged `(hidden guide)`; (a2) a **display string inside the nested price object**
+  (`"$1.85m"`, `"Contact Agent"`); (b) a `$`-bearing display string under any `…price…` key;
+  (c) a no-number guide string (Contact Agent / Auction / Offers / EOI / Guide); existing visible-DOM
+  selectors; then (d) a new **meta/og-description** safety net that restates the guide. All numerics
+  are range-guarded ($100k–$50M, 5–8 digits) so a stray strata/land figure can't slip in. The
+  server's `parse_price` still turns `$1.85m`/ranges into bounds and the one-directional price merge
+  keeps a real number over a "Contact Agent" placeholder.
+- **Verified**: the matcher against nine REA price shapes (nested value, nested `$`/Contact-Agent
+  display, `priceDetails`, flat numeric, flat `$` string, range, auction text) — 8 extract correctly
+  and a strata/land-price decoy correctly yields nothing; full file re-parsed clean via the live
+  server. Live REA page still not inspectable from here — **confirm on the listing** (popup shows
+  Price; or I can read it back from `listings.json`).
+
 ## 23 June 2026 (pm) — Hidden price persists "over the top of" a no-price auction guide
 
 Auction / "Contact Agent" listings publish no price, but the agent's guide is usually

@@ -405,27 +405,46 @@
       } catch (e) {}
     });
 
-    // Look for hidden "marketing_price" in REA's source
-    const marketingMatch = reaFoundPrice ? null : reaPageSource.match(/"marketing_price"\s*:\s*"?\$?([\d,]+)/i);
-    if (marketingMatch) {
-      const num = parseInt(marketingMatch[1].replace(/,/g, ''));
-      if (num >= 100000 && num <= 50000000) {
-        data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
-        console.log('Found hidden marketing_price:', data.price_guide_text);
-        reaFoundPrice = true;
-      }
-    }
-
-    // Also try "price" fields in JSON
+    // REA structures price differently from Domain. Domain leaks a flat numeric
+    // "exactPrice"; REA NESTS it in a price object ("price":{"value":N,"display":"…"})
+    // and/or exposes a display string ("displayPrice"/"priceText"). The old
+    // `"price":<number>` regex never matched REA's `"price":{…}`, so price came back
+    // empty. Mine several REA shapes, preferring a real number (flagged "(hidden
+    // guide)") and otherwise taking the agent's display text verbatim - the server's
+    // parse_price turns "$1.85m"/ranges into numeric bounds and keeps "Contact
+    // Agent"/"Auction" as honest no-number placeholders.
     if (!reaFoundPrice) {
-      const reaPriceMatch = reaPageSource.match(/"(?:price|priceText|displayPrice)"\s*:\s*"?\$?([\d,]+)/i);
-      if (reaPriceMatch) {
-        const num = parseInt(reaPriceMatch[1].replace(/,/g, ''));
-        if (num >= 100000 && num <= 50000000) {
-          data.price_guide_text = `$${num.toLocaleString()} (hidden guide)`;
-          console.log('Found hidden REA price:', data.price_guide_text);
-          reaFoundPrice = true;
+      const src = reaPageSource;
+      // (a) numeric value: nested price object, priceDetails, or a flat numeric field.
+      const numPats = [
+        /"price"\s*:\s*\{[^{}]{0,160}?"value"\s*:\s*"?(\d{5,8})/i,
+        /"priceDetails"\s*:\s*\{[^{}]{0,200}?"price"\s*:\s*"?(\d{5,8})/i,
+        /"(?:displayPrice|exactPrice|searchPrice|priceFrom|priceValue|filterablePrice)"\s*:\s*"?(\d{5,8})\b/i,
+        /"price"\s*:\s*"?(\d{5,8})\b/i
+      ];
+      for (const re of numPats) {
+        const m = src.match(re);
+        if (m) {
+          const n = parseInt(m[1], 10);
+          if (reaInGuard(n)) { data.price_guide_text = `$${n.toLocaleString()} (hidden guide)`; reaFoundPrice = true; break; }
         }
+      }
+      // (a2) display string INSIDE a nested price object (e.g. "$1.85m", "Contact Agent").
+      if (!reaFoundPrice) {
+        const m = src.match(/"price"\s*:\s*\{[^{}]{0,200}?"(?:display|displayText|displayPrice|label|text|advertised)"\s*:\s*"([^"]{1,60})"/i);
+        if (m && /(\$|\d|contact|auction|offer|expression|eoi|guide|price on|under offer)/i.test(m[1])) {
+          data.price_guide_text = m[1].trim(); reaFoundPrice = true;
+        }
+      }
+      // (b) a display string carrying a $ amount under any "...price..."-ish key.
+      if (!reaFoundPrice) {
+        const m = src.match(/"(?:[a-zA-Z]*[Pp]rice[a-zA-Z]*)"\s*:\s*"([^"]{0,60}\$[^"]{0,60})"/);
+        if (m) { data.price_guide_text = m[1].trim(); reaFoundPrice = true; }
+      }
+      // (c) a no-number guide string (Contact Agent / Auction / Offers / EOI / Guide).
+      if (!reaFoundPrice) {
+        const m = src.match(/"(?:displayPrice|priceText|priceDisplay|price)"\s*:\s*"((?:contact|auction|offers|expressions|eoi|guide|price on|under offer)[^"]{0,40})"/i);
+        if (m) { data.price_guide_text = m[1].trim(); reaFoundPrice = true; }
       }
     }
 
@@ -457,6 +476,13 @@
           }
         }
       }
+    }
+
+    // (d) Last resort: REA's meta / og description usually restates the guide.
+    if (!reaFoundPrice) {
+      const md = (document.querySelector('meta[name="description"], meta[property="og:description"]') || {}).content || '';
+      const m = md.match(/\$\s*[\d,]+(?:\.\d+)?\s*[kKmM]?(?:\s*-\s*\$?\s*[\d,]+(?:\.\d+)?\s*[kKmM]?)?/);
+      if (m) { data.price_guide_text = m[0].trim(); reaFoundPrice = true; }
     }
 
     // Description

@@ -86,7 +86,8 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/api/health":
             return self._json(200, {"ok": True, "served": True, "refresh_available": True})
-        if self.path.split("?")[0] in ("/bookmarklet", "/bookmarklet/"):
+        if self.path.split("?")[0] in ("/bookmarklet", "/bookmarklet/",
+                                       "/bookmarklet.html", "/bookmarklet-inline.html"):
             return self._handle_bookmarklet_page()
         return super().do_GET()
 
@@ -143,6 +144,15 @@ loader version is silently blocked.</p>
 current <code>enrich-bookmarklet.js</code> on each page load — after any change to that file, reload
 this page and re-drag the button (the code is baked into the link, so it does not auto-update).</div>
 </body></html>"""
+        # Persist a static copy to disk so the inline bookmarklet also exists as a
+        # real file - viewable from GitHub Pages / file:// where this dynamic route
+        # does not run. (The button is self-contained; it still needs the local
+        # server up at click time to POST.) Best-effort; never blocks the response.
+        try:
+            with open(os.path.join(DASH_DIR, "bookmarklet-inline.html"), "w", encoding="utf-8") as _fh:
+                _fh.write(page)
+        except OSError:
+            pass
         body = page.encode("utf-8")
         self.send_response(200)
         self.send_header("Content-Type", "text/html; charset=utf-8")
