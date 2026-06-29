@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 113,
-    "tier1_pass": 102,
+    "tier1_pass": 100,
     "new": 64,
     "price_changed": 3,
     "sold": 0,
@@ -5464,18 +5464,19 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "accessibility"
+        ],
         "unverified": [
-          "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 68,
@@ -5492,7 +5493,13 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "url": "https://www.realestate.com.au/property-unit-nsw-glebe-150824100",
@@ -5540,18 +5547,19 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "accessibility"
+        ],
         "unverified": [
-          "accessibility",
           "bedrooms"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 76,
@@ -5568,7 +5576,13 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151119724",
@@ -5766,7 +5780,7 @@
         "budget": null,
         "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5774,8 +5788,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
@@ -5794,7 +5807,10 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "beds": 2,
+      "baths": 2,
+      "parking": 1
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150907668",

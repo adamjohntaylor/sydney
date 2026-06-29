@@ -106,5 +106,23 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.realestate.com.au/property-unit-nsw-glebe-150824100": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-29T18:14:55.048Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-29T18:16:09.028Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }
