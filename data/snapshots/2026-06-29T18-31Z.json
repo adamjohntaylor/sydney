@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 113,
-    "tier1_pass": 97,
+    "tier1_pass": 98,
     "new": 53,
     "price_changed": 1,
     "sold": 0,
@@ -4607,7 +4607,7 @@
       "parking": 2,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionThe Pinnacle of Luxury with Spectacular Sydney-wide ViewsCapturing breathtaking views of iconic Sydney landmarks and skyline, this exclusive residence in the 'Luxury Collection' of coveted Tower 2 of 'One Sydney Harbour' redefines luxury living. De-signed by Pritzker Prize-winning architect Renzo Piano, it embodies sophistication, innovation, and prestige at an unmatched level. Breathtaking views over iconic Sydney landmarks and beyond MeticulouslyRead more",
-      "price_guide_text": "$14,499,000 (hidden guide)",
+      "price_guide_text": "Contact Agent",
       "source": "domain",
       "lat": -33.8631339,
       "lon": 151.2020967,
@@ -4631,7 +4631,7 @@
         "basis": "Auto-detected from description"
       },
       "tier1": {
-        "budget": false,
+        "budget": null,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
@@ -4639,13 +4639,12 @@
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [
-          "budget"
-        ],
+        "fails": [],
         "unverified": [
+          "budget",
           "accessibility"
         ],
-        "pass": false
+        "pass": true
       },
       "tier2": {
         "score": 58,
@@ -4662,9 +4661,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "price_min": 14499000,
-      "price_max": 14499000
+      "warehouse_character": false
     },
     {
       "url": "https://www.domain.com.au/206-26-cadigal-avenue-pyrmont-nsw-2009-2020929217",
