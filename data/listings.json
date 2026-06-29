@@ -3133,7 +3133,7 @@
         "geocoded": true
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
@@ -3143,7 +3143,6 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget",
           "accessibility"
         ],
         "pass": true
@@ -3187,7 +3186,10 @@
         "basis": "Auto-detected from description"
       },
       "lat": -33.9073358,
-      "lon": 151.1365369
+      "lon": 151.1365369,
+      "price_guide_text": "$900,000 (hidden guide)",
+      "price_min": 900000,
+      "price_max": 900000
     },
     {
       "address": "325/4 Elger Street",
