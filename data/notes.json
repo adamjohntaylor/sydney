@@ -124,5 +124,28 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-29T18:20:05.988Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214": {
+    "status": "",
+    "note": "",
+    "updated": "2026-06-29T18:21:25.018Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-06-29T18:29:04.331Z"
   }
 }
