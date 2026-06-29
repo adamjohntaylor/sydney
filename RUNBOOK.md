@@ -35,6 +35,14 @@ Built from `SCOPE.md` with Adam's §4 resolutions applied.
    new alert emails and merge them into `data/listings.json`. Hit **Refresh now**
    in the header to reload the latest. Each sweep also regenerates
    `../07-property-shortlist.md`.
+   - **Zoning is resolved automatically.** When the dashboard is served
+     (`serve.py`), **Refresh now** point-queries the NSW DPE Land Zoning layer for
+     every warehouse-character listing whose zoning isn't yet checked, fills the
+     verdict, and re-scores — so the "zoning unverified" flag clears on its own
+     once a verdict comes back (E3/E4 ⇒ Tier 1 fail; R/E1/E2/MU1 ⇒ pass). Already-
+     checked listings are skipped, so Refresh never re-hammers the service. In bare
+     `file://` mode there's no server to fetch, so zoning stays unverified until
+     you serve the dashboard or a scheduled sweep runs.
 
 ## Ingestion: email alerts, not scraping (route A, decision #27)
 

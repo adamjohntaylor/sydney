@@ -21,12 +21,16 @@ from __future__ import annotations
 import json
 import sys
 
-# ArcGIS REST point-query template. Layer 19 = Land Zoning on the EPI Primary
-# Planning Layers MapServer (confirm the layer index at sweep time - ArcGIS
-# layer ordering occasionally changes; the field of interest is SYM_CODE / ZONE).
+# ArcGIS REST point-query template. Layer 2 = Land Zoning on the EPI Primary
+# Planning Layers MapServer (verified 25 Jun 2026: this MapServer exposes layers
+# 0-6 only - 0 Heritage, 1 FSR, 2 Land Zoning, 3 Land Reservation, 4 Lot Size,
+# 5 Height, 6 Land Application; the field of interest is SYM_CODE, e.g. "R1").
+# NOTE: an earlier template pointed at layer 19, which does not exist on this
+# server, so every zoning query 400'd and no listing ever resolved. Re-confirm
+# the index if the query starts failing - ArcGIS layer ordering can change.
 ARCGIS_TEMPLATE = (
     "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/Planning/"
-    "EPI_Primary_Planning_Layers/MapServer/19/query"
+    "EPI_Primary_Planning_Layers/MapServer/2/query"
     "?geometry={lon},{lat}&geometryType=esriGeometryPoint&inSR=4326"
     "&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=false&f=json"
 )

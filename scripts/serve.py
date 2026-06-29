@@ -15,7 +15,7 @@ Endpoints:
     GET  /                -> index.html
     GET  /data/...        -> static data files (listings.json, notes.json, ...)
     POST /api/save-notes  -> overwrites data/notes.json with the posted JSON body
-    POST /api/refresh     -> geocode missing coords + re-score all listings
+    POST /api/refresh     -> geocode missing coords + resolve warehouse zoning + re-score
     GET  /api/health      -> {"ok": true, "refresh_available": true}
 
 The dashboard auto-detects whether it is being served (notes save to disk) or
@@ -26,6 +26,8 @@ from __future__ import annotations
 import json
 import os
 import sys
+import urllib.request
+import urllib.error
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
 # (auto-add of bookmarklet-scraped listings not yet in the DB: see _handle_enrich_listing)
@@ -43,10 +45,53 @@ import geocode as geocode_mod
 import gmail_fetch as gmail_mod
 import sweep as sweep_mod
 import parse_alert_email as alert_mod
+import zoning as zoning_mod
 import datetime as dt
 
 SNAP_DIR = os.path.join(DASH_DIR, "data", "snapshots")
 SHORTLIST_PATH = os.path.join(DASH_DIR, "..", "07-property-shortlist.md")
+
+ZONING_FETCH_TIMEOUT = 12  # seconds per NSW ArcGIS point query
+
+
+def resolve_zoning(listings):
+    """Fill listing['zoning'] for warehouse-character stock not yet checked.
+
+    Standing rule (decision #17; ../CLAUDE.md): warehouse / industrial-character
+    listings must have their NSW land-zoning confirmed before they can pass Tier 1.
+    zoning.py is deliberately network-free; the live point query lives here because
+    serve.py runs on Adam's machine (which has internet), exactly like geocoding.
+    Only un-checked warehouse listings with coords are queried, so a Refresh never
+    re-hammers the ArcGIS service for verdicts it already holds.
+
+    Returns (checked_count, fail_count).
+    """
+    checked = 0
+    fails = 0
+    for l in listings:
+        if not l.get("warehouse_character"):
+            continue
+        z = l.get("zoning") or {}
+        if z.get("checked"):
+            continue  # already resolved on a prior pass
+        lat, lon = l.get("lat"), l.get("lon")
+        if lat is None or lon is None:
+            continue  # no coords yet; a later pass resolves it once geocoded
+        url = zoning_mod.build_query_url(lat, lon)
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "sydney-dashboard/1.0"})
+            with urllib.request.urlopen(req, timeout=ZONING_FETCH_TIMEOUT) as resp:
+                body = resp.read().decode("utf-8")
+            l["zoning"] = zoning_mod.parse_zoning(body, lat, lon)
+            checked += 1
+            print(f"  Zoning {l.get('address','?')}: "
+                  f"{l['zoning'].get('code')} -> {l['zoning'].get('verdict')}",
+                  file=sys.stderr, flush=True)
+        except Exception as e:  # network/parse failure is non-fatal: stays unverified
+            fails += 1
+            print(f"  Zoning fetch failed for {l.get('address','?')}: {e}",
+                  file=sys.stderr, flush=True)
+    return checked, fails
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -197,7 +242,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
         return self._json(500, {"ok": False, "error": msg})
 
     def _handle_refresh(self):
-        """Full refresh: fetch emails, geocode, score, detect changes, archive snapshot."""
+        """Full refresh: fetch emails, geocode, resolve warehouse zoning, score, detect changes, archive snapshot."""
         sys.stderr.write("\n*** REFRESH HANDLER CALLED ***\n")
         sys.stderr.flush()
         try:
@@ -261,6 +306,12 @@ this page and re-drag the button (the code is baked into the link, so it does no
             # so the override feeds the re-score below.
             print("Step 8: Carrying forward notes...", file=sys.stderr, flush=True)
             sweep_mod.carry_notes(all_listings, NOTES_PATH)
+
+            # Step 8b: Resolve NSW land-zoning for warehouse-character stock that
+            # hasn't been checked yet (decision #17). Runs BEFORE the re-score so the
+            # verdict feeds Tier 1. Coords are guaranteed by the geocode steps above.
+            print("Step 8b: Resolving zoning for warehouse stock...", file=sys.stderr, flush=True)
+            zoning_checked, zoning_fails = resolve_zoning(all_listings)
 
             # Step 9: Re-score all listings
             print(f"Step 9: Re-scoring {len(all_listings)} listings...", file=sys.stderr, flush=True)
@@ -369,6 +420,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "geocode_failed": geocode_fails,
                 "duplicates_removed": dupes_removed,
                 "empties_removed": empties_removed,
+                "zoning_checked": zoning_checked,
+                "zoning_failed": zoning_fails,
                 "total": len(all_listings),
                 "rescored": len(all_listings),
                 "tier1_pass": out["counts"]["tier1_pass"],
