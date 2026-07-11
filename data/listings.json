@@ -6075,7 +6075,7 @@
       "warehouse_character": false
     },
     {
-      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151024140",
+      "url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151024140",
       "address": "103/135 Point Street",
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
@@ -6083,7 +6083,7 @@
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2009",
-      "cover_image": "https://i2.au.reastatic.net/310x175/716a3deac2a31f0fac35ed7efc172fc9475138ba291a9d0fd7355bb74cc06e98/image.jpg",
+      "cover_image": "https://i2.au.reastatic.net/800x600/dfcf7ef99289cace7ce1d791553af94276a8c1850b732141747c2af17c6b8f1b/image.jpg",
       "beds": 3,
       "baths": 2,
       "parking": 2,
@@ -6093,12 +6093,11 @@
         "3",
         "2",
         "171m²",
-        "1",
         "Lift (listed)"
       ],
-      "price_guide_text": "Asking price: $1,950,000",
-      "price_min": 1950000,
-      "price_max": 1950000,
+      "price_guide_text": "$1,925,000",
+      "price_min": 1925000,
+      "price_max": 1925000,
       "source": "realestate",
       "lat": -33.8667478,
       "lon": 151.1931271,
