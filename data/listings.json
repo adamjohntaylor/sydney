@@ -196,12 +196,12 @@
       "baths": 2,
       "parking": 1,
       "internal_m2": 114,
-      "price_guide_text": "Guide $1,700,000",
-      "price_min": 1700000,
-      "price_max": 1700000,
+      "price_guide_text": "$1,750,000 (hidden guide)",
+      "price_min": 1750000,
+      "price_max": 1750000,
       "agent": "Scott Robertson",
       "agency": "Balmain Realty",
-      "cover_image": "https://rimh2.domainstatic.com.au/_evphlZUGbBai_4NO9--bsz6VH8=/1680x720/filters:format(webp):quality(85)/2020919085_1_1_260616_041740-w3008-h2005",
+      "cover_image": "https://rimh2.domainstatic.com.au/h6zc3Ks0Hon0gYF7kLJ7tcWMb-k=/1680x720/filters:format(webp):quality(85)/14531891_1_1_200913_112736-w3008-h2005",
       "open_homes": [
         "2026-06-24T11:00:00+10:00"
       ],
@@ -261,7 +261,22 @@
       "last_seen": "2026-06-21",
       "change_flag": "NEW",
       "lat": -33.8610161,
-      "lon": 151.1667228
+      "lon": 151.1667228,
+      "features": [
+        "Air conditioning",
+        "Built in wardrobes",
+        "Car Parking - Basement",
+        "Close to schools",
+        "Close to shops",
+        "Close to transport",
+        "Ensuite",
+        "Intercom",
+        "Pets Allowed",
+        "Swimming Pool",
+        "Security Access",
+        "Water Views",
+        "Window Treatments"
+      ]
     },
     {
       "url": "https://www.domain.com.au/404-42c-formosa-street-drummoyne-nsw-2047-2020757988",
@@ -6217,7 +6232,9 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status": "interested",
+      "note": ""
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
