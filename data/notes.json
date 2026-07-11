@@ -108,9 +108,9 @@
     }
   },
   "https://www.realestate.com.au/property-unit-nsw-glebe-150824100": {
-    "status": "",
+    "status": "rejected",
     "note": "",
-    "updated": "2026-06-29T18:14:55.048Z",
+    "updated": "2026-07-11T04:32:22.977Z",
     "accessibility": {
       "step_free": false,
       "lift": null

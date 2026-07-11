@@ -5497,7 +5497,7 @@
         "budget": true,
         "property_type": true,
         "accessibility": false,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5505,9 +5505,7 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [
-          "bedrooms"
-        ],
+        "unverified": [],
         "pass": false
       },
       "tier2": {
@@ -5531,7 +5529,10 @@
       "accessibility": {
         "step_free": false,
         "lift": null
-      }
+      },
+      "beds": 2,
+      "baths": 2,
+      "parking": 1
     },
     {
       "url": "https://www.realestate.com.au/property-unit-nsw-glebe-150824100",
@@ -5607,7 +5608,7 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status": "",
+      "status": "rejected",
       "note": "",
       "accessibility": {
         "step_free": false,
