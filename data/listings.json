@@ -276,7 +276,9 @@
         "Security Access",
         "Water Views",
         "Window Treatments"
-      ]
+      ],
+      "status": "sold-without-us",
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/404-42c-formosa-street-drummoyne-nsw-2047-2020757988",
@@ -5578,7 +5580,7 @@
         "budget": true,
         "property_type": true,
         "accessibility": false,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5586,9 +5588,7 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [
-          "bedrooms"
-        ],
+        "unverified": [],
         "pass": false
       },
       "tier2": {
@@ -5612,7 +5612,10 @@
       "accessibility": {
         "step_free": false,
         "lift": null
-      }
+      },
+      "beds": 2,
+      "baths": 1,
+      "parking": 2
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151119724",
