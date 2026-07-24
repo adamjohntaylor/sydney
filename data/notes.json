@@ -162,5 +162,15 @@
     "status": "sold-without-us",
     "note": "",
     "updated": "2026-07-11T04:30:47.209Z"
+  },
+  "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151024140": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-07-11T04:35:24.113Z"
+  },
+  "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151024140": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-07-11T04:36:36.153Z"
   }
 }
