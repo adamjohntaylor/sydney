@@ -7,7 +7,53 @@ of how the code got to its current shape.
 
 ---
 
-## 24 June 2026 — Bookmarklet auto-adds an unmatched listing as a new entry
+## 25 July 2026 — Sold / under-offer detection (bookmarklet banner read + sold-alert email ingestion)
+
+Until now nothing in the automated workflow ever set `change_flag` to `SOLD` — the
+incremental (email-alert) pipeline deliberately never infers withdrawal from absence, and
+the "later staleness check or manual marking" its docstring promised was never built. Sold
+properties therefore lingered on the active list indefinitely. This session adds **three
+explicit departure sources** (and a new `UNDER_OFFER` state):
+
+- **Bookmarklet banner read** (`enrich-bookmarklet.js`): every enrichment click now reads
+  the listing's own market-status banner and sends `listing_status`
+  (`sold` / `under_offer` / `withdrawn` / `on_market`) with a `listing_status_basis`.
+  Detection is deliberately conservative — Domain/REA pages embed "recently sold nearby"
+  modules, so it keys ONLY off listing-specific signals, in order: REA's `/sold/` URL path;
+  this listing's JSON-LD `offers.availability` (SoldOut); short badge/tag DOM elements
+  (≤45 chars, so prose can't match); the price display itself; and the top 1,500 chars of
+  page text with SOLD anchored to a sale phrase ("sold at auction", "sold on <date>") or
+  the start of the page. **Re-drag the inline bookmarklet from `/bookmarklet` — the code is
+  baked into the link.**
+- **Sold-alert email ingestion** (`parse_alert_email.py` + `gmail_fetch.py`):
+  `classify_email` routes Domain/REA sold / under-offer notifications away from the
+  new-listing parser (previously they could be mis-ingested as NEW listings) and
+  `extract_departures` pulls out URLs/addresses + per-listing status.
+  `apply_departures` matches them against the watchlist by numeric listing id (stable
+  across the on-market → `/sold/` URL move), exact URL, then address+suburb — and by
+  design can only FLAG a tracked listing, never inject one, so "recently sold in your
+  area" digests about strangers are harmless. SOLD is terminal (never downgraded to
+  UNDER_OFFER); records carry `departed_on`, `status_source`, `status_basis`. Wired into
+  `/api/refresh` (Step 6b) and the standalone `gmail_fetch.py` CLI.
+- **Manual marking** (`/api/set-market-status` + drawer "Market status" control): Sold /
+  Under offer / Withdrawn / On market from the detail drawer, closing the long-standing
+  gap where nothing in the UI could set the flag ("sold-without-us" was only ever a
+  personal note). ON_MARKET revives a departed listing (`relisted_on`).
+
+Supporting changes: `sweep.GONE_FLAGS = (SOLD, UNDER_OFFER, WITHDRAWN)` replaces the
+scattered two-tuples; `merge_incremental` never resurrects a gone listing from a re-read
+alert email (the 3-day IMAP window re-serves pre-sale alerts) — only an explicit
+`on_market` page read or a manual re-mark revives it; `build_counts` now takes the full
+listing set (the old version was handed the pre-filtered active list, so `sold`/`withdrawn`
+could literally never be non-zero) and adds `under_offer`; `render.py` excludes departed
+stock from the `07` candidate tables and appends a "Departed from the watchlist" audit
+section; `index.html` gains the UNDER_OFFER pill/filter/chip, the gone tab (renamed
+"Sold / under offer / withdrawn") now includes UNDER_OFFER, and the drawer shows
+departure provenance; `enrich-submit.html` reports the banner verdict on save.
+
+Tested in-sandbox against a copy of the live `listings.json` (238 records): 30 unit
+checks across classification, extraction, matching, merge-resurrection, counts and
+render, plus live `serve.py` endpoint round-trips (sold → gone tab → revive).
 
 The enrichment bookmarklet previously only updated a property already in `listings.json`;
 running it on a page the dashboard didn't know about returned a 404. It now **creates** the

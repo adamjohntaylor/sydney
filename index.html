@@ -44,7 +44,7 @@
       <button data-tab="all" class="tabBtn px-3 py-2 border-b-2 border-sky-400 text-white font-medium whitespace-nowrap">All candidates</button>
       <button data-tab="saturday" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">This Saturday's inspections</button>
       <button data-tab="auction" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Auction calendar</button>
-      <button data-tab="gone" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Withdrawn / sold</button>
+      <button data-tab="gone" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Sold / under offer / withdrawn</button>
     </div>
   </div>
 </header>
@@ -77,7 +77,8 @@
       <option value="">Any change</option>
       <option value="NEW">New</option><option value="PRICE_CHANGED">Price changed</option>
       <option value="OPEN_HOME_ADDED">Open home added</option>
-      <option value="SOLD">Sold</option><option value="WITHDRAWN">Withdrawn</option>
+      <option value="SOLD">Sold</option><option value="UNDER_OFFER">Under offer</option>
+      <option value="WITHDRAWN">Withdrawn</option>
     </select>
     <label class="flex items-center gap-1"><input type="checkbox" id="fTier1"> Tier 1 pass only</label>
     <button id="tierInfoBtn" class="text-sky-500 hover:text-sky-700" title="What are Tiers?">
@@ -172,8 +173,11 @@ const STATUS_RANK = {
 const FLAG_STYLES = {
   NEW:"bg-emerald-500 text-white", PRICE_CHANGED:"bg-amber-500 text-white",
   OPEN_HOME_ADDED:"bg-sky-500 text-white", SOLD:"bg-rose-600 text-white",
+  UNDER_OFFER:"bg-orange-500 text-white",
   WITHDRAWN:"bg-slate-500 text-white", UNCHANGED:"bg-slate-200 text-slate-600"
 };
+// Flags meaning "off the market" - these listings live in the Withdrawn/sold tab.
+const GONE_FLAGS = ["SOLD","UNDER_OFFER","WITHDRAWN"];
 const T1_LABELS = {budget:"Budget &le;$2.2M", property_type:"Property type", accessibility:"Step-free / lift",
   bedrooms:"Bedrooms", transport:"Transport &le;1.5km", supplies:"Daily supplies", location:"In target area", zoning:"Zoning (E1/E2/MU1)"};
 const CATCH_LABELS = {transport:"Transport", supermarket:"Supermarket", pool:"Pool", park:"Park", restaurants:"Restaurants"};
@@ -232,7 +236,7 @@ function header(){
   const c = DATA.counts||{};
   const hc = document.getElementById("headerCounts");
   const chip=(n,t,cls)=> n?`<span class="pill ${cls}">${n} ${t}</span>`:"";
-  hc.innerHTML = chip(c.new,"new","bg-emerald-500 text-white")+chip(c.price_changed,"price&Delta;","bg-amber-500 text-white")+chip(c.sold,"sold","bg-rose-600 text-white")+chip(c.tier1_pass,"T1 pass","bg-sky-600 text-white");
+  hc.innerHTML = chip(c.new,"new","bg-emerald-500 text-white")+chip(c.price_changed,"price&Delta;","bg-amber-500 text-white")+chip(c.sold,"sold","bg-rose-600 text-white")+chip(c.under_offer,"under offer","bg-orange-500 text-white")+chip(c.tier1_pass,"T1 pass","bg-sky-600 text-white");
 }
 
 function buildSuburbFilter(){
@@ -261,8 +265,8 @@ function passesFilters(l){
 }
 
 function tabFilter(l){
-  if(TAB==="gone") return ["SOLD","WITHDRAWN"].includes(l.change_flag);
-  if(["SOLD","WITHDRAWN"].includes(l.change_flag)) return false;
+  if(TAB==="gone") return GONE_FLAGS.includes(l.change_flag);
+  if(GONE_FLAGS.includes(l.change_flag)) return false;
   if(TAB==="saturday") return (l.tier1&&l.tier1.pass) && isThisSaturday(nextOpen(l));
   if(TAB==="auction") return !!l.auction;
   return true;
@@ -418,6 +422,19 @@ function openDrawer(k){
     <button id="saveNote" class="mt-2 bg-slate-900 text-white px-4 py-1.5 rounded text-sm">Save note</button>
     <span id="noteSaved" class="ml-2 text-xs text-emerald-600"></span>
 
+    <h3 class="mt-5 font-semibold text-sm">Market status</h3>
+    ${GONE_FLAGS.includes(l.change_flag)?`<p class="text-[11px] text-slate-500 mt-1">Marked <b>${(l.change_flag||'').replace(/_/g,' ')}</b>${l.departed_on?(' on '+l.departed_on):''}${l.status_source?(' &middot; via '+l.status_source):''}${l.status_basis?(' &middot; '+l.status_basis):''}.</p>`:`<p class="text-[11px] text-slate-500 mt-1">On market. If this has sold or gone under offer, mark it here (or click the bookmarklet on the listing page &mdash; it reads the banner automatically).</p>`}
+    <div class="flex gap-2 mt-2 items-center">
+      <select id="marketFlag" class="border rounded px-2 py-1 text-sm">
+        <option value="ON_MARKET" ${!GONE_FLAGS.includes(l.change_flag)?'selected':''}>On market</option>
+        <option value="UNDER_OFFER" ${l.change_flag==='UNDER_OFFER'?'selected':''}>Under offer</option>
+        <option value="SOLD" ${l.change_flag==='SOLD'?'selected':''}>Sold</option>
+        <option value="WITHDRAWN" ${l.change_flag==='WITHDRAWN'?'selected':''}>Withdrawn</option>
+      </select>
+      <button id="saveMarketFlag" class="bg-slate-900 text-white px-3 py-1.5 rounded text-sm">Set</button>
+      <span id="marketFlagMsg" class="text-xs text-slate-500"></span>
+    </div>
+
     <h3 class="mt-6 pt-4 border-t border-rose-100 font-semibold text-sm text-rose-700">Remove this listing</h3>
     <p class="text-[11px] text-slate-500 mt-1">Permanently deletes it from the watchlist (and your note for it), regenerates the shortlist, and pushes the change. A re-sweep can re-add it if the alert reappears.</p>
     <button id="deleteListing" class="mt-2 bg-white border border-rose-300 text-rose-700 hover:bg-rose-50 px-4 py-1.5 rounded text-sm">Delete listing</button>
@@ -428,6 +445,23 @@ function openDrawer(k){
   document.getElementById("closeDrawer").onclick=closeDrawer;
   document.getElementById("saveNote").onclick=()=>saveNote(l);
   document.getElementById("deleteListing").onclick=()=>deleteListing(l);
+  document.getElementById("saveMarketFlag").onclick=()=>setMarketStatus(l);
+}
+
+async function setMarketStatus(l){
+  const msg=document.getElementById("marketFlagMsg");
+  const flag=document.getElementById("marketFlag").value;
+  if(!SERVED){
+    msg.textContent="Needs the local server — run python scripts/serve.py and open http://localhost:8777/.";
+    return;
+  }
+  msg.textContent="Saving…";
+  try{
+    const r=await fetch("/api/set-market-status",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key:key(l),flag})});
+    const j=await r.json();
+    if(j.ok){ closeDrawer(); await load(); render(); return; }
+    msg.textContent="Failed: "+(j.error||"unknown error");
+  }catch(e){ msg.textContent="Failed: "+e.message; }
 }
 
 async function deleteListing(l){
@@ -514,6 +548,7 @@ document.getElementById("refreshBtn").addEventListener("click",async()=>{
       if(j.ok){
         let msg = `rescored ${j.rescored}`;
         if(j.new_from_email > 0) msg += `, ${j.new_from_email} new from email`;
+        if(j.departures_applied > 0) msg += `, ${j.departures_applied} flagged sold/under offer`;
         if(j.newly_geocoded > 0) msg += `, ${j.newly_geocoded} geocoded`;
         msg += ` (${j.tier1_pass} T1 pass)`;
         st.textContent = msg;

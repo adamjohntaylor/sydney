@@ -46,6 +46,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DASH = os.path.join(HERE, "..")
 DATA = os.path.join(DASH, "data")
+if HERE not in sys.path:
+    sys.path.insert(0, HERE)   # sibling imports (parse_alert_email, sweep, ...)
 IMAP_CREDS_PATH = os.path.join(DATA, ".gmail_credentials.json")
 OAUTH_CREDS_PATH = os.path.join(DATA, ".gmail_oauth.json")
 TOKEN_PATH = os.path.join(DATA, ".gmail_token.json")
@@ -261,11 +263,124 @@ def fetch_alert_emails(service, days_back=3):
     return emails
 
 
+def split_emails(emails):
+    """Split alert emails into (listing_emails, departure_emails).
+
+    Departure emails are Domain/REA sold / under-offer notifications. They must
+    never reach the new-listing parser (it would re-create the sold property as
+    a NEW entry); they are parsed by parse_emails_for_departures instead."""
+    sys.path.insert(0, HERE)
+    import parse_alert_email as parser
+    listing_emails, departure_emails = [], []
+    for em in emails:
+        kind = parser.classify_email(em.get("subject", ""), em.get("body", ""))
+        (departure_emails if kind == "departure" else listing_emails).append(em)
+    return listing_emails, departure_emails
+
+
+def parse_emails_for_departures(emails):
+    """Extract departure records (sold / under offer) from departure emails.
+    Returns a de-duplicated list of {url?, address?, suburb?, status, basis}."""
+    sys.path.insert(0, HERE)
+    import parse_alert_email as parser
+    out, seen = [], set()
+    for em in emails:
+        for dep in parser.extract_departures(em.get("body", ""), em.get("subject", "")):
+            k = dep.get("url") or f"{(dep.get('address') or '').lower()}|{(dep.get('suburb') or '').lower()}"
+            if k in seen:
+                continue
+            seen.add(k)
+            out.append(dep)
+    return out
+
+
+def _listing_id(url):
+    """Numeric listing id at the end of a Domain/REA URL, or None. Sold-page
+    URLs differ from the original listing URL (REA moves them under /sold/),
+    but the numeric id is stable - it is the reliable join key."""
+    import re
+    m = re.search(r"(?:-|/)(\d{6,12})/?(?:\?.*)?$", url or "")
+    return m.group(1) if m else None
+
+
+def _norm_addr(address, suburb):
+    return f"{(address or '').lower().strip()}|{(suburb or '').lower().strip()}"
+
+
+def apply_departures(departures, listings, today=None):
+    """Flag existing watchlist listings SOLD / UNDER_OFFER from departure records.
+
+    Matching, in order: numeric listing id from the URL; exact URL; exact
+    address+suburb; address-only (unique match required). Unmatched departures
+    are IGNORED by design - a departure can flag a tracked listing but never
+    inject a new one. A SOLD verdict upgrades UNDER_OFFER; a departure never
+    downgrades SOLD back to UNDER_OFFER. Returns (applied_count, details)."""
+    import datetime as _dt
+    if today is None:
+        today = _dt.date.today().isoformat()
+
+    by_id, by_url, by_addr = {}, {}, {}
+    for l in listings:
+        lid = _listing_id(l.get("url"))
+        if lid:
+            by_id.setdefault(lid, l)
+        if l.get("url"):
+            by_url.setdefault(l["url"], l)
+        if l.get("address"):
+            by_addr.setdefault(_norm_addr(l.get("address"), l.get("suburb")), l)
+
+    applied, details = 0, []
+    for dep in departures:
+        target = None
+        dep_url = dep.get("url") or ""
+        lid = _listing_id(dep_url)
+        if lid and lid in by_id:
+            target = by_id[lid]
+        elif dep_url and dep_url in by_url:
+            target = by_url[dep_url]
+        elif dep.get("address"):
+            target = by_addr.get(_norm_addr(dep.get("address"), dep.get("suburb")))
+            if target is None and not dep.get("suburb"):
+                # Address-only fallback: accept only an unambiguous match.
+                addr = (dep["address"] or "").lower().strip()
+                hits = [l for l in listings
+                        if addr and addr == (l.get("address") or "").lower().strip()]
+                if len(hits) == 1:
+                    target = hits[0]
+        if target is None:
+            continue
+
+        new_flag = "SOLD" if dep.get("status") == "sold" else "UNDER_OFFER"
+        old_flag = target.get("change_flag")
+        if old_flag == "SOLD":
+            continue  # SOLD is terminal; never downgrade to UNDER_OFFER
+        if old_flag == new_flag:
+            continue
+        target["change_flag"] = new_flag
+        target["departed_on"] = target.get("departed_on") or today
+        target["status_source"] = "email_alert"
+        if dep.get("basis"):
+            target["status_basis"] = dep["basis"]
+        applied += 1
+        details.append({
+            "address": target.get("address"),
+            "suburb": target.get("suburb"),
+            "flag": new_flag,
+        })
+        print(f"  Departure: {target.get('address','?')}, {target.get('suburb','')} -> {new_flag}",
+              file=sys.stderr)
+    return applied, details
+
+
 def parse_emails_for_listings(emails):
-    """Parse email bodies to extract listings using parse_alert_email logic."""
+    """Parse email bodies to extract listings using parse_alert_email logic.
+    Departure (sold / under-offer) emails are skipped here - route them through
+    parse_emails_for_departures / apply_departures instead."""
     sys.path.insert(0, HERE)
     import parse_alert_email as parser
     import re
+
+    emails, _departures = split_emails(emails)
 
     all_listings = {}
     for email in emails:
@@ -458,16 +573,9 @@ def merge_new_listings(new_listings, dry_run=False):
     # Merge
     data["listings"].extend(truly_new)
 
-    # Update counts
-    active = [l for l in data["listings"] if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
-    data["counts"] = {
-        "total": len(active),
-        "tier1_pass": sum(1 for l in active if l.get("tier1", {}).get("pass")),
-        "new": sum(1 for l in active if l.get("change_flag") == "NEW"),
-        "price_changed": sum(1 for l in active if l.get("change_flag") == "PRICE_CHANGED"),
-        "sold": sum(1 for l in active if l.get("change_flag") == "SOLD"),
-        "withdrawn": sum(1 for l in active if l.get("change_flag") == "WITHDRAWN"),
-    }
+    # Update counts (shared logic: active market counts + departed counts)
+    import sweep as sweep_mod
+    data["counts"] = sweep_mod.build_counts(data["listings"])
 
     # Write back
     with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
@@ -515,14 +623,34 @@ def main(argv):
         print("No alert emails found.", file=sys.stderr)
         return 0
 
-    listings = parse_emails_for_listings(emails)
+    listing_emails, departure_emails = split_emails(emails)
+    print(f"{len(listing_emails)} new-listing emails, {len(departure_emails)} "
+          f"sold/under-offer emails", file=sys.stderr)
+
+    listings = parse_emails_for_listings(listing_emails)
     print(f"Parsed {len(listings)} unique listing URLs from emails", file=sys.stderr)
 
-    if not listings:
-        print("No listings found in emails.", file=sys.stderr)
-        return 0
+    if listings:
+        merge_new_listings(listings, dry_run=args.dry_run)
+    else:
+        print("No new listings found in emails.", file=sys.stderr)
 
-    added = merge_new_listings(listings, dry_run=args.dry_run)
+    # Sold / under-offer notifications -> flag matching watchlist entries.
+    departures = parse_emails_for_departures(departure_emails)
+    if departures and not args.dry_run and os.path.exists(LISTINGS_PATH):
+        with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        applied, details = apply_departures(departures, data.get("listings", []))
+        if applied:
+            import sweep as sweep_mod
+            data["counts"] = sweep_mod.build_counts(data.get("listings", []))
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            print(f"Flagged {applied} listing(s) sold/under offer.", file=sys.stderr)
+    elif departures and args.dry_run:
+        print(f"Dry run - {len(departures)} departure record(s) parsed:", file=sys.stderr)
+        for d in departures:
+            print(f"  - {d.get('address') or d.get('url','?')} -> {d['status']}", file=sys.stderr)
     return 0
 
 

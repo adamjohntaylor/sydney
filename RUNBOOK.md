@@ -81,7 +81,9 @@ is a self-contained Claude prompt that does exactly this.
    (a single page, not a search-results scrape) and capture: `address, suburb,
    postcode, price_guide_text, price_min, price_max, property_type, beds, baths,
    parking, internal_m2, strata_pa, agent, agency, cover_image, open_homes[] (next
-   14 days, ISO), auction (ISO/null), description, lat, lon`.
+   14 days, ISO), auction (ISO/null), description, lat, lon`. Also read the page's
+   market-status banner and set `listing_status` (`sold` / `under_offer` /
+   `withdrawn` / `on_market`) - sweep.py converts it to the matching change flag.
    - `property_type` one of `apartment, house, townhouse, warehouse_conversion`;
      set `is_raw_shell: true` for unconverted shells (Q2 excludes them).
 5. **Outlook** (Q4): set `outlook: {class, basis}`, class ∈ `water, park,
@@ -105,6 +107,40 @@ a timestamped snapshot, and regenerates `../07-property-shortlist.md`.
 *(Manual full-snapshot mode - drop `--incremental` - is retained for the case
 where you ever supply a complete current field; it auto-detects WITHDRAWN/SOLD by
 absence. Don't use it with new-only alert data.)*
+
+## Sold / under-offer detection (added 25 Jul 2026)
+
+A listing leaves the active list only on **explicit evidence**, never on absence
+from an alert. Three sources set `change_flag` to `SOLD` / `UNDER_OFFER` /
+`WITHDRAWN` (all three live in the dashboard's "Sold / under offer / withdrawn"
+tab, with `departed_on` / `status_source` / `status_basis` provenance):
+
+1. **Bookmarklet banner read** — every enrichment click on a Domain/REA listing
+   page also reads the page's own status banner (Sold / Under offer / no longer
+   available) and the server applies it. Clicking the bookmarklet on a listing
+   that turns out to be sold is therefore the quickest way to retire it. An
+   `on_market` read on a previously departed listing **revives** it
+   (`relisted_on`) - the live page is the freshest evidence there is.
+   **After pulling this update, re-drag the inline bookmarklet from
+   `http://localhost:8777/bookmarklet` - the code is baked into the link.**
+2. **Sold-alert emails** — on Domain and realestate.com.au, turn ON the
+   "sold / off-market" notifications for the same saved searches (Domain:
+   saved-search settings → include sold updates; REA: property update emails).
+   Each sweep / Refresh classifies incoming alert mail: sold / under-offer
+   notifications are routed to a departure parser and matched against the
+   watchlist by listing id → URL → address+suburb. A departure can only flag a
+   listing already tracked - digest emails about other properties are ignored -
+   and sold emails are never fed to the new-listing parser.
+3. **Manual marking** — the detail drawer's "Market status" control
+   (`/api/set-market-status`): Sold / Under offer / Withdrawn / On market.
+   Use "On market" to restore a listing a fallen-through deal returns.
+
+Rules of the state machine: SOLD is terminal (an under-offer email never
+downgrades it); a stale re-read alert email never resurrects a departed listing
+(the 3-day IMAP window re-serves pre-sale alerts); only an explicit on-market
+page read or your manual re-mark revives one. Departed stock is excluded from
+the `07` candidate tables and listed in a "Departed from the watchlist" section
+at the end.
 
 ## The criteria, as encoded (see `scripts/score.py`)
 

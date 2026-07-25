@@ -54,9 +54,16 @@ def _ticks(lst):
     return ", ".join(out)
 
 
+GONE_FLAGS = ("SOLD", "UNDER_OFFER", "WITHDRAWN")
+
+
 def render(data):
-    listings = data.get("listings", [])
+    all_listings = data.get("listings", [])
     gen = data.get("generated_at_sydney") or data.get("generated_at") or "unknown date"
+    # Departed stock (sold / under offer / withdrawn) never appears in the
+    # candidate tables - it gets its own audit section at the end.
+    listings = [l for l in all_listings if l.get("change_flag") not in GONE_FLAGS]
+    departed = [l for l in all_listings if l.get("change_flag") in GONE_FLAGS]
     passing = [l for l in listings if l.get("tier1", {}).get("pass")]
     passing.sort(key=lambda l: l.get("tier2", {}).get("score", 0), reverse=True)
     near = [l for l in listings
@@ -79,10 +86,11 @@ def render(data):
              "verification (commonly step-free access / lift, which listings rarely state).")
     L.append("")
     c = data.get("counts", {})
-    L.append(f"**This sweep:** {c.get('total', len(listings))} listings harvested; "
+    L.append(f"**This sweep:** {c.get('total', len(listings))} active listings; "
              f"{len(passing)} pass all determinable Tier 1 criteria; "
-             f"{c.get('new', 0)} new, {c.get('price_changed', 0)} price-changed, "
-             f"{c.get('sold', 0)} sold, {c.get('withdrawn', 0)} withdrawn since the prior sweep.")
+             f"{c.get('new', 0)} new, {c.get('price_changed', 0)} price-changed. "
+             f"Departed from the watchlist: {c.get('sold', 0)} sold, "
+             f"{c.get('under_offer', 0)} under offer, {c.get('withdrawn', 0)} withdrawn.")
     L.append("")
 
     L.append("## Tier 1 passing candidates (ranked by Tier 2 score)")
@@ -128,6 +136,18 @@ def render(data):
             fails = ", ".join(l.get("tier1", {}).get("fails", []))
             L.append(f"- **{l.get('address','?')}, {l.get('suburb','')}** "
                      f"({_price(l)}) - fails: {fails}.")
+        L.append("")
+
+    if departed:
+        departed.sort(key=lambda l: l.get("departed_on") or "", reverse=True)
+        L.append("## Departed from the watchlist (sold / under offer / withdrawn)")
+        L.append("")
+        for l in departed[:30]:
+            flag = (l.get("change_flag") or "").replace("_", " ").lower()
+            when = f" on {l['departed_on']}" if l.get("departed_on") else ""
+            src = f" ({l.get('status_source')})" if l.get("status_source") else ""
+            L.append(f"- **{l.get('address','?')}, {l.get('suburb','')}** "
+                     f"({_price(l)}) - {flag}{when}{src}.")
         L.append("")
 
     L.append("## Standing rules")

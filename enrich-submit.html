@@ -94,6 +94,18 @@ if (!dataStr) {
           ? `<p style="margin:0 0 6px; font-weight:700; color:#166534;">&#10133; Added as a NEW listing</p>`
           : `<p style="margin:0 0 6px; font-weight:700; color:#1e3a5f;">&#10003; Matched an existing listing</p>`;
 
+        // Market-status verdict from the page's banner read
+        let marketLine = '';
+        if (['SOLD','UNDER_OFFER','WITHDRAWN'].includes(result.market_flag)) {
+          marketLine = `<p style="margin-top:10px; font-weight:700; color:#be123c;">`
+            + `&#9888; Marked ${result.market_flag.replace(/_/g,' ')}`
+            + `${result.market_status_changed ? ' (from this page\'s banner)' : ''}`
+            + ` &mdash; moved to the Sold / under offer / withdrawn tab.</p>`;
+        } else if (result.market_status_changed) {
+          marketLine = `<p style="margin-top:10px; font-weight:600; color:#166534;">`
+            + `Back on market &mdash; restored to the active list.</p>`;
+        }
+
         document.getElementById('status').innerHTML = `
           <div class="success">
             <h2>${result.created ? 'New listing added &amp; scored' : 'Saved &amp; re-scored'}</h2>
@@ -109,6 +121,7 @@ if (!dataStr) {
               ${field('Property Type', data.property_type)}
               ${field('Cover Image', data.cover_image ? 'Yes' : null)}
             </div>
+            ${marketLine}
             ${t1Line}
             ${resolvedLine}
             ${unverifiedLine}

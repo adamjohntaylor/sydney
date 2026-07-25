@@ -14,9 +14,10 @@ then open  http://localhost:8777/  in your browser.
 Endpoints:
     GET  /                -> index.html
     GET  /data/...        -> static data files (listings.json, notes.json, ...)
-    POST /api/save-notes  -> overwrites data/notes.json with the posted JSON body
-    POST /api/refresh     -> geocode missing coords + resolve warehouse zoning + re-score
-    GET  /api/health      -> {"ok": true, "refresh_available": true}
+    POST /api/save-notes         -> overwrites data/notes.json with the posted JSON body
+    POST /api/refresh            -> gmail ingest (new + sold alerts) + geocode + zoning + re-score
+    POST /api/set-market-status  -> manually flag SOLD / UNDER_OFFER / WITHDRAWN / ON_MARKET
+    GET  /api/health             -> {"ok": true, "refresh_available": true}
 
 The dashboard auto-detects whether it is being served (notes save to disk) or
 opened as a bare file (notes export as a downloadable notes.json instead).
@@ -250,16 +251,23 @@ this page and re-drag the button (the code is baked into the link, so it does no
             syd = sweep_mod.now_sydney()
             today = syd.date().isoformat()
 
-            # Step 1: Fetch new listings from Gmail
+            # Step 1: Fetch new listings + sold/under-offer notifications from Gmail
             print("Step 1: Fetching Gmail alerts...", file=sys.stderr, flush=True)
             new_from_email = 0
             gmail_error = None
             new_listings_raw = []
+            departures = []
             if os.path.exists(gmail_mod.IMAP_CREDS_PATH):
                 try:
                     emails = gmail_mod.fetch_via_imap(days_back=3)
                     if emails:
-                        new_listings_raw = gmail_mod.parse_emails_for_listings(emails)
+                        listing_emails, departure_emails = gmail_mod.split_emails(emails)
+                        new_listings_raw = gmail_mod.parse_emails_for_listings(listing_emails)
+                        departures = gmail_mod.parse_emails_for_departures(departure_emails)
+                        if departure_emails:
+                            print(f"  {len(departure_emails)} sold/under-offer email(s), "
+                                  f"{len(departures)} departure record(s)",
+                                  file=sys.stderr, flush=True)
                 except Exception as e:
                     gmail_error = str(e)
 
@@ -297,6 +305,16 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 new_from_email = max(0, new_from_email)
             else:
                 all_listings = prior_listings
+
+            # Step 6b: Apply sold / under-offer notifications to the watchlist.
+            # Runs AFTER the merge so a departure email arriving in the same
+            # batch as the original alert still lands on the merged record.
+            departures_applied = 0
+            if departures:
+                print(f"Step 6b: Applying {len(departures)} departure record(s)...",
+                      file=sys.stderr, flush=True)
+                departures_applied, _dep_details = gmail_mod.apply_departures(
+                    departures, all_listings, today)
 
             # Step 7: Re-geocode any still missing coords
             print(f"Step 7: Re-geocoding missing coords...", file=sys.stderr, flush=True)
@@ -374,7 +392,6 @@ this page and re-drag the button (the code is baked into the link, so it does no
 
             # Step 10: Build output data
             print("Step 10: Building output...", file=sys.stderr, flush=True)
-            active = [l for l in all_listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
             out = {
                 "schema_version": 1,
                 "generated_at": syd.astimezone(dt.timezone.utc).isoformat(),
@@ -382,7 +399,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
                 "budget_ceiling": score_mod.BUDGET_CEILING,
                 "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
-                "counts": sweep_mod.build_counts(active),
+                "counts": sweep_mod.build_counts(all_listings),
                 "listings": all_listings,
             }
 
@@ -422,6 +439,10 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "empties_removed": empties_removed,
                 "zoning_checked": zoning_checked,
                 "zoning_failed": zoning_fails,
+                "departures_applied": departures_applied,
+                "sold": out["counts"].get("sold", 0),
+                "under_offer": out["counts"].get("under_offer", 0),
+                "withdrawn": out["counts"].get("withdrawn", 0),
                 "total": len(all_listings),
                 "rescored": len(all_listings),
                 "tier1_pass": out["counts"]["tier1_pass"],
@@ -592,6 +613,27 @@ this page and re-drag the button (the code is baked into the link, so it does no
             elif "realestate.com.au" in item.get("url", ""):
                 target["source"] = "realestate"
 
+            # Market status from the bookmarklet's banner read: Sold / Under
+            # offer / Withdrawn migrates the card to the Withdrawn/sold tab;
+            # an explicit on_market read revives a previously departed listing
+            # (a live page is the freshest evidence there is).
+            market_status_changed = False
+            if item.get("listing_status"):
+                syd_today = sweep_mod.now_sydney().date().isoformat()
+                before_flag = target.get("change_flag")
+                target["listing_status"] = item["listing_status"]
+                market_status_changed = sweep_mod.apply_listing_status(target, syd_today)
+                if market_status_changed:
+                    target["status_source"] = "bookmarklet"
+                    if item.get("listing_status_basis"):
+                        target["status_basis"] = item["listing_status_basis"]
+                    print(f"  Market status: {target.get('address','?')} "
+                          f"{before_flag} -> {target.get('change_flag')} "
+                          f"({item.get('listing_status_basis','banner')})",
+                          file=sys.stderr, flush=True)
+                # Don't persist the transient reading itself.
+                target.pop("listing_status", None)
+
             # A brand-new listing has no lat/lon, so its transport/supplies/
             # walkability catchments would score "?" until the next sweep. Geocode
             # it now (best-effort, as /api/refresh does) so the new entry gets a
@@ -619,8 +661,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
 
             # Recompute header counts; preserve the last-sweep metadata
             # (enrichment is not a new sweep, so generated_at_* stay as-is).
-            active = [l for l in listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
-            data["counts"] = sweep_mod.build_counts(active)
+            data["counts"] = sweep_mod.build_counts(listings)
 
             # Save listings.json
             with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
@@ -650,6 +691,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "ok": True,
                 "created": created,
                 "matched": f"{target.get('address')}, {target.get('suburb')}",
+                "market_flag": target.get("change_flag"),
+                "market_status_changed": market_status_changed,
                 "enriched": list(item.keys()),
                 "rescored": len(listings),
                 "tier1_pass": bool(after_t1.get("pass")),
@@ -767,9 +810,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 sys.stderr.write(f"[note cleanup failed for deleted listing: {ne}]\n")
                 sys.stderr.flush()
 
-            # Recompute header counts over the surviving active listings.
-            active = [l for l in kept if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
-            data["counts"] = sweep_mod.build_counts(active)
+            # Recompute header counts over the surviving listings.
+            data["counts"] = sweep_mod.build_counts(kept)
 
             with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
@@ -799,6 +841,65 @@ this page and re-drag the button (the code is baked into the link, so it does no
         except Exception as e:  # noqa: BLE001
             return self._json(500, {"ok": False, "error": str(e)})
 
+    def _handle_set_market_status(self):
+        """Manually set a listing's market flag from the dashboard drawer.
+
+        Body: {"key": "<dashboard key>", "flag": "SOLD"|"UNDER_OFFER"|"WITHDRAWN"|"ON_MARKET"}
+        ON_MARKET clears a departure flag (back to UNCHANGED). Recomputes
+        counts, rewrites listings.json, regenerates 07, pushes (non-fatal).
+        This is the manual leg of sold-detection: the automatic legs are the
+        bookmarklet banner read and the sold-alert email ingestion."""
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length)
+            body = json.loads(raw.decode("utf-8")) if raw else {}
+            target_key = (body.get("key") or "").strip()
+            flag = (body.get("flag") or "").strip().upper()
+            valid = set(sweep_mod.GONE_FLAGS) | {"ON_MARKET"}
+            if not target_key or flag not in valid:
+                return self._json(400, {"ok": False,
+                                        "error": f"Need 'key' and 'flag' in {sorted(valid)}."})
+
+            with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            listings = data.get("listings", [])
+            target = next((l for l in listings if self._listing_key(l) == target_key), None)
+            if target is None:
+                return self._json(404, {"ok": False, "error": "No listing matched that key."})
+
+            today = sweep_mod.now_sydney().date().isoformat()
+            if flag == "ON_MARKET":
+                if target.get("change_flag") in sweep_mod.GONE_FLAGS:
+                    target["change_flag"] = "UNCHANGED"
+                    target.pop("departed_on", None)
+                    target["relisted_on"] = today
+            else:
+                target["change_flag"] = flag
+                target["departed_on"] = target.get("departed_on") or today
+            target["status_source"] = "manual"
+            target.pop("status_basis", None)
+
+            data["counts"] = sweep_mod.build_counts(listings)
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            try:
+                import render as render_mod
+                with open(SHORTLIST_PATH, "w", encoding="utf-8") as fh:
+                    fh.write(render_mod.render(data))
+            except Exception:
+                pass  # render is optional
+
+            push_ok, push_msg = self._commit_and_push()
+            return self._json(200, {
+                "ok": True,
+                "flag": target.get("change_flag"),
+                "counts": data["counts"],
+                "pushed": push_ok,
+                "push_message": push_msg,
+            })
+        except Exception as e:  # noqa: BLE001
+            return self._json(500, {"ok": False, "error": str(e)})
+
     def _apply_notes_and_rescore(self):
         """Apply notes (incl. manual accessibility override) and re-score all
         listings, rewriting listings.json + regenerating 07. Local only, no push.
@@ -819,8 +920,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
             amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
         for l in listings:
             score_mod.score_listing(l, amenities)
-        active = [l for l in listings if l.get("change_flag") not in ("WITHDRAWN", "SOLD")]
-        data["counts"] = sweep_mod.build_counts(active)
+        data["counts"] = sweep_mod.build_counts(listings)
         with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         try:
@@ -842,6 +942,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
             return self._handle_enrich_listing()
         if self.path == "/api/delete-listing":
             return self._handle_delete_listing()
+        if self.path == "/api/set-market-status":
+            return self._handle_set_market_status()
         if self.path != "/api/save-notes":
             return self._json(404, {"ok": False, "error": "unknown endpoint"})
         try:

@@ -81,6 +81,109 @@ def parse_price(text):
 
 ANCHOR_RE = re.compile(r'<a\b[^>]*?href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.I | re.S)
 
+# ---- Departure (sold / under offer) alert emails ---------------------------
+# Domain and REA both send saved-search follow-ups when a property sells or
+# goes under offer ("12 Smith St has sold", "Recently sold in Balmain",
+# "... is now under offer"). These must NOT be fed to the new-listing parser
+# (they would re-create the listing as NEW); instead they are classified as
+# departure emails and matched against the existing watchlist - a departure
+# can only ever FLAG a listing already tracked, never inject a new one, so a
+# "recently sold in your area" digest about strangers is harmless.
+DEPARTURE_SUBJECT_RE = re.compile(
+    r"\b(?:sold|under\s+offer|under\s+contract|sale\s+pending)\b", re.I)
+DEPARTURE_BODY_RE = re.compile(
+    r"\b(?:has\s+(?:been\s+|just\s+)?sold|was\s+(?:just\s+)?sold|recently\s+sold|"
+    r"sold\s+(?:at|prior\s+to)\s+auction|sold\s+on\s+\d|"
+    r"(?:is\s+|now\s+|gone\s+)under\s+offer|went\s+under\s+offer|"
+    r"under\s+contract|sale\s+pending)\b", re.I)
+UNDER_OFFER_RE = re.compile(
+    r"\bunder\s+(?:offer|contract)\b|\bsale\s+pending\b", re.I)
+
+# Address shape used to match departures against the watchlist when the email
+# carries no direct listing URL (mirrors gmail_fetch.extract_by_address).
+ADDRESS_RE = re.compile(
+    r"(\d+[A-Za-z]?(?:/\d+(?:-\d+)?)?)\s+"
+    r"([A-Za-z][A-Za-z\s]+?(?:Street|St|Road|Rd|Avenue|Ave|Lane|Ln|Place|Pl|Drive|Dr|"
+    r"Crescent|Cr|Parade|Pde|Way|Close|Cl|Court|Ct|Circuit|Boulevard|Blvd|Terrace|Tce))"
+    r"\s*,?\s*([A-Za-z][A-Za-z\s']+?)(?=\s+NSW\b|\s+\d{4}\b|\s*[,.<]|\s*$)", re.I | re.M)
+
+
+def classify_email(subject: str, body: str) -> str:
+    """Return 'departure' for a sold / under-offer notification, else 'listings'.
+
+    Subject is the primary signal (new-listing alert subjects never say
+    "sold"); the body check requires a strong sale PHRASE, never the bare word
+    "sold" (which appears in ordinary listings as sales-history text)."""
+    if DEPARTURE_SUBJECT_RE.search(subject or ""):
+        return "departure"
+    text = strip_html(body or "")
+    # Drop URLs first: Domain search links carry "excludeunderoffer=1".
+    text = re.sub(r"https?://\S+", " ", text)
+    if DEPARTURE_BODY_RE.search(text):
+        return "departure"
+    return "listings"
+
+
+def _status_near(text: str, pos: int, default: str) -> str:
+    """Departure status for one listing, from a +-300-char window around it."""
+    window = text[max(0, pos - 300): pos + 300]
+    if UNDER_OFFER_RE.search(window):
+        return "under_offer"
+    if re.search(r"\bsold\b", window, re.I):
+        return "sold"
+    return default
+
+
+def extract_departures(body: str, subject: str = ""):
+    """Extract departure records from a sold / under-offer alert email.
+
+    Returns a list of {url?, address?, suburb?, status, basis} dicts. The
+    caller (gmail_fetch.apply_departures) matches them against the existing
+    watchlist by listing id / URL / address+suburb; unmatched departures are
+    ignored by design."""
+    default_status = "under_offer" if UNDER_OFFER_RE.search(subject or "") else "sold"
+    if not UNDER_OFFER_RE.search(subject or "") and not re.search(r"\bsold\b", subject or "", re.I):
+        # Subject carried no verdict - fall back to the body's dominant phrase.
+        flat_probe = strip_html(body or "")
+        if UNDER_OFFER_RE.search(flat_probe) and not re.search(r"\bsold\b", flat_probe, re.I):
+            default_status = "under_offer"
+
+    out, seen = [], set()
+    text_flat = strip_html(body or "")
+
+    # 1) Listing URLs in the raw body (anchors + bare), status from the subject
+    #    (per-URL context windows in HTML templates are unreliable).
+    for lst in extract(body or ""):
+        url = lst["url"]
+        if url in seen:
+            continue
+        seen.add(url)
+        rec = {"url": url,
+               "status": default_status,
+               "basis": f"alert email: {subject[:80]}" if subject else "alert email"}
+        if lst.get("address_text"):
+            rec["address"] = lst["address_text"]
+        if lst.get("suburb"):
+            rec["suburb"] = lst["suburb"]
+        out.append(rec)
+
+    # 2) Addresses in the stripped text (tracking-redirect emails carry no
+    #    direct listing URL), with a per-address status window.
+    for m in ADDRESS_RE.finditer(text_flat):
+        address = f"{m.group(1)} {m.group(2).strip()}"
+        suburb = m.group(3).strip().title()
+        key = f"{address.lower()}|{suburb.lower()}"
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append({
+            "address": address,
+            "suburb": suburb,
+            "status": _status_near(text_flat, m.start(), default_status),
+            "basis": f"alert email: {subject[:80]}" if subject else "alert email",
+        })
+    return out
+
 
 def _clean_url(url):
     return html.unescape(url).rstrip(").,;\"'")

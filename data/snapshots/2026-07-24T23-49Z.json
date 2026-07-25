@@ -1,17 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-25T00:39:38.306920+00:00",
-  "generated_at_sydney": "2026-07-25 10:39 UTC+10:00 (Sydney)",
+  "generated_at": "2026-07-24T23:49:44.517384+00:00",
+  "generated_at_sydney": "2026-07-25 09:49 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 237,
-    "tier1_pass": 221,
-    "new": 91,
-    "price_changed": 7,
+    "total": 238,
+    "tier1_pass": 222,
+    "new": 96,
+    "price_changed": 8,
     "sold": 0,
-    "under_offer": 1,
     "withdrawn": 0
   },
   "listings": [
@@ -6958,9 +6957,6 @@
       "suburb": "Glebe",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=43+lombard+street+glebe",
       "source": "domain_search",
-      "price_guide_text": "$1,275,000",
-      "price_min": 1275000,
-      "price_max": 1275000,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -7011,8 +7007,10 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-07-25",
-      "prior_price_text": "$1,050,000",
-      "change_flag": "PRICE_CHANGED",
+      "price_guide_text": "$1,050,000",
+      "price_min": 1050000,
+      "price_max": 1050000,
+      "change_flag": "UNCHANGED",
       "days_on_market": 30,
       "lat": -33.87794179999999,
       "lon": 151.1863776
@@ -10335,7 +10333,8 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "prior_price_text": "$1,550,000",
+      "change_flag": "PRICE_CHANGED",
       "days_on_market": 22,
       "lat": -33.9046486,
       "lon": 151.1854059
@@ -10535,48 +10534,44 @@
       "price_min": 2100000,
       "price_max": 2100000,
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 64,
-          "supermarket": 327,
-          "pool": 1287,
-          "park": 143,
-          "restaurants": 141
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -10584,9 +10579,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.9054147,
-      "lon": 151.1867246
+      "change_flag": "NEW"
     },
     {
       "address": "8/23 Durham St",
@@ -10597,48 +10590,44 @@
       "price_min": 850000,
       "price_max": 850000,
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 188,
-          "supermarket": 170,
-          "pool": 800,
-          "park": 150,
-          "restaurants": 157
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -10646,9 +10635,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.9052546,
-      "lon": 151.1419657
+      "change_flag": "NEW"
     },
     {
       "address": "55 Hay Street",
@@ -10659,48 +10646,44 @@
       "price_min": 2150000,
       "price_max": 2150000,
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 267,
-          "supermarket": 214,
-          "pool": 1087,
-          "park": 81,
-          "restaurants": 259
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -10708,9 +10691,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.8853336,
-      "lon": 151.1606414
+      "change_flag": "NEW"
     },
     {
       "address": "605N/4 Mandible Street",
@@ -10718,27 +10699,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=605n%2F4+mandible+street+alexandria",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 57,
-          "supermarket": 223,
-          "pool": 31,
-          "park": 299,
-          "restaurants": 91
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -10746,21 +10721,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -10768,9 +10745,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.903978,
-      "lon": 151.2016629
+      "change_flag": "NEW"
     },
     {
       "address": "41 Donnelly Street",
@@ -10778,27 +10753,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=41+donnelly+street+balmain",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 291,
-          "supermarket": 353,
-          "pool": 389,
-          "park": 106,
-          "restaurants": 295
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -10806,21 +10775,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -10828,9 +10799,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.8606926,
-      "lon": 151.1830789
+      "change_flag": "NEW"
     },
     {
       "address": "109 Mitchell Street",
@@ -10838,27 +10807,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+mitchell+street+glebe",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 57,
-          "supermarket": 192,
-          "pool": 540,
-          "park": 228,
-          "restaurants": 81
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -10866,21 +10829,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -10888,9 +10853,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.8816069,
-      "lon": 151.1899754
+      "change_flag": "NEW"
     },
     {
       "address": "21 Ferry Road",
@@ -10901,48 +10864,44 @@
       "price_min": 1600000,
       "price_max": 1600000,
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 113,
-          "supermarket": 112,
-          "pool": 640,
-          "park": 71,
-          "restaurants": 88
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -10950,9 +10909,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.8763499,
-      "lon": 151.1855476
+      "change_flag": "NEW"
     },
     {
       "address": "15/181-187 Missenden road",
@@ -10963,48 +10920,44 @@
       "price_min": 1200000,
       "price_max": 1200000,
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 109,
-          "supermarket": 99,
-          "pool": 533,
-          "park": 155,
-          "restaurants": 57
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -11012,9 +10965,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
-      "lat": -33.8926554,
-      "lon": 151.1827959
+      "change_flag": "NEW"
     },
     {
       "address": "404/2 Foundry Street",
@@ -12853,7 +12804,8 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "prior_price_text": "$1,900,000",
+      "change_flag": "PRICE_CHANGED",
       "days_on_market": 1
     },
     {
@@ -15071,6 +15023,9 @@
       "suburb": "Camperdown",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=25%2F124-126+parramatta+road+camperdown",
       "source": "domain_search",
+      "price_guide_text": "$1,180,000",
+      "price_min": 1180000,
+      "price_max": 1180000,
       "catchments": {
         "transport": null,
         "supermarket": null,
@@ -15117,14 +15072,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "price_guide_text": "$1,180,000",
-      "price_min": 1180000,
-      "price_max": 1180000,
-      "change_flag": "UNDER_OFFER",
-      "days_on_market": 0,
-      "departed_on": "2026-07-25",
-      "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Pyrmont NSW 2009, Glebe NSW 2037, Balmain NSW"
+      "change_flag": "NEW"
     },
     {
       "address": "3/27 Gordon Street",
@@ -15180,8 +15128,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "2/45 Henry Street",
@@ -15237,8 +15184,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "130 Chapel Street",
@@ -15294,8 +15240,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "9/162 Victoria Road",
@@ -15351,8 +15296,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     }
   ]
 }

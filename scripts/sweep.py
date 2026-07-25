@@ -43,9 +43,45 @@ import render as render_mod    # noqa: E402
 
 SYD_TZ = dt.timezone(dt.timedelta(hours=10))   # AEST; AEDT (+11) Oct-Apr
 
+# Flags that mean "off the market" - such a listing lives in the dashboard's
+# Withdrawn/sold tab and is excluded from the active counts. UNDER_OFFER sits
+# here too: an under-offer property is not actionable, though it can return
+# (deals fall through), so the merge below lets a genuinely re-listed property
+# be revived by a bookmarklet click or a manual re-mark - never by a stale
+# alert email re-read.
+GONE_FLAGS = ("SOLD", "UNDER_OFFER", "WITHDRAWN")
+
+# Map a harvest/bookmarklet 'listing_status' value onto a change_flag.
+STATUS_TO_FLAG = {"sold": "SOLD", "under_offer": "UNDER_OFFER", "withdrawn": "WITHDRAWN"}
+
 
 def now_sydney():
     return dt.datetime.now(dt.timezone.utc).astimezone(SYD_TZ)
+
+
+def apply_listing_status(l, today):
+    """If a harvested record carries listing_status (set by the bookmarklet's
+    banner read, or by Claude enrichment during a sweep), convert it to the
+    matching change_flag. 'on_market' clears a previous departure flag (the
+    page itself is the freshest evidence the property is live again).
+    Returns True if the record's flag was changed by the status."""
+    status = (l.get("listing_status") or "").strip().lower()
+    if not status:
+        return False
+    flag = STATUS_TO_FLAG.get(status)
+    if flag:
+        if l.get("change_flag") != flag:
+            l["change_flag"] = flag
+            l["departed_on"] = l.get("departed_on") or today
+            l.setdefault("status_source", "sweep")  # caller may overwrite (e.g. bookmarklet)
+            return True
+        return False
+    if status == "on_market" and l.get("change_flag") in GONE_FLAGS:
+        l["change_flag"] = "UNCHANGED"
+        l.pop("departed_on", None)
+        l["relisted_on"] = today
+        return True
+    return False
 
 
 def listing_key(lst):
@@ -110,7 +146,7 @@ def diff_and_flag(new_listings, prior_data, today):
     for k, old in prior.items():
         if k in seen_keys:
             continue
-        if old.get("change_flag") in ("WITHDRAWN", "SOLD"):
+        if old.get("change_flag") in GONE_FLAGS:
             old["last_seen"] = old.get("last_seen", today)
             carried.append(old)
             continue
@@ -161,14 +197,32 @@ def merge_incremental(new_scored, prior_listings, today):
     matches, not the full current field, so we MUST NOT infer withdrawals from
     absence. We union the new listings onto the existing watchlist: add NEW ones,
     update price/open-home changes on existing ones, and leave everything else
-    untouched (preserving status/notes). WITHDRAWN/SOLD are not auto-detected in
-    this mode - they come from a later staleness check or Adam's manual marking."""
+    untouched (preserving status/notes). Departures (SOLD/UNDER_OFFER/WITHDRAWN)
+    come from three explicit sources, never from absence: (a) sold-alert emails
+    (gmail_fetch.apply_departures), (b) the bookmarklet's status-banner read
+    (listing_status on the incoming record), and (c) Adam's manual marking in
+    the drawer. A record already flagged gone is NEVER resurrected by a re-read
+    alert email (the 3-day IMAP window re-serves pre-sale alerts); only an
+    explicit listing_status='on_market' from a fresh bookmarklet page read (or
+    a manual re-mark) revives it."""
     merged = {listing_key(l): l for l in prior_listings}
     for l in new_scored:
         k = listing_key(l)
         old = merged.get(k)
         l.setdefault("first_seen", today)
         l["last_seen"] = today
+        incoming_status = (l.get("listing_status") or "").strip().lower()
+        if old is not None and old.get("change_flag") in GONE_FLAGS:
+            # The watchlist says this one is gone. A stale alert email cannot
+            # bring it back - but a bookmarklet click on a live page can.
+            if incoming_status == "on_market":
+                old["change_flag"] = "UNCHANGED"
+                old.pop("departed_on", None)
+                old["relisted_on"] = today
+                old["last_seen"] = today
+            else:
+                old["last_seen"] = today
+            continue
         if old is None:
             l["change_flag"] = "NEW"
         else:
@@ -196,6 +250,9 @@ def merge_incremental(new_scored, prior_listings, today):
                 l["days_on_market"] = (dt.date.fromisoformat(today) - fs).days
             except Exception:
                 l["days_on_market"] = None
+        # A departure read from the incoming record itself (bookmarklet banner /
+        # Claude sweep enrichment) takes effect on the way in.
+        apply_listing_status(l, today)
         merged[k] = l
     return list(merged.values())
 
@@ -239,14 +296,22 @@ def is_empty_listing(l):
     return True
 
 
-def build_counts(active):
+def build_counts(listings):
+    """Header counts. Takes the FULL listing set (active + departed): the
+    active-market counts (total/tier1_pass/new/price_changed) are computed over
+    the active subset, while sold/under_offer/withdrawn count the departed
+    records themselves. (The old version was handed the pre-filtered active
+    list, so sold/withdrawn could never be non-zero - fixed with the
+    sold-detection work, Jul 2026.)"""
+    active = [l for l in listings if l.get("change_flag") not in GONE_FLAGS]
     return {
         "total": len(active),
         "tier1_pass": sum(1 for l in active if l.get("tier1", {}).get("pass")),
         "new": sum(1 for l in active if l.get("change_flag") == "NEW"),
         "price_changed": sum(1 for l in active if l.get("change_flag") == "PRICE_CHANGED"),
-        "sold": sum(1 for l in active if l.get("change_flag") == "SOLD"),
-        "withdrawn": sum(1 for l in active if l.get("change_flag") == "WITHDRAWN"),
+        "sold": sum(1 for l in listings if l.get("change_flag") == "SOLD"),
+        "under_offer": sum(1 for l in listings if l.get("change_flag") == "UNDER_OFFER"),
+        "withdrawn": sum(1 for l in listings if l.get("change_flag") == "WITHDRAWN"),
     }
 
 
@@ -293,6 +358,10 @@ def main(argv):
         # Full-snapshot mode: a complete sweep of the field; absence => departed.
         prior = load_latest_snapshot(snap_dir)
         active, carried = diff_and_flag(listings, prior, today)
+        # Explicit per-listing status from the harvest (Claude read the page's
+        # sold/under-offer banner during enrichment) overrides presence-derived flags.
+        for l in active:
+            apply_listing_status(l, today)
 
     # (3) notes
     carry_notes(active + carried, os.path.join(DATA, "notes.json"))
@@ -302,7 +371,7 @@ def main(argv):
     carried = [l for l in carried if not is_empty_listing(l)]
 
     # (4) assemble + write
-    all_listings = active + [c for c in carried if c.get("change_flag") in ("WITHDRAWN", "SOLD")]
+    all_listings = active + [c for c in carried if c.get("change_flag") in GONE_FLAGS]
     out = {
         "schema_version": 1,
         "generated_at": syd.astimezone(dt.timezone.utc).isoformat(),
@@ -313,7 +382,7 @@ def main(argv):
         "target_area": ("Inner West: Zetland through Dulwich Hill, plus Drummoyne "
                         "north of Victoria Road (decision #15). Manly/Northern "
                         "Beaches excluded (decision #6)."),
-        "counts": build_counts(active),
+        "counts": build_counts(all_listings),
         "listings": all_listings,
     }
     os.makedirs(snap_dir, exist_ok=True)

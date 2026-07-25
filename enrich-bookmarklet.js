@@ -620,6 +620,86 @@
   }
   if (features.size) data.features = Array.from(features).slice(0, 40);
 
+  // ---- Market-status banner (Sold / Under offer / Withdrawn) --------------
+  // Read the listing's OWN sale status so the dashboard can migrate it to the
+  // Withdrawn/sold tab. Deliberately conservative: Domain/REA pages embed
+  // "recently sold nearby" modules, so we key ONLY off listing-specific signals
+  // (URL path, this listing's JSON-LD offer availability, short badge/tag
+  // elements, the price display, and the very top of the page) - never a raw
+  // page-source grep for the word "sold".
+  (function () {
+    let status = null, basis = null;
+
+    // 1) URL path: REA serves sold listings under /sold/; Domain does not, but
+    //    keep the check generic - it is the single strongest signal when present.
+    if (/\/sold\//i.test(location.pathname)) {
+      status = 'sold'; basis = 'URL path (/sold/)';
+    }
+
+    // 2) This listing's JSON-LD: schema.org offers.availability SoldOut.
+    if (!status) {
+      document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
+        if (status) return;
+        try {
+          const push = o => {
+            if (!o || typeof o !== 'object' || status) return;
+            const offers = Array.isArray(o.offers) ? o.offers[0] : o.offers;
+            const avail = offers && String(offers.availability || '');
+            if (/soldout/i.test(avail)) { status = 'sold'; basis = 'JSON-LD offers.availability'; }
+            if (Array.isArray(o['@graph'])) o['@graph'].forEach(push);
+          };
+          const j = JSON.parse(s.textContent);
+          (Array.isArray(j) ? j : [j]).forEach(push);
+        } catch (e) {}
+      });
+    }
+
+    // 3) Short badge/tag/banner elements ("SOLD", "Under offer", "Sold at
+    //    auction 12 Jul"). Only elements with SHORT text qualify, so a
+    //    description paragraph mentioning "sold" can never match.
+    if (!status) {
+      const badgeSel = '[data-testid*="tag"], [data-testid*="status"], [data-testid*="banner"], ' +
+        '[class*="tag"], [class*="Tag"], [class*="badge"], [class*="Badge"], ' +
+        '[class*="banner"], [class*="Banner"], [class*="status"], [class*="Status"]';
+      const els = document.querySelectorAll(badgeSel);
+      for (let i = 0; i < els.length && !status; i++) {
+        const t = (els[i].textContent || '').trim();
+        if (!t || t.length > 45) continue;
+        if (/^sold\b/i.test(t) || /\bsold\s+(?:at\s+auction|prior\s+to\s+auction|on\s+\d)/i.test(t)) {
+          status = 'sold'; basis = 'page badge: "' + t.slice(0, 40) + '"';
+        } else if (/\bunder\s+(?:offer|contract)\b|\bsale\s+pending\b/i.test(t)) {
+          status = 'under_offer'; basis = 'page badge: "' + t.slice(0, 40) + '"';
+        }
+      }
+    }
+
+    // 4) The price display itself often carries the state.
+    if (!status && data.price_guide_text) {
+      if (/^\s*sold\b/i.test(data.price_guide_text)) {
+        status = 'sold'; basis = 'price display';
+      } else if (/\bunder\s+(?:offer|contract)\b/i.test(data.price_guide_text)) {
+        status = 'under_offer'; basis = 'price display';
+      }
+    }
+
+    // 5) Top-of-page text: the hero banner region only (first 1,500 chars),
+    //    with SOLD anchored to a sale phrase or the very start of the page.
+    if (!status) {
+      const top = (document.body.innerText || '').substring(0, 1500);
+      if (/^\s*sold\b/i.test(top) || /\bsold\s+(?:at\s+auction|prior\s+to\s+auction|on\s+\d)/i.test(top)) {
+        status = 'sold'; basis = 'page banner text';
+      } else if (/\bunder\s+(?:offer|contract)\b|\bsale\s+pending\b/i.test(top)) {
+        status = 'under_offer'; basis = 'page banner text';
+      } else if (/no\s+longer\s+(?:available|advertised|on\s+the\s+market)|listing\s+has\s+been\s+removed|this\s+property\s+is\s+not\s+available/i.test(top)) {
+        status = 'withdrawn'; basis = 'page banner text';
+      }
+    }
+
+    data.listing_status = status || 'on_market';
+    if (basis) data.listing_status_basis = basis;
+    console.log('Market status:', data.listing_status, basis ? '(' + basis + ')' : '(no departure signal)');
+  })();
+
   // Show what we found
   console.log('Extracted data:', data);
 
