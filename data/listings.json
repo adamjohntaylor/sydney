@@ -293,22 +293,22 @@
       "address": "404/42C Formosa Street",
       "suburb": "Drummoyne",
       "postcode": "2047",
-      "property_type": "apartment",
+      "property_type": "apartment / unit / flat",
       "beds": 3,
       "baths": 2,
       "parking": 2,
       "internal_m2": 180,
-      "price_guide_text": "$1,795,000",
+      "price_guide_text": "$1,795,000 (hidden guide)",
       "price_min": 1795000,
       "price_max": 1795000,
       "agent": "Joe Kanaan",
       "agency": "The Agency Inner West",
-      "cover_image": "https://rimh2.domainstatic.com.au/Rb_giX2_DCoRJXi70YecEdowSUY=/1680x720/filters:format(webp):quality(85)/2019953713_12_1_250428_063904-w3873-h2583",
+      "cover_image": "https://rimh2.domainstatic.com.au/1-NOwvufCvH-f-EhocsZIO8ZTsg=/1680x720/filters:format(webp):quality(85)/2020757988_6_1_260630_113529-w4134-h2756",
       "open_homes": [
         "2026-06-27T11:00:00+10:00"
       ],
       "auction": null,
-      "description": "Elevated apartment with far-reaching district vistas panning to the iconic Sydney city skyline; open-plan with relaxed balcony. Large 180 m2 internal.",
+      "description": "Property DescriptionSophisticated and Airy Apartment with City Views in Vibrant SettingStep into this beautifully presented apartment offering modern living and breathtaking views from an elevated vantage point.The open-plan design showcases quality contemporary details, while spilling to a relaxed balcony where you'll enjoy far-reaching district vistas panning to the iconic Sydney city skyline. Whether you're sipping on a morning coffee outdoors or opening everything up forRead more",
       "outlook": {
         "class": "city",
         "basis": "Elevated, far-reaching district vistas to the Sydney city skyline."
@@ -345,13 +345,13 @@
         "pass": true
       },
       "tier2": {
-        "score": 64,
+        "score": 67,
         "leading": "living-area scale",
         "components": {
           "outlook": 13.5,
           "living_area": 20.0,
           "warehouse_character": 0,
-          "light_aspect": 3.3,
+          "light_aspect": 6.6,
           "pool": 9,
           "parks": 9,
           "restaurants": 9
