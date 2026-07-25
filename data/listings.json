@@ -12753,7 +12753,7 @@
       "address": "175 Denison Street",
       "suburb": "Newtown",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=175+denison+street+newtown",
-      "source": "domain_search",
+      "source": "domain",
       "lat": -33.8938869,
       "lon": 151.1762302,
       "catchments": {
@@ -12775,7 +12775,7 @@
         "budget": null,
         "property_type": null,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12784,8 +12784,7 @@
         "unverified": [
           "budget",
           "property_type",
-          "accessibility",
-          "bedrooms"
+          "accessibility"
         ],
         "pass": true
       },
@@ -12807,7 +12806,11 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-24",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "beds": 2,
+      "baths": 1,
+      "price_guide_text": "Auction - No price guide offered"
     },
     {
       "address": "9/18 Drummoyne Avenue",
