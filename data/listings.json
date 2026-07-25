@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 232,
-    "tier1_pass": 217,
-    "new": 87,
+    "total": 231,
+    "tier1_pass": 216,
+    "new": 86,
     "price_changed": 6,
     "sold": 5,
     "under_offer": 1,
@@ -11653,68 +11653,6 @@
       "first_seen": "2026-07-11",
       "last_seen": "2026-07-11",
       "change_flag": "NEW"
-    },
-    {
-      "address": "204/110 Elliott Street",
-      "suburb": "Balmain",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=204%2F110+elliott+street+balmain",
-      "source": "domain_search",
-      "price_guide_text": "$880,000",
-      "price_min": 880000,
-      "price_max": 880000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 118,
-          "supermarket": 541,
-          "pool": 34,
-          "park": 38,
-          "restaurants": 325
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
-      "change_flag": "NEW",
-      "lat": -33.8558631,
-      "lon": 151.1692663
     },
     {
       "address": "74/30-40 George Street",
