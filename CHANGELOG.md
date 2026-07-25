@@ -7,6 +7,21 @@ of how the code got to its current shape.
 
 ---
 
+## 25 July 2026 (pm) — Startup defaults + read-only messaging on the shared Pages copy
+
+- **Startup defaults**: the dashboard now opens with **"Tier 1 pass only" ticked** and the
+  beds filter at **3+** (Adam's request). Both remain ordinary controls — untick/reset to see
+  the full field, and note the filters apply on every tab including Sold / under offer /
+  withdrawn.
+- **Shared-copy detection** (`index.html`): the page now distinguishes three run modes —
+  localhost (full write access via `serve.py`), `file://` (notes download), and **everything
+  else = the published GitHub Pages snapshot**, where there is no backend at all. On the
+  Pages copy: a dismissible amber banner explains it is the shared read-only snapshot; the
+  header mode reads "(shared copy — read-only)"; and every save path (notes, market status,
+  delete) returns a friendly "only Adam can make changes, on his home system" message instead
+  of a failed `/api/...` request. Decision: family write-back (GitHub-API or Worker backend)
+  was offered and **declined** — the family copy stays read-only by design.
+
 ## 25 July 2026 — Sold / under-offer detection (bookmarklet banner read + sold-alert email ingestion)
 
 Until now nothing in the automated workflow ever set `change_flag` to `SOLD` — the

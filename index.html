@@ -183,6 +183,15 @@ const T1_LABELS = {budget:"Budget &le;$2.2M", property_type:"Property type", acc
 const CATCH_LABELS = {transport:"Transport", supermarket:"Supermarket", pool:"Pool", park:"Park", restaurants:"Restaurants"};
 
 let DATA = {listings:[]}, NOTES = {}, SERVED = false, TAB = "all";
+// Where is this copy running?
+//  - localhost / 127.0.0.1  -> Adam's home system with serve.py: full write access.
+//  - file://                -> Adam's file mode: notes download as notes.json.
+//  - anything else (github.io Pages) -> the SHARED STATIC COPY: read-only. All
+//    save attempts get a friendly explanation instead of a broken request.
+const IS_LOCAL = ["localhost","127.0.0.1"].includes(location.hostname);
+const FILE_MODE = location.protocol === "file:";
+const STATIC_COPY = !IS_LOCAL && !FILE_MODE;
+const STATIC_MSG = "This is the shared, read-only copy of the dashboard — only Adam can make changes, on his home system. Tell him what you'd like noted or updated and it will appear here after his next push.";
 
 function fmtPrice(l){
   if(l.price_guide_text) return l.price_guide_text;
@@ -228,11 +237,22 @@ async function load(){
   buildSuburbFilter();
   render();
   header();
+  if(STATIC_COPY && !document.getElementById("staticNotice")){
+    const b=document.createElement("div");
+    b.id="staticNotice";
+    b.className="bg-amber-50 border border-amber-200 text-amber-900 rounded p-3 mb-4 text-sm";
+    b.innerHTML=`<b>Shared read-only copy.</b> You're viewing the published snapshot of the watchlist.
+      Notes, status changes and sold-marking can only be saved by Adam on his home system —
+      tell him what you'd like recorded and it will appear here after his next update.
+      <button class="ml-2 underline" onclick="this.parentElement.remove()">dismiss</button>`;
+    document.getElementById("banner").prepend(b);
+  }
 }
 
 function header(){
   const g = DATA.generated_at_sydney || "not yet swept";
-  document.getElementById("lastRefreshed").textContent = "Last sweep: "+g + (SERVED?"  (served)":"  (file mode)");
+  const mode = STATIC_COPY ? "  (shared copy — read-only)" : (SERVED ? "  (served)" : "  (file mode)");
+  document.getElementById("lastRefreshed").textContent = "Last sweep: "+g + mode;
   const c = DATA.counts||{};
   const hc = document.getElementById("headerCounts");
   const chip=(n,t,cls)=> n?`<span class="pill ${cls}">${n} ${t}</span>`:"";
@@ -451,6 +471,10 @@ function openDrawer(k){
 async function setMarketStatus(l){
   const msg=document.getElementById("marketFlagMsg");
   const flag=document.getElementById("marketFlag").value;
+  if(STATIC_COPY){
+    msg.textContent=STATIC_MSG;
+    return;
+  }
   if(!SERVED){
     msg.textContent="Needs the local server — run python scripts/serve.py and open http://localhost:8777/.";
     return;
@@ -466,6 +490,10 @@ async function setMarketStatus(l){
 
 async function deleteListing(l){
   const msg=document.getElementById("deleteMsg");
+  if(STATIC_COPY){
+    msg.textContent=STATIC_MSG;
+    return;
+  }
   if(!SERVED){
     msg.textContent="Deletion needs the local server — run python scripts/serve.py and open http://localhost:8777/.";
     return;
@@ -483,6 +511,10 @@ async function deleteListing(l){
 function closeDrawer(){document.getElementById("overlay").classList.add("hidden");document.getElementById("drawer").classList.add("translate-x-full");}
 
 async function saveNote(l){
+  if(STATIC_COPY){
+    document.getElementById("noteSaved").textContent=STATIC_MSG;
+    return;
+  }
   const k=key(l);
   const status=document.getElementById("noteStatus").value;
   const note=document.getElementById("noteText").value;
