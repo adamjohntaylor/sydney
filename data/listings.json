@@ -640,12 +640,12 @@
       "baths": 2,
       "parking": 2,
       "internal_m2": 273,
-      "price_guide_text": "$2,050,000 (hidden guide)",
-      "price_min": 2050000,
-      "price_max": 2050000,
+      "price_guide_text": "$1,900,000 (hidden guide)",
+      "price_min": 1900000,
+      "price_max": 1900000,
       "agent": "Adrienne Williams",
       "agency": "BresicWhitney Balmain",
-      "cover_image": "https://rimh2.domainstatic.com.au/gEvIS2-YeHladFWJPs4sRCkm6oM=/1680x720/filters:format(webp):quality(85)/2020876929_1_1_260528_050939-w2560-h1708",
+      "cover_image": "https://rimh2.domainstatic.com.au/9SnB6G0aQkdNQtFVfmod-fWyNB0=/1680x720/filters:format(webp):quality(85)/2020876929_1_1_260721_020748-w4498-h3000",
       "open_homes": [],
       "auction": "2026-06-27T12:45:00+10:00",
       "description": "Property DescriptionLuxury residence with wrap-around entertaining & bay viewsOverlooking the greenery of Drummoyne Oval, Taplin Park and the boat-filled waters of Five Dock Bay, this oversized residence within 'The Bayswater' delivers an exceptional sense of space, privacy and resort-style living. One of only eight residences within the tightly held building, it combines expansive indoor/outdoor entertaining with sweeping water outlooks and beautifully manicured surroundsRead more",
@@ -703,7 +703,17 @@
       "last_seen": "2026-06-21",
       "change_flag": "NEW",
       "lat": -33.8515261,
-      "lon": 151.1519194
+      "lon": 151.1519194,
+      "features": [
+        "Air conditioning",
+        "Built in wardrobes",
+        "First Home Buyers",
+        "Gym",
+        "Intercom",
+        "Outdoor Entertaining",
+        "Secure Parking",
+        "Water Views"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-151387764",
