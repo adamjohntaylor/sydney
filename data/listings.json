@@ -15207,11 +15207,11 @@
     {
       "address": "2/45 Henry Street",
       "suburb": "Lilyfield",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F45+henry+street+lilyfield",
-      "source": "domain_search",
-      "price_guide_text": "$1,000,000",
-      "price_min": 1000000,
-      "price_max": 1000000,
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2/45+henry+street+lilyfield",
+      "source": "domain",
+      "price_guide_text": "Guide $1,275,000",
+      "price_min": 1275000,
+      "price_max": 1275000,
       "catchments": {
         "transport": null,
         "supermarket": null,
@@ -15225,7 +15225,7 @@
         "budget": true,
         "property_type": null,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "transport": null,
         "supplies": null,
         "location": true,
@@ -15234,7 +15234,6 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
           "transport",
           "supplies"
         ],
@@ -15259,7 +15258,11 @@
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "beds": 2,
+      "baths": 1,
+      "parking": 1
     },
     {
       "address": "130 Chapel Street",
