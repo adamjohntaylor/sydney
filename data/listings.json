@@ -6,11 +6,11 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 234,
-    "tier1_pass": 219,
-    "new": 88,
+    "total": 233,
+    "tier1_pass": 218,
+    "new": 87,
     "price_changed": 7,
-    "sold": 3,
+    "sold": 4,
     "under_offer": 1,
     "withdrawn": 0
   },
@@ -263,7 +263,7 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8610161,
       "lon": 151.1667228,
       "features": [
@@ -282,7 +282,10 @@
         "Window Treatments"
       ],
       "status": "sold-without-us",
-      "note": ""
+      "note": "",
+      "departed_on": "2026-07-25",
+      "status_source": "bookmarklet",
+      "status_basis": "page badge: \"Sold by private treaty 8 Jul 2026\""
     },
     {
       "url": "https://www.domain.com.au/404-42c-formosa-street-drummoyne-nsw-2047-2020757988",
