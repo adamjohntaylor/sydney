@@ -552,7 +552,9 @@
         "Secure Parking",
         "Balcony / Deck",
         "Garden / Courtyard"
-      ]
+      ],
+      "status": "interested",
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
