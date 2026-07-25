@@ -6,9 +6,9 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 231,
+    "total": 232,
     "tier1_pass": 216,
-    "new": 86,
+    "new": 87,
     "price_changed": 6,
     "sold": 5,
     "under_offer": 1,
@@ -15369,6 +15369,86 @@
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
       "days_on_market": 0
+    },
+    {
+      "url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
+      "address": "203/24B George Street",
+      "suburb": "Leichhardt",
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-25",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2040",
+      "cover_image": "https://rimh2.domainstatic.com.au/BgjEdVkDHcGrWfX_g5FlcVNAqQc=/1680x720/filters:format(webp):quality(85)/2020935272_1_1_260624_061705-w3334-h2213",
+      "beds": 1,
+      "baths": 1,
+      "parking": 1,
+      "property_type": "apartment / unit / flat",
+      "description": "Property DescriptionModern Luxury 1-Bedroom Living in the Heart of LeichhardtPositioned within a boutique architecturally designed complex, this stylish one-bedroom apartment delivers a sophisticated Inner West lifestyle defined by comfort, convenience and contemporary design. Thoughtfully crafted to maximise space and natural light, the home features a functional open-plan layout complemented by quality finishes and a dedicated study nook, ideal for modern livingRead more",
+      "features": [
+        "Ensuite",
+        "Air conditioning",
+        "Floorboards",
+        "Alarm System",
+        "Intercom",
+        "Built in wardrobes",
+        "Study",
+        "Balcony / Deck",
+        "Broadband internet access"
+      ],
+      "price_guide_text": "Contact Agent",
+      "source": "domain",
+      "lat": -33.8884165,
+      "lon": 151.1486149,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 178,
+          "supermarket": 375,
+          "pool": 491,
+          "park": 208,
+          "restaurants": 182
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": false,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [
+          "bedrooms"
+        ],
+        "unverified": [
+          "budget",
+          "accessibility"
+        ],
+        "pass": false
+      },
+      "tier2": {
+        "score": 45,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 6.6,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false
     }
   ]
 }
