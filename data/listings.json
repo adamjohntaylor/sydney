@@ -6,11 +6,11 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 233,
-    "tier1_pass": 218,
+    "total": 232,
+    "tier1_pass": 217,
     "new": 87,
     "price_changed": 6,
-    "sold": 4,
+    "sold": 5,
     "under_offer": 1,
     "withdrawn": 0
   },
@@ -1994,7 +1994,7 @@
       "suburb": "Camperdown",
       "url": "https://www.domain.com.au/89-denison-street-camperdown-nsw-2050-2020912353",
       "source": "domain",
-      "price_guide_text": "$1,700,000",
+      "price_guide_text": "$1,700,000 (hidden guide)",
       "price_min": 1700000,
       "price_max": 1700000,
       "catchments": {
@@ -2045,7 +2045,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-23",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8909539,
       "lon": 151.174934,
@@ -2058,7 +2058,10 @@
       "outlook": {
         "class": "leafy",
         "basis": "Auto-detected from description"
-      }
+      },
+      "departed_on": "2026-07-25",
+      "status_source": "bookmarklet",
+      "status_basis": "page badge: \"Sold by private treaty 15 Jul 2026\""
     },
     {
       "address": "1/136 Livingstone Road",
