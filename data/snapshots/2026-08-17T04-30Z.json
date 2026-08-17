@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-17T04:31:58.366342+00:00",
-  "generated_at_sydney": "2026-08-17 14:31 UTC+10:00 (Sydney)",
+  "generated_at": "2026-08-17T04:30:57.253102+00:00",
+  "generated_at_sydney": "2026-08-17 14:30 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 240,
-    "tier1_pass": 223,
-    "new": 86,
-    "price_changed": 6,
+    "total": 241,
+    "tier1_pass": 224,
+    "new": 97,
+    "price_changed": 7,
     "sold": 6,
     "under_offer": 1,
     "withdrawn": 0
@@ -5887,6 +5887,83 @@
       }
     },
     {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150907668",
+      "address": "602/11 Wentworth Street",
+      "suburb": "Glebe",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "change_flag": "NEW",
+      "open_homes": [],
+      "postcode": "2037",
+      "cover_image": "https://i2.au.reastatic.net/310x175/1442e6a1fffba5d67076ca8b5f134289f60ea6964fe6f7b1f15a126a0cfc6a1b/image.jpg",
+      "property_type": "apartment",
+      "description": "Tired of high-rise living? Check out this seven-story \"The Foundry, West End Residences\", located in an unbeatable area, facing the skyline of Sydney, the site sits within an area provided with all types of services undergoing transformation. This corner set apartment gives you the perfect place to live. Wake up to warm sunlight on your face and a cool harbourside breeze drifting through your private balcony, you can unwind and take in breathtaking cityscape views. \n\n- 3-bedroom w/ built-in robes and main w/ bathtub,  plus a dedicated study-ideal for flexible living space.\n- 3 generous North Facing beds, offering sunshine on your bed-a true personal sanctuary\n- Oak engineered floorboards throughout hallway and living dinning area\n- Floor-to-ceiling glass sliders for in/outdoor flow\n- Sunlit open layout extends to glorious balcony\n- Steps to common rooftop garden located right next to the apartment. Enjoy  a peaceful greenery escape and a stunning skyline without paying any extra fee.\n- Two car spacege w/ storage cage\n- Wentworth park across the road & close to light rail\n- Steps to waterfront areas, local cafes, Broadway Shopping Centre, UTS, and Chinatown. \n- Strata size 151sqm\n-  Council $333| Water $200 | Strata $3,507 p/q\n\nPositioned directly opposite the Sydney Fish Market new development, this spacious,unbeatable value,three-bedroom plus study apartment offers an exceptional lifestyle opportunity at a highly accessible price point. This is a rare opportunity to acquire a substantial apartment in a tightly held pocket, priced well below neighbouring Pyrmont and Haymarket equivalents. Investors, owner-occupiers, and downsizers are encouraged to inspect without delay.\n\nVistor parking available via  Stirling St\n\nDisclaimer: All information provided in this advertisement is obtained from sources believed to be reliable. However, accuracy cannot be guaranteed, and prospective buyers are advised to carry out their own investigations during inspections. Thank you for ",
+      "features": [
+        "3",
+        "2",
+        "151m²",
+        "1"
+      ],
+      "price_guide_text": "Contact Agent",
+      "source": "realestate",
+      "lat": -33.8802978,
+      "lon": 151.193307,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 366,
+          "supermarket": 318,
+          "pool": 609,
+          "park": 125,
+          "restaurants": 90
+        },
+        "geocoded": true
+      },
+      "outlook": {
+        "class": "water",
+        "basis": "Auto-detected from description"
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 76,
+        "leading": "outlook: water",
+        "components": {
+          "outlook": 30.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 11.0,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "beds": 3,
+      "baths": 2,
+      "parking": 2
+    },
+    {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
       "address": "B503/89 Bay Street",
       "suburb": "Glebe",
@@ -10605,7 +10682,8 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
+      "prior_price_text": "$850k",
+      "change_flag": "PRICE_CHANGED",
       "days_on_market": 45
     },
     {
@@ -14514,48 +14592,44 @@
       "price_min": 1800000,
       "price_max": 1800000,
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 375,
-          "supermarket": 504,
-          "pool": 707,
-          "park": 133,
-          "restaurants": 146
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14564,9 +14638,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.8992203,
-      "lon": 151.166198
+      "days_on_market": 1
     },
     {
       "address": "30 Francis Street",
@@ -14574,27 +14646,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=30+francis+street+enmore",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 183,
-          "supermarket": 263,
-          "pool": 385,
-          "park": 307,
-          "restaurants": 186
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -14602,21 +14668,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14625,9 +14693,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.901206,
-      "lon": 151.1711005
+      "days_on_market": 1
     },
     {
       "address": "6 Junior Street",
@@ -14635,27 +14701,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6+junior+street+leichhardt",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 138,
-          "supermarket": 399,
-          "pool": 503,
-          "park": 255,
-          "restaurants": 103
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -14663,21 +14723,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14686,9 +14748,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.8878061,
-      "lon": 151.1541986
+      "days_on_market": 1
     },
     {
       "address": "17 Pearl Street",
@@ -14696,27 +14756,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+pearl+street+newtown",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 112,
-          "supermarket": 306,
-          "pool": 617,
-          "park": 103,
-          "restaurants": 296
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -14724,21 +14778,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14747,9 +14803,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.9048213,
-      "lon": 151.1769625
+      "days_on_market": 1
     },
     {
       "address": "109/155 Missenden Road",
@@ -14757,27 +14811,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F155+missenden+road+newtown",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 55,
-          "supermarket": 168,
-          "pool": 475,
-          "park": 73,
-          "restaurants": 51
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -14785,21 +14833,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14808,9 +14858,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.8919109,
-      "lon": 151.1827073
+      "days_on_market": 1
     },
     {
       "address": "79 Marian Street",
@@ -14818,27 +14866,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=79+marian+street+enmore",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 270,
-          "supermarket": 226,
-          "pool": 476,
-          "park": 147,
-          "restaurants": 254
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -14846,21 +14888,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14869,9 +14913,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.9011364,
-      "lon": 151.1733104
+      "days_on_market": 1
     },
     {
       "address": "307/5 Regent Street",
@@ -14879,27 +14921,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=307%2F5+regent+street+petersham",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 79,
-          "supermarket": 273,
-          "pool": 467,
-          "park": 283,
-          "restaurants": 122
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -14907,21 +14943,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14930,9 +14968,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.894758,
-      "lon": 151.1559585
+      "days_on_market": 1
     },
     {
       "address": "245 Enmore Road",
@@ -14940,27 +14976,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=245+enmore+road+enmore",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 127,
-          "supermarket": 222,
-          "pool": 462,
-          "park": 290,
-          "restaurants": 115
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -14968,21 +14998,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -14991,9 +15023,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.900443,
-      "lon": 151.1701393
+      "days_on_market": 1
     },
     {
       "address": "29 Laura Street",
@@ -15001,27 +15031,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29+laura+street+newtown",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 141,
-          "supermarket": 246,
-          "pool": 465,
-          "park": 99,
-          "restaurants": 306
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -15029,21 +15053,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -15052,9 +15078,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.9054984,
-      "lon": 151.1752035
+      "days_on_market": 1
     },
     {
       "address": "13/11-15 Renwick Street",
@@ -15062,27 +15086,21 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F11-15+renwick+street+leichhardt",
       "source": "domain_search",
       "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 45,
-          "supermarket": 141,
-          "pool": 659,
-          "park": 148,
-          "restaurants": 49
-        },
-        "geocoded": true
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": true,
-        "supplies": true,
+        "transport": null,
+        "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -15090,21 +15108,23 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "transport",
+          "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 14,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -15113,9 +15133,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "lat": -33.88774480000001,
-      "lon": 151.1569984
+      "days_on_market": 1
     },
     {
       "address": "1430/20 Gadigal Avenue",
@@ -15660,8 +15678,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "14 Reynolds Avenue",
@@ -15721,8 +15738,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "922 Bourke Street",
@@ -15782,8 +15798,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "9/91-93 Campbell Street",
@@ -15843,8 +15858,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "56/22 Buchanan Street",
@@ -15904,8 +15918,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "10 Red Lion Street",
@@ -15967,8 +15980,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "710/7 Metters Street",
@@ -16030,8 +16042,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "221/1 Phillip Street",
@@ -16091,8 +16102,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "3/14 McDonald Street",
@@ -16152,8 +16162,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     },
     {
       "address": "73/20 Eve Street",
@@ -16207,8 +16216,7 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "NEW"
     }
   ]
 }
