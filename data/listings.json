@@ -6,11 +6,11 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 236,
-    "tier1_pass": 219,
-    "new": 82,
+    "total": 235,
+    "tier1_pass": 218,
+    "new": 81,
     "price_changed": 6,
-    "sold": 9,
+    "sold": 10,
     "under_offer": 1,
     "withdrawn": 0
   },
@@ -1078,7 +1078,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "url": "https://www.domain.com.au/115-sydenham-road-marrickville-nsw-2204-2020927030",
       "cover_image": "https://rimh2.domainstatic.com.au/cCS_H77pNGhPBoLKKp-aCfWMM3I=/1680x720/filters:format(webp):quality(85)/2020927030_1_1_260618_081113-w3797-h2533",
       "property_type": "house",
@@ -1086,9 +1086,12 @@
       "beds": 4,
       "baths": 1,
       "parking": 2,
-      "price_guide_text": "Guide $2,000,000",
-      "price_min": 2000000,
-      "price_max": 2000000
+      "price_guide_text": "$1,990,000 (hidden guide)",
+      "price_min": 1990000,
+      "price_max": 1990000,
+      "departed_on": "2026-08-17",
+      "status_source": "bookmarklet",
+      "status_basis": "page badge: \"Sold by private treaty 23 Jul 2026\""
     },
     {
       "address": "24/1 Gibbens Street",
