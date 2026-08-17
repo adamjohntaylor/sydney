@@ -3558,9 +3558,9 @@
       "suburb": "Petersham",
       "url": "https://www.domain.com.au/110-palace-street-petersham-nsw-2049-2020880275",
       "source": "domain",
-      "price_guide_text": "$1,800,000",
-      "price_min": 1800000,
-      "price_max": 1800000,
+      "price_guide_text": "$1,450,000 (hidden guide)",
+      "price_min": 1450000,
+      "price_max": 1450000,
       "catchments": {
         "transport": true,
         "supermarket": true,
