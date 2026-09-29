@@ -94,7 +94,42 @@ pages per click (`DASHBOARD_STATUS_PROBE=0` disables), `POST /api/verify-status
 domain.com.au, so the fetch path itself was exercised only through the
 classifier tests + live WebFetch reads; the first real run is Adam's next Refresh.
 
-**Adam-side:** nothing to install. The first few sweeps will retire a large backlog
+**Same day, third pass — Domain blocks the scripted probe; reader moved into a
+Chrome extension.** Adam's first Refresh with the probe returned `HTTP 403 / 429
+bot challenge` for all 60 pages: Domain serves a real browser but refuses
+scripted GETs even with a browser UA. Also found en route: the two "sold" emails
+the Gmail leg saw were REA promotional "Just sold" mailings (Enmore, Flemington),
+so the email route had nothing for 12/29 Cook St — the only evidence of that sale
+is the page itself. Changes:
+- `extension/` (MV3, unpacked): `content.js` runs on every Domain / REA page and
+  reads the same signals as `status_probe.classify` from the live DOM (title
+  `Sold <address> on <date>`, JSON-LD `SoldOut`, `/sold/` URL, "Under offer"
+  badge ≤45 chars, "no longer available", page-not-found; Domain for-sale
+  search result count; sold-listings count + latest date + first listing href);
+  `background.js` runs **Verify**: `GET /api/status-worklist` → open each URL in
+  a background tab → wait for the content script's report (25 s timeout) → for a
+  zero-result search also open `/sold-listings/?street=` and apply the 60-day
+  historical-sale guard → redirect-away-from-id ⇒ withdrawn → close tab → 1.5 s
+  pause → `POST /api/apply-status` in batches of 20; casual browsing posts only
+  departures. `popup.html/js` = page-count input, "include every active
+  listing", progress bar, verdict log. Tested: `content.js` against jsdom
+  fixtures for all nine page kinds (innerText→textContent fallback added);
+  `node --check` on all scripts.
+- `serve.py`: `STATUS_PROBE_ON_REFRESH` now defaults **off**
+  (`DASHBOARD_STATUS_PROBE=1` re-enables); `/api/apply-status` no longer
+  rewrites listings.json / snapshots when no posted check matched a tracked
+  listing (casual browsing of untracked pages is a no-op).
+- `sweep.apply_status_checks`: a `blocked` / `error` / `timeout` / `captcha`
+  verdict is "reader refused", not "page inconclusive" — the record is left
+  untouched (no `status_checked_on`, no failure count) so it is retried. The 120
+  records the two blocked Refresh runs had stamped as checked-today were reset
+  in `listings.json` by hand.
+- RUNBOOK step A8 rewritten around the extension; `extension/README.md` has the
+  install steps (chrome://extensions → Developer mode → Load unpacked →
+  `dashboard\extension`).
+
+**Adam-side:** load the extension once (see `extension/README.md`), serve the
+dashboard, click Verify with the page count set to 300 to clear the backlog. The first few sweeps will retire a large backlog
 (231 candidates on 29 Sep) — run `sweep.py --worklist 80` or ask Claude for a
 verification pass to clear it faster. There is still no `sydney-property-sweep`
 scheduled task on the account (checked 29 Sep), so sweeps remain interactive.

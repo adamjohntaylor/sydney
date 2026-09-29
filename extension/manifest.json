@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Sydney Dashboard Verifier",
+  "version": "1.0",
+  "description": "Reads the market status of tracked Domain / realestate.com.au listings in your own browser and posts it to the local properties dashboard (localhost:8777).",
+  "permissions": ["tabs", "storage", "alarms"],
+  "host_permissions": [
+    "https://www.domain.com.au/*",
+    "https://www.realestate.com.au/*",
+    "http://localhost:8777/*",
+    "http://127.0.0.1:8777/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.domain.com.au/*", "https://www.realestate.com.au/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Sydney dashboard: verify listing status",
+    "default_popup": "popup.html"
+  }
+}

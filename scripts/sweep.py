@@ -295,6 +295,12 @@ def apply_status_checks(checks, listings, today, source=STATUS_SOURCE_CHECK):
         before = target.get("change_flag")
 
         if status == "inconclusive":
+            raw = (chk.get("listing_status") or "").strip().lower()
+            if raw in ("blocked", "error", "timeout", "captcha"):
+                # The reader was refused, not the page: leave the record
+                # untouched so the next pass (or another reader) retries it.
+                details.append(f"not checked ({raw}): {url} {basis}".rstrip())
+                continue
             n = int(target.get("status_check_failures") or 0) + 1
             target["status_check_failures"] = n
             target["status_checked_on"] = today

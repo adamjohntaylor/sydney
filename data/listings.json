@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T06:44:01.584541+00:00",
-  "generated_at_sydney": "2026-09-29 16:44 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T06:57:14.446796+00:00",
+  "generated_at_sydney": "2026-09-29 16:57 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 238,
-    "tier1_pass": 221,
-    "new": 77,
+    "total": 222,
+    "tier1_pass": 212,
+    "new": 70,
     "price_changed": 6,
-    "sold": 12,
+    "sold": 26,
     "under_offer": 1,
-    "withdrawn": 3
+    "withdrawn": 5
   },
   "listings": [
     {
@@ -87,7 +87,7 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8531312,
       "lon": 151.1759746,
       "status": "interested",
@@ -104,8 +104,11 @@
         "step_free": false,
         "lift": true
       },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 19 Aug 2026",
+      "sold_date": "2026-08-19"
     },
     {
       "url": "https://www.domain.com.au/16-162-166-victoria-road-drummoyne-nsw-2047-2020632210",
@@ -363,11 +366,13 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8518083,
       "lon": 151.1544237,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page not found"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150961828",
@@ -469,7 +474,7 @@
       "baths": 2,
       "parking": 1,
       "internal_m2": 149,
-      "price_guide_text": "$1,898,000 (hidden guide)",
+      "price_guide_text": "$1.79M",
       "price_min": 1898000,
       "price_max": 1898000,
       "agent": "Lily Tsui",
@@ -529,7 +534,7 @@
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "lat": -33.881512,
       "lon": 151.1924243,
@@ -561,7 +566,6 @@
       ],
       "status": "interested",
       "note": "",
-      "status_check_failures": 1,
       "status_checked_on": "2026-09-29"
     },
     {
@@ -638,11 +642,14 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8566229,
       "lon": 151.1610806,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: redirected to https://www.domain.com.au/property-profile/706-3-cary-street-drummoyne-nsw-2047",
+      "sold_url": "https://www.domain.com.au/property-profile/706-3-cary-street-drummoyne-nsw-2047"
     },
     {
       "url": "https://www.domain.com.au/1-48-50-bayswater-street-drummoyne-nsw-2047-2020876929",
@@ -1021,7 +1028,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
       "cover_image": "https://rimh2.domainstatic.com.au/d8Zl_9w1xDjM0emAFfn5Otxek8g=/1680x720/filters:format(webp):quality(85)/2020928696_1_1_260619_032942-w4600-h3067",
@@ -1030,7 +1037,7 @@
       "beds": 3,
       "baths": 1,
       "parking": 1,
-      "price_guide_text": "$620,000 (hidden guide)",
+      "price_guide_text": "$450,000",
       "price_min": 620000,
       "price_max": 620000,
       "status": "",
@@ -1039,7 +1046,6 @@
         "step_free": false,
         "lift": null
       },
-      "status_check_failures": 1,
       "status_checked_on": "2026-09-29"
     },
     {
@@ -1165,7 +1171,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "url": "https://www.domain.com.au/24-1-gibbens-street-camperdown-nsw-2050-2020926921",
       "cover_image": "https://rimh2.domainstatic.com.au/Zy0Imd7g1mm5li1tMSIo69Zrka0=/1680x720/filters:format(webp):quality(85)/2020926921_1_1_260618_073133-w2048-h1365",
       "property_type": "apartment / unit / flat",
@@ -1178,8 +1184,11 @@
       "note": "",
       "price_min": 1800000,
       "price_max": 1800000,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 3 Jul 2026",
+      "sold_date": "2026-07-03"
     },
     {
       "address": "4/6 Turner Street",
@@ -1239,7 +1248,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "url": "https://www.domain.com.au/4-6-turner-street-balmain-nsw-2041-2020924899",
       "cover_image": "https://rimh2.domainstatic.com.au/fEAnq7FNlf1vDnXJYEaieerDWe4=/1680x720/filters:format(webp):quality(85)/2020924899_1_1_260618_012456-w2560-h1708",
       "property_type": "apartment / unit / flat",
@@ -1248,8 +1257,11 @@
         "class": "leafy",
         "basis": "Auto-detected from description"
       },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 3 Jul 2026",
+      "sold_date": "2026-07-03"
     },
     {
       "address": "3/12 George Street",
@@ -1306,7 +1318,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "cover_image": "https://rimh2.domainstatic.com.au/z5qbxzftPARbJiLywvJ7x5K0Low=/1680x720/filters:format(webp):quality(85)/2020924292_1_1_260617_112334-w3829-h2554",
       "beds": 2,
@@ -1321,8 +1333,11 @@
       },
       "price_min": 775000,
       "price_max": 775000,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 1 Jul 2026",
+      "sold_date": "2026-07-01"
     },
     {
       "address": "103/12 Marsden Street",
@@ -1381,7 +1396,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "cover_image": "https://rimh2.domainstatic.com.au/mdRaVKFvujTRID-UGGMZkTwvrcM=/1680x720/filters:format(webp):quality(85)/2020923696_1_1_260617_075142-w2560-h1707",
       "property_type": "apartment / unit / flat",
@@ -1396,8 +1411,11 @@
       "parking": 1,
       "price_min": 775000,
       "price_max": 775000,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 16 Jul 2026",
+      "sold_date": "2026-07-16"
     },
     {
       "address": "25 Callan Street",
@@ -1522,7 +1540,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "url": "https://www.domain.com.au/19-day-street-marrickville-nsw-2204-2020921673",
       "cover_image": "https://rimh2.domainstatic.com.au/NKhVUXSODoNc-vTQvrJxCqWuons=/1680x720/filters:format(webp):quality(85)/2020921673_1_1_260617_021711-w3748-h2502",
       "property_type": "house",
@@ -1539,8 +1557,11 @@
         "step_free": false,
         "lift": null
       },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 29 Jun 2026",
+      "sold_date": "2026-06-29"
     },
     {
       "address": "27/486-488 Illawarra Road",
@@ -1600,7 +1621,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.9182219,
       "lon": 151.146241,
@@ -1610,8 +1631,11 @@
       "parking": 1,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionRiverview LivingPositioned at the rear of the building and on the top floor, apartment 27 captures a sense of privacy and elevation that sets it apart from the rest of the block. Inside, the layout is bright and well considered, with a generous living area filled with natural light flowing easily to a neat kitchen and bathroom. The bedroom, complete with a built-in robe, provides a comfortable retreat at the endRead more",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold at auction 2 Jul 2026",
+      "sold_date": "2026-07-02"
     },
     {
       "address": "13/30 Ewart street",
@@ -1671,7 +1695,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.9143321,
       "lon": 151.1410818,
@@ -1685,8 +1709,11 @@
         "class": "leafy",
         "basis": "Auto-detected from description"
       },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 23 Sep 2026",
+      "sold_date": "2026-09-23"
     },
     {
       "address": "38/20 Pyrmont Bridge Road",
@@ -1742,7 +1769,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "url": "https://www.domain.com.au/38-20-pyrmont-bridge-road-camperdown-nsw-2050-2020920092",
       "cover_image": "https://rimh2.domainstatic.com.au/1YzE7uMpnRqP3S4tCV1gzAGG1CU=/1680x720/filters:format(webp):quality(85)/2020920092_1_1_260616_064508-w2560-h1708",
       "property_type": "apartment / unit / flat",
@@ -1753,8 +1780,11 @@
       "price_guide_text": "$1,400,000 (hidden guide)",
       "price_min": 1400000,
       "price_max": 1400000,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 30 Jul 2026",
+      "sold_date": "2026-07-30"
     },
     {
       "address": "3 Blairgowrie Street",
@@ -1809,7 +1839,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.8960572,
       "lon": 151.1400035,
@@ -1828,8 +1858,11 @@
         "step_free": false,
         "lift": null
       },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold at auction 11 Jul 2026",
+      "sold_date": "2026-07-11"
     },
     {
       "address": "2712/6 Grove Street",
@@ -1887,7 +1920,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.9011379,
       "lon": 151.1391897,
@@ -1901,8 +1934,11 @@
         "class": "city",
         "basis": "Auto-detected from description"
       },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 25 Jun 2026",
+      "sold_date": "2026-06-25"
     },
     {
       "address": "1009/1 Sterling Circuit",
@@ -1962,7 +1998,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.8847408,
       "lon": 151.1763129,
@@ -1972,8 +2008,11 @@
       "parking": 1,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionContemporary One-Bedroom Residence in the Acclaimed 'Trio' BuildingPositioned within the premier 'Trio' complex in the City Quarter precinct, this oversized one-bedroom apartment offers a sophisticated urban lifestyle defined by light and scale. Designed for effortless modern living, the residence features high ceilings and floor-to-ceiling glass that creates a seamless transition between the open-plan interior and a private outdoor setting.The layout isRead more",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 1 Jul 2026",
+      "sold_date": "2026-07-01"
     },
     {
       "address": "3/58 Warren Road",
@@ -2032,15 +2071,18 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.9165354,
       "lon": 151.1507858,
       "cover_image": "https://rimh2.domainstatic.com.au/CGDVVQoP-DZIksuTBJNAew0h0NE=/1680x720/filters:format(webp):quality(85)/2020915167_1_1_260615_121749-w4134-h2756",
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionFully Renovated Top-Floor Apartment in Prime Marrickville LocationBathed in natural light and enjoying a coveted top-floor position, this beautifully renovated two-bedroom apartment offers stylish, low-maintenance living in a secure boutique complex. Showcasing fresh contemporary interiors and an abundance of all-day sunshine, this impressive residence is ideally positioned just moments from Marrickville's vibrant cafés, restaurants, shopping precinctRead more",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 15 Jul 2026",
+      "sold_date": "2026-07-15"
     },
     {
       "address": "89 Denison Street",
@@ -2183,9 +2225,7 @@
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionThoughtfully updated Art Deco retreat with garageCapturing the classic grandeur of the Art Deco era, this character-laden two-bedder sits within an intimate Art Deco block of just four and has been beautifully brought forward by a considered renovation. Steps to the village and beside the popular Valentinas Sydney Right, it's central to the best of Marrickville. - Renovated apartment in boutique block of 4- Split system a/c, ceiling fans andRead more",
       "status": "interested",
-      "note": "",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "note": ""
     },
     {
       "address": "130 Epsom Road",
@@ -2255,9 +2295,7 @@
       "change_flag": "UNCHANGED",
       "status": "interested",
       "note": "Median Price 825,000",
-      "days_on_market": 8,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 8
     },
     {
       "address": "9 Metters Street",
@@ -2320,9 +2358,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 11,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 11
     },
     {
       "address": "4/18 Leichhardt Street",
@@ -2395,9 +2431,7 @@
         "Secure Parking",
         "Built in wardrobes",
         "Intercom"
-      ],
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      ]
     },
     {
       "address": "9/70-74 Wilson Street",
@@ -2455,7 +2489,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-22",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.8959429,
       "lon": 151.1823277,
@@ -2465,15 +2499,18 @@
       "parking": 1,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionBoutique style meets urban cool in NewtownBoutique style meets urban cool in this bright and spacious mid-floor apartment between the village charms of Erskineville and the buzz of King Street. Set to the quiet rear of a secure double-brick block of 11, the two-bedroom apartment's clean lines, immaculate interiors and oversized layout make an ideal low-maintenance home with secure parking on title. The first time available since purchasedRead more",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 1 Jul 2026",
+      "sold_date": "2026-07-01"
     },
     {
       "address": "802/6 Paul Street",
       "suburb": "Zetland",
       "url": "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513",
       "source": "domain",
-      "price_guide_text": "$2,050,000",
+      "price_guide_text": "$1.07m",
       "price_min": 2050000,
       "price_max": 2050000,
       "catchments": {
@@ -2521,7 +2558,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.9082667,
@@ -2538,7 +2575,6 @@
         "step_free": true,
         "lift": true
       },
-      "status_check_failures": 1,
       "status_checked_on": "2026-09-29"
     },
     {
@@ -2620,9 +2656,7 @@
       "outlook": {
         "class": "leafy",
         "basis": "Auto-detected from description"
-      },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      }
     },
     {
       "address": "8 Park Street",
@@ -2686,9 +2720,7 @@
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 3,
       "lat": -33.8986306,
-      "lon": 151.1893394,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1893394
     },
     {
       "address": "201/1 Brightwell Lane",
@@ -2751,9 +2783,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9046486,
-      "lon": 151.1854059,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1854059
     },
     {
       "address": "94/155 Missenden Road",
@@ -2816,9 +2846,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8919109,
-      "lon": 151.1827073,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1827073
     },
     {
       "address": "58/30 Gadigal Avenue",
@@ -2881,9 +2909,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9072562,
-      "lon": 151.2083325,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.2083325
     },
     {
       "address": "9/63-69 Lord Street",
@@ -2956,9 +2982,7 @@
         "basis": "Auto-detected from description"
       },
       "status": "rejected",
-      "note": "",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "note": ""
     },
     {
       "address": "1/17-19 Westbourne Street",
@@ -3021,9 +3045,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8481897,
-      "lon": 151.1511299,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1511299
     },
     {
       "address": "113 Albermarle Street",
@@ -3096,9 +3118,7 @@
       "accessibility": {
         "step_free": false,
         "lift": null
-      },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      }
     },
     {
       "address": "26C Morrissey Road",
@@ -3231,9 +3251,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8986562,
-      "lon": 151.1986227,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1986227
     },
     {
       "address": "14/19-21 Myra Road",
@@ -3312,9 +3330,7 @@
       "lon": 151.1365369,
       "price_guide_text": "$900,000 (hidden guide)",
       "price_min": 900000,
-      "price_max": 900000,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "price_max": 900000
     },
     {
       "address": "325/4 Elger Street",
@@ -3377,9 +3393,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 3
     },
     {
       "address": "13/36-46 Briggs Street",
@@ -3442,9 +3456,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 3
     },
     {
       "address": "2H Wentworth Park Road",
@@ -3507,9 +3519,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 3
     },
     {
       "address": "04/222 Flood St Allen Street",
@@ -3570,9 +3580,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 3
     },
     {
       "address": "63 Newman Street",
@@ -3633,9 +3641,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 3
     },
     {
       "address": "110 Palace Street",
@@ -3771,9 +3777,7 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 3
     },
     {
       "address": "405/15 Ralph Street",
@@ -3855,9 +3859,7 @@
         "Balcony / Deck"
       ],
       "lat": -33.915632,
-      "lon": 151.1995559,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1995559
     },
     {
       "address": "13/81-83 Bay Street",
@@ -3918,9 +3920,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8810727,
-      "lon": 151.194184,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.194184
     },
     {
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=186c+victoria+road+marrickville",
@@ -4052,9 +4052,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9105268,
-      "lon": 151.155044,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.155044
     },
     {
       "address": "3/151-153 Illawarra Road",
@@ -4117,9 +4115,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9075816,
-      "lon": 151.159391,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.159391
     },
     {
       "address": "8/69-71 Parramatta Road",
@@ -4182,9 +4178,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8867771,
-      "lon": 151.1780471,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1780471
     },
     {
       "address": "17/142 Stanmore Road",
@@ -4245,9 +4239,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8976959,
-      "lon": 151.1653129,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1653129
     },
     {
       "address": "88 Ryan Street",
@@ -4372,9 +4364,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8963356,
-      "lon": 151.1763244,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1763244
     },
     {
       "address": "16/16 Hosking Street",
@@ -4435,9 +4425,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8594284,
-      "lon": 151.1929074,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1929074
     },
     {
       "address": "121/23 Corunna Road",
@@ -4500,9 +4488,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8889233,
-      "lon": 151.1708687,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1708687
     },
     {
       "address": "1006/5 Joynton Avenue",
@@ -4565,9 +4551,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9072907,
-      "lon": 151.2069994,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.2069994
     },
     {
       "address": "8/51 College Street",
@@ -4630,9 +4614,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.853338,
-      "lon": 151.1539776,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1539776
     },
     {
       "address": "81 Garden Street",
@@ -4695,9 +4677,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8981717,
-      "lon": 151.1976681,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1976681
     },
     {
       "address": "12/58 Bayswater Street",
@@ -4837,9 +4817,7 @@
       "price_min": 14499000,
       "price_max": 14499000,
       "status": "rejected",
-      "note": "",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/206-26-cadigal-avenue-pyrmont-nsw-2009-2020929217",
@@ -4921,9 +4899,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.domain.com.au/208-1-9-pyrmont-bridge-road-pyrmont-nsw-2009-2020693826",
@@ -4995,9 +4971,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
@@ -5065,9 +5039,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.domain.com.au/704-18-20-allen-street-pyrmont-nsw-2009-2020761520",
@@ -5281,9 +5253,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
@@ -5364,9 +5334,7 @@
       },
       "warehouse_character": false,
       "status": "interested",
-      "note": "",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
@@ -5462,9 +5430,7 @@
       "accessibility": {
         "step_free": false,
         "lift": null
-      },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      }
     },
     {
       "url": "https://www.domain.com.au/12-29-cook-street-glebe-nsw-2037-2020656242",
@@ -5550,9 +5516,7 @@
       },
       "warehouse_character": false,
       "status": "interested",
-      "note": "",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "note": ""
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264",
@@ -5624,9 +5588,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
@@ -5708,9 +5670,7 @@
       },
       "beds": 2,
       "baths": 2,
-      "parking": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "parking": 1
     },
     {
       "url": "https://www.realestate.com.au/sold/property-unit-nsw-glebe-150824100",
@@ -5874,9 +5834,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648",
@@ -5952,9 +5910,7 @@
       "warehouse_character": false,
       "beds": 2,
       "baths": 2,
-      "parking": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "parking": 1
     },
     {
       "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
@@ -6036,9 +5992,7 @@
       "accessibility": {
         "step_free": false,
         "lift": null
-      },
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      }
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
@@ -6108,9 +6062,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151024140",
@@ -6280,9 +6232,7 @@
       },
       "warehouse_character": false,
       "status": "interested",
-      "note": "",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "note": ""
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
@@ -6358,9 +6308,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
@@ -6436,9 +6384,7 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "warehouse_character": false
     },
     {
       "address": "1/19-21 Larkin Street",
@@ -6499,9 +6445,7 @@
       "first_seen": "2026-06-24",
       "last_seen": "2026-06-24",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 0
     },
     {
       "address": "3/136 Livingstone Road",
@@ -6561,9 +6505,7 @@
       "last_seen": "2026-06-25",
       "change_flag": "NEW",
       "lat": -33.9050047,
-      "lon": 151.1534694,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1534694
     },
     {
       "address": "6/2-18 Newman Street",
@@ -6625,9 +6567,7 @@
       "last_seen": "2026-06-25",
       "change_flag": "NEW",
       "lat": -33.8983798,
-      "lon": 151.1794356,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1794356
     },
     {
       "address": "9 Burfitt Street",
@@ -6689,9 +6629,7 @@
       "last_seen": "2026-06-25",
       "change_flag": "NEW",
       "lat": -33.8834843,
-      "lon": 151.1490955,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1490955
     },
     {
       "address": "8/14-16 Hercules Street",
@@ -6753,9 +6691,7 @@
       "last_seen": "2026-06-25",
       "change_flag": "NEW",
       "lat": -33.9045288,
-      "lon": 151.1406937,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1406937
     },
     {
       "address": "10A Alice Street",
@@ -6817,9 +6753,7 @@
       "last_seen": "2026-06-25",
       "change_flag": "NEW",
       "lat": -33.9037337,
-      "lon": 151.1788517,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1788517
     },
     {
       "address": "50/84 St Georges Crescent",
@@ -6881,9 +6815,7 @@
       "last_seen": "2026-06-25",
       "change_flag": "NEW",
       "lat": -33.8484569,
-      "lon": 151.1574752,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1574752
     },
     {
       "address": "19/1 Buchanan Street",
@@ -6947,9 +6879,7 @@
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 8,
       "lat": -33.863035,
-      "lon": 151.1805091,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1805091
     },
     {
       "address": "24B George Street",
@@ -7013,9 +6943,7 @@
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 8,
       "lat": -33.888524,
-      "lon": 151.148586,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.148586
     },
     {
       "address": "43 Lombard Street",
@@ -7141,9 +7069,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 8,
       "lat": -33.8797342,
-      "lon": 151.1886337,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1886337
     },
     {
       "address": "222/6 Cowper Street",
@@ -7205,9 +7131,7 @@
       "last_seen": "2026-06-25",
       "change_flag": "NEW",
       "lat": -33.8808517,
-      "lon": 151.1928953,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1928953
     },
     {
       "url": "https://www.domain.com.au/2-61a-albany-road-stanmore-nsw-2048-2020926120?topspot=1",
@@ -7285,9 +7209,7 @@
       },
       "price_guide_text": "$1,800,000 (hidden guide)",
       "price_min": 1800000,
-      "price_max": 1800000,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "price_max": 1800000
     },
     {
       "address": "38 Maida Street",
@@ -7348,9 +7270,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 0
     },
     {
       "address": "15/194 Lawrence Street",
@@ -7413,9 +7333,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 0
     },
     {
       "address": "1/168 George Street",
@@ -7479,9 +7397,7 @@
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 3,
       "lat": -33.9022071,
-      "lon": 151.1845742,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1845742
     },
     {
       "address": "30/49 Henderson Road",
@@ -7544,9 +7460,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 0
     },
     {
       "address": "1201/5 Joynton Avenue",
@@ -7607,9 +7521,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 0
     },
     {
       "address": "11/47 Wharf Road",
@@ -7672,9 +7584,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 2
     },
     {
       "address": "5/121-123 New Canterbury Road",
@@ -7737,9 +7647,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 2
     },
     {
       "address": "16/5 Croydon Street",
@@ -7802,9 +7710,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 2
     },
     {
       "address": "3/45 Upward Street",
@@ -7867,9 +7773,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 2
     },
     {
       "address": "57/20 Eve Street",
@@ -7930,9 +7834,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 2
     },
     {
       "address": "6C Defries Avenue",
@@ -7995,9 +7897,7 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 2
     },
     {
       "address": "19/10 Leichhardt Street",
@@ -8058,9 +7958,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "131 Australia Street",
@@ -8123,9 +8021,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "15/300 Johnston Street",
@@ -8188,9 +8084,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "5 Marlborough Street",
@@ -8251,9 +8145,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "17/480 King Street",
@@ -8314,9 +8206,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "1504/1 Metters Street",
@@ -8377,9 +8267,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "109/76 Mitchell Road",
@@ -8440,9 +8328,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "215/5 Regent Street",
@@ -8505,9 +8391,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "52 Illawarra Road",
@@ -8570,9 +8454,7 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "days_on_market": 1
     },
     {
       "address": "208/28 Zetland Avenue",
@@ -8635,9 +8517,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9072686,
-      "lon": 151.2061881,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.2061881
     },
     {
       "address": "805/28 Zetland Avenue",
@@ -8700,9 +8580,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9072686,
-      "lon": 151.2061881,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.2061881
     },
     {
       "address": "801/6 Ebsworth Street",
@@ -8765,9 +8643,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.905198,
-      "lon": 151.2040634,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.2040634
     },
     {
       "address": "2201/15 Gadigal Avenue",
@@ -8830,9 +8706,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9039819,
-      "lon": 151.2121526,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.2121526
     },
     {
       "address": "422/163 McEvoy Street",
@@ -8893,9 +8767,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9035167,
-      "lon": 151.1937564,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1937564
     },
     {
       "address": "207/72 Macdonald Street",
@@ -8956,9 +8828,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9037631,
-      "lon": 151.1864612,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1864612
     },
     {
       "address": "43 Trafalgar Street",
@@ -9021,9 +8891,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8958881,
-      "lon": 151.1718647,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1718647
     },
     {
       "address": "60 Malakoff Street",
@@ -9086,9 +8954,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9084247,
-      "lon": 151.1563644,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1563644
     },
     {
       "address": "741 Elizabeth Street",
@@ -9151,9 +9017,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9049097,
-      "lon": 151.2055325,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.2055325
     },
     {
       "address": "2/14 Mcdonald Street",
@@ -9216,9 +9080,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8848594,
-      "lon": 151.1581148,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1581148
     },
     {
       "address": "8/401 Marrickville Road",
@@ -9281,9 +9143,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9061076,
-      "lon": 151.1457069,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1457069
     },
     {
       "address": "26/36-50 Taylor Street",
@@ -9344,9 +9204,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8832847,
-      "lon": 151.1742247,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1742247
     },
     {
       "address": "7/1 Gladstone Street",
@@ -9407,9 +9265,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8978328,
-      "lon": 151.1754079,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1754079
     },
     {
       "address": "9/19 Glassop Street",
@@ -9472,9 +9328,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8539273,
-      "lon": 151.1751586,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1751586
     },
     {
       "address": "30 Talfourd Street",
@@ -9535,9 +9389,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8798263,
-      "lon": 151.1877934,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1877934
     },
     {
       "address": "10 Trafalgar Street",
@@ -9600,9 +9452,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8871302,
-      "lon": 151.1696015,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1696015
     },
     {
       "address": "3/8 Dunblane Street",
@@ -9665,9 +9515,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.88833,
-      "lon": 151.1787783,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1787783
     },
     {
       "address": "201/1 Missenden Road",
@@ -9730,9 +9578,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.8864806,
-      "lon": 151.1788573,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1788573
     },
     {
       "address": "16/1-5 Glen Street",
@@ -9858,9 +9704,7 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.88774480000001,
-      "lon": 151.1569984,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "lon": 151.1569984
     },
     {
       "address": "9/14-22 Alberto Street",

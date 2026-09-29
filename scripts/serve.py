@@ -59,7 +59,10 @@ import datetime as dt
 
 # Sweep-time status verification (29 Sep 2026): every Refresh reads the pages of
 # the active listings most likely to have left the market and marks them.
-STATUS_PROBE_ON_REFRESH = os.environ.get("DASHBOARD_STATUS_PROBE", "1") != "0"
+# Default OFF: Domain answers scripted GETs with 403/429 (confirmed 29 Sep 2026).
+# The page reading is done by the Chrome extension in dashboard/extension/
+# (Verify button), which posts to /api/apply-status from the real browser.
+STATUS_PROBE_ON_REFRESH = os.environ.get("DASHBOARD_STATUS_PROBE", "0") == "1"
 STATUS_PROBE_CAP = int(os.environ.get("DASHBOARD_STATUS_PROBE_CAP", str(probe_mod.DEFAULT_CAP)))
 
 SNAP_DIR = os.path.join(DASH_DIR, "data", "snapshots")
@@ -988,6 +991,13 @@ this page and re-drag the button (the code is baked into the link, so it does no
             syd = sweep_mod.now_sydney()
             today = syd.date().isoformat()
             changed, details = sweep_mod.apply_status_checks(checks, listings, today)
+            skipped = sum(1 for d in details if d.startswith(("unmatched", "not checked")))
+            matched = len(checks) - skipped
+            if not matched:
+                # Nothing on the watchlist was touched (e.g. the extension saw a
+                # page we don't track): don't churn listings.json / snapshots.
+                return self._json(200, {"ok": True, "checks": len(checks), "changed": 0,
+                                        "matched": 0, "details": details})
 
             # audit copy (pre-marked applied so Refresh doesn't re-apply it)
             os.makedirs(STATUS_CHECKS_DIR, exist_ok=True)

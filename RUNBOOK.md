@@ -95,21 +95,25 @@ is a self-contained Claude prompt that does exactly this.
    `{"generated_at_sydney": "...", "sweep_provenance": "...", "listings": [ ... ]}`.
 8. **Verify market status of existing stock (mandatory, every sweep — added
    29 Sep 2026).** Alerts are new-only, so nothing above can discover that a
-   listing already on the watchlist has sold or been pulled. **This now runs
-   automatically:** `python scripts\sweep.py --probe` (and the dashboard's
-   **Refresh now**) fetch the pages of the active listings most likely to have
-   left the market (`scripts/status_probe.py`, up to 60 per run, one polite
-   request a second) and mark them from what the page says. For a listing-page
-   URL: Domain's `Sold <address> on <date>` title / "Sold by private treaty"
-   stamp ⇒ SOLD; an "Under offer" badge ⇒ UNDER_OFFER; 404 / "no longer
-   available" / redirect ⇒ WITHDRAWN; REA's move under `/sold/` ⇒ SOLD. For the
-   alert-derived single-address *search* URLs (most of the watchlist): the
+   listing already on the watchlist has sold or been pulled. **The reader is
+   the Chrome extension in `dashboard/extension/`** (install once: see
+   `extension/README.md`). With the dashboard served, click the extension icon →
+   **Verify**: it opens the worklist pages in background tabs of your own Chrome
+   (Domain refuses scripted requests with 403/429 — confirmed 29 Sep 2026 — but
+   serves your browser normally), reads each page's own status, and posts the
+   verdicts to `/api/apply-status`. For a listing-page URL: Domain's
+   `Sold <address> on <date>` title / "Sold by private treaty" stamp ⇒ SOLD; an
+   "Under offer" badge ⇒ UNDER_OFFER; 404 / "no longer available" / redirect
+   away from the listing id ⇒ WITHDRAWN; REA's move under `/sold/` ⇒ SOLD. For
+   the alert-derived single-address *search* URLs (most of the watchlist): the
    for-sale search returning **no exact matches** means the address is gone, and
    the follow-up **sold-listings search** for the same address decides SOLD
-   (sale dated after we first saw it) versus WITHDRAWN. To clear a backlog in
-   one go: `python scripts\status_probe.py --cap 300` or
-   `POST /api/verify-status {"cap": 300}`. Set `DASHBOARD_STATUS_PROBE=0` before
-   starting `serve.py` to turn the Refresh-time probe off.
+   (sale dated after we first saw it) versus WITHDRAWN. Set the page count to
+   300 to clear a backlog in one go. Any sold / under-offer / removed listing
+   page you open while browsing is reported too.
+   *(`scripts/status_probe.py` — the scripted equivalent — is kept but off by
+   default: `DASHBOARD_STATUS_PROBE=1` re-enables it on Refresh, `sweep.py
+   --probe` / `status_probe.py --cap N` run it by hand; expect `blocked`.)*
 
    The manual route below remains for pages the probe reports as `blocked` /
    `unknown` (after 3 such reads a record is flagged `needs_manual_check`): run

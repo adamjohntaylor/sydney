@@ -1,0 +1,165 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/404-42c-formosa-street-drummoyne-nsw-2047-2020757988",
+      "listing_status": "not_found",
+      "status_basis": "chrome: page not found",
+      "address": "404/42C Formosa Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150961828",
+      "listing_status": "unknown",
+      "status_basis": "chrome: no recognisable status signal",
+      "address": "60/24 Buchanan Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: redirected to https://www.domain.com.au/property-profile/706-3-cary-street-drummoyne-nsw-2047",
+      "final_url": "https://www.domain.com.au/property-profile/706-3-cary-street-drummoyne-nsw-2047",
+      "price_guide_text": "$1.93m",
+      "address": "706/3 Cary Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 19 Aug 2026",
+      "sold_date": "2026-08-19",
+      "address": "20/10 Gow Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1.79M",
+      "address": "1001/2 Cowper Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$450,000",
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/24-1-gibbens-street-camperdown-nsw-2050-2020926921",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 3 Jul 2026",
+      "sold_date": "2026-07-03",
+      "address": "24/1 Gibbens Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/4-6-turner-street-balmain-nsw-2041-2020924899",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 3 Jul 2026",
+      "sold_date": "2026-07-03",
+      "address": "4/6 Turner Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/3-12-george-street-marrickville-nsw-2204-2020924292",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 1 Jul 2026",
+      "sold_date": "2026-07-01",
+      "address": "3/12 George Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/103-12-marsden-street-camperdown-nsw-2050-2020923696",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 16 Jul 2026",
+      "sold_date": "2026-07-16",
+      "address": "103/12 Marsden Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/19-day-street-marrickville-nsw-2204-2020921673",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 29 Jun 2026",
+      "sold_date": "2026-06-29",
+      "address": "19 Day Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/27-486-488-illawarra-road-marrickville-nsw-2204-2020921544",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold at auction 2 Jul 2026",
+      "sold_date": "2026-07-02",
+      "address": "27/486-488 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/13-30-ewart-street-marrickville-nsw-2204-2020921226",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 23 Sep 2026",
+      "sold_date": "2026-09-23",
+      "address": "13/30 Ewart street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/38-20-pyrmont-bridge-road-camperdown-nsw-2050-2020920092",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 30 Jul 2026",
+      "sold_date": "2026-07-30",
+      "address": "38/20 Pyrmont Bridge Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/3-blairgowrie-street-dulwich-hill-nsw-2203-2020919249",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold at auction 11 Jul 2026",
+      "sold_date": "2026-07-11",
+      "address": "3 Blairgowrie Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/2712-6-grove-street-dulwich-hill-nsw-2203-2020917227",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 25 Jun 2026",
+      "sold_date": "2026-06-25",
+      "address": "2712/6 Grove Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/1009-1-sterling-circuit-camperdown-nsw-2050-2020915502",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 1 Jul 2026",
+      "sold_date": "2026-07-01",
+      "address": "1009/1 Sterling Circuit",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/3-58-warren-road-marrickville-nsw-2204-2020915167",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 15 Jul 2026",
+      "sold_date": "2026-07-15",
+      "address": "3/58 Warren Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/9-70-74-wilson-street-newtown-nsw-2042-2020929417",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 1 Jul 2026",
+      "sold_date": "2026-07-01",
+      "address": "9/70-74 Wilson Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1.07m",
+      "address": "802/6 Paul Street",
+      "suburb": "Zetland"
+    }
+  ]
+}
