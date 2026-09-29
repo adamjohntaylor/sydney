@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 239,
-    "tier1_pass": 222,
-    "new": 78,
+    "total": 238,
+    "tier1_pass": 221,
+    "new": 77,
     "price_changed": 6,
     "sold": 12,
     "under_offer": 1,
-    "withdrawn": 2
+    "withdrawn": 3
   },
   "listings": [
     {
@@ -794,7 +794,7 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.855651,
       "lon": 151.1702111,
       "status": "interested",
@@ -803,7 +803,9 @@
         "2",
         "1",
         "Lift (listed)"
-      ]
+      ],
+      "departed_on": "2026-09-29",
+      "status_source": "manual"
     },
     {
       "url": "https://www.domain.com.au/21-59-wrights-road-drummoyne-nsw-2047-2020691952",
