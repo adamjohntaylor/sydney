@@ -1,0 +1,186 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16a+andreas+street+petersham",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-11",
+      "resolved_url": "https://www.domain.com.au/16a-andreas-street-petersham-nsw-2049-2021019410",
+      "sold_date": "2026-08-11",
+      "address": "16a Andreas Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=83+cary+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-19",
+      "resolved_url": "https://www.domain.com.au/83-cary-street-leichhardt-nsw-2040-2021019254",
+      "sold_date": "2026-08-19",
+      "address": "83 Cary Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+wemyss+street+enmore",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-21",
+      "resolved_url": "https://www.domain.com.au/9-wemyss-street-enmore-nsw-2042-2021019113",
+      "sold_date": "2026-08-21",
+      "address": "9 Wemyss Street",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=30+francis+street+enmore",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-22",
+      "resolved_url": "https://www.domain.com.au/30-francis-street-enmore-nsw-2042-2021018866",
+      "sold_date": "2026-08-22",
+      "address": "30 Francis Street",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6+junior+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-06",
+      "resolved_url": "https://www.domain.com.au/6-junior-street-leichhardt-nsw-2040-2021018737",
+      "sold_date": "2026-08-06",
+      "address": "6 Junior Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+pearl+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-20",
+      "resolved_url": "https://www.domain.com.au/17-pearl-street-newtown-nsw-2042-2021018045",
+      "sold_date": "2026-08-20",
+      "address": "17 Pearl Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F155+missenden+road+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-07",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2f155+missenden+road+newtown",
+      "resolved_url": "https://www.domain.com.au/109-155-missenden-road-newtown-nsw-2042-2021017776",
+      "sold_date": "2026-08-07",
+      "address": "109/155 Missenden Road",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=79+marian+street+enmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/79-marian-street-enmore-nsw-2042-2021017725",
+      "address": "79 Marian Street",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=307%2F5+regent+street+petersham",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=307%2f5+regent+street+petersham",
+      "resolved_url": "https://www.domain.com.au/307-5-regent-street-petersham-nsw-2049-2021017312",
+      "address": "307/5 Regent Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=245+enmore+road+enmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/245-enmore-road-enmore-nsw-2042-2021017281",
+      "address": "245 Enmore Road",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29+laura+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-04",
+      "resolved_url": "https://www.domain.com.au/29-laura-street-newtown-nsw-2042-2021017151",
+      "sold_date": "2026-08-04",
+      "address": "29 Laura Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F11-15+renwick+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-14",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f11-15+renwick+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/13-11-15-renwick-street-leichhardt-nsw-2040-2021016655",
+      "sold_date": "2026-08-14",
+      "address": "13/11-15 Renwick Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1430%2F20+gadigal+avenue+zetland",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1430%2f20+gadigal+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "1430/20 Gadigal Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2F2+drummoyne+avenue+drummoyne",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2f2+drummoyne+avenue+drummoyne",
+      "resolved_url": "https://www.domain.com.au/7-2-drummoyne-avenue-drummoyne-nsw-2047-2020991924",
+      "sold_date": "2026-07-24",
+      "address": "7/2 Drummoyne Avenue",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F27+gordon+street+petersham",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f27+gordon+street+petersham",
+      "resolved_url": "https://www.domain.com.au/3-27-gordon-street-petersham-nsw-2049-2020990790",
+      "sold_date": "2026-08-01",
+      "address": "3/27 Gordon Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2/45+henry+street+lilyfield",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
+      "resolved_url": "https://www.domain.com.au/2-45-henry-street-lilyfield-nsw-2040-2020995185",
+      "sold_date": "2026-08-01",
+      "address": "2/45 Henry Street",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+chapel+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/130-chapel-street-marrickville-nsw-2204-2020645359",
+      "address": "130 Chapel Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F162+victoria+road+drummoyne",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f162+victoria+road+drummoyne",
+      "resolved_url": "https://www.domain.com.au/9-162-victoria-road-drummoyne-nsw-2047-2020883813",
+      "address": "9/162 Victoria Road",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 5 Aug 2026",
+      "sold_date": "2026-08-05",
+      "address": "203/24B George Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F23+durham+st+dulwich+hill",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f23+durham+st+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "8/23 Durham St",
+      "suburb": "Dulwich Hill"
+    }
+  ]
+}

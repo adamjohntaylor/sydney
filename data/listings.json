@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T07:11:02.076322+00:00",
-  "generated_at_sydney": "2026-09-29 17:11 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T07:12:31.839551+00:00",
+  "generated_at_sydney": "2026-09-29 17:12 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 79,
-    "tier1_pass": 73,
-    "new": 23,
+    "total": 64,
+    "tier1_pass": 59,
+    "new": 22,
     "price_changed": 0,
-    "sold": 137,
+    "sold": 150,
     "under_offer": 2,
-    "withdrawn": 36
+    "withdrawn": 38
   },
   "listings": [
     {
@@ -11262,8 +11262,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 45
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 45,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f23+durham+st+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "55 Hay Street",
@@ -15436,10 +15442,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.889977,
-      "lon": 151.1514294
+      "lon": 151.1514294,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-11",
+      "resolved_url": "https://www.domain.com.au/16a-andreas-street-petersham-nsw-2049-2021019410",
+      "sold_date": "2026-08-11"
     },
     {
       "address": "83 Cary Street",
@@ -15499,10 +15511,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8852588,
-      "lon": 151.1530893
+      "lon": 151.1530893,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-19",
+      "resolved_url": "https://www.domain.com.au/83-cary-street-leichhardt-nsw-2040-2021019254",
+      "sold_date": "2026-08-19"
     },
     {
       "address": "9 Wemyss Street",
@@ -15562,10 +15580,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8992203,
-      "lon": 151.166198
+      "lon": 151.166198,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-21",
+      "resolved_url": "https://www.domain.com.au/9-wemyss-street-enmore-nsw-2042-2021019113",
+      "sold_date": "2026-08-21"
     },
     {
       "address": "30 Francis Street",
@@ -15623,10 +15647,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.901206,
-      "lon": 151.1711005
+      "lon": 151.1711005,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-22",
+      "resolved_url": "https://www.domain.com.au/30-francis-street-enmore-nsw-2042-2021018866",
+      "sold_date": "2026-08-22"
     },
     {
       "address": "6 Junior Street",
@@ -15684,10 +15714,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8878061,
-      "lon": 151.1541986
+      "lon": 151.1541986,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-06",
+      "resolved_url": "https://www.domain.com.au/6-junior-street-leichhardt-nsw-2040-2021018737",
+      "sold_date": "2026-08-06"
     },
     {
       "address": "17 Pearl Street",
@@ -15745,10 +15781,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9048213,
-      "lon": 151.1769625
+      "lon": 151.1769625,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-20",
+      "resolved_url": "https://www.domain.com.au/17-pearl-street-newtown-nsw-2042-2021018045",
+      "sold_date": "2026-08-20"
     },
     {
       "address": "109/155 Missenden Road",
@@ -15806,10 +15848,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8919109,
-      "lon": 151.1827073
+      "lon": 151.1827073,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-07",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2f155+missenden+road+newtown",
+      "resolved_url": "https://www.domain.com.au/109-155-missenden-road-newtown-nsw-2042-2021017776",
+      "sold_date": "2026-08-07"
     },
     {
       "address": "79 Marian Street",
@@ -15866,11 +15915,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9011364,
-      "lon": 151.1733104
+      "lon": 151.1733104,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/79-marian-street-enmore-nsw-2042-2021017725"
     },
     {
       "address": "307/5 Regent Street",
@@ -15927,11 +15978,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.894758,
-      "lon": 151.1559585
+      "lon": 151.1559585,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/307-5-regent-street-petersham-nsw-2049-2021017312"
     },
     {
       "address": "245 Enmore Road",
@@ -15988,11 +16041,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.900443,
-      "lon": 151.1701393
+      "lon": 151.1701393,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/245-enmore-road-enmore-nsw-2042-2021017281"
     },
     {
       "address": "29 Laura Street",
@@ -16050,10 +16105,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9054984,
-      "lon": 151.1752035
+      "lon": 151.1752035,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-04",
+      "resolved_url": "https://www.domain.com.au/29-laura-street-newtown-nsw-2042-2021017151",
+      "sold_date": "2026-08-04"
     },
     {
       "address": "13/11-15 Renwick Street",
@@ -16111,10 +16172,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.88774480000001,
-      "lon": 151.1569984
+      "lon": 151.1569984,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-14",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f11-15+renwick+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/13-11-15-renwick-street-leichhardt-nsw-2040-2021016655",
+      "sold_date": "2026-08-14"
     },
     {
       "address": "1430/20 Gadigal Avenue",
@@ -16172,10 +16240,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.9041308,
-      "lon": 151.2127651
+      "lon": 151.2127651,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1430%2f20+gadigal+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "7/2 Drummoyne Avenue",
@@ -16235,10 +16309,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.842523,
-      "lon": 151.1537367
+      "lon": 151.1537367,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2f2+drummoyne+avenue+drummoyne",
+      "resolved_url": "https://www.domain.com.au/7-2-drummoyne-avenue-drummoyne-nsw-2047-2020991924",
+      "sold_date": "2026-07-24"
     },
     {
       "address": "25/124-126 Parramatta Road",
@@ -16364,10 +16445,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "lat": -33.8959227,
-      "lon": 151.1525102
+      "lon": 151.1525102,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f27+gordon+street+petersham",
+      "resolved_url": "https://www.domain.com.au/3-27-gordon-street-petersham-nsw-2049-2020990790",
+      "sold_date": "2026-08-01"
     },
     {
       "address": "2/45 Henry Street",
@@ -16426,14 +16514,20 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 0,
       "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "beds": 2,
       "baths": 1,
       "parking": 1,
       "lat": -33.8748641,
-      "lon": 151.1577199
+      "lon": 151.1577199,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
+      "resolved_url": "https://www.domain.com.au/2-45-henry-street-lilyfield-nsw-2040-2020995185",
+      "sold_date": "2026-08-01"
     },
     {
       "address": "130 Chapel Street",
@@ -16492,11 +16586,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.9055052,
-      "lon": 151.1616986
+      "lon": 151.1616986,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/130-chapel-street-marrickville-nsw-2204-2020645359"
     },
     {
       "address": "9/162 Victoria Road",
@@ -16555,11 +16651,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.8520456,
-      "lon": 151.1556997
+      "lon": 151.1556997,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/9-162-victoria-road-drummoyne-nsw-2047-2020883813"
     },
     {
       "url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
@@ -16567,7 +16665,7 @@
       "suburb": "Leichhardt",
       "first_seen": "2026-07-25",
       "last_seen": "2026-07-25",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "open_homes": [],
       "postcode": "2040",
       "cover_image": "https://rimh2.domainstatic.com.au/BgjEdVkDHcGrWfX_g5FlcVNAqQc=/1680x720/filters:format(webp):quality(85)/2020935272_1_1_260624_061705-w3334-h2213",
@@ -16639,7 +16737,12 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 5 Aug 2026",
+      "sold_date": "2026-08-05"
     },
     {
       "address": "19/295 Victoria Road",
