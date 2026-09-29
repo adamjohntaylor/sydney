@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T06:58:31.519859+00:00",
-  "generated_at_sydney": "2026-09-29 16:58 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T06:59:50.295818+00:00",
+  "generated_at_sydney": "2026-09-29 16:59 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 208,
-    "tier1_pass": 200,
-    "new": 67,
-    "price_changed": 6,
-    "sold": 36,
-    "under_offer": 1,
-    "withdrawn": 9
+    "total": 197,
+    "tier1_pass": 189,
+    "new": 64,
+    "price_changed": 5,
+    "sold": 45,
+    "under_offer": 2,
+    "withdrawn": 10
   },
   "listings": [
     {
@@ -2732,10 +2732,16 @@
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
       "prior_price_text": "$2,000,000",
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 3,
       "lat": -33.8986306,
-      "lon": 151.1893394
+      "lon": 151.1893394,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-07",
+      "resolved_url": "https://www.domain.com.au/8-park-street-erskineville-nsw-2043-2020927308",
+      "sold_date": "2026-08-07"
     },
     {
       "address": "201/1 Brightwell Lane",
@@ -3454,9 +3460,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3
+      "days_on_market": 3,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701"
     },
     {
       "address": "13/36-46 Briggs Street",
@@ -3518,8 +3526,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 3
+      "change_flag": "SOLD",
+      "days_on_market": 3,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-06-30",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f36-46+briggs+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/13-36-46-briggs-street-camperdown-nsw-2050-2020592572",
+      "sold_date": "2026-06-30"
     },
     {
       "address": "2H Wentworth Park Road",
@@ -3580,9 +3595,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 3
+      "days_on_market": 3,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464"
     },
     {
       "address": "04/222 Flood St Allen Street",
@@ -3642,8 +3659,14 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 3
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 3,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=04%2f222+flood+st+allen+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "63 Newman Street",
@@ -3703,8 +3726,14 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 3
+      "change_flag": "SOLD",
+      "days_on_market": 3,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "resolved_url": "https://www.domain.com.au/63-newman-street-newtown-nsw-2042-2020902377",
+      "sold_date": "2026-07-16"
     },
     {
       "address": "110 Palace Street",
@@ -3839,8 +3868,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 3
+      "change_flag": "SOLD",
+      "days_on_market": 3,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-11",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2f72+wrights+road+drummoyne",
+      "resolved_url": "https://www.domain.com.au/12-72-wrights-road-drummoyne-nsw-2047-2021153115",
+      "sold_date": "2026-09-11"
     },
     {
       "address": "405/15 Ralph Street",
@@ -3982,10 +4018,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.8810727,
-      "lon": 151.194184
+      "lon": 151.194184,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f81-83+bay+street+glebe",
+      "resolved_url": "https://www.domain.com.au/13-81-83-bay-street-glebe-nsw-2037-2020936318",
+      "sold_date": "2026-07-01"
     },
     {
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=186c+victoria+road+marrickville",
@@ -4113,11 +4156,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9105268,
-      "lon": 151.155044
+      "lon": 151.155044,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/26-324b-marrickville-road-marrickville-nsw-2204-2020869480"
     },
     {
       "address": "3/151-153 Illawarra Road",
@@ -4177,10 +4222,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.9075816,
-      "lon": 151.159391
+      "lon": 151.159391,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-10",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f151-153+illawarra+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/3-151-153-illawarra-road-marrickville-nsw-2204-2020821228",
+      "sold_date": "2026-08-10"
     },
     {
       "address": "8/69-71 Parramatta Road",
@@ -5608,7 +5660,7 @@
       "address": "1101/89 Bay Street",
       "suburb": "Glebe",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2037",
@@ -5673,14 +5725,16 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status_checked_on": "2026-09-29",
+      "price_guide_text": "$1,200,000"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
       "address": "T04/1 Distillery Drive",
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2009",
@@ -5691,7 +5745,7 @@
         "2",
         "1"
       ],
-      "price_guide_text": "Price Guide $1,775,000",
+      "price_guide_text": "$1,775,000",
       "price_min": 1775000,
       "price_max": 1775000,
       "source": "realestate",
@@ -5755,7 +5809,8 @@
       },
       "beds": 2,
       "baths": 2,
-      "parking": 1
+      "parking": 1,
+      "status_checked_on": "2026-09-29"
     },
     {
       "url": "https://www.realestate.com.au/sold/property-unit-nsw-glebe-150824100",
@@ -5849,7 +5904,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-06-24",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://i2.au.reastatic.net/310x175/dfcf7ef99289cace7ce1d791553af94276a8c1850b732141747c2af17c6b8f1b/image.jpg",
@@ -5919,14 +5974,19 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: URL under /sold/",
+      "sold_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151119724"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648",
       "address": "1003b/89 bay Street",
       "suburb": "Glebe",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2037",
@@ -5995,14 +6055,16 @@
       "warehouse_character": false,
       "beds": 2,
       "baths": 2,
-      "parking": 1
+      "parking": 1,
+      "status_checked_on": "2026-09-29",
+      "price_guide_text": "$2,225"
     },
     {
       "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
       "address": "Terrace 6 Wentworth Street",
       "suburb": "Glebe",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2037",
@@ -6013,7 +6075,7 @@
         "2",
         "1"
       ],
-      "price_guide_text": "Contact Agent",
+      "price_guide_text": "$2,011",
       "source": "realestate",
       "lat": -33.8800738,
       "lon": 151.194377,
@@ -6077,7 +6139,8 @@
       "accessibility": {
         "step_free": false,
         "lift": null
-      }
+      },
+      "status_checked_on": "2026-09-29"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
@@ -6085,7 +6148,7 @@
       "suburb": "Glebe",
       "first_seen": "2026-06-24",
       "last_seen": "2026-06-24",
-      "change_flag": "NEW",
+      "change_flag": "UNDER_OFFER",
       "open_homes": [],
       "postcode": "2037",
       "cover_image": "https://i2.au.reastatic.net/310x175/2fdd7559d0b5ef6dad3a93a8f1b9a2416c83b9ea6ef0bcf21b33ae479671e5cc/image.jpg",
@@ -6147,7 +6210,11 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Under offer"
     },
     {
       "url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151024140",
@@ -6245,7 +6312,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-06-24",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://i2.au.reastatic.net/310x175/e55dd839b13edb0bb9fee25038aa029dd9d44a89400ec5f55d4260c49d4056fa/image.jpg",
@@ -6317,14 +6384,19 @@
       },
       "warehouse_character": false,
       "status": "interested",
-      "note": ""
+      "note": "",
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: URL under /sold/",
+      "sold_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151018088"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
       "address": "120/102 Miller Street",
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2009",
@@ -6393,14 +6465,15 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status_checked_on": "2026-09-29"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
       "address": "50/110  Reynolds Street",
       "suburb": "Balmain",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2041",
@@ -6414,7 +6487,7 @@
         "2",
         "1"
       ],
-      "price_guide_text": "Guide $1,450,000",
+      "price_guide_text": "$1,450,000",
       "price_min": 1450000,
       "price_max": 1450000,
       "source": "realestate",
@@ -6469,7 +6542,8 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status_checked_on": "2026-09-29"
     },
     {
       "address": "1/19-21 Larkin Street",
@@ -6529,8 +6603,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-24",
       "last_seen": "2026-06-24",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "SOLD",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f19-21+larkin+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/1-19-21-larkin-street-camperdown-nsw-2050-2020928376",
+      "sold_date": "2026-07-10"
     },
     {
       "address": "3/136 Livingstone Road",

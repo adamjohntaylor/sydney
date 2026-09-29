@@ -1,0 +1,178 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,200,000",
+      "address": "1101/89 Bay Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,775,000",
+      "address": "T04/1 Distillery Drive",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151119724",
+      "listing_status": "sold",
+      "status_basis": "chrome: URL under /sold/",
+      "final_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151119724",
+      "address": "2/6 Cross Street",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$2,225",
+      "address": "1003b/89 bay Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$2,011",
+      "address": "Terrace 6 Wentworth Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
+      "listing_status": "under_offer",
+      "status_basis": "chrome: Under offer",
+      "address": "B503/89 Bay Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151018088",
+      "listing_status": "sold",
+      "status_basis": "chrome: URL under /sold/",
+      "final_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151018088",
+      "address": "72/152-164 Bulwara Road",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "address": "120/102 Miller Street",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,450,000",
+      "address": "50/110  Reynolds Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F19-21+larkin+street+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f19-21+larkin+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/1-19-21-larkin-street-camperdown-nsw-2050-2020928376",
+      "sold_date": "2026-07-10",
+      "address": "1/19-21 Larkin Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8+park+street+erskineville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-07",
+      "resolved_url": "https://www.domain.com.au/8-park-street-erskineville-nsw-2043-2020927308",
+      "sold_date": "2026-08-07",
+      "address": "8 Park Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2F4+elger+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2f4+elger+street+glebe",
+      "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701",
+      "address": "325/4 Elger Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F36-46+briggs+street+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-06-30",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f36-46+briggs+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/13-36-46-briggs-street-camperdown-nsw-2050-2020592572",
+      "sold_date": "2026-06-30",
+      "address": "13/36-46 Briggs Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 2 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464",
+      "address": "2H Wentworth Park Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=04%2F222+flood+st+allen+street+leichhardt",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=04%2f222+flood+st+allen+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "04/222 Flood St Allen Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+newman+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "resolved_url": "https://www.domain.com.au/63-newman-street-newtown-nsw-2042-2020902377",
+      "sold_date": "2026-07-16",
+      "address": "63 Newman Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F72+wrights+road+drummoyne",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-11",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2f72+wrights+road+drummoyne",
+      "resolved_url": "https://www.domain.com.au/12-72-wrights-road-drummoyne-nsw-2047-2021153115",
+      "sold_date": "2026-09-11",
+      "address": "12/72 Wrights Road",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F81-83+bay+street+glebe",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f81-83+bay+street+glebe",
+      "resolved_url": "https://www.domain.com.au/13-81-83-bay-street-glebe-nsw-2037-2020936318",
+      "sold_date": "2026-07-01",
+      "address": "13/81-83 Bay Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=324b+marrickville+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/26-324b-marrickville-road-marrickville-nsw-2204-2020869480",
+      "address": "324B Marrickville Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F151-153+illawarra+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-10",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f151-153+illawarra+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/3-151-153-illawarra-road-marrickville-nsw-2204-2020821228",
+      "sold_date": "2026-08-10",
+      "address": "3/151-153 Illawarra Road",
+      "suburb": "Marrickville"
+    }
+  ]
+}
