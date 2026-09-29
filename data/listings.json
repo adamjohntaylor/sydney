@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T05:51:14.038669+00:00",
-  "generated_at_sydney": "2026-09-29 15:51 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T06:26:58.494629+00:00",
+  "generated_at_sydney": "2026-09-29 16:26 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",

@@ -93,6 +93,31 @@ is a self-contained Claude prompt that does exactly this.
    `zoning` via `zoning.parse_zoning(...)`. E3/E4 ⇒ Tier 1 fail.
 7. Write `dashboard/data/harvest-YYYYMMDD.json`:
    `{"generated_at_sydney": "...", "sweep_provenance": "...", "listings": [ ... ]}`.
+8. **Verify market status of existing stock (mandatory, every sweep — added
+   29 Sep 2026).** Alerts are new-only, so nothing above can discover that a
+   listing already on the watchlist has sold or been pulled. Run
+   `python scripts\sweep.py --worklist` (default 40 pages; `--worklist 80` for a
+   bigger bite, `--worklist-all` to include everything). It writes
+   `data/status-worklist-YYYYMMDD.json`, prioritised: auction date passed →
+   every open home passed → longest unsighted; listings verified in the last 7
+   days are skipped. Open **each worklist URL** in Claude-in-Chrome (the listing
+   page itself, never a search scrape) and record what the page says as
+   `data/status-checks/status-YYYYMMDD.json`:
+   ```
+   {"checks": [
+     {"url": "<worklist url>", "listing_status": "sold",       "status_basis": "banner: Sold 20 Sep 2026"},
+     {"url": "...",            "listing_status": "under_offer","status_basis": "banner: Under offer"},
+     {"url": "...",            "listing_status": "not_found",  "status_basis": "HTTP 404 / 'no longer available'"},
+     {"url": "...",            "listing_status": "on_market",  "status_basis": "banner: For sale; price guide $1.45M", "price_guide_text": "$1,450,000"},
+     {"url": "...",            "listing_status": "unknown",    "status_basis": "blocked / captcha"}
+   ]}
+   ```
+   `listing_status` vocabulary: `sold` · `under_offer` · `withdrawn` /
+   `not_found` / `removed` / `redirected` / `no_longer_available` (all ⇒
+   WITHDRAWN, with the specific evidence kept in `status_basis`) · `on_market`
+   · `unknown`. If the page redirected (Domain/REA move sold listings under
+   `/sold/`), add `"final_url"`. Do not skip this step because no new alerts
+   arrived — the verification leg is what keeps the active list honest.
 
 ### B. Score + merge + write (script)
 ```
@@ -103,6 +128,20 @@ python scripts\sweep.py data\harvest-YYYYMMDD.json --incremental
 computes catchments + Tier 1 + Tier 2, flags NEW / PRICE_CHANGED / OPEN_HOME_ADDED,
 preserves Adam's `notes.json` status/notes by URL, writes `data/listings.json` +
 a timestamped snapshot, and regenerates `../07-property-shortlist.md`.
+
+The same run also **applies every not-yet-applied file in `data/status-checks/`**
+(a `.applied` marker is written beside each so it is never re-applied), converting
+the step-A8 page reads into `SOLD` / `UNDER_OFFER` / `WITHDRAWN` flags with
+`status_source="sweep_check"`, `status_basis` and `status_checked_on`. If there
+were no new alerts at all, run it with no harvest file:
+```
+python scripts\sweep.py                     # status-only run (implies --incremental)
+python scripts\sweep.py --status-file data\status-checks\status-20260929.json
+```
+The dashboard's **Refresh now** (`/api/refresh`, Step 6c) applies pending
+status files too, and `POST /api/apply-status` accepts the same `{"checks": [...]}`
+body directly (it archives the posted checks under `data/status-checks/` for
+audit). `GET /api/status-worklist?cap=N` returns the worklist as JSON.
 
 *(Manual full-snapshot mode - drop `--incremental` - is retained for the case
 where you ever supply a complete current field; it auto-detects WITHDRAWN/SOLD by
@@ -134,11 +173,28 @@ tab, with `departed_on` / `status_source` / `status_basis` provenance):
 3. **Manual marking** — the detail drawer's "Market status" control
    (`/api/set-market-status`): Sold / Under offer / Withdrawn / On market.
    Use "On market" to restore a listing a fallen-through deal returns.
+4. **Sweep verification leg (29 Sep 2026)** — the systematic source. The first
+   three are opportunistic (a click, an email that may never have been enabled,
+   a hand mark); this one runs every sweep. `sweep.py --worklist` picks the
+   active listings most likely to have left the market (auction passed, open
+   homes passed, unsighted > 7 days), Claude re-reads those pages, and
+   `apply_status_checks` marks them from the page's own evidence. "Evidently
+   withdrawn" means page evidence — a 404, "no longer available", a redirect to
+   a search/suburb page — never mere absence from an alert. An `on_market` read
+   counts as a sighting (`last_seen` refreshed) and revives a departed record; an
+   inconclusive read (blocked/captcha/unknown) changes nothing but is counted, and
+   after 3 such reads the record is flagged `needs_manual_check`. Each sweep
+   takes a capped bite (40 pages) so the backlog clears over successive sweeps
+   without hammering the portals; `verification_pending` in the Refresh result
+   shows how much remains.
 
-Rules of the state machine: SOLD is terminal (an under-offer email never
-downgrades it); a stale re-read alert email never resurrects a departed listing
-(the 3-day IMAP window re-serves pre-sale alerts); only an explicit on-market
-page read or your manual re-mark revives one. Departed stock is excluded from
+Rules of the state machine: SOLD is terminal (an under-offer email or page read
+never downgrades it); a stale re-read alert email never resurrects a departed
+listing (the 3-day IMAP window re-serves pre-sale alerts); only an explicit
+on-market page read (bookmarklet or verification leg) or your manual re-mark
+revives one. A status-only record arriving through a harvest (url +
+`listing_status`, no address/beds/price) updates the tracked record's flag and
+never overwrites the record. Departed stock is excluded from
 the `07` candidate tables and listed in a "Departed from the watchlist" section
 at the end.
 

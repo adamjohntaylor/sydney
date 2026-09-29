@@ -7,6 +7,73 @@ of how the code got to its current shape.
 
 ---
 
+## 29 September 2026 — Sweep-time status verification (sold / evidently withdrawn)
+
+**Problem.** The 25 July sold-detection work gave the pipeline three ways to learn
+that a listing had left the market, but all three were opportunistic: a bookmarklet
+click on that page, a sold-alert email (which depends on notifications Adam may
+never have enabled), or a hand mark. Nothing in the *sweep itself* ever asked
+whether existing stock was still for sale, and the incremental merge is (correctly)
+forbidden from inferring departure from absence. Result on 29 Sep: 239 "active"
+listings, 231 of them last sighted in June–July, i.e. an active list that was
+mostly stale.
+
+**Fix — a verification leg in every sweep** (`scripts/sweep.py`, `scripts/serve.py`,
+`RUNBOOK.md` step A8):
+
+- `build_status_worklist(listings, today, cap=40, recheck_days=7)` — the active
+  listings whose status most needs a page re-read, prioritised: auction date passed
+  (0) → every recorded open home passed (1) → unsighted > 7 days (2) → everything
+  else only with `--worklist-all` (3); longest-unsighted first within a band;
+  anything verified inside the re-check window is skipped so successive sweeps walk
+  the backlog. CLI `sweep.py --worklist [N]` writes `data/status-worklist-YYYYMMDD.json`;
+  `GET /api/status-worklist?cap=N&all=1` serves the same.
+- Claude opens each worklist page in Claude-in-Chrome (individual listing pages, not a
+  search scrape — decision #27 stands) and writes `data/status-checks/status-YYYYMMDD.json`
+  as `{"checks":[{url, listing_status, status_basis, final_url?, price_guide_text?}]}`.
+- `apply_status_checks(checks, listings, today)` — matches by numeric listing id →
+  URL → address+suburb (same join as the email leg; survives the `/sold/` URL move),
+  can only change a tracked listing, never inject one. `normalise_check_status` maps
+  the reader's vocabulary: `sold` → SOLD (terminal; upgrades UNDER_OFFER);
+  `under_offer` → UNDER_OFFER; **`withdrawn` / `not_found` / `removed` / `redirected` /
+  `no_longer_available` / `expired` / `404` → WITHDRAWN** — "evidently withdrawn" is
+  defined as page evidence, never absence; `on_market` → a sighting (`last_seen`
+  refreshed, optional price refresh) that also revives a departed record
+  (`relisted_on`); `unknown` / `blocked` / `captcha` / `error` → no flag change,
+  `status_check_failures += 1`, `needs_manual_check` after 3. Provenance stamped as
+  `status_source="sweep_check"`, `status_basis`, `status_checked_on` (and `sold_url`
+  when the page redirected).
+- `apply_pending_status_files(listings, data/status-checks/, today)` — applies every
+  file without a `.applied` sibling marker, then writes the marker. Called by
+  `sweep.py` (after diff/merge, before notes/scoring; revived carried records move
+  back to active) and by `/api/refresh` as **Step 6c**. `POST /api/apply-status`
+  applies a posted `checks` body directly, archives it (pre-marked applied), rewrites
+  listings.json + snapshot + `07`, pushes if anything changed.
+- `sweep.py` CLI: harvest is now optional; `--status-file PATH` (repeatable);
+  `--no-status-dir`; a status-only run implies `--incremental` so it can never be
+  mistaken for a full-snapshot sweep (which would withdraw everything by absence).
+  The summary line now reports sold / under offer / withdrawn and the number of
+  verification changes. Refresh result gains `status_checks_applied` and
+  `verification_pending`.
+- `merge_incremental` is now **stub-safe**: a harvest record carrying `listing_status`
+  but no address/beds/price (`is_status_stub`) is routed to `apply_status_checks`
+  instead of replacing the tracked record (previously it would have blanked
+  address, coords, outlook, etc.).
+
+**Tests (sandbox, copy of the live 239-record listings.json):** state-machine unit
+checks (sold / not_found→WITHDRAWN / under_offer / inconclusive×3→needs_manual_check /
+on_market sighting + price refresh / SOLD never downgraded / unmatched ignored /
+revive / id-match across `/sold/` URL / stub-safe merge / re-check window); status-only
+CLI run applies a dropped file once and not on the second run; `/api/status-worklist`
+and `/api/apply-status` round-trips. `listings.json` not touched by this change.
+
+**Adam-side:** nothing to install. The first few sweeps will retire a large backlog
+(231 candidates on 29 Sep) — run `sweep.py --worklist 80` or ask Claude for a
+verification pass to clear it faster. There is still no `sydney-property-sweep`
+scheduled task on the account (checked 29 Sep), so sweeps remain interactive.
+
+---
+
 ## 25 July 2026 (pm) — Startup defaults + read-only messaging on the shared Pages copy
 
 - **Startup defaults**: the dashboard now opens with **"Tier 1 pass only" ticked** and the

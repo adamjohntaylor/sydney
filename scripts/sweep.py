@@ -18,11 +18,25 @@ A refresh has two halves:
         4. write data/listings.json + a timestamped snapshot
         5. regenerate 07-property-shortlist.md (render.py)
 
+  (C) VERIFY  - the status-verification leg (added 29 Sep 2026): every sweep
+      also re-reads the pages of the active listings most likely to have left
+      the market and marks them SOLD / UNDER_OFFER / WITHDRAWN on the page's
+      own evidence. `--worklist` emits the pages to check; Claude reads them
+      and writes data/status-checks/status-YYYYMMDD.json; the next sweep.py
+      run (or dashboard Refresh) applies it. See build_status_worklist /
+      apply_status_checks.
+
 CLI:
-    python sweep.py <harvest_file.json>
+    python sweep.py <harvest_file.json> [--incremental]
         [--osm  data/osm_amenities.geojson]
         [--out  data/listings.json]
         [--no-render]            # skip regenerating 07
+        [--status-file PATH]     # apply page re-read results (repeatable)
+    python sweep.py --worklist [N] [--worklist-all]   # emit verification worklist
+    python sweep.py --status-file data/status-checks/status-20260929.json
+        (status-only run: implies --incremental; also auto-applies any pending
+         file in data/status-checks/ - so a bare `python sweep.py` after
+         dropping a file there is enough)
 Run from anywhere; paths default relative to the dashboard folder.
 """
 
@@ -86,6 +100,290 @@ def apply_listing_status(l, today):
 
 def listing_key(lst):
     return lst.get("url") or f"{lst.get('address','')}|{lst.get('suburb','')}"
+
+
+# ---------------------------------------------------------------------------
+# Status verification leg (added 29 Sep 2026)
+#
+# Alert emails are new-only, so the incremental merge can never learn that a
+# tracked listing has SOLD or been WITHDRAWN. Until now that knowledge arrived
+# only opportunistically (a bookmarklet click, a sold-alert email, a manual
+# mark), so stale stock accumulated on the active list. Every sweep now carries
+# a deterministic VERIFICATION step:
+#
+#   1. build_status_worklist()  - the active listings most in need of a page
+#      re-read, in priority order (auction passed > every open home passed >
+#      longest since last sighting), capped per sweep so the backlog clears
+#      over a few sweeps without re-hammering the portals.
+#   2. Claude (via Claude-in-Chrome) opens each worklist URL - the individual
+#      listing page, never a search scrape (decision #27) - and records what
+#      the page itself says: a "status check" record.
+#   3. apply_status_checks()    - converts those records into change flags in
+#      listings.json, with provenance (status_source="sweep_check",
+#      status_basis, status_checked_on).
+#
+# "Evidently withdrawn" is defined by PAGE EVIDENCE, never by absence from an
+# alert: the page 404s / says "no longer available" / redirects to a search or
+# suburb page / the listing id is gone. Those all arrive as one of the
+# WITHDRAWN_EVIDENCE statuses below.
+# ---------------------------------------------------------------------------
+
+STATUS_SOURCE_CHECK = "sweep_check"
+
+# Page states that mean the listing is evidently off the market with no sale
+# recorded. All map to WITHDRAWN (with the specific evidence kept in basis).
+WITHDRAWN_EVIDENCE = ("withdrawn", "not_found", "removed", "redirected", "no_longer_available",
+                      "expired", "404")
+# Page states that carry no usable evidence: leave the record alone, count the
+# failure so a listing that never resolves is surfaced rather than silently
+# re-queued forever.
+INCONCLUSIVE = ("unknown", "error", "blocked", "captcha", "timeout", "")
+
+DEFAULT_WORKLIST_CAP = 40      # pages per sweep
+DEFAULT_RECHECK_DAYS = 7       # don't re-read a page verified this recently
+MAX_INCONCLUSIVE = 3           # after this many failed reads, flag needs_manual_check
+
+
+def _listing_id(url):
+    """Numeric listing id at the end of a Domain/REA URL (stable across the
+    /sold/ URL move) - same join key gmail_fetch uses for departures."""
+    import re
+    m = re.search(r"(?:-|/)(\d{6,12})/?(?:\?.*)?$", url or "")
+    return m.group(1) if m else None
+
+
+def _norm_addr(address, suburb):
+    return f"{(address or '').lower().strip()}|{(suburb or '').lower().strip()}"
+
+
+def _parse_date(s):
+    """ISO date or datetime string -> date, else None."""
+    if not s:
+        return None
+    try:
+        return dt.date.fromisoformat(str(s)[:10])
+    except ValueError:
+        return None
+
+
+def _days_since(date_str, today):
+    d = _parse_date(date_str)
+    t = _parse_date(today)
+    if d is None or t is None:
+        return None
+    return (t - d).days
+
+
+def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
+                          recheck_days=DEFAULT_RECHECK_DAYS, include_all=False):
+    """Return [{key, url, address, suburb, reason, priority, last_seen}, ...]
+    for the active listings whose market status most needs re-verifying.
+
+    Priority (lower = check first):
+      0  auction date has passed (the property was either sold at/after auction
+         or passed in - either way the page will now say)
+      1  every recorded open home is in the past and none newer has arrived
+      2  no sighting (alert / page read / status check) for > recheck_days
+      3  everything else (only when include_all=True)
+    Within a band, the longest-unsighted first. A listing verified within
+    recheck_days is skipped so successive sweeps walk through the backlog
+    instead of re-reading the same pages."""
+    work = []
+    for l in listings:
+        if l.get("change_flag") in GONE_FLAGS:
+            continue
+        if not l.get("url"):
+            continue
+        checked = _days_since(l.get("status_checked_on"), today)
+        if checked is not None and checked < recheck_days:
+            continue
+        seen_days = _days_since(l.get("last_seen"), today)
+        if seen_days is None:
+            seen_days = 10 ** 6   # never sighted -> most stale
+        priority, reason = None, None
+        auc = _days_since(l.get("auction"), today)
+        if auc is not None and auc > 0:
+            priority, reason = 0, f"auction {l.get('auction')[:10]} has passed"
+        else:
+            ohs = [d for d in (_parse_date(x) for x in l.get("open_homes", [])) if d]
+            tday = _parse_date(today)
+            if ohs and tday and max(ohs) < tday:
+                priority, reason = 1, f"last open home {max(ohs).isoformat()} has passed"
+            elif seen_days > recheck_days:
+                priority, reason = 2, f"not sighted for {seen_days} days"
+            elif include_all:
+                priority, reason = 3, "routine re-verification"
+        if priority is None:
+            continue
+        work.append({
+            "key": listing_key(l),
+            "url": l["url"],
+            "listing_id": _listing_id(l["url"]),
+            "address": l.get("address"),
+            "suburb": l.get("suburb"),
+            "last_seen": l.get("last_seen"),
+            "priority": priority,
+            "reason": reason,
+            "inconclusive_checks": int(l.get("status_check_failures") or 0),
+        })
+    work.sort(key=lambda w: (w["priority"], -(_days_since(w["last_seen"], today) or 10 ** 6)))
+    return work[:cap] if cap else work
+
+
+def normalise_check_status(raw):
+    """Map whatever the page reader wrote into the canonical vocabulary:
+    sold | under_offer | withdrawn | on_market | inconclusive."""
+    s = (raw or "").strip().lower().replace("-", "_").replace(" ", "_")
+    if s in ("sold", "sold_prior_to_auction", "sold_at_auction"):
+        return "sold"
+    if s in ("under_offer", "under_contract", "deposit_taken", "contract_exchanged"):
+        return "under_offer"
+    if s in WITHDRAWN_EVIDENCE:
+        return "withdrawn"
+    if s in ("on_market", "for_sale", "active", "live", "listed"):
+        return "on_market"
+    return "inconclusive"
+
+
+def apply_status_checks(checks, listings, today, source=STATUS_SOURCE_CHECK):
+    """Apply status-check records to the watchlist IN PLACE.
+
+    Each check: {"url": ..., "listing_status": ..., "status_basis": "...",
+                 "final_url": ... (optional, after redirects),
+                 "price_guide_text": ... (optional, refresh if present)}
+    Matching: numeric listing id -> exact URL -> address+suburb. A check can
+    only change a TRACKED listing, never inject one.
+
+    Rules (same state machine as the bookmarklet / email legs):
+      sold        -> SOLD (terminal; upgrades UNDER_OFFER)
+      under_offer -> UNDER_OFFER, unless already SOLD
+      withdrawn   -> WITHDRAWN (any of the page-evidence states), unless SOLD
+      on_market   -> sighting: last_seen = today; revives a departed record
+                     (relisted_on) - the live page is the freshest evidence
+      inconclusive-> no flag change; status_check_failures += 1; at
+                     MAX_INCONCLUSIVE the record gets needs_manual_check=True
+    Every applied check stamps status_checked_on / status_source / status_basis.
+    Returns (changed_count, details[list of str])."""
+    by_id, by_url, by_addr = {}, {}, {}
+    for l in listings:
+        lid = _listing_id(l.get("url"))
+        if lid:
+            by_id.setdefault(lid, l)
+        if l.get("url"):
+            by_url.setdefault(l["url"], l)
+        if l.get("address"):
+            by_addr.setdefault(_norm_addr(l.get("address"), l.get("suburb")), l)
+
+    changed, details = 0, []
+    for chk in checks or []:
+        url = chk.get("url") or chk.get("key") or ""
+        target = None
+        lid = _listing_id(url) or _listing_id(chk.get("final_url"))
+        if lid and lid in by_id:
+            target = by_id[lid]
+        elif url in by_url:
+            target = by_url[url]
+        elif chk.get("address"):
+            target = by_addr.get(_norm_addr(chk.get("address"), chk.get("suburb")))
+        if target is None:
+            details.append(f"unmatched: {url}")
+            continue
+
+        status = normalise_check_status(chk.get("listing_status"))
+        basis = (chk.get("status_basis") or chk.get("listing_status") or "").strip()
+        before = target.get("change_flag")
+
+        if status == "inconclusive":
+            n = int(target.get("status_check_failures") or 0) + 1
+            target["status_check_failures"] = n
+            target["status_checked_on"] = today
+            if n >= MAX_INCONCLUSIVE:
+                target["needs_manual_check"] = True
+            details.append(f"inconclusive ({n}): {url} {basis}".rstrip())
+            continue
+
+        target.pop("status_check_failures", None)
+        target.pop("needs_manual_check", None)
+        target["status_checked_on"] = today
+
+        if status == "on_market":
+            target["last_seen"] = today
+            if chk.get("price_guide_text"):
+                target["price_guide_text"] = chk["price_guide_text"]
+            if before in GONE_FLAGS:
+                target["change_flag"] = "UNCHANGED"
+                target.pop("departed_on", None)
+                target["relisted_on"] = today
+                target["status_source"] = source
+                target["status_basis"] = basis or "page read: on market"
+                changed += 1
+                details.append(f"revived {before}->UNCHANGED: {url}")
+            continue
+
+        flag = STATUS_TO_FLAG[status]                # sold/under_offer/withdrawn
+        if before == "SOLD" and flag != "SOLD":
+            details.append(f"kept SOLD (page said {status}): {url}")
+            continue
+        if before == flag:
+            continue
+        target["change_flag"] = flag
+        target["departed_on"] = target.get("departed_on") or today
+        target["status_source"] = source
+        target["status_basis"] = basis or f"page read: {status}"
+        if chk.get("final_url") and chk["final_url"] != target.get("url"):
+            target["sold_url"] = chk["final_url"]
+        changed += 1
+        details.append(f"{before}->{flag}: {url}")
+    return changed, details
+
+
+def is_status_stub(rec):
+    """A harvest record that carries a listing_status but no listing substance
+    (no address, beds or price). Such a record must UPDATE the tracked listing's
+    status, never replace it - see merge_incremental."""
+    if not (rec.get("listing_status") or "").strip():
+        return False
+    return not ((rec.get("address") or "").strip() or rec.get("beds")
+                or rec.get("price_min") or rec.get("price_max")
+                or any(ch.isdigit() for ch in (rec.get("price_guide_text") or "")))
+
+
+def load_status_checks(path):
+    """Read a status-check file: either a bare list of check records or
+    {"checks": [...]} (optionally with generated_at_sydney / provenance)."""
+    with open(path, "r", encoding="utf-8") as fh:
+        data = json.loads(fh.read())
+    if isinstance(data, dict):
+        return data.get("checks") or data.get("listings") or []
+    return data
+
+
+def apply_pending_status_files(listings, checks_dir, today):
+    """Apply every *.json in data/status-checks/ that has not been applied yet
+    (a sibling '<name>.applied' marker is written afterwards). Lets a Claude
+    sweep drop its page-read results into the folder and have the next
+    sweep.py run or dashboard Refresh pick them up. Returns (changed, details)."""
+    total, details = 0, []
+    if not os.path.isdir(checks_dir):
+        return 0, details
+    for name in sorted(os.listdir(checks_dir)):
+        if not name.endswith(".json"):
+            continue
+        path = os.path.join(checks_dir, name)
+        marker = path + ".applied"
+        if os.path.exists(marker):
+            continue
+        try:
+            checks = load_status_checks(path)
+        except (ValueError, OSError) as exc:
+            details.append(f"skipped {name}: {exc}")
+            continue
+        n, det = apply_status_checks(checks, listings, today)
+        total += n
+        details.extend(f"{name}: {d}" for d in det)
+        with open(marker, "w", encoding="utf-8") as fh:
+            fh.write(f"applied {today}; {n} flag change(s)\n")
+    return total, details
 
 
 def load_latest_snapshot(snap_dir):
@@ -206,9 +504,16 @@ def merge_incremental(new_scored, prior_listings, today):
     explicit listing_status='on_market' from a fresh bookmarklet page read (or
     a manual re-mark) revives it."""
     merged = {listing_key(l): l for l in prior_listings}
+    stubs = []
     for l in new_scored:
         k = listing_key(l)
         old = merged.get(k)
+        if is_status_stub(l):
+            # A status-only record (url + listing_status) from the sweep's
+            # verification leg: route to apply_status_checks so it updates the
+            # tracked record's flag instead of overwriting the whole record.
+            stubs.append(l)
+            continue
         l.setdefault("first_seen", today)
         l["last_seen"] = today
         incoming_status = (l.get("listing_status") or "").strip().lower()
@@ -254,7 +559,10 @@ def merge_incremental(new_scored, prior_listings, today):
         # Claude sweep enrichment) takes effect on the way in.
         apply_listing_status(l, today)
         merged[k] = l
-    return list(merged.values())
+    out = list(merged.values())
+    if stubs:
+        apply_status_checks(stubs, out, today)
+    return out
 
 
 def carry_notes(listings, notes_path):
@@ -317,18 +625,74 @@ def build_counts(listings):
 
 def main(argv):
     ap = argparse.ArgumentParser(description="Score + diff + write a dashboard sweep.")
-    ap.add_argument("harvest", help="harvest JSON from the Claude-in-Chrome Domain sweep")
+    ap.add_argument("harvest", nargs="?", default=None,
+                    help="harvest JSON from the Claude-in-Chrome Domain sweep "
+                         "(optional when only --status-file / --worklist is used)")
     ap.add_argument("--osm", default=os.path.join(DATA, "osm_amenities.geojson"))
     ap.add_argument("--out", default=os.path.join(DATA, "listings.json"))
     ap.add_argument("--no-render", action="store_true")
     ap.add_argument("--incremental", action="store_true",
                     help="merge into the existing listings.json instead of replacing "
                          "(use for email-alert ingestion - alerts are new-only).")
+    # --- status verification leg ---
+    ap.add_argument("--worklist", nargs="?", const=DEFAULT_WORKLIST_CAP, type=int,
+                    metavar="N",
+                    help="write data/status-worklist-YYYYMMDD.json listing the N active "
+                         "listings whose market status most needs a page re-read, "
+                         "then exit (no write to listings.json).")
+    ap.add_argument("--worklist-all", action="store_true",
+                    help="with --worklist: include every active listing, not just the "
+                         "stale/auction-passed ones.")
+    ap.add_argument("--status-file", action="append", default=[], metavar="PATH",
+                    help="status-check JSON (page re-read results) to apply; repeatable. "
+                         "Files dropped in data/status-checks/ are applied automatically.")
+    ap.add_argument("--no-status-dir", action="store_true",
+                    help="do not auto-apply pending files from data/status-checks/.")
     args = ap.parse_args(argv[1:])
 
-    with open(args.harvest, "r", encoding="utf-8") as fh:
-        harvest = json.loads(fh.read())
-    listings = harvest["listings"] if isinstance(harvest, dict) else harvest
+    syd = now_sydney()
+    today = syd.date().isoformat()
+    checks_dir = os.path.join(DATA, "status-checks")
+
+    # --worklist: emit the verification worklist and stop.
+    if args.worklist is not None:
+        prior_listings = []
+        if os.path.exists(args.out):
+            with open(args.out, "r", encoding="utf-8") as fh:
+                prior_listings = json.loads(fh.read()).get("listings", [])
+        work = build_status_worklist(prior_listings, today, cap=args.worklist,
+                                     include_all=args.worklist_all)
+        wl_path = os.path.join(DATA, "status-worklist-" + today.replace("-", "") + ".json")
+        with open(wl_path, "w", encoding="utf-8") as fh:
+            json.dump({"generated_on": today, "count": len(work),
+                       "instructions": ("Open each url in Claude-in-Chrome (individual listing "
+                                        "page only), read the page's own status banner, and "
+                                        "write data/status-checks/status-" + today.replace("-", "")
+                                        + ".json as {\"checks\": [{url, listing_status, "
+                                        "status_basis, final_url?}]}. listing_status in: sold | "
+                                        "under_offer | withdrawn | not_found | on_market | unknown."),
+                       "worklist": work}, fh, indent=2, ensure_ascii=False)
+        active_n = sum(1 for l in prior_listings if l.get("change_flag") not in GONE_FLAGS)
+        print(f"Wrote {wl_path}: {len(work)} of {active_n} active listings queued "
+              f"({sum(1 for w in work if w['priority']==0)} auction-passed, "
+              f"{sum(1 for w in work if w['priority']==1)} open-homes-passed, "
+              f"{sum(1 for w in work if w['priority']==2)} stale).")
+        return 0
+
+    harvest = {}
+    listings = []
+    if args.harvest:
+        with open(args.harvest, "r", encoding="utf-8") as fh:
+            harvest = json.loads(fh.read())
+        listings = harvest["listings"] if isinstance(harvest, dict) else harvest
+        if not isinstance(harvest, dict):
+            harvest = {}
+    elif not args.status_file and args.no_status_dir:
+        ap.error("nothing to do: give a harvest file, --status-file, or --worklist")
+    if not args.harvest and not args.incremental:
+        # Status-only runs must never be mistaken for a full-snapshot sweep
+        # (which would mark every listing WITHDRAWN by absence).
+        args.incremental = True
 
     # (1) score
     if os.path.exists(args.osm):
@@ -340,8 +704,6 @@ def main(argv):
         score_mod.score_listing(l, amenities)
 
     # (2) diff / merge
-    syd = now_sydney()
-    today = syd.date().isoformat()
     snap_dir = os.path.join(DATA, "snapshots")
     if args.incremental:
         # Union onto the existing listings.json; never withdraw on absence.
@@ -362,6 +724,30 @@ def main(argv):
         # sold/under-offer banner during enrichment) overrides presence-derived flags.
         for l in active:
             apply_listing_status(l, today)
+
+    # (2b) status verification: apply page re-read results to the watchlist.
+    # Explicit --status-file(s) first, then anything pending in data/status-checks/.
+    status_changed, status_details = 0, []
+    pool = active + carried
+    for sf in args.status_file:
+        n, det = apply_status_checks(load_status_checks(sf), pool, today)
+        status_changed += n
+        status_details.extend(f"{os.path.basename(sf)}: {d}" for d in det)
+    if not args.no_status_dir:
+        n, det = apply_pending_status_files(pool, checks_dir, today)
+        status_changed += n
+        status_details.extend(det)
+    if status_details:
+        print("Status verification:", file=sys.stderr)
+        for d in status_details:
+            print("  " + d, file=sys.stderr)
+    # A record newly flagged gone in `active` must be kept (all_listings below
+    # filters `carried` by GONE_FLAGS but keeps every `active` record), and a
+    # carried record revived to on-market must move back into `active`.
+    revived = [c for c in carried if c.get("change_flag") not in GONE_FLAGS]
+    if revived:
+        active = active + revived
+        carried = [c for c in carried if c.get("change_flag") in GONE_FLAGS]
 
     # (3) notes
     carry_notes(active + carried, os.path.join(DATA, "notes.json"))
@@ -392,8 +778,11 @@ def main(argv):
     with open(os.path.join(snap_dir, snap_name), "w", encoding="utf-8") as fh:
         json.dump(out, fh, indent=2, ensure_ascii=False)
 
-    print("Wrote " + args.out + " (" + str(out['counts']['total']) + " active, "
-          + str(out['counts']['tier1_pass']) + " Tier-1 pass) and snapshot " + snap_name)
+    c = out["counts"]
+    print("Wrote " + args.out + " (" + str(c['total']) + " active, "
+          + str(c['tier1_pass']) + " Tier-1 pass; " + str(c['sold']) + " sold, "
+          + str(c['under_offer']) + " under offer, " + str(c['withdrawn']) + " withdrawn; "
+          + str(status_changed) + " status change(s) from verification) and snapshot " + snap_name)
 
     # (5) regenerate 07
     if not args.no_render:

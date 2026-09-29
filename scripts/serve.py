@@ -17,6 +17,11 @@ Endpoints:
     POST /api/save-notes         -> overwrites data/notes.json with the posted JSON body
     POST /api/refresh            -> gmail ingest (new + sold alerts) + geocode + zoning + re-score
     POST /api/set-market-status  -> manually flag SOLD / UNDER_OFFER / WITHDRAWN / ON_MARKET
+    GET  /api/status-worklist    -> active listings whose market status needs a page re-read
+                                    (?cap=N, ?all=1); the sweep's verification leg reads these
+    POST /api/apply-status       -> {"checks":[{url, listing_status, status_basis, final_url?}]}
+                                    apply page re-read results: SOLD / UNDER_OFFER / WITHDRAWN /
+                                    on-market revive, with provenance; rewrites listings.json
     GET  /api/health             -> {"ok": true, "refresh_available": true}
 
 The dashboard auto-detects whether it is being served (notes save to disk) or
@@ -50,6 +55,7 @@ import zoning as zoning_mod
 import datetime as dt
 
 SNAP_DIR = os.path.join(DASH_DIR, "data", "snapshots")
+STATUS_CHECKS_DIR = os.path.join(DASH_DIR, "data", "status-checks")
 SHORTLIST_PATH = os.path.join(DASH_DIR, "..", "07-property-shortlist.md")
 
 ZONING_FETCH_TIMEOUT = 12  # seconds per NSW ArcGIS point query
@@ -132,6 +138,8 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/api/health":
             return self._json(200, {"ok": True, "served": True, "refresh_available": True})
+        if self.path.split("?")[0] == "/api/status-worklist":
+            return self._handle_status_worklist()
         if self.path.split("?")[0] in ("/bookmarklet", "/bookmarklet/", "/bookmarklet.html"):
             return self._handle_bookmarklet_page()
         return super().do_GET()
@@ -316,6 +324,17 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 departures_applied, _dep_details = gmail_mod.apply_departures(
                     departures, all_listings, today)
 
+            # Step 6c: Status verification - apply any page re-read results the
+            # sweep dropped into data/status-checks/ (not yet applied). This is
+            # the leg that turns "evidently sold / withdrawn" into a flag.
+            status_changed, status_details = sweep_mod.apply_pending_status_files(
+                all_listings, STATUS_CHECKS_DIR, today)
+            if status_details:
+                print(f"Step 6c: Status verification - {status_changed} flag change(s)",
+                      file=sys.stderr, flush=True)
+                for d in status_details:
+                    print("  " + d, file=sys.stderr, flush=True)
+
             # Step 7: Re-geocode any still missing coords
             print(f"Step 7: Re-geocoding missing coords...", file=sys.stderr, flush=True)
             geocoded_count, geocode_fails = geocode_mod.geocode_listings(all_listings, max_per_run=10)
@@ -440,6 +459,9 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "zoning_checked": zoning_checked,
                 "zoning_failed": zoning_fails,
                 "departures_applied": departures_applied,
+                "status_checks_applied": status_changed,
+                "verification_pending": len(sweep_mod.build_status_worklist(
+                    all_listings, today, cap=0)),
                 "sold": out["counts"].get("sold", 0),
                 "under_offer": out["counts"].get("under_offer", 0),
                 "withdrawn": out["counts"].get("withdrawn", 0),
@@ -841,6 +863,85 @@ this page and re-drag the button (the code is baked into the link, so it does no
         except Exception as e:  # noqa: BLE001
             return self._json(500, {"ok": False, "error": str(e)})
 
+    def _handle_status_worklist(self):
+        """GET /api/status-worklist[?cap=N][&all=1] -> the active listings whose
+        market status most needs re-verifying on the listing page (auction
+        passed, open homes passed, long unsighted). The sweep's verification
+        leg reads these pages and posts the result to /api/apply-status."""
+        try:
+            from urllib.parse import urlparse, parse_qs
+            q = parse_qs(urlparse(self.path).query)
+            cap = int(q.get("cap", [sweep_mod.DEFAULT_WORKLIST_CAP])[0])
+            include_all = q.get("all", ["0"])[0] in ("1", "true", "yes")
+            listings = []
+            if os.path.exists(LISTINGS_PATH):
+                with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+                    listings = json.load(f).get("listings", [])
+            today = sweep_mod.now_sydney().date().isoformat()
+            work = sweep_mod.build_status_worklist(listings, today, cap=cap,
+                                                   include_all=include_all)
+            pending_total = len(sweep_mod.build_status_worklist(listings, today, cap=0,
+                                                                include_all=include_all))
+            return self._json(200, {"ok": True, "generated_on": today, "count": len(work),
+                                    "pending_total": pending_total, "worklist": work})
+        except Exception as e:  # noqa: BLE001
+            return self._json(500, {"ok": False, "error": str(e)})
+
+    def _handle_apply_status(self):
+        """POST /api/apply-status  body {"checks": [...]} (or a bare list).
+        Applies page re-read results via sweep.apply_status_checks, recomputes
+        counts, rewrites listings.json + snapshot, regenerates 07, pushes
+        (non-fatal). Also archives the posted checks under data/status-checks/
+        (pre-marked applied) for audit."""
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length)
+            body = json.loads(raw.decode("utf-8")) if raw else {}
+            checks = body.get("checks") if isinstance(body, dict) else body
+            if not isinstance(checks, list) or not checks:
+                return self._json(400, {"ok": False, "error": "Need a non-empty 'checks' list."})
+            with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            listings = data.get("listings", [])
+            syd = sweep_mod.now_sydney()
+            today = syd.date().isoformat()
+            changed, details = sweep_mod.apply_status_checks(checks, listings, today)
+
+            # audit copy (pre-marked applied so Refresh doesn't re-apply it)
+            os.makedirs(STATUS_CHECKS_DIR, exist_ok=True)
+            stamp = syd.astimezone(dt.timezone.utc).strftime("%Y%m%dT%H%MZ")
+            audit = os.path.join(STATUS_CHECKS_DIR, f"status-{stamp}-api.json")
+            with open(audit, "w", encoding="utf-8") as f:
+                json.dump({"generated_on": today, "source": "/api/apply-status",
+                           "checks": checks}, f, indent=2, ensure_ascii=False)
+            with open(audit + ".applied", "w", encoding="utf-8") as f:
+                f.write(f"applied {today}; {changed} flag change(s)\n")
+
+            data["counts"] = sweep_mod.build_counts(listings)
+            data["generated_at"] = syd.astimezone(dt.timezone.utc).isoformat()
+            data["generated_at_sydney"] = syd.strftime("%Y-%m-%d %H:%M %Z (Sydney)")
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            os.makedirs(SNAP_DIR, exist_ok=True)
+            snap_name = syd.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H-%M") + "Z.json"
+            with open(os.path.join(SNAP_DIR, snap_name), "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            try:
+                import render as render_mod
+                with open(SHORTLIST_PATH, "w", encoding="utf-8") as fh:
+                    fh.write(render_mod.render(data))
+            except Exception:
+                pass  # render is optional
+            push_ok, push_msg = (True, "no flag changes - nothing to push")
+            if changed:
+                push_ok, push_msg = self._commit_and_push()
+            return self._json(200, {"ok": True, "checks": len(checks), "changed": changed,
+                                    "details": details, "counts": data["counts"],
+                                    "snapshot": snap_name, "pushed": push_ok,
+                                    "push_message": push_msg})
+        except Exception as e:  # noqa: BLE001
+            return self._json(500, {"ok": False, "error": str(e)})
+
     def _handle_set_market_status(self):
         """Manually set a listing's market flag from the dashboard drawer.
 
@@ -942,6 +1043,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
             return self._handle_enrich_listing()
         if self.path == "/api/delete-listing":
             return self._handle_delete_listing()
+        if self.path == "/api/apply-status":
+            return self._handle_apply_status()
         if self.path == "/api/set-market-status":
             return self._handle_set_market_status()
         if self.path != "/api/save-notes":
