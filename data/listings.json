@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 79,
-    "tier1_pass": 74,
-    "new": 21,
+    "total": 78,
+    "tier1_pass": 73,
+    "new": 20,
     "price_changed": 0,
     "sold": 154,
     "under_offer": 2,
-    "withdrawn": 40
+    "withdrawn": 41
   },
   "listings": [
     {
@@ -450,7 +450,7 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8631843,
       "lon": 151.1802214,
       "status": "interested",
@@ -461,7 +461,9 @@
         "176m²"
       ],
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-30",
+      "status_source": "manual"
     },
     {
       "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
@@ -3606,7 +3608,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 3,
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464"
+      "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464",
+      "status": "interested",
+      "note": ""
     },
     {
       "address": "04/222 Flood St Allen Street",

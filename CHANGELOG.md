@@ -7,6 +7,12 @@ of how the code got to its current shape.
 
 ---
 
+## 30 September 2026 — Bedrooms filter defaults to 2+
+
+- `index.html`: the Bedrooms filter now opens on **2+ beds** (was 3+), matching the Tier 1 minimum (decision #28).
+
+---
+
 ## 29 September 2026 — Sweep-time status verification (sold / evidently withdrawn)
 
 **Problem.** The 25 July sold-detection work gave the pipeline three ways to learn

@@ -182,5 +182,10 @@
     "status": "sold-without-us",
     "note": "",
     "updated": "2026-09-29T05:24:43.448Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-09-29T21:54:00.196Z"
   }
 }
