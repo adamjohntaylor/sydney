@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T07:12:31.839551+00:00",
-  "generated_at_sydney": "2026-09-29 17:12 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T07:13:33.170183+00:00",
+  "generated_at_sydney": "2026-09-29 17:13 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 64,
-    "tier1_pass": 59,
+    "total": 59,
+    "tier1_pass": 54,
     "new": 22,
     "price_changed": 0,
-    "sold": 150,
+    "sold": 154,
     "under_offer": 2,
-    "withdrawn": 38
+    "withdrawn": 39
   },
   "listings": [
     {
@@ -16803,9 +16803,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/19-295-victoria-road-marrickville-nsw-2204-2021074013"
     },
     {
       "address": "14 Reynolds Avenue",
@@ -16865,8 +16867,14 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "SOLD",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-10",
+      "resolved_url": "https://www.domain.com.au/14-reynolds-avenue-balmain-nsw-2041-2021073806",
+      "sold_date": "2026-09-10"
     },
     {
       "address": "922 Bourke Street",
@@ -16925,9 +16933,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/922-bourke-street-zetland-nsw-2017-2021073756"
     },
     {
       "address": "9/91-93 Campbell Street",
@@ -16987,8 +16997,15 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "SOLD",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-28",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f91-93+campbell+street+newtown",
+      "resolved_url": "https://www.domain.com.au/9-91-93-campbell-street-newtown-nsw-2042-2021072861",
+      "sold_date": "2026-08-28"
     },
     {
       "address": "56/22 Buchanan Street",
@@ -17047,9 +17064,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/56-22-buchanan-street-balmain-nsw-2041-2021073631"
     },
     {
       "address": "10 Red Lion Street",
@@ -17111,8 +17130,14 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "SOLD",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-11",
+      "resolved_url": "https://www.domain.com.au/10-red-lion-street-rozelle-nsw-2039-2021069694",
+      "sold_date": "2026-09-11"
     },
     {
       "address": "710/7 Metters Street",
@@ -17173,9 +17198,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/710-7-metters-street-erskineville-nsw-2043-2021075088"
     },
     {
       "address": "221/1 Phillip Street",
@@ -17234,9 +17261,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/221-1-phillip-street-petersham-nsw-2049-2020998217"
     },
     {
       "address": "3/14 McDonald Street",
@@ -17296,8 +17325,15 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-08-17",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "SOLD",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-12",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f14+mcdonald+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/3-14-mcdonald-street-leichhardt-nsw-2040-2021075641",
+      "sold_date": "2026-09-12"
     },
     {
       "address": "73/20 Eve Street",
@@ -17354,11 +17390,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.9054147,
-      "lon": 151.1867246
+      "lon": 151.1867246,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/73-20-eve-street-erskineville-nsw-2043-2021075492"
     },
     {
       "address": "303/1 Layton Street",
@@ -17419,7 +17457,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/303-1-layton-street-camperdown-nsw-2050-2021125028"
     },
     {
       "address": "103/383 Darling Street",
@@ -17482,7 +17522,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/103-383-darling-street-balmain-nsw-2041-2021042393"
     },
     {
       "address": "6/14 Denison Street",
@@ -17544,8 +17586,14 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2f14+denison+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "16/793-799 New Canterbury Road",
@@ -17608,7 +17656,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702"
     },
     {
       "address": "41/33 Euston Road",
@@ -17671,7 +17721,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/41-33-euston-road-alexandria-nsw-2015-2021160176"
     },
     {
       "address": "6/64 Arthur Street",
@@ -17734,7 +17786,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841"
     },
     {
       "address": "50/274 Botany Road",
@@ -17795,7 +17849,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911"
     },
     {
       "address": "504/1 Gantry Lane",
@@ -17858,7 +17914,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573"
     }
   ]
 }
