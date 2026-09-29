@@ -1,0 +1,193 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6+park+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-04",
+      "resolved_url": "https://www.domain.com.au/6-park-road-marrickville-nsw-2204-2021015731",
+      "sold_date": "2026-09-04",
+      "address": "6 Park Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=294+belmont+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/294-belmont-street-alexandria-nsw-2015-2021015053",
+      "address": "294 Belmont Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=89b+camden+street+enmore",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-03",
+      "resolved_url": "https://www.domain.com.au/89b-camden-street-enmore-nsw-2042-2021014989",
+      "sold_date": "2026-08-03",
+      "address": "89B Camden Street",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=92+carlisle+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-28",
+      "resolved_url": "https://www.domain.com.au/92-carlisle-street-leichhardt-nsw-2040-2021014881",
+      "sold_date": "2026-07-28",
+      "address": "92 Carlisle Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=25a+george+street+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-15",
+      "resolved_url": "https://www.domain.com.au/13-25a-george-street-marrickville-nsw-2204-2021013442",
+      "sold_date": "2026-08-15",
+      "address": "25a George Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27%2F176+marrickville+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-05",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27%2f176+marrickville+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/27-176-marrickville-road-marrickville-nsw-2204-2020978207",
+      "sold_date": "2026-08-05",
+      "address": "27/176 Marrickville Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=861%2F2+cooper+place+zetland",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-26",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=861%2f2+cooper+place+zetland",
+      "resolved_url": "https://www.domain.com.au/861-2-cooper-place-zetland-nsw-2017-2020974836",
+      "sold_date": "2026-08-26",
+      "address": "861/2 Cooper Place",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=99+percival+road+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/99-percival-road-stanmore-nsw-2048-2020977602",
+      "address": "99 Percival Road",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=208%2F106+epsom+rd+zetland",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=208%2f106+epsom+rd+zetland",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "208/106 Epsom Rd",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502%2F326+marrickville+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-12",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502%2f326+marrickville+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/502-326-marrickville-road-marrickville-nsw-2204-2021014825",
+      "sold_date": "2026-08-12",
+      "address": "502/326 Marrickville Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=212%2F2-12+glebe+point+road+glebe",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-30",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=212%2f2-12+glebe+point+road+glebe",
+      "resolved_url": "https://www.domain.com.au/212-2-12-glebe-point-road-glebe-nsw-2037-2020995796",
+      "sold_date": "2026-07-30",
+      "address": "212/2-12 Glebe Point Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=65%2F268+johnston+street+annandale",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-10",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=65%2f268+johnston+street+annandale",
+      "resolved_url": "https://www.domain.com.au/65-268-johnston-street-annandale-nsw-2038-2020646224",
+      "sold_date": "2026-08-10",
+      "address": "65/268 Johnston Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F1-9+livingstone+road+petersham",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-13",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f1-9+livingstone+road+petersham",
+      "resolved_url": "https://www.domain.com.au/9-1-9-livingstone-road-petersham-nsw-2049-2021014097",
+      "sold_date": "2026-08-13",
+      "address": "9/1-9 Livingstone Road",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=211%2F1+missenden+road+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=211%2f1+missenden+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/211-1-missenden-road-camperdown-nsw-2050-2021018668",
+      "sold_date": "2026-07-24",
+      "address": "211/1 Missenden Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14+excelsior+parade+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-22",
+      "resolved_url": "https://www.domain.com.au/14-excelsior-parade-marrickville-nsw-2204-2021017625",
+      "sold_date": "2026-08-22",
+      "address": "14 Excelsior Parade",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=80+kingston+road+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-11",
+      "resolved_url": "https://www.domain.com.au/80-kingston-road-camperdown-nsw-2050-2021016869",
+      "sold_date": "2026-08-11",
+      "address": "80 Kingston Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2F149+wardell+road+dulwich+hill",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-16",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2f149+wardell+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/15-149-wardell-road-dulwich-hill-nsw-2203-2021016617",
+      "sold_date": "2026-09-16",
+      "address": "15/149 Wardell Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=51%2F44-50+ewart+street+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-21",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=51%2f44-50+ewart+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/51-44-50-ewart-street-marrickville-nsw-2204-2020905251",
+      "sold_date": "2026-08-21",
+      "address": "51/44-50 Ewart Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=51+london+street+enmore",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "51 London Street",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53%2F2-6+brown+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-12",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53%2f2-6+brown+street+newtown",
+      "resolved_url": "https://www.domain.com.au/53-2-6-brown-street-newtown-nsw-2042-2021019577",
+      "sold_date": "2026-08-12",
+      "address": "53/2-6 Brown Street",
+      "suburb": "Newtown"
+    }
+  ]
+}
