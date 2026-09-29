@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T11:49:02.957472+00:00",
-  "generated_at_sydney": "2026-09-29 21:49 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T21:34:00.367987+00:00",
+  "generated_at_sydney": "2026-09-30 07:34 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 80,
-    "tier1_pass": 75,
-    "new": 42,
-    "price_changed": 1,
+    "total": 79,
+    "tier1_pass": 74,
+    "new": 21,
+    "price_changed": 0,
     "sold": 154,
     "under_offer": 2,
-    "withdrawn": 39
+    "withdrawn": 40
   },
   "listings": [
     {
@@ -4096,17 +4096,16 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "beds": 1,
       "baths": 1,
       "parking": 1,
-      "prior_price_text": "Guide $740,000",
-      "change_flag": "PRICE_CHANGED",
-      "days_on_market": 66,
+      "change_flag": "UNCHANGED",
+      "days_on_market": 67,
       "lat": -33.909076,
       "lon": 151.1640187,
-      "status_checked_on": "2026-09-29",
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768"
     },
     {
@@ -17588,7 +17587,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "change_flag": "WITHDRAWN",
       "days_on_market": 0,
       "status_checked_on": "2026-09-29",
@@ -17657,10 +17656,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702"
     },
     {
@@ -17722,10 +17721,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/41-33-euston-road-alexandria-nsw-2015-2021160176"
     },
     {
@@ -17787,10 +17786,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841"
     },
     {
@@ -17850,10 +17849,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911"
     },
     {
@@ -17915,10 +17914,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573"
     },
     {
@@ -17980,9 +17979,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_checked_on": "2026-09-29",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/104-551-darling-street-rozelle-nsw-2039-2021195031"
     },
     {
@@ -18044,9 +18044,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_checked_on": "2026-09-29",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/53-ferry-road-glebe-nsw-2037-2021194758"
     },
     {
@@ -18057,6 +18058,8 @@
       "price_guide_text": "$1,350,000",
       "price_min": 1350000,
       "price_max": 1350000,
+      "lat": -33.9063046,
+      "lon": 151.1689411,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -18106,11 +18109,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "lat": -33.9063046,
-      "lon": 151.1689411,
-      "status_checked_on": "2026-09-29",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
       "resolved_url": "https://www.domain.com.au/36-12-leicester-street-marrickville-nsw-2204-2021194309"
     },
     {
@@ -18121,6 +18123,8 @@
       "price_guide_text": "$1,200,000",
       "price_min": 1200000,
       "price_max": 1200000,
+      "lat": -33.9063493,
+      "lon": 151.1376915,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -18170,12 +18174,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "lat": -33.9063493,
-      "lon": 151.1376915,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-30",
+      "resolved_url": "https://www.domain.com.au/4-12-16-terrace-road-dulwich-hill-nsw-2203-2021193842"
     },
     {
       "address": "14/451-457 New Canterbury Road",
@@ -18234,12 +18237,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
       "lat": -33.9032722,
       "lon": 151.141835,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30",
+      "resolved_url": "https://www.domain.com.au/14-451-457-new-canterbury-road-dulwich-hill-nsw-2203-2021151406"
     },
     {
       "address": "177 St Johns Road",
@@ -18298,12 +18302,16 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 1,
       "lat": -33.88297379999999,
       "lon": 151.1833603,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30",
+      "departed_on": "2026-09-30",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "19 Lilydale Street",
@@ -18362,12 +18370,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
       "lat": -33.9078861,
       "lon": 151.1538946,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "88 Constitution Road",
@@ -18426,12 +18435,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
       "lat": -33.90256189999999,
       "lon": 151.139519,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "6/268 Glebe Point Road",
@@ -18490,12 +18500,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
       "lat": -33.8737814,
       "lon": 151.1817771,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "28/525 Illawarra Road",
@@ -18554,12 +18565,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
       "lat": -33.9189074,
       "lon": 151.1462165,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "12/11 Arthur St",
@@ -18616,12 +18628,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
       "lat": -33.9125263,
       "lon": 151.1520216,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "77A Hubert Street",
@@ -18632,54 +18645,61 @@
       "price_min": 2000000,
       "price_max": 2000000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 81,
+          "supermarket": 907,
+          "pool": 727,
+          "park": 283,
+          "restaurants": 278
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
+      "lat": -33.8744578,
+      "lon": 151.1535422,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "109/69 Allen Street",
@@ -18687,21 +18707,27 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F69+allen+street+leichhardt",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 197,
+          "supermarket": 465,
+          "pool": 1191,
+          "park": 148,
+          "restaurants": 144
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -18709,33 +18735,34 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
+      "lat": -33.8786058,
+      "lon": 151.1541033,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "17 Johnston Street",
@@ -18790,10 +18817,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1,
       "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "50 Macdonald Street",
@@ -18848,10 +18876,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1
     },
     {
       "address": "39/127 Railway Parade",
@@ -18906,10 +18933,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1
     },
     {
       "address": "23/15-17 Fountain Street",
@@ -18964,10 +18990,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1
     },
     {
       "address": "207/110 Epsom Road",
@@ -19022,10 +19047,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1
     },
     {
       "address": "3/331 Balmain Road",
@@ -19080,10 +19104,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1
     },
     {
       "address": "62 Margaret Street",
@@ -19138,10 +19161,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1
     },
     {
       "address": "2106/6 Ebsworth Street",
@@ -19194,10 +19216,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-09-29"
+      "last_seen": "2026-09-30",
+      "change_flag": "UNCHANGED",
+      "days_on_market": 1
     }
   ]
 }
