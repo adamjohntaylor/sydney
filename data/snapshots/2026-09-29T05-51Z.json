@@ -6,11 +6,11 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 240,
-    "tier1_pass": 223,
-    "new": 79,
+    "total": 241,
+    "tier1_pass": 224,
+    "new": 80,
     "price_changed": 6,
-    "sold": 11,
+    "sold": 10,
     "under_offer": 1,
     "withdrawn": 2
   },
@@ -706,7 +706,7 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "SOLD",
+      "change_flag": "NEW",
       "lat": -33.8515261,
       "lon": 151.1519194,
       "features": [
@@ -718,9 +718,7 @@
         "Outdoor Entertaining",
         "Secure Parking",
         "Water Views"
-      ],
-      "departed_on": "2026-09-29",
-      "status_source": "manual"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-151387764",
