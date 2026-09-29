@@ -9,7 +9,7 @@
 // not_found | on_market | unknown, plus the two search-page kinds
 // (search_count / sold_search) that background.js resolves itself.
 
-(function () {
+function readPage() {
   const url = location.href;
   const host = location.hostname;
   const title = (document.title || "").trim();
@@ -90,5 +90,20 @@
   }
   check.status_basis = "chrome: " + (check.status_basis || "");
   check.page_title = title;
-  try { chrome.runtime.sendMessage({ type: "status-check", check }); } catch (e) { /* extension reloaded */ }
+  return check;
+}
+
+// Client-rendered pages (REA especially) can be nearly empty at document_idle:
+// re-read a couple of times before reporting 'unknown' or a null count.
+(function () {
+  const inconclusive = (c) => (c.kind === "listing" && c.listing_status === "unknown")
+                           || (c.kind === "search_count" && c.count === null);
+  const attempts = [0, 2500, 5000];
+  let i = 0;
+  const go = () => {
+    const c = readPage();
+    if (inconclusive(c) && ++i < attempts.length) { setTimeout(go, attempts[i]); return; }
+    try { chrome.runtime.sendMessage({ type: "status-check", check: c }); } catch (e) { /* extension reloaded */ }
+  };
+  go();
 })();

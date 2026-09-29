@@ -1,0 +1,70 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F69+allen+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "109/69 Allen Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+johnston+street+annandale",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "17 Johnston Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50+macdonald+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "50 Macdonald Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=39%2F127+railway+parade+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "39/127 Railway Parade",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2F15-17+fountain+street+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "23/15-17 Fountain Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2F110+epsom+road+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "207/110 Epsom Road",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F331+balmain+road+lilyfield",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "3/331 Balmain Road",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=62+margaret+street+newtown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "62 Margaret Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2106%2F6+ebsworth+street+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2106%2f6+ebsworth+street+zetland",
+      "address": "2106/6 Ebsworth Street",
+      "suburb": "Zetland"
+    }
+  ]
+}

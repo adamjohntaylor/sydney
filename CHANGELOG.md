@@ -128,8 +128,21 @@ is the page itself. Changes:
   install steps (chrome://extensions → Developer mode → Load unpacked →
   `dashboard\extension`).
 
-**Adam-side:** load the extension once (see `extension/README.md`), serve the
-dashboard, click Verify with the page count set to 300 to clear the backlog. The first few sweeps will retire a large backlog
+**First real run (29 Sep, evening):** Verify over all 238 pending records:
+**154 sold, 39 withdrawn, 2 under offer, 59 still on market.** 12/29 Cook St
+Glebe retired (sold 19 Jun 2026, from the page title). Historical-sale guard
+fired correctly on eight addresses (sales 2014–2024). One `unknown` (60/24
+Buchanan St, an REA page read before it rendered) and four "redirected to
+property-profile" withdrawals — all six confirmed against Domain's sold search
+as having no recent sale, so the verdicts stand. Two follow-up refinements:
+`background.js` now runs the sold search for any dead listing page (redirect /
+404 / "no longer available") before settling on WITHDRAWN, and `content.js`
+re-reads a page at 2.5 s and 5 s before reporting `unknown` (client-rendered
+REA pages).
+
+**Adam-side:** the extension is installed and has run; after pulling these two
+files, reload it once at chrome://extensions. Routine use: serve the dashboard,
+click Verify (60 pages) as part of each sweep. The first few sweeps will retire a large backlog
 (231 candidates on 29 Sep) — run `sweep.py --worklist 80` or ask Claude for a
 verification pass to clear it faster. There is still no `sydney-property-sweep`
 scheduled task on the account (checked 29 Sep), so sweeps remain interactive.

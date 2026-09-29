@@ -85,8 +85,27 @@ async function verifyEntry(w) {
   // search page): the original listing is gone. REA's /sold/ move keeps the
   // id and content.js already reads it as sold.
   const id = listingId(w.url);
-  if (c.kind === "listing" && id && c.final_url && !c.final_url.includes(id)) {
-    return { ...c, listing_status: "withdrawn", status_basis: "chrome: redirected to " + c.final_url };
+  const gone = (c.kind === "listing" && id && c.final_url && !c.final_url.includes(id))
+            || (c.kind === "listing" && (c.listing_status === "not_found" || c.listing_status === "withdrawn"));
+  if (gone) {
+    // The listing page is dead (redirected to a property profile, 404, "no
+    // longer available"). Before settling on WITHDRAWN, ask Domain's sold
+    // search for the address - a sold listing's page often dies the same way.
+    const base = { ...c, listing_status: "withdrawn",
+                   status_basis: c.final_url && !c.final_url.includes(id) ? "chrome: redirected to " + c.final_url : c.status_basis };
+    if (!(w.address && w.suburb)) return base;
+    await sleep(DELAY_MS);
+    const su = "https://www.domain.com.au/sold-listings/?" + new URLSearchParams({ street: `${w.address} ${w.suburb}`.toLowerCase() }).toString();
+    const s = await openAndRead(su);
+    if (s.kind !== "sold_search" || !s.count) return { ...base, status_basis: base.status_basis + "; not in Domain sold results either" };
+    let historical = false;
+    if (s.sold_date && w.first_seen) {
+      const fs = new Date(w.first_seen), sd = new Date(s.sold_date);
+      historical = sd < new Date(fs.getTime() - SOLD_DATE_GRACE_DAYS * 86400000);
+    }
+    if (historical) return { ...base, status_basis: base.status_basis + `; sold search shows only an older sale (${s.sold_date})`, resolved_url: s.resolved_url };
+    return { ...c, listing_status: "sold", status_basis: "chrome: " + s.status_basis.replace(/^chrome: /, "") + " (listing page gone)",
+             sold_date: s.sold_date, resolved_url: s.resolved_url };
   }
   if (c.kind === "search_count") {
     if (c.count === null) return { ...c, listing_status: "unknown" };
