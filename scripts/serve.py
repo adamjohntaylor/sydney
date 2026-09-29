@@ -19,6 +19,8 @@ Endpoints:
     POST /api/set-market-status  -> manually flag SOLD / UNDER_OFFER / WITHDRAWN / ON_MARKET
     GET  /api/status-worklist    -> active listings whose market status needs a page re-read
                                     (?cap=N, ?all=1); the sweep's verification leg reads these
+    POST /api/verify-status      -> {"cap": N, "all": bool} probe the worklist pages now and apply
+                                    (Refresh does the same for up to DASHBOARD_STATUS_PROBE_CAP pages)
     POST /api/apply-status       -> {"checks":[{url, listing_status, status_basis, final_url?}]}
                                     apply page re-read results: SOLD / UNDER_OFFER / WITHDRAWN /
                                     on-market revive, with provenance; rewrites listings.json
@@ -52,7 +54,13 @@ import gmail_fetch as gmail_mod
 import sweep as sweep_mod
 import parse_alert_email as alert_mod
 import zoning as zoning_mod
+import status_probe as probe_mod
 import datetime as dt
+
+# Sweep-time status verification (29 Sep 2026): every Refresh reads the pages of
+# the active listings most likely to have left the market and marks them.
+STATUS_PROBE_ON_REFRESH = os.environ.get("DASHBOARD_STATUS_PROBE", "1") != "0"
+STATUS_PROBE_CAP = int(os.environ.get("DASHBOARD_STATUS_PROBE_CAP", str(probe_mod.DEFAULT_CAP)))
 
 SNAP_DIR = os.path.join(DASH_DIR, "data", "snapshots")
 STATUS_CHECKS_DIR = os.path.join(DASH_DIR, "data", "status-checks")
@@ -329,6 +337,28 @@ this page and re-drag the button (the code is baked into the link, so it does no
             # the leg that turns "evidently sold / withdrawn" into a flag.
             status_changed, status_details = sweep_mod.apply_pending_status_files(
                 all_listings, STATUS_CHECKS_DIR, today)
+            # ...and READ THE PAGES ourselves: probe the highest-priority active
+            # listings (auction passed / open homes passed / unsighted) and mark
+            # SOLD / UNDER_OFFER / WITHDRAWN from what the listing page says.
+            probe_summary = None
+            if STATUS_PROBE_ON_REFRESH:
+                print(f"Step 6c: Probing up to {STATUS_PROBE_CAP} listing pages for market status...",
+                      file=sys.stderr, flush=True)
+                try:
+                    res = probe_mod.run_verification(
+                        all_listings, today, cap=STATUS_PROBE_CAP,
+                        log=lambda s: print(s, file=sys.stderr, flush=True))
+                    probe_summary = {k: res[k] for k in ("probed", "pending_before", "changed", "verdicts")}
+                    probe_mod.archive_checks(
+                        res["checks"],
+                        f"refresh probe {today}: {res['probed']} probed, {res['changed']} change(s), "
+                        f"verdicts {res['verdicts']}",
+                        syd.strftime("%Y%m%dT%H%M"))
+                    status_changed += res["changed"]
+                    status_details.extend("probe: " + d for d in res["details"])
+                except Exception as e:  # noqa: BLE001 - verification must never sink a refresh
+                    probe_summary = {"error": str(e)}
+                    print(f"  probe failed: {e}", file=sys.stderr, flush=True)
             if status_details:
                 print(f"Step 6c: Status verification - {status_changed} flag change(s)",
                       file=sys.stderr, flush=True)
@@ -460,6 +490,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "zoning_failed": zoning_fails,
                 "departures_applied": departures_applied,
                 "status_checks_applied": status_changed,
+                "status_probe": probe_summary,
                 "verification_pending": len(sweep_mod.build_status_worklist(
                     all_listings, today, cap=0)),
                 "sold": out["counts"].get("sold", 0),
@@ -887,6 +918,57 @@ this page and re-drag the button (the code is baked into the link, so it does no
         except Exception as e:  # noqa: BLE001
             return self._json(500, {"ok": False, "error": str(e)})
 
+    def _handle_verify_status(self):
+        """POST /api/verify-status  body {"cap": N, "all": bool} (both optional).
+        Probes the worklist pages NOW (status_probe), applies the verdicts,
+        rewrites listings.json + snapshot + 07, pushes if anything changed.
+        Use with a large cap to clear the verification backlog in one go."""
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            raw = self.rfile.read(length)
+            body = json.loads(raw.decode("utf-8")) if raw else {}
+            cap = int(body.get("cap", STATUS_PROBE_CAP))
+            include_all = bool(body.get("all", False))
+            with open(LISTINGS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            listings = data.get("listings", [])
+            syd = sweep_mod.now_sydney()
+            today = syd.date().isoformat()
+            res = probe_mod.run_verification(
+                listings, today, cap=cap, include_all=include_all,
+                log=lambda s: print(s, file=sys.stderr, flush=True))
+            probe_mod.archive_checks(
+                res["checks"],
+                f"verify-status {today}: {res['probed']} probed, {res['changed']} change(s), "
+                f"verdicts {res['verdicts']}",
+                syd.strftime("%Y%m%dT%H%M"))
+            data["counts"] = sweep_mod.build_counts(listings)
+            data["generated_at"] = syd.astimezone(dt.timezone.utc).isoformat()
+            data["generated_at_sydney"] = syd.strftime("%Y-%m-%d %H:%M %Z (Sydney)")
+            with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            os.makedirs(SNAP_DIR, exist_ok=True)
+            snap_name = syd.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H-%M") + "Z.json"
+            with open(os.path.join(SNAP_DIR, snap_name), "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            try:
+                import render as render_mod
+                with open(SHORTLIST_PATH, "w", encoding="utf-8") as fh:
+                    fh.write(render_mod.render(data))
+            except Exception:
+                pass
+            push_ok, push_msg = (True, "no flag changes - nothing to push")
+            if res["changed"]:
+                push_ok, push_msg = self._commit_and_push()
+            remaining = len(sweep_mod.build_status_worklist(listings, today, cap=0))
+            return self._json(200, {"ok": True, "probed": res["probed"], "changed": res["changed"],
+                                    "verdicts": res["verdicts"], "details": res["details"],
+                                    "verification_pending": remaining, "counts": data["counts"],
+                                    "snapshot": snap_name, "pushed": push_ok,
+                                    "push_message": push_msg})
+        except Exception as e:  # noqa: BLE001
+            return self._json(500, {"ok": False, "error": str(e)})
+
     def _handle_apply_status(self):
         """POST /api/apply-status  body {"checks": [...]} (or a bare list).
         Applies page re-read results via sweep.apply_status_checks, recomputes
@@ -1045,6 +1127,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
             return self._handle_delete_listing()
         if self.path == "/api/apply-status":
             return self._handle_apply_status()
+        if self.path == "/api/verify-status":
+            return self._handle_verify_status()
         if self.path == "/api/set-market-status":
             return self._handle_set_market_status()
         if self.path != "/api/save-notes":

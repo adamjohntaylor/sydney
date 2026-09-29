@@ -1,0 +1,546 @@
+{
+  "source": "status_probe",
+  "note": "refresh probe 2026-09-29: 60 probed, 0 change(s), verdicts {'blocked': 60}",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/404-42c-formosa-street-drummoyne-nsw-2047-2020757988",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "404/42C Formosa Street",
+      "suburb": "Drummoyne",
+      "worklist_reason": "last open home 2026-06-27 has passed"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150961828",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "60/24 Buchanan Street",
+      "suburb": "Balmain",
+      "worklist_reason": "last open home 2026-06-27 has passed"
+    },
+    {
+      "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "706/3 Cary Street",
+      "suburb": "Drummoyne",
+      "worklist_reason": "last open home 2026-06-23 has passed"
+    },
+    {
+      "url": "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "20/10 Gow Street",
+      "suburb": "Balmain",
+      "worklist_reason": "not sighted for 100 days"
+    },
+    {
+      "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1001/2 Cowper Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 100 days"
+    },
+    {
+      "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/24-1-gibbens-street-camperdown-nsw-2050-2020926921",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "24/1 Gibbens Street",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/4-6-turner-street-balmain-nsw-2041-2020924899",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "4/6 Turner Street",
+      "suburb": "Balmain",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/3-12-george-street-marrickville-nsw-2204-2020924292",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3/12 George Street",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/103-12-marsden-street-camperdown-nsw-2050-2020923696",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "103/12 Marsden Street",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/19-day-street-marrickville-nsw-2204-2020921673",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "19 Day Street",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/27-486-488-illawarra-road-marrickville-nsw-2204-2020921544",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "27/486-488 Illawarra Road",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/13-30-ewart-street-marrickville-nsw-2204-2020921226",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "13/30 Ewart street",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/38-20-pyrmont-bridge-road-camperdown-nsw-2050-2020920092",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "38/20 Pyrmont Bridge Road",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/3-blairgowrie-street-dulwich-hill-nsw-2203-2020919249",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3 Blairgowrie Street",
+      "suburb": "Dulwich Hill",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/2712-6-grove-street-dulwich-hill-nsw-2203-2020917227",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "2712/6 Grove Street",
+      "suburb": "Dulwich Hill",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/1009-1-sterling-circuit-camperdown-nsw-2050-2020915502",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1009/1 Sterling Circuit",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/3-58-warren-road-marrickville-nsw-2204-2020915167",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3/58 Warren Road",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/9-70-74-wilson-street-newtown-nsw-2042-2020929417",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "9/70-74 Wilson Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "802/6 Paul Street",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/9-63-69-lord-street-newtown-nsw-2042-2020926028",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "9/63-69 Lord Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 99 days"
+    },
+    {
+      "url": "https://www.domain.com.au/4-18-leichhardt-street-leichhardt-nsw-2040-2020930992",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "4/18 Leichhardt Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 98 days"
+    },
+    {
+      "url": "https://www.domain.com.au/63-rofe-street-leichhardt-nsw-2040-2020927950",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "63 Rofe Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 98 days"
+    },
+    {
+      "url": "https://www.domain.com.au/113-albermarle-street-newtown-nsw-2042-2020925413",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "113 Albermarle Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 98 days"
+    },
+    {
+      "url": "https://www.domain.com.au/14-19-21-myra-road-dulwich-hill-nsw-2203-2020933163",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "14/19-21 Myra Road",
+      "suburb": "Dulwich Hill",
+      "worklist_reason": "not sighted for 98 days"
+    },
+    {
+      "url": "https://www.domain.com.au/405-15-ralph-street-alexandria-nsw-2015-2016827031",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "405/15 Ralph Street",
+      "suburb": "Alexandria",
+      "worklist_reason": "not sighted for 98 days"
+    },
+    {
+      "url": "https://www.domain.com.au/1-136-livingstone-road-marrickville-nsw-2204-2020907220",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1/136 Livingstone Road",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=201%2F1+brightwell+lane+erskineville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "201/1 Brightwell Lane",
+      "suburb": "Erskineville",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=94%2F155+missenden+road+newtown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "94/155 Missenden Road",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=58%2F30+gadigal+avenue+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "58/30 Gadigal Avenue",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F17-19+westbourne+street+drummoyne",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1/17-19 Westbourne Street",
+      "suburb": "Drummoyne",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+wyndham+street+alexandria",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "109 Wyndham Street",
+      "suburb": "Alexandria",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/79a-2-watermans-quay-barangaroo-nsw-2000-2019934722?topspot=1",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "79A/2 Watermans Quay",
+      "suburb": "Barangaroo",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/206-26-cadigal-avenue-pyrmont-nsw-2009-2020929217",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "206/26 Cadigal Avenue",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/208-1-9-pyrmont-bridge-road-pyrmont-nsw-2009-2020693826",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "208/1-9 Pyrmont Bridge Road",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "509/1 Wattle Crescent",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/316-1-wattle-crescent-pyrmont-nsw-2009-2020910983",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "316/1 Wattle Crescent",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "1306/21 Cadigal Avenue",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "601/320 Harris Street",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/12-29-cook-street-glebe-nsw-2037-2020656242",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "12/29 Cook Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "1101/89 Bay Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "T04/1 Distillery Drive",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151119724",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "2/6 Cross Street",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "1003b/89 bay Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "Terrace 6 Wentworth Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "B503/89 Bay Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151018088",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "72/152-164 Bulwara Road",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "120/102 Miller Street",
+      "suburb": "Pyrmont",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 429 / bot challenge",
+      "http_status": 429,
+      "address": "50/110  Reynolds Street",
+      "suburb": "Balmain",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F19-21+larkin+street+camperdown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1/19-21 Larkin Street",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 97 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8+park+street+erskineville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "8 Park Street",
+      "suburb": "Erskineville",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2F4+elger+street+glebe",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "325/4 Elger Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F36-46+briggs+street+camperdown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "13/36-46 Briggs Street",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "2H Wentworth Park Road",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=04%2F222+flood+st+allen+street+leichhardt",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "04/222 Flood St Allen Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=63+newman+street+newtown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "63 Newman Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F72+wrights+road+drummoyne",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "12/72 Wrights Road",
+      "suburb": "Drummoyne",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F81-83+bay+street+glebe",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "13/81-83 Bay Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=324b+marrickville+road+marrickville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "324B Marrickville Road",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F151-153+illawarra+road+marrickville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3/151-153 Illawarra Road",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 96 days"
+    }
+  ]
+}

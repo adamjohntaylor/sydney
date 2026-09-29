@@ -95,7 +95,24 @@ is a self-contained Claude prompt that does exactly this.
    `{"generated_at_sydney": "...", "sweep_provenance": "...", "listings": [ ... ]}`.
 8. **Verify market status of existing stock (mandatory, every sweep — added
    29 Sep 2026).** Alerts are new-only, so nothing above can discover that a
-   listing already on the watchlist has sold or been pulled. Run
+   listing already on the watchlist has sold or been pulled. **This now runs
+   automatically:** `python scripts\sweep.py --probe` (and the dashboard's
+   **Refresh now**) fetch the pages of the active listings most likely to have
+   left the market (`scripts/status_probe.py`, up to 60 per run, one polite
+   request a second) and mark them from what the page says. For a listing-page
+   URL: Domain's `Sold <address> on <date>` title / "Sold by private treaty"
+   stamp ⇒ SOLD; an "Under offer" badge ⇒ UNDER_OFFER; 404 / "no longer
+   available" / redirect ⇒ WITHDRAWN; REA's move under `/sold/` ⇒ SOLD. For the
+   alert-derived single-address *search* URLs (most of the watchlist): the
+   for-sale search returning **no exact matches** means the address is gone, and
+   the follow-up **sold-listings search** for the same address decides SOLD
+   (sale dated after we first saw it) versus WITHDRAWN. To clear a backlog in
+   one go: `python scripts\status_probe.py --cap 300` or
+   `POST /api/verify-status {"cap": 300}`. Set `DASHBOARD_STATUS_PROBE=0` before
+   starting `serve.py` to turn the Refresh-time probe off.
+
+   The manual route below remains for pages the probe reports as `blocked` /
+   `unknown` (after 3 such reads a record is flagged `needs_manual_check`): run
    `python scripts\sweep.py --worklist` (default 40 pages; `--worklist 80` for a
    bigger bite, `--worklist-all` to include everything). It writes
    `data/status-worklist-YYYYMMDD.json`, prioritised: auction date passed →

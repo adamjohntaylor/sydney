@@ -67,6 +67,33 @@ revive / id-match across `/sold/` URL / stub-safe merge / re-check window); stat
 CLI run applies a dropped file once and not on the second run; `/api/status-worklist`
 and `/api/apply-status` round-trips. `listings.json` not touched by this change.
 
+**Same day, second pass — the sweep now reads the pages itself.** Adam's first
+Refresh after the above left 12/29 Cook St Glebe (Domain: "Sold by private treaty
+19 Jun 2026") on the active list, because the leg above only *applied* page reads
+and nobody had made any (and the record was outside the 40-page worklist). Added
+`scripts/status_probe.py`: a deterministic reader that GETs each worklist page
+(browser UA, 1 s between requests, 20 s timeout, capped) and classifies it —
+Domain listing page: `<title>Sold <address> on <date>` / "Sold by private treaty"
++ "SOLD - $" ⇒ `sold`; `>Under offer<` badge ⇒ `under_offer`; 404/410, "no longer
+available", or a redirect to another id / a search page ⇒ withdrawn evidence;
+REA `/sold/` URL ⇒ `sold`; 403/429/challenge ⇒ `blocked`; ambiguous ⇒ `unknown`
+(never a guess). **Search-URL records** (192 of 239 active — alert-derived, never
+resolved to a listing page): the single-address for-sale search's title carries
+the result count ("1 Real Estate Property for Sale") or, for zero, no count plus
+"No exact matches" ⇒ the address is gone; the probe then fetches Domain's
+`/sold-listings/?street=` search — a result ⇒ `sold` (with `sold_date` and the
+direct `resolved_url`), guarded so a sale dated > 60 days before `first_seen` is
+treated as historical (⇒ `withdrawn`). Verified against live pages: Cook St and
+20/10 Gow St Balmain (sold 19 Aug 2026) both classify `sold`; 303/1 Layton St
+Camperdown (live, title "<address> | Domain", guide $1.5M) classifies `on_market`.
+Wired in: Refresh **Step 6c** probes up to `DASHBOARD_STATUS_PROBE_CAP` (60)
+pages per click (`DASHBOARD_STATUS_PROBE=0` disables), `POST /api/verify-status
+{"cap": N}` for a backlog pass, `sweep.py --probe [N]`, and
+`status_probe.py --cap N` standalone. Every probe archives its checks under
+`data/status-checks/` (pre-marked applied). Note the sandbox cannot reach
+domain.com.au, so the fetch path itself was exercised only through the
+classifier tests + live WebFetch reads; the first real run is Adam's next Refresh.
+
 **Adam-side:** nothing to install. The first few sweeps will retire a large backlog
 (231 candidates on 29 Sep) — run `sweep.py --worklist 80` or ask Claude for a
 verification pass to clear it faster. There is still no `sydney-property-sweep`

@@ -222,6 +222,7 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
             "address": l.get("address"),
             "suburb": l.get("suburb"),
             "last_seen": l.get("last_seen"),
+            "first_seen": l.get("first_seen"),
             "priority": priority,
             "reason": reason,
             "inconclusive_checks": int(l.get("status_check_failures") or 0),
@@ -310,6 +311,8 @@ def apply_status_checks(checks, listings, today, source=STATUS_SOURCE_CHECK):
             target["last_seen"] = today
             if chk.get("price_guide_text"):
                 target["price_guide_text"] = chk["price_guide_text"]
+            if chk.get("resolved_url"):
+                target["resolved_url"] = chk["resolved_url"]   # direct listing page (url kept: notes key)
             if before in GONE_FLAGS:
                 target["change_flag"] = "UNCHANGED"
                 target.pop("departed_on", None)
@@ -332,6 +335,10 @@ def apply_status_checks(checks, listings, today, source=STATUS_SOURCE_CHECK):
         target["status_basis"] = basis or f"page read: {status}"
         if chk.get("final_url") and chk["final_url"] != target.get("url"):
             target["sold_url"] = chk["final_url"]
+        if chk.get("resolved_url"):
+            target["resolved_url"] = chk["resolved_url"]
+        if chk.get("sold_date"):
+            target["sold_date"] = chk["sold_date"]
         changed += 1
         details.append(f"{before}->{flag}: {url}")
     return changed, details
@@ -648,6 +655,9 @@ def main(argv):
                          "Files dropped in data/status-checks/ are applied automatically.")
     ap.add_argument("--no-status-dir", action="store_true",
                     help="do not auto-apply pending files from data/status-checks/.")
+    ap.add_argument("--probe", nargs="?", const=-1, type=int, metavar="N",
+                    help="fetch the worklist pages (status_probe.py) and apply what they say; "
+                         "N pages (default status_probe.DEFAULT_CAP).")
     args = ap.parse_args(argv[1:])
 
     syd = now_sydney()
@@ -687,8 +697,8 @@ def main(argv):
         listings = harvest["listings"] if isinstance(harvest, dict) else harvest
         if not isinstance(harvest, dict):
             harvest = {}
-    elif not args.status_file and args.no_status_dir:
-        ap.error("nothing to do: give a harvest file, --status-file, or --worklist")
+    elif not args.status_file and args.no_status_dir and args.probe is None:
+        ap.error("nothing to do: give a harvest file, --status-file, --probe, or --worklist")
     if not args.harvest and not args.incremental:
         # Status-only runs must never be mistaken for a full-snapshot sweep
         # (which would mark every listing WITHDRAWN by absence).
@@ -737,6 +747,17 @@ def main(argv):
         n, det = apply_pending_status_files(pool, checks_dir, today)
         status_changed += n
         status_details.extend(det)
+    if args.probe is not None:
+        import status_probe
+        cap = status_probe.DEFAULT_CAP if args.probe < 0 else args.probe
+        res = status_probe.run_verification(
+            pool, today, cap=cap, log=lambda s: print(s, file=sys.stderr, flush=True))
+        status_probe.archive_checks(res["checks"],
+                                    f"probe {today}: {res['probed']} probed, {res['changed']} "
+                                    f"change(s), verdicts {res['verdicts']}",
+                                    syd.strftime("%Y%m%dT%H%M"))
+        status_changed += res["changed"]
+        status_details.extend("probe: " + d for d in res["details"])
     if status_details:
         print("Status verification:", file=sys.stderr)
         for d in status_details:

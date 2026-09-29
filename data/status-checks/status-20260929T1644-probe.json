@@ -1,0 +1,546 @@
+{
+  "source": "status_probe",
+  "note": "refresh probe 2026-09-29: 60 probed, 0 change(s), verdicts {'blocked': 60}",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F69-71+parramatta+road+camperdown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "8/69-71 Parramatta Road",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F142+stanmore+road+stanmore",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "17/142 Stanmore Road",
+      "suburb": "Stanmore",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=107+lennox+street+newtown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "107 Lennox Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F16+hosking+street+balmain",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "16/16 Hosking Street",
+      "suburb": "Balmain",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=121%2F23+corunna+road+stanmore",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "121/23 Corunna Road",
+      "suburb": "Stanmore",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1006%2F5+joynton+avenue+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1006/5 Joynton Avenue",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F51+college+street+drummoyne",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "8/51 College Street",
+      "suburb": "Drummoyne",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81+garden+street+alexandria",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "81 Garden Street",
+      "suburb": "Alexandria",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F136+livingstone+road+marrickville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3/136 Livingstone Road",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F2-18+newman+street+newtown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "6/2-18 Newman Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+burfitt+street+leichhardt",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "9 Burfitt Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F14-16+hercules+street+dulwich+hill",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "8/14-16 Hercules Street",
+      "suburb": "Dulwich Hill",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10a+alice+street+newtown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "10A Alice Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50%2F84+st+georges+crescent+drummoyne",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "50/84 St Georges Crescent",
+      "suburb": "Drummoyne",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=222%2F6+cowper+street+glebe",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "222/6 Cowper Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/2-61a-albany-road-stanmore-nsw-2048-2020926120?topspot=1",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "2/61A Albany Road",
+      "suburb": "Stanmore",
+      "worklist_reason": "not sighted for 96 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+epsom+road+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "130 Epsom Road",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 91 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=38+maida+street+lilyfield",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "38 Maida Street",
+      "suburb": "Lilyfield",
+      "worklist_reason": "not sighted for 91 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2F194+lawrence+street+alexandria",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "15/194 Lawrence Street",
+      "suburb": "Alexandria",
+      "worklist_reason": "not sighted for 91 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=30%2F49+henderson+road+alexandria",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "30/49 Henderson Road",
+      "suburb": "Alexandria",
+      "worklist_reason": "not sighted for 91 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1201%2F5+joynton+avenue+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1201/5 Joynton Avenue",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 91 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2F47+wharf+road+birchgrove",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "11/47 Wharf Road",
+      "suburb": "Birchgrove",
+      "worklist_reason": "not sighted for 89 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F121-123+new+canterbury+road+petersham",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "5/121-123 New Canterbury Road",
+      "suburb": "Petersham",
+      "worklist_reason": "not sighted for 89 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F5+croydon+street+petersham",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "16/5 Croydon Street",
+      "suburb": "Petersham",
+      "worklist_reason": "not sighted for 89 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F45+upward+street+leichhardt",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3/45 Upward Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 89 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2F20+eve+street+erskineville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "57/20 Eve Street",
+      "suburb": "Erskineville",
+      "worklist_reason": "not sighted for 89 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6c+defries+avenue+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "6C Defries Avenue",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 89 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street+erskineville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "9 Metters Street",
+      "suburb": "Erskineville",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2F1+buchanan+street+balmain",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "19/1 Buchanan Street",
+      "suburb": "Balmain",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=24b+george+street+leichhardt",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "24B George Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12+gottenham+street+glebe",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "12 Gottenham Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F168+george+street+erskineville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1/168 George Street",
+      "suburb": "Erskineville",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2F10+leichhardt+street+glebe",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "19/10 Leichhardt Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=131+australia+street+camperdown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "131 Australia Street",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2F300+johnston+street+annandale",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "15/300 Johnston Street",
+      "suburb": "Annandale",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5+marlborough+street+leichhardt",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "5 Marlborough Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F480+king+street+newtown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "17/480 King Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1504%2F1+metters+street+erskineville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "1504/1 Metters Street",
+      "suburb": "Erskineville",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F76+mitchell+road+alexandria",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "109/76 Mitchell Road",
+      "suburb": "Alexandria",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=215%2F5+regent+street+petersham",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "215/5 Regent Street",
+      "suburb": "Petersham",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=52+illawarra+road+marrickville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "52 Illawarra Road",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=208%2F28+zetland+avenue+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "208/28 Zetland Avenue",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=805%2F28+zetland+avenue+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "805/28 Zetland Avenue",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=801%2F6+ebsworth+street+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "801/6 Ebsworth Street",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2201%2F15+gadigal+avenue+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "2201/15 Gadigal Avenue",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=422%2F163+mcevoy+street+alexandria",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "422/163 McEvoy Street",
+      "suburb": "Alexandria",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2F72+macdonald+street+erskineville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "207/72 Macdonald Street",
+      "suburb": "Erskineville",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=43+trafalgar+street+enmore",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "43 Trafalgar Street",
+      "suburb": "Enmore",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=60+malakoff+street+marrickville",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "60 Malakoff Street",
+      "suburb": "Marrickville",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=741+elizabeth+street+zetland",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "741 Elizabeth Street",
+      "suburb": "Zetland",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F14+mcdonald+street+leichhardt",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "2/14 Mcdonald Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F401+marrickville+road+dulwich+hill",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "8/401 Marrickville Road",
+      "suburb": "Dulwich Hill",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26%2F36-50+taylor+street+annandale",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "26/36-50 Taylor Street",
+      "suburb": "Annandale",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2F1+gladstone+street+newtown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "7/1 Gladstone Street",
+      "suburb": "Newtown",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F19+glassop+street+balmain",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "9/19 Glassop Street",
+      "suburb": "Balmain",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=30+talfourd+street+glebe",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "30 Talfourd Street",
+      "suburb": "Glebe",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10+trafalgar+street+annandale",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "10 Trafalgar Street",
+      "suburb": "Annandale",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F8+dunblane+street+camperdown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3/8 Dunblane Street",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=201%2F1+missenden+road+camperdown",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "201/1 Missenden Road",
+      "suburb": "Camperdown",
+      "worklist_reason": "not sighted for 88 days"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F11-15+renwick+street+leichhardt",
+      "listing_status": "blocked",
+      "status_basis": "probe: HTTP 403 / bot challenge",
+      "http_status": 403,
+      "address": "3/11-15 Renwick Street",
+      "suburb": "Leichhardt",
+      "worklist_reason": "not sighted for 88 days"
+    }
+  ]
+}
