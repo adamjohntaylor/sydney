@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T06:59:50.295818+00:00",
-  "generated_at_sydney": "2026-09-29 16:59 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T07:01:31.297086+00:00",
+  "generated_at_sydney": "2026-09-29 17:01 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 197,
-    "tier1_pass": 189,
-    "new": 64,
+    "total": 178,
+    "tier1_pass": 172,
+    "new": 56,
     "price_changed": 5,
-    "sold": 45,
+    "sold": 58,
     "under_offer": 2,
-    "withdrawn": 10
+    "withdrawn": 16
   },
   "listings": [
     {
@@ -2297,10 +2297,15 @@
       "beds": 1,
       "baths": 1,
       "parking": 1,
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "status": "interested",
       "note": "Median Price 825,000",
-      "days_on_market": 8
+      "days_on_market": 8,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "9 Metters Street",
@@ -4292,10 +4297,16 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 2,
       "lat": -33.8867771,
-      "lon": 151.1780471
+      "lon": 151.1780471,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f69-71+parramatta+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "17/142 Stanmore Road",
@@ -4353,10 +4364,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.8976959,
-      "lon": 151.1653129
+      "lon": 151.1653129,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-14",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2f142+stanmore+road+stanmore",
+      "resolved_url": "https://www.domain.com.au/17-142-stanmore-road-stanmore-nsw-2048-2020937678",
+      "sold_date": "2026-07-14"
     },
     {
       "address": "88 Ryan Street",
@@ -4478,10 +4496,16 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.8963356,
-      "lon": 151.1763244
+      "lon": 151.1763244,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-17",
+      "resolved_url": "https://www.domain.com.au/107-lennox-street-newtown-nsw-2042-2020935631",
+      "sold_date": "2026-07-17"
     },
     {
       "address": "16/16 Hosking Street",
@@ -4539,10 +4563,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.8594284,
-      "lon": 151.1929074
+      "lon": 151.1929074,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f16+hosking+street+balmain",
+      "resolved_url": "https://www.domain.com.au/16-16-hosking-street-balmain-east-nsw-2041-2020909848",
+      "sold_date": "2026-07-10"
     },
     {
       "address": "121/23 Corunna Road",
@@ -4602,10 +4633,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.8889233,
-      "lon": 151.1708687
+      "lon": 151.1708687,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-09",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=121%2f23+corunna+road+stanmore",
+      "resolved_url": "https://www.domain.com.au/121-23-corunna-road-stanmore-nsw-2048-2020904858",
+      "sold_date": "2026-07-09"
     },
     {
       "address": "1006/5 Joynton Avenue",
@@ -4665,10 +4703,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.9072907,
-      "lon": 151.2069994
+      "lon": 151.2069994,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1006%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/1006-5-joynton-avenue-zetland-nsw-2017-2020936198",
+      "sold_date": "2026-07-16"
     },
     {
       "address": "8/51 College Street",
@@ -4728,10 +4773,17 @@
       "warehouse_character": false,
       "first_seen": "2026-06-23",
       "last_seen": "2026-06-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.853338,
-      "lon": 151.1539776
+      "lon": 151.1539776,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-11",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f51+college+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/8-51-college-street-drummoyne-nsw-2047-2020923679",
+      "sold_date": "2026-07-11"
     },
     {
       "address": "81 Garden Street",
@@ -4790,11 +4842,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8981717,
-      "lon": 151.1976681
+      "lon": 151.1976681,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381"
     },
     {
       "address": "12/58 Bayswater Street",
@@ -6669,9 +6723,16 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.9050047,
-      "lon": 151.1534694
+      "lon": 151.1534694,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-12",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f136+livingstone+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/3-136-livingstone-road-marrickville-nsw-2204-2020941269",
+      "sold_date": "2026-08-12"
     },
     {
       "address": "6/2-18 Newman Street",
@@ -6731,9 +6792,16 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8983798,
-      "lon": 151.1794356
+      "lon": 151.1794356,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-02",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2f2-18+newman+street+newtown",
+      "resolved_url": "https://www.domain.com.au/6-2-18-newman-street-newtown-nsw-2042-2020940511",
+      "sold_date": "2026-08-02"
     },
     {
       "address": "9 Burfitt Street",
@@ -6793,9 +6861,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8834843,
-      "lon": 151.1490955
+      "lon": 151.1490955,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "resolved_url": "https://www.domain.com.au/9-burfitt-street-leichhardt-nsw-2040-2020939740",
+      "sold_date": "2026-07-16"
     },
     {
       "address": "8/14-16 Hercules Street",
@@ -6855,9 +6929,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.9045288,
-      "lon": 151.1406937
+      "lon": 151.1406937,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f14-16+hercules+street+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "10A Alice Street",
@@ -6917,9 +6997,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.9037337,
-      "lon": 151.1788517
+      "lon": 151.1788517,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "resolved_url": "https://www.domain.com.au/2-10a-alice-street-newtown-nsw-2042-2020922941",
+      "sold_date": "2026-07-01"
     },
     {
       "address": "50/84 St Georges Crescent",
@@ -6979,9 +7065,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8484569,
-      "lon": 151.1574752
+      "lon": 151.1574752,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50%2f84+st+georges+crescent+drummoyne",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "19/1 Buchanan Street",
@@ -7295,9 +7387,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8808517,
-      "lon": 151.1928953
+      "lon": 151.1928953,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=222%2f6+cowper+street+glebe",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "url": "https://www.domain.com.au/2-61a-albany-road-stanmore-nsw-2048-2020926120?topspot=1",
@@ -7305,7 +7403,7 @@
       "suburb": "Stanmore",
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "open_homes": [],
       "postcode": "2048",
       "cover_image": "https://rimh2.domainstatic.com.au/O9Hjxl9Asbyfgp3VXJCoD2wUINE=/1680x720/filters:format(webp):quality(85)/2020926120_1_1_260618_050515-w5481-h3657",
@@ -7375,7 +7473,12 @@
       },
       "price_guide_text": "$1,800,000 (hidden guide)",
       "price_min": 1800000,
-      "price_max": 1800000
+      "price_max": 1800000,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 3 Jul 2026",
+      "sold_date": "2026-07-03"
     },
     {
       "address": "38 Maida Street",
@@ -7435,8 +7538,14 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "SOLD",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-06-25",
+      "resolved_url": "https://www.domain.com.au/38-maida-street-lilyfield-nsw-2040-2020946831",
+      "sold_date": "2026-06-25"
     },
     {
       "address": "15/194 Lawrence Street",
@@ -7498,8 +7607,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "SOLD",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-03",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2f194+lawrence+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/15-194-lawrence-street-alexandria-nsw-2015-2020948808",
+      "sold_date": "2026-08-03"
     },
     {
       "address": "1/168 George Street",
@@ -7625,8 +7741,14 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-06-30",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2014-10-09, before first seen 2026-06-30)",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=30%2f49+henderson+road+alexandria",
+      "resolved_url": "https://www.domain.com.au/30-49-henderson-road-alexandria-nsw-2015-2011458660"
     },
     {
       "address": "1201/5 Joynton Avenue",

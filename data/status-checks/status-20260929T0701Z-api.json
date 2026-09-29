@@ -1,0 +1,191 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F69-71+parramatta+road+camperdown",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f69-71+parramatta+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "8/69-71 Parramatta Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F142+stanmore+road+stanmore",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-14",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2f142+stanmore+road+stanmore",
+      "resolved_url": "https://www.domain.com.au/17-142-stanmore-road-stanmore-nsw-2048-2020937678",
+      "sold_date": "2026-07-14",
+      "address": "17/142 Stanmore Road",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=107+lennox+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-17",
+      "resolved_url": "https://www.domain.com.au/107-lennox-street-newtown-nsw-2042-2020935631",
+      "sold_date": "2026-07-17",
+      "address": "107 Lennox Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F16+hosking+street+balmain",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f16+hosking+street+balmain",
+      "resolved_url": "https://www.domain.com.au/16-16-hosking-street-balmain-east-nsw-2041-2020909848",
+      "sold_date": "2026-07-10",
+      "address": "16/16 Hosking Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=121%2F23+corunna+road+stanmore",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-09",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=121%2f23+corunna+road+stanmore",
+      "resolved_url": "https://www.domain.com.au/121-23-corunna-road-stanmore-nsw-2048-2020904858",
+      "sold_date": "2026-07-09",
+      "address": "121/23 Corunna Road",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1006%2F5+joynton+avenue+zetland",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1006%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/1006-5-joynton-avenue-zetland-nsw-2017-2020936198",
+      "sold_date": "2026-07-16",
+      "address": "1006/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F51+college+street+drummoyne",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-11",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f51+college+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/8-51-college-street-drummoyne-nsw-2047-2020923679",
+      "sold_date": "2026-07-11",
+      "address": "8/51 College Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81+garden+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381",
+      "address": "81 Garden Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F136+livingstone+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-12",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f136+livingstone+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/3-136-livingstone-road-marrickville-nsw-2204-2020941269",
+      "sold_date": "2026-08-12",
+      "address": "3/136 Livingstone Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F2-18+newman+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-02",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2f2-18+newman+street+newtown",
+      "resolved_url": "https://www.domain.com.au/6-2-18-newman-street-newtown-nsw-2042-2020940511",
+      "sold_date": "2026-08-02",
+      "address": "6/2-18 Newman Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+burfitt+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "resolved_url": "https://www.domain.com.au/9-burfitt-street-leichhardt-nsw-2040-2020939740",
+      "sold_date": "2026-07-16",
+      "address": "9 Burfitt Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F14-16+hercules+street+dulwich+hill",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f14-16+hercules+street+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "8/14-16 Hercules Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10a+alice+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "resolved_url": "https://www.domain.com.au/2-10a-alice-street-newtown-nsw-2042-2020922941",
+      "sold_date": "2026-07-01",
+      "address": "10A Alice Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50%2F84+st+georges+crescent+drummoyne",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50%2f84+st+georges+crescent+drummoyne",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "50/84 St Georges Crescent",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=222%2F6+cowper+street+glebe",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=222%2f6+cowper+street+glebe",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "222/6 Cowper Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/2-61a-albany-road-stanmore-nsw-2048-2020926120?topspot=1",
+      "listing_status": "sold",
+      "status_basis": "chrome: page title 'Sold ... on <date>'; Sold prior to auction 3 Jul 2026",
+      "sold_date": "2026-07-03",
+      "address": "2/61A Albany Road",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+epsom+road+zetland",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "130 Epsom Road",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=38+maida+street+lilyfield",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-06-25",
+      "resolved_url": "https://www.domain.com.au/38-maida-street-lilyfield-nsw-2040-2020946831",
+      "sold_date": "2026-06-25",
+      "address": "38 Maida Street",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2F194+lawrence+street+alexandria",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-03",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2f194+lawrence+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/15-194-lawrence-street-alexandria-nsw-2015-2020948808",
+      "sold_date": "2026-08-03",
+      "address": "15/194 Lawrence Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=30%2F49+henderson+road+alexandria",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2014-10-09, before first seen 2026-06-30)",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=30%2f49+henderson+road+alexandria",
+      "resolved_url": "https://www.domain.com.au/30-49-henderson-road-alexandria-nsw-2015-2011458660",
+      "address": "30/49 Henderson Road",
+      "suburb": "Alexandria"
+    }
+  ]
+}
