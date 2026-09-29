@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T07:03:03.088507+00:00",
-  "generated_at_sydney": "2026-09-29 17:03 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T07:04:41.487778+00:00",
+  "generated_at_sydney": "2026-09-29 17:04 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 163,
-    "tier1_pass": 157,
+    "total": 145,
+    "tier1_pass": 139,
     "new": 56,
     "price_changed": 2,
-    "sold": 70,
+    "sold": 84,
     "under_offer": 2,
-    "withdrawn": 19
+    "withdrawn": 23
   },
   "listings": [
     {
@@ -8849,8 +8849,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "SOLD",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "resolved_url": "https://www.domain.com.au/52-illawarra-road-marrickville-nsw-2204-2020956993",
+      "sold_date": "2026-07-25"
     },
     {
       "address": "208/28 Zetland Avenue",
@@ -8910,10 +8916,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9072686,
-      "lon": 151.2061881
+      "lon": 151.2061881,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-21",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=208%2f28+zetland+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/208-28-zetland-avenue-zetland-nsw-2017-2020955865",
+      "sold_date": "2026-07-21"
     },
     {
       "address": "805/28 Zetland Avenue",
@@ -8973,10 +8986,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.9072686,
-      "lon": 151.2061881
+      "lon": 151.2061881,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=805%2f28+zetland+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "801/6 Ebsworth Street",
@@ -9035,11 +9054,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.905198,
-      "lon": 151.2040634
+      "lon": 151.2040634,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/801-6-ebsworth-street-zetland-nsw-2017-2020955862"
     },
     {
       "address": "2201/15 Gadigal Avenue",
@@ -9099,10 +9120,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9039819,
-      "lon": 151.2121526
+      "lon": 151.2121526,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2201%2f15+gadigal+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/2201-15-gadigal-avenue-zetland-nsw-2017-2020955651",
+      "sold_date": "2026-07-10"
     },
     {
       "address": "422/163 McEvoy Street",
@@ -9160,10 +9188,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9035167,
-      "lon": 151.1937564
+      "lon": 151.1937564,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-30",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=422%2f163+mcevoy+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/422-163-mcevoy-street-alexandria-nsw-2015-2020954856",
+      "sold_date": "2026-07-30"
     },
     {
       "address": "207/72 Macdonald Street",
@@ -9221,10 +9256,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.9037631,
-      "lon": 151.1864612
+      "lon": 151.1864612,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2f72+macdonald+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "43 Trafalgar Street",
@@ -9284,10 +9325,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8958881,
-      "lon": 151.1718647
+      "lon": 151.1718647,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
+      "resolved_url": "https://www.domain.com.au/43-trafalgar-street-enmore-nsw-2042-2020954299",
+      "sold_date": "2026-08-01"
     },
     {
       "address": "60 Malakoff Street",
@@ -9347,10 +9394,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9084247,
-      "lon": 151.1563644
+      "lon": 151.1563644,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-22",
+      "resolved_url": "https://www.domain.com.au/60-malakoff-street-marrickville-nsw-2204-2020902286",
+      "sold_date": "2026-07-22"
     },
     {
       "address": "741 Elizabeth Street",
@@ -9410,10 +9463,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.9049097,
-      "lon": 151.2055325
+      "lon": 151.2055325,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2021-11-27, before first seen 2026-07-02)",
+      "resolved_url": "https://www.domain.com.au/741-elizabeth-street-zetland-nsw-2017-2017361685"
     },
     {
       "address": "2/14 Mcdonald Street",
@@ -9473,10 +9531,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8848594,
-      "lon": 151.1581148
+      "lon": 151.1581148,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2f14+mcdonald+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/2-14-mcdonald-street-leichhardt-nsw-2040-2020869796",
+      "sold_date": "2026-07-10"
     },
     {
       "address": "8/401 Marrickville Road",
@@ -9536,10 +9601,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9061076,
-      "lon": 151.1457069
+      "lon": 151.1457069,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f401+marrickville+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/8-401-marrickville-road-dulwich-hill-nsw-2203-2021023733",
+      "sold_date": "2026-07-25"
     },
     {
       "address": "26/36-50 Taylor Street",
@@ -9597,10 +9669,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8832847,
-      "lon": 151.1742247
+      "lon": 151.1742247,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26%2f36-50+taylor+street+annandale",
+      "resolved_url": "https://www.domain.com.au/26-36-50-taylor-street-annandale-nsw-2038-2020957266",
+      "sold_date": "2026-07-25"
     },
     {
       "address": "7/1 Gladstone Street",
@@ -9658,10 +9737,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8978328,
-      "lon": 151.1754079
+      "lon": 151.1754079,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2f1+gladstone+street+newtown",
+      "resolved_url": "https://www.domain.com.au/7-1-gladstone-street-newtown-nsw-2042-2020957235",
+      "sold_date": "2026-07-25"
     },
     {
       "address": "9/19 Glassop Street",
@@ -9721,10 +9807,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8539273,
-      "lon": 151.1751586
+      "lon": 151.1751586,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-19",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f19+glassop+street+balmain",
+      "resolved_url": "https://www.domain.com.au/9-19-glassop-street-balmain-nsw-2041-2020962249",
+      "sold_date": "2026-08-19"
     },
     {
       "address": "30 Talfourd Street",
@@ -9782,10 +9875,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8798263,
-      "lon": 151.1877934
+      "lon": 151.1877934,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-20",
+      "resolved_url": "https://www.domain.com.au/30-talfourd-street-glebe-nsw-2037-2020960512",
+      "sold_date": "2026-07-20"
     },
     {
       "address": "10 Trafalgar Street",
@@ -9845,10 +9944,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8871302,
-      "lon": 151.1696015
+      "lon": 151.1696015,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-04",
+      "resolved_url": "https://www.domain.com.au/10-trafalgar-street-annandale-nsw-2038-2020962335",
+      "sold_date": "2026-08-04"
     },
     {
       "address": "3/8 Dunblane Street",
@@ -9907,11 +10012,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.88833,
-      "lon": 151.1787783
+      "lon": 151.1787783,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/3-8-dunblane-street-camperdown-nsw-2050-2020959550"
     },
     {
       "address": "201/1 Missenden Road",
@@ -9971,10 +10078,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.8864806,
-      "lon": 151.1788573
+      "lon": 151.1788573,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=201%2f1+missenden+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "16/1-5 Glen Street",
@@ -10097,10 +10210,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.88774480000001,
-      "lon": 151.1569984
+      "lon": 151.1569984,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-13",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f11-15+renwick+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/3-11-15-renwick-street-leichhardt-nsw-2040-2020961695",
+      "sold_date": "2026-08-13"
     },
     {
       "address": "9/14-22 Alberto Street",
