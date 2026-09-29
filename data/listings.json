@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T07:13:33.170183+00:00",
-  "generated_at_sydney": "2026-09-29 17:13 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T11:47:10.089667+00:00",
+  "generated_at_sydney": "2026-09-29 21:47 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 59,
-    "tier1_pass": 54,
-    "new": 22,
-    "price_changed": 0,
+    "total": 80,
+    "tier1_pass": 75,
+    "new": 42,
+    "price_changed": 1,
     "sold": 154,
     "under_offer": 2,
     "withdrawn": 39
@@ -3906,7 +3906,7 @@
         "geocoded": true
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
@@ -3916,7 +3916,6 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget",
           "accessibility"
         ],
         "pass": true
@@ -3967,7 +3966,9 @@
       "lat": -33.915632,
       "lon": 151.1995559,
       "status_checked_on": "2026-09-29",
-      "price_guide_text": "$1,170,000"
+      "price_guide_text": "$1,170,000",
+      "price_min": 1170000,
+      "price_max": 1170000
     },
     {
       "address": "13/81-83 Bay Street",
@@ -4038,24 +4039,13 @@
       "sold_date": "2026-07-01"
     },
     {
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=186c+victoria+road+marrickville",
-      "address": "216/186C Victoria Road",
+      "address": "186C Victoria Road",
       "suburb": "Marrickville",
-      "first_seen": "2026-07-25",
-      "last_seen": "2026-09-29",
-      "change_flag": "NEW",
-      "open_homes": [],
-      "postcode": "2204",
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
-      "beds": 1,
-      "baths": 1,
-      "parking": 1,
-      "price_guide_text": "Guide $740,000",
-      "price_min": 740000,
-      "price_max": 740000,
-      "source": "domain",
-      "lat": -33.909076,
-      "lon": 151.1640187,
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=186c+victoria+road+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$1,550,000",
+      "price_min": 1550000,
+      "price_max": 1550000,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -4105,8 +4095,17 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768"
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
+      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "beds": 1,
+      "baths": 1,
+      "parking": 1,
+      "prior_price_text": "Guide $740,000",
+      "change_flag": "PRICE_CHANGED",
+      "days_on_market": 66,
+      "lat": -33.909076,
+      "lon": 151.1640187
     },
     {
       "address": "324B Marrickville Road",
@@ -5422,7 +5421,7 @@
         "geocoded": true
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
@@ -5432,7 +5431,6 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget",
           "accessibility"
         ],
         "pass": true
@@ -5453,7 +5451,9 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "price_min": 1220000,
+      "price_max": 1220000
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
@@ -5764,7 +5764,7 @@
         "basis": "Auto-detected from description"
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": null,
@@ -5774,7 +5774,6 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget",
           "accessibility",
           "bedrooms"
         ],
@@ -5797,7 +5796,9 @@
       },
       "warehouse_character": false,
       "status_checked_on": "2026-09-29",
-      "price_guide_text": "$1,200,000"
+      "price_guide_text": "$1,200,000",
+      "price_min": 1200000,
+      "price_max": 1200000
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
@@ -17457,9 +17458,7 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/303-1-layton-street-camperdown-nsw-2050-2021125028"
+      "days_on_market": 0
     },
     {
       "address": "103/383 Darling Street",
@@ -17522,9 +17521,7 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/103-383-darling-street-balmain-nsw-2041-2021042393"
+      "days_on_market": 0
     },
     {
       "address": "6/14 Denison Street",
@@ -17656,9 +17653,7 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702"
+      "days_on_market": 0
     },
     {
       "address": "41/33 Euston Road",
@@ -17721,9 +17716,7 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/41-33-euston-road-alexandria-nsw-2015-2021160176"
+      "days_on_market": 0
     },
     {
       "address": "6/64 Arthur Street",
@@ -17786,9 +17779,7 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841"
+      "days_on_market": 0
     },
     {
       "address": "50/274 Botany Road",
@@ -17849,9 +17840,7 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911"
+      "days_on_market": 0
     },
     {
       "address": "504/1 Gantry Lane",
@@ -17914,9 +17903,1243 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573"
+      "days_on_market": 0
+    },
+    {
+      "address": "104/551 Darling Street",
+      "suburb": "Rozelle",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=104%2F551+darling+street+rozelle",
+      "source": "domain_search",
+      "price_guide_text": "$880k",
+      "price_min": 880000,
+      "price_max": 880000,
+      "lat": -33.859152,
+      "lon": 151.1716645,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 57,
+          "supermarket": 225,
+          "pool": 231,
+          "park": 230,
+          "restaurants": 219
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "53 Ferry Road",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53+ferry+road+glebe",
+      "source": "domain_search",
+      "price_guide_text": "$1,350,000",
+      "price_min": 1350000,
+      "price_max": 1350000,
+      "lat": -33.8755712,
+      "lon": 151.1861955,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 191,
+          "supermarket": 198,
+          "pool": 634,
+          "park": 79,
+          "restaurants": 185
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "36/12 Leicester Street",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=36%2F12+leicester+street+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$1,350,000",
+      "price_min": 1350000,
+      "price_max": 1350000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 147,
+          "supermarket": 227,
+          "pool": 226,
+          "park": 207,
+          "restaurants": 92
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.9063046,
+      "lon": 151.1689411
+    },
+    {
+      "address": "4/12-16 Terrace Road",
+      "suburb": "Dulwich Hill",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F12-16+terrace+road+dulwich+hill",
+      "source": "domain_search",
+      "price_guide_text": "$1,200,000",
+      "price_min": 1200000,
+      "price_max": 1200000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 155,
+          "supermarket": 393,
+          "pool": 894,
+          "park": 198,
+          "restaurants": 196
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.9063493,
+      "lon": 151.1376915
+    },
+    {
+      "address": "14/451-457 New Canterbury Road",
+      "suburb": "Dulwich Hill",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F451-457+new+canterbury+road+dulwich+hill",
+      "source": "domain_search",
+      "price_guide_text": "$1,200,000",
+      "price_min": 1200000,
+      "price_max": 1200000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 82,
+          "supermarket": 120,
+          "pool": 751,
+          "park": 36,
+          "restaurants": 186
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.9032722,
+      "lon": 151.141835
+    },
+    {
+      "address": "177 St Johns Road",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=177+st+johns+road+glebe",
+      "source": "domain_search",
+      "price_guide_text": "$1,050,000",
+      "price_min": 1050000,
+      "price_max": 1050000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 30,
+          "supermarket": 36,
+          "pool": 590,
+          "park": 263,
+          "restaurants": 97
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.88297379999999,
+      "lon": 151.1833603
+    },
+    {
+      "address": "19 Lilydale Street",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19+lilydale+street+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$900,000",
+      "price_min": 900000,
+      "price_max": 900000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 156,
+          "supermarket": 397,
+          "pool": 254,
+          "park": 80,
+          "restaurants": 130
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.9078861,
+      "lon": 151.1538946
+    },
+    {
+      "address": "88 Constitution Road",
+      "suburb": "Dulwich Hill",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=88+constitution+road+dulwich+hill",
+      "source": "domain_search",
+      "price_guide_text": "$1,400,000",
+      "price_min": 1400000,
+      "price_max": 1400000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 151,
+          "supermarket": 205,
+          "pool": 566,
+          "park": 154,
+          "restaurants": 134
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.90256189999999,
+      "lon": 151.139519
+    },
+    {
+      "address": "6/268 Glebe Point Road",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F268+glebe+point+road+glebe",
+      "source": "domain_search",
+      "price_guide_text": "$1,525,000",
+      "price_min": 1525000,
+      "price_max": 1525000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 29,
+          "supermarket": 322,
+          "pool": 192,
+          "park": 114,
+          "restaurants": 166
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.8737814,
+      "lon": 151.1817771
+    },
+    {
+      "address": "28/525 Illawarra Road",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=28%2F525+illawarra+road+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$1,550,000",
+      "price_min": 1550000,
+      "price_max": 1550000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 19,
+          "supermarket": 462,
+          "pool": 1075,
+          "park": 97,
+          "restaurants": 126
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.9189074,
+      "lon": 151.1462165
+    },
+    {
+      "address": "12/11 Arthur St",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F11+arthur+st+marrickville",
+      "source": "domain_search",
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 175,
+          "supermarket": 299,
+          "pool": 311,
+          "park": 139,
+          "restaurants": 174
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "lat": -33.9125263,
+      "lon": 151.1520216
+    },
+    {
+      "address": "77A Hubert Street",
+      "suburb": "Lilyfield",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=77a+hubert+street+lilyfield",
+      "source": "domain_search",
+      "price_guide_text": "$2m",
+      "price_min": 2000000,
+      "price_max": 2000000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "109/69 Allen Street",
+      "suburb": "Leichhardt",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F69+allen+street+leichhardt",
+      "source": "domain_search",
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "17 Johnston Street",
+      "suburb": "Annandale",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+johnston+street+annandale",
+      "source": "domain_search",
+      "price_guide_text": "$995,000 - $1,095,000",
+      "price_min": 995000,
+      "price_max": 995000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "50 Macdonald Street",
+      "suburb": "Erskineville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50+macdonald+street+erskineville",
+      "source": "domain_search",
+      "price_guide_text": "$1,350,000",
+      "price_min": 1350000,
+      "price_max": 1350000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "39/127 Railway Parade",
+      "suburb": "Erskineville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=39%2F127+railway+parade+erskineville",
+      "source": "domain_search",
+      "price_guide_text": "$1,200,000",
+      "price_min": 1200000,
+      "price_max": 1200000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "23/15-17 Fountain Street",
+      "suburb": "Alexandria",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2F15-17+fountain+street+alexandria",
+      "source": "domain_search",
+      "price_guide_text": "$1,050,000",
+      "price_min": 1050000,
+      "price_max": 1050000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "207/110 Epsom Road",
+      "suburb": "Zetland",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2F110+epsom+road+zetland",
+      "source": "domain_search",
+      "price_guide_text": "$1,350,000",
+      "price_min": 1350000,
+      "price_max": 1350000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "3/331 Balmain Road",
+      "suburb": "Lilyfield",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F331+balmain+road+lilyfield",
+      "source": "domain_search",
+      "price_guide_text": "$1,150,000",
+      "price_min": 1150000,
+      "price_max": 1150000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "62 Margaret Street",
+      "suburb": "Newtown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=62+margaret+street+newtown",
+      "source": "domain_search",
+      "price_guide_text": "$900,000",
+      "price_min": 900000,
+      "price_max": 900000,
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
+    },
+    {
+      "address": "2106/6 Ebsworth Street",
+      "suburb": "Zetland",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2106%2F6+ebsworth+street+zetland",
+      "source": "domain_search",
+      "catchments": {
+        "transport": null,
+        "supermarket": null,
+        "pool": null,
+        "park": null,
+        "restaurants": null,
+        "nearest_m": {},
+        "geocoded": false
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": null,
+        "supplies": null,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "transport",
+          "supplies"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 14,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 0,
+          "parks": 0,
+          "restaurants": 0
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW"
     }
   ]
 }
