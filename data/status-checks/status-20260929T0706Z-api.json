@@ -1,0 +1,189 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F14-22+alberto+street+lilyfield",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f14-22+alberto+street+lilyfield",
+      "resolved_url": "https://www.domain.com.au/9-14-22-alberto-street-lilyfield-nsw-2040-2020961260",
+      "sold_date": "2026-07-16",
+      "address": "9/14-22 Alberto Street",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2F147+mcevoy+street+alexandria",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f147+mcevoy+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "11/147 McEvoy Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+short+street+balmain",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-09",
+      "resolved_url": "https://www.domain.com.au/27-short-street-balmain-nsw-2041-2020960471",
+      "sold_date": "2026-07-09",
+      "address": "27 Short Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=203%2F136+epsom+road+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=203%2f136+epsom+road+zetland",
+      "resolved_url": "https://www.domain.com.au/level-2-203-136-epsom-road-zetland-nsw-2017-2020959232",
+      "address": "203/136 Epsom Road",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15+bradford+street+balmain",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "resolved_url": "https://www.domain.com.au/15-bradford-street-balmain-nsw-2041-2020729864",
+      "sold_date": "2026-07-01",
+      "address": "15 Bradford Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=528+illawarra+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-17",
+      "resolved_url": "https://www.domain.com.au/528-illawarra-road-marrickville-nsw-2204-2020711768",
+      "sold_date": "2026-07-17",
+      "address": "528 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=64%2F4+alexandra+drive+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=64%2f4+alexandra+drive+camperdown",
+      "resolved_url": "https://www.domain.com.au/64-4-alexandra-drive-camperdown-nsw-2050-2020963745",
+      "sold_date": "2026-07-16",
+      "address": "64/4 Alexandra Drive",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F65-67+carlisle+street+leichhardt",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2017-04-19, before first seen 2026-07-02)",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2f65-67+carlisle+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/4-65-67-carlisle-street-leichhardt-nsw-2040-2013420706",
+      "address": "4/65-67 Carlisle Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=209%2F7+church+street+drummoyne",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=209%2f7+church+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/209-7-church-street-drummoyne-nsw-2047-2020966524",
+      "address": "209/7 Church Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=52+phillip+street+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "resolved_url": "https://www.domain.com.au/52-phillip-street-newtown-nsw-2042-2020966097",
+      "sold_date": "2026-07-25",
+      "address": "52 Phillip Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81%2F3+williams+parade+dulwich+hill",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-31",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81%2f3+williams+parade+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/81-3-williams-parade-dulwich-hill-nsw-2203-2020965678",
+      "sold_date": "2026-07-31",
+      "address": "81/3 Williams Parade",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=328+mitchell+road+alexandria",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-05",
+      "resolved_url": "https://www.domain.com.au/328-mitchell-road-alexandria-nsw-2015-2020965368",
+      "sold_date": "2026-08-05",
+      "address": "328 Mitchell Road",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=77%2F20+eve+street+erskineville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=77%2f20+eve+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/77-20-eve-street-erskineville-nsw-2043-2020783614",
+      "sold_date": "2026-07-10",
+      "address": "77/20 Eve Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=55+hay+street+leichhardt",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "55 Hay Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=605n%2F4+mandible+street+alexandria",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2024-02-23, before first seen 2026-07-03)",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=605n%2f4+mandible+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/605n-4-mandible-street-alexandria-nsw-2015-2019019683",
+      "address": "605N/4 Mandible Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=41+donnelly+street+balmain",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/41-donnelly-street-balmain-nsw-2041-2020969462",
+      "address": "41 Donnelly Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+mitchell+street+glebe",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "resolved_url": "https://www.domain.com.au/109-mitchell-street-glebe-nsw-2037-2020967983",
+      "sold_date": "2026-07-25",
+      "address": "109 Mitchell Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=21+ferry+road+glebe",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "resolved_url": "https://www.domain.com.au/21-ferry-road-glebe-nsw-2037-2020946628",
+      "sold_date": "2026-07-24",
+      "address": "21 Ferry Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2F181-187+missenden+road+newtown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2f181-187+missenden+road+newtown",
+      "resolved_url": "https://www.domain.com.au/15-181-187-missenden-road-newtown-nsw-2042-2020915517",
+      "sold_date": "2026-07-24",
+      "address": "15/181-187 Missenden road",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=88+ryan+street+lilyfield",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-13",
+      "resolved_url": "https://www.domain.com.au/88-ryan-street-lilyfield-nsw-2040-2020936631",
+      "sold_date": "2026-08-13",
+      "address": "88 Ryan Street",
+      "suburb": "Lilyfield"
+    }
+  ]
+}

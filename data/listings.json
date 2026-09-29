@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T07:04:41.487778+00:00",
-  "generated_at_sydney": "2026-09-29 17:04 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T07:06:17.950046+00:00",
+  "generated_at_sydney": "2026-09-29 17:06 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 145,
-    "tier1_pass": 139,
-    "new": 56,
-    "price_changed": 2,
-    "sold": 84,
+    "total": 128,
+    "tier1_pass": 122,
+    "new": 47,
+    "price_changed": 1,
+    "sold": 97,
     "under_offer": 2,
-    "withdrawn": 23
+    "withdrawn": 27
   },
   "listings": [
     {
@@ -4437,10 +4437,16 @@
       "first_seen": "2026-06-23",
       "last_seen": "2026-07-11",
       "prior_price_text": "$1,800,000",
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 18,
       "lat": -33.8719007,
-      "lon": 151.1681162
+      "lon": 151.1681162,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-13",
+      "resolved_url": "https://www.domain.com.au/88-ryan-street-lilyfield-nsw-2040-2020936631",
+      "sold_date": "2026-08-13"
     },
     {
       "address": "107 Lennox Street",
@@ -10280,10 +10286,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8679371,
-      "lon": 151.1658583
+      "lon": 151.1658583,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f14-22+alberto+street+lilyfield",
+      "resolved_url": "https://www.domain.com.au/9-14-22-alberto-street-lilyfield-nsw-2040-2020961260",
+      "sold_date": "2026-07-16"
     },
     {
       "address": "11/147 McEvoy Street",
@@ -10343,10 +10356,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.9030771,
-      "lon": 151.194829
+      "lon": 151.194829,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f147+mcevoy+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "27 Short Street",
@@ -10406,10 +10425,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8554813,
-      "lon": 151.1791679
+      "lon": 151.1791679,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-09",
+      "resolved_url": "https://www.domain.com.au/27-short-street-balmain-nsw-2041-2020960471",
+      "sold_date": "2026-07-09"
     },
     {
       "address": "203/136 Epsom Road",
@@ -10468,11 +10493,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9119668,
-      "lon": 151.2125324
+      "lon": 151.2125324,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/level-2-203-136-epsom-road-zetland-nsw-2017-2020959232"
     },
     {
       "address": "15 Bradford Street",
@@ -10532,10 +10559,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.85997560000001,
-      "lon": 151.1835348
+      "lon": 151.1835348,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "resolved_url": "https://www.domain.com.au/15-bradford-street-balmain-nsw-2041-2020729864",
+      "sold_date": "2026-07-01"
     },
     {
       "address": "528 Illawarra Road",
@@ -10595,10 +10628,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.9200876,
-      "lon": 151.1441132
+      "lon": 151.1441132,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-17",
+      "resolved_url": "https://www.domain.com.au/528-illawarra-road-marrickville-nsw-2204-2020711768",
+      "sold_date": "2026-07-17"
     },
     {
       "address": "64/4 Alexandra Drive",
@@ -10656,10 +10695,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8839135,
-      "lon": 151.1779428
+      "lon": 151.1779428,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-16",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=64%2f4+alexandra+drive+camperdown",
+      "resolved_url": "https://www.domain.com.au/64-4-alexandra-drive-camperdown-nsw-2050-2020963745",
+      "sold_date": "2026-07-16"
     },
     {
       "address": "4/65-67 Carlisle Street",
@@ -10719,10 +10765,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.8818633,
-      "lon": 151.1532469
+      "lon": 151.1532469,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2017-04-19, before first seen 2026-07-02)",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2f65-67+carlisle+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/4-65-67-carlisle-street-leichhardt-nsw-2040-2013420706"
     },
     {
       "address": "209/7 Church Street",
@@ -10779,10 +10831,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "lat": -33.8541473,
-      "lon": 151.15702
+      "lon": 151.15702,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/209-7-church-street-drummoyne-nsw-2047-2020966524"
     },
     {
       "address": "204/1 Brightwell Lane",
@@ -10905,9 +10959,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8967614,
-      "lon": 151.1731241
+      "lon": 151.1731241,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "resolved_url": "https://www.domain.com.au/52-phillip-street-newtown-nsw-2042-2020966097",
+      "sold_date": "2026-07-25"
     },
     {
       "address": "81/3 Williams Parade",
@@ -10967,9 +11027,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.9037872,
-      "lon": 151.1380105
+      "lon": 151.1380105,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-31",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81%2f3+williams+parade+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/81-3-williams-parade-dulwich-hill-nsw-2203-2020965678",
+      "sold_date": "2026-07-31"
     },
     {
       "address": "328 Mitchell Road",
@@ -11029,9 +11096,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.9059183,
-      "lon": 151.1889088
+      "lon": 151.1889088,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-05",
+      "resolved_url": "https://www.domain.com.au/328-mitchell-road-alexandria-nsw-2015-2020965368",
+      "sold_date": "2026-08-05"
     },
     {
       "address": "77/20 Eve Street",
@@ -11091,9 +11164,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.9054147,
-      "lon": 151.1867246
+      "lon": 151.1867246,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=77%2f20+eve+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/77-20-eve-street-erskineville-nsw-2043-2020783614",
+      "sold_date": "2026-07-10"
     },
     {
       "address": "8/23 Durham St",
@@ -11216,9 +11296,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8853336,
-      "lon": 151.1606414
+      "lon": 151.1606414,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "605N/4 Mandible Street",
@@ -11276,9 +11361,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.903978,
-      "lon": 151.2016629
+      "lon": 151.2016629,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2024-02-23, before first seen 2026-07-03)",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=605n%2f4+mandible+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/605n-4-mandible-street-alexandria-nsw-2015-2019019683"
     },
     {
       "address": "41 Donnelly Street",
@@ -11335,10 +11426,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "lat": -33.8606926,
-      "lon": 151.1830789
+      "lon": 151.1830789,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/41-donnelly-street-balmain-nsw-2041-2020969462"
     },
     {
       "address": "109 Mitchell Street",
@@ -11396,9 +11489,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8816069,
-      "lon": 151.1899754
+      "lon": 151.1899754,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "resolved_url": "https://www.domain.com.au/109-mitchell-street-glebe-nsw-2037-2020967983",
+      "sold_date": "2026-07-25"
     },
     {
       "address": "21 Ferry Road",
@@ -11458,9 +11557,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8763499,
-      "lon": 151.1855476
+      "lon": 151.1855476,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "resolved_url": "https://www.domain.com.au/21-ferry-road-glebe-nsw-2037-2020946628",
+      "sold_date": "2026-07-24"
     },
     {
       "address": "15/181-187 Missenden road",
@@ -11520,9 +11625,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-03",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8926554,
-      "lon": 151.1827959
+      "lon": 151.1827959,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2f181-187+missenden+road+newtown",
+      "resolved_url": "https://www.domain.com.au/15-181-187-missenden-road-newtown-nsw-2042-2020915517",
+      "sold_date": "2026-07-24"
     },
     {
       "address": "404/2 Foundry Street",
