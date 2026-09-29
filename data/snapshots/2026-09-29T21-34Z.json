@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T21:34:00.367987+00:00",
+  "generated_at": "2026-09-29T21:34:17.402649+00:00",
   "generated_at_sydney": "2026-09-30 07:34 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
@@ -18878,7 +18878,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "39/127 Railway Parade",
@@ -18935,7 +18937,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "23/15-17 Fountain Street",
@@ -18992,7 +18996,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "207/110 Epsom Road",
@@ -19049,7 +19055,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "3/331 Balmain Road",
@@ -19106,7 +19114,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "62 Margaret Street",
@@ -19163,7 +19173,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-09-30"
     },
     {
       "address": "2106/6 Ebsworth Street",
@@ -19218,7 +19230,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-09-30",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-09-30"
     }
   ]
 }
