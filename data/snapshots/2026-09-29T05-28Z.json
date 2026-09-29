@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T05:27:58.350519+00:00",
-  "generated_at_sydney": "2026-09-29 15:27 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T05:28:00.732779+00:00",
+  "generated_at_sydney": "2026-09-29 15:28 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 242,
-    "tier1_pass": 225,
-    "new": 80,
+    "total": 243,
+    "tier1_pass": 226,
+    "new": 81,
     "price_changed": 6,
     "sold": 10,
     "under_offer": 1,
-    "withdrawn": 1
+    "withdrawn": 0
   },
   "listings": [
     {
@@ -873,7 +873,7 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
-      "change_flag": "WITHDRAWN",
+      "change_flag": "NEW",
       "lat": -33.84595,
       "lon": 151.1519808,
       "status": "interested",
@@ -881,9 +881,7 @@
       "accessibility": {
         "step_free": true,
         "lift": true
-      },
-      "departed_on": "2026-09-29",
-      "status_source": "manual"
+      }
     },
     {
       "address": "40 High Street",
