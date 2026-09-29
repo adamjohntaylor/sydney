@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T07:07:56.808315+00:00",
-  "generated_at_sydney": "2026-09-29 17:07 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T07:09:23.279045+00:00",
+  "generated_at_sydney": "2026-09-29 17:09 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 110,
-    "tier1_pass": 104,
-    "new": 30,
+    "total": 97,
+    "tier1_pass": 91,
+    "new": 23,
     "price_changed": 0,
-    "sold": 112,
+    "sold": 121,
     "under_offer": 2,
-    "withdrawn": 30
+    "withdrawn": 34
   },
   "listings": [
     {
@@ -4042,7 +4042,7 @@
       "address": "216/186C Victoria Road",
       "suburb": "Marrickville",
       "first_seen": "2026-07-25",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "open_homes": [],
       "postcode": "2204",
@@ -4104,7 +4104,9 @@
         "strata_penalty": 0.0,
         "warehouse_character": false
       },
-      "warehouse_character": false
+      "warehouse_character": false,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768"
     },
     {
       "address": "324B Marrickville Road",
@@ -7287,10 +7289,16 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 30,
       "lat": -33.87794179999999,
-      "lon": 151.1863776
+      "lon": 151.1863776,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-10",
+      "resolved_url": "https://www.domain.com.au/43-lombard-street-glebe-nsw-2037-2020906434",
+      "sold_date": "2026-09-10"
     },
     {
       "address": "12 Gottenham Street",
@@ -10161,8 +10169,15 @@
       "price_guide_text": "$900,000",
       "price_min": 900000,
       "price_max": 900000,
-      "change_flag": "UNCHANGED",
-      "days_on_market": 22
+      "change_flag": "SOLD",
+      "days_on_market": 22,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f1-5+glen+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/16-1-5-glen-street-marrickville-nsw-2204-2020963715",
+      "sold_date": "2026-07-25"
     },
     {
       "address": "3/11-15 Renwick Street",
@@ -10902,10 +10917,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 22,
       "lat": -33.9046486,
-      "lon": 151.1854059
+      "lon": 151.1854059,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=204%2f1+brightwell+lane+erskineville",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "52 Phillip Street",
@@ -11699,11 +11720,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
       "days_on_market": 22,
       "lat": -33.9040897,
-      "lon": 151.1895377
+      "lon": 151.1895377,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103"
     },
     {
       "address": "32/3 Gallimore Avenue",
@@ -11899,10 +11922,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 14,
       "lat": -33.9052531,
-      "lon": 151.1830608
+      "lon": 151.1830608,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
+      "resolved_url": "https://www.domain.com.au/36-devine-street-erskineville-nsw-2043-2020980861",
+      "sold_date": "2026-08-01"
     },
     {
       "address": "13 Short Street",
@@ -13096,9 +13125,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-07-11",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8558316,
-      "lon": 151.1853613
+      "lon": 151.1853613,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2019-05-22, before first seen 2026-07-11)",
+      "resolved_url": "https://www.domain.com.au/12-trouton-street-balmain-nsw-2041-2015219780"
     },
     {
       "address": "18 Merton Street",
@@ -13158,9 +13192,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-07-11",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "lat": -33.8630431,
-      "lon": 151.1723811
+      "lon": 151.1723811,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-15",
+      "resolved_url": "https://www.domain.com.au/18-merton-street-rozelle-nsw-2039-2020986438",
+      "sold_date": "2026-07-15"
     },
     {
       "address": "7/164 Glebe Point Road",
@@ -13219,10 +13259,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-09-29",
       "change_flag": "NEW",
       "lat": -33.8788888,
-      "lon": 151.1859923
+      "lon": 151.1859923,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/7-164-glebe-point-road-glebe-nsw-2037-2020985233"
     },
     {
       "address": "185A Trafalgar Lane",
@@ -13282,10 +13324,16 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 14,
       "lat": -33.8798675,
-      "lon": 151.1736432
+      "lon": 151.1736432,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-19",
+      "resolved_url": "https://www.domain.com.au/185a-trafalgar-lane-annandale-nsw-2038-2020985945",
+      "sold_date": "2026-08-19"
     },
     {
       "address": "1/6 KINGSBOROUGH WAY",
@@ -13345,9 +13393,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-07-11",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "lat": -33.9046416,
-      "lon": 151.2069686
+      "lon": 151.2069686,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f6+kingsborough+way+zetland",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "33/29-31 Johnston Street",
@@ -13409,7 +13463,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-24",
-      "change_flag": "NEW"
+      "change_flag": "SOLD",
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-06",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=33%2f29-31+johnston+street+annandale",
+      "resolved_url": "https://www.domain.com.au/33-29-31-johnston-street-annandale-nsw-2038-2020639858",
+      "sold_date": "2026-08-06"
     },
     {
       "address": "123 Addison Road",
@@ -13468,8 +13529,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-24",
-      "change_flag": "NEW"
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/123-addison-road-marrickville-nsw-2204-2021011624"
     },
     {
       "address": "175 Denison Street",
@@ -13528,11 +13591,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-24",
-      "change_flag": "NEW",
+      "change_flag": "SOLD",
       "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "beds": 2,
       "baths": 1,
-      "price_guide_text": "Auction - No price guide offered"
+      "price_guide_text": "Auction - No price guide offered",
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-07",
+      "resolved_url": "https://www.domain.com.au/175-denison-street-newtown-nsw-2042-2021011874",
+      "sold_date": "2026-08-07"
     },
     {
       "address": "9/18 Drummoyne Avenue",
@@ -13594,7 +13663,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-24",
-      "change_flag": "NEW"
+      "change_flag": "SOLD",
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-07",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f18+drummoyne+avenue+drummoyne",
+      "resolved_url": "https://www.domain.com.au/9-18-drummoyne-avenue-drummoyne-nsw-2047-2021012756",
+      "sold_date": "2026-08-07"
     },
     {
       "address": "10/54 Tranmere Street",
@@ -13654,10 +13730,17 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-25",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 1,
       "lat": -33.8535994,
-      "lon": 151.1532202
+      "lon": 151.1532202,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2f54+tranmere+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/10-54-tranmere-street-drummoyne-nsw-2047-2021010953",
+      "sold_date": "2026-07-24"
     },
     {
       "address": "17 Morrissey Road",
@@ -13719,7 +13802,12 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-24",
-      "change_flag": "NEW"
+      "change_flag": "WITHDRAWN",
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2023-08-25, before first seen 2026-07-24)",
+      "resolved_url": "https://www.domain.com.au/17-morrissey-road-erskineville-nsw-2043-2018710547"
     },
     {
       "address": "163 Mitchell Rd",
@@ -13780,8 +13868,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-24",
-      "change_flag": "NEW"
+      "last_seen": "2026-09-29",
+      "change_flag": "NEW",
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/2-bed-163-mitchell-rd-erskineville-nsw-2043-2021152419"
     },
     {
       "address": "186D Victoria Road",
@@ -13842,9 +13932,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/615-186d-victoria-road-marrickville-nsw-2204-2021180048"
     },
     {
       "address": "20 Garners Avenue",
@@ -13905,9 +13997,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/20-garners-avenue-marrickville-nsw-2204-2021015740"
     },
     {
       "address": "6 Park Road",
