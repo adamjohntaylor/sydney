@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-29T07:01:31.297086+00:00",
-  "generated_at_sydney": "2026-09-29 17:01 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-29T07:03:03.088507+00:00",
+  "generated_at_sydney": "2026-09-29 17:03 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 178,
-    "tier1_pass": 172,
+    "total": 163,
+    "tier1_pass": 157,
     "new": 56,
-    "price_changed": 5,
-    "sold": 58,
+    "price_changed": 2,
+    "sold": 70,
     "under_offer": 2,
-    "withdrawn": 16
+    "withdrawn": 19
   },
   "listings": [
     {
@@ -2366,9 +2366,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 11
+      "days_on_market": 11,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/9-metters-street-erskineville-nsw-2043-2020352243"
     },
     {
       "address": "4/18 Leichhardt Street",
@@ -7134,10 +7136,16 @@
       "first_seen": "2026-06-25",
       "last_seen": "2026-07-03",
       "prior_price_text": "$1,000,000",
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 8,
       "lat": -33.863035,
-      "lon": 151.1805091
+      "lon": 151.1805091,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2f1+buchanan+street+balmain",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "24B George Street",
@@ -7198,10 +7206,16 @@
       "first_seen": "2026-06-25",
       "last_seen": "2026-07-03",
       "prior_price_text": "$1,000,000",
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 8,
       "lat": -33.888524,
-      "lon": 151.148586
+      "lon": 151.148586,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-05",
+      "resolved_url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
+      "sold_date": "2026-08-05"
     },
     {
       "address": "43 Lombard Street",
@@ -7324,10 +7338,16 @@
       "warehouse_character": false,
       "first_seen": "2026-06-25",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 8,
       "lat": -33.8797342,
-      "lon": 151.1886337
+      "lon": 151.1886337,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-04",
+      "resolved_url": "https://www.domain.com.au/12-gottenham-street-glebe-nsw-2037-2020906218",
+      "sold_date": "2026-07-04"
     },
     {
       "address": "222/6 Cowper Street",
@@ -7676,10 +7696,17 @@
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-03",
       "prior_price_text": "$1,000,000",
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 3,
       "lat": -33.9022071,
-      "lon": 151.1845742
+      "lon": 151.1845742,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-03",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f168+george+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/1-168-george-street-erskineville-nsw-2043-2020944487",
+      "sold_date": "2026-07-03"
     },
     {
       "address": "30/49 Henderson Road",
@@ -7807,9 +7834,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 0
+      "days_on_market": 0,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/1201-5-joynton-avenue-zetland-nsw-2017-2020806185"
     },
     {
       "address": "11/47 Wharf Road",
@@ -7870,9 +7899,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/11-47-wharf-road-birchgrove-nsw-2041-2020953012"
     },
     {
       "address": "5/121-123 New Canterbury Road",
@@ -7934,8 +7965,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "change_flag": "SOLD",
+      "days_on_market": 2,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-22",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2f121-123+new+canterbury+road+petersham",
+      "resolved_url": "https://www.domain.com.au/5-121-123-new-canterbury-road-petersham-nsw-2049-2020953300",
+      "sold_date": "2026-09-22"
     },
     {
       "address": "16/5 Croydon Street",
@@ -7997,8 +8035,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "change_flag": "SOLD",
+      "days_on_market": 2,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f5+croydon+street+petersham",
+      "resolved_url": "https://www.domain.com.au/16-5-croydon-street-petersham-nsw-2049-2020907163",
+      "sold_date": "2026-07-01"
     },
     {
       "address": "3/45 Upward Street",
@@ -8060,8 +8105,14 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 2,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f45+upward+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "57/20 Eve Street",
@@ -8121,8 +8172,15 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-07-02",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "change_flag": "SOLD",
+      "days_on_market": 2,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-14",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2f20+eve+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/57-20-eve-street-erskineville-nsw-2043-2020953358",
+      "sold_date": "2026-08-14"
     },
     {
       "address": "6C Defries Avenue",
@@ -8183,9 +8241,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/106-6c-defries-avenue-zetland-nsw-2017-2021140958"
     },
     {
       "address": "19/10 Leichhardt Street",
@@ -8245,8 +8305,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "SOLD",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-15",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2f10+leichhardt+street+glebe",
+      "resolved_url": "https://www.domain.com.au/19-10-leichhardt-street-glebe-nsw-2037-2020954364",
+      "sold_date": "2026-07-15"
     },
     {
       "address": "131 Australia Street",
@@ -8308,8 +8375,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "SOLD",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-31",
+      "resolved_url": "https://www.domain.com.au/131-australia-street-camperdown-nsw-2050-2020848213",
+      "sold_date": "2026-07-31"
     },
     {
       "address": "15/300 Johnston Street",
@@ -8371,8 +8444,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2024-04-17, before first seen 2026-07-02)",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2f300+johnston+street+annandale",
+      "resolved_url": "https://www.domain.com.au/15-300-johnston-street-annandale-nsw-2038-2020432351"
     },
     {
       "address": "5 Marlborough Street",
@@ -8432,8 +8511,14 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "SOLD",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-06",
+      "resolved_url": "https://www.domain.com.au/5-marlborough-street-leichhardt-nsw-2040-2020958606",
+      "sold_date": "2026-07-06"
     },
     {
       "address": "17/480 King Street",
@@ -8492,9 +8577,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-09-29",
       "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "resolved_url": "https://www.domain.com.au/17-480-king-street-newtown-nsw-2042-2020958254"
     },
     {
       "address": "1504/1 Metters Street",
@@ -8554,8 +8641,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "SOLD",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1504%2f1+metters+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/1504-1-metters-street-erskineville-nsw-2043-2020957799",
+      "sold_date": "2026-07-24"
     },
     {
       "address": "109/76 Mitchell Road",
@@ -8615,8 +8709,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "SOLD",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-17",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2f76+mitchell+road+alexandria",
+      "resolved_url": "https://www.domain.com.au/109-76-mitchell-road-alexandria-nsw-2015-2020957688",
+      "sold_date": "2026-07-17"
     },
     {
       "address": "215/5 Regent Street",
@@ -8678,8 +8779,15 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-03",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 1
+      "change_flag": "SOLD",
+      "days_on_market": 1,
+      "status_checked_on": "2026-09-29",
+      "departed_on": "2026-09-29",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-20",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=215%2f5+regent+street+petersham",
+      "resolved_url": "https://www.domain.com.au/215-5-regent-street-petersham-nsw-2049-2020957262",
+      "sold_date": "2026-07-20"
     },
     {
       "address": "52 Illawarra Road",

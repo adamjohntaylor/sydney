@@ -1,0 +1,192 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1201%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1201%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/1201-5-joynton-avenue-zetland-nsw-2017-2020806185",
+      "address": "1201/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2F47+wharf+road+birchgrove",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f47+wharf+road+birchgrove",
+      "resolved_url": "https://www.domain.com.au/11-47-wharf-road-birchgrove-nsw-2041-2020953012",
+      "address": "11/47 Wharf Road",
+      "suburb": "Birchgrove"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F121-123+new+canterbury+road+petersham",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-22",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2f121-123+new+canterbury+road+petersham",
+      "resolved_url": "https://www.domain.com.au/5-121-123-new-canterbury-road-petersham-nsw-2049-2020953300",
+      "sold_date": "2026-09-22",
+      "address": "5/121-123 New Canterbury Road",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F5+croydon+street+petersham",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-01",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f5+croydon+street+petersham",
+      "resolved_url": "https://www.domain.com.au/16-5-croydon-street-petersham-nsw-2049-2020907163",
+      "sold_date": "2026-07-01",
+      "address": "16/5 Croydon Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F45+upward+street+leichhardt",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f45+upward+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "3/45 Upward Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2F20+eve+street+erskineville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-14",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2f20+eve+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/57-20-eve-street-erskineville-nsw-2043-2020953358",
+      "sold_date": "2026-08-14",
+      "address": "57/20 Eve Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6c+defries+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/106-6c-defries-avenue-zetland-nsw-2017-2021140958",
+      "address": "6C Defries Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 5 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/9-metters-street-erskineville-nsw-2043-2020352243",
+      "address": "9 Metters Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2F1+buchanan+street+balmain",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2f1+buchanan+street+balmain",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "19/1 Buchanan Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=24b+george+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-05",
+      "resolved_url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
+      "sold_date": "2026-08-05",
+      "address": "24B George Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12+gottenham+street+glebe",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-04",
+      "resolved_url": "https://www.domain.com.au/12-gottenham-street-glebe-nsw-2037-2020906218",
+      "sold_date": "2026-07-04",
+      "address": "12 Gottenham Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F168+george+street+erskineville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-03",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f168+george+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/1-168-george-street-erskineville-nsw-2043-2020944487",
+      "sold_date": "2026-07-03",
+      "address": "1/168 George Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2F10+leichhardt+street+glebe",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-15",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2f10+leichhardt+street+glebe",
+      "resolved_url": "https://www.domain.com.au/19-10-leichhardt-street-glebe-nsw-2037-2020954364",
+      "sold_date": "2026-07-15",
+      "address": "19/10 Leichhardt Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=131+australia+street+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-31",
+      "resolved_url": "https://www.domain.com.au/131-australia-street-camperdown-nsw-2050-2020848213",
+      "sold_date": "2026-07-31",
+      "address": "131 Australia Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2F300+johnston+street+annandale",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2024-04-17, before first seen 2026-07-02)",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2f300+johnston+street+annandale",
+      "resolved_url": "https://www.domain.com.au/15-300-johnston-street-annandale-nsw-2038-2020432351",
+      "address": "15/300 Johnston Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5+marlborough+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-06",
+      "resolved_url": "https://www.domain.com.au/5-marlborough-street-leichhardt-nsw-2040-2020958606",
+      "sold_date": "2026-07-06",
+      "address": "5 Marlborough Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F480+king+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2f480+king+street+newtown",
+      "resolved_url": "https://www.domain.com.au/17-480-king-street-newtown-nsw-2042-2020958254",
+      "address": "17/480 King Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1504%2F1+metters+street+erskineville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1504%2f1+metters+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/1504-1-metters-street-erskineville-nsw-2043-2020957799",
+      "sold_date": "2026-07-24",
+      "address": "1504/1 Metters Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F76+mitchell+road+alexandria",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-17",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2f76+mitchell+road+alexandria",
+      "resolved_url": "https://www.domain.com.au/109-76-mitchell-road-alexandria-nsw-2015-2020957688",
+      "sold_date": "2026-07-17",
+      "address": "109/76 Mitchell Road",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=215%2F5+regent+street+petersham",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-20",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=215%2f5+regent+street+petersham",
+      "resolved_url": "https://www.domain.com.au/215-5-regent-street-petersham-nsw-2049-2020957262",
+      "sold_date": "2026-07-20",
+      "address": "215/5 Regent Street",
+      "suburb": "Petersham"
+    }
+  ]
+}
