@@ -1,0 +1,196 @@
+{
+  "generated_on": "2026-09-29",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F58+bayswater+street+drummoyne",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2f58+bayswater+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "12/58 Bayswater Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=32%2F3+gallimore+avenue+balmain",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-20",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=32%2f3+gallimore+avenue+balmain",
+      "resolved_url": "https://www.domain.com.au/32-3-gallimore-avenue-balmain-east-nsw-2041-2020981796",
+      "sold_date": "2026-08-20",
+      "address": "32/3 Gallimore Avenue",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F56+cambridge+street+stanmore",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-06",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f56+cambridge+street+stanmore",
+      "resolved_url": "https://www.domain.com.au/3-56-cambridge-street-stanmore-nsw-2048-2020981782",
+      "sold_date": "2026-08-06",
+      "address": "3/56 Cambridge Street",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13+short+street+enmore",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2016-12-14, before first seen 2026-07-11)",
+      "resolved_url": "https://www.domain.com.au/13-short-street-enmore-nsw-2042-2013215893",
+      "address": "13 Short Street",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=901%2F3+cary+street+drummoyne",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=901%2f3+cary+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/901-3-cary-street-drummoyne-nsw-2047-2020949559",
+      "address": "901/3 Cary Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15+gladstone+street+balmain",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-25",
+      "resolved_url": "https://www.domain.com.au/15-gladstone-street-balmain-nsw-2041-2020946500",
+      "sold_date": "2026-07-25",
+      "address": "15 Gladstone Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F44-50+ewart+street+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-09-09",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f44-50+ewart+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/16-44-50-ewart-street-marrickville-nsw-2204-2020909145",
+      "sold_date": "2026-09-09",
+      "address": "16/44-50 Ewart Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1501%2F6+grove+street+dulwich+hill",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-10",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1501%2f6+grove+street+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/1501-6-grove-street-dulwich-hill-nsw-2203-2020748962",
+      "sold_date": "2026-07-10",
+      "address": "1501/6 Grove Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F346-348+illawarra+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-14",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2f346-348+illawarra+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/2-346-348-illawarra-road-marrickville-nsw-2204-2020980514",
+      "sold_date": "2026-07-14",
+      "address": "2/346-348 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=74%2F30-40+george+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-21",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=74%2f30-40+george+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/74-30-40-george-street-leichhardt-nsw-2040-2020980518",
+      "sold_date": "2026-07-21",
+      "address": "74/30-40 George Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F10+emma+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-31",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f10+emma+street+leichhardt",
+      "resolved_url": "https://www.domain.com.au/1-10-emma-street-leichhardt-nsw-2040-2020984231",
+      "sold_date": "2026-08-31",
+      "address": "1/10 Emma Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=44%2F18+cecilia+street+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-12",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=44%2f18+cecilia+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/44-18-cecilia-street-marrickville-nsw-2204-2020983732",
+      "sold_date": "2026-08-12",
+      "address": "44/18 Cecilia Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F29+myra+road+dulwich+hill",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-24",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f29+myra+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/9-29-myra-road-dulwich-hill-nsw-2203-2020983712",
+      "sold_date": "2026-07-24",
+      "address": "9/29 Myra Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=103+lawrence+street+alexandria",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "103 Lawrence Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=547%2F10+victoria+park+pde+zetland",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-20",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=547%2f10+victoria+park+pde+zetland",
+      "resolved_url": "https://www.domain.com.au/547-10-victoria-park-pde-zetland-nsw-2017-2020977206",
+      "sold_date": "2026-08-20",
+      "address": "547/10 Victoria Park Pde",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=46+redmond+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
+      "resolved_url": "https://www.domain.com.au/46-redmond-street-leichhardt-nsw-2040-2020982446",
+      "sold_date": "2026-08-01",
+      "address": "46 Redmond Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1215%2F303+botany+road+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1215%2f303+botany+road+zetland",
+      "resolved_url": "https://www.domain.com.au/1215-303-botany-road-zetland-nsw-2017-2019500912",
+      "address": "1215/303 Botany Road",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F124-126+parramatta+road+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-29",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f124-126+parramatta+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/8-124-126-parramatta-road-camperdown-nsw-2050-2020983131",
+      "sold_date": "2026-07-29",
+      "address": "8/124-126 Parramatta Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2F10+pyrmont+bridge+road+camperdown",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-27",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2f10+pyrmont+bridge+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/57-10-pyrmont-bridge-road-camperdown-nsw-2050-2020982681",
+      "sold_date": "2026-07-27",
+      "address": "57/10 Pyrmont Bridge Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+jarocin+avenue+glebe",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-07-23",
+      "resolved_url": "https://www.domain.com.au/1-jarocin-avenue-glebe-nsw-2037-2020943751",
+      "sold_date": "2026-07-23",
+      "address": "1 Jarocin Avenue",
+      "suburb": "Glebe"
+    }
+  ]
+}
