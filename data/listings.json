@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T21:25:31.003332+00:00",
-  "generated_at_sydney": "2026-10-01 07:25 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-30T21:26:21.564903+00:00",
+  "generated_at_sydney": "2026-10-01 07:26 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 96,
     "tier1_pass": 91,
-    "new": 18,
+    "new": 0,
     "price_changed": 0,
     "sold": 154,
     "under_offer": 2,
@@ -19364,12 +19364,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.9105719,
       "lon": 151.1596921,
-      "flag_sweeps": 1,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/47-frampton-avenue-marrickville-nsw-2204-2021197746"
+      "resolved_url": "https://www.domain.com.au/47-frampton-avenue-marrickville-nsw-2204-2021197746",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "61 Addison Road",
@@ -19429,12 +19429,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.9029152,
       "lon": 151.1658377,
-      "flag_sweeps": 1,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/61-addison-road-marrickville-nsw-2204-2021196939"
+      "resolved_url": "https://www.domain.com.au/61-addison-road-marrickville-nsw-2204-2021196939",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "2/3 Anderton Street",
@@ -19494,12 +19494,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.9075019,
       "lon": 151.1512415,
-      "flag_sweeps": 1,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/2-3-anderton-street-marrickville-nsw-2204-2021196926"
+      "resolved_url": "https://www.domain.com.au/2-3-anderton-street-marrickville-nsw-2204-2021196926",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "13/9 Hill Street",
@@ -19559,12 +19559,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9171833,
       "lon": 151.1465644,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/13-9-hill-street-marrickville-nsw-2204-2021196873"
+      "resolved_url": "https://www.domain.com.au/13-9-hill-street-marrickville-nsw-2204-2021196873",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "9/3 Roach Street",
@@ -19624,12 +19624,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9154887,
       "lon": 151.1484506,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/9-3-roach-street-marrickville-nsw-2204-2021196648"
+      "resolved_url": "https://www.domain.com.au/9-3-roach-street-marrickville-nsw-2204-2021196648",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "214/3 Nagurra Place",
@@ -19689,12 +19689,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.8610145,
       "lon": 151.1687537,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/214-3-nagurra-place-rozelle-nsw-2039-2021184913"
+      "resolved_url": "https://www.domain.com.au/214-3-nagurra-place-rozelle-nsw-2039-2021184913",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "18 Ferry Road",
@@ -19754,12 +19754,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.876732,
       "lon": 151.1856213,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/18-ferry-road-glebe-nsw-2037-2021173306"
+      "resolved_url": "https://www.domain.com.au/18-ferry-road-glebe-nsw-2037-2021173306",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "9/40-42 Hill Street",
@@ -19819,12 +19819,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9176274,
       "lon": 151.1453055,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/9-40-42-hill-street-marrickville-nsw-2204-2021160212"
+      "resolved_url": "https://www.domain.com.au/9-40-42-hill-street-marrickville-nsw-2204-2021160212",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "26/18 Cecilia Street",
@@ -19884,12 +19884,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9080967,
       "lon": 151.1554903,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/26-18-cecilia-street-marrickville-nsw-2204-2021157203"
+      "resolved_url": "https://www.domain.com.au/26-18-cecilia-street-marrickville-nsw-2204-2021157203",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "40 Pile Street",
@@ -19949,12 +19949,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9034257,
       "lon": 151.1475564,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/40-pile-street-dulwich-hill-nsw-2203-2021172978"
+      "resolved_url": "https://www.domain.com.au/40-pile-street-dulwich-hill-nsw-2203-2021172978",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "74a Burfitt Street",
@@ -20012,12 +20012,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.8814289,
       "lon": 151.1484569,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/74a-burfitt-street-leichhardt-nsw-2040-2021196892"
+      "resolved_url": "https://www.domain.com.au/74a-burfitt-street-leichhardt-nsw-2040-2021196892",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "222 Corunna Road",
@@ -20077,12 +20077,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.8903343,
       "lon": 151.1595972,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/222-corunna-road-petersham-nsw-2049-2021106869"
+      "resolved_url": "https://www.domain.com.au/222-corunna-road-petersham-nsw-2049-2021106869",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "13/16 Wolseley Street",
@@ -20140,12 +20140,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.8460162,
       "lon": 151.1543064,
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/13-16-wolseley-street-drummoyne-nsw-2047-2021199827"
+      "resolved_url": "https://www.domain.com.au/13-16-wolseley-street-drummoyne-nsw-2047-2021199827",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "3401/2 Nassau Lane",
@@ -20156,44 +20156,48 @@
       "price_min": 875000,
       "price_max": 875000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 130,
+          "supermarket": 377,
+          "pool": 1310,
+          "park": 147,
+          "restaurants": 85
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -20201,10 +20205,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/3401-2-nassau-lane-erskineville-nsw-2043-2021198559"
+      "resolved_url": "https://www.domain.com.au/3401-2-nassau-lane-erskineville-nsw-2043-2021198559",
+      "flag_cleared_on": "2026-10-01",
+      "lat": -33.9049842,
+      "lon": 151.1859672
     },
     {
       "address": "3 Coulson Street",
@@ -20212,21 +20218,27 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3+coulson+street+erskineville",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 147,
+          "supermarket": 410,
+          "pool": 1380,
+          "park": 109,
+          "restaurants": 165
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -20234,23 +20246,21 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -20258,10 +20268,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/3-coulson-street-erskineville-nsw-2043-2021197903"
+      "resolved_url": "https://www.domain.com.au/3-coulson-street-erskineville-nsw-2043-2021197903",
+      "flag_cleared_on": "2026-10-01",
+      "lat": -33.905498,
+      "lon": 151.1852012
     },
     {
       "address": "2105/1 Metters Street",
@@ -20272,44 +20284,48 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 296,
+          "supermarket": 310,
+          "pool": 1147,
+          "park": 122,
+          "restaurants": 114
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -20317,10 +20333,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/2105-1-metters-street-erskineville-nsw-2043-2021197616"
+      "resolved_url": "https://www.domain.com.au/2105-1-metters-street-erskineville-nsw-2043-2021197616",
+      "flag_cleared_on": "2026-10-01",
+      "lat": -33.9033337,
+      "lon": 151.186723
     },
     {
       "address": "420C/39 Ralph Street",
@@ -20331,44 +20349,48 @@
       "price_min": 1525000,
       "price_max": 1525000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 82,
+          "supermarket": 91,
+          "pool": 1097,
+          "park": 484,
+          "restaurants": 109
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -20376,10 +20398,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/420c-39-ralph-street-alexandria-nsw-2015-2021184412"
+      "resolved_url": "https://www.domain.com.au/420c-39-ralph-street-alexandria-nsw-2015-2021184412",
+      "flag_cleared_on": "2026-10-01",
+      "lat": -33.9182626,
+      "lon": 151.1985717
     },
     {
       "address": "545/8 Ascot Avenue",
@@ -20390,44 +20414,48 @@
       "price_min": 850000,
       "price_max": 850000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 210,
+          "supermarket": 251,
+          "pool": 353,
+          "park": 92,
+          "restaurants": 186
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -20435,10 +20463,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-01",
-      "resolved_url": "https://www.domain.com.au/545-8-ascot-avenue-zetland-nsw-2017-2021171343"
+      "resolved_url": "https://www.domain.com.au/545-8-ascot-avenue-zetland-nsw-2017-2021171343",
+      "flag_cleared_on": "2026-10-01",
+      "lat": -33.9084076,
+      "lon": 151.2114344
     },
     {
       "address": "01/71-91 Euston Road",
@@ -20449,44 +20479,48 @@
       "price_min": 850000,
       "price_max": 850000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 30,
+          "supermarket": 258,
+          "pool": 916,
+          "park": 293,
+          "restaurants": 14
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -20495,13 +20529,14 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
       "change_flag": "WITHDRAWN",
-      "flag_sweeps": 1,
       "status_checked_on": "2026-10-01",
       "departed_on": "2026-10-01",
       "status_source": "sweep_check",
       "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
       "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=01%2f71-91+euston+road+alexandria",
-      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "lat": -33.9057749,
+      "lon": 151.1919457
     }
   ]
 }
