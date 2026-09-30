@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T21:22:11.883511+00:00",
-  "generated_at_sydney": "2026-10-01 07:22 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-30T21:25:31.003332+00:00",
+  "generated_at_sydney": "2026-10-01 07:25 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 97,
-    "tier1_pass": 92,
-    "new": 19,
+    "total": 96,
+    "tier1_pass": 91,
+    "new": 18,
     "price_changed": 0,
     "sold": 154,
     "under_offer": 2,
-    "withdrawn": 41
+    "withdrawn": 42
   },
   "listings": [
     {
@@ -4110,7 +4110,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 68,
       "lat": -33.909076,
-      "lon": 151.1640187
+      "lon": 151.1640187,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768"
     },
     {
       "address": "324B Marrickville Road",
@@ -17680,7 +17682,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702"
     },
     {
       "address": "41/33 Euston Road",
@@ -17743,7 +17747,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/41-33-euston-road-alexandria-nsw-2015-2021160176"
     },
     {
       "address": "6/64 Arthur Street",
@@ -17806,7 +17812,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841"
     },
     {
       "address": "50/274 Botany Road",
@@ -17867,7 +17875,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911"
     },
     {
       "address": "504/1 Gantry Lane",
@@ -17930,7 +17940,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573"
     },
     {
       "address": "104/551 Darling Street",
@@ -17993,7 +18005,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/104-551-darling-street-rozelle-nsw-2039-2021195031"
     },
     {
       "address": "53 Ferry Road",
@@ -18056,7 +18070,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/53-ferry-road-glebe-nsw-2037-2021194758"
     },
     {
       "address": "36/12 Leicester Street",
@@ -18119,7 +18135,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/36-12-leicester-street-marrickville-nsw-2204-2021194309"
     },
     {
       "address": "4/12-16 Terrace Road",
@@ -18182,7 +18200,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/4-12-16-terrace-road-dulwich-hill-nsw-2203-2021193842"
     },
     {
       "address": "14/451-457 New Canterbury Road",
@@ -18245,7 +18265,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9032722,
-      "lon": 151.141835
+      "lon": 151.141835,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/14-451-457-new-canterbury-road-dulwich-hill-nsw-2203-2021151406"
     },
     {
       "address": "177 St Johns Road",
@@ -18376,7 +18398,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9078861,
-      "lon": 151.1538946
+      "lon": 151.1538946,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/19-lilydale-street-marrickville-nsw-2204-2021160966"
     },
     {
       "address": "88 Constitution Road",
@@ -18439,7 +18463,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.90256189999999,
-      "lon": 151.139519
+      "lon": 151.139519,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/88-constitution-road-dulwich-hill-nsw-2203-2021142696"
     },
     {
       "address": "6/268 Glebe Point Road",
@@ -18502,7 +18528,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8737814,
-      "lon": 151.1817771
+      "lon": 151.1817771,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/6-268-glebe-point-road-glebe-nsw-2037-2021028523"
     },
     {
       "address": "28/525 Illawarra Road",
@@ -18565,7 +18593,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9189074,
-      "lon": 151.1462165
+      "lon": 151.1462165,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/28-525-illawarra-road-marrickville-nsw-2204-2021195095"
     },
     {
       "address": "12/11 Arthur St",
@@ -18626,7 +18656,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9125263,
-      "lon": 151.1520216
+      "lon": 151.1520216,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/12-11-arthur-st-marrickville-nsw-2204-2021153728"
     },
     {
       "address": "77A Hubert Street",
@@ -18689,7 +18721,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8744578,
-      "lon": 151.1535422
+      "lon": 151.1535422,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/77a-hubert-street-lilyfield-nsw-2040-2021194826"
     },
     {
       "address": "109/69 Allen Street",
@@ -18750,7 +18784,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8786058,
-      "lon": 151.1541033
+      "lon": 151.1541033,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/109-69-allen-street-leichhardt-nsw-2040-2021193792"
     },
     {
       "address": "17 Johnston Street",
@@ -18813,7 +18849,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.88646,
-      "lon": 151.1686781
+      "lon": 151.1686781,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/17-johnston-street-annandale-nsw-2038-2021192053"
     },
     {
       "address": "50 Macdonald Street",
@@ -18876,7 +18914,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9035228,
-      "lon": 151.1836505
+      "lon": 151.1836505,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/50-macdonald-street-erskineville-nsw-2043-2021194725"
     },
     {
       "address": "39/127 Railway Parade",
@@ -18939,7 +18979,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8986951,
-      "lon": 151.1884274
+      "lon": 151.1884274,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/39-127-railway-parade-erskineville-nsw-2043-2021193762"
     },
     {
       "address": "23/15-17 Fountain Street",
@@ -19002,7 +19044,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9017459,
-      "lon": 151.1953177
+      "lon": 151.1953177,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/23-15-17-fountain-street-alexandria-nsw-2015-2021193000"
     },
     {
       "address": "207/110 Epsom Road",
@@ -19065,7 +19109,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9114015,
-      "lon": 151.209378
+      "lon": 151.209378,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/207-110-epsom-road-zetland-nsw-2017-2021192911"
     },
     {
       "address": "3/331 Balmain Road",
@@ -19128,7 +19174,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8716763,
-      "lon": 151.1601187
+      "lon": 151.1601187,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/3-331-balmain-road-lilyfield-nsw-2040-2021177514"
     },
     {
       "address": "62 Margaret Street",
@@ -19191,7 +19239,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.90165380000001,
-      "lon": 151.1754643
+      "lon": 151.1754643,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/62-margaret-street-newtown-nsw-2042-2021161389"
     },
     {
       "address": "2106/6 Ebsworth Street",
@@ -19252,7 +19302,9 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.905083,
-      "lon": 151.2040266
+      "lon": 151.2040266,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/2106-6-ebsworth-street-zetland-nsw-2017-2020266256"
     },
     {
       "address": "47 Frampton Avenue",
@@ -19315,7 +19367,9 @@
       "change_flag": "NEW",
       "lat": -33.9105719,
       "lon": 151.1596921,
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/47-frampton-avenue-marrickville-nsw-2204-2021197746"
     },
     {
       "address": "61 Addison Road",
@@ -19378,7 +19432,9 @@
       "change_flag": "NEW",
       "lat": -33.9029152,
       "lon": 151.1658377,
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/61-addison-road-marrickville-nsw-2204-2021196939"
     },
     {
       "address": "2/3 Anderton Street",
@@ -19441,7 +19497,9 @@
       "change_flag": "NEW",
       "lat": -33.9075019,
       "lon": 151.1512415,
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/2-3-anderton-street-marrickville-nsw-2204-2021196926"
     },
     {
       "address": "13/9 Hill Street",
@@ -19504,7 +19562,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.9171833,
-      "lon": 151.1465644
+      "lon": 151.1465644,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/13-9-hill-street-marrickville-nsw-2204-2021196873"
     },
     {
       "address": "9/3 Roach Street",
@@ -19567,7 +19627,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.9154887,
-      "lon": 151.1484506
+      "lon": 151.1484506,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/9-3-roach-street-marrickville-nsw-2204-2021196648"
     },
     {
       "address": "214/3 Nagurra Place",
@@ -19630,7 +19692,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.8610145,
-      "lon": 151.1687537
+      "lon": 151.1687537,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/214-3-nagurra-place-rozelle-nsw-2039-2021184913"
     },
     {
       "address": "18 Ferry Road",
@@ -19693,7 +19757,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.876732,
-      "lon": 151.1856213
+      "lon": 151.1856213,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/18-ferry-road-glebe-nsw-2037-2021173306"
     },
     {
       "address": "9/40-42 Hill Street",
@@ -19756,7 +19822,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.9176274,
-      "lon": 151.1453055
+      "lon": 151.1453055,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/9-40-42-hill-street-marrickville-nsw-2204-2021160212"
     },
     {
       "address": "26/18 Cecilia Street",
@@ -19819,7 +19887,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.9080967,
-      "lon": 151.1554903
+      "lon": 151.1554903,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/26-18-cecilia-street-marrickville-nsw-2204-2021157203"
     },
     {
       "address": "40 Pile Street",
@@ -19882,7 +19952,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.9034257,
-      "lon": 151.1475564
+      "lon": 151.1475564,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/40-pile-street-dulwich-hill-nsw-2203-2021172978"
     },
     {
       "address": "74a Burfitt Street",
@@ -19943,7 +20015,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.8814289,
-      "lon": 151.1484569
+      "lon": 151.1484569,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/74a-burfitt-street-leichhardt-nsw-2040-2021196892"
     },
     {
       "address": "222 Corunna Road",
@@ -20006,7 +20080,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.8903343,
-      "lon": 151.1595972
+      "lon": 151.1595972,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/222-corunna-road-petersham-nsw-2049-2021106869"
     },
     {
       "address": "13/16 Wolseley Street",
@@ -20067,7 +20143,9 @@
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.8460162,
-      "lon": 151.1543064
+      "lon": 151.1543064,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/13-16-wolseley-street-drummoyne-nsw-2047-2021199827"
     },
     {
       "address": "3401/2 Nassau Lane",
@@ -20124,7 +20202,9 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/3401-2-nassau-lane-erskineville-nsw-2043-2021198559"
     },
     {
       "address": "3 Coulson Street",
@@ -20179,7 +20259,9 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/3-coulson-street-erskineville-nsw-2043-2021197903"
     },
     {
       "address": "2105/1 Metters Street",
@@ -20236,7 +20318,9 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/2105-1-metters-street-erskineville-nsw-2043-2021197616"
     },
     {
       "address": "420C/39 Ralph Street",
@@ -20293,7 +20377,9 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/420c-39-ralph-street-alexandria-nsw-2015-2021184412"
     },
     {
       "address": "545/8 Ascot Avenue",
@@ -20350,7 +20436,9 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
-      "flag_sweeps": 1
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "resolved_url": "https://www.domain.com.au/545-8-ascot-avenue-zetland-nsw-2017-2021171343"
     },
     {
       "address": "01/71-91 Euston Road",
@@ -20406,8 +20494,14 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW",
-      "flag_sweeps": 1
+      "change_flag": "WITHDRAWN",
+      "flag_sweeps": 1,
+      "status_checked_on": "2026-10-01",
+      "departed_on": "2026-10-01",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=01%2f71-91+euston+road+alexandria",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     }
   ]
 }
