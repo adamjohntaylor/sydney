@@ -690,8 +690,11 @@ def merge_new_listings(new_listings, dry_run=False):
         l["first_seen"] = dt.date.today().isoformat()
         l["last_seen"] = dt.date.today().isoformat()
         l["change_flag"] = "NEW"
+        l["flag_sweeps"] = 0
 
-    # Merge
+    # Merge (this CLI run counts as a sweep: age existing transient flags first)
+    import sweep as _sweep_age
+    _sweep_age.age_change_flags(data["listings"], dt.date.today().isoformat())
     data["listings"].extend(truly_new)
 
     # Update counts (shared logic: active market counts + departed counts)

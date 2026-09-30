@@ -64,6 +64,12 @@ SYD_TZ = dt.timezone(dt.timedelta(hours=10))   # AEST; AEDT (+11) Oct-Apr
 # be revived by a bookmarklet click or a manual re-mark - never by a stale
 # alert email re-read.
 GONE_FLAGS = ("SOLD", "UNDER_OFFER", "WITHDRAWN")
+# Transient "what changed" flags. Unlike the GONE_FLAGS (a market state), these
+# describe an event, so they must expire. A flag set at refresh N is shown through
+# refresh N+1 (it "lasts a second sweep") and reverts to UNCHANGED at N+2.
+# Counter lives on the record as `flag_sweeps` (refreshes survived since set).
+TRANSIENT_FLAGS = ("NEW", "PRICE_CHANGED", "OPEN_HOME_ADDED")
+FLAG_SWEEP_LIFETIME = 2
 
 # Map a harvest/bookmarklet 'listing_status' value onto a change_flag.
 STATUS_TO_FLAG = {"sold": "SOLD", "under_offer": "UNDER_OFFER", "withdrawn": "WITHDRAWN"}
@@ -503,6 +509,39 @@ def _preserve_enrichment(new_rec, old_rec):
         new_rec["url"] = old_url
 
 
+def age_change_flags(listings, today):
+    """Called ONCE per refresh (/api/refresh, gmail_fetch CLI), BEFORE the merge,
+    on the prior watchlist. Increments `flag_sweeps` on every record carrying a
+    transient flag and reverts the flag to UNCHANGED once it has survived
+    FLAG_SWEEP_LIFETIME refreshes. Records the merge then re-flags get
+    flag_sweeps=0 again. Returns the number of flags cleared.
+
+    Bug fixed 1 Oct 2026: previously nothing ever cleared NEW - merge_incremental
+    only touched listings present in the incoming alert batch, and alerts are
+    new-only, so a NEW listing that never re-appeared kept NEW for ever (20 such
+    records dating back to 21 Jun). Legacy records with no counter whose
+    last_seen is before today are treated as already expired."""
+    cleared = 0
+    for l in listings:
+        flag = l.get("change_flag")
+        if flag not in TRANSIENT_FLAGS:
+            l.pop("flag_sweeps", None)
+            continue
+        n = l.get("flag_sweeps")
+        if not isinstance(n, int):
+            # Legacy record (pre-counter): stale if not sighted today.
+            n = FLAG_SWEEP_LIFETIME - 1 if (l.get("last_seen") or "") < today else 0
+        n += 1
+        if n >= FLAG_SWEEP_LIFETIME:
+            l["change_flag"] = "UNCHANGED"
+            l["flag_cleared_on"] = today
+            l.pop("flag_sweeps", None)
+            cleared += 1
+        else:
+            l["flag_sweeps"] = n
+    return cleared
+
+
 def merge_incremental(new_scored, prior_listings, today):
     """Merge mode for email-alert ingestion (route A). Alert emails list only NEW
     matches, not the full current field, so we MUST NOT infer withdrawals from
@@ -543,6 +582,7 @@ def merge_incremental(new_scored, prior_listings, today):
             continue
         if old is None:
             l["change_flag"] = "NEW"
+            l["flag_sweeps"] = 0
         else:
             l["first_seen"] = old.get("first_seen", today)
             # Alert emails carry only URL/price/suburb; an auction re-list usually
@@ -558,6 +598,16 @@ def merge_incremental(new_scored, prior_listings, today):
                 l["prior_price_text"] = old.get("price_guide_text")
             elif set(l.get("open_homes", [])) - set(old.get("open_homes", [])):
                 flag = "OPEN_HOME_ADDED"
+            if flag == "UNCHANGED" and old.get("change_flag") in TRANSIENT_FLAGS:
+                # Re-served alert (3-day IMAP window) with nothing new: keep the
+                # still-live flag and its age rather than clearing it early.
+                flag = old["change_flag"]
+                if "flag_sweeps" in old:
+                    l["flag_sweeps"] = old["flag_sweeps"]
+            elif flag != "UNCHANGED":
+                l["flag_sweeps"] = 0
+            else:
+                l.pop("flag_sweeps", None)
             l["change_flag"] = flag
             if old.get("status"):
                 l["status"] = old["status"]

@@ -7,6 +7,44 @@ of how the code got to its current shape.
 
 ---
 
+## 1 October 2026 (pm) — NEW badge now expires after one further sweep
+
+**Report (Adam):** the "New" stamp stays on dashboard entries indefinitely; it
+should last a second sweep and then drop.
+
+**Cause.** Nothing ever cleared a NEW flag. `merge_incremental` only touches
+listings present in the incoming alert batch; alerts are new-only, so a listing
+that never re-appeared kept NEW for ever. `/api/refresh` also skipped the merge
+entirely when no alerts arrived. Re-served alerts (3-day IMAP window) did the
+opposite — they reset NEW to UNCHANGED on the next refresh. Result on 1 Oct:
+39 active listings flagged NEW, 20 of them first seen 21 Jun – 24 Jul.
+PRICE_CHANGED / OPEN_HOME_ADDED had the same defect.
+
+**Fix.**
+- `sweep.py`: `TRANSIENT_FLAGS` (NEW, PRICE_CHANGED, OPEN_HOME_ADDED),
+  `FLAG_SWEEP_LIFETIME = 2`, per-record counter `flag_sweeps`. New
+  `age_change_flags()` runs once per refresh on the prior watchlist: a flag set
+  at refresh N shows through N+1 and reverts to UNCHANGED at N+2
+  (`flag_cleared_on` recorded). Legacy records with no counter and
+  `last_seen` < today expire at the first refresh. `merge_incremental` sets
+  `flag_sweeps=0` on new or re-flagged records, and a re-served alert with no
+  change keeps the live flag and its age instead of clearing it.
+- `serve.py` `/api/refresh`: new Step 2a calls `age_change_flags` whether or not
+  alerts arrived; `new_from_email` now counts keys absent from the prior list
+  (the old NEW-count difference would go wrong once flags expire); the
+  bookmarklet auto-add sets `flag_sweeps=0`.
+- `gmail_fetch.py` CLI merge: ages flags before appending new listings.
+- Extension Verify / `/api/apply-status` and bookmarklet clicks do NOT count as
+  sweeps.
+
+**Test** (copy of live listings.json, three simulated refreshes): all 39 current
+NEW flags cleared on the next refresh (the 19 from 1 Oct arrived in the 06:27
+refresh and survived the 07:11 one, so they have had their second sweep); a
+fresh listing showed NEW for refreshes 1–2 and cleared at 3; a re-served alert
+kept its flag.
+
+---
+
 ## 1 October 2026 — Consumed alert emails moved to Gmail Trash
 
 **Request (Adam):** delete the Domain / realestate.com.au emails once the sweep

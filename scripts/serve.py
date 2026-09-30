@@ -301,6 +301,13 @@ this page and re-drag the button (the code is baked into the link, so it does no
                     prior_data = json.load(fh)
                 prior_listings = prior_data.get("listings", [])
 
+            # Step 2a: Age transient change flags (NEW / PRICE_CHANGED /
+            # OPEN_HOME_ADDED) - once per refresh, whether or not any alerts
+            # arrived, so a flag lasts exactly one further sweep.
+            flags_cleared = sweep_mod.age_change_flags(prior_listings, today)
+            print(f"Step 2a: {flags_cleared} change flag(s) expired", file=sys.stderr, flush=True)
+            prior_keys = {sweep_mod.listing_key(l) for l in prior_listings}
+
             # Step 3: Geocode new listings
             print(f"Step 3: Geocoding {len(new_listings_raw)} new listings...", file=sys.stderr, flush=True)
             if new_listings_raw:
@@ -322,9 +329,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
             print("Step 6: Merging listings...", file=sys.stderr, flush=True)
             if new_listings_raw:
                 all_listings = sweep_mod.merge_incremental(new_listings_raw, prior_listings, today)
-                new_from_email = len([l for l in all_listings if l.get("change_flag") == "NEW"]) - \
-                                 len([l for l in prior_listings if l.get("change_flag") == "NEW"])
-                new_from_email = max(0, new_from_email)
+                new_from_email = sum(1 for l in all_listings
+                                     if sweep_mod.listing_key(l) not in prior_keys)
             else:
                 all_listings = prior_listings
 
@@ -621,6 +627,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
                     "first_seen": syd_today,
                     "last_seen": syd_today,
                     "change_flag": "NEW",
+                    "flag_sweeps": 0,
                     "open_homes": [],
                 }
                 if item.get("postcode"):

@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T21:11:40.863964+00:00",
-  "generated_at_sydney": "2026-10-01 07:11 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-30T21:22:11.883511+00:00",
+  "generated_at_sydney": "2026-10-01 07:22 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 97,
     "tier1_pass": 92,
-    "new": 39,
+    "new": 19,
     "price_changed": 0,
     "sold": 154,
     "under_offer": 2,
@@ -537,7 +537,7 @@
       },
       "first_seen": "2026-06-21",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.881512,
       "lon": 151.1924243,
       "features": [
@@ -568,7 +568,8 @@
       ],
       "status": "interested",
       "note": "",
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
@@ -1031,7 +1032,7 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
       "cover_image": "https://rimh2.domainstatic.com.au/d8Zl_9w1xDjM0emAFfn5Otxek8g=/1680x720/filters:format(webp):quality(85)/2020928696_1_1_260619_032942-w4600-h3067",
       "property_type": "apartment / unit / flat",
@@ -1048,7 +1049,8 @@
         "step_free": false,
         "lift": null
       },
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "115 Sydenham Road",
@@ -2588,7 +2590,7 @@
       "parking": 2,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionHigh-Floor North-Facing Residence with Oversized Balcony & Rare Double ParkingPositioned within the award-winning Uno development in the vibrant heart of Green Square Town Centre, this impressive high-floor two-bedroom residence delivers the perfect balance of space, natural light, and modern convenience.Situated on Level 8 with a prized north-facing aspect, the apartment enjoys abundant sunlight throughout the day and features an exceptionally large balcony, creating aRead m",
-      "status": "needs decision",
+      "status": "interested",
       "note": "",
       "accessibility": {
         "step_free": true,
@@ -5106,7 +5108,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://rimh2.domainstatic.com.au/mySFP9banroRtfcabWuEMQUZbpg=/1680x720/filters:format(webp):quality(85)/2020693826_3_1_260319_012018-w6048-h4032",
@@ -5171,7 +5173,8 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
@@ -5179,7 +5182,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://rimh2.domainstatic.com.au/FEjNaRxzXAMCEQN2wP-RqJtUNx4=/1680x720/filters:format(webp):quality(85)/2020804907_1_1_260430_112723-w3500-h2334",
@@ -5240,7 +5243,8 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.domain.com.au/704-18-20-allen-street-pyrmont-nsw-2009-2020761520",
@@ -5395,7 +5399,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://rimh2.domainstatic.com.au/sG6GvZ1q_nsg2w2R9rqrpLdueTs=/1680x720/filters:format(webp):quality(85)/2020910983_1_1_260611_094507-w1600-h1067",
@@ -5456,7 +5460,8 @@
       "warehouse_character": false,
       "status_checked_on": "2026-09-29",
       "price_min": 1220000,
-      "price_max": 1220000
+      "price_max": 1220000,
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
@@ -5464,7 +5469,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://i2.au.reastatic.net/310x175/b99d9120d7575290db5cb731a6387d50a5342f19d8858a5ca400350863712823/image.jpg",
@@ -5538,7 +5543,8 @@
       "warehouse_character": false,
       "status": "interested",
       "note": "",
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
@@ -5546,7 +5552,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://rimh2.domainstatic.com.au/aFpt87MhQS1wB1BTUrLhpXjrA1g=/1680x720/filters:format(webp):quality(85)/2020727214_1_1_260401_041543-w3500-h2335",
@@ -5635,7 +5641,8 @@
         "step_free": false,
         "lift": null
       },
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.domain.com.au/12-29-cook-street-glebe-nsw-2037-2020656242",
@@ -5734,7 +5741,7 @@
       "suburb": "Glebe",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2037",
       "cover_image": "https://i2.au.reastatic.net/800x600/1347bec2ed91fe4cefe120e2eeea373c83f98bfc5d1e851373d93792593ea8d3/image.jpg",
@@ -5801,7 +5808,8 @@
       "status_checked_on": "2026-09-29",
       "price_guide_text": "$1,200,000",
       "price_min": 1200000,
-      "price_max": 1200000
+      "price_max": 1200000,
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
@@ -5809,7 +5817,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://i2.au.reastatic.net/310x175/353bb3d82aacc725bc6bb1e363095882e37e8be34d96eac9dbc1dd4ca8fced0a/image.jpg",
@@ -5884,7 +5892,8 @@
       "beds": 2,
       "baths": 2,
       "parking": 1,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.realestate.com.au/sold/property-unit-nsw-glebe-150824100",
@@ -6061,7 +6070,7 @@
       "suburb": "Glebe",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2037",
       "cover_image": "https://i2.au.reastatic.net/310x175/863c3c1311260baf8c358166b32f995a381145377c080563efe8837dabdaf467/image.jpg",
@@ -6131,7 +6140,8 @@
       "baths": 2,
       "parking": 1,
       "status_checked_on": "2026-09-29",
-      "price_guide_text": "$2,225"
+      "price_guide_text": "$2,225",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
@@ -6139,7 +6149,7 @@
       "suburb": "Glebe",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2037",
       "cover_image": "https://i2.au.reastatic.net/800x600/164b9375914f5f3071f86bcf10f313dbeef8441386654b53ccc9cb04da5e6c92/image.jpg",
@@ -6214,7 +6224,8 @@
         "step_free": false,
         "lift": null
       },
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
@@ -6471,7 +6482,7 @@
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
       "cover_image": "https://i2.au.reastatic.net/800x600/bfd2ac1ad39745fab3001e00d440503d6a40618fab63a91552e52fbeb1e16792/image.jpg",
@@ -6540,7 +6551,8 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
@@ -6548,7 +6560,7 @@
       "suburb": "Balmain",
       "first_seen": "2026-06-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2041",
       "cover_image": "https://i2.au.reastatic.net/800x600/3f50cd109f007b423300812e7eae976ffe95431fb3bdd2cb05bf3ed0da427104/image.jpg",
@@ -6617,7 +6629,8 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-09-29"
+      "status_checked_on": "2026-09-29",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "1/19-21 Larkin Street",
@@ -10857,11 +10870,12 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.8541473,
       "lon": 151.15702,
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/209-7-church-street-drummoyne-nsw-2047-2020966524"
+      "resolved_url": "https://www.domain.com.au/209-7-church-street-drummoyne-nsw-2047-2020966524",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "204/1 Brightwell Lane",
@@ -11464,11 +11478,12 @@
       "warehouse_character": false,
       "first_seen": "2026-07-03",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.8606926,
       "lon": 151.1830789,
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/41-donnelly-street-balmain-nsw-2041-2020969462"
+      "resolved_url": "https://www.domain.com.au/41-donnelly-street-balmain-nsw-2041-2020969462",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "109 Mitchell Street",
@@ -12066,9 +12081,10 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/901-3-cary-street-drummoyne-nsw-2047-2020949559"
+      "resolved_url": "https://www.domain.com.au/901-3-cary-street-drummoyne-nsw-2047-2020949559",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "15 Gladstone Street",
@@ -12871,11 +12887,12 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.9057052,
       "lon": 151.2031385,
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/1215-303-botany-road-zetland-nsw-2017-2019500912"
+      "resolved_url": "https://www.domain.com.au/1215-303-botany-road-zetland-nsw-2017-2019500912",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "8/124-126 Parramatta Road",
@@ -13270,11 +13287,12 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "lat": -33.8788888,
       "lon": 151.1859923,
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/7-164-glebe-point-road-glebe-nsw-2037-2020985233"
+      "resolved_url": "https://www.domain.com.au/7-164-glebe-point-road-glebe-nsw-2037-2020985233",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "185A Trafalgar Lane",
@@ -13540,9 +13558,10 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/123-addison-road-marrickville-nsw-2204-2021011624"
+      "resolved_url": "https://www.domain.com.au/123-addison-road-marrickville-nsw-2204-2021011624",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "175 Denison Street",
@@ -13879,9 +13898,10 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-09-29",
-      "change_flag": "NEW",
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/2-bed-163-mitchell-rd-erskineville-nsw-2043-2021152419"
+      "resolved_url": "https://www.domain.com.au/2-bed-163-mitchell-rd-erskineville-nsw-2043-2021152419",
+      "flag_cleared_on": "2026-10-01"
     },
     {
       "address": "186D Victoria Road",
@@ -19294,7 +19314,8 @@
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
       "lat": -33.9105719,
-      "lon": 151.1596921
+      "lon": 151.1596921,
+      "flag_sweeps": 1
     },
     {
       "address": "61 Addison Road",
@@ -19356,7 +19377,8 @@
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
       "lat": -33.9029152,
-      "lon": 151.1658377
+      "lon": 151.1658377,
+      "flag_sweeps": 1
     },
     {
       "address": "2/3 Anderton Street",
@@ -19418,7 +19440,8 @@
       "last_seen": "2026-10-01",
       "change_flag": "NEW",
       "lat": -33.9075019,
-      "lon": 151.1512415
+      "lon": 151.1512415,
+      "flag_sweeps": 1
     },
     {
       "address": "13/9 Hill Street",
@@ -19429,44 +19452,48 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 155,
+          "supermarket": 358,
+          "pool": 887,
+          "park": 144,
+          "restaurants": 259
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19474,7 +19501,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.9171833,
+      "lon": 151.1465644
     },
     {
       "address": "9/3 Roach Street",
@@ -19485,44 +19515,48 @@
       "price_min": 1100000,
       "price_max": 1100000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 185,
+          "supermarket": 216,
+          "pool": 647,
+          "park": 53,
+          "restaurants": 136
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19530,7 +19564,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.9154887,
+      "lon": 151.1484506
     },
     {
       "address": "214/3 Nagurra Place",
@@ -19541,44 +19578,48 @@
       "price_min": 1100000,
       "price_max": 1100000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 184,
+          "supermarket": 229,
+          "pool": 220,
+          "park": 130,
+          "restaurants": 33
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19586,7 +19627,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.8610145,
+      "lon": 151.1687537
     },
     {
       "address": "18 Ferry Road",
@@ -19597,44 +19641,48 @@
       "price_min": 1525000,
       "price_max": 1525000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 104,
+          "supermarket": 76,
+          "pool": 674,
+          "park": 71,
+          "restaurants": 71
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19642,7 +19690,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.876732,
+      "lon": 151.1856213
     },
     {
       "address": "9/40-42 Hill Street",
@@ -19653,44 +19704,48 @@
       "price_min": 1525000,
       "price_max": 1525000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 133,
+          "supermarket": 482,
+          "pool": 984,
+          "park": 185,
+          "restaurants": 229
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19698,7 +19753,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.9176274,
+      "lon": 151.1453055
     },
     {
       "address": "26/18 Cecilia Street",
@@ -19709,44 +19767,48 @@
       "price_min": 1100000,
       "price_max": 1100000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 194,
+          "supermarket": 357,
+          "pool": 389,
+          "park": 85,
+          "restaurants": 183
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19754,7 +19816,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.9080967,
+      "lon": 151.1554903
     },
     {
       "address": "40 Pile Street",
@@ -19765,44 +19830,48 @@
       "price_min": 1100000,
       "price_max": 1100000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 362,
+          "supermarket": 398,
+          "pool": 261,
+          "park": 245,
+          "restaurants": 325
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19810,7 +19879,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.9034257,
+      "lon": 151.1475564
     },
     {
       "address": "74a Burfitt Street",
@@ -19818,21 +19890,27 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=74a+burfitt+street+leichhardt",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 169,
+          "supermarket": 390,
+          "pool": 836,
+          "park": 257,
+          "restaurants": 341
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -19840,23 +19918,21 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19864,7 +19940,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.8814289,
+      "lon": 151.1484569
     },
     {
       "address": "222 Corunna Road",
@@ -19875,44 +19954,48 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 109,
+          "supermarket": 287,
+          "pool": 719,
+          "park": 232,
+          "restaurants": 266
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19920,7 +20003,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.8903343,
+      "lon": 151.1595972
     },
     {
       "address": "13/16 Wolseley Street",
@@ -19928,21 +20014,27 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F16+wolseley+street+drummoyne",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 238,
+          "supermarket": 556,
+          "pool": 461,
+          "park": 243,
+          "restaurants": 497
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -19950,23 +20042,21 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19974,7 +20064,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1,
+      "lat": -33.8460162,
+      "lon": 151.1543064
     },
     {
       "address": "3401/2 Nassau Lane",
@@ -20030,7 +20123,8 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1
     },
     {
       "address": "3 Coulson Street",
@@ -20084,7 +20178,8 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1
     },
     {
       "address": "2105/1 Metters Street",
@@ -20140,7 +20235,8 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1
     },
     {
       "address": "420C/39 Ralph Street",
@@ -20196,7 +20292,8 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1
     },
     {
       "address": "545/8 Ascot Avenue",
@@ -20252,7 +20349,8 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1
     },
     {
       "address": "01/71-91 Euston Road",
@@ -20308,7 +20406,8 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "flag_sweeps": 1
     }
   ]
 }
