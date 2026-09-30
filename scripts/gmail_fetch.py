@@ -75,11 +75,24 @@ ALERT_SENDERS = ["noreply@domain.com.au", "noreply@realestate.com.au",
                  "alerts@domain.com.au", "alerts@realestate.com.au",
                  "email@campaign.realestate.com.au"]
 
+# --- Post-ingest clean-up (added 1 Oct 2026) ---------------------------------
+# Once the refresh / CLI run has written listings.json, the alert emails it
+# consumed are moved to Gmail's Trash (recoverable for 30 days, then purged by
+# Gmail). Only messages whose actual From: address is at one of these domains
+# (or a subdomain, e.g. campaign.realestate.com.au) are ever touched.
+DELETE_AFTER_INGEST = True
+DELETE_SENDER_DOMAINS = ("domain.com.au", "realestate.com.au")
+# Safety: an email that yielded no listing or departure record is kept in the
+# inbox (a parser miss on a changed email template would otherwise be lost).
+# Set True to trash every fetched alert email regardless.
+DELETE_UNPARSED = False
+
 
 def fetch_via_imap(days_back=3):
     """Fetch property alert emails via IMAP with App Password."""
     import imaplib
     import email
+    import email.utils
     from email.header import decode_header
 
     # Load credentials
@@ -108,6 +121,7 @@ def fetch_via_imap(days_back=3):
         return None
 
     mail.select("inbox")
+    uidvalidity = _uidvalidity(mail)
 
     # Search for emails from alert senders in the date range
     since_date = (dt.datetime.now() - dt.timedelta(days=days_back)).strftime("%d-%b-%Y")
@@ -117,11 +131,13 @@ def fetch_via_imap(days_back=3):
         search_query = f'(FROM "{sender}" SINCE {since_date})'
         print(f"Searching: {search_query}", file=sys.stderr)
 
-        _, message_numbers = mail.search(None, search_query)
-        msg_nums = message_numbers[0].split()
+        _, message_uids = mail.uid("search", None, search_query)
+        msg_uids = message_uids[0].split()
 
-        for num in msg_nums:
-            _, msg_data = mail.fetch(num, "(RFC822)")
+        for uid in msg_uids:
+            _, msg_data = mail.uid("fetch", uid, "(RFC822)")
+            if not msg_data or not isinstance(msg_data[0], tuple):
+                continue
             raw_email = msg_data[0][1]
             msg = email.message_from_bytes(raw_email)
 
@@ -151,12 +167,117 @@ def fetch_via_imap(days_back=3):
                     "subject": subject,
                     "date": msg["Date"],
                     "body": body,
-                    "from": sender
+                    "from": sender,
+                    "from_addr": email.utils.parseaddr(msg.get("From", ""))[1].lower(),
+                    "uid": uid.decode() if isinstance(uid, bytes) else str(uid),
+                    "uidvalidity": uidvalidity,
                 })
 
     mail.logout()
     print(f"Found {len(emails)} alert emails via IMAP", file=sys.stderr)
     return emails
+
+
+def _uidvalidity(mail):
+    """UIDVALIDITY of the currently selected mailbox (str) or None."""
+    try:
+        typ, data = mail.response("UIDVALIDITY")
+        if data and data[0]:
+            return data[0].decode() if isinstance(data[0], bytes) else str(data[0])
+    except Exception:
+        pass
+    return None
+
+
+def _sender_domain_ok(addr):
+    """True if addr is at domain.com.au / realestate.com.au or a subdomain."""
+    dom = (addr or "").rsplit("@", 1)[-1].lower().strip()
+    return any(dom == d or dom.endswith("." + d) for d in DELETE_SENDER_DOMAINS)
+
+
+def email_yield(em):
+    """Number of listing / departure records one alert email produced."""
+    import parse_alert_email as parser
+    body, subject = em.get("body", ""), em.get("subject", "")
+    if parser.classify_email(subject, body) == "departure":
+        return len(parser.extract_departures(body, subject))
+    n = len(parser.extract(body))
+    if not n:
+        n = len(extract_by_address(body, em.get("from", "domain")))
+    return n
+
+
+def select_consumed(emails, include_unparsed=None):
+    """Pick the fetched emails that are safe to trash after a successful ingest.
+    Returns (to_trash, kept_unparsed)."""
+    if include_unparsed is None:
+        include_unparsed = DELETE_UNPARSED
+    to_trash, kept = [], []
+    for em in emails or []:
+        if not em.get("uid") or not _sender_domain_ok(em.get("from_addr")):
+            continue
+        if include_unparsed or email_yield(em) > 0:
+            to_trash.append(em)
+        else:
+            kept.append(em)
+    return to_trash, kept
+
+
+def _find_trash_mailbox(mail):
+    """Gmail's Trash folder is localised ('[Gmail]/Bin' in AU/UK, '[Gmail]/Trash'
+    in US). Find it by the RFC 6154 \\Trash special-use flag."""
+    import re as _re
+    typ, boxes = mail.list()
+    for raw in boxes or []:
+        line = raw.decode(errors="replace") if isinstance(raw, bytes) else str(raw)
+        if "\\Trash" in line:
+            m = _re.search(r'"([^"]+)"\s*$', line) or _re.search(r'(\S+)\s*$', line)
+            if m:
+                return m.group(1)
+    return None
+
+
+def trash_emails_imap(emails):
+    """Move the given fetched emails (by UID) from INBOX to Gmail Trash.
+    Returns (moved_count, error_or_None). Never raises."""
+    import imaplib
+    uids = [em["uid"] for em in emails if em.get("uid")]
+    if not uids:
+        return 0, None
+    try:
+        with open(IMAP_CREDS_PATH, "r") as f:
+            creds = json.load(f)
+        mail = imaplib.IMAP4_SSL("imap.gmail.com")
+        mail.login(creds.get("email"), creds.get("app_password", "").replace(" ", ""))
+    except Exception as e:
+        return 0, f"IMAP login for clean-up failed: {e}"
+    try:
+        mail.select("inbox")
+        now_validity = _uidvalidity(mail)
+        fetched_validity = {em.get("uidvalidity") for em in emails}
+        if now_validity and fetched_validity - {now_validity, None}:
+            return 0, "Inbox UIDVALIDITY changed since fetch - no emails deleted"
+        trash = _find_trash_mailbox(mail)
+        if not trash:
+            return 0, "Could not locate Gmail Trash/Bin folder - no emails deleted"
+        uid_set = ",".join(uids)
+        typ, _ = mail.uid("MOVE", uid_set, f'"{trash}"')
+        if typ != "OK":
+            # Fallback for servers without MOVE: copy to Trash, flag, expunge.
+            typ, _ = mail.uid("COPY", uid_set, f'"{trash}"')
+            if typ != "OK":
+                return 0, f"Could not move emails to {trash}"
+            mail.uid("STORE", uid_set, "+FLAGS", "(\\Deleted)")
+            mail.expunge()
+        print(f"Moved {len(uids)} consumed alert email(s) to {trash}", file=sys.stderr)
+        return len(uids), None
+    except Exception as e:
+        return 0, f"Email clean-up failed: {e}"
+    finally:
+        try:
+            mail.logout()
+        except Exception:
+            pass
 
 
 def get_gmail_service(force_reauth=False):
@@ -592,6 +713,8 @@ def main(argv):
     ap.add_argument("--method", choices=["imap", "oauth", "auto"], default="auto",
                     help="Authentication method (default: auto-detect)")
     ap.add_argument("--reauth", action="store_true", help="Force re-authentication (OAuth only)")
+    ap.add_argument("--keep-emails", action="store_true",
+                    help="Do not move consumed alert emails to Gmail Trash")
     args = ap.parse_args(argv[1:])
 
     # Determine which method to use
@@ -651,6 +774,20 @@ def main(argv):
         print(f"Dry run - {len(departures)} departure record(s) parsed:", file=sys.stderr)
         for d in departures:
             print(f"  - {d.get('address') or d.get('url','?')} -> {d['status']}", file=sys.stderr)
+
+    # Clean-up: listings.json has been written - trash the consumed alert emails.
+    if method == "imap" and DELETE_AFTER_INGEST and not args.keep_emails:
+        to_trash, kept = select_consumed(emails)
+        if args.dry_run:
+            print(f"Dry run - would move {len(to_trash)} email(s) to Trash; "
+                  f"{len(kept)} unparsed kept", file=sys.stderr)
+        else:
+            moved, err = trash_emails_imap(to_trash)
+            if err:
+                print(f"WARNING: {err}", file=sys.stderr)
+            if kept:
+                print(f"Kept {len(kept)} alert email(s) that yielded no records "
+                      f"(check for a changed email template).", file=sys.stderr)
     return 0
 
 

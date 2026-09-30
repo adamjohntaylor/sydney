@@ -164,6 +164,26 @@ status files too, and `POST /api/apply-status` accepts the same `{"checks": [...
 body directly (it archives the posted checks under `data/status-checks/` for
 audit). `GET /api/status-worklist?cap=N` returns the worklist as JSON.
 
+### C. Clean up the inbox (added 1 Oct 2026)
+Once `data/listings.json` has been written successfully, the Domain / REA alert
+emails the sweep consumed are **moved to Gmail Trash** (Gmail keeps them 30 days,
+so a mistake is recoverable from Trash/Bin).
+- **Refresh now** (`/api/refresh`, Step 12b) and `python scripts\gmail_fetch.py`
+  do this automatically over IMAP, after listings.json + snapshot are on disk.
+  The refresh result reports `emails_trashed`, `emails_kept_unparsed` and any
+  `email_cleanup_error`. Nothing is deleted if the Gmail step or the write fails.
+- **Claude-driven sweep (step A via the Gmail connector):** after step B's script
+  has run without error, trash each alert email you read in A3 (Gmail connector
+  `trash_message` / `trash_thread`). Never trash before the write succeeds.
+- Only messages whose actual sender is `@domain.com.au` / `@realestate.com.au`
+  (or a subdomain such as `campaign.realestate.com.au`) are touched.
+- An email that yielded **no** listing or sold/under-offer record is **kept** in
+  the inbox (a changed email template would otherwise be silently lost) - if
+  `emails_kept_unparsed` keeps climbing, the parser needs updating. To trash
+  those too, set `DELETE_UNPARSED = True` in `scripts/gmail_fetch.py`.
+- To switch clean-up off: `DELETE_AFTER_INGEST = False` in
+  `scripts/gmail_fetch.py`, or `gmail_fetch.py --keep-emails` for a single run.
+
 *(Manual full-snapshot mode - drop `--incremental` - is retained for the case
 where you ever supply a complete current field; it auto-detects WITHDRAWN/SOLD by
 absence. Don't use it with new-only alert data.)*

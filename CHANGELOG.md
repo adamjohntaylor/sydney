@@ -7,6 +7,34 @@ of how the code got to its current shape.
 
 ---
 
+## 1 October 2026 — Consumed alert emails moved to Gmail Trash
+
+**Request (Adam):** delete the Domain / realestate.com.au emails once the sweep
+has finished with them.
+
+- `scripts/gmail_fetch.py`: IMAP fetch now works by **UID** (stable across
+  sessions; sequence numbers are not) and records `uid`, `uidvalidity` and the
+  real `From:` address per email. New `select_consumed()` / `trash_emails_imap()`
+  move consumed emails to Gmail's Trash, located via the `\Trash` special-use
+  flag because the folder is `[Gmail]/Bin` in AU locale, not `[Gmail]/Trash`.
+  `UID MOVE`, with COPY + `\Deleted` + EXPUNGE fallback. Aborts if the inbox
+  UIDVALIDITY changed since the fetch. Settings: `DELETE_AFTER_INGEST = True`,
+  `DELETE_SENDER_DOMAINS`, `DELETE_UNPARSED = False`; CLI `--keep-emails`;
+  `--dry-run` only reports.
+- `scripts/serve.py` `/api/refresh`: new **Step 12b** runs clean-up only after
+  listings.json and the snapshot are written, and only if Step 1 had no error.
+  Response gains `emails_trashed`, `emails_kept_unparsed`, `email_cleanup_error`.
+- Safeguards: sender-domain check on the actual From address (subdomains OK,
+  look-alikes such as `mydomain.com.au` rejected); emails that yielded no record
+  are kept. Side-benefit: the 3-day look-back no longer re-serves the same
+  pre-sale alerts on every refresh.
+- `RUNBOOK.md`: new section **C. Clean up the inbox** (incl. the connector-driven
+  sweep: trash only after step B succeeds).
+- Tested against a mock IMAP server (move, Bin discovery, UIDVALIDITY guard,
+  domain filter, unparsed-kept rule); not yet exercised against live Gmail.
+
+---
+
 ## 30 September 2026 — Bedrooms filter defaults to 2+
 
 - `index.html`: the Bedrooms filter now opens on **2+ beds** (was 3+), matching the Tier 1 minimum (decision #28).

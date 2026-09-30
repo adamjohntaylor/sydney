@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T20:27:29.489214+00:00",
-  "generated_at_sydney": "2026-10-01 06:27 UTC+10:00 (Sydney)",
+  "generated_at": "2026-09-30T21:11:40.863964+00:00",
+  "generated_at_sydney": "2026-10-01 07:11 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
@@ -18804,44 +18804,48 @@
       "price_min": 1350000,
       "price_max": 1350000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 323,
+          "supermarket": 354,
+          "pool": 1240,
+          "park": 97,
+          "restaurants": 244
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -18850,7 +18854,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "lat": -33.9035228,
+      "lon": 151.1836505
     },
     {
       "address": "39/127 Railway Parade",
@@ -18861,44 +18867,48 @@
       "price_min": 1200000,
       "price_max": 1200000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 181,
+          "supermarket": 381,
+          "pool": 815,
+          "park": 154,
+          "restaurants": 200
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -18907,7 +18917,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "lat": -33.8986951,
+      "lon": 151.1884274
     },
     {
       "address": "23/15-17 Fountain Street",
@@ -18918,44 +18930,48 @@
       "price_min": 1050000,
       "price_max": 1050000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 63,
+          "supermarket": 125,
+          "pool": 442,
+          "park": 248,
+          "restaurants": 58
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -18964,7 +18980,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "lat": -33.9017459,
+      "lon": 151.1953177
     },
     {
       "address": "207/110 Epsom Road",
@@ -18975,44 +18993,48 @@
       "price_min": 1350000,
       "price_max": 1350000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 36,
+          "supermarket": 307,
+          "pool": 308,
+          "park": 224,
+          "restaurants": 311
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19021,7 +19043,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "lat": -33.9114015,
+      "lon": 151.209378
     },
     {
       "address": "3/331 Balmain Road",
@@ -19032,44 +19056,48 @@
       "price_min": 1150000,
       "price_max": 1150000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 35,
+          "supermarket": 530,
+          "pool": 582,
+          "park": 549,
+          "restaurants": 27
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19078,7 +19106,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "lat": -33.8716763,
+      "lon": 151.1601187
     },
     {
       "address": "62 Margaret Street",
@@ -19089,44 +19119,48 @@
       "price_min": 900000,
       "price_max": 900000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 272,
+          "supermarket": 318,
+          "pool": 580,
+          "park": 135,
+          "restaurants": 295
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19135,7 +19169,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "lat": -33.90165380000001,
+      "lon": 151.1754643
     },
     {
       "address": "2106/6 Ebsworth Street",
@@ -19143,21 +19179,27 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2106%2F6+ebsworth+street+zetland",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 143,
+          "supermarket": 106,
+          "pool": 234,
+          "park": 187,
+          "restaurants": 39
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -19165,23 +19207,21 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19190,7 +19230,9 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-01",
       "change_flag": "UNCHANGED",
-      "days_on_market": 2
+      "days_on_market": 2,
+      "lat": -33.905083,
+      "lon": 151.2040266
     },
     {
       "address": "47 Frampton Avenue",
@@ -19201,44 +19243,48 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 166,
+          "supermarket": 141,
+          "pool": 795,
+          "park": 262,
+          "restaurants": 141
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19246,7 +19292,9 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.9105719,
+      "lon": 151.1596921
     },
     {
       "address": "61 Addison Road",
@@ -19257,44 +19305,48 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 25,
+          "supermarket": 427,
+          "pool": 451,
+          "park": 229,
+          "restaurants": 148
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19302,7 +19354,9 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.9029152,
+      "lon": 151.1658377
     },
     {
       "address": "2/3 Anderton Street",
@@ -19313,44 +19367,48 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 122,
+          "supermarket": 555,
+          "pool": 141,
+          "park": 322,
+          "restaurants": 208
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms",
-          "transport",
-          "supplies"
+          "bedrooms"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -19358,7 +19416,9 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
-      "change_flag": "NEW"
+      "change_flag": "NEW",
+      "lat": -33.9075019,
+      "lon": 151.1512415
     },
     {
       "address": "13/9 Hill Street",

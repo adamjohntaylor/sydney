@@ -16,6 +16,7 @@ Endpoints:
     GET  /data/...        -> static data files (listings.json, notes.json, ...)
     POST /api/save-notes         -> overwrites data/notes.json with the posted JSON body
     POST /api/refresh            -> gmail ingest (new + sold alerts) + geocode + zoning + re-score
+                                    (consumed Domain/REA alert emails then moved to Gmail Trash)
     POST /api/set-market-status  -> manually flag SOLD / UNDER_OFFER / WITHDRAWN / ON_MARKET
     GET  /api/status-worklist    -> active listings whose market status needs a page re-read
                                     (?cap=N, ?all=1); the sweep's verification leg reads these
@@ -276,9 +277,11 @@ this page and re-drag the button (the code is baked into the link, so it does no
             gmail_error = None
             new_listings_raw = []
             departures = []
+            fetched_emails = []
             if os.path.exists(gmail_mod.IMAP_CREDS_PATH):
                 try:
                     emails = gmail_mod.fetch_via_imap(days_back=3)
+                    fetched_emails = emails or []
                     if emails:
                         listing_emails, departure_emails = gmail_mod.split_emails(emails)
                         new_listings_raw = gmail_mod.parse_emails_for_listings(listing_emails)
@@ -467,6 +470,17 @@ this page and re-drag the button (the code is baked into the link, so it does no
             with open(os.path.join(SNAP_DIR, snap_name), "w", encoding="utf-8") as fh:
                 json.dump(out, fh, indent=2, ensure_ascii=False)
 
+            # Step 12b: Clean up the inbox. listings.json + snapshot are on disk,
+            # so the alert emails consumed in Step 1 are moved to Gmail Trash
+            # (recoverable 30 days). Skipped if the Gmail step errored.
+            emails_trashed, emails_kept, cleanup_error = 0, 0, None
+            if fetched_emails and not gmail_error and gmail_mod.DELETE_AFTER_INGEST:
+                print("Step 12b: Moving consumed alert emails to Trash...",
+                      file=sys.stderr, flush=True)
+                to_trash, kept = gmail_mod.select_consumed(fetched_emails)
+                emails_kept = len(kept)
+                emails_trashed, cleanup_error = gmail_mod.trash_emails_imap(to_trash)
+
             # Step 13: Regenerate 07-property-shortlist.md
             print("Step 13: Regenerating shortlist...", file=sys.stderr, flush=True)
             shortlist_updated = False
@@ -505,6 +519,10 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "snapshot": snap_name,
                 "shortlist_updated": shortlist_updated
             }
+            result["emails_trashed"] = emails_trashed
+            result["emails_kept_unparsed"] = emails_kept
+            if cleanup_error:
+                result["email_cleanup_error"] = cleanup_error
             if gmail_error:
                 result["gmail_error"] = gmail_error
             return self._json(200, result)
