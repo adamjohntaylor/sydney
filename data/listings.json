@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-02T03:53:30.339215+00:00",
-  "generated_at_sydney": "2026-10-02 13:53 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-02T07:21:58.651860+00:00",
+  "generated_at_sydney": "2026-10-02 17:21 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 112,
     "tier1_pass": 107,
-    "new": 18,
+    "new": 0,
     "price_changed": 0,
     "sold": 154,
     "under_offer": 2,
@@ -1717,7 +1717,9 @@
       "departed_on": "2026-09-29",
       "status_source": "sweep_check",
       "status_basis": "chrome: page title 'Sold ... on <date>'; Sold by private treaty 23 Sep 2026",
-      "sold_date": "2026-09-23"
+      "sold_date": "2026-09-23",
+      "status": "rejected",
+      "note": ""
     },
     {
       "address": "38/20 Pyrmont Bridge Road",
@@ -5116,7 +5118,9 @@
       },
       "warehouse_character": false,
       "status_checked_on": "2026-09-29",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "status": "rejected",
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/704-18-20-allen-street-pyrmont-nsw-2009-2020761520",
@@ -20468,8 +20472,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/15-rowntree-street-balmain-nsw-2041-2021204127"
     },
     {
       "address": "100 Silver Street",
@@ -20529,8 +20535,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/100-silver-street-marrickville-nsw-2204-2021204040"
     },
     {
       "address": "16/345-357 Illawarra Road",
@@ -20592,8 +20600,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/16-345-357-illawarra-road-marrickville-nsw-2204-2021203273"
     },
     {
       "address": "50 Hopetoun Street",
@@ -20655,8 +20665,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/50-hopetoun-street-camperdown-nsw-2050-2021202682"
     },
     {
       "address": "83 Darley Street",
@@ -20718,8 +20730,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/83-darley-street-newtown-nsw-2042-2021202585"
     },
     {
       "address": "2/104 Douglas Street",
@@ -20781,8 +20795,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/2-104-douglas-street-stanmore-nsw-2048-2021202314"
     },
     {
       "address": "93 Union Street",
@@ -20844,8 +20860,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/93-union-street-newtown-nsw-2042-2021201940"
     },
     {
       "address": "23/176-180 Salisbury Road",
@@ -20907,8 +20925,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/23-176-180-salisbury-road-camperdown-nsw-2050-2021201925"
     },
     {
       "address": "22 View Street",
@@ -20970,8 +20990,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/22-view-street-annandale-nsw-2038-2021201518"
     },
     {
       "address": "807/13 Joynton Avenue",
@@ -21033,8 +21055,10 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/807-13-joynton-avenue-zetland-nsw-2017-2021201336"
     },
     {
       "address": "1A Mandible Street",
@@ -21094,10 +21118,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.903437,
-      "lon": 151.2014564
+      "lon": 151.2014564,
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/7m-1a-mandible-street-alexandria-nsw-2015-2021201277"
     },
     {
       "address": "8/69 Tranmere Street",
@@ -21157,10 +21183,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.8539808,
-      "lon": 151.1522546
+      "lon": 151.1522546,
+      "flag_cleared_on": "2026-10-02",
+      "status_checked_on": "2026-10-02",
+      "resolved_url": "https://www.domain.com.au/8-69-tranmere-street-drummoyne-nsw-2047-2021179309"
     },
     {
       "address": "15/1 Buchanan Street",
@@ -21220,10 +21248,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.863035,
-      "lon": 151.1805091
+      "lon": 151.1805091,
+      "flag_cleared_on": "2026-10-02",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-02"
     },
     {
       "address": "109 Australia Street",
@@ -21283,10 +21313,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.8916957,
-      "lon": 151.176046
+      "lon": 151.176046,
+      "flag_cleared_on": "2026-10-02",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-02"
     },
     {
       "address": "101/383 Darling Street",
@@ -21346,10 +21378,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.8558435,
-      "lon": 151.1774258
+      "lon": 151.1774258,
+      "flag_cleared_on": "2026-10-02",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-02"
     },
     {
       "address": "2/7-9 Birchgrove Road",
@@ -21409,10 +21443,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.8554493,
-      "lon": 151.1758351
+      "lon": 151.1758351,
+      "flag_cleared_on": "2026-10-02",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-02"
     },
     {
       "address": "213/1 Sterling Circuit",
@@ -21470,10 +21506,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.8847302,
-      "lon": 151.1763092
+      "lon": 151.1763092,
+      "flag_cleared_on": "2026-10-02",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-02"
     },
     {
       "address": "3/65-69 Nelson Street",
@@ -21533,10 +21571,12 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-02",
-      "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "change_flag": "UNCHANGED",
       "lat": -33.8612817,
-      "lon": 151.1708761
+      "lon": 151.1708761,
+      "flag_cleared_on": "2026-10-02",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-02"
     }
   ]
 }

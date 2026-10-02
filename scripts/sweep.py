@@ -45,6 +45,7 @@ import argparse
 import datetime as dt
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -628,6 +629,62 @@ def merge_incremental(new_scored, prior_listings, today):
     return out
 
 
+_NOTE_ID_RE = re.compile(r"-(\d{7,})(?:[/?#]|$)")
+
+
+def _note_identity(url_or_key):
+    """Stable identities for a note key (a listing URL or 'address|suburb'):
+    the portal's numeric listing id (survives Domain/REA URL moves such as
+    /sold/) and a normalised street address (from a Domain search URL's
+    street= parameter, or the 'address|suburb' fallback key)."""
+    from urllib.parse import urlparse, parse_qs
+    ids = set()
+    k = url_or_key or ""
+    m = _NOTE_ID_RE.search(k)
+    if m:
+        ids.add("id:" + m.group(1))
+    if k.startswith("http"):
+        street = parse_qs(urlparse(k).query).get("street")
+        if street:
+            ids.add("addr:" + " ".join(street[0].lower().split()))
+    elif "|" in k:
+        ids.add("addr:" + " ".join(k.replace("|", " ").lower().split()))
+    return ids
+
+
+def _listing_identity(l):
+    ids = _note_identity(l.get("url") or "")
+    addr = " ".join(f"{l.get('address') or ''} {l.get('suburb') or ''}".lower().split())
+    if addr:
+        ids.add("addr:" + addr)
+    return ids
+
+
+def migrate_note_keys(listings, notes):
+    """Re-key orphaned notes onto their listing's current key. Notes are keyed
+    by listing URL, but the URL changes (search URL -> direct URL on
+    enrichment; REA moves to /sold/), which silently detached Adam's status
+    (e.g. a 'rejected' mark) from the listing. Returns True if notes changed.
+    Only moves a note when exactly one listing matches and that listing has
+    no note of its own, so nothing is ever overwritten."""
+    current = {listing_key(l) for l in listings}
+    by_ident = {}
+    for l in listings:
+        for i in _listing_identity(l):
+            by_ident.setdefault(i, set()).add(listing_key(l))
+    changed = False
+    for old_key in [k for k in notes if k not in current]:
+        targets = set()
+        for i in _note_identity(old_key):
+            targets |= by_ident.get(i, set())
+        if len(targets) == 1:
+            new_key = targets.pop()
+            if new_key not in notes:
+                notes[new_key] = notes.pop(old_key)
+                changed = True
+    return changed
+
+
 def carry_notes(listings, notes_path):
     if not os.path.exists(notes_path):
         return
@@ -636,6 +693,12 @@ def carry_notes(listings, notes_path):
             notes = json.loads(fh.read())
     except (ValueError, OSError):
         return
+    if isinstance(notes, dict) and migrate_note_keys(listings, notes):
+        try:
+            with open(notes_path, "w", encoding="utf-8") as fh:
+                json.dump(notes, fh, indent=2, ensure_ascii=False)
+        except OSError:
+            pass
     for l in listings:
         n = notes.get(listing_key(l))
         if n:

@@ -7,6 +7,52 @@ of how the code got to its current shape.
 
 ---
 
+## 2 October 2026 — "Rejected" now removes a listing from every list
+
+**Bug:** marking a listing *Status: rejected* in the drawer's "Your notes" only restyled its pill; `tabFilter` never looked at `status`, so rejected listings stayed in All candidates / Saturday / Auction / Sold tabs, and `render.py` kept them in the 07 tables.
+
+**Fixes**
+- `index.html` `tabFilter`: a `rejected` listing is excluded from every tab. It is visible only when the Status filter is explicitly set to "Rejected" (so a rejection can be reviewed or reversed).
+- `scripts/render.py`: rejected listings dropped from all 07 sections (passing, near-miss, hard-fail, departed); the summary line reports how many were omitted.
+- `scripts/sweep.py`: new `migrate_note_keys`, run inside `carry_notes`. Notes are keyed by listing URL, and URLs change (search URL → direct URL on enrichment; REA `/sold/` move), which silently detached notes. Orphaned notes are now re-keyed by portal listing id or normalised address (only on a unique match, never overwriting). This recovered two orphaned rejections (13/30 Ewart St Marrickville; 32/13-17 Stewart St Glebe). Backup: `data/notes.json.bak-20261002`.
+
+## 2 October 2026 — Email clean-up fixed: fetch by sender domain, trash everything swept
+
+**Report (Adam):** after a Refresh, Domain/REA emails were still in the Gmail
+inbox.
+
+**Diagnosis (checked against the live inbox).** The 1 Oct Trash step worked
+for what it was given — 24 alert emails from `noreply@domain.com.au` and
+`email@campaign.realestate.com.au` were in Trash. The 5 left in the inbox
+came from two addresses missing from the fixed `ALERT_SENDERS` list that the
+IMAP search used: `HomeAlert@replies.domain.com.au` (Domain off-market alerts,
+4 emails) and `domain@e.domain.com.au` (marketing, "What's selling around your
+property?", 1 email). They were never fetched, so never consumed, so never
+trashed. A second barrier: `DELETE_UNPARSED=False` kept any email yielding no
+record, which would have caught both kinds (the off-market alerts were for
+Summer Hill / Haymarket, outside the address parser's suburb list).
+
+**Fix (`gmail_fetch.py`, `serve.py`).**
+- IMAP search is now by sender *domain* (`FROM "domain.com.au"`, `FROM
+  "realestate.com.au"`), UIDs de-duplicated; the real From: domain is then
+  checked exactly by `_sender_domain_ok` (subdomains allowed, look-alikes
+  rejected).
+- Parsing is still restricted to known alert senders (`ALERT_SENDERS`, now incl.
+  `homealert@replies.domain.com.au`); each fetched email carries `ingest`, and
+  `/api/refresh` + the CLI parse only `ingestable(emails)`. Marketing mail is
+  never parsed — its "recently sold" text would otherwise read as a departure
+  notice and could flag tracked listings SOLD.
+- `DELETE_UNPARSED=True`: after listings.json is written, every fetched
+  Domain/REA email is moved to Trash. Zero-yield ones are logged (date, from,
+  subject, kind) to `data/email-cleanup-log.jsonl`; Gmail keeps Trash 30 days.
+- Defined the missing `ALERT_QUERY` (the OAuth path referenced it but it was
+  never defined).
+
+**Limits.** Fetch window remains 3 days: Domain/REA mail older than that is
+neither ingested nor trashed. `serve.py` must be restarted to load the change.
+
+---
+
 ## 1 October 2026 (pm) — NEW badge now expires after one further sweep
 
 **Report (Adam):** the "New" stamp stays on dashboard entries indefinitely; it

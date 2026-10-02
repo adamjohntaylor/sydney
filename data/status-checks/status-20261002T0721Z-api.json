@@ -1,0 +1,149 @@
+{
+  "generated_on": "2026-10-02",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15+rowntree+street+balmain",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/15-rowntree-street-balmain-nsw-2041-2021204127",
+      "address": "15 Rowntree Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=100+silver+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/100-silver-street-marrickville-nsw-2204-2021204040",
+      "address": "100 Silver Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F345-357+illawarra+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f345-357+illawarra+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/16-345-357-illawarra-road-marrickville-nsw-2204-2021203273",
+      "address": "16/345-357 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50+hopetoun+street+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/50-hopetoun-street-camperdown-nsw-2050-2021202682",
+      "address": "50 Hopetoun Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=83+darley+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/83-darley-street-newtown-nsw-2042-2021202585",
+      "address": "83 Darley Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F104+douglas+street+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2f104+douglas+street+stanmore",
+      "resolved_url": "https://www.domain.com.au/2-104-douglas-street-stanmore-nsw-2048-2021202314",
+      "address": "2/104 Douglas Street",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=93+union+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/93-union-street-newtown-nsw-2042-2021201940",
+      "address": "93 Union Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2F176-180+salisbury+road+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2f176-180+salisbury+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/23-176-180-salisbury-road-camperdown-nsw-2050-2021201925",
+      "address": "23/176-180 Salisbury Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=22+view+street+annandale",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/22-view-street-annandale-nsw-2038-2021201518",
+      "address": "22 View Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=807%2F13+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=807%2f13+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/807-13-joynton-avenue-zetland-nsw-2017-2021201336",
+      "address": "807/13 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1a+mandible+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/7m-1a-mandible-street-alexandria-nsw-2015-2021201277",
+      "address": "1A Mandible Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F69+tranmere+street+drummoyne",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f69+tranmere+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/8-69-tranmere-street-drummoyne-nsw-2047-2021179309",
+      "address": "8/69 Tranmere Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15%2F1+buchanan+street+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "15/1 Buchanan Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+australia+street+camperdown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "109 Australia Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=101%2F383+darling+street+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "101/383 Darling Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F7-9+birchgrove+road+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2/7-9 Birchgrove Road",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=213%2F1+sterling+circuit+camperdown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "213/1 Sterling Circuit",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F65-69+nelson+street+rozelle",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "3/65-69 Nelson Street",
+      "suburb": "Rozelle"
+    }
+  ]
+}

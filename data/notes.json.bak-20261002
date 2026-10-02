@@ -32,6 +32,11 @@
       "lift": true
     }
   },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F30+ewart+street+marrickville": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-06-22T13:15:01.984Z"
+  },
   "https://www.domain.com.au/sale/?excludeunderoffer=1&street=130+epsom+road+zetland": {
     "status": "interested",
     "note": "Median Price 825,000",
@@ -97,6 +102,15 @@
     "status": "",
     "note": "",
     "updated": "2026-06-24T21:20:45.517Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.realestate.com.au/property-unit-nsw-glebe-150824100": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-07-11T04:32:22.977Z",
     "accessibility": {
       "step_free": false,
       "lift": null
@@ -178,19 +192,5 @@
     "status": "rejected",
     "note": "",
     "updated": "2026-10-02T04:02:38.011Z"
-  },
-  "https://www.domain.com.au/13-30-ewart-street-marrickville-nsw-2204-2020921226": {
-    "status": "rejected",
-    "note": "",
-    "updated": "2026-06-22T13:15:01.984Z"
-  },
-  "https://www.realestate.com.au/sold/property-unit-nsw-glebe-150824100": {
-    "status": "rejected",
-    "note": "",
-    "updated": "2026-07-11T04:32:22.977Z",
-    "accessibility": {
-      "step_free": false,
-      "lift": null
-    }
   }
 }

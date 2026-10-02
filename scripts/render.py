@@ -62,8 +62,12 @@ def render(data):
     gen = data.get("generated_at_sydney") or data.get("generated_at") or "unknown date"
     # Departed stock (sold / under offer / withdrawn) never appears in the
     # candidate tables - it gets its own audit section at the end.
-    listings = [l for l in all_listings if l.get("change_flag") not in GONE_FLAGS]
-    departed = [l for l in all_listings if l.get("change_flag") in GONE_FLAGS]
+    # Listings Adam has marked "rejected" (dashboard drawer -> Your notes ->
+    # Status) are dropped from every list on this page, departed audit included.
+    rejected = [l for l in all_listings if l.get("status") == "rejected"]
+    kept = [l for l in all_listings if l.get("status") != "rejected"]
+    listings = [l for l in kept if l.get("change_flag") not in GONE_FLAGS]
+    departed = [l for l in kept if l.get("change_flag") in GONE_FLAGS]
     passing = [l for l in listings if l.get("tier1", {}).get("pass")]
     passing.sort(key=lambda l: l.get("tier2", {}).get("score", 0), reverse=True)
     near = [l for l in listings
@@ -90,7 +94,8 @@ def render(data):
              f"{len(passing)} pass all determinable Tier 1 criteria; "
              f"{c.get('new', 0)} new, {c.get('price_changed', 0)} price-changed. "
              f"Departed from the watchlist: {c.get('sold', 0)} sold, "
-             f"{c.get('under_offer', 0)} under offer, {c.get('withdrawn', 0)} withdrawn.")
+             f"{c.get('under_offer', 0)} under offer, {c.get('withdrawn', 0)} withdrawn. "
+             f"{len(rejected)} listing(s) marked rejected are omitted from all lists below.")
     L.append("")
 
     L.append("## Tier 1 passing candidates (ranked by Tier 2 score)")

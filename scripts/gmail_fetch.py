@@ -71,9 +71,19 @@ def rea_filter_enabled():
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
 # Alert senders to search for
+# INGEST senders: only mail from these exact addresses is PARSED for listings /
+# departures. (Domain/REA marketing mail - e.g. domain@e.domain.com.au "What's
+# selling around your property?" - is never parsed: its "recently sold" text
+# would otherwise be read as departure notices and could falsely flag tracked
+# listings SOLD.)  Added HomeAlert@replies.domain.com.au (Domain off-market
+# alerts) 2 Oct 2026.
 ALERT_SENDERS = ["noreply@domain.com.au", "noreply@realestate.com.au",
                  "alerts@domain.com.au", "alerts@realestate.com.au",
-                 "email@campaign.realestate.com.au"]
+                 "email@campaign.realestate.com.au",
+                 "homealert@replies.domain.com.au"]
+_INGEST_SET = {a.lower() for a in ALERT_SENDERS}
+# OAuth (Gmail API) search query - every mail from the two portals.
+ALERT_QUERY = "from:(domain.com.au OR realestate.com.au)"
 
 # --- Post-ingest clean-up (added 1 Oct 2026) ---------------------------------
 # Once the refresh / CLI run has written listings.json, the alert emails it
@@ -82,10 +92,14 @@ ALERT_SENDERS = ["noreply@domain.com.au", "noreply@realestate.com.au",
 # (or a subdomain, e.g. campaign.realestate.com.au) are ever touched.
 DELETE_AFTER_INGEST = True
 DELETE_SENDER_DOMAINS = ("domain.com.au", "realestate.com.au")
-# Safety: an email that yielded no listing or departure record is kept in the
-# inbox (a parser miss on a changed email template would otherwise be lost).
-# Set True to trash every fetched alert email regardless.
-DELETE_UNPARSED = False
+# Every fetched email from the two portals is trashed once listings.json is
+# written - including marketing mail and alerts that yielded no record (Adam's
+# instruction, 2 Oct 2026: once swept, Domain/REA mail must leave the inbox).
+# Safety net instead of keeping them: each zero-yield email trashed is logged
+# (date / from / subject) to data/email-cleanup-log.jsonl, and Gmail keeps
+# Trash for 30 days. Set False to keep zero-yield emails in the inbox.
+DELETE_UNPARSED = True
+CLEANUP_LOG_PATH = os.path.join(DATA, "email-cleanup-log.jsonl")
 
 
 def fetch_via_imap(days_back=3):
@@ -126,13 +140,21 @@ def fetch_via_imap(days_back=3):
     # Search for emails from alert senders in the date range
     since_date = (dt.datetime.now() - dt.timedelta(days=days_back)).strftime("%d-%b-%Y")
 
+    # Search by sender DOMAIN, not by a fixed address list: until 2 Oct 2026
+    # this searched only ALERT_SENDERS, so mail from any other Domain/REA
+    # address (HomeAlert@replies.domain.com.au off-market alerts,
+    # domain@e.domain.com.au marketing) was never fetched - and so never
+    # trashed. IMAP FROM is a substring match; _sender_domain_ok() then checks
+    # the real From: domain exactly.
     emails = []
-    for sender in ALERT_SENDERS:
-        search_query = f'(FROM "{sender}" SINCE {since_date})'
+    seen_uids = set()
+    for sender_dom in DELETE_SENDER_DOMAINS:
+        search_query = f'(FROM "{sender_dom}" SINCE {since_date})'
         print(f"Searching: {search_query}", file=sys.stderr)
 
         _, message_uids = mail.uid("search", None, search_query)
-        msg_uids = message_uids[0].split()
+        msg_uids = [u for u in message_uids[0].split() if u not in seen_uids]
+        seen_uids.update(msg_uids)
 
         for uid in msg_uids:
             _, msg_data = mail.uid("fetch", uid, "(RFC822)")
@@ -162,13 +184,17 @@ def fetch_via_imap(days_back=3):
                 if payload:
                     body = payload.decode("utf-8", errors="replace")
 
-            if body:
+            from_addr = email.utils.parseaddr(msg.get("From", ""))[1].lower()
+            if not _sender_domain_ok(from_addr):
+                continue   # substring false positive (e.g. notdomain.com.au)
+            if True:   # keep body-less mail too, so it is still cleaned up
                 emails.append({
                     "subject": subject,
                     "date": msg["Date"],
                     "body": body,
-                    "from": sender,
-                    "from_addr": email.utils.parseaddr(msg.get("From", ""))[1].lower(),
+                    "from": from_addr,
+                    "from_addr": from_addr,
+                    "ingest": from_addr in _INGEST_SET,
                     "uid": uid.decode() if isinstance(uid, bytes) else str(uid),
                     "uidvalidity": uidvalidity,
                 })
@@ -212,15 +238,43 @@ def select_consumed(emails, include_unparsed=None):
     Returns (to_trash, kept_unparsed)."""
     if include_unparsed is None:
         include_unparsed = DELETE_UNPARSED
-    to_trash, kept = [], []
+    to_trash, kept, zero_yield = [], [], []
     for em in emails or []:
         if not em.get("uid") or not _sender_domain_ok(em.get("from_addr")):
             continue
-        if include_unparsed or email_yield(em) > 0:
+        n = email_yield(em) if em.get("ingest", True) else 0
+        if n > 0:
             to_trash.append(em)
+        elif include_unparsed:
+            to_trash.append(em)
+            zero_yield.append(em)
         else:
             kept.append(em)
+    _log_zero_yield(zero_yield)
     return to_trash, kept
+
+
+def ingestable(emails):
+    """The subset of fetched emails that may be parsed for listings/departures
+    (known alert senders only - see ALERT_SENDERS)."""
+    return [em for em in emails or [] if em.get("ingest", True)]
+
+
+def _log_zero_yield(emails):
+    """Append one JSON line per zero-yield email about to be trashed."""
+    if not emails:
+        return
+    try:
+        stamp = dt.datetime.now().isoformat(timespec="seconds")
+        with open(CLEANUP_LOG_PATH, "a", encoding="utf-8") as fh:
+            for em in emails:
+                fh.write(json.dumps({
+                    "trashed_at": stamp, "date": em.get("date"),
+                    "from": em.get("from_addr"), "subject": em.get("subject"),
+                    "kind": "alert-no-records" if em.get("ingest") else "non-alert",
+                }, ensure_ascii=False) + "\n")
+    except OSError:
+        pass
 
 
 def _find_trash_mailbox(mail):
@@ -749,7 +803,7 @@ def main(argv):
         print("No alert emails found.", file=sys.stderr)
         return 0
 
-    listing_emails, departure_emails = split_emails(emails)
+    listing_emails, departure_emails = split_emails(ingestable(emails))
     print(f"{len(listing_emails)} new-listing emails, {len(departure_emails)} "
           f"sold/under-offer emails", file=sys.stderr)
 
@@ -783,7 +837,7 @@ def main(argv):
         to_trash, kept = select_consumed(emails)
         if args.dry_run:
             print(f"Dry run - would move {len(to_trash)} email(s) to Trash; "
-                  f"{len(kept)} unparsed kept", file=sys.stderr)
+                  f"{len(kept)} kept", file=sys.stderr)
         else:
             moved, err = trash_emails_imap(to_trash)
             if err:

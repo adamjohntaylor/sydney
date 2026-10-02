@@ -283,7 +283,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
                     emails = gmail_mod.fetch_via_imap(days_back=3)
                     fetched_emails = emails or []
                     if emails:
-                        listing_emails, departure_emails = gmail_mod.split_emails(emails)
+                        listing_emails, departure_emails = gmail_mod.split_emails(
+                            gmail_mod.ingestable(emails))
                         new_listings_raw = gmail_mod.parse_emails_for_listings(listing_emails)
                         departures = gmail_mod.parse_emails_for_departures(departure_emails)
                         if departure_emails:

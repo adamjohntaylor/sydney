@@ -285,6 +285,11 @@ function passesFilters(l){
 }
 
 function tabFilter(l){
+  // A listing Adam has marked "rejected" is out of every list (all tabs,
+  // including the departed tab). The only way to see rejected listings is to
+  // ask for them explicitly via the Status filter -> "Rejected", so a
+  // rejection can still be reviewed or reversed.
+  if(l.status==="rejected" && document.getElementById("fStatus").value!=="rejected") return false;
   if(TAB==="gone") return GONE_FLAGS.includes(l.change_flag);
   if(GONE_FLAGS.includes(l.change_flag)) return false;
   if(TAB==="saturday") return (l.tier1&&l.tier1.pass) && isThisSaturday(nextOpen(l));
