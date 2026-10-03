@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-02T07:21:58.651860+00:00",
-  "generated_at_sydney": "2026-10-02 17:21 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-03T06:25:37.122396+00:00",
+  "generated_at_sydney": "2026-10-03 16:25 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 112,
-    "tier1_pass": 107,
-    "new": 0,
-    "price_changed": 0,
+    "total": 123,
+    "tier1_pass": 118,
+    "new": 11,
+    "price_changed": 1,
     "sold": 154,
     "under_offer": 2,
-    "withdrawn": 42
+    "withdrawn": 44
   },
   "listings": [
     {
@@ -3554,9 +3554,9 @@
       "suburb": "Glebe",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe",
       "source": "domain_search",
-      "price_guide_text": "$1,450,000",
-      "price_min": 1450000,
-      "price_max": 1450000,
+      "price_guide_text": "$1,050,000",
+      "price_min": 1050000,
+      "price_max": 1050000,
       "lat": -33.8796857,
       "lon": 151.1941528,
       "catchments": {
@@ -3608,13 +3608,15 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-09-29",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_checked_on": "2026-09-29",
-      "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464",
+      "last_seen": "2026-10-03",
+      "prior_price_text": "$1,450,000",
+      "flag_sweeps": 0,
+      "change_flag": "PRICE_CHANGED",
       "status": "interested",
-      "note": ""
+      "days_on_market": 103,
+      "note": "",
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/705-2h-wentworth-park-road-glebe-nsw-2037-2020772884"
     },
     {
       "address": "04/222 Flood St Allen Street",
@@ -21577,6 +21579,853 @@
       "flag_cleared_on": "2026-10-02",
       "status_check_failures": 1,
       "status_checked_on": "2026-10-02"
+    },
+    {
+      "address": "29/13 Greek Street",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2F13+greek+street+glebe",
+      "source": "domain_search",
+      "lat": -33.8826638,
+      "lon": 151.193973,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 206,
+          "supermarket": 53,
+          "pool": 414,
+          "park": 161,
+          "restaurants": 94
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/29-13-greek-street-glebe-nsw-2037-2021205595"
+    },
+    {
+      "address": "8/1 Buchanan Street",
+      "suburb": "Balmain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F1+buchanan+street+balmain",
+      "source": "domain_search",
+      "price_guide_text": "$1,820,000",
+      "price_min": 1820000,
+      "price_max": 1820000,
+      "lat": -33.863035,
+      "lon": 151.1805091,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 374,
+          "supermarket": 533,
+          "pool": 305,
+          "park": 83,
+          "restaurants": 576
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "WITHDRAWN",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "departed_on": "2026-10-03",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f1+buchanan+street+balmain",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
+    },
+    {
+      "address": "11/19-23 Stewart Street",
+      "suburb": "Glebe",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2F19-23+stewart+street+glebe",
+      "source": "domain_search",
+      "price_guide_text": "$1,820,000",
+      "price_min": 1820000,
+      "price_max": 1820000,
+      "lat": -33.8728156,
+      "lon": 151.1832268,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 131,
+          "supermarket": 356,
+          "pool": 261,
+          "park": 61,
+          "restaurants": 210
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/11-19-23-stewart-street-glebe-nsw-2037-2021146619"
+    },
+    {
+      "address": "501/359 Illawarra Road",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=501%2F359+illawarra+road+marrickville",
+      "source": "domain_search",
+      "lat": -33.9135357,
+      "lon": 151.1543809,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 85,
+          "supermarket": 184,
+          "pool": 525,
+          "park": 142,
+          "restaurants": 42
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "WITHDRAWN",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "departed_on": "2026-10-03",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=501%2f359+illawarra+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
+    },
+    {
+      "address": "20/100 Reynolds Street",
+      "suburb": "Balmain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=20%2F100+reynolds+street+balmain",
+      "source": "domain_search",
+      "price_guide_text": "$1,820,000",
+      "price_min": 1820000,
+      "price_max": 1820000,
+      "lat": -33.8618455,
+      "lon": 151.1791496,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 220,
+          "supermarket": 361,
+          "pool": 185,
+          "park": 99,
+          "restaurants": 457
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/20-100-reynolds-street-balmain-nsw-2041-2021143270"
+    },
+    {
+      "address": "1A Lilydale Street",
+      "suburb": "Marrickville",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1a+lilydale+street+marrickville",
+      "source": "domain_search",
+      "price_guide_text": "$1,050,000",
+      "price_min": 1050000,
+      "price_max": 1050000,
+      "lat": -33.9086327,
+      "lon": 151.153724,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 85,
+          "supermarket": 324,
+          "pool": 219,
+          "park": 141,
+          "restaurants": 74
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/1a-lilydale-street-marrickville-nsw-2204-2021095684"
+    },
+    {
+      "address": "26 Flood Street",
+      "suburb": "Leichhardt",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26+flood+street+leichhardt",
+      "source": "domain_search",
+      "price_guide_text": "$1,500,000",
+      "price_min": 1500000,
+      "price_max": 1500000,
+      "lat": -33.888719,
+      "lon": 151.149013,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 129,
+          "supermarket": 403,
+          "pool": 442,
+          "park": 252,
+          "restaurants": 145
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/26-flood-street-leichhardt-nsw-2040-2021207380"
+    },
+    {
+      "address": "3/249 Johnston Street",
+      "suburb": "Annandale",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F249+johnston+street+annandale",
+      "source": "domain_search",
+      "price_guide_text": "$1,800,000",
+      "price_min": 1800000,
+      "price_max": 1800000,
+      "lat": -33.8753022,
+      "lon": 151.1739462,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 103,
+          "supermarket": 382,
+          "pool": 677,
+          "park": 298,
+          "restaurants": 208
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/3-249-johnston-street-annandale-nsw-2038-2021206905"
+    },
+    {
+      "address": "106 Cavendish Street",
+      "suburb": "Stanmore",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=106+cavendish+street+stanmore",
+      "source": "domain_search",
+      "lat": -33.8969358,
+      "lon": 151.1659614,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 329,
+          "supermarket": 271,
+          "pool": 941,
+          "park": 115,
+          "restaurants": 122
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-03",
+      "resolved_url": "https://www.domain.com.au/106-cavendish-street-stanmore-nsw-2048-2021175624"
+    },
+    {
+      "address": "42/49 Henderson Road",
+      "suburb": "Alexandria",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=42%2F49+henderson+road+alexandria",
+      "source": "domain_search",
+      "price_guide_text": "$950,000",
+      "price_min": 950000,
+      "price_max": 950000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 251,
+          "supermarket": 441,
+          "pool": 416,
+          "park": 133,
+          "restaurants": 58
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "lat": -33.8973388,
+      "lon": 151.1927013,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-03"
+    },
+    {
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "source": "domain_search",
+      "price_guide_text": "$950,000",
+      "price_min": 950000,
+      "price_max": 950000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 57,
+          "supermarket": 169,
+          "pool": 202,
+          "park": 72,
+          "restaurants": 45
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "lat": -33.9072907,
+      "lon": 151.2069994,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-03"
+    },
+    {
+      "address": "18/18 Wolseley Street",
+      "suburb": "Drummoyne",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=18%2F18+wolseley+street+drummoyne",
+      "source": "domain_search",
+      "price_guide_text": "$1,820,000",
+      "price_min": 1820000,
+      "price_max": 1820000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 210,
+          "supermarket": 557,
+          "pool": 448,
+          "park": 264,
+          "restaurants": 492
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "lat": -33.8460142,
+      "lon": 151.153956,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-03"
+    },
+    {
+      "address": "318/17 Grandstand Parade",
+      "suburb": "Zetland",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=318%2F17+grandstand+parade+zetland",
+      "source": "domain_search",
+      "price_guide_text": "$1,500,000",
+      "price_min": 1500000,
+      "price_max": 1500000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 124,
+          "supermarket": 74,
+          "pool": 172,
+          "park": 64,
+          "restaurants": 77
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-10-03",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "lat": -33.9076545,
+      "lon": 151.2085576,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-03"
     }
   ]
 }

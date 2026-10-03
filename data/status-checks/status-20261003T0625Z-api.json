@@ -1,0 +1,120 @@
+{
+  "generated_on": "2026-10-03",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 2 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/705-2h-wentworth-park-road-glebe-nsw-2037-2020772884",
+      "address": "2H Wentworth Park Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2F13+greek+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2f13+greek+street+glebe",
+      "resolved_url": "https://www.domain.com.au/29-13-greek-street-glebe-nsw-2037-2021205595",
+      "address": "29/13 Greek Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F1+buchanan+street+balmain",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f1+buchanan+street+balmain",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "8/1 Buchanan Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2F19-23+stewart+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f19-23+stewart+street+glebe",
+      "resolved_url": "https://www.domain.com.au/11-19-23-stewart-street-glebe-nsw-2037-2021146619",
+      "address": "11/19-23 Stewart Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=501%2F359+illawarra+road+marrickville",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=501%2f359+illawarra+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "501/359 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=20%2F100+reynolds+street+balmain",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=20%2f100+reynolds+street+balmain",
+      "resolved_url": "https://www.domain.com.au/20-100-reynolds-street-balmain-nsw-2041-2021143270",
+      "address": "20/100 Reynolds Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1a+lilydale+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/1a-lilydale-street-marrickville-nsw-2204-2021095684",
+      "address": "1A Lilydale Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26+flood+street+leichhardt",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/26-flood-street-leichhardt-nsw-2040-2021207380",
+      "address": "26 Flood Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F249+johnston+street+annandale",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f249+johnston+street+annandale",
+      "resolved_url": "https://www.domain.com.au/3-249-johnston-street-annandale-nsw-2038-2021206905",
+      "address": "3/249 Johnston Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=106+cavendish+street+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/106-cavendish-street-stanmore-nsw-2048-2021175624",
+      "address": "106 Cavendish Street",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=42%2F49+henderson+road+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "42/49 Henderson Road",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=18%2F18+wolseley+street+drummoyne",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "18/18 Wolseley Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=318%2F17+grandstand+parade+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "318/17 Grandstand Parade",
+      "suburb": "Zetland"
+    }
+  ]
+}
