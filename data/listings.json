@@ -6184,7 +6184,8 @@
       "parking": 1,
       "status_checked_on": "2026-10-04",
       "price_guide_text": "$2,225",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "area_checked_on": "2026-10-04"
     },
     {
       "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
