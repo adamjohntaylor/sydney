@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 116,
-    "tier1_pass": 111,
+    "tier1_pass": 110,
     "new": 11,
     "price_changed": 1,
     "sold": 158,
@@ -5121,15 +5121,15 @@
       "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
-      "cover_image": "https://rimh2.domainstatic.com.au/mySFP9banroRtfcabWuEMQUZbpg=/1680x720/filters:format(webp):quality(85)/2020693826_3_1_260319_012018-w6048-h4032",
+      "cover_image": "https://rimh2.domainstatic.com.au/HznK2uqNQVF1DqAwutbdCt6xneQ=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020693826_5_1_260319_012018-w6048-h4032",
       "beds": 2,
       "baths": 2,
       "parking": 1,
       "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionNorth-West Facing Apartment with Iconic Sunset Views-Currently leased at $1100.00 per week until May 2027Bathed in natural light, this north-west facing two-bedroom apartment delivers an exceptional inner-city lifestyle in one of Pyrmont's most desirable pockets. Enjoy striking sunset views over the Anzac Bridge, complemented by a vibrant surrounds of waterfront parks, chic cafés and renowned dining, all just moments from your door.• Light-filled interiors enhanced by quality finishes and timelessRead more",
-      "price_guide_text": "$1,100,000",
-      "price_min": 1200000,
-      "price_max": 1200000,
+      "description": "Property DescriptionNorth-West Facing Apartment with Iconic Sunset Views-Currently Leased at $1,100.00 per week until May 2027Bathed in natural light, this north-west facing two-bedroom apartment delivers an exceptional inner-city lifestyle in one of Pyrmont's most desirable pockets. Enjoy striking sunset views over the Anzac Bridge, complemented by a vibrant surrounds of waterfront parks, chic cafés and renowned dining, all just moments from your door.• Light-filled interiors enhanced by quality finishes and timelessRead more",
+      "price_guide_text": "$1,100,000 (hidden guide)",
+      "price_min": 1100000,
+      "price_max": 1100000,
       "source": "domain",
       "lat": -33.8701982,
       "lon": 151.1972076,
@@ -5157,24 +5157,25 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "floor_area": null,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "accessibility",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 74,
+        "score": 73,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
-          "living_area": 8.0,
+          "living_area": 7.5,
           "warehouse_character": 0,
           "light_aspect": 8.8,
           "pool": 9,
@@ -5186,7 +5187,11 @@
       },
       "warehouse_character": false,
       "status_checked_on": "2026-10-04",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "internal_m2": 86,
+      "land_m2": 107,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "area_checked_on": "2026-10-04"
     },
     {
       "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
@@ -6185,7 +6190,9 @@
       "status_checked_on": "2026-10-04",
       "price_guide_text": "$2,225",
       "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-04"
+      "area_checked_on": "2026-10-04",
+      "status": "rejected",
+      "note": ""
     },
     {
       "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",

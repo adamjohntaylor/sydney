@@ -192,5 +192,10 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-10-04T02:52:55.532Z"
   }
 }
