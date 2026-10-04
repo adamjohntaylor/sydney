@@ -4036,24 +4036,23 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "floor_area": null,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 45,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 11.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -4094,9 +4093,13 @@
       "lat": -33.915632,
       "lon": 151.1995559,
       "status_checked_on": "2026-10-04",
-      "price_guide_text": "$1,170,000",
+      "price_guide_text": "$1,170,000 to $1,200,000",
       "price_min": 1170000,
-      "price_max": 1170000
+      "price_max": 1170000,
+      "internal_m2": 102,
+      "land_m2": 102,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "area_checked_on": "2026-10-04"
     },
     {
       "address": "13/81-83 Bay Street",
@@ -5503,7 +5506,9 @@
       "status_checked_on": "2026-10-04",
       "price_min": 1220000,
       "price_max": 1220000,
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "status": "rejected",
+      "note": ""
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
@@ -6600,24 +6605,23 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "floor_area": null,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 68,
+        "score": 75,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
-          "living_area": 8.0,
+          "living_area": 14.3,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -6630,7 +6634,11 @@
       "warehouse_character": false,
       "status_checked_on": "2026-10-04",
       "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-04"
+      "area_checked_on": "2026-10-04",
+      "status": "",
+      "note": "",
+      "internal_m2": 110,
+      "area_basis": "manual: floor plan / agent (drawer)"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",

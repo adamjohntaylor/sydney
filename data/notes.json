@@ -202,5 +202,16 @@
     "status": "rejected",
     "note": "",
     "updated": "2026-10-04T02:53:34.293Z"
+  },
+  "https://www.domain.com.au/316-1-wattle-crescent-pyrmont-nsw-2009-2020910983": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-10-04T02:55:30.708Z"
+  },
+  "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-04T02:57:27.676Z",
+    "internal_m2": 110
   }
 }
