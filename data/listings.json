@@ -6538,7 +6538,7 @@
       "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
-      "cover_image": "https://i2.au.reastatic.net/800x600/bfd2ac1ad39745fab3001e00d440503d6a40618fab63a91552e52fbeb1e16792/image.jpg",
+      "cover_image": "https://i2.au.reastatic.net/800x600/4024067b910ca73b9b261aedb385f16de59f7e5436ecddbae8d3bf7007203ff0/image.jpg",
       "beds": 2,
       "baths": 2,
       "parking": 1,
@@ -6607,7 +6607,8 @@
       },
       "warehouse_character": false,
       "status_checked_on": "2026-10-04",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "area_checked_on": "2026-10-04"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
