@@ -2651,19 +2651,32 @@
       "days_on_market": 0,
       "lat": -33.9082667,
       "lon": 151.2049662,
-      "cover_image": "https://rimh2.domainstatic.com.au/Svt3uxt-5nJ3qW8GvBcmmBr6o1k=/1680x720/filters:format(webp):quality(85)/2020928513_1_1_260619_024912-w1500-h1000",
+      "cover_image": "https://rimh2.domainstatic.com.au/82PmNRw3QGHz1dZ9HuimB2sMgrk=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020928513_1_1_260619_024912-w1500-h1000",
       "beds": 2,
       "baths": 2,
       "parking": 2,
       "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionHigh-Floor North-Facing Residence with Oversized Balcony & Rare Double ParkingPositioned within the award-winning Uno development in the vibrant heart of Green Square Town Centre, this impressive high-floor two-bedroom residence delivers the perfect balance of space, natural light, and modern convenience.Situated on Level 8 with a prized north-facing aspect, the apartment enjoys abundant sunlight throughout the day and features an exceptionally large balcony, creating aRead m",
+      "description": "Property DescriptionHigh-Floor North-Facing Residence with Oversized Balcony & Rare Double ParkingPositioned within the award-winning Uno development in the vibrant heart of Green Square Town Centre, this impressive high-floor two-bedroom residence delivers the perfect balance of space, natural light, and modern convenience.Situated on Level 8 with a prized north-facing aspect, the apartment enjoys abundant sunlight throughout the day and features an exceptionally large balcony, creating aRead more",
       "status": "interested",
       "note": "",
       "accessibility": {
         "step_free": true,
         "lift": true
       },
-      "status_checked_on": "2026-10-04"
+      "status_checked_on": "2026-10-04",
+      "area_checked_on": "2026-10-04",
+      "features": [
+        "Balcony",
+        "Secure Parking",
+        "Broadband Internet Available",
+        "Built in wardrobes",
+        "Dishwasher",
+        "Floorboards",
+        "Intercom",
+        "Pay TV Access",
+        "Air conditioning",
+        "Ensuite"
+      ]
     },
     {
       "address": "63 Rofe Street",
@@ -5191,7 +5204,9 @@
       "internal_m2": 86,
       "land_m2": 107,
       "area_basis": "page data: building/floor area; page data: land area",
-      "area_checked_on": "2026-10-04"
+      "area_checked_on": "2026-10-04",
+      "status": "rejected",
+      "note": ""
     },
     {
       "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
