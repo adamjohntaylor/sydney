@@ -7,6 +7,86 @@ of how the code got to its current shape.
 
 ---
 
+## 4 October 2026 — Floor area now read from listing pages; Tier 1 gains "≥100 m² internal"
+
+**Problem (Adam):** the sweep was not surfacing square metreage. Diagnosis against
+`listings.json`: only 8 of 323 records (1 of 123 active) carried `internal_m2`,
+and 108 of the 123 active records had **no beds and no property type either**.
+Cause: they are alert-derived *search-URL* stubs (`domain_search`), and nothing in
+the automated path ever read their listing page for facts — the Verify run
+(`extension/content.js`) read market status and price only; the bookmarklet read
+area only from REA's data layer (nothing on Domain); `enrich.py`'s regex
+(`\d+ m² (internal|floor|living)`) matched none of the real page shapes and its
+scripted fetches are blocked regardless; `apply_status_checks` dropped any extra
+field a check carried. The 8 populated records all came from the June Claude
+harvest.
+
+**Where the figure actually lives (verified live in Chrome, 4 Oct 2026):**
+- Domain `1001/2 Cowper St, Glebe`: an analytics `"property":{…}` object near the
+  top of the page carries `"buildingsize":149` and `"internalArea":149`, with the
+  listing id ~300 chars before it; the id-keyed listing block further down holds
+  only `"landSize":0` (0 = not stated) — and the page embeds *other* listings'
+  blocks ("similar properties") with their own sizes, so an unscoped regex would
+  borrow a neighbour's figure. Visible: an unlabelled `149m²` feature chip
+  (`data-testid="property-features-feature"`) and the generated FAQ line "The
+  internal land size for … is 149m²". `buildingArea` / `landAreaSqm` exist but
+  were null.
+- REA `1306/21 Cadigal Ave, Pyrmont`: no size keys in the HTML at all; visible
+  `106m²` chip and the label "Building size: 106m²". JSON-LD `@type` is the
+  generic `Residence`; the URL slug (`/property-apartment-nsw-…`) names the type.
+
+**Fix — one shared reader, two hosts** (`readAreaFromPage` + `readFactsFromPage`,
+identical in `extension/content.js` and `enrich-bookmarklet.js`): page-data keys
+(`buildingsize|buildingSize|buildingArea|floorArea|internalArea|…`; land
+`landAreaSqm|landSize|landArea|lotSize`, zero rejected) accepted only when the
+listing id appears in the 2,000 chars before the match; JSON-LD
+`floorSize`/`lotSize`; labelled text either way round ("Internal: 128m²", "556m²
+of land", "Building size: 106m²", the Domain FAQ sentence); finally an unlabelled
+`NNNm²` chip ⇒ **internal for an apartment, land for a house, never internal for
+a house**. Ranges: internal 20–2,000, land 30–200,000. Output: `internal_m2`,
+`land_m2`, `area_basis` (which source), `area_checked` (we looked). Facts: beds /
+baths / parking / property type (REA slug first, then Domain's type element,
+then JSON-LD Apartment/House, then proximity-scoped page data, then aria-labels).
+15 fixture tests (`/tmp/test_reader.js` during the session) + both live pages green.
+
+- `extension/content.js`: every rendered listing page now reports the facts;
+  an on-market page with no area yet is re-read at 2.5 s / 5 s (late hydration).
+- `extension/background.js`: `stripCheck` forwards the new fields; for a
+  **search-count** record that is still for sale and has `needs_area`, the run
+  opens the resolved listing page too and merges its facts (a sold/under-offer
+  verdict there overrides the search count). Log line shows the m².
+- `scripts/sweep.py`: `apply_check_details` (area always wins, facts fill gaps,
+  `area_checked_on` stamped) called from `apply_status_checks`; counts as a
+  change so the server pushes. `build_status_worklist` adds **band 3 — floor
+  area never read** (bypasses the 7-day recheck skip; entries carry
+  `resolved_url`, `needs_area`, `property_type`). `_ENRICH_FIELDS` keeps
+  `land_m2` / `area_basis` / `area_checked_on` across re-ingests. `carry_notes`
+  applies a manual `internal_m2` from `notes.json` (authoritative, basis
+  "manual: floor plan / agent (drawer)"). Re-score after the status leg.
+- `scripts/serve.py`: `/api/apply-status` re-scores after applying;
+  `/api/enrich-listing` accepts `land_m2` / `area_basis` / `area_checked`.
+- `scripts/score.py`: **new Tier 1 criterion `floor_area`** — `internal_m2 ≥
+  MIN_INTERNAL_M2 (100)` ⇒ ✓, below ⇒ ✗ (and "T1 Fail!"), unknown ⇒ `?`
+  (unverified, never a silent fail); `_as_int` tolerates "111 m²" strings;
+  `land_m2` is ignored by design. Tier 2 living-area scale unchanged.
+- `index.html`: Tier 1 legend lists Floor area ≥100 m² and Bedrooms ≥2; mark
+  label `floor_area`; cards show `? m²` (hover = `area_basis`) and land
+  separately; drawer shows "internal area not yet read" and a new **Internal m²
+  (floor plan)** box beside Step-free/Lift (saved to notes, re-scored on save).
+- `enrich-submit.html`: shows internal / land area in the result.
+- Docs: `../02-location-and-property-criteria.md` (new Floor area row),
+  `../05-decision-log.md` (#31), `RUNBOOK.md`, `extension/README.md`.
+
+**State after re-score (4 Oct 2026):** 123 active / 118 Tier-1 pass (unchanged —
+unknown never fails); `floor_area`: 1 ✓, 122 `?`. Worklist: 122 pending, all
+"floor area not yet read". **Action for Adam:** reload the unpacked extension
+(`chrome://extensions` → ↻) and run **Verify** with the page count set to 300
+once; each unread record costs one extra page load (~2 × 1.5 s delay), so expect
+~20–25 min for the backlog. Re-generate the bookmarklet from
+`localhost:8777/bookmarklet` (it inlines the current script).
+
+---
+
 ## 2 October 2026 — "Rejected" now removes a listing from every list
 
 **Bug:** marking a listing *Status: rejected* in the drawer's "Your notes" only restyled its pill; `tabFilter` never looked at `status`, so rejected listings stayed in All candidates / Saturday / Auction / Sold tabs, and `render.py` kept them in the 07 tables.

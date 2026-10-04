@@ -191,7 +191,9 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
          or passed in - either way the page will now say)
       1  every recorded open home is in the past and none newer has arrived
       2  no sighting (alert / page read / status check) for > recheck_days
-      3  everything else (only when include_all=True)
+      3  floor area never read from the listing page (needs_area) - the
+         Verify run opens the listing page and reads internal_m2 etc.
+      4  everything else (only when include_all=True)
     Within a band, the longest-unsighted first. A listing verified within
     recheck_days is skipped so successive sweeps walk through the backlog
     instead of re-reading the same pages."""
@@ -202,7 +204,8 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
         if not l.get("url"):
             continue
         checked = _days_since(l.get("status_checked_on"), today)
-        if checked is not None and checked < recheck_days:
+        needs_area = not l.get("internal_m2") and not l.get("area_checked_on")
+        if checked is not None and checked < recheck_days and not needs_area:
             continue
         seen_days = _days_since(l.get("last_seen"), today)
         if seen_days is None:
@@ -216,10 +219,12 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
             tday = _parse_date(today)
             if ohs and tday and max(ohs) < tday:
                 priority, reason = 1, f"last open home {max(ohs).isoformat()} has passed"
-            elif seen_days > recheck_days:
+            elif seen_days > recheck_days and not (checked is not None and checked < recheck_days):
                 priority, reason = 2, f"not sighted for {seen_days} days"
+            elif needs_area:
+                priority, reason = 3, "floor area not yet read from the listing page"
             elif include_all:
-                priority, reason = 3, "routine re-verification"
+                priority, reason = 4, "routine re-verification"
         if priority is None:
             continue
         work.append({
@@ -233,6 +238,9 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
             "priority": priority,
             "reason": reason,
             "inconclusive_checks": int(l.get("status_check_failures") or 0),
+            "resolved_url": l.get("resolved_url"),
+            "needs_area": needs_area,
+            "property_type": l.get("property_type"),
         })
     work.sort(key=lambda w: (w["priority"], -(_days_since(w["last_seen"], today) or 10 ** 6)))
     return work[:cap] if cap else work
@@ -251,6 +259,49 @@ def normalise_check_status(raw):
     if s in ("on_market", "for_sale", "active", "live", "listed"):
         return "on_market"
     return "inconclusive"
+
+
+# Listing facts a page read may report alongside the market status. The Verify
+# run (extension/content.js) reads them off the listing page itself; most alert-
+# derived records are search-URL stubs that otherwise never learn them.
+_CHECK_DETAIL_FIELDS = ("internal_m2", "land_m2", "beds", "baths", "parking", "property_type")
+
+
+def _coerce_int(v):
+    if v is None or isinstance(v, bool):
+        return None
+    try:
+        return int(float(v))
+    except (TypeError, ValueError):
+        return None
+
+
+def apply_check_details(target, chk, today):
+    """Merge listing facts carried by a status check into the tracked record.
+    Area figures from the page always win (the page is the freshest evidence);
+    beds/baths/parking/type only fill gaps. Stamps area_checked_on whenever the
+    reader looked for an area (found or not) so the worklist stops re-asking.
+    Returns a list of "field: old->new" strings for the audit details."""
+    out = []
+    for f in ("internal_m2", "land_m2"):
+        n = _coerce_int(chk.get(f))
+        if n and n > 0 and target.get(f) != n:
+            out.append(f"{f}: {target.get(f)}->{n}")
+            target[f] = n
+    if chk.get("area_basis") and (chk.get("internal_m2") or chk.get("land_m2")):
+        target["area_basis"] = chk["area_basis"]
+    for f in ("beds", "baths", "parking"):
+        n = _coerce_int(chk.get(f))
+        if n is not None and target.get(f) is None:
+            target[f] = n
+            out.append(f"{f}: ->{n}")
+    pt = (chk.get("property_type") or "").strip()
+    if pt and not (target.get("property_type") or "").strip():
+        target["property_type"] = pt.lower()
+        out.append(f"property_type: ->{pt.lower()}")
+    if chk.get("area_checked"):
+        target["area_checked_on"] = today
+    return out
 
 
 def apply_status_checks(checks, listings, today, source=STATUS_SOURCE_CHECK):
@@ -319,6 +370,10 @@ def apply_status_checks(checks, listings, today, source=STATUS_SOURCE_CHECK):
         target.pop("status_check_failures", None)
         target.pop("needs_manual_check", None)
         target["status_checked_on"] = today
+        det = apply_check_details(target, chk, today)
+        if det:
+            changed += 1
+            details.append(f"details {url}: " + ", ".join(det))
 
         if status == "on_market":
             target["last_seen"] = today
@@ -486,7 +541,8 @@ def _has_price_number(rec):
 # alert must not blank them out on an already-enriched listing.
 _ENRICH_FIELDS = (
     "cover_image", "beds", "baths", "parking", "property_type",
-    "description", "features", "floor", "internal_m2",
+    "description", "features", "floor", "internal_m2", "land_m2", "area_basis",
+    "area_checked_on",
 )
 
 
@@ -712,6 +768,13 @@ def carry_notes(listings, notes_path):
             if isinstance(acc, dict) and (acc.get("step_free") is not None
                                           or acc.get("lift") is not None):
                 l["accessibility"] = acc
+            # Adam's manual internal-area figure (floor plan / agent) - authoritative
+            # over anything the page reader found; feeds the Tier 1 floor_area mark.
+            m2 = _coerce_int(n.get("internal_m2"))
+            if m2 and m2 > 0:
+                l["internal_m2"] = m2
+                l["area_basis"] = "manual: floor plan / agent (drawer)"
+                l["area_checked_on"] = l.get("area_checked_on") or n.get("updated", "")[:10] or None
 
 
 def is_empty_listing(l):
@@ -881,6 +944,11 @@ def main(argv):
         print("Status verification:", file=sys.stderr)
         for d in status_details:
             print("  " + d, file=sys.stderr)
+    if status_changed:
+        # A check may have supplied floor area / beds etc. - re-score so the
+        # Tier 1 marks reflect them (scoring in (1) ran before the checks).
+        for l in pool:
+            score_mod.score_listing(l, amenities)
     # A record newly flagged gone in `active` must be kept (all_listings below
     # filters `carried` by GONE_FLAGS but keeps every `active` record), and a
     # carried record revived to on-market must move back into `active`.

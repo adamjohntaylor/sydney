@@ -658,6 +658,12 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 target["description"] = item["description"]
             if item.get("internal_m2"):
                 target["internal_m2"] = item["internal_m2"]
+            if item.get("land_m2"):
+                target["land_m2"] = item["land_m2"]
+            if item.get("area_basis") and (item.get("internal_m2") or item.get("land_m2")):
+                target["area_basis"] = item["area_basis"]
+            if item.get("area_checked"):
+                target["area_checked_on"] = sweep_mod.now_sydney().date().isoformat()
             if item.get("features"):
                 target["features"] = item["features"]
             if item.get("floor") is not None:
@@ -1017,6 +1023,15 @@ this page and re-drag the button (the code is baked into the link, so it does no
             syd = sweep_mod.now_sydney()
             today = syd.date().isoformat()
             changed, details = sweep_mod.apply_status_checks(checks, listings, today)
+            if changed:
+                # Checks can carry floor area / beds read off the listing page:
+                # re-score so the Tier 1 marks (incl. floor_area >= 100 m²) resolve.
+                if os.path.exists(OSM_PATH):
+                    amenities = score_mod.load_amenities(OSM_PATH)
+                else:
+                    amenities = {c: [] for c in score_mod.CATCHMENT_CLASSES}
+                for l in listings:
+                    score_mod.score_listing(l, amenities)
             skipped = sum(1 for d in details if d.startswith(("unmatched", "not checked")))
             matched = len(checks) - skipped
             if not matched:

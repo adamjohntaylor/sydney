@@ -49,6 +49,8 @@ if (!dataStr) {
         ${field('Baths', data.baths)}
         ${field('Parking', data.parking)}
         ${field('Property Type', data.property_type)}
+        ${field('Internal area', data.internal_m2 ? data.internal_m2 + ' m²' : null)}
+        ${field('Land area', data.land_m2 ? data.land_m2 + ' m²' : null)}
         ${field('Cover Image', data.cover_image ? 'Yes' : null)}
       </div>
       <p style="color:#666; font-size:12px;">Saving...</p>
@@ -119,6 +121,8 @@ if (!dataStr) {
               ${field('Baths', data.baths)}
               ${field('Parking', data.parking)}
               ${field('Property Type', data.property_type)}
+              ${field('Internal area', data.internal_m2 ? data.internal_m2 + ' m²' : null)}
+              ${field('Land area', data.land_m2 ? data.land_m2 + ' m²' : null)}
               ${field('Cover Image', data.cover_image ? 'Yes' : null)}
             </div>
             ${marketLine}

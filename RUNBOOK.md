@@ -93,6 +93,7 @@ is a self-contained Claude prompt that does exactly this.
    `zoning` via `zoning.parse_zoning(...)`. E3/E4 ⇒ Tier 1 fail.
 7. Write `dashboard/data/harvest-YYYYMMDD.json`:
    `{"generated_at_sydney": "...", "sweep_provenance": "...", "listings": [ ... ]}`.
+   `internal_m2` is **internal/floor** area only; put a land figure in `land_m2`.
 8. **Verify market status of existing stock (mandatory, every sweep — added
    29 Sep 2026).** Alerts are new-only, so nothing above can discover that a
    listing already on the watchlist has sold or been pulled. **The reader is
@@ -246,8 +247,32 @@ budget ≤ $2.2M · property type (apartment, warehouse-conversion, OR freestand
 house/cottage/semi/terrace/townhouse — decision #28 lifted the ≤2BR-cottage cap;
 raw shells excluded; type label matched by token, so "apartment / unit / flat"
 resolves) · step-free + lift · beds **≥2 for all types** (decision #28; 3 preferred
-for apartments) · transport ≤1.5km · daily supplies ≤1.5km · in target area ·
-zoning E1/E2/MU1 for warehouse stock.
+for apartments) · **floor area ≥100 m² internal** (decision #31, 4 Oct 2026; land
+area never counts — kept apart as `land_m2`; unknown → `?`) · transport ≤1.5km ·
+daily supplies ≤1.5km · in target area · zoning E1/E2/MU1 for warehouse stock.
+
+**Floor area** (`internal_m2`) resolves in priority order:
+
+1. **Manual figure** — the "Internal m² (floor plan)" box in the drawer (saved to
+   `notes.json`, applied by `carry_notes` before scoring). Authoritative.
+2. **Listing page read** — the Chrome extension's **Verify** run and the enrichment
+   bookmarklet share one reader (`readAreaFromPage` in `extension/content.js` /
+   `enrich-bookmarklet.js`): Domain's page data (`buildingsize` / `internalArea`,
+   accepted only when this listing's id sits within the preceding 2,000 chars, so a
+   "similar listing" block is never borrowed; `landSize` for land), JSON-LD
+   `floorSize`/`lotSize`, labelled text (REA's "Building size: 106m²", Domain's
+   "The internal land size for … is 149m²"), then an unlabelled "NNNm²" chip —
+   internal for an apartment, land for a house. `area_basis` records which
+   source answered; `area_checked_on` records that the page was looked at.
+3. Nothing stated → `?` (never a silent fail).
+
+Most of the watchlist arrives as alert-derived *search* URLs that carry no facts,
+so the Verify run now also opens the **resolved listing page** of any record
+whose area has never been read (`needs_area` in the worklist, band 3) and posts
+`internal_m2` / `land_m2` / beds / baths / parking / property type with the
+status; `apply_status_checks` merges them and the server re-scores. Run Verify
+with the page count raised (e.g. 300) once to backfill the backlog (122 records
+at adoption on 4 Oct 2026); afterwards each sweep picks up the new arrivals.
 
 **Step-free / lift** resolves in priority order (`score._auto_accessibility`):
 

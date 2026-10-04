@@ -26,6 +26,12 @@ says **Sold / Under offer / no longer available** is reported to the dashboard
 (only departures — live pages are never posted from casual browsing).
 
 ## What it reads
+- Every rendered listing page also yields the **facts** the watchlist lacks:
+  internal floor area (`internal_m2`, Tier 1 needs ≥100 m²), land area
+  (`land_m2`, kept separate), beds / baths / parking and property type. For a
+  search-URL record that is still for sale and has never had its area read, the
+  Verify run opens the resolved listing page too (one extra page per record,
+  once). `area_basis` in the record says which page source answered.
 - Domain listing page: title `Sold <address> on <date>` ⇒ sold; "Under offer"
   badge ⇒ under offer; "no longer available" / page not found / redirect away
   from the listing id ⇒ withdrawn; otherwise on market (price refreshed).

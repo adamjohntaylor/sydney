@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-03T06:25:37.122396+00:00",
-  "generated_at_sydney": "2026-10-03 16:25 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-03T23:53:26.111120+00:00",
+  "generated_at_sydney": "2026-10-04 09:53 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
@@ -60,6 +60,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -159,6 +160,7 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -241,6 +243,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -339,6 +342,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -425,6 +429,7 @@
         "property_type": true,
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -510,6 +515,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -618,13 +624,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -699,6 +707,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -789,12 +798,15 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -872,6 +884,7 @@
         "property_type": true,
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -938,13 +951,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -1004,6 +1019,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1011,7 +1027,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -1078,13 +1096,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -1147,13 +1167,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -1223,6 +1245,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1230,7 +1253,8 @@
         "fails": [],
         "unverified": [
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -1296,12 +1320,15 @@
         "accessibility_basis": "ground / street level",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -1370,6 +1397,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": false,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1378,7 +1406,8 @@
           "bedrooms"
         ],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -1449,12 +1478,15 @@
         "accessibility_basis": "single-level / level-entry",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -1516,6 +1548,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1523,7 +1556,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -1595,6 +1630,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": false,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1603,7 +1639,8 @@
           "bedrooms"
         ],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -1669,6 +1706,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": false,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1677,7 +1715,8 @@
           "bedrooms"
         ],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -1747,13 +1786,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -1817,6 +1858,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1824,7 +1866,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -1898,13 +1942,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -1974,6 +2020,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": false,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -1982,7 +2029,8 @@
           "bedrooms"
         ],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -2048,6 +2096,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -2055,7 +2104,8 @@
         "fails": [],
         "unverified": [
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2118,13 +2168,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2192,13 +2244,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2268,6 +2322,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": false,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -2277,7 +2332,8 @@
         ],
         "unverified": [
           "property_type",
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -2343,6 +2399,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -2351,7 +2408,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2406,13 +2464,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2484,13 +2544,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2556,12 +2618,15 @@
         "property_type": true,
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -2628,13 +2693,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2714,6 +2781,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -2722,7 +2790,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2784,6 +2853,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -2792,7 +2862,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2854,6 +2925,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -2862,7 +2934,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2924,6 +2997,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -2932,7 +3006,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -2994,13 +3069,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3072,6 +3149,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3080,7 +3158,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3142,6 +3221,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3149,7 +3229,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -3220,13 +3302,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3290,6 +3374,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3298,7 +3383,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3355,13 +3441,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3444,6 +3532,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3452,7 +3541,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3509,6 +3599,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3517,7 +3608,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3579,6 +3671,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3587,7 +3680,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3645,6 +3739,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3654,7 +3749,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3712,6 +3808,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3721,7 +3818,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3782,12 +3880,15 @@
         "accessibility_basis": "single-level / level-entry",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -3855,6 +3956,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -3863,7 +3965,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -3920,13 +4023,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4005,6 +4110,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4014,7 +4120,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4076,6 +4183,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": false,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4085,7 +4193,8 @@
         ],
         "unverified": [
           "property_type",
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -4146,6 +4255,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4154,7 +4264,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4216,6 +4327,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4224,7 +4336,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4282,6 +4395,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4291,7 +4405,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4353,6 +4468,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4361,7 +4477,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4420,6 +4537,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4429,7 +4547,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4487,6 +4606,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4496,7 +4616,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4558,6 +4679,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4566,7 +4688,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4628,6 +4751,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4636,7 +4760,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4698,6 +4823,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4706,7 +4832,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4770,6 +4897,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4778,7 +4906,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -4853,6 +4982,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -4861,7 +4991,8 @@
           "budget"
         ],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -4948,12 +5079,15 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -5023,13 +5157,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5093,13 +5229,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5169,13 +5307,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5240,13 +5380,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5310,13 +5452,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5395,12 +5539,15 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -5487,6 +5634,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5494,7 +5642,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -5579,13 +5729,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5656,6 +5808,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5663,7 +5816,8 @@
         "fails": [],
         "unverified": [
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5735,6 +5889,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5742,7 +5897,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -5820,6 +5977,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5827,7 +5985,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -5910,13 +6070,15 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -5988,13 +6150,15 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget"
+          "budget",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6065,6 +6229,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6073,7 +6238,8 @@
           "accessibility"
         ],
         "unverified": [
-          "budget"
+          "budget",
+          "floor_area"
         ],
         "pass": false
       },
@@ -6147,6 +6313,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6154,7 +6321,8 @@
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6239,12 +6407,15 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": true,
         "fails": [],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": true
       },
       "tier2": {
@@ -6320,13 +6491,15 @@
         "accessibility_basis": "lift in features list",
         "accessibility": true,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget"
+          "budget",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6403,13 +6576,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6481,13 +6656,15 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6537,6 +6714,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6546,7 +6724,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6603,6 +6782,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6612,7 +6792,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6673,6 +6854,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6681,7 +6863,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6742,6 +6925,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6750,7 +6934,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6810,6 +6995,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6818,7 +7004,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6878,6 +7065,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6886,7 +7074,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -6946,6 +7135,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -6954,7 +7144,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7014,6 +7205,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7022,7 +7214,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7084,6 +7277,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7092,7 +7286,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7154,6 +7349,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7162,7 +7358,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7223,6 +7420,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7231,7 +7429,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7292,6 +7491,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7300,7 +7500,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7374,6 +7575,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7381,7 +7583,9 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [],
+        "unverified": [
+          "floor_area"
+        ],
         "pass": false
       },
       "tier2": {
@@ -7442,6 +7646,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7451,7 +7656,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7512,6 +7718,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7520,7 +7727,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7580,6 +7788,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7588,7 +7797,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7653,6 +7863,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7661,7 +7872,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7719,6 +7931,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7728,7 +7941,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7785,6 +7999,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7793,7 +8008,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7850,6 +8066,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7858,7 +8075,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7920,6 +8138,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7928,7 +8147,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -7990,6 +8210,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -7998,7 +8219,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8056,6 +8278,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8065,7 +8288,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8127,6 +8351,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8135,7 +8360,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8189,6 +8415,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8198,7 +8425,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8260,6 +8488,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8268,7 +8497,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8329,6 +8559,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8337,7 +8568,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8395,6 +8627,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8404,7 +8637,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8462,6 +8696,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8471,7 +8706,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8525,6 +8761,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8534,7 +8771,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8593,6 +8831,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8602,7 +8841,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8664,6 +8904,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8672,7 +8913,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8734,6 +8976,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8742,7 +8985,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8801,6 +9045,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8809,7 +9054,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8871,6 +9117,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8879,7 +9126,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -8940,6 +9188,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -8948,7 +9197,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9005,6 +9255,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9013,7 +9264,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9072,6 +9324,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9081,7 +9334,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9140,6 +9394,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9149,7 +9404,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9210,6 +9466,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9218,7 +9475,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9279,6 +9537,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9287,7 +9546,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9348,6 +9608,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9356,7 +9617,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9416,6 +9678,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9424,7 +9687,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9486,6 +9750,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9494,7 +9759,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9553,6 +9819,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9562,7 +9829,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9621,6 +9889,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9630,7 +9899,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9692,6 +9962,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9700,7 +9971,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9759,6 +10031,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9768,7 +10041,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9829,6 +10103,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9837,7 +10112,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9898,6 +10174,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9906,7 +10183,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -9963,6 +10241,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -9971,7 +10250,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10031,6 +10311,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10039,7 +10320,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10102,6 +10384,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10110,7 +10393,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10172,6 +10456,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10180,7 +10465,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10242,6 +10528,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10250,7 +10537,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10311,6 +10599,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10319,7 +10608,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10380,6 +10670,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10388,7 +10679,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10445,6 +10737,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10453,7 +10746,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10514,6 +10808,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10522,7 +10817,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10580,6 +10876,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10589,7 +10886,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10651,6 +10949,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10659,7 +10958,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10717,6 +11017,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10726,7 +11027,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10783,6 +11085,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10791,7 +11094,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10852,6 +11156,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10860,7 +11165,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10920,6 +11226,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10928,7 +11235,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -10989,6 +11297,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -10997,7 +11306,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11057,6 +11367,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11065,7 +11376,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11128,6 +11440,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11136,7 +11449,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11195,6 +11509,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11203,7 +11518,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11259,6 +11575,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11268,7 +11585,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11325,6 +11643,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11334,7 +11653,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11388,6 +11708,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11397,7 +11718,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11457,6 +11779,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11465,7 +11788,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11525,6 +11849,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11533,7 +11858,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11594,6 +11920,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11602,7 +11929,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11661,6 +11989,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11669,7 +11998,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11727,6 +12057,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11736,7 +12067,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11795,6 +12127,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11803,7 +12136,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11863,6 +12197,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11872,7 +12207,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11928,6 +12264,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11937,7 +12274,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -11994,6 +12332,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12002,7 +12341,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12062,6 +12402,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12070,7 +12411,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12131,6 +12473,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12139,7 +12482,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12197,6 +12541,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12206,7 +12551,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12262,6 +12608,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12271,7 +12618,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12332,6 +12680,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12340,7 +12689,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12398,6 +12748,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12407,7 +12758,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12465,6 +12817,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12474,7 +12827,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12532,6 +12886,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12541,7 +12896,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12597,6 +12953,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12606,7 +12963,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12667,6 +13025,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12675,7 +13034,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12735,6 +13095,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12743,7 +13104,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12797,6 +13159,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12806,7 +13169,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12864,6 +13228,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12873,7 +13238,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -12931,6 +13297,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -12940,7 +13307,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13000,6 +13368,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13008,7 +13377,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13067,6 +13437,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13075,7 +13446,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13135,6 +13507,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13143,7 +13516,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13200,6 +13574,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13208,7 +13583,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13269,6 +13645,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13277,7 +13654,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13339,6 +13717,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13347,7 +13726,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13405,6 +13785,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13414,7 +13795,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13468,6 +13850,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13476,7 +13859,8 @@
         "unverified": [
           "budget",
           "property_type",
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13540,6 +13924,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13548,7 +13933,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13607,6 +13993,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13615,7 +14002,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13679,6 +14067,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13687,7 +14076,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13746,6 +14136,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13754,7 +14145,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13811,6 +14203,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13819,7 +14212,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13876,6 +14270,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13884,7 +14279,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -13941,6 +14337,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -13949,7 +14346,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14010,6 +14408,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14018,7 +14417,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14075,6 +14475,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14083,7 +14484,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14144,6 +14546,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14152,7 +14555,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14213,6 +14617,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14221,7 +14626,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14282,6 +14688,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14290,7 +14697,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14352,6 +14760,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14360,7 +14769,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14422,6 +14832,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14430,7 +14841,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14485,6 +14897,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14493,7 +14906,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14554,6 +14968,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14562,7 +14977,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14624,6 +15040,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14632,7 +15049,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14694,6 +15112,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14702,7 +15121,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14761,6 +15181,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14770,7 +15191,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14832,6 +15254,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14840,7 +15263,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14899,6 +15323,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14908,7 +15333,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -14966,6 +15392,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -14975,7 +15402,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15036,6 +15464,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15044,7 +15473,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15106,6 +15536,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15114,7 +15545,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15176,6 +15608,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15184,7 +15617,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15244,6 +15678,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15252,7 +15687,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15314,6 +15750,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15322,7 +15759,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15383,6 +15821,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15391,7 +15830,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15452,6 +15892,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15460,7 +15901,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15518,6 +15960,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15527,7 +15970,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15585,6 +16029,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15594,7 +16039,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15652,6 +16098,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15661,7 +16108,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15719,6 +16167,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15728,7 +16177,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15787,6 +16237,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15796,7 +16247,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15850,6 +16302,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15859,7 +16312,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15913,6 +16367,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15922,7 +16377,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -15976,6 +16432,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -15985,7 +16442,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16043,6 +16501,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16052,7 +16511,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16111,6 +16571,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16120,7 +16581,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16181,6 +16643,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16189,7 +16652,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16248,6 +16712,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16256,7 +16721,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16317,6 +16783,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16325,7 +16792,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16387,6 +16855,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": true,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16394,7 +16863,8 @@
         "fails": [],
         "unverified": [
           "property_type",
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16459,6 +16929,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16467,7 +16938,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16524,6 +16996,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16532,7 +17005,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16611,6 +17085,7 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": false,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16620,7 +17095,8 @@
         ],
         "unverified": [
           "budget",
-          "accessibility"
+          "accessibility",
+          "floor_area"
         ],
         "pass": false
       },
@@ -16676,6 +17152,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16684,7 +17161,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16738,6 +17216,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16747,7 +17226,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16805,6 +17285,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16814,7 +17295,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16868,6 +17350,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16877,7 +17360,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -16936,6 +17420,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -16945,7 +17430,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17002,6 +17488,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17010,7 +17497,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17071,6 +17559,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17079,7 +17568,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17133,6 +17623,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17142,7 +17633,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17196,6 +17688,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17205,7 +17698,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17262,6 +17756,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17271,7 +17766,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17327,6 +17823,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17336,7 +17833,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17393,6 +17891,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17401,7 +17900,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17458,6 +17958,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17466,7 +17967,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17527,6 +18029,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17535,7 +18038,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17592,6 +18096,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17600,7 +18105,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17657,6 +18163,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17665,7 +18172,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17719,6 +18227,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17728,7 +18237,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17785,6 +18295,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17793,7 +18304,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17850,6 +18362,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17858,7 +18371,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17915,6 +18429,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17923,7 +18438,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -17980,6 +18496,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17988,7 +18505,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18045,6 +18563,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18053,7 +18572,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18108,6 +18628,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18116,7 +18637,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18173,6 +18695,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18181,7 +18704,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18241,6 +18765,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18249,7 +18774,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18306,6 +18832,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18314,7 +18841,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18371,6 +18899,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18379,7 +18908,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18436,6 +18966,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18444,7 +18975,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18498,6 +19030,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18507,7 +19040,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18564,6 +19098,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18572,7 +19107,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18626,6 +19162,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18635,7 +19172,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18692,6 +19230,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18700,7 +19239,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18757,6 +19297,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18765,7 +19306,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18822,6 +19364,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18830,7 +19373,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18887,6 +19431,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18895,7 +19440,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -18952,6 +19498,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18960,7 +19507,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19017,6 +19565,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19025,7 +19574,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19082,6 +19632,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19090,7 +19641,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19144,6 +19696,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19153,7 +19706,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19210,6 +19764,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19218,7 +19773,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19275,6 +19831,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19283,7 +19840,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19340,6 +19898,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19348,7 +19907,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19405,6 +19965,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19413,7 +19974,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19470,6 +20032,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19478,7 +20041,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19535,6 +20099,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19543,7 +20108,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19600,6 +20166,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19608,7 +20175,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19665,6 +20233,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19673,7 +20242,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19730,6 +20300,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19738,7 +20309,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19795,6 +20367,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19803,7 +20376,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19857,6 +20431,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19866,7 +20441,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19923,6 +20499,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19931,7 +20508,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -19985,6 +20563,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -19994,7 +20573,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20051,6 +20631,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20059,7 +20640,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20113,6 +20695,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20122,7 +20705,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20179,6 +20763,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20187,7 +20772,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20244,6 +20830,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20252,7 +20839,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20309,6 +20897,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20317,7 +20906,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20374,6 +20964,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20382,7 +20973,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20444,6 +21036,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20452,7 +21045,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20506,6 +21100,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20515,7 +21110,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20572,6 +21168,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20580,7 +21177,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20637,6 +21235,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20645,7 +21244,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20702,6 +21302,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20710,7 +21311,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20767,6 +21369,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20775,7 +21378,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20832,6 +21436,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20840,7 +21445,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20897,6 +21503,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20905,7 +21512,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -20962,6 +21570,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -20970,7 +21579,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21027,6 +21637,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21035,7 +21646,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21090,6 +21702,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21098,7 +21711,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21155,6 +21769,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21163,7 +21778,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21220,6 +21836,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21228,7 +21845,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21285,6 +21903,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21293,7 +21912,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21350,6 +21970,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21358,7 +21979,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21415,6 +22037,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21423,7 +22046,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21477,6 +22101,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21486,7 +22111,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21543,6 +22169,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21551,7 +22178,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21607,6 +22235,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21616,7 +22245,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21673,6 +22303,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21681,7 +22312,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21742,6 +22374,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21750,7 +22383,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21804,6 +22438,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21813,7 +22448,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21874,6 +22510,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21882,7 +22519,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -21939,6 +22577,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -21947,7 +22586,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -22004,6 +22644,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -22012,7 +22653,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -22069,6 +22711,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -22077,7 +22720,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -22131,6 +22775,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -22140,7 +22785,8 @@
           "budget",
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -22195,6 +22841,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -22203,7 +22850,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -22260,6 +22908,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -22268,7 +22917,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -22325,6 +22975,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -22333,7 +22984,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },
@@ -22390,6 +23042,7 @@
         "property_type": null,
         "accessibility": null,
         "bedrooms": null,
+        "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -22398,7 +23051,8 @@
         "unverified": [
           "property_type",
           "accessibility",
-          "bedrooms"
+          "bedrooms",
+          "floor_area"
         ],
         "pass": true
       },

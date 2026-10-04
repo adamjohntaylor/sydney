@@ -39,6 +39,7 @@ import sys
 BUDGET_CEILING = 2_200_000          # decision #9
 CATCHMENT_M = 1_500                 # 02: recurring 1,500 m walkability radius
 LIVING_AREA_TARGET_M2 = 115         # decision #17
+MIN_INTERNAL_M2 = 100               # Tier 1 floor, decision #31 (4 Oct 2026)
 STRATA_BASELINE_PA = 12_000         # ROA models ~$12k p.a. initially (02)
 
 # Outlook quality ranking (decision #17 - leading Tier 2 discriminator).
@@ -410,6 +411,17 @@ def tier1(listing):
     else:
         c["bedrooms"] = beds >= 2
 
+    # Floor area - at least MIN_INTERNAL_M2 (100 m²) of internal/floor area, all
+    # dwelling types (decision #31, 4 Oct 2026). Unknown -> None (?): most alert-
+    # derived records only learn their area when the listing page is read (Chrome
+    # extension Verify run, bookmarklet, or the Claude harvest). Land area never
+    # counts - it is kept separately in `land_m2`.
+    m2 = _as_int(listing.get("internal_m2"))
+    if m2 is None or m2 <= 0:
+        c["floor_area"] = None
+    else:
+        c["floor_area"] = m2 >= MIN_INTERNAL_M2
+
     # Public transport - within 1,500 m of station/light rail/strong bus.
     cat = listing.get("catchments", {})
     c["transport"] = cat.get("transport")
@@ -447,6 +459,16 @@ def tier1(listing):
 # ---------------------------------------------------------------------------
 # Tier 2 - weighted discriminators (0-100)
 # ---------------------------------------------------------------------------
+
+def _as_int(v):
+    """Coerce an area value ("111", 111, 111.0, "111 m²") to int, else None."""
+    if v is None or isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        return int(v)
+    m = re.search(r"\d+", str(v))
+    return int(m.group(0)) if m else None
+
 
 def _living_area_factor(m2):
     if m2 is None:
@@ -496,7 +518,7 @@ def tier2(listing, t1):
     comp["outlook"] = o_factor * WEIGHTS["outlook"]
 
     # Living-area scale
-    la_factor = _living_area_factor(listing.get("internal_m2"))
+    la_factor = _living_area_factor(_as_int(listing.get("internal_m2")))
     comp["living_area"] = (la_factor if la_factor is not None else 0.4) * WEIGHTS["living_area"]
 
     # Warehouse-conversion character - only credited where Tier 1 accessibility

@@ -43,7 +43,9 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
 function stripCheck(c) {
   const out = { url: c.url, listing_status: c.listing_status, status_basis: c.status_basis };
   if (c.final_url && c.final_url !== c.url) out.final_url = c.final_url;
-  for (const k of ["price_guide_text", "resolved_url", "sold_date", "address", "suburb"]) if (c[k]) out[k] = c[k];
+  for (const k of ["price_guide_text", "resolved_url", "sold_date", "address", "suburb",
+                   "internal_m2", "land_m2", "area_basis", "area_checked",
+                   "beds", "baths", "parking", "property_type"]) if (c[k] != null && c[k] !== "") out[k] = c[k];
   return out;
 }
 
@@ -109,7 +111,26 @@ async function verifyEntry(w) {
   }
   if (c.kind === "search_count") {
     if (c.count === null) return { ...c, listing_status: "unknown" };
-    if (c.count > 0) return { ...c, listing_status: "on_market" };
+    if (c.count > 0) {
+      // Still for sale. The search page only proves presence; the listing
+      // page carries the facts the watchlist lacks (floor area, beds, type).
+      // Open it once when the record has never had its area read.
+      const direct = c.resolved_url || w.resolved_url;
+      if (w.needs_area && direct) {
+        await sleep(DELAY_MS);
+        const d = await openAndRead(direct);
+        const facts = {};
+        for (const k of ["internal_m2", "land_m2", "area_basis", "area_checked", "beds", "baths", "parking", "property_type"])
+          if (d[k] != null && d[k] !== "") facts[k] = d[k];
+        if (d.kind === "listing" && ["sold", "under_offer"].includes(d.listing_status)) {
+          // The direct page knows better than the search count.
+          return { ...c, ...facts, listing_status: d.listing_status, status_basis: d.status_basis, sold_date: d.sold_date, resolved_url: direct };
+        }
+        return { ...c, ...facts, listing_status: "on_market", resolved_url: direct,
+                 status_basis: c.status_basis + (facts.internal_m2 ? `; listing page: ${facts.internal_m2} m² internal` : "; listing page read for area: " + (facts.area_basis || "no report")) };
+      }
+      return { ...c, listing_status: "on_market" };
+    }
     // Gone from for-sale results: ask the sold search whether it sold.
     const su = soldSearchUrl(w.url);
     if (!su) return { ...c, listing_status: "withdrawn", status_basis: c.status_basis + " (no street param)" };
@@ -155,7 +176,7 @@ async function runVerify(cap, all) {
       const c = await verifyEntry(w);
       checks.push(stripCheck(c));
       setState({ done: checks.length });
-      log(`${c.listing_status.padEnd(11)} ${w.address || ""}, ${w.suburb || ""}  (${(c.status_basis || "").replace(/^chrome: /, "")})`);
+      log(`${c.listing_status.padEnd(11)} ${w.address || ""}, ${w.suburb || ""}${c.internal_m2 ? ` ${c.internal_m2}m²` : ""}  (${(c.status_basis || "").replace(/^chrome: /, "")})`);
       await sleep(DELAY_MS);
       if (checks.length % 20 === 0) {          // apply in batches so progress survives interruption
         const res = await postChecks(checks.splice(0, checks.length));
