@@ -1,0 +1,172 @@
+{
+  "generated_on": "2026-10-04",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,900,000",
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 5 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/9-metters-street-erskineville-nsw-2043-2020352243",
+      "address": "9 Metters Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1.07m",
+      "address": "802/6 Paul Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2F4+elger+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2f4+elger+street+glebe",
+      "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701",
+      "address": "325/4 Elger Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/405-15-ralph-street-alexandria-nsw-2015-2016827031",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,170,000",
+      "address": "405/15 Ralph Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=186c+victoria+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 2 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768",
+      "address": "186C Victoria Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/208-1-9-pyrmont-bridge-road-pyrmont-nsw-2009-2020693826",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,100,000",
+      "address": "208/1-9 Pyrmont Bridge Road",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,150,000",
+      "address": "509/1 Wattle Crescent",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.domain.com.au/316-1-wattle-crescent-pyrmont-nsw-2009-2020910983",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1.22m",
+      "address": "316/1 Wattle Crescent",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,650,000",
+      "address": "601/320 Harris Street",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,200,000",
+      "address": "1101/89 Bay Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,775,000",
+      "address": "T04/1 Distillery Drive",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$2,011",
+      "address": "Terrace 6 Wentworth Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,450,000",
+      "address": "50/110  Reynolds Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1201%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1201%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/1201-5-joynton-avenue-zetland-nsw-2017-2020806185",
+      "address": "1201/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2F47+wharf+road+birchgrove",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f47+wharf+road+birchgrove",
+      "resolved_url": "https://www.domain.com.au/11-47-wharf-road-birchgrove-nsw-2041-2020953012",
+      "address": "11/47 Wharf Road",
+      "suburb": "Birchgrove"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6c+defries+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/106-6c-defries-avenue-zetland-nsw-2017-2021140958",
+      "address": "6C Defries Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F480+king+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2f480+king+street+newtown",
+      "resolved_url": "https://www.domain.com.au/17-480-king-street-newtown-nsw-2042-2020958254",
+      "address": "17/480 King Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=801%2F6+ebsworth+street+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=801%2f6+ebsworth+street+zetland",
+      "resolved_url": "https://www.domain.com.au/801-6-ebsworth-street-zetland-nsw-2017-2020955862",
+      "address": "801/6 Ebsworth Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F8+dunblane+street+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f8+dunblane+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/3-8-dunblane-street-camperdown-nsw-2050-2020959550",
+      "address": "3/8 Dunblane Street",
+      "suburb": "Camperdown"
+    }
+  ]
+}
