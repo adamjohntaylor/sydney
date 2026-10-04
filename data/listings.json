@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-04T00:16:08.227219+00:00",
+  "generated_at": "2026-10-04T00:16:53.989672+00:00",
   "generated_at_sydney": "2026-10-04 10:16 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
@@ -3702,14 +3702,14 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "prior_price_text": "$1,450,000",
       "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "status": "interested",
       "days_on_market": 103,
       "note": "",
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/705-2h-wentworth-park-road-glebe-nsw-2037-2020772884"
     },
     {
@@ -22100,13 +22100,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-04",
       "change_flag": "UNCHANGED",
       "lat": -33.8554493,
       "lon": 151.1758351,
       "flag_cleared_on": "2026-10-02",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-10-02"
+      "status_checked_on": "2026-10-04",
+      "resolved_url": "https://www.domain.com.au/2-7-9-birchgrove-road-balmain-nsw-2041-2021179720"
     },
     {
       "address": "213/1 Sterling Circuit",
@@ -22165,13 +22165,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-04",
       "change_flag": "UNCHANGED",
       "lat": -33.8847302,
       "lon": 151.1763092,
       "flag_cleared_on": "2026-10-02",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-10-02"
+      "status_checked_on": "2026-10-04",
+      "resolved_url": "https://www.domain.com.au/213-1-sterling-circuit-camperdown-nsw-2050-2021169500"
     },
     {
       "address": "3/65-69 Nelson Street",
@@ -22232,13 +22232,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-02",
+      "last_seen": "2026-10-04",
       "change_flag": "UNCHANGED",
       "lat": -33.8612817,
       "lon": 151.1708761,
       "flag_cleared_on": "2026-10-02",
-      "status_check_failures": 1,
-      "status_checked_on": "2026-10-02"
+      "status_checked_on": "2026-10-04",
+      "resolved_url": "https://www.domain.com.au/3-65-69-nelson-street-rozelle-nsw-2039-2021058236"
     },
     {
       "address": "29/13 Greek Street",
@@ -22299,10 +22299,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/29-13-greek-street-glebe-nsw-2037-2021205595"
     },
     {
@@ -22436,10 +22436,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/11-19-23-stewart-street-glebe-nsw-2037-2021146619"
     },
     {
@@ -22571,10 +22571,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/20-100-reynolds-street-balmain-nsw-2041-2021143270"
     },
     {
@@ -22638,10 +22638,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/1a-lilydale-street-marrickville-nsw-2204-2021095684"
     },
     {
@@ -22705,10 +22705,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/26-flood-street-leichhardt-nsw-2040-2021207380"
     },
     {
@@ -22772,10 +22772,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/3-249-johnston-street-annandale-nsw-2038-2021206905"
     },
     {
@@ -22837,10 +22837,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
-      "status_checked_on": "2026-10-03",
+      "status_checked_on": "2026-10-04",
       "resolved_url": "https://www.domain.com.au/106-cavendish-street-stanmore-nsw-2048-2021175624"
     },
     {
@@ -22902,13 +22902,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.8973388,
       "lon": 151.1927013,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-10-03"
+      "status_checked_on": "2026-10-04",
+      "resolved_url": "https://www.domain.com.au/42-49-henderson-road-alexandria-nsw-2015-2021206205"
     },
     {
       "address": "404/5 Joynton Avenue",
@@ -22969,13 +22969,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.9072907,
       "lon": 151.2069994,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-10-03"
+      "status_checked_on": "2026-10-04",
+      "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065"
     },
     {
       "address": "18/18 Wolseley Street",
@@ -23036,13 +23036,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.8460142,
       "lon": 151.153956,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-10-03"
+      "status_checked_on": "2026-10-04",
+      "resolved_url": "https://www.domain.com.au/18-18-wolseley-street-drummoyne-nsw-2047-2021174609"
     },
     {
       "address": "318/17 Grandstand Parade",
@@ -23103,13 +23103,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "change_flag": "NEW",
       "flag_sweeps": 1,
       "lat": -33.9076545,
       "lon": 151.2085576,
-      "status_check_failures": 1,
-      "status_checked_on": "2026-10-03"
+      "status_checked_on": "2026-10-04",
+      "resolved_url": "https://www.domain.com.au/318-17-grandstand-parade-zetland-nsw-2017-2021205797"
     }
   ]
 }
