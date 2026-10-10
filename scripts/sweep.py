@@ -55,6 +55,7 @@ DATA = os.path.join(DASH, "data")
 sys.path.insert(0, HERE)
 import score as score_mod      # noqa: E402
 import render as render_mod    # noqa: E402
+import outgoings as outgoings_mod  # noqa: E402
 
 SYD_TZ = dt.timezone(dt.timedelta(hours=10))   # AEST; AEDT (+11) Oct-Apr
 
@@ -205,7 +206,11 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
             continue
         checked = _days_since(l.get("status_checked_on"), today)
         needs_area = not l.get("internal_m2") and not l.get("area_checked_on")
-        if checked is not None and checked < recheck_days and not needs_area:
+        # Outgoings (strata / council / water) live in the description text,
+        # which alert stubs never carry: read the listing page once for them.
+        needs_outgoings = (not l.get("outgoings_checked_on")
+                           and not str(l.get("outgoings_source", "")).startswith("manual"))
+        if checked is not None and checked < recheck_days and not (needs_area or needs_outgoings):
             continue
         seen_days = _days_since(l.get("last_seen"), today)
         if seen_days is None:
@@ -221,8 +226,9 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
                 priority, reason = 1, f"last open home {max(ohs).isoformat()} has passed"
             elif seen_days > recheck_days and not (checked is not None and checked < recheck_days):
                 priority, reason = 2, f"not sighted for {seen_days} days"
-            elif needs_area:
-                priority, reason = 3, "floor area not yet read from the listing page"
+            elif needs_area or needs_outgoings:
+                priority, reason = 3, ("floor area not yet read from the listing page" if needs_area
+                                       else "outgoings not yet read from the listing page")
             elif include_all:
                 priority, reason = 4, "routine re-verification"
         if priority is None:
@@ -240,6 +246,7 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
             "inconclusive_checks": int(l.get("status_check_failures") or 0),
             "resolved_url": l.get("resolved_url"),
             "needs_area": needs_area,
+            "needs_outgoings": needs_outgoings,
             "property_type": l.get("property_type"),
         })
     work.sort(key=lambda w: (w["priority"], -(_days_since(w["last_seen"], today) or 10 ** 6)))
@@ -301,6 +308,26 @@ def apply_check_details(target, chk, today):
         out.append(f"property_type: ->{pt.lower()}")
     if chk.get("area_checked"):
         target["area_checked_on"] = today
+    out += apply_outgoings_check(target, chk, today)
+    return out
+
+
+def apply_outgoings_check(target, chk, today):
+    """Strata / council / water from a page read. The reader sends the
+    description lines that mention them (`outgoings_text`) and any page-data
+    keys that look like them (`outgoings_keys`, logged for verification only -
+    see outgoings.py). Parsing happens here, in one place."""
+    out = []
+    txt = chk.get("outgoings_text")
+    if txt:
+        out = outgoings_mod.apply_outgoings(
+            target, outgoings_mod.parse_outgoings(txt),
+            "listing page: " + str(chk.get("outgoings_text_source") or "text")[:80], today)
+    keys = chk.get("outgoings_keys")
+    if isinstance(keys, dict) and keys:
+        target["outgoings_keys_seen"] = {str(k)[:60]: str(v)[:80] for k, v in list(keys.items())[:8]}
+    if chk.get("outgoings_checked"):
+        target["outgoings_checked_on"] = today
     return out
 
 
@@ -543,6 +570,9 @@ _ENRICH_FIELDS = (
     "cover_image", "beds", "baths", "parking", "property_type",
     "description", "features", "floor", "internal_m2", "land_m2", "area_basis",
     "area_checked_on",
+    "strata_pq", "council_pq", "water_pq", "strata_pa", "outgoings_pa", "outgoings_known",
+    "outgoings_unstated", "special_levy", "outgoings_source", "outgoings_snippet",
+    "outgoings_approx", "outgoings_read_on", "outgoings_checked_on", "outgoings_keys_seen",
 )
 
 
@@ -756,6 +786,12 @@ def carry_notes(listings, notes_path):
         except OSError:
             pass
     for l in listings:
+        # Back-fill outgoings from a stored description the first time round
+        # (page reads supersede it; manual figures supersede both).
+        if not l.get("outgoings_source") and l.get("description"):
+            outgoings_mod.apply_outgoings(
+                l, outgoings_mod.parse_outgoings(l["description"]), "stored description",
+                (l.get("last_seen") or "")[:10] or None)
         n = notes.get(listing_key(l))
         if n:
             l["status"] = n.get("status")
@@ -775,6 +811,27 @@ def carry_notes(listings, notes_path):
                 l["internal_m2"] = m2
                 l["area_basis"] = "manual: floor plan / agent (drawer)"
                 l["area_checked_on"] = l.get("area_checked_on") or n.get("updated", "")[:10] or None
+            # Adam's manual outgoings (per quarter, from the agent / contract /
+            # strata report) - authoritative over the page reader.
+            og = n.get("outgoings")
+            if not isinstance(og, dict) and str(l.get("outgoings_source", "")).startswith("manual"):
+                l.pop("outgoings_source", None)   # manual figure withdrawn: let readers refill
+            if isinstance(og, dict):
+                got = False
+                for k in outgoings_mod.KINDS:
+                    try:
+                        v = float(og.get(k)) if og.get(k) not in (None, "") else None
+                    except (TypeError, ValueError):
+                        v = None
+                    if v and v > 0:
+                        l[f"{k}_pq"] = round(v, 2)
+                        got = True
+                if got:
+                    l["outgoings_source"] = "manual: agent / contract (drawer)"
+                    l["outgoings_approx"] = False
+                    l["outgoings_read_on"] = n.get("updated", "")[:10] or None
+                    l.pop("outgoings_unstated", None)
+                    outgoings_mod.derive_annuals(l)
 
 
 def is_empty_listing(l):

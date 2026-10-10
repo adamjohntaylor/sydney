@@ -664,6 +664,10 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 target["area_basis"] = item["area_basis"]
             if item.get("area_checked"):
                 target["area_checked_on"] = sweep_mod.now_sydney().date().isoformat()
+            # Strata / council / water: parsed server-side from the outgoings
+            # lines the bookmarklet sends (full text, not the 2,000-char
+            # description excerpt, which often cuts them off).
+            sweep_mod.apply_outgoings_check(target, item, sweep_mod.now_sydney().date().isoformat())
             if item.get("features"):
                 target["features"] = item["features"]
             if item.get("floor") is not None:
@@ -1221,6 +1225,18 @@ def main():
     if not os.path.exists(NOTES_PATH):
         with open(NOTES_PATH, "w", encoding="utf-8") as fh:
             fh.write("{}\n")
+    # Re-apply notes and re-score once at start-up, so derived fields added by
+    # newer code (e.g. outgoings back-filled from stored descriptions) are in
+    # listings.json - and so on the cards - without waiting for a Refresh.
+    try:
+        n = Handler._apply_notes_and_rescore(None)
+        with open(LISTINGS_PATH, "r", encoding="utf-8") as fh:
+            _ls = json.load(fh).get("listings", [])
+        print(f"Start-up re-score: {n} listings; outgoings known for "
+              f"{sum(1 for l in _ls if l.get('strata_pq') or l.get('council_pq') or l.get('water_pq'))}.",
+              file=sys.stderr, flush=True)
+    except Exception as e:   # never block the server on this
+        print(f"Start-up re-score skipped: {e}", file=sys.stderr, flush=True)
     httpd = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     print(f"Live-properties dashboard serving at  http://localhost:{PORT}/", file=sys.stderr, flush=True)
     print(f"Serving folder: {DASH_DIR}", file=sys.stderr, flush=True)

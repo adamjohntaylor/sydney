@@ -739,6 +739,88 @@
     return f;
   };
 
+  // ---- Outgoings reader (identical copy in enrich-bookmarklet.js) ----
+  // Strata levies, council rates and water rates are NOT a standard field on
+  // Domain or REA (checked 10 Oct 2026 across Inner West listings): agents type
+  // them into the description in free, inconsistent forms ("Water $178 |
+  // Council $495 | Strata $1,293 p/q", "Strata Levies: $3,228 Quarterly approx").
+  // This reader only COLLECTS the lines that mention them; the server parses
+  // them in one place (scripts/outgoings.py). Sources, in priority order (the
+  // parser takes the first figure per kind, so earlier sources win):
+  //   1. the visible description element's textContent (includes text collapsed
+  //      behind "Read more");
+  //   2. the description as embedded in the page's own data (inline <script>
+  //      JSON: __NEXT_DATA__, JSON-LD, ArgonautExchange etc.) - complete, and
+  //      independent of CSS class names. Each JSON string literal mentioning an
+  //      outgoing and a $ amount is decoded (\n, \uXXXX, HTML entities, <br>).
+  //      Proximity rule: this listing's id must appear within the 20,000 chars
+  //      before it, so a "similar properties" block cannot lend its figures;
+  //   3. meta description / og:description (often a truncated copy);
+  //   4. last resort only: the page's visible text.
+  // It also logs any page-data key whose NAME looks like an outgoing as
+  // `outgoings_keys` - recorded for verification only, never used as a figure.
+  const readOutgoingsFromPage = function () {
+    const out = { outgoings_checked: true };
+    const lid = (location.href.match(/(?:-|\/)(\d{6,12})\/?(?:\?.*)?$/) || [])[1] || null;
+    const LABEL = /\b(?:strata|levies|levy|body\s+corp\w*|owners?\s+corp\w*|council|water|outgoings)\b/i;
+    const LINE = /[^\n]{0,100}\b(?:strata|levies|levy|body\s+corp\w*|owners?\s+corp\w*|council|water|outgoings)\b[^\n]{0,220}/gi;
+    const segs = [], srcs = [];
+    const total = () => segs.reduce((a, s) => a + s.length, 0);
+    const clean = (s) => s.replace(/<br\s*\/?>/gi, '\n').replace(/<\/(?:p|li|div)>/gi, '\n').replace(/<[^>]{1,200}>/g, ' ')
+      .replace(/&#36;|&dollar;/gi, '$').replace(/&amp;/gi, '&').replace(/&nbsp;|&#160;/gi, ' ').replace(/&#x27;|&#39;/gi, "'").replace(/&quot;/gi, '"');
+    const collect = (text, label) => {
+      if (!text || !/\$\s*\d/.test(text) || !LABEL.test(text)) return;
+      let m, added = false;
+      LINE.lastIndex = 0;
+      while ((m = LINE.exec(text)) !== null) {
+        const s = m[0].replace(/\s+/g, ' ').trim();
+        if (/\$\s*\d/.test(s) && !segs.some(x => x === s || x.includes(s) || s.includes(x))) { segs.push(s); added = true; }
+        if (total() > 1500) break;
+      }
+      if (added && !srcs.includes(label)) srcs.push(label);
+    };
+    // 1. visible description element
+    const descEl = document.querySelector('[data-testid="listing-details__description"], .listing-details__description, [class*="description"]');
+    if (descEl && descEl.textContent && descEl.textContent.length > 200) collect(clean(descEl.textContent), 'visible description');
+    // 2. description embedded in the page data
+    const src = document.documentElement.innerHTML;
+    const scripts = [...document.querySelectorAll('script:not([src])')].map(s => s.textContent || '').filter(t => t.length > 200);
+    const strRe = /"((?:[^"\\]|\\.){30,30000})"/g;
+    for (const sc of scripts) {
+      if (total() > 1500) break;
+      if (!LABEL.test(sc) || !/(?:\$|\\u0024)\s*\d/.test(sc)) continue;
+      let m;
+      strRe.lastIndex = 0;
+      while ((m = strRe.exec(sc)) !== null) {
+        const raw = m[1];
+        if (!/(?:\$|\\u0024)\s*\d/.test(raw) || !LABEL.test(raw)) continue;
+        if (lid && !sc.slice(Math.max(0, m.index - 20000), m.index).includes(lid)) continue;
+        let txt;
+        try { txt = JSON.parse('"' + raw + '"'); } catch (e) { txt = raw.replace(/\\n/g, '\n').replace(/\\u0024/gi, '$').replace(/\\"/g, '"'); }
+        collect(clean(txt), 'page data (embedded description)');
+        if (total() > 1500) break;
+      }
+    }
+    // 3. meta descriptions
+    document.querySelectorAll('meta[name="description"], meta[property="og:description"]').forEach(mt => collect(clean(mt.content || ''), 'meta description'));
+    // 4. last resort: visible page text
+    if (!segs.length) collect((document.body && (document.body.innerText || document.body.textContent)) || '', 'visible page text');
+    if (segs.length) { out.outgoings_text = segs.join(' \n\n ').slice(0, 1600); out.outgoings_text_source = srcs.join(' + '); }
+    // Candidate structured keys (logged only).
+    const keyRe = /"([A-Za-z_]*(?:strata|Strata|levy|Levy|levies|Levies|councilRate|CouncilRate|waterRate|WaterRate|outgoing|Outgoing|bodyCorporate|BodyCorporate)[A-Za-z_]*)"\s*:\s*("[^"]{0,60}"|-?\d[\d.]*|\{[^{}]{0,160}\}|null|true|false)/g;
+    const keys = {};
+    let k, n = 0;
+    while ((k = keyRe.exec(src)) !== null && n < 8) {
+      if (lid && !src.slice(Math.max(0, k.index - 2000), k.index).includes(lid)) continue;
+      if (!(k[1] in keys)) { keys[k[1]] = k[2].slice(0, 80); n++; }
+    }
+    if (n) out.outgoings_keys = keys;
+    return out;
+  };
+
+  // Strata / council / water lines (parsed server-side) - same reader as the extension.
+  try { Object.assign(data, readOutgoingsFromPage()); } catch (e) { console.log('outgoings reader failed:', e); }
+
   // Floor area (both sites) - the same reader the Chrome extension's Verify run
   // uses, so bookmarklet and sweep agree. Keeps internal and land apart; the
   // REA-only buildingSize mining above still runs first where it applies.

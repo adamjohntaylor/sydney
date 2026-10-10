@@ -347,8 +347,9 @@ function card(l){
       </div>
       <div class="flex gap-3 text-xs text-slate-600 mt-2">
         <span>${l.beds??'-'} bd</span><span>${l.baths??'-'} ba</span><span>${l.parking??'-'} car</span>
-        <span title="${l.area_basis||'floor area not yet read from the listing page'}">${l.internal_m2?l.internal_m2+' m&sup2;':'? m&sup2;'}</span>${l.land_m2?`<span class="text-slate-400">${l.land_m2} m&sup2; land</span>`:""}${l.strata_pa?`<span>$${(l.strata_pa/1000).toFixed(0)}k strata</span>`:""}
+        <span title="${l.area_basis||'floor area not yet read from the listing page'}">${l.internal_m2?l.internal_m2+' m&sup2;':'? m&sup2;'}</span>${l.land_m2?`<span class="text-slate-400">${l.land_m2} m&sup2; land</span>`:""}
       </div>
+      ${outgoingsChip(l)}
       <div class="mt-2 text-xs"><b>Outlook:</b> ${outlook} ${l.tier2?`<span class="ml-2 pill bg-slate-800 text-white">T2 ${l.tier2.score}</span>`:""}</div>
       <div class="text-[11px] text-slate-500">${l.tier2?l.tier2.leading:''}</div>
       ${zoning}
@@ -407,6 +408,8 @@ function openDrawer(k){
     <div class="mt-1 text-sm"><b>Outlook:</b> ${(l.outlook&&l.outlook.class)||'-'}
       <div class="text-xs text-slate-500">${(l.outlook&&l.outlook.basis)||''}</div></div>
 
+    ${outgoingsBlock(l)}
+
     <h3 class="mt-4 font-semibold text-sm">Tier 1</h3>
     <div class="mt-1 text-sm">${t1Marks(l)}</div>
     ${l.tier1&&l.tier1.fails&&l.tier1.fails.length?`<div class="text-xs text-rose-600 mt-1">Fails: ${l.tier1.fails.join(", ")}</div>`:""}
@@ -432,7 +435,7 @@ function openDrawer(k){
       <a class="underline text-sky-600" target="_blank" href="${maps}">Map</a>
     </div>
 
-    <h3 class="mt-5 font-semibold text-sm">Your verification (accessibility &amp; floor area)</h3>
+    <h3 class="mt-5 font-semibold text-sm">Your verification (accessibility, floor area &amp; outgoings)</h3>
     <div class="grid grid-cols-3 gap-2 mt-1">
       <label class="block text-xs">Step-free access
         <select id="accStepFree" class="border rounded px-2 py-1 w-full mt-1">${triOpts(curAcc.step_free)}</select></label>
@@ -440,6 +443,10 @@ function openDrawer(k){
         <select id="accLift" class="border rounded px-2 py-1 w-full mt-1">${triOpts(curAcc.lift)}</select></label>
       <label class="block text-xs" title="Internal/floor area from the floor plan or agent - overrides what the page reader found. Tier 1 needs 100 m² or more.">Internal m&sup2; (floor plan)
         <input id="noteArea" type="number" min="1" max="2000" placeholder="${l.internal_m2||'e.g. 112'}" value="${(NOTES[key(l)]&&NOTES[key(l)].internal_m2)||''}" class="border rounded px-2 py-1 w-full mt-1"></label>
+    </div>
+    <div class="grid grid-cols-3 gap-2 mt-2">
+      ${['strata','council','water'].map(x=>`<label class="block text-xs" title="Per QUARTER, from the agent, contract or strata report - overrides what the page reader found.">${x[0].toUpperCase()+x.slice(1)} $/quarter
+        <input id="og_${x}" type="number" min="0" step="0.01" placeholder="${typeof l[x+'_pq']==='number'?Math.round(l[x+'_pq']):''}" value="${(NOTES[key(l)]&&NOTES[key(l)].outgoings&&NOTES[key(l)].outgoings[x])||''}" class="border rounded px-2 py-1 w-full mt-1"></label>`).join('')}
     </div>
     <p class="text-[11px] text-slate-500 mt-1">Your verdict is authoritative &mdash; it overrides any provisional filter pass. Saved with your note.</p>
 
@@ -519,6 +526,34 @@ async function deleteListing(l){
 }
 function closeDrawer(){document.getElementById("overlay").classList.add("hidden");document.getElementById("drawer").classList.add("translate-x-full");}
 
+// Outgoings (strata / council / water), per quarter. `?` = not read yet; never inferred.
+function fmtQ(v){return (typeof v==="number")?'$'+Math.round(v).toLocaleString():'?';}
+function outgoingsChip(l){
+  // Card line: whichever of strata / council / water are known, per quarter.
+  const lab={strata:'Strata',council:'Council',water:'Water'}, parts=[];
+  ['strata','council','water'].forEach(x=>{
+    const v=l[x+'_pq'], u=l.outgoings_unstated&&l.outgoings_unstated[x];
+    if(typeof v==="number") parts.push(`<span class="whitespace-nowrap"><b>${lab[x]}</b> ${fmtQ(v)}/q</span>`);
+    else if(u) parts.push(`<span class="whitespace-nowrap text-amber-700" title="period not stated in the listing"><b>${lab[x]}</b> $${Math.round(u).toLocaleString()} (period?)</span>`);
+  });
+  if(!parts.length) return "";
+  const tip=(l.outgoings_snippet||l.outgoings_source||'').replace(/"/g,'&quot;');
+  return `<div class="flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-slate-700 mt-1" title="${tip}">${parts.join("")}${l.outgoings_approx?'<span class="text-slate-400">approx.</span>':''}</div>`;
+}
+function outgoingsBlock(l){
+  const k=['strata','council','water'], lab={strata:'Strata levies',council:'Council rates',water:'Water rates'};
+  const any=k.some(x=>typeof l[x+'_pq']==="number")||l.outgoings_unstated||l.special_levy;
+  const rows=k.map(x=>{const v=l[x+'_pq'];const u=l.outgoings_unstated&&l.outgoings_unstated[x];
+    return `<tr><td class="pr-2">${lab[x]}</td><td class="text-right">${typeof v==="number"?fmtQ(v)+'/q':(u?`<span class="text-amber-700">$${Math.round(u).toLocaleString()} (period not stated)</span>`:'<span class="qm">?</span>')}</td><td class="text-right text-slate-500 pl-2">${typeof v==="number"?fmtQ(v*4)+' p.a.':''}</td></tr>`;}).join("");
+  const tot=(typeof l.outgoings_pa==="number")?`<tr class="border-t"><td class="pr-2 font-semibold">Total known</td><td></td><td class="text-right font-semibold pl-2">$${l.outgoings_pa.toLocaleString()} p.a.</td></tr>`:"";
+  const src=l.outgoings_source?`<div class="text-[11px] text-slate-500 mt-1">Source: ${l.outgoings_source}${l.outgoings_read_on?' ('+l.outgoings_read_on+')':''}${l.outgoings_approx?' &middot; agent says approx.':''}${l.outgoings_known&&l.outgoings_known.length<3?' &middot; total excludes '+k.filter(x=>!l.outgoings_known.includes(x)).join(', '):''}</div>${l.outgoings_snippet?`<div class="text-[11px] text-slate-400 italic">&ldquo;${l.outgoings_snippet}&rdquo;</div>`:''}`
+    :`<div class="text-[11px] text-slate-500 mt-1">${l.outgoings_checked_on?'Listing page read '+l.outgoings_checked_on+': no outgoings stated by the agent.':'Not yet read from the listing page (next Verify run).'}</div>`;
+  const sp=l.special_levy?`<div class="text-xs text-rose-700 mt-1">Special levy mentioned: $${Math.round(l.special_levy).toLocaleString()} (one-off; check the strata report).</div>`:"";
+  const keys=l.outgoings_keys_seen?`<div class="text-[11px] text-slate-400 mt-1">Page-data keys seen (unverified, not used): ${Object.entries(l.outgoings_keys_seen).map(([a,b])=>a+'='+b).join('; ')}</div>`:"";
+  return `<h3 class="mt-4 font-semibold text-sm">Outgoings</h3>${any?`<table class="text-xs mt-1 w-full">${rows}${tot}</table>`:''}${src}${sp}${keys}
+    <div class="text-[11px] text-slate-500 mt-1">Agents' figures are guides; confirm from the contract's s.184 strata certificate and council/water notices.</div>`;
+}
+
 async function saveNote(l){
   if(STATIC_COPY){
     document.getElementById("noteSaved").textContent=STATIC_MSG;
@@ -535,7 +570,11 @@ async function saveNote(l){
   const rec={status,note,updated:new Date().toISOString()};
   if(hasAcc) rec.accessibility=acc;
   if(hasArea) rec.internal_m2=areaVal;
-  if(status||note||hasAcc||hasArea) NOTES[k]=rec; else delete NOTES[k];
+  const og={};
+  ['strata','council','water'].forEach(x=>{const v=parseFloat(document.getElementById('og_'+x).value);if(Number.isFinite(v)&&v>0)og[x]=v;});
+  const hasOg=Object.keys(og).length>0;
+  if(hasOg) rec.outgoings=og;
+  if(status||note||hasAcc||hasArea||hasOg) NOTES[k]=rec; else delete NOTES[k];
   l.status=status; l.note=note;
   const ok=document.getElementById("noteSaved");
   if(SERVED){

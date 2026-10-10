@@ -7,6 +7,88 @@ of how the code got to its current shape.
 
 ---
 
+## 10 October 2026 — Outgoings (strata levies, council rates, water rates) made visible
+
+**Question (Adam):** do Domain and REA listings carry strata levies, water and
+council rates as hidden data, and can the dashboard show them?
+
+**Finding.** The figures are usually on the listing, but in the *visible*,
+agent-written description, not a standard field. Checked against Inner West
+listings (Domain/REA copies on aggregator pages) and the 61 stored descriptions
+in `listings.json`; the wording varies by agent: `Strata Levies: $3,228
+Quarterly approx`, `Water $178 | Council $495 | Strata $1,293 p/q` (one shared
+period), `Rates: Water $185pq, Council $264pq, Strata $1643pq (All approx.)`,
+`Water $211 | Council $277 Strata | $2118 p/q` (label on the wrong side),
+`Council: $   295 pq`. Whether either portal *also* embeds them as page-data
+keys is **unverified** — not checked live in Chrome. The reader therefore logs
+any candidate keys (`outgoings_keys_seen`, shown in the drawer as "unverified,
+not used") so the first Verify run answers that empirically.
+
+Two side findings: (1) `score.py` already had the soft Tier 2 strata penalty
+(further-check-A: up to −10 above ~$12k p.a.) but **no record carried
+`strata_pa`**, so it never fired; it now does wherever strata is read. (2) The
+stored `description` is cut at 2,000 chars, which drops outgoings that sit at
+the end (2/6 Cross St), so the reader sends the outgoings lines separately.
+
+**What changed.**
+- `scripts/outgoings.py` (new) — the single parser. Label-anchored ($ amount
+  after strata/levies/body corporate, council, water, nothing but separators
+  between); period from the amount's own suffix, else a shared period closing or
+  opening the run; annual/monthly converted to per quarter; **no stated period ⇒
+  kept as "period not stated", not annualised or scored**; plausibility bands per
+  quarter (strata $100–25k, council $100–3.5k, water $40–1.5k) reject prices and
+  rents near a label; special levies reported separately. Tests:
+  `scripts/tests/test_outgoings.py` (15, from real listing wording).
+- `extension/content.js` + `enrich-bookmarklet.js` — identical
+  `readOutgoingsFromPage()`: collects the lines that mention the three
+  outgoings (≤1,600 chars) as `outgoings_text`, from, in priority order:
+  (1) the visible description element's `textContent` (includes text collapsed
+  behind "Read more"); (2) the description **embedded in the page's own data**
+  — every inline `<script>` JSON string literal that mentions an outgoing and a
+  $ amount is decoded (`\n`, `\u0024`, HTML entities, `<br>`), provided this
+  listing's id appears within the 20,000 chars before it, so a "similar
+  properties" block cannot lend its figures; (3) meta/og description; (4) only
+  if nothing else, the page's visible text. `outgoings_text_source` records which
+  answered and is shown in the drawer. The parser takes the first figure per
+  kind, so the visible copy wins where both exist. Plus id-scoped candidate keys
+  as `outgoings_keys` (logged only). Not covered: HTML attributes, comments,
+  and data a page loads after rendering. Residual risk: a neighbour listing's
+  embedded description *within* 20,000 chars of this listing's id could still be
+  read if the visible description is missing — the quoted snippet in the drawer
+  makes that checkable. Reader test: `scripts/tests/test_outgoings_reader.js`
+  (needs jsdom). `background.js` forwards them and opens
+  the listing page for `needs_outgoings` as well as `needs_area`.
+- `sweep.py` — worklist band 3 also covers "outgoings not yet read";
+  `apply_outgoings_check` (called from `apply_check_details` and the
+  bookmarklet path in `serve.py`); `carry_notes` back-fills from any stored
+  description and applies manual drawer figures (authoritative; withdrawing
+  them lets the readers refill). New fields: `strata_pq`, `council_pq`,
+  `water_pq`, `strata_pa`, `outgoings_pa`, `outgoings_known`,
+  `outgoings_unstated`, `special_levy`, `outgoings_source`,
+  `outgoings_snippet`, `outgoings_approx`, `outgoings_read_on`,
+  `outgoings_checked_on`, `outgoings_keys_seen`.
+- `serve.py` start-up — re-applies notes and re-scores once before serving, so
+  outgoings back-filled from stored descriptions reach `listings.json` (and the
+  cards) without waiting for a Refresh; prints how many records have them.
+- `index.html` — each card has its own outgoings line under beds/baths/m²,
+  listing whichever of strata / council / water are known in $/quarter, plus
+  "approx." where the agent said so (hover: the agent's wording); no line when
+  none are known;
+  drawer has an Outgoings table (per quarter, per annum, total of those known,
+  source, date, "approx", quoted snippet, special levy, keys seen) and three
+  manual $/quarter boxes.
+
+**State on the committed data:** 8 of 61 described records yield outgoings (all
+three figures in each); 3 currently on market. Strata penalty effect with the
+same amenities: 1306/21 Cadigal Ave −1, 103/135 Point St −1, 2/6 Cross St −10;
+others below the $12k baseline, unchanged. 108 active stubs still await a page
+read (the backfill Verify run reads area and outgoings in the same visit).
+
+**Caveat carried into the UI:** agents' figures are guides — confirm from the
+contract's s.184 strata certificate and council/water notices.
+
+---
+
 ## 4 October 2026 — Floor area now read from listing pages; Tier 1 gains "≥100 m² internal"
 
 **Problem (Adam):** the sweep was not surfacing square metreage. Diagnosis against
