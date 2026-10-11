@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T22:56:37.649838+00:00",
-  "generated_at_sydney": "2026-10-12 08:56 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-11T23:00:02.197264+00:00",
+  "generated_at_sydney": "2026-10-12 09:00 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 132,
-    "tier1_pass": 113,
+    "tier1_pass": 108,
     "new": 27,
     "price_changed": 2,
     "sold": 164,
@@ -5288,24 +5288,25 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "floor_area": null,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "accessibility",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 40,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.8,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -5319,7 +5320,26 @@
       "status_checked_on": "2026-10-12",
       "flag_cleared_on": "2026-10-01",
       "status": "rejected",
-      "note": ""
+      "note": "",
+      "internal_m2": 78,
+      "land_m2": 97,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 1522.0,
+      "council_pq": 308.0,
+      "water_pq": 174.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council Rates: $308 p/q approx. Strata Levies: $1522 p/q approx. Water Rates: $174 p/q approx.",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 6088,
+      "outgoings_pa": 8016,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.domain.com.au/704-18-20-allen-street-pyrmont-nsw-2009-2020761520",
@@ -5511,24 +5531,25 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "floor_area": null,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "accessibility",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 40,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.8,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -5544,7 +5565,11 @@
       "price_max": 1220000,
       "flag_cleared_on": "2026-10-01",
       "status": "rejected",
-      "note": ""
+      "note": "",
+      "internal_m2": 78,
+      "area_basis": "page data: building/floor area",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
@@ -5631,7 +5656,7 @@
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 106,
       "area_basis": "page text: labelled internal/floor area",
-      "area_checked_on": "2026-10-04",
+      "area_checked_on": "2026-10-12",
       "strata_pq": 3228.0,
       "council_pq": 275.0,
       "water_pq": 177.0,
@@ -5645,7 +5670,8 @@
         "strata",
         "council",
         "water"
-      ]
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
@@ -5746,7 +5772,9 @@
         "lift": null
       },
       "status_checked_on": "2026-10-12",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.domain.com.au/12-29-cook-street-glebe-nsw-2037-2020656242",
@@ -5883,7 +5911,7 @@
         "budget": true,
         "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -5892,7 +5920,6 @@
         "fails": [],
         "unverified": [
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -5917,7 +5944,12 @@
       "price_guide_text": "$7,019",
       "price_min": 1200000,
       "price_max": 1200000,
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "beds": 2,
+      "baths": 2,
+      "parking": 1,
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
@@ -5965,7 +5997,7 @@
         "property_type": true,
         "accessibility": false,
         "bedrooms": true,
-        "floor_area": null,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -5973,17 +6005,15 @@
         "fails": [
           "accessibility"
         ],
-        "unverified": [
-          "floor_area"
-        ],
+        "unverified": [],
         "pass": false
       },
       "tier2": {
-        "score": 68,
+        "score": 79,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
-          "living_area": 8.0,
+          "living_area": 18.4,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -6018,7 +6048,11 @@
         "strata",
         "council",
         "water"
-      ]
+      ],
+      "internal_m2": 136,
+      "area_basis": "page text: unlabelled m² figure (apartment ⇒ internal)",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.realestate.com.au/sold/property-unit-nsw-glebe-150824100",
@@ -6302,9 +6336,24 @@
       "status_checked_on": "2026-10-12",
       "price_guide_text": "$2,225",
       "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-04",
+      "area_checked_on": "2026-10-12",
       "status": "rejected",
-      "note": ""
+      "note": "",
+      "strata_pq": 2225.8,
+      "council_pq": 295.1,
+      "water_pq": 180.3,
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Council: $295.10 per quarter Water: $180.30 per quarter Strata: $2,225.80",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 8903,
+      "outgoings_pa": 10805,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
@@ -6391,20 +6440,22 @@
       },
       "status_checked_on": "2026-10-12",
       "flag_cleared_on": "2026-10-01",
-      "strata_pq": 1781.55,
-      "council_pq": 308.4,
-      "water_pq": 179.9,
-      "outgoings_source": "stored description",
-      "outgoings_snippet": "Strata: $1781.55 Per Quarter - Council: $308.40 Per Quarter - Water: $179.90 Per Quarter If you",
+      "strata_pq": 2011.64,
+      "council_pq": 308.2,
+      "water_pq": 171.85,
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Strata: $2,011.64 per quarter • Council: $308.20 per quarter • Water: $171.85 per quarter",
       "outgoings_approx": false,
       "outgoings_read_on": "2026-10-12",
-      "strata_pa": 7126,
-      "outgoings_pa": 9079,
+      "strata_pa": 8047,
+      "outgoings_pa": 9967,
       "outgoings_known": [
         "strata",
         "council",
         "water"
-      ]
+      ],
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
@@ -6782,11 +6833,12 @@
       "warehouse_character": false,
       "status_checked_on": "2026-10-12",
       "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-04",
+      "area_checked_on": "2026-10-12",
       "status": "",
       "note": "",
       "internal_m2": 110,
-      "area_basis": "manual: floor plan / agent (drawer)"
+      "area_basis": "manual: floor plan / agent (drawer)",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
@@ -8126,9 +8178,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -8137,9 +8189,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -8165,7 +8215,12 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/1201-5-joynton-avenue-zetland-nsw-2017-2020806185"
+      "resolved_url": "https://www.domain.com.au/1201-5-joynton-avenue-zetland-nsw-2017-2020806185",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "11/47 Wharf Road",
@@ -8194,22 +8249,22 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -8232,7 +8287,12 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/11-47-wharf-road-birchgrove-nsw-2041-2020953012"
+      "resolved_url": "https://www.domain.com.au/11-47-wharf-road-birchgrove-nsw-2041-2020953012",
+      "beds": 0,
+      "baths": 1,
+      "property_type": "studio",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "5/121-123 New Canterbury Road",
@@ -9391,29 +9451,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 41,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 7.2,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -9431,7 +9490,14 @@
       "lat": -33.905198,
       "lon": 151.2040634,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/801-6-ebsworth-street-zetland-nsw-2017-2020955862"
+      "resolved_url": "https://www.domain.com.au/801-6-ebsworth-street-zetland-nsw-2017-2020955862",
+      "internal_m2": 83,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "2201/15 Gadigal Avenue",
@@ -10377,9 +10443,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -10387,9 +10453,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -10417,7 +10481,12 @@
       "lat": -33.88833,
       "lon": 151.1787783,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/3-8-dunblane-street-camperdown-nsw-2050-2020959550"
+      "resolved_url": "https://www.domain.com.au/3-8-dunblane-street-camperdown-nsw-2050-2020959550",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "201/1 Missenden Road",
@@ -10873,29 +10942,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 47,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 13.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -10913,7 +10979,14 @@
       "lat": -33.9119668,
       "lon": 151.2125324,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/level-2-203-136-epsom-road-zetland-nsw-2017-2020959232"
+      "resolved_url": "https://www.domain.com.au/level-2-203-136-epsom-road-zetland-nsw-2017-2020959232",
+      "internal_m2": 109,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "15 Bradford Street",
@@ -11220,10 +11293,10 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -11231,19 +11304,16 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 48,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 15.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -11261,7 +11331,14 @@
       "lon": 151.15702,
       "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/209-7-church-street-drummoyne-nsw-2047-2020966524",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "internal_m2": 112,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "204/1 Brightwell Lane",
@@ -13306,29 +13383,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 46,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 12.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -13346,7 +13420,14 @@
       "lon": 151.2031385,
       "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/1215-303-botany-road-zetland-nsw-2017-2019500912",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "internal_m2": 106,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "8/124-126 Parramatta Road",
@@ -13718,29 +13799,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 39,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 5.4,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -13758,7 +13838,14 @@
       "lon": 151.1859923,
       "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/7-164-glebe-point-road-glebe-nsw-2037-2020985233",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "internal_m2": 62,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "185A Trafalgar Lane",
@@ -13996,9 +14083,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -14007,9 +14094,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -14035,7 +14120,25 @@
       "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/123-addison-road-marrickville-nsw-2204-2021011624",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 221,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "council_pq": 450.0,
+      "water_pq": 247.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council $450 p/q | Water $247 p/q",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_pa": 2788,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "175 Denison Street",
@@ -14347,9 +14450,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -14357,9 +14460,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -14385,7 +14486,12 @@
       "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/2-bed-163-mitchell-rd-erskineville-nsw-2043-2021152419",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "186D Victoria Road",
