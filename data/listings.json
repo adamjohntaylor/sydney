@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T22:24:37.579028+00:00",
-  "generated_at_sydney": "2026-10-12 08:24 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-11T22:51:16.093584+00:00",
+  "generated_at_sydney": "2026-10-12 08:51 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 136,
-    "tier1_pass": 130,
+    "total": 135,
+    "tier1_pass": 126,
     "new": 27,
     "price_changed": 2,
     "sold": 163,
-    "under_offer": 2,
+    "under_offer": 3,
     "withdrawn": 49
   },
   "listings": [
@@ -18877,7 +18877,7 @@
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-12",
       "prior_price_text": "$1,200,000",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 13
     },
@@ -19241,9 +19241,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19252,9 +19252,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -19276,13 +19274,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9125263,
       "lon": 151.1520216,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/12-11-arthur-st-marrickville-nsw-2204-2021153728"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/12-11-arthur-st-marrickville-nsw-2204-2021153728",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "77A Hubert Street",
@@ -19309,9 +19312,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19319,9 +19322,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -19343,13 +19344,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8744578,
       "lon": 151.1535422,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/77a-hubert-street-lilyfield-nsw-2040-2021194826"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/77a-hubert-street-lilyfield-nsw-2040-2021194826",
+      "beds": 2,
+      "baths": 3,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "109/69 Allen Street",
@@ -19373,23 +19379,23 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -19408,13 +19414,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8786058,
       "lon": 151.1541033,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/109-69-allen-street-leichhardt-nsw-2040-2021193792"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/109-69-allen-street-leichhardt-nsw-2040-2021193792",
+      "land_m2": 82,
+      "area_basis": "page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "17 Johnston Street",
@@ -19441,29 +19454,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -19475,13 +19485,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.88646,
       "lon": 151.1686781,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/17-johnston-street-annandale-nsw-2038-2021192053"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/17-johnston-street-annandale-nsw-2038-2021192053",
+      "internal_m2": 227,
+      "area_basis": "page data: building/floor area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "townhouse",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "50 Macdonald Street",
@@ -19508,9 +19525,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19518,9 +19535,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -19542,13 +19557,29 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9035228,
       "lon": 151.1836505,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/50-macdonald-street-erskineville-nsw-2043-2021194725"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/50-macdonald-street-erskineville-nsw-2043-2021194725",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "council_pq": 388.0,
+      "water_pq": 246.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water $246pq, Council $388pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_pa": 2536,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "39/127 Railway Parade",
@@ -19575,9 +19606,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19585,9 +19616,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -19609,13 +19638,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8986951,
       "lon": 151.1884274,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/39-127-railway-parade-erskineville-nsw-2043-2021193762"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/39-127-railway-parade-erskineville-nsw-2043-2021193762",
+      "land_m2": 67,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "23/15-17 Fountain Street",
@@ -19642,29 +19678,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -19676,13 +19709,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9017459,
       "lon": 151.1953177,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/23-15-17-fountain-street-alexandria-nsw-2015-2021193000"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/23-15-17-fountain-street-alexandria-nsw-2015-2021193000",
+      "internal_m2": 151,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "207/110 Epsom Road",
@@ -19709,9 +19749,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19719,9 +19759,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -19743,13 +19781,32 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9114015,
       "lon": 151.209378,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/207-110-epsom-road-zetland-nsw-2017-2021192911"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/207-110-epsom-road-zetland-nsw-2017-2021192911",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 1235.07,
+      "council_pq": 336.4,
+      "water_pq": 280.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water Rates: $280.00 p/q approx. Council Rates: $336.40 p/q approx. Strata levy: $1,235.07 p/q approx.",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 4940,
+      "outgoings_pa": 7406,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "3/331 Balmain Road",
@@ -19776,9 +19833,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19786,9 +19843,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -19810,13 +19865,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8716763,
       "lon": 151.1601187,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/3-331-balmain-road-lilyfield-nsw-2040-2021177514"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/3-331-balmain-road-lilyfield-nsw-2040-2021177514",
+      "land_m2": 97,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "townhouse",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "62 Margaret Street",
@@ -19911,9 +19973,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19922,9 +19984,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -19946,13 +20006,27 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.905083,
       "lon": 151.2040266,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/2106-6-ebsworth-street-zetland-nsw-2017-2020266256"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/2106-6-ebsworth-street-zetland-nsw-2017-2020266256",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_unstated": {
+        "strata": 1674.0,
+        "water": 179.0,
+        "council": 320.0
+      },
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata levy: Approx. $1,674/quarter Water Rate: Approx. $179/quarter Council Rate: Approx. $320/quarter",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "47 Frampton Avenue",
@@ -19979,9 +20053,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -19989,9 +20063,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20013,13 +20085,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9105719,
       "lon": 151.1596921,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/47-frampton-avenue-marrickville-nsw-2204-2021197746",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 202,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "61 Addison Road",
@@ -20046,29 +20125,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 40,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.7,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -20080,13 +20158,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9029152,
       "lon": 151.1658377,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/61-addison-road-marrickville-nsw-2204-2021196939",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "internal_m2": 77,
+      "land_m2": 177,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "2/3 Anderton Street",
@@ -20113,22 +20199,22 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -20147,13 +20233,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9075019,
       "lon": 151.1512415,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/2-3-anderton-street-marrickville-nsw-2204-2021196926",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 91,
+      "area_basis": "page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "13/9 Hill Street",
@@ -20180,9 +20273,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -20190,9 +20283,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20214,13 +20305,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9171833,
       "lon": 151.1465644,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/13-9-hill-street-marrickville-nsw-2204-2021196873",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "9/3 Roach Street",
@@ -20247,9 +20343,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -20257,9 +20353,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20281,13 +20375,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9154887,
       "lon": 151.1484506,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/9-3-roach-street-marrickville-nsw-2204-2021196648",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 158,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "214/3 Nagurra Place",
@@ -20314,29 +20415,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 46,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 12.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -20348,13 +20446,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8610145,
       "lon": 151.1687537,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/214-3-nagurra-place-rozelle-nsw-2039-2021184913",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "internal_m2": 106,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "18 Ferry Road",
@@ -20452,9 +20557,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -20462,9 +20567,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20486,13 +20589,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9176274,
       "lon": 151.1453055,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/9-40-42-hill-street-marrickville-nsw-2204-2021160212",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 84,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "26/18 Cecilia Street",
@@ -20519,29 +20629,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 50,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 17.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -20553,13 +20660,34 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9080967,
       "lon": 151.1554903,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/26-18-cecilia-street-marrickville-nsw-2204-2021157203",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "internal_m2": 124,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 1822.0,
+      "council_pq": 410.0,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water $226pq, Council $410pq, Strata $1822pq",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 7288,
+      "outgoings_pa": 9832,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "40 Pile Street",
@@ -20586,9 +20714,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -20596,9 +20724,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20621,12 +20747,22 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-04",
-      "change_flag": "UNCHANGED",
+      "change_flag": "UNDER_OFFER",
       "lat": -33.9034257,
       "lon": 151.1475564,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/40-pile-street-dulwich-hill-nsw-2203-2021172978",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 265,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: UNDER OFFER"
     },
     {
       "address": "74a Burfitt Street",
@@ -20650,9 +20786,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -20661,9 +20797,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20685,13 +20819,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8814289,
       "lon": 151.1484569,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/74a-burfitt-street-leichhardt-nsw-2040-2021196892",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 210,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 3,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "222 Corunna Road",
@@ -22430,7 +22571,7 @@
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-12",
       "prior_price_text": "$860,000",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 10
     },
@@ -23366,7 +23507,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "33/3 Williams Parade",
@@ -23429,7 +23570,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "5/589-591 New Canterbury Road",
@@ -23494,7 +23635,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "102/1 Gantry Lane",
@@ -23559,7 +23700,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "9 Frazer Street",
@@ -23624,7 +23765,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "02/383 Darling Street",
@@ -23689,7 +23830,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "76/24 Buchanan Street",
@@ -23754,7 +23895,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "35 Alice Street",
@@ -23819,7 +23960,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "32 Excelsior Street",
@@ -23882,7 +24023,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8873467,
       "lon": 151.1533883
     },
@@ -23947,7 +24088,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8806588,
       "lon": 151.157986
     },
@@ -24010,7 +24151,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8822763,
       "lon": 151.1678195
     },
@@ -24075,7 +24216,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8506865,
       "lon": 151.153026
     },
@@ -24140,7 +24281,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9042504,
       "lon": 151.1854778
     },
@@ -24205,7 +24346,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9072907,
       "lon": 151.2069994
     },
@@ -24270,7 +24411,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9030771,
       "lon": 151.194829
     },
@@ -24335,7 +24476,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9050197,
       "lon": 151.2130703
     },
@@ -24400,7 +24541,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9061506,
       "lon": 151.1859924
     },
@@ -24465,7 +24606,7 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8533075,
       "lon": 151.1605504
     },
@@ -24478,13 +24619,19 @@
       "price_min": 1100000,
       "price_max": 1100000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 21,
+          "supermarket": 15,
+          "pool": 112,
+          "park": 92,
+          "restaurants": 29
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24492,8 +24639,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24501,23 +24648,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24526,7 +24671,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.9018509,
+      "lon": 151.2007232
     },
     {
       "address": "2/30 Norton Street",
@@ -24537,13 +24684,19 @@
       "price_min": 1525000,
       "price_max": 1525000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 102,
+          "supermarket": 141,
+          "pool": 615,
+          "park": 259,
+          "restaurants": 59
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24551,8 +24704,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24560,23 +24713,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24585,7 +24736,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8811245,
+      "lon": 151.1892828
     },
     {
       "address": "3/1 Albert Street",
@@ -24596,13 +24749,19 @@
       "price_min": 1525000,
       "price_max": 1525000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 359,
+          "supermarket": 623,
+          "pool": 1023,
+          "park": 139,
+          "restaurants": 506
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24610,8 +24769,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24619,23 +24778,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24644,7 +24801,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8701658,
+      "lon": 151.1694158
     },
     {
       "address": "710/27 Margaret Street",
@@ -24655,13 +24814,19 @@
       "price_min": 1400000,
       "price_max": 1400000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 270,
+          "supermarket": 434,
+          "pool": 202,
+          "park": 37,
+          "restaurants": 263
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24669,8 +24834,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24678,23 +24843,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24703,7 +24866,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8594087,
+      "lon": 151.1670178
     },
     {
       "address": "26 Tennyson Street",
@@ -24714,13 +24879,19 @@
       "price_min": 1900000,
       "price_max": 1900000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 241,
+          "supermarket": 466,
+          "pool": 1176,
+          "park": 76,
+          "restaurants": 416
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24728,8 +24899,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24737,23 +24908,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24762,7 +24931,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.9115066,
+      "lon": 151.1364898
     },
     {
       "address": "1 Reserve Street",
@@ -24773,13 +24944,19 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 361,
+          "supermarket": 477,
+          "pool": 977,
+          "park": 288,
+          "restaurants": 251
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24787,8 +24964,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24796,23 +24973,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24821,7 +24996,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8847873,
+      "lon": 151.1685054
     },
     {
       "address": "1/30 Wrights Road",
@@ -24832,13 +25009,19 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 104,
+          "supermarket": 370,
+          "pool": 620,
+          "park": 340,
+          "restaurants": 298
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24846,8 +25029,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24855,23 +25038,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24880,7 +25061,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8477366,
+      "lon": 151.1534949
     },
     {
       "address": "711/27 Margaret Street",
@@ -24891,13 +25074,19 @@
       "price_min": 1150000,
       "price_max": 1150000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 270,
+          "supermarket": 434,
+          "pool": 202,
+          "park": 37,
+          "restaurants": 263
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24905,8 +25094,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24914,23 +25103,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24939,7 +25126,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8594087,
+      "lon": 151.1670178
     },
     {
       "address": "905 South Dowling Street",
@@ -24950,13 +25139,19 @@
       "price_min": 1370000,
       "price_max": 1370000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 183,
+          "supermarket": 425,
+          "pool": 333,
+          "park": 186,
+          "restaurants": 343
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -24964,8 +25159,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -24973,23 +25168,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -24998,7 +25191,9 @@
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.9102764,
+      "lon": 151.211222
     }
   ]
 }
