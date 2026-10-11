@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T22:23:26.244807+00:00",
-  "generated_at_sydney": "2026-10-12 08:23 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-11T22:24:37.579028+00:00",
+  "generated_at_sydney": "2026-10-12 08:24 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 139,
-    "tier1_pass": 133,
+    "total": 136,
+    "tier1_pass": 130,
     "new": 27,
     "price_changed": 2,
-    "sold": 161,
+    "sold": 163,
     "under_offer": 2,
-    "withdrawn": 48
+    "withdrawn": 49
   },
   "listings": [
     {
@@ -17090,12 +17090,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.8520456,
       "lon": 151.1556997,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/9-162-victoria-road-drummoyne-nsw-2047-2020883813"
     },
     {
@@ -17247,10 +17247,14 @@
       "warehouse_character": false,
       "first_seen": "2026-08-17",
       "last_seen": "2026-10-04",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/19-295-victoria-road-marrickville-nsw-2204-2021074013"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/19-295-victoria-road-marrickville-nsw-2204-2015525318",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2019-09-07, before first seen 2026-08-17)",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2f295+victoria+road+marrickville"
     },
     {
       "address": "14 Reynolds Avenue",
@@ -17380,10 +17384,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/922-bourke-street-zetland-nsw-2017-2021073756"
     },
     {
@@ -17515,10 +17519,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/56-22-buchanan-street-balmain-nsw-2041-2021073631"
     },
     {
@@ -17653,10 +17657,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/710-7-metters-street-erskineville-nsw-2043-2021075088"
     },
     {
@@ -17718,10 +17722,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/221-1-phillip-street-petersham-nsw-2049-2020998217"
     },
     {
@@ -17994,10 +17998,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/103-383-darling-street-balmain-nsw-2041-2021042393"
     },
     {
@@ -18132,10 +18136,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702"
     },
     {
@@ -18200,10 +18204,15 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-04",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/41-33-euston-road-alexandria-nsw-2015-2021160176"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/41-33-euston-road-alexandria-nsw-2015-2021160176",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-10",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=41%2f33+euston+road+alexandria",
+      "sold_date": "2026-10-10"
     },
     {
       "address": "6/64 Arthur Street",
@@ -18266,10 +18275,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841"
     },
     {
@@ -18331,10 +18340,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911"
     },
     {
@@ -18398,10 +18407,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573"
     },
     {
@@ -18465,10 +18474,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/104-551-darling-street-rozelle-nsw-2039-2021195031"
     },
     {
@@ -18532,10 +18541,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/53-ferry-road-glebe-nsw-2037-2021194758"
     },
     {
@@ -18600,10 +18609,15 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-04",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/36-12-leicester-street-marrickville-nsw-2204-2021194309"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/36-12-leicester-street-marrickville-nsw-2204-2021194309",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-08",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=36%2f12+leicester+street+marrickville",
+      "sold_date": "2026-10-08"
     },
     {
       "address": "4/12-16 Terrace Road",
@@ -18666,10 +18680,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/4-12-16-terrace-road-dulwich-hill-nsw-2203-2021193842"
     },
     {
@@ -18868,12 +18882,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9078861,
       "lon": 151.1538946,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/19-lilydale-street-marrickville-nsw-2204-2021160966"
     },
     {
@@ -18935,12 +18949,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.90256189999999,
       "lon": 151.139519,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/88-constitution-road-dulwich-hill-nsw-2203-2021142696"
     },
     {
@@ -19002,12 +19016,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8737814,
       "lon": 151.1817771,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/6-268-glebe-point-road-glebe-nsw-2037-2021028523"
     },
     {
@@ -19069,12 +19083,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9189074,
       "lon": 151.1462165,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/28-525-illawarra-road-marrickville-nsw-2204-2021195095"
     },
     {
