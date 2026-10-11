@@ -6776,7 +6776,7 @@
         "2",
         "1"
       ],
-      "price_guide_text": "$1,450,000",
+      "price_guide_text": "Guide $1,450,000",
       "price_min": 1450000,
       "price_max": 1450000,
       "source": "realestate",
@@ -6836,7 +6836,7 @@
       "warehouse_character": false,
       "status_checked_on": "2026-10-12",
       "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-04",
+      "area_checked_on": "2026-10-12",
       "status": "",
       "note": "",
       "strata_pq": 1996.21,
@@ -6851,7 +6851,8 @@
         "strata",
         "council",
         "water"
-      ]
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "1/19-21 Larkin Street",
