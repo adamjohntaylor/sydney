@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T22:51:16.093584+00:00",
-  "generated_at_sydney": "2026-10-12 08:51 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-11T22:53:56.366993+00:00",
+  "generated_at_sydney": "2026-10-12 08:53 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 135,
-    "tier1_pass": 126,
+    "tier1_pass": 122,
     "new": 27,
     "price_changed": 2,
     "sold": 163,
@@ -20859,9 +20859,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -20869,9 +20869,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20893,13 +20891,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8903343,
       "lon": 151.1595972,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/222-corunna-road-petersham-nsw-2049-2021106869",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "land_m2": 132,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "13/16 Wolseley Street",
@@ -20923,9 +20928,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -20934,9 +20939,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -20958,13 +20961,32 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8460162,
       "lon": 151.1543064,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/13-16-wolseley-street-drummoyne-nsw-2047-2021199827",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 1030.55,
+      "council_pq": 420.0,
+      "water_pq": 216.5,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water rates: $866.00 p/a Council rates: $1,680.00 p/a Strata rates: $1,030.55 p/q",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 4122,
+      "outgoings_pa": 6668,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "3401/2 Nassau Lane",
@@ -20991,29 +21013,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 51,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 17.3,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -21025,13 +21044,28 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/3401-2-nassau-lane-erskineville-nsw-2043-2021198559",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.9049842,
-      "lon": 151.1859672
+      "lon": 151.1859672,
+      "internal_m2": 126,
+      "land_m2": 126,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_unstated": {
+        "strata": 1980.0
+      },
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata levies approx. $1980/quarter",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "3 Coulson Street",
@@ -21055,9 +21089,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21066,9 +21100,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21090,13 +21122,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/3-coulson-street-erskineville-nsw-2043-2021197903",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.905498,
-      "lon": 151.1852012
+      "lon": 151.1852012,
+      "land_m2": 159,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "2105/1 Metters Street",
@@ -21123,29 +21162,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 45,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 11.8,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -21157,13 +21193,31 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/2105-1-metters-street-erskineville-nsw-2043-2021197616",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.9033337,
-      "lon": 151.186723
+      "lon": 151.186723,
+      "internal_m2": 103,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "council_pq": 336.0,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council $336pq, Water $226pq, (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_pa": 2248,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "420C/39 Ralph Street",
@@ -21190,29 +21244,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 44,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 10.4,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -21224,13 +21277,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/420c-39-ralph-street-alexandria-nsw-2015-2021184412",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.9182626,
-      "lon": 151.1985717
+      "lon": 151.1985717,
+      "internal_m2": 99,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "545/8 Ascot Avenue",
@@ -21257,9 +21317,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21267,9 +21327,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21291,13 +21349,30 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/545-8-ascot-avenue-zetland-nsw-2017-2021171343",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.9084076,
-      "lon": 151.2114344
+      "lon": 151.2114344,
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 2320.0,
+      "council_pq": 336.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council rate: $1344 p/a approx. Strata rate: $2,320 p/q approx.",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 9280,
+      "outgoings_pa": 10624,
+      "outgoings_known": [
+        "strata",
+        "council"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "01/71-91 Euston Road",
@@ -21396,9 +21471,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21406,9 +21481,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21430,11 +21503,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/15-rowntree-street-balmain-nsw-2041-2021204127"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/15-rowntree-street-balmain-nsw-2041-2021204127",
+      "land_m2": 107,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "100 Silver Street",
@@ -21460,9 +21540,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21471,9 +21551,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21495,11 +21573,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/100-silver-street-marrickville-nsw-2204-2021204040"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/100-silver-street-marrickville-nsw-2204-2021204040",
+      "land_m2": 113,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "16/345-357 Illawarra Road",
@@ -21528,9 +21613,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21538,9 +21623,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21562,11 +21645,30 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/16-345-357-illawarra-road-marrickville-nsw-2204-2021203273"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/16-345-357-illawarra-road-marrickville-nsw-2204-2021203273",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 1088.0,
+      "council_pq": 410.0,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata Levies - Approx. $1,088 pq Council Rates - Approx $410 pq Water Rates - Approx $226 pq",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 4352,
+      "outgoings_pa": 6896,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "50 Hopetoun Street",
@@ -21595,29 +21697,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 40,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -21629,11 +21730,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/50-hopetoun-street-camperdown-nsw-2050-2021202682"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/50-hopetoun-street-camperdown-nsw-2050-2021202682",
+      "internal_m2": 79,
+      "land_m2": 141,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "83 Darley Street",
@@ -21662,9 +21771,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21672,9 +21781,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21696,11 +21803,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/83-darley-street-newtown-nsw-2042-2021202585"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/83-darley-street-newtown-nsw-2042-2021202585",
+      "land_m2": 181,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "2/104 Douglas Street",
@@ -21729,29 +21843,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 40,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -21763,11 +21876,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/2-104-douglas-street-stanmore-nsw-2048-2021202314"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/2-104-douglas-street-stanmore-nsw-2048-2021202314",
+      "internal_m2": 75,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "93 Union Street",
@@ -21796,9 +21916,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21806,9 +21926,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21830,11 +21948,29 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/93-union-street-newtown-nsw-2042-2021201940"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/93-union-street-newtown-nsw-2042-2021201940",
+      "land_m2": 107,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "council_pq": 371.0,
+      "water_pq": 246.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water $246pq, Council $371pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_pa": 2468,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "23/176-180 Salisbury Road",
@@ -21863,9 +21999,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -21873,9 +22009,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -21897,11 +22031,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/23-176-180-salisbury-road-camperdown-nsw-2050-2021201925"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/23-176-180-salisbury-road-camperdown-nsw-2050-2021201925",
+      "land_m2": 89,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "22 View Street",
@@ -21930,29 +22071,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 51,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 17.7,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -21964,11 +22102,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/22-view-street-annandale-nsw-2038-2021201518"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/22-view-street-annandale-nsw-2038-2021201518",
+      "internal_m2": 130,
+      "land_m2": 303,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "807/13 Joynton Avenue",
@@ -21997,29 +22143,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 51,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 17.4,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -22031,11 +22174,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/807-13-joynton-avenue-zetland-nsw-2017-2021201336"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/807-13-joynton-avenue-zetland-nsw-2017-2021201336",
+      "internal_m2": 127,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "1A Mandible Street",
@@ -22062,29 +22212,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 47,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 13.2,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -22096,13 +22243,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.903437,
       "lon": 151.2014564,
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/7m-1a-mandible-street-alexandria-nsw-2015-2021201277"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/7m-1a-mandible-street-alexandria-nsw-2015-2021201277",
+      "internal_m2": 107,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "8/69 Tranmere Street",
@@ -22129,22 +22283,21 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -22163,13 +22316,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8539808,
       "lon": 151.1522546,
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/8-69-tranmere-street-drummoyne-nsw-2047-2021179309"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/8-69-tranmere-street-drummoyne-nsw-2047-2021179309",
+      "internal_m2": 92,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "15/1 Buchanan Street",
@@ -22267,9 +22427,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -22277,9 +22437,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -22301,13 +22459,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8916957,
       "lon": 151.176046,
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/109-australia-street-camperdown-nsw-2050-2020764417"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/109-australia-street-camperdown-nsw-2050-2020764417",
+      "land_m2": 127,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "101/383 Darling Street",
