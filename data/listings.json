@@ -5579,7 +5579,7 @@
         "pass": true
       },
       "tier2": {
-        "score": 76,
+        "score": 75,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
@@ -5590,7 +5590,7 @@
           "parks": 9,
           "restaurants": 9
         },
-        "strata_penalty": 0.0,
+        "strata_penalty": 1.1,
         "warehouse_character": false
       },
       "warehouse_character": false,
@@ -5600,7 +5600,21 @@
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 106,
       "area_basis": "page text: labelled internal/floor area",
-      "area_checked_on": "2026-10-04"
+      "area_checked_on": "2026-10-04",
+      "strata_pq": 3228.0,
+      "council_pq": 275.0,
+      "water_pq": 177.0,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Water Rates: $177 Quarterly approx Council Rates: $275 Quarterly approx Strata Levies: $3,228 Quarterly approx",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 12912,
+      "outgoings_pa": 14720,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
@@ -5959,7 +5973,21 @@
       "baths": 2,
       "parking": 1,
       "status_checked_on": "2026-10-12",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "strata_pq": 1945.0,
+      "council_pq": 320.0,
+      "water_pq": 209.0,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Strata: $1,945p/q approx. Water: $209p/q approx. Council: $320p/q approx. Total o",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 7780,
+      "outgoings_pa": 9896,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/sold/property-unit-nsw-glebe-150824100",
@@ -6048,7 +6076,21 @@
       "parking": 2,
       "departed_on": "2026-07-25",
       "status_source": "bookmarklet",
-      "status_basis": "URL path (/sold/)"
+      "status_basis": "URL path (/sold/)",
+      "strata_pq": 1643.0,
+      "council_pq": 264.0,
+      "water_pq": 185.0,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Water $185pq, Council $264pq, Strata $1643pq (All approx.) O",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-06-24",
+      "strata_pa": 6572,
+      "outgoings_pa": 8368,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151119724",
@@ -6114,7 +6156,7 @@
         "pass": true
       },
       "tier2": {
-        "score": 68,
+        "score": 58,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
@@ -6125,7 +6167,7 @@
           "parks": 9,
           "restaurants": 9
         },
-        "strata_penalty": 0.0,
+        "strata_penalty": 10,
         "warehouse_character": false
       },
       "warehouse_character": false,
@@ -6133,7 +6175,21 @@
       "departed_on": "2026-09-29",
       "status_source": "sweep_check",
       "status_basis": "chrome: URL under /sold/",
-      "sold_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151119724"
+      "sold_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151119724",
+      "strata_pq": 6000.0,
+      "council_pq": 335.0,
+      "water_pq": 177.0,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Water Rates: $177 Quarterly approx Council Rates: $335 Quarterly approx Strata Levies: Currently $6,000 Quarterly a",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-06-24",
+      "strata_pa": 24000,
+      "outgoings_pa": 26048,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648",
@@ -6303,7 +6359,21 @@
         "lift": null
       },
       "status_checked_on": "2026-10-12",
-      "flag_cleared_on": "2026-10-01"
+      "flag_cleared_on": "2026-10-01",
+      "strata_pq": 1781.55,
+      "council_pq": 308.4,
+      "water_pq": 179.9,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Strata: $1781.55 Per Quarter - Council: $308.40 Per Quarter - Water: $179.90 Per Quarter If you",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 7126,
+      "outgoings_pa": 9079,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-145098028",
@@ -6379,7 +6449,21 @@
       "status_checked_on": "2026-09-29",
       "departed_on": "2026-09-29",
       "status_source": "sweep_check",
-      "status_basis": "chrome: Under offer"
+      "status_basis": "chrome: Under offer",
+      "strata_pq": 1689.0,
+      "council_pq": 295.0,
+      "water_pq": 169.0,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Strata: $1,689 pq Council: $ 295 pq Water: $ 169 pq Please contact",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-06-24",
+      "strata_pa": 6756,
+      "outgoings_pa": 8612,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151024140",
@@ -6453,7 +6537,7 @@
         "pass": true
       },
       "tier2": {
-        "score": 88,
+        "score": 87,
         "leading": "outlook: water",
         "components": {
           "outlook": 30.0,
@@ -6464,7 +6548,7 @@
           "parks": 9,
           "restaurants": 9
         },
-        "strata_penalty": 0.0,
+        "strata_penalty": 1.5,
         "warehouse_character": true
       },
       "warehouse_character": true,
@@ -6472,7 +6556,21 @@
       "note": "",
       "departed_on": "2026-07-25",
       "status_source": "bookmarklet",
-      "status_basis": "URL path (/sold/)"
+      "status_basis": "URL path (/sold/)",
+      "strata_pq": 3298.0,
+      "council_pq": 330.0,
+      "water_pq": 177.0,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Water Rates: $177 p/q (approx) Council Rates: $330 p/q (approx) Strata Levies: $3298 p/q (approx)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-06-24",
+      "strata_pa": 13192,
+      "outgoings_pa": 15220,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151018088",
@@ -6559,7 +6657,21 @@
       "departed_on": "2026-09-29",
       "status_source": "sweep_check",
       "status_basis": "chrome: URL under /sold/",
-      "sold_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151018088"
+      "sold_url": "https://www.realestate.com.au/sold/property-apartment-nsw-pyrmont-151018088",
+      "strata_pq": 2554.0,
+      "council_pq": 335.0,
+      "water_pq": 210.0,
+      "outgoings_source": "stored description",
+      "outgoings_snippet": "Strata: $2,554p/q approx. Water: $210p/q approx. Council: $335p/q approx. Area: A",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-06-24",
+      "strata_pa": 10216,
+      "outgoings_pa": 12396,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
@@ -6724,7 +6836,22 @@
       "warehouse_character": false,
       "status_checked_on": "2026-10-12",
       "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-04"
+      "area_checked_on": "2026-10-04",
+      "status": "",
+      "note": "",
+      "strata_pq": 1996.21,
+      "council_pq": 410.0,
+      "water_pq": 217.0,
+      "outgoings_source": "manual: agent / contract (drawer)",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-11",
+      "strata_pa": 7985,
+      "outgoings_pa": 10493,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ]
     },
     {
       "address": "1/19-21 Larkin Street",

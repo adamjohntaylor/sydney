@@ -219,5 +219,15 @@
     "note": "",
     "updated": "2026-10-04T02:58:04.693Z",
     "internal_m2": 102
+  },
+  "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-11T22:44:16.843Z",
+    "outgoings": {
+      "strata": 1996.21,
+      "council": 410,
+      "water": 217
+    }
   }
 }
