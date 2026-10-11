@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T23:00:02.197264+00:00",
-  "generated_at_sydney": "2026-10-12 09:00 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-11T23:02:46.899282+00:00",
+  "generated_at_sydney": "2026-10-12 09:02 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 132,
-    "tier1_pass": 108,
+    "total": 130,
+    "tier1_pass": 102,
     "new": 27,
     "price_changed": 2,
     "sold": 164,
-    "under_offer": 4,
+    "under_offer": 6,
     "withdrawn": 50
   },
   "listings": [
@@ -14591,9 +14591,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -14601,9 +14601,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -14629,7 +14627,25 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/20-garners-avenue-marrickville-nsw-2204-2021015740"
+      "resolved_url": "https://www.domain.com.au/20-garners-avenue-marrickville-nsw-2204-2021015740",
+      "land_m2": 182,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "council_pq": 445.0,
+      "water_pq": 247.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council $445 | Water $247 p/q",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_pa": 2768,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "6 Park Road",
@@ -15157,9 +15173,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -15167,9 +15183,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -15192,10 +15206,20 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "UNDER_OFFER",
       "days_on_market": 1,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/99-percival-road-stanmore-nsw-2048-2020977602"
+      "resolved_url": "https://www.domain.com.au/99-percival-road-stanmore-nsw-2048-2020977602",
+      "land_m2": 198,
+      "area_basis": "page data: land area",
+      "beds": 4,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: UNDER OFFER"
     },
     {
       "address": "208/106 Epsom Rd",
@@ -16562,9 +16586,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -16573,9 +16597,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -16603,7 +16625,14 @@
       "lat": -33.9011364,
       "lon": 151.1733104,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/79-marian-street-enmore-nsw-2042-2021017725"
+      "resolved_url": "https://www.domain.com.au/79-marian-street-enmore-nsw-2042-2021017725",
+      "land_m2": 139,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "307/5 Regent Street",
@@ -16627,9 +16656,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -16638,9 +16667,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -16668,7 +16695,14 @@
       "lat": -33.894758,
       "lon": 151.1559585,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/307-5-regent-street-petersham-nsw-2049-2021017312"
+      "resolved_url": "https://www.domain.com.au/307-5-regent-street-petersham-nsw-2049-2021017312",
+      "land_m2": 112,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "245 Enmore Road",
@@ -16692,9 +16726,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -16703,9 +16737,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -16733,7 +16765,12 @@
       "lat": -33.900443,
       "lon": 151.1701393,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/245-enmore-road-enmore-nsw-2042-2021017281"
+      "resolved_url": "https://www.domain.com.au/245-enmore-road-enmore-nsw-2042-2021017281",
+      "beds": 4,
+      "baths": 3,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "29 Laura Street",
@@ -17254,9 +17291,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -17264,9 +17301,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -17294,7 +17329,14 @@
       "lat": -33.9055052,
       "lon": 151.1616986,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/130-chapel-street-marrickville-nsw-2204-2020645359"
+      "resolved_url": "https://www.domain.com.au/130-chapel-street-marrickville-nsw-2204-2020645359",
+      "land_m2": 234,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "9/162 Victoria Road",
@@ -17321,29 +17363,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 51,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 17.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -17361,7 +17400,14 @@
       "lat": -33.8520456,
       "lon": 151.1556997,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/9-162-victoria-road-drummoyne-nsw-2047-2020883813"
+      "resolved_url": "https://www.domain.com.au/9-162-victoria-road-drummoyne-nsw-2047-2020883813",
+      "internal_m2": 128,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
@@ -17614,9 +17660,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -17625,9 +17671,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -17653,7 +17697,25 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/922-bourke-street-zetland-nsw-2017-2021073756"
+      "resolved_url": "https://www.domain.com.au/922-bourke-street-zetland-nsw-2017-2021073756",
+      "land_m2": 188,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "council_pq": 375.0,
+      "water_pq": 231.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water $231pq, Council $375pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_pa": 2424,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "9/91-93 Campbell Street",
@@ -17749,10 +17811,10 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -17760,19 +17822,16 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 47,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 13.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -17788,7 +17847,14 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/56-22-buchanan-street-balmain-nsw-2041-2021073631"
+      "resolved_url": "https://www.domain.com.au/56-22-buchanan-street-balmain-nsw-2041-2021073631",
+      "internal_m2": 109,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "10 Red Lion Street",
@@ -17888,9 +17954,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -17898,9 +17964,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -17926,7 +17990,12 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/710-7-metters-street-erskineville-nsw-2043-2021075088"
+      "resolved_url": "https://www.domain.com.au/710-7-metters-street-erskineville-nsw-2043-2021075088",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "221/1 Phillip Street",
@@ -17952,23 +18021,23 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -17991,7 +18060,12 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/221-1-phillip-street-petersham-nsw-2049-2020998217"
+      "resolved_url": "https://www.domain.com.au/221-1-phillip-street-petersham-nsw-2049-2020998217",
+      "beds": 0,
+      "baths": 1,
+      "property_type": "studio",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "3/14 McDonald Street",
@@ -18229,29 +18303,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 39,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.1,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -18264,10 +18338,21 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "UNDER_OFFER",
       "days_on_market": 0,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/103-383-darling-street-balmain-nsw-2041-2021042393"
+      "resolved_url": "https://www.domain.com.au/103-383-darling-street-balmain-nsw-2041-2021042393",
+      "internal_m2": 70,
+      "area_basis": "page data: building/floor area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: UNDER OFFER",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=103%2f383+darling+street+balmain"
     },
     {
       "address": "6/14 Denison Street",
@@ -18367,29 +18452,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 47,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 13.2,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -18405,7 +18487,14 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702"
+      "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702",
+      "internal_m2": 107,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "41/33 Euston Road",
@@ -18506,29 +18595,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 39,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 5.7,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -18544,7 +18632,14 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841"
+      "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841",
+      "internal_m2": 65,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "50/274 Botany Road",
@@ -18570,10 +18665,10 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -18581,19 +18676,16 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -18609,7 +18701,14 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911"
+      "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911",
+      "internal_m2": 151,
+      "area_basis": "page data: building/floor area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "504/1 Gantry Lane",
@@ -18638,29 +18737,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+        "fails": [
+          "bedrooms"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 46,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 12.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -18676,7 +18774,15 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573"
+      "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573",
+      "internal_m2": 106,
+      "land_m2": 106,
+      "area_basis": "page data: land area; page text: labelled internal/floor area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "104/551 Darling Street",
@@ -18705,29 +18811,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 39,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 5.2,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -18743,7 +18849,14 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/104-551-darling-street-rozelle-nsw-2039-2021195031"
+      "resolved_url": "https://www.domain.com.au/104-551-darling-street-rozelle-nsw-2039-2021195031",
+      "internal_m2": 60,
+      "area_basis": "page data: building/floor area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "53 Ferry Road",
@@ -18772,9 +18885,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -18782,9 +18895,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -18810,7 +18921,14 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/53-ferry-road-glebe-nsw-2037-2021194758"
+      "resolved_url": "https://www.domain.com.au/53-ferry-road-glebe-nsw-2037-2021194758",
+      "land_m2": 123,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "36/12 Leicester Street",
@@ -18911,9 +19029,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -18921,9 +19039,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -18949,7 +19065,21 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/4-12-16-terrace-road-dulwich-hill-nsw-2203-2021193842"
+      "resolved_url": "https://www.domain.com.au/4-12-16-terrace-road-dulwich-hill-nsw-2203-2021193842",
+      "land_m2": 136,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_unstated": {
+        "strata": 1357.95
+      },
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata: $1,357.95/quarter approx.",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "14/451-457 New Canterbury Road",
@@ -18978,29 +19108,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 50,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 16.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -19016,7 +19143,30 @@
       "prior_price_text": "$1,200,000",
       "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
-      "days_on_market": 13
+      "days_on_market": 13,
+      "status_checked_on": "2026-10-12",
+      "internal_m2": 123,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 2098.25,
+      "council_pq": 410.88,
+      "water_pq": 190.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council Rates: $410.88 per quarter approximately Water Rates: $190.00 per quarter approximately Strata Levies: $2,098.25 per quarter approxi",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 8393,
+      "outgoings_pa": 10797,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/14-451-457-new-canterbury-road-dulwich-hill-nsw-2203-2021151406"
     },
     {
       "address": "177 St Johns Road",
