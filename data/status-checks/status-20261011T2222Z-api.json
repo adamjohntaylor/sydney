@@ -1,0 +1,165 @@
+{
+  "generated_on": "2026-10-12",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
+      "listing_status": "unknown",
+      "status_basis": "chrome: no recognisable status signal",
+      "address": "1001/2 Cowper Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
+      "listing_status": "unknown",
+      "status_basis": "chrome: no recognisable status signal",
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "9 Metters Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1.07m",
+      "address": "802/6 Paul Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2F4+elger+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2f4+elger+street+glebe",
+      "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701",
+      "address": "325/4 Elger Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2h+wentworth+park+road+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 2 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464",
+      "address": "2H Wentworth Park Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/405-15-ralph-street-alexandria-nsw-2015-2016827031",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,170,000",
+      "address": "405/15 Ralph Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=186c+victoria+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 2 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768",
+      "address": "186C Victoria Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/208-1-9-pyrmont-bridge-road-pyrmont-nsw-2009-2020693826",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,100,000",
+      "address": "208/1-9 Pyrmont Bridge Road",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,150,000",
+      "address": "509/1 Wattle Crescent",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.domain.com.au/316-1-wattle-crescent-pyrmont-nsw-2009-2020910983",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1.22m",
+      "address": "316/1 Wattle Crescent",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$2,000,000",
+      "address": "1306/21 Cadigal Avenue",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,650,000",
+      "address": "601/320 Harris Street",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$7,019",
+      "address": "1101/89 Bay Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,775,000",
+      "address": "T04/1 Distillery Drive",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-144002648",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$2,225",
+      "address": "1003b/89 bay Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-terrace-nsw-glebe-145745952",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$2,011",
+      "address": "Terrace 6 Wentworth Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$6,228",
+      "address": "120/102 Miller Street",
+      "suburb": "Pyrmont"
+    },
+    {
+      "url": "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964",
+      "listing_status": "on_market",
+      "status_basis": "chrome: listing page rendered",
+      "price_guide_text": "$1,450,000",
+      "address": "50/110  Reynolds Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1201%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1201%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/1201-5-joynton-avenue-zetland-nsw-2017-2020806185",
+      "address": "1201/5 Joynton Avenue",
+      "suburb": "Zetland"
+    }
+  ]
+}
