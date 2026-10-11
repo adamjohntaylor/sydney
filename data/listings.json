@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-11T22:53:56.366993+00:00",
-  "generated_at_sydney": "2026-10-12 08:53 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-11T22:56:37.649838+00:00",
+  "generated_at_sydney": "2026-10-12 08:56 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 135,
-    "tier1_pass": 122,
+    "total": 132,
+    "tier1_pass": 113,
     "new": 27,
     "price_changed": 2,
-    "sold": 163,
-    "under_offer": 3,
-    "withdrawn": 49
+    "sold": 164,
+    "under_offer": 4,
+    "withdrawn": 50
   },
   "listings": [
     {
@@ -2667,7 +2667,7 @@
         "lift": true
       },
       "status_checked_on": "2026-10-12",
-      "area_checked_on": "2026-10-04",
+      "area_checked_on": "2026-10-12",
       "features": [
         "Balcony",
         "Secure Parking",
@@ -2679,7 +2679,8 @@
         "Pay TV Access",
         "Air conditioning",
         "Ensuite"
-      ]
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "63 Rofe Street",
@@ -3545,29 +3546,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 43,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 10.1,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -3583,7 +3583,14 @@
       "change_flag": "UNCHANGED",
       "days_on_market": 3,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701"
+      "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701",
+      "internal_m2": 98,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "13/36-46 Briggs Street",
@@ -3684,29 +3691,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 46,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 12.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -3726,7 +3730,28 @@
       "note": "",
       "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "internal_m2": 105,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 2400.0,
+      "council_pq": 250.0,
+      "water_pq": 180.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council Rates: $250 per quarter Strata Levies: $2,400 per quarter Water Rates: $180 per quarter",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 9600,
+      "outgoings_pa": 11320,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "04/222 Flood St Allen Street",
@@ -4101,10 +4126,11 @@
       "price_max": 1170000,
       "internal_m2": 102,
       "land_m2": 102,
-      "area_basis": "manual: floor plan / agent (drawer)",
-      "area_checked_on": "2026-10-04",
+      "area_basis": "page data: building/floor area; page data: land area",
+      "area_checked_on": "2026-10-12",
       "status": "",
-      "note": ""
+      "note": "",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "13/81-83 Bay Street",
@@ -4201,7 +4227,7 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
@@ -4213,7 +4239,6 @@
           "bedrooms"
         ],
         "unverified": [
-          "property_type",
           "accessibility",
           "floor_area"
         ],
@@ -4246,7 +4271,12 @@
       "lat": -33.909076,
       "lon": 151.1640187,
       "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768"
+      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768",
+      "land_m2": 112,
+      "area_basis": "page data: land area",
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "3/151-153 Illawarra Road",
@@ -5212,9 +5242,10 @@
       "internal_m2": 86,
       "land_m2": 107,
       "area_basis": "page data: building/floor area; page data: land area",
-      "area_checked_on": "2026-10-04",
+      "area_checked_on": "2026-10-12",
       "status": "rejected",
-      "note": ""
+      "note": "",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
@@ -22499,29 +22530,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 39,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -22533,13 +22564,20 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8558435,
       "lon": 151.1774258,
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/101-383-darling-street-balmain-nsw-2041-2021203055"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/101-383-darling-street-balmain-nsw-2041-2021203055",
+      "internal_m2": 69,
+      "area_basis": "page data: building/floor area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "2/7-9 Birchgrove Road",
@@ -22566,22 +22604,22 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -22600,13 +22638,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8554493,
       "lon": 151.1758351,
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/2-7-9-birchgrove-road-balmain-nsw-2041-2021179720"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/2-7-9-birchgrove-road-balmain-nsw-2041-2021179720",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "213/1 Sterling Circuit",
@@ -22630,23 +22673,23 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -22665,13 +22708,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8847302,
       "lon": 151.1763092,
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/213-1-sterling-circuit-camperdown-nsw-2050-2021169500"
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/213-1-sterling-circuit-camperdown-nsw-2050-2021169500",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "3/65-69 Nelson Street",
@@ -22764,9 +22812,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -22775,9 +22823,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -22799,11 +22845,16 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/29-13-greek-street-glebe-nsw-2037-2021205595",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "8/1 Buchanan Street",
@@ -22902,29 +22953,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 42,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 9.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -22936,11 +22986,32 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/11-19-23-stewart-street-glebe-nsw-2037-2021146619",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "internal_m2": 95,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 1640.0,
+      "council_pq": 277.0,
+      "water_pq": 185.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water $185pq, Council $277pq, Strata $1640pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 6560,
+      "outgoings_pa": 8408,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "501/359 Illawarra Road",
@@ -23072,10 +23143,14 @@
       "warehouse_character": false,
       "first_seen": "2026-10-03",
       "last_seen": "2026-10-04",
-      "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
-      "resolved_url": "https://www.domain.com.au/20-100-reynolds-street-balmain-nsw-2041-2021143270",
-      "flag_cleared_on": "2026-10-12"
+      "change_flag": "WITHDRAWN",
+      "status_checked_on": "2026-10-12",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "flag_cleared_on": "2026-10-12",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=20%2f100+reynolds+street+balmain"
     },
     {
       "address": "1A Lilydale Street",
@@ -23139,10 +23214,14 @@
       "warehouse_character": false,
       "first_seen": "2026-10-03",
       "last_seen": "2026-10-04",
-      "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "change_flag": "SOLD",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/1a-lilydale-street-marrickville-nsw-2204-2021095684",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-08",
+      "sold_date": "2026-10-08"
     },
     {
       "address": "26 Flood Street",
@@ -23171,9 +23250,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -23181,9 +23260,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -23205,11 +23282,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/26-flood-street-leichhardt-nsw-2040-2021207380",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "land_m2": 212,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "3/249 Johnston Street",
@@ -23238,9 +23322,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -23248,9 +23332,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -23272,11 +23354,18 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/3-249-johnston-street-annandale-nsw-2038-2021206905",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "land_m2": 109,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "106 Cavendish Street",
@@ -23302,10 +23391,10 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -23313,19 +23402,16 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -23337,11 +23423,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/106-cavendish-street-stanmore-nsw-2048-2021175624",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "internal_m2": 178,
+      "land_m2": 311,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 4,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "42/49 Henderson Road",
@@ -23368,29 +23462,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 48,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 14.6,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -23402,13 +23493,31 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8973388,
       "lon": 151.1927013,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/42-49-henderson-road-alexandria-nsw-2015-2021206205",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "internal_m2": 111,
+      "area_basis": "page text: unlabelled m² figure (apartment ⇒ internal)",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "council_pq": 414.75,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council Rates $1,659 pa, Water Rates $904 pa",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "outgoings_pa": 2563,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "404/5 Joynton Avenue",
@@ -23469,11 +23578,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.9072907,
       "lon": 151.2069994,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
       "flag_cleared_on": "2026-10-12"
     },
@@ -23502,29 +23611,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 42,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 9.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -23536,13 +23644,34 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "lat": -33.8460142,
       "lon": 151.153956,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/18-18-wolseley-street-drummoyne-nsw-2047-2021174609",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "internal_m2": 95,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "strata_pq": 2313.08,
+      "council_pq": 420.0,
+      "water_pq": 216.5,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water rates: $866.00 p/a Council rates: $1,680.00 p/a Strata rates: $2,313.08 p/q",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-12",
+      "strata_pa": 9252,
+      "outgoings_pa": 11798,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-12"
     },
     {
       "address": "318/17 Grandstand Parade",
@@ -23569,29 +23698,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 41,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 7.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -23604,12 +23732,23 @@
       "warehouse_character": false,
       "first_seen": "2026-10-03",
       "last_seen": "2026-10-04",
-      "change_flag": "UNCHANGED",
+      "change_flag": "UNDER_OFFER",
       "lat": -33.9076545,
       "lon": 151.2085576,
-      "status_checked_on": "2026-10-04",
+      "status_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/318-17-grandstand-parade-zetland-nsw-2017-2021205797",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "internal_m2": 86,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-12",
+      "departed_on": "2026-10-12",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: UNDER OFFER",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=318%2f17+grandstand+parade+zetland"
     },
     {
       "address": "88 Jarrett Street",
