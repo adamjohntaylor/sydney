@@ -24927,8 +24927,8 @@
     {
       "address": "502/75-91 Macdonald Street",
       "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502%2F75-91+macdonald+street+erskineville",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502/75-91+macdonald+street+erskineville",
+      "source": "domain",
       "price_guide_text": "$820,000",
       "price_min": 820000,
       "price_max": 820000,
@@ -24990,7 +24990,7 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "council_pq": 336.0,
       "water_pq": 226.0,
       "outgoings_source": "listing page: page data (embedded description)",
@@ -25002,9 +25002,11 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/502-75-91-macdonald-street-erskineville-nsw-2043-2021227420",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "parking": 1
     },
     {
       "address": "612/5 Joynton Avenue",
