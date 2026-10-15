@@ -19750,7 +19750,7 @@
       "address": "17 Johnston Street",
       "suburb": "Annandale",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+johnston+street+annandale",
-      "source": "domain_search",
+      "source": "domain",
       "price_guide_text": "$995,000 - $1,095,000",
       "price_min": 995000,
       "price_max": 995000,
@@ -19814,8 +19814,10 @@
       "beds": 3,
       "baths": 2,
       "property_type": "townhouse",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "parking": 1
     },
     {
       "address": "50 Macdonald Street",
