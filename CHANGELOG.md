@@ -43,6 +43,20 @@ also narrower than it looks: Domain's `og:image` is now served from
 - `scripts/serve.py` — bookmarklet enrichment records `image_basis` and
   `image_checked_on` too.
 
+**Refresh now starts Verify (same day, extension 1.2).** Adam asked why Verify is
+a separate step. It must run in Chrome (Domain/REA refuse Python; decision #27),
+but it need not be a separate click: new `extension/dashboard-bridge.js` is a
+content script on `localhost:8777` that bridges `window.postMessage` to the
+extension (`sydney-dashboard` → `ping` / `verify-start {cap}` / `verify-state`;
+`sydney-verifier` → `ready {version}` / `verify-state {state}`). `index.html`
+listens for `ready`, and after a successful `/api/refresh` with
+`verification_pending > 0` posts `verify-start` with `cap = pending + 20` (no
+"all"); progress ("verifying listing pages in Chrome: n / N — last line") shows
+in `saveState`, and the page reloads when the run ends. Without the extension
+the status line says how many pages await Verify. The popup still works for a
+manual or full ("include every active listing") pass. Manifest 1.1 → 1.2 so the
+reload is visible on chrome://extensions.
+
 **To apply:** reload the unpacked extension (chrome://extensions → ⟳), re-drag
 the bookmarklet from `localhost:8777/bookmarklet`, then run **Verify** with the
 cap raised — the worklist now holds 163 pages (99 for photo only, 63 for area).

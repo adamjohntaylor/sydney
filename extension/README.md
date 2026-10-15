@@ -11,6 +11,15 @@ requests with 403/429; it serves your browser normally).
 3. Pin the extension (puzzle icon → pin "Sydney Dashboard Verifier").
 
 ## Use
+**Normal:** serve the dashboard (`python scripts\serve.py`), open it at
+`http://localhost:8777`, press **Refresh now**. After the email/scoring pass the
+page hands whatever still needs a listing-page read (cover photo, floor area,
+outgoings, suspected departures) to this extension, shows "verifying listing
+pages in Chrome: n / N" beside the button, and reloads itself when the run ends.
+Nothing to click in the extension. (`dashboard-bridge.js` runs on the dashboard
+page and relays `window.postMessage` to the Verify run.)
+
+**Manual / full pass:**
 1. Serve the dashboard: `python scripts\serve.py` (it must be running on :8777).
 2. Click the extension icon → **Verify** (default 60 pages; raise to 300 to clear
    the backlog in one go; tick "include every active listing" for a full pass).
@@ -41,5 +50,10 @@ says **Sold / Under offer / no longer available** is reported to the dashboard
   decides sold (with sale date) vs withdrawn, ignoring sales dated more than
   60 days before the listing was first seen.
 
+Every rendered listing page also yields the **cover photo** (`cover_image`,
+og:image → JSON-LD → id-scoped page data → gallery img; `image_basis` says which).
+
 Files: `manifest.json` (MV3), `content.js` (page reader), `background.js`
-(Verify run + posting), `popup.html/js` (button + log).
+(Verify run + posting), `dashboard-bridge.js` (lets Refresh start a run),
+`popup.html/js` (button + log). After editing any of them: `chrome://extensions`
+→ reload arrow on the extension; the Version there confirms the reload.

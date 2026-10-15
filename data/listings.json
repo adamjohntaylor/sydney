@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T23:04:40.219671+00:00",
-  "generated_at_sydney": "2026-10-16 09:04 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-15T23:39:59.196651+00:00",
+  "generated_at_sydney": "2026-10-16 09:39 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 177,
+    "total": 175,
     "tier1_pass": 136,
     "new": 0,
     "price_changed": 0,
     "sold": 164,
-    "under_offer": 7,
-    "withdrawn": 55
+    "under_offer": 8,
+    "withdrawn": 56
   },
   "listings": [
     {
@@ -3612,18 +3612,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 3,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701",
       "internal_m2": 98,
       "area_basis": "page data: building/floor area",
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020909701_1_1_260611_050924-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "13/36-46 Briggs Street",
@@ -3755,13 +3758,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "prior_price_text": "$1,450,000",
       "change_flag": "UNCHANGED",
       "status": "interested",
       "days_on_market": 103,
       "note": "",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/1102-2h-wentworth-park-road-glebe-nsw-2037-2019455464",
       "flag_cleared_on": "2026-10-12",
       "internal_m2": 105,
@@ -3769,7 +3772,7 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "strata_pq": 2400.0,
       "council_pq": 250.0,
       "water_pq": 180.0,
@@ -3784,7 +3787,10 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2019455464_1_1_240828_034251-w1019-h499",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "04/222 Flood St Allen Street",
@@ -8244,16 +8250,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/1201-5-joynton-avenue-zetland-nsw-2017-2020806185",
       "beds": 3,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020806185_1_1_260902_114615-w1800-h1200",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "11/47 Wharf Road",
@@ -8317,15 +8326,22 @@
       "warehouse_character": false,
       "first_seen": "2026-06-30",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "UNDER_OFFER",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/11-47-wharf-road-birchgrove-nsw-2041-2020953012",
       "beds": 0,
       "baths": 1,
       "property_type": "studio",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020953012_1_1_260727_020323-w1200-h800",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-10-16",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Under Contract",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f47+wharf+road+birchgrove"
     },
     {
       "address": "5/121-123 New Canterbury Road",
@@ -9518,19 +9534,23 @@
       "warehouse_character": false,
       "first_seen": "2026-07-02",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.905198,
       "lon": 151.2040634,
-      "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/801-6-ebsworth-street-zetland-nsw-2017-2020955862",
+      "status_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
       "internal_m2": 83,
       "area_basis": "page data: building/floor area",
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "departed_on": "2026-10-16",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=801%2f6+ebsworth+street+zetland"
     },
     {
       "address": "2201/15 Gadigal Avenue",
@@ -10508,18 +10528,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.88833,
       "lon": 151.1787783,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/3-8-dunblane-street-camperdown-nsw-2050-2020959550",
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020959550_9_1_260630_031900-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "201/1 Missenden Road",
@@ -11006,20 +11029,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9119668,
       "lon": 151.2125324,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/level-2-203-136-epsom-road-zetland-nsw-2017-2020959232",
       "internal_m2": 109,
       "area_basis": "page data: building/floor area",
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020959232_1_1_261011_092729-w2364-h1773",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "15 Bradford Street",
@@ -11358,11 +11384,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "lat": -33.8541473,
       "lon": 151.15702,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/209-7-church-street-drummoyne-nsw-2047-2020966524",
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 112,
@@ -11370,8 +11396,11 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020966524_1_1_260702_060524-w8192-h5464",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "204/1 Brightwell Lane",
@@ -12270,14 +12299,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 22,
       "lat": -33.9040897,
       "lon": 151.1895377,
       "status_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103",
-      "status_check_failures": 1
+      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103"
     },
     {
       "address": "32/3 Gallimore Avenue",
@@ -13452,7 +13480,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9057052,
       "lon": 151.2031385,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/1215-303-botany-road-zetland-nsw-2017-2019500912",
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 106,
@@ -13461,7 +13489,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "8/124-126 Parramatta Road",
@@ -13870,7 +13899,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8788888,
       "lon": 151.1859923,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/7-164-glebe-point-road-glebe-nsw-2037-2020985233",
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 62,
@@ -13879,7 +13908,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "185A Trafalgar Lane",
@@ -14152,7 +14182,7 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/123-addison-road-marrickville-nsw-2204-2021011624",
       "flag_cleared_on": "2026-10-01",
       "land_m2": 221,
@@ -14172,7 +14202,8 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "175 Denison Street",
@@ -14518,14 +14549,15 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/2-bed-163-mitchell-rd-erskineville-nsw-2043-2021152419",
       "flag_cleared_on": "2026-10-01",
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "186D Victoria Road",
@@ -14660,7 +14692,7 @@
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/20-garners-avenue-marrickville-nsw-2204-2021015740",
       "land_m2": 182,
       "area_basis": "page data: land area",
@@ -14679,7 +14711,8 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "6 Park Road",
@@ -16658,7 +16691,7 @@
       "days_on_market": 1,
       "lat": -33.9011364,
       "lon": 151.1733104,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/79-marian-street-enmore-nsw-2042-2021017725",
       "land_m2": 139,
       "area_basis": "page data: land area",
@@ -16666,7 +16699,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "307/5 Regent Street",
@@ -16728,7 +16762,7 @@
       "days_on_market": 1,
       "lat": -33.894758,
       "lon": 151.1559585,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/307-5-regent-street-petersham-nsw-2049-2021017312",
       "land_m2": 112,
       "area_basis": "page data: land area",
@@ -16736,7 +16770,8 @@
       "baths": 2,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "245 Enmore Road",
@@ -16798,13 +16833,14 @@
       "days_on_market": 1,
       "lat": -33.900443,
       "lon": 151.1701393,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/245-enmore-road-enmore-nsw-2042-2021017281",
       "beds": 4,
       "baths": 3,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "29 Laura Street",
@@ -17362,7 +17398,7 @@
       "days_on_market": 0,
       "lat": -33.9055052,
       "lon": 151.1616986,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/130-chapel-street-marrickville-nsw-2204-2020645359",
       "land_m2": 234,
       "area_basis": "page data: land area",
@@ -17370,7 +17406,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "9/162 Victoria Road",
@@ -17433,7 +17470,7 @@
       "days_on_market": 0,
       "lat": -33.8520456,
       "lon": 151.1556997,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/9-162-victoria-road-drummoyne-nsw-2047-2020883813",
       "internal_m2": 128,
       "area_basis": "page data: building/floor area",
@@ -17441,7 +17478,8 @@
       "baths": 2,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
@@ -28725,13 +28763,19 @@
       "price_min": 1600000,
       "price_max": 1600000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 211,
+          "supermarket": 230,
+          "pool": 1202,
+          "park": 115,
+          "restaurants": 190
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -28739,30 +28783,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -28794,7 +28836,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245803_1_1_261015_062949-w4134-h2756",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/52-rochford-street-erskineville-nsw-2043-2021245803"
+      "resolved_url": "https://www.domain.com.au/52-rochford-street-erskineville-nsw-2043-2021245803",
+      "lat": -33.9012723,
+      "lon": 151.1826758
     },
     {
       "address": "1/33-35 Burren Street",
@@ -28802,13 +28846,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F33-35+burren+street+erskineville",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 111,
+          "supermarket": 242,
+          "pool": 1013,
+          "park": 151,
+          "restaurants": 211
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -28816,30 +28866,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "budget",
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 26,
+        "score": 53,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -28875,7 +28923,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245785_1_1_261015_062635-w8122-h5415",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/1-33-35-burren-street-erskineville-nsw-2043-2021245785"
+      "resolved_url": "https://www.domain.com.au/1-33-35-burren-street-erskineville-nsw-2043-2021245785",
+      "lat": -33.8978988,
+      "lon": 151.1858363
     },
     {
       "address": "5/31 Ness Avenue",
@@ -28886,13 +28936,19 @@
       "price_min": 900000,
       "price_max": 900000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 120,
+          "supermarket": 527,
+          "pool": 1051,
+          "park": 206,
+          "restaurants": 503
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -28900,30 +28956,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -28944,7 +28998,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245633_1_1_261015_060800-w3768-h2514",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/5-31-ness-avenue-dulwich-hill-nsw-2203-2021245633"
+      "resolved_url": "https://www.domain.com.au/5-31-ness-avenue-dulwich-hill-nsw-2203-2021245633",
+      "lat": -33.9105101,
+      "lon": 151.1356856
     },
     {
       "address": "26 Malcolm Street",
@@ -28955,13 +29011,19 @@
       "price_min": 900000,
       "price_max": 900000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 113,
+          "supermarket": 237,
+          "pool": 1038,
+          "park": 124,
+          "restaurants": 193
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -28969,30 +29031,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29024,7 +29084,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245275_1_1_261015_052813-w2048-h1365",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/26-malcolm-street-erskineville-nsw-2043-2021245275"
+      "resolved_url": "https://www.domain.com.au/26-malcolm-street-erskineville-nsw-2043-2021245275",
+      "lat": -33.9011292,
+      "lon": 151.1866957
     },
     {
       "address": "17/11 Hill Street",
@@ -29035,13 +29097,19 @@
       "price_min": 900000,
       "price_max": 900000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 165,
+          "supermarket": 345,
+          "pool": 838,
+          "park": 188,
+          "restaurants": 242
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29049,29 +29117,27 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": true,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 25,
+        "score": 52,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
           "living_area": 18.6,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29092,7 +29158,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244893_1_1_261015_044934-w3591-h2396",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/17-11-hill-street-marrickville-nsw-2204-2021244893"
+      "resolved_url": "https://www.domain.com.au/17-11-hill-street-marrickville-nsw-2204-2021244893",
+      "lat": -33.9167308,
+      "lon": 151.1466447
     },
     {
       "address": "117 Lord Street",
@@ -29103,13 +29171,19 @@
       "price_min": 950000,
       "price_max": 950000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 295,
+          "supermarket": 331,
+          "pool": 718,
+          "park": 149,
+          "restaurants": 333
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29117,30 +29191,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29161,7 +29233,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244487_1_1_261015_040354-w4600-h3067",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/117-lord-street-newtown-nsw-2042-2021244487"
+      "resolved_url": "https://www.domain.com.au/117-lord-street-newtown-nsw-2042-2021244487",
+      "lat": -33.9076357,
+      "lon": 151.1771423
     },
     {
       "address": "10 Wilford Street",
@@ -29172,13 +29246,19 @@
       "price_min": 950000,
       "price_max": 950000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 98,
+          "supermarket": 39,
+          "pool": 875,
+          "park": 149,
+          "restaurants": 39
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29186,30 +29266,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29230,7 +29308,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244245_1_1_261015_033331-w3846-h2566",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/10-wilford-street-newtown-nsw-2042-2021244245"
+      "resolved_url": "https://www.domain.com.au/10-wilford-street-newtown-nsw-2042-2021244245",
+      "lat": -33.8981472,
+      "lon": 151.1757035
     },
     {
       "address": "172 Denison Street",
@@ -29241,13 +29321,19 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 288,
+          "supermarket": 175,
+          "pool": 822,
+          "park": 208,
+          "restaurants": 278
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29255,30 +29341,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29297,7 +29381,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244046_1_1_261015_030450-w1536-h1024",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/172-denison-street-newtown-nsw-2042-2021244046"
+      "resolved_url": "https://www.domain.com.au/172-denison-street-newtown-nsw-2042-2021244046",
+      "lat": -33.8943062,
+      "lon": 151.1767449
     },
     {
       "address": "401/86 Lawrence Street",
@@ -29308,13 +29394,19 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 130,
+          "supermarket": 121,
+          "pool": 685,
+          "park": 200,
+          "restaurants": 79
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29322,30 +29414,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29366,7 +29456,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021243888_1_1_261015_024155-w2000-h1333",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/401-86-lawrence-street-alexandria-nsw-2015-2021243888"
+      "resolved_url": "https://www.domain.com.au/401-86-lawrence-street-alexandria-nsw-2015-2021243888",
+      "lat": -33.9035167,
+      "lon": 151.1937564
     },
     {
       "address": "37 Emma Street",
@@ -29377,13 +29469,19 @@
       "price_min": 1000000,
       "price_max": 1000000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 229,
+          "supermarket": 508,
+          "pool": 1395,
+          "park": 159,
+          "restaurants": 442
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29391,30 +29489,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29435,7 +29531,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021243738_1_1_261015_022200-w2048-h1374",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/37-emma-street-leichhardt-nsw-2040-2021243738"
+      "resolved_url": "https://www.domain.com.au/37-emma-street-leichhardt-nsw-2040-2021243738",
+      "lat": -33.8815884,
+      "lon": 151.1651077
     },
     {
       "address": "190 Lilyfield Road",
@@ -29446,13 +29544,19 @@
       "price_min": 1000000,
       "price_max": 1000000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 69,
+          "supermarket": 868,
+          "pool": 668,
+          "park": 375,
+          "restaurants": 219
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29460,30 +29564,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29504,7 +29606,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242903_1_1_261015_121758-w2560-h1708",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/190-lilyfield-road-lilyfield-nsw-2040-2021242903"
+      "resolved_url": "https://www.domain.com.au/190-lilyfield-road-lilyfield-nsw-2040-2021242903",
+      "lat": -33.8736787,
+      "lon": 151.1552712
     },
     {
       "address": "19/20-34 Wyndham Street",
@@ -29515,46 +29619,47 @@
       "price_min": 1000000,
       "price_max": 1000000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 94,
+          "supermarket": 85,
+          "pool": 181,
+          "park": 67,
+          "restaurants": 78
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "bedrooms": true,
+        "floor_area": true,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
+        "score": 52,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 18.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29563,9 +29668,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "lat": -33.8959512,
+      "lon": 151.1983351,
+      "internal_m2": 137,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242865_1_1_261015_121203-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/19-20-34-wyndham-street-alexandria-nsw-2015-2021242865"
     },
     {
       "address": "301/5 Joynton Avenue",
@@ -29576,13 +29693,19 @@
       "price_min": 1000000,
       "price_max": 1000000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 57,
+          "supermarket": 169,
+          "pool": 202,
+          "park": 72,
+          "restaurants": 45
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29590,30 +29713,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29634,7 +29755,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242034_1_1_261014_121021-w1448-h1086",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/301-5-joynton-avenue-zetland-nsw-2017-2021242034"
+      "resolved_url": "https://www.domain.com.au/301-5-joynton-avenue-zetland-nsw-2017-2021242034",
+      "lat": -33.9072907,
+      "lon": 151.2069994
     },
     {
       "address": "10/26-28 Schwebel Street",
@@ -29645,13 +29768,19 @@
       "price_min": 900000,
       "price_max": 900000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 185,
+          "supermarket": 353,
+          "pool": 700,
+          "park": 269,
+          "restaurants": 171
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29659,30 +29788,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29703,7 +29830,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242380_1_1_261014_104734-w4134-h2756",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/10-26-28-schwebel-street-marrickville-nsw-2204-2021242380"
+      "resolved_url": "https://www.domain.com.au/10-26-28-schwebel-street-marrickville-nsw-2204-2021242380",
+      "lat": -33.9156087,
+      "lon": 151.154014
     },
     {
       "address": "16/520 New Canterbury Road",
@@ -29714,13 +29843,19 @@
       "price_min": 1400000,
       "price_max": 1400000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 49,
+          "supermarket": 452,
+          "pool": 811,
+          "park": 263,
+          "restaurants": 223
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29728,30 +29863,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29770,7 +29903,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242495_1_1_261014_110747-w1448-h1086",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/16-520-new-canterbury-road-dulwich-hill-nsw-2203-2021242495"
+      "resolved_url": "https://www.domain.com.au/16-520-new-canterbury-road-dulwich-hill-nsw-2203-2021242495",
+      "lat": -33.9060095,
+      "lon": 151.1366176
     },
     {
       "address": "14/252 Wardell Road",
@@ -29781,13 +29916,19 @@
       "price_min": 950000,
       "price_max": 950000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 52,
+          "supermarket": 165,
+          "pool": 936,
+          "park": 175,
+          "restaurants": 51
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29795,8 +29936,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": false,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -29804,23 +29945,21 @@
           "floor_area"
         ],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 7.8,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29842,7 +29981,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021243085_1_1_261015_124239-w4134-h2756",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/14-252-wardell-road-marrickville-nsw-2204-2021243085"
+      "resolved_url": "https://www.domain.com.au/14-252-wardell-road-marrickville-nsw-2204-2021243085",
+      "lat": -33.9119222,
+      "lon": 151.1407868
     },
     {
       "address": "1 Collins Street",
@@ -29853,13 +29994,19 @@
       "price_min": 1400000,
       "price_max": 1400000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 164,
+          "supermarket": 445,
+          "pool": 280,
+          "park": 162,
+          "restaurants": 402
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29867,8 +30014,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -29876,23 +30023,21 @@
         ],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29913,7 +30058,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245447_1_1_261015_055007-w6064-h4044",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/1-collins-street-rozelle-nsw-2039-2021245447"
+      "resolved_url": "https://www.domain.com.au/1-collins-street-rozelle-nsw-2039-2021245447",
+      "lat": -33.8638506,
+      "lon": 151.1747686
     },
     {
       "address": "13/1-11 Brodrick Street",
@@ -29924,13 +30071,19 @@
       "price_min": 1650000,
       "price_max": 1650000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 130,
+          "supermarket": 116,
+          "pool": 70,
+          "park": 159,
+          "restaurants": 118
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -29938,8 +30091,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": false,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -29947,23 +30100,21 @@
           "floor_area"
         ],
         "unverified": [
-          "accessibility",
-          "transport",
-          "supplies"
+          "accessibility"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 13,
-        "leading": "living-area scale",
+        "score": 40,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 7.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -29998,7 +30149,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021059214_1_1_260808_074749-w5797-h3854",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/13-1-11-brodrick-street-camperdown-nsw-2050-2021059214"
+      "resolved_url": "https://www.domain.com.au/13-1-11-brodrick-street-camperdown-nsw-2050-2021059214",
+      "lat": -33.8871897,
+      "lon": 151.1780456
     }
   ]
 }

@@ -98,8 +98,13 @@ is a self-contained Claude prompt that does exactly this.
    29 Sep 2026).** Alerts are new-only, so nothing above can discover that a
    listing already on the watchlist has sold or been pulled. **The reader is
    the Chrome extension in `dashboard/extension/`** (install once: see
-   `extension/README.md`). With the dashboard served, click the extension icon →
-   **Verify**: it opens the worklist pages in background tabs of your own Chrome
+   `extension/README.md`). **Since 16 Oct 2026 this starts by itself:** with
+   the extension installed, **Refresh now** on the served dashboard hands the
+   pages the refresh could not read (photo, floor area, outgoings, departures)
+   to the extension and shows its progress beside the button; the dashboard
+   reloads when the run ends. The popup (**Verify**) remains for a manual run or
+   a monthly full pass ("include every active listing"). Either way it opens the
+   worklist pages in background tabs of your own Chrome
    (Domain refuses scripted requests with 403/429 — confirmed 29 Sep 2026 — but
    serves your browser normally), reads each page's own status, and posts the
    verdicts to `/api/apply-status`. For a listing-page URL: Domain's
