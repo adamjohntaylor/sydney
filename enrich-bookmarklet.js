@@ -818,6 +818,91 @@
     return out;
   };
 
+  // ---- Cover-image reader (identical copy in enrich-bookmarklet.js) ----
+  // The dashboard card shows `cover_image`; alert-derived records never carry
+  // one, and until 16 Oct 2026 the Verify run read area/outgoings off the
+  // listing page but not its photo. Sources, most reliable first (all must be a
+  // property-photo CDN URL - Domain rimh2.domainstatic.com.au / bucket-api, REA
+  // *.reastatic.net - and never a logo, agent portrait, floorplan or map):
+  //   1. og:image / twitter:image meta (both portals set it to the hero photo;
+//      Domain's is on bucket-api.domain.com.au - verified live 16 Oct 2026 on
+//      9 Metters St Erskineville, loads publicly at 1600x1200);
+  //   2. JSON-LD `image` (string, array, or ImageObject{url});
+  //   3. the page's embedded data layer ("images":[{"url":...}] / "mainImage"),
+  //      only with this listing's id within the preceding 2,000 chars so a
+  //      "similar properties" block cannot lend its photo;
+  //   4. the first gallery/carousel/hero <img> (largest srcset candidate).
+  // `image_basis` records which answered; `image_checked` says we looked.
+  const readCoverImageFromPage = function () {
+    const out = { image_checked: true };
+    const lid = (location.href.match(/(?:-|\/)(\d{6,12})\/?(?:\?.*)?$/) || [])[1] || null;
+    const isPhoto = (u) => {
+      if (!u || typeof u !== 'string') return false;
+      u = u.trim();
+      if (!/^https?:\/\//i.test(u)) return false;
+      if (!/(domainstatic\.com\.au|bucket-api\.domain\.com\.au\/v1\/bucket\/image\/|reastatic\.net|realestate\.com\.au\/.*\.(?:jpe?g|png|webp))/i.test(u)) return false;
+      if (/logo|agent|avatar|profile|floorplan|floor-plan|staticmap|maps\.google|placeholder|icon|sprite/i.test(u)) return false;
+      return true;
+    };
+    const pick = (u, basis) => { if (isPhoto(u)) { out.cover_image = u.trim(); out.image_basis = basis; return true; } return false; };
+    // 1. social meta
+    for (const sel of ['meta[property="og:image"]', 'meta[property="og:image:secure_url"]', 'meta[name="twitter:image"]', 'meta[property="twitter:image"]']) {
+      const el = document.querySelector(sel);
+      if (el && pick(el.getAttribute('content'), 'og:image')) return out;
+    }
+    // 2. JSON-LD image
+    for (const s of document.querySelectorAll('script[type="application/ld+json"]')) {
+      try {
+        const j = JSON.parse(s.textContent);
+        const stack = Array.isArray(j) ? [...j] : [j];
+        while (stack.length) {
+          const o = stack.shift();
+          if (!o || typeof o !== 'object') continue;
+          let im = o.image;
+          if (im) {
+            const cands = (Array.isArray(im) ? im : [im]).map(x => (x && typeof x === 'object') ? (x.url || x.contentUrl) : x);
+            for (const c of cands) if (pick(c, 'json-ld image')) return out;
+          }
+          if (Array.isArray(o['@graph'])) stack.push(...o['@graph']);
+        }
+      } catch (e) {}
+    }
+    // 3. embedded data layer, id-scoped
+    const src = document.documentElement.innerHTML;
+    // (JSON inside <script> often escapes slashes as \/ - both forms are accepted.)
+    for (const re of [/"(?:mainImage|heroImage|primaryImage|coverImage)"\s*:\s*"((?:https?:)?(?:\\?\/){2}[^"]{20,400})"/g,
+                      /"(?:images|media|photos)"\s*:\s*\[\s*\{[^\]]{0,300}?"(?:url|src|uri|templatedUrl|fullUrl)"\s*:\s*"((?:https?:)?(?:\\?\/){2}[^"]{20,400})"/g,
+                      /"(?:url|src|uri)"\s*:\s*"(https?:(?:\\?\/){2}(?:rimh2\.domainstatic\.com\.au|i\d\.au\.reastatic\.net)\\?\/[^"]{10,400})"/g]) {
+      let m;
+      while ((m = re.exec(src)) !== null) {
+        if (lid && !src.slice(Math.max(0, m.index - 2000), m.index).includes(lid)) continue;
+        let u = m[1].replace(/\\\//g, '/'); if (u.startsWith('//')) u = 'https:' + u;
+        u = u.replace(/\{size\}|\{width\}x\{height\}/g, '800x600');
+        if (pick(u, 'page data')) return out;
+      }
+    }
+    // 4. gallery / hero <img>
+    for (const sel of ['[data-testid*="gallery" i] img', '[class*="gallery" i] img', '[class*="carousel" i] img', '[class*="hero" i] img', '[class*="media" i] img', 'picture img', 'main img']) {
+      for (const el of document.querySelectorAll(sel)) {
+        let u = el.currentSrc || el.src || '';
+        const ss = el.getAttribute('srcset') || (el.parentElement && el.parentElement.querySelector('source') ? el.parentElement.querySelector('source').getAttribute('srcset') : '') || '';
+        if (ss) { const last = ss.split(',').pop().trim().split(/\s+/)[0]; if (last) u = last; }
+        if (pick(u, 'gallery img')) return out;
+      }
+    }
+    out.image_basis = 'no property photo found';
+    return out;
+  };
+
+  // Cover photo - the site-specific selectors above miss when Domain/REA rename
+  // classes; fall back to the same reader the Chrome extension's Verify run uses.
+  try {
+    const img = readCoverImageFromPage();
+    if (!data.cover_image && img.cover_image) data.cover_image = img.cover_image;
+    data.image_basis = data.cover_image ? (img.cover_image === data.cover_image ? img.image_basis : 'gallery selectors') : img.image_basis;
+    data.image_checked = true;
+  } catch (e) { console.log('cover image reader failed:', e); }
+
   // Strata / council / water lines (parsed server-side) - same reader as the extension.
   try { Object.assign(data, readOutgoingsFromPage()); } catch (e) { console.log('outgoings reader failed:', e); }
 

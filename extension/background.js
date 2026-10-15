@@ -46,7 +46,8 @@ function stripCheck(c) {
   for (const k of ["price_guide_text", "resolved_url", "sold_date", "address", "suburb",
                    "internal_m2", "land_m2", "area_basis", "area_checked",
                    "beds", "baths", "parking", "property_type",
-                   "outgoings_checked", "outgoings_text", "outgoings_text_source", "outgoings_keys"]) if (c[k] != null && c[k] !== "") out[k] = c[k];
+                   "outgoings_checked", "outgoings_text", "outgoings_text_source", "outgoings_keys",
+                   "cover_image", "image_basis", "image_checked"]) if (c[k] != null && c[k] !== "") out[k] = c[k];
   return out;
 }
 
@@ -115,14 +116,16 @@ async function verifyEntry(w) {
     if (c.count > 0) {
       // Still for sale. The search page only proves presence; the listing
       // page carries the facts the watchlist lacks (floor area, beds, type).
-      // Open it once when the record has never had its area read.
+      // Open it once when the record has never had its area, outgoings or
+      // cover photo read.
       const direct = c.resolved_url || w.resolved_url;
-      if ((w.needs_area || w.needs_outgoings) && direct) {
+      if ((w.needs_area || w.needs_outgoings || w.needs_image) && direct) {
         await sleep(DELAY_MS);
         const d = await openAndRead(direct);
         const facts = {};
         for (const k of ["internal_m2", "land_m2", "area_basis", "area_checked", "beds", "baths", "parking", "property_type",
-                         "outgoings_checked", "outgoings_text", "outgoings_text_source", "outgoings_keys"])
+                         "outgoings_checked", "outgoings_text", "outgoings_text_source", "outgoings_keys",
+                         "cover_image", "image_basis", "image_checked"])
           if (d[k] != null && d[k] !== "") facts[k] = d[k];
         if (d.kind === "listing" && ["sold", "under_offer"].includes(d.listing_status)) {
           // The direct page knows better than the search count.

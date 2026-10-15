@@ -192,8 +192,9 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
          or passed in - either way the page will now say)
       1  every recorded open home is in the past and none newer has arrived
       2  no sighting (alert / page read / status check) for > recheck_days
-      3  floor area never read from the listing page (needs_area) - the
-         Verify run opens the listing page and reads internal_m2 etc.
+      3  floor area, outgoings or cover photo never read from the listing
+         page (needs_area / needs_outgoings / needs_image) - the Verify run
+         opens the listing page and reads internal_m2, outgoings, cover_image.
       4  everything else (only when include_all=True)
     Within a band, the longest-unsighted first. A listing verified within
     recheck_days is skipped so successive sweeps walk through the backlog
@@ -210,7 +211,10 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
         # which alert stubs never carry: read the listing page once for them.
         needs_outgoings = (not l.get("outgoings_checked_on")
                            and not str(l.get("outgoings_source", "")).startswith("manual"))
-        if checked is not None and checked < recheck_days and not (needs_area or needs_outgoings):
+        # Cover photo: alert stubs never carry one; read the listing page once.
+        needs_image = not l.get("cover_image") and not l.get("image_checked_on")
+        needs_page = needs_area or needs_outgoings or needs_image
+        if checked is not None and checked < recheck_days and not needs_page:
             continue
         seen_days = _days_since(l.get("last_seen"), today)
         if seen_days is None:
@@ -226,9 +230,10 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
                 priority, reason = 1, f"last open home {max(ohs).isoformat()} has passed"
             elif seen_days > recheck_days and not (checked is not None and checked < recheck_days):
                 priority, reason = 2, f"not sighted for {seen_days} days"
-            elif needs_area or needs_outgoings:
+            elif needs_page:
                 priority, reason = 3, ("floor area not yet read from the listing page" if needs_area
-                                       else "outgoings not yet read from the listing page")
+                                       else "outgoings not yet read from the listing page" if needs_outgoings
+                                       else "cover photo not yet read from the listing page")
             elif include_all:
                 priority, reason = 4, "routine re-verification"
         if priority is None:
@@ -247,6 +252,7 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
             "resolved_url": l.get("resolved_url"),
             "needs_area": needs_area,
             "needs_outgoings": needs_outgoings,
+            "needs_image": needs_image,
             "property_type": l.get("property_type"),
         })
     work.sort(key=lambda w: (w["priority"], -(_days_since(w["last_seen"], today) or 10 ** 6)))
@@ -309,6 +315,28 @@ def apply_check_details(target, chk, today):
     if chk.get("area_checked"):
         target["area_checked_on"] = today
     out += apply_outgoings_check(target, chk, today)
+    out += apply_image_check(target, chk, today)
+    return out
+
+
+def apply_image_check(target, chk, today):
+    """Cover photo from a page read (`cover_image`, a property-photo CDN URL
+    the reader already vetted). Fills a missing photo and replaces one only
+    when the page's own og:image differs - the listing page is the freshest
+    evidence, but a bookmarklet-captured photo is not thrown away for a
+    weaker source. `image_checked` stamps image_checked_on so the worklist
+    stops re-opening pages that carry no photo at all."""
+    out = []
+    url = (chk.get("cover_image") or "").strip()
+    if url.startswith("http") and len(url) < 1000:
+        basis = str(chk.get("image_basis") or "")
+        if not target.get("cover_image") or (basis.startswith("og:image") and target.get("cover_image") != url):
+            if target.get("cover_image") != url:
+                out.append("cover_image: " + ("->set" if not target.get("cover_image") else "->replaced") + f" ({basis or 'page'})")
+                target["cover_image"] = url
+        target["image_basis"] = basis or "listing page"
+    if chk.get("image_checked") or url:
+        target["image_checked_on"] = today
     return out
 
 
@@ -567,7 +595,7 @@ def _has_price_number(rec):
 # Enrichment fields a saved-search alert email never supplies, so a re-ingested
 # alert must not blank them out on an already-enriched listing.
 _ENRICH_FIELDS = (
-    "cover_image", "beds", "baths", "parking", "property_type",
+    "cover_image", "image_basis", "image_checked_on", "beds", "baths", "parking", "property_type",
     "description", "features", "floor", "internal_m2", "land_m2", "area_basis",
     "area_checked_on",
     "strata_pq", "council_pq", "water_pq", "strata_pa", "outgoings_pa", "outgoings_known",

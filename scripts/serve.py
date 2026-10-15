@@ -646,6 +646,9 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 target["url"] = item["url"]
             if item.get("cover_image"):
                 target["cover_image"] = item["cover_image"]
+                target["image_basis"] = "bookmarklet: " + str(item.get("image_basis") or "page")[:60]
+            if item.get("image_checked") or item.get("cover_image"):
+                target["image_checked_on"] = sweep_mod.now_sydney().date().isoformat()
             if item.get("beds") is not None:
                 target["beds"] = item["beds"]
             if item.get("baths") is not None:

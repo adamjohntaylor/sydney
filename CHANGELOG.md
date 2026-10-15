@@ -7,6 +7,50 @@ of how the code got to its current shape.
 
 ---
 
+## 16 October 2026 — Cover photo read by the Verify run (cards were blank)
+
+**Problem (Adam):** the dashboard was not showing the main photo for most
+properties. Diagnosis from `listings.json` (403 records): only 68 carried
+`cover_image`, all of them bookmarklet-enriched; the 334 alert-derived
+`domain_search` records had none, including 94 live listings whose page the
+Verify run *had* opened (area and outgoings read, `area_checked_on` stamped)
+— the extension's `content.js` simply had no image reader, `background.js`
+whitelisted the forwarded facts without `cover_image`, and
+`sweep.apply_check_details` never merged one. The bookmarklet's own reader is
+also narrower than it looks: Domain's `og:image` is now served from
+`bucket-api.domain.com.au`, which its `domainstatic` test rejects.
+
+**What changed.**
+- `extension/content.js` + `enrich-bookmarklet.js` — identical
+  `readCoverImageFromPage()`: og:image / twitter:image → JSON-LD `image` →
+  id-scoped page data (`images:[{url}]`, `mainImage`; this listing's id must
+  sit within the preceding 2,000 chars, so a "similar properties" photo is
+  never taken) → first gallery/carousel/hero `<img>` (largest srcset). Only
+  property-photo CDN URLs count (rimh2.domainstatic, bucket-api.domain,
+  *.reastatic.net); logos, agent portraits, floorplans and static maps are
+  rejected. `image_basis` says which source answered; `image_checked` that it
+  looked. Verified live on 9 Metters St Erskineville (page data → rimh2 hero;
+  og:image on bucket-api loads at 1600×1200). Test:
+  `scripts/tests/test_cover_image_reader.js` (5 shapes, jsdom).
+- `extension/background.js` — forwards `cover_image`/`image_basis`/
+  `image_checked`; a search-URL record still for sale now opens its listing
+  page when `needs_image` as well as `needs_area`/`needs_outgoings`.
+- `scripts/sweep.py` — worklist gains `needs_image` (no photo and never
+  checked; priority 3, "cover photo not yet read"); `apply_image_check` fills a
+  missing photo, replaces an existing one only for the page's own og:image,
+  and stamps `image_checked_on` so photo-less pages are not re-opened.
+  `_ENRICH_FIELDS` carries the new fields across alert re-ingestion.
+- `scripts/serve.py` — bookmarklet enrichment records `image_basis` and
+  `image_checked_on` too.
+
+**To apply:** reload the unpacked extension (chrome://extensions → ⟳), re-drag
+the bookmarklet from `localhost:8777/bookmarklet`, then run **Verify** with the
+cap raised — the worklist now holds 163 pages (99 for photo only, 63 for area).
+Sold/withdrawn stock is not re-opened for photos, so those cards stay blank
+unless opened by hand.
+
+---
+
 ## 10 October 2026 — Outgoings (strata levies, council rates, water rates) made visible
 
 **Question (Adam):** do Domain and REA listings carry strata levies, water and

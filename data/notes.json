@@ -229,5 +229,20 @@
       "council": 410,
       "water": 217
     }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F2-6+bridge+road+stanmore": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-10-15T22:43:40.473Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+johnston+street+annandale": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-10-15T22:44:00.336Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502/75-91+macdonald+street+erskineville": {
+    "status": "interested",
+    "note": "",
+    "updated": "2026-10-15T22:44:13.192Z"
   }
 }
