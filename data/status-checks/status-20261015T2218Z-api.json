@@ -1,0 +1,200 @@
+{
+  "generated_on": "2026-10-16",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=182+addison+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: page data: land area",
+      "resolved_url": "https://www.domain.com.au/182-addison-road-marrickville-nsw-2204-2021236454",
+      "address": "182 Addison Road",
+      "suburb": "Marrickville",
+      "land_m2": 297,
+      "area_basis": "page data: land area",
+      "area_checked": true,
+      "beds": 3,
+      "baths": 3,
+      "property_type": "house",
+      "outgoings_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F2-6+bridge+road+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 122 m² internal",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2f2-6+bridge+road+stanmore",
+      "resolved_url": "https://www.domain.com.au/17-2-6-bridge-road-entry-via-corunna-road-stanmore-nsw-2048-2021236006",
+      "address": "17/2-6 Bridge Road",
+      "suburb": "Stanmore",
+      "internal_m2": 122,
+      "area_basis": "page data: building/floor area",
+      "area_checked": true,
+      "beds": 3,
+      "baths": 2,
+      "property_type": "townhouse",
+      "outgoings_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53+wigram+road+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 140 m² internal",
+      "resolved_url": "https://www.domain.com.au/53-wigram-road-glebe-nsw-2037-2021235771",
+      "address": "53 Wigram Road",
+      "suburb": "Glebe",
+      "internal_m2": 140,
+      "land_m2": 136,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "area_checked": true,
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "outgoings_checked": true,
+      "outgoings_text": "- Rates: Water $199pq, Council $550pq (All approx.)",
+      "outgoings_text_source": "page data (embedded description)"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2a+forsyth+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 110 m² internal",
+      "resolved_url": "https://www.domain.com.au/18-2a-forsyth-street-glebe-nsw-2037-2021234571",
+      "address": "2A Forsyth Street",
+      "suburb": "Glebe",
+      "internal_m2": 110,
+      "land_m2": 110,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "area_checked": true,
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "outgoings_checked": true,
+      "outgoings_text": "- Rates: Water $185pq, Council $277pq, Strata $1,662pq (All approx.)",
+      "outgoings_text_source": "page data (embedded description)"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=67%2F57+ralph+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 165 m² internal",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=67%2f57+ralph+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/67-57-ralph-street-alexandria-nsw-2015-2021234437",
+      "address": "67/57 Ralph Street",
+      "suburb": "Alexandria",
+      "internal_m2": 165,
+      "area_basis": "page text: unlabelled m² figure (apartment ⇒ internal)",
+      "area_checked": true,
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "outgoings_checked": true,
+      "outgoings_text": "- Strata Rates $1,995 pq, Water Rates $904 pa, Council Rates $1,164 pa",
+      "outgoings_text_source": "page data (embedded description)"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=204+albion+street+annandale",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no area figure found on the page",
+      "resolved_url": "https://www.domain.com.au/204-albion-street-annandale-nsw-2038-2021219981",
+      "address": "204 Albion Street",
+      "suburb": "Annandale",
+      "area_basis": "no area figure found on the page",
+      "area_checked": true,
+      "outgoings_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13+bowman+street+drummoyne",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "13 Bowman Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2b+defries+avenue+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2b Defries Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+jacques+street+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "27 Jacques Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11+westbourne+street+drummoyne",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "11 Westbourne Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=128%2F8+pony+race+street+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "128/8 Pony Race Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2215%2F6+kingsborough+way+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2215/6 Kingsborough Way",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=208%2F110+epsom+rd+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "208/110 Epsom Rd",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=108%2F5+regent+street+petersham",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "108/5 Regent Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F268+johnston+street+annandale",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "6/268 Johnston Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+annesley+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "27 Annesley Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=34+edward+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "34 Edward Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F12-22+newington+road+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "13/12-22 Newington Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2F8+water+street+birchgrove",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "57/8 Water Street",
+      "suburb": "Birchgrove"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2F5-11+pyrmont+bridge+road+camperdown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "29/5-11 Pyrmont Bridge Road",
+      "suburb": "Camperdown"
+    }
+  ]
+}
