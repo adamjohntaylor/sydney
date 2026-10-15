@@ -1,0 +1,152 @@
+{
+  "generated_on": "2026-10-16",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=117+lord+street+newtown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "117 Lord Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10+wilford+street+newtown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "10 Wilford Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=172+denison+street+newtown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "172 Denison Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=401%2F86+lawrence+street+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "401/86 Lawrence Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=37+emma+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "37 Emma Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=190+lilyfield+road+lilyfield",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "190 Lilyfield Road",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2F20-34+wyndham+street+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "19/20-34 Wyndham Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=301%2F5+joynton+avenue+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "301/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2F26-28+schwebel+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "10/26-28 Schwebel Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F520+new+canterbury+road+dulwich+hill",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "16/520 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F252+wardell+road+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "14/252 Wardell Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+collins+street+rozelle",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "1 Collins Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F1-11+brodrick+street+camperdown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "13/1-11 Brodrick Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/1001-2-cowper-street-glebe-nsw-2037-2020655611",
+      "listing_status": "unknown",
+      "status_basis": "chrome: no recognisable status signal",
+      "address": "1001/2 Cowper Street",
+      "suburb": "Glebe",
+      "area_basis": "no area figure found on the page",
+      "area_checked": true,
+      "outgoings_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
+      "listing_status": "unknown",
+      "status_basis": "chrome: no recognisable status signal",
+      "address": "11/70 Wigram Road",
+      "suburb": "Glebe",
+      "area_basis": "no area figure found on the page",
+      "area_checked": true,
+      "outgoings_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+metters+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "9 Metters Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F2+foundry+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "404/2 Foundry Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=509%2F2+defries+avenue+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "509/2 Defries Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14403%2F177+mitchell+road+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "14403/177 Mitchell Road",
+      "suburb": "Erskineville"
+    }
+  ]
+}

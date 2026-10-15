@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T22:18:38.171022+00:00",
-  "generated_at_sydney": "2026-10-16 08:18 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-15T22:28:41.198882+00:00",
+  "generated_at_sydney": "2026-10-16 08:28 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
@@ -574,9 +574,9 @@
       ],
       "status": "interested",
       "note": "",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-01",
-      "status_check_failures": 1
+      "status_check_failures": 2
     },
     {
       "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
@@ -1068,9 +1068,9 @@
         "step_free": false,
         "lift": null
       },
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-01",
-      "status_check_failures": 1
+      "status_check_failures": 2
     },
     {
       "address": "115 Sydenham Road",
@@ -2435,9 +2435,9 @@
       "last_seen": "2026-10-04",
       "change_flag": "UNCHANGED",
       "days_on_market": 11,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/9-metters-street-erskineville-nsw-2043-2020352243",
-      "status_check_failures": 1
+      "status_check_failures": 2
     },
     {
       "address": "4/18 Leichhardt Street",
@@ -12242,8 +12242,9 @@
       "days_on_market": 22,
       "lat": -33.9040897,
       "lon": 151.1895377,
-      "status_checked_on": "2026-10-12",
-      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103"
+      "status_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103",
+      "status_check_failures": 1
     },
     {
       "address": "32/3 Gallimore Avenue",
@@ -18644,8 +18645,8 @@
     {
       "address": "50/274 Botany Road",
       "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50%2F274+botany+road+alexandria",
-      "source": "domain_search",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50/274+botany+road+alexandria",
+      "source": "domain",
       "lat": -33.9034127,
       "lon": 151.2018459,
       "catchments": {
@@ -18664,7 +18665,7 @@
         "geocoded": true
       },
       "tier1": {
-        "budget": null,
+        "budget": true,
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
@@ -18675,7 +18676,6 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "budget",
           "accessibility"
         ],
         "pass": true
@@ -18707,8 +18707,13 @@
       "beds": 3,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "parking": 1,
+      "price_guide_text": "Guide $1,200,000",
+      "price_min": 1200000,
+      "price_max": 1200000
     },
     {
       "address": "504/1 Gantry Lane",
@@ -20410,7 +20415,9 @@
       "prior_price_text": "$1,500,000",
       "flag_sweeps": 0,
       "change_flag": "PRICE_CHANGED",
-      "days_on_market": 15
+      "days_on_market": 15,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "61 Addison Road",
@@ -20484,7 +20491,9 @@
       "prior_price_text": "$1,500,000",
       "flag_sweeps": 0,
       "change_flag": "PRICE_CHANGED",
-      "days_on_market": 15
+      "days_on_market": 15,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "2/3 Anderton Street",
@@ -20558,7 +20567,9 @@
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 15,
       "lat": -33.9075019,
-      "lon": 151.1512415
+      "lon": 151.1512415,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "13/9 Hill Street",
@@ -21529,7 +21540,9 @@
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 15,
       "lat": -33.9033337,
-      "lon": 151.186723
+      "lon": 151.186723,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "420C/39 Ralph Street",
@@ -22199,7 +22212,9 @@
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 14,
       "lat": -33.8927959,
-      "lon": 151.1593594
+      "lon": 151.1593594,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "93 Union Street",
@@ -23871,9 +23886,10 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9072907,
       "lon": 151.2069994,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
-      "flag_cleared_on": "2026-10-12"
+      "flag_cleared_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "18/18 Wolseley Street",
@@ -25208,7 +25224,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9050197,
       "lon": 151.2130703,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "14403/177 Mitchell Road",
@@ -25273,7 +25291,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9061506,
       "lon": 151.1859924,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "3/15 St Georges Crescent",
@@ -25338,7 +25358,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8533075,
       "lon": 151.1605504,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "602/68 McEvoy Street",
@@ -25403,7 +25425,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9018509,
       "lon": 151.2007232,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "2/30 Norton Street",
@@ -25468,7 +25492,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8811245,
       "lon": 151.1892828,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "3/1 Albert Street",
@@ -25533,7 +25559,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8701658,
       "lon": 151.1694158,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "710/27 Margaret Street",
@@ -25598,7 +25626,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8594087,
       "lon": 151.1670178,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "26 Tennyson Street",
@@ -25663,7 +25693,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9115066,
       "lon": 151.1364898,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "1 Reserve Street",
@@ -25728,7 +25760,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8847873,
       "lon": 151.1685054,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "1/30 Wrights Road",
@@ -25793,7 +25827,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8477366,
       "lon": 151.1534949,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "711/27 Margaret Street",
@@ -25858,7 +25894,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8594087,
       "lon": 151.1670178,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "905 South Dowling Street",
@@ -25923,7 +25961,9 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9102764,
       "lon": 151.211222,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "182 Addison Road",
@@ -27342,7 +27382,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "234 Catherine Street",
@@ -27399,7 +27441,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "12 William Street",
@@ -27458,7 +27502,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "5/2 Pearson Street",
@@ -27517,7 +27563,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "4 Holt Street",
@@ -27576,7 +27624,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "27 Albany Road",
@@ -27635,7 +27685,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "20 Redmond Street",
@@ -27694,7 +27746,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "17 Railway Avenue",
@@ -27753,7 +27807,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "229 Enmore Road",
@@ -27812,7 +27868,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "133/9 Rose Valley Way",
@@ -27871,7 +27929,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "302/50 Garden Street",
@@ -27930,7 +27990,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "225 Lilyfield Road",
@@ -27989,7 +28051,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "11/4-10 Prospect Street",
@@ -28046,7 +28110,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "43/8 Water Street",
@@ -28105,7 +28171,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "293 Young Street",
@@ -28164,7 +28232,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "52 Rochford Street",
@@ -28223,7 +28293,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "1/33-35 Burren Street",
@@ -28280,7 +28352,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "5/31 Ness Avenue",
@@ -28339,7 +28413,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "26 Malcolm Street",
@@ -28398,7 +28474,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "17/11 Hill Street",
@@ -28457,7 +28535,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "117 Lord Street",
@@ -28516,7 +28596,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "10 Wilford Street",
@@ -28575,7 +28657,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "172 Denison Street",
@@ -28634,7 +28718,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "401/86 Lawrence Street",
@@ -28693,7 +28779,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "37 Emma Street",
@@ -28752,7 +28840,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "190 Lilyfield Road",
@@ -28811,7 +28901,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "19/20-34 Wyndham Street",
@@ -28870,7 +28962,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "301/5 Joynton Avenue",
@@ -28929,7 +29023,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "10/26-28 Schwebel Street",
@@ -28988,7 +29084,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "16/520 New Canterbury Road",
@@ -29047,7 +29145,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "14/252 Wardell Road",
@@ -29106,7 +29206,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "1 Collins Street",
@@ -29165,7 +29267,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     },
     {
       "address": "13/1-11 Brodrick Street",
@@ -29224,7 +29328,9 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_check_failures": 1,
+      "status_checked_on": "2026-10-16"
     }
   ]
 }

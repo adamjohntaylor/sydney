@@ -1,0 +1,111 @@
+{
+  "generated_on": "2026-10-16",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F15+st+georges+crescent+drummoyne",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "3/15 St Georges Crescent",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=602%2F68+mcevoy+street+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "602/68 McEvoy Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F30+norton+street+glebe",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2/30 Norton Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F1+albert+street+rozelle",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "3/1 Albert Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=710%2F27+margaret+street+rozelle",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "710/27 Margaret Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26+tennyson+street+dulwich+hill",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "26 Tennyson Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+reserve+street+annandale",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "1 Reserve Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F30+wrights+road+drummoyne",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "1/30 Wrights Road",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=711%2F27+margaret+street+rozelle",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "711/27 Margaret Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=905+south+dowling+street+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "905 South Dowling Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=47+frampton+avenue+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "47 Frampton Avenue",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=61+addison+road+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "61 Addison Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F3+anderton+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2/3 Anderton Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2105%2F1+metters+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2105/1 Metters Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F104+douglas+street+stanmore",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2/104 Douglas Street",
+      "suburb": "Stanmore"
+    }
+  ]
+}

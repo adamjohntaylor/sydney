@@ -1,0 +1,146 @@
+{
+  "generated_on": "2026-10-16",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F11+ennis+street+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "1/11 Ennis Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=234+catherine+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "234 Catherine Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12+william+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "12 William Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F2+pearson+street+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "5/2 Pearson Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4+holt+street+newtown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "4 Holt Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+albany+road+stanmore",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "27 Albany Road",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=20+redmond+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "20 Redmond Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+railway+avenue+stanmore",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "17 Railway Avenue",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=229+enmore+road+enmore",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "229 Enmore Road",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=133%2F9+rose+valley+way+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "133/9 Rose Valley Way",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=302%2F50+garden+street+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "302/50 Garden Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=225+lilyfield+road+lilyfield",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "225 Lilyfield Road",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2F4-10+prospect+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "11/4-10 Prospect Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=43%2F8+water+street+birchgrove",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "43/8 Water Street",
+      "suburb": "Birchgrove"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=293+young+street+annandale",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "293 Young Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=52+rochford+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "52 Rochford Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F33-35+burren+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "1/33-35 Burren Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F31+ness+avenue+dulwich+hill",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "5/31 Ness Avenue",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26+malcolm+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "26 Malcolm Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F11+hill+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "17/11 Hill Street",
+      "suburb": "Marrickville"
+    }
+  ]
+}
