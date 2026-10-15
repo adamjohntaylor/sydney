@@ -18713,7 +18713,9 @@
       "parking": 1,
       "price_guide_text": "Guide $1,200,000",
       "price_min": 1200000,
-      "price_max": 1200000
+      "price_max": 1200000,
+      "image_basis": "bookmarklet: og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "504/1 Gantry Lane",
