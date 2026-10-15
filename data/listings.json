@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T22:58:43.317321+00:00",
-  "generated_at_sydney": "2026-10-16 08:58 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-15T23:01:50.344779+00:00",
+  "generated_at_sydney": "2026-10-16 09:01 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 178,
-    "tier1_pass": 143,
+    "total": 177,
+    "tier1_pass": 140,
     "new": 0,
     "price_changed": 0,
     "sold": 164,
     "under_offer": 7,
-    "withdrawn": 54
+    "withdrawn": 55
   },
   "listings": [
     {
@@ -27240,9 +27240,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27251,9 +27251,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27277,11 +27275,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.907386,
       "lon": 151.1612175,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 316,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021241118_1_1_261014_063603-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/34-edward-street-marrickville-nsw-2204-2021241118"
     },
     {
       "address": "13/12-22 Newington Road",
@@ -27308,9 +27316,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27318,9 +27326,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27344,11 +27350,35 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.9016171,
       "lon": 151.1683496,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 180,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "strata_pq": 1067.0,
+      "council_pq": 410.0,
+      "water_pq": 267.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water $267pq, Council $410pq, Strata $1,067pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-16",
+      "strata_pa": 4268,
+      "outgoings_pa": 6976,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2018150604_1_1_221024_010829-w4600-h3067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/13-12-22-newington-road-marrickville-nsw-2204-2021239697"
     },
     {
       "address": "57/8 Water Street",
@@ -27375,29 +27405,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -27411,11 +27438,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.8528318,
       "lon": 151.1776242,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "internal_m2": 209,
+      "area_basis": "page data: building/floor area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "townhouse",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021237995_1_1_261014_120558-w5496-h3660",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/57-8-water-street-birchgrove-nsw-2041-2021237995"
     },
     {
       "address": "29/5-11 Pyrmont Bridge Road",
@@ -27442,29 +27479,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 38,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 4.3,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -27478,11 +27515,36 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.884823,
       "lon": 151.1800455,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "internal_m2": 50,
+      "land_m2": 50,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 0,
+      "baths": 1,
+      "property_type": "studio",
+      "area_checked_on": "2026-10-16",
+      "strata_pq": 1137.0,
+      "council_pq": 291.0,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council Rates: $291 p/q approx. Strata Levies: $1,137 p/q approx. Water Rates: $226 p/q approx.",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-16",
+      "strata_pa": 4548,
+      "outgoings_pa": 6616,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021220386_1_1_261013_124945-w3072-h2048",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/29-5-11-pyrmont-bridge-road-camperdown-nsw-2050-2021220386"
     },
     {
       "address": "1/11 Ennis Street",
@@ -27506,9 +27568,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27517,9 +27579,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27543,11 +27603,31 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.8602046,
       "lon": 151.1784051,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "strata_pq": 1100.0,
+      "council_pq": 390.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council rates: $390 per quarter Strata rates: $1100 per quarter",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-16",
+      "strata_pa": 4400,
+      "outgoings_pa": 5960,
+      "outgoings_known": [
+        "strata",
+        "council"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021239021_1_1_261014_024218-w5764-h3845",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/1-11-ennis-street-balmain-nsw-2041-2021239021"
     },
     {
       "address": "234 Catherine Street",
@@ -27571,9 +27651,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27582,9 +27662,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27608,11 +27686,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.8803163,
       "lon": 151.1635246,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 131,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021241344_1_1_261014_071758-w2048-h1374",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/234-catherine-street-leichhardt-nsw-2040-2021241344"
     },
     {
       "address": "12 William Street",
@@ -27639,9 +27727,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27649,9 +27737,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27675,11 +27761,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.8776554,
       "lon": 151.1551167,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 180,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240958_1_1_261014_062153-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/12-william-street-leichhardt-nsw-2040-2021240958"
     },
     {
       "address": "5/2 Pearson Street",
@@ -27706,22 +27802,22 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -27742,11 +27838,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.8585545,
       "lon": 151.1953182,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240843_1_1_261014_060944-w5475-h3652",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/5-2-pearson-street-balmain-east-nsw-2041-2021240843"
     },
     {
       "address": "4 Holt Street",
@@ -27773,9 +27877,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27783,9 +27887,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27809,11 +27911,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "lat": -33.9005701,
       "lon": 151.1771946,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 101,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240700_1_1_261014_055539-w3866-h2584",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/4-holt-street-newtown-nsw-2042-2021240700"
     },
     {
       "address": "27 Albany Road",
@@ -27840,9 +27952,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27850,9 +27962,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27876,11 +27986,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8907448,
-      "lon": 151.1697661
+      "lon": 151.1697661,
+      "land_m2": 224,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240261_1_1_261014_052008-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/27-albany-road-stanmore-nsw-2048-2021240261"
     },
     {
       "address": "20 Redmond Street",
@@ -27907,9 +28027,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27917,9 +28037,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -27943,11 +28061,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8867188,
-      "lon": 151.1609241
+      "lon": 151.1609241,
+      "land_m2": 150,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240233_1_1_261014_051452-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/20-redmond-street-leichhardt-nsw-2040-2021240233"
     },
     {
       "address": "17 Railway Avenue",
@@ -27974,9 +28102,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -27984,9 +28112,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -28010,11 +28136,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8949133,
-      "lon": 151.1709865
+      "lon": 151.1709865,
+      "beds": 3,
+      "baths": 3,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240031_1_1_261014_045420-w5490-h3662",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/17-railway-avenue-stanmore-nsw-2048-2021240031"
     },
     {
       "address": "229 Enmore Road",
@@ -28041,9 +28175,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -28051,9 +28185,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -28077,11 +28209,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.9000744,
-      "lon": 151.1703123
+      "lon": 151.1703123,
+      "land_m2": 145,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021238600_1_1_261014_013201-w3725-h2487",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/229-enmore-road-enmore-nsw-2042-2021238600"
     },
     {
       "address": "133/9 Rose Valley Way",
@@ -28108,9 +28250,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -28118,9 +28260,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -28144,11 +28284,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.9099974,
-      "lon": 151.2074888
+      "lon": 151.2074888,
+      "beds": 3,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240219_1_1_261014_051334-w1900-h1267",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/133-9-rose-valley-way-zetland-nsw-2017-2021240219"
     },
     {
       "address": "302/50 Garden Street",
@@ -28175,29 +28323,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 19.8,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -28211,11 +28356,29 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8968265,
-      "lon": 151.1976895
+      "lon": 151.1976895,
+      "internal_m2": 148,
+      "land_m2": 148,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_unstated": {
+        "strata": 2240.0
+      },
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata levies approx. $2240/quarter",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021239260_1_1_261014_032235-w2362-h1575",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/302-50-garden-street-alexandria-nsw-2015-2021239260"
     },
     {
       "address": "225 Lilyfield Road",
@@ -28242,9 +28405,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -28252,9 +28415,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -28278,11 +28439,32 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8731509,
-      "lon": 151.1548961
+      "lon": 151.1548961,
+      "land_m2": 186,
+      "area_basis": "page data: land area",
+      "beds": 4,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "council_pq": 560.0,
+      "water_pq": 220.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council Rates: $560 per quarter (approx.) Water Rates: $220 per quarter (approx",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_pa": 3120,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021240337_1_1_261015_010409-w7995-h5330",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/225-lilyfield-road-lilyfield-nsw-2040-2021240337"
     },
     {
       "address": "11/4-10 Prospect Street",
@@ -28342,12 +28524,16 @@
       "warehouse_character": false,
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
-      "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
+      "change_flag": "WITHDRAWN",
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.9003344,
-      "lon": 151.1837796
+      "lon": 151.1837796,
+      "departed_on": "2026-10-16",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2021-12-04, before first seen 2026-10-16)",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f4-10+prospect+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/11-4-10-prospect-street-erskineville-nsw-2043-2017399301"
     },
     {
       "address": "43/8 Water Street",
@@ -28374,9 +28560,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -28384,9 +28570,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -28410,11 +28594,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8525609,
-      "lon": 151.1774809
+      "lon": 151.1774809,
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242784_1_1_261014_115947-w1600-h1067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/43-8-water-street-birchgrove-nsw-2041-2021242784"
     },
     {
       "address": "293 Young Street",
@@ -28441,9 +28633,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -28451,9 +28643,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -28477,11 +28667,21 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8783841,
-      "lon": 151.1695376
+      "lon": 151.1695376,
+      "land_m2": 154,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021243289_1_1_261015_011338-w5476-h3654",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/293-young-street-annandale-nsw-2038-2021243289"
     },
     {
       "address": "52 Rochford Street",
@@ -28502,9 +28702,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -28512,9 +28712,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -28540,9 +28738,30 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 158,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "council_pq": 462.25,
+      "water_pq": 401.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council Rates $1,849 pa, Water Rates $1,604 pa",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_pa": 3453,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245803_1_1_261015_062949-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/52-rochford-street-erskineville-nsw-2043-2021245803"
     },
     {
       "address": "1/33-35 Burren Street",
