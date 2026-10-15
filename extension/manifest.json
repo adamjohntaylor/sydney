@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Sydney Dashboard Verifier",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Reads the market status of tracked Domain / realestate.com.au listings in your own browser and posts it to the local properties dashboard (localhost:8777).",
   "permissions": ["tabs", "storage", "alarms"],
   "host_permissions": [

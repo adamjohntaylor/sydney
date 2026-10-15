@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T22:53:20.289957+00:00",
-  "generated_at_sydney": "2026-10-16 08:53 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-15T22:58:43.317321+00:00",
+  "generated_at_sydney": "2026-10-16 08:58 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 179,
-    "tier1_pass": 144,
+    "total": 178,
+    "tier1_pass": 143,
     "new": 0,
     "price_changed": 0,
     "sold": 164,
     "under_offer": 7,
-    "withdrawn": 53
+    "withdrawn": 54
   },
   "listings": [
     {
@@ -20414,14 +20414,17 @@
       "property_type": "house",
       "land_m2": 202,
       "area_basis": "page data: land area",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,500,000",
       "change_flag": "UNCHANGED",
       "days_on_market": 15,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/47-frampton-avenue-marrickville-nsw-2204-2021197746"
+      "resolved_url": "https://www.domain.com.au/47-frampton-avenue-marrickville-nsw-2204-2021197746",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021197746_1_1_260930_042817-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "61 Addison Road",
@@ -20490,14 +20493,17 @@
       "internal_m2": 77,
       "land_m2": 177,
       "area_basis": "page data: building/floor area; page data: land area",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,500,000",
       "change_flag": "UNCHANGED",
       "days_on_market": 15,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/61-addison-road-marrickville-nsw-2204-2021196939"
+      "resolved_url": "https://www.domain.com.au/61-addison-road-marrickville-nsw-2204-2021196939",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021196939_1_1_260930_023602-w3864-h2575",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "2/3 Anderton Street",
@@ -20564,8 +20570,8 @@
       "property_type": "apartment / unit / flat",
       "land_m2": 91,
       "area_basis": "page data: land area",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,500,000",
       "change_flag": "UNCHANGED",
       "days_on_market": 15,
@@ -20573,7 +20579,10 @@
       "lon": 151.1512415,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/2-3-anderton-street-marrickville-nsw-2204-2021196926"
+      "resolved_url": "https://www.domain.com.au/2-3-anderton-street-marrickville-nsw-2204-2021196926",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021196926_1_1_260930_023352-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "13/9 Hill Street",
@@ -21526,7 +21535,7 @@
       "property_type": "apartment / unit / flat",
       "internal_m2": 103,
       "area_basis": "page data: building/floor area",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "council_pq": 336.0,
       "water_pq": 226.0,
       "outgoings_pa": 2248,
@@ -21538,7 +21547,7 @@
       "outgoings_snippet": "Council $336pq, Water $226pq, (All approx.)",
       "outgoings_approx": true,
       "outgoings_read_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,500,000",
       "change_flag": "UNCHANGED",
       "days_on_market": 15,
@@ -21546,7 +21555,10 @@
       "lon": 151.186723,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/2105-1-metters-street-erskineville-nsw-2043-2021197616"
+      "resolved_url": "https://www.domain.com.au/2105-1-metters-street-erskineville-nsw-2043-2021197616",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021197616_3_1_260930_041230-w4600-h3067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "420C/39 Ralph Street",
@@ -22209,8 +22221,8 @@
       "property_type": "apartment / unit / flat",
       "internal_m2": 75,
       "area_basis": "page data: building/floor area",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1.65m",
       "change_flag": "UNCHANGED",
       "days_on_market": 14,
@@ -22218,7 +22230,10 @@
       "lon": 151.1593594,
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/2-104-douglas-street-stanmore-nsw-2048-2021202314"
+      "resolved_url": "https://www.domain.com.au/2-104-douglas-street-stanmore-nsw-2048-2021202314",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021202314_1_1_261001_035145-w3773-h2517",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "93 Union Street",
@@ -26041,7 +26056,10 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/182-addison-road-marrickville-nsw-2204-2021236454",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021236454_1_1_261013_061947-w2048-h1428",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "17/2-6 Bridge Road",
@@ -26112,7 +26130,10 @@
       "resolved_url": "https://www.domain.com.au/17-2-6-bridge-road-entry-via-corunna-road-stanmore-nsw-2048-2021236006",
       "status": "rejected",
       "note": "",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021236006_1_1_261013_053351-w3653-h2740",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "53 Wigram Road",
@@ -26193,7 +26214,10 @@
       ],
       "outgoings_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/53-wigram-road-glebe-nsw-2037-2021235771",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021235771_1_1_261013_050536-w5040-h3360",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "2A Forsyth Street",
@@ -26279,7 +26303,10 @@
       ],
       "outgoings_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/18-2a-forsyth-street-glebe-nsw-2037-2021234571",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021234571_2_1_261013_020159-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "67/57 Ralph Street",
@@ -26364,7 +26391,10 @@
       ],
       "outgoings_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/67-57-ralph-street-alexandria-nsw-2015-2021234437",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021234437_1_1_261013_012943-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "204 Albion Street",
@@ -26393,9 +26423,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -26403,9 +26433,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -26433,7 +26461,15 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/204-albion-street-annandale-nsw-2038-2021219981",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 158,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021219981_1_1_261007_070952-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "13 Bowman Street",
@@ -26505,7 +26541,10 @@
       "property_type": "duplex",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/13-bowman-street-drummoyne-nsw-2047-2021183861"
+      "resolved_url": "https://www.domain.com.au/13-bowman-street-drummoyne-nsw-2047-2021183861",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021183861_1_1_260924_061804-w2560-h1707",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "2b Defries Avenue",
@@ -26575,7 +26614,10 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/728-2b-defries-avenue-zetland-nsw-2017-2021183751"
+      "resolved_url": "https://www.domain.com.au/728-2b-defries-avenue-zetland-nsw-2017-2021183751",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021183751_1_1_260924_051019-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "27 Jacques Street",
@@ -26647,7 +26689,10 @@
       "property_type": "house",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/27-jacques-street-balmain-nsw-2041-2021178588"
+      "resolved_url": "https://www.domain.com.au/27-jacques-street-balmain-nsw-2041-2021178588",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021178588_1_1_260923_025724-w7008-h4672",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "11 Westbourne Street",
@@ -26719,7 +26764,10 @@
       "property_type": "house",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/11-westbourne-street-drummoyne-nsw-2047-2021173241"
+      "resolved_url": "https://www.domain.com.au/11-westbourne-street-drummoyne-nsw-2047-2021173241",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021173241_1_1_260921_062546-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "128/8 Pony Race Street",
@@ -26789,7 +26837,10 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/128-8-pony-race-street-zetland-nsw-2017-2021047890"
+      "resolved_url": "https://www.domain.com.au/128-8-pony-race-street-zetland-nsw-2017-2021047890",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021047890_3_1_260804_115941-w4000-h2666",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "2215/6 Kingsborough Way",
@@ -26859,7 +26910,10 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/2215-6-kingsborough-way-zetland-nsw-2017-2021235214"
+      "resolved_url": "https://www.domain.com.au/2215-6-kingsborough-way-zetland-nsw-2017-2021235214",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021235214_1_1_261013_034149-w1536-h1024",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "208/110 Epsom Rd",
@@ -26943,7 +26997,10 @@
         "water"
       ],
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/208-110-epsom-rd-zetland-nsw-2017-2021013866"
+      "resolved_url": "https://www.domain.com.au/208-110-epsom-rd-zetland-nsw-2017-2021013866",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021013866_1_1_260722_124836-w1536-h1024",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "108/5 Regent Street",
@@ -27017,7 +27074,10 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/108-5-regent-street-petersham-nsw-2049-2021234468"
+      "resolved_url": "https://www.domain.com.au/108-5-regent-street-petersham-nsw-2049-2021234468",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021234468_1_1_261013_013551-w1600-h1067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "6/268 Johnston Street",
@@ -27146,12 +27206,15 @@
       "warehouse_character": false,
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
-      "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
+      "change_flag": "WITHDRAWN",
       "status_checked_on": "2026-10-16",
       "lat": -33.8794768,
       "lon": 151.1623322,
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "departed_on": "2026-10-16",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "34 Edward Street",
