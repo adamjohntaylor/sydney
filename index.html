@@ -185,6 +185,32 @@ const T1_LABELS = {budget:"Budget &le;$2.2M", property_type:"Property type", acc
 const CATCH_LABELS = {transport:"Transport", supermarket:"Supermarket", pool:"Pool", park:"Park", restaurants:"Restaurants"};
 
 let DATA = {listings:[]}, NOTES = {}, SERVED = false, TAB = "all";
+// Chrome-extension bridge (extension/dashboard-bridge.js): the Verifier
+// announces itself on load; "Refresh now" then hands it the pages the refresh
+// left to read (photo / area / outgoings / departures) and shows its progress.
+let VERIFIER = null, VERIFY_WAS_RUNNING = false;
+const toVerifier = (m) => window.postMessage(Object.assign({source:"sydney-dashboard"}, m), "*");
+window.addEventListener("message", async (e) => {
+  if (e.source !== window || !e.data || e.data.source !== "sydney-verifier") return;
+  if (e.data.type === "ready") { VERIFIER = { version: e.data.version }; return; }
+  if (e.data.type !== "verify-state") return;
+  const s = e.data.state, st = document.getElementById("saveState");
+  if (s.running) {
+    VERIFY_WAS_RUNNING = true;
+    st.textContent = `verifying listing pages in Chrome: ${s.done} / ${s.total}` + (s.last ? ` — ${s.last.slice(0, 90)}` : "");
+  } else if (VERIFY_WAS_RUNNING) {
+    VERIFY_WAS_RUNNING = false;
+    st.textContent = s.error ? "verify error: " + s.error
+                   : `verified ${s.total} page(s): ${s.result ? s.result.changed : 0} listing(s) changed — reloading…`;
+    await load();
+    st.textContent = st.textContent.replace(" — reloading…", "");
+    setTimeout(() => { if (!VERIFY_WAS_RUNNING) st.textContent = ""; }, 8000);
+  }
+});
+const verifierPresent = () => new Promise((res) => {
+  if (VERIFIER) return res(true);
+  toVerifier({type:"ping"}); setTimeout(() => res(!!VERIFIER), 400);
+});
 // Where is this copy running?
 //  - localhost / 127.0.0.1  -> Adam's home system with serve.py: full write access.
 //  - file://                -> Adam's file mode: notes download as notes.json.
@@ -216,6 +242,7 @@ function isThisSaturday(d){
 
 async function load(){
   SERVED = location.protocol==="http:"||location.protocol==="https:";
+  if (SERVED && !VERIFY_WAS_RUNNING) toVerifier({type:"verify-state"});
   if(location.hostname==="localhost"||location.hostname==="127.0.0.1"){
     document.getElementById("pushBtn").classList.remove("hidden");
   }
@@ -636,6 +663,17 @@ document.getElementById("refreshBtn").addEventListener("click",async()=>{
         msg += ` (${j.tier1_pass} T1 pass)`;
         st.textContent = msg;
         await load();
+        // Hand the pages the refresh could not read (listing photo, floor
+        // area, outgoings, departures) to the Chrome extension's Verify run.
+        const pending = j.verification_pending || 0;
+        if (pending > 0) {
+          if (await verifierPresent()) {
+            toVerifier({type:"verify-start", cap: pending + 20, all: false});
+            st.textContent = msg + ` — starting Verify for ${pending} listing page(s) in Chrome…`;
+            return;                       // progress messages take over saveState
+          }
+          st.textContent = msg + ` — ${pending} page(s) await Verify (extension not detected: open the extension popup)`;
+        }
       }else{
         st.textContent="refresh failed: "+j.error;
       }

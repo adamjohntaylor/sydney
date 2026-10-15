@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T23:01:50.344779+00:00",
-  "generated_at_sydney": "2026-10-16 09:01 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-15T23:04:40.219671+00:00",
+  "generated_at_sydney": "2026-10-16 09:04 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 177,
-    "tier1_pass": 140,
+    "tier1_pass": 136,
     "new": 0,
     "price_changed": 0,
     "sold": 164,
@@ -481,12 +481,12 @@
       "baths": 2,
       "parking": 1,
       "internal_m2": 149,
-      "price_guide_text": "$1.79M",
+      "price_guide_text": "$1,950,000",
       "price_min": 1898000,
       "price_max": 1898000,
       "agent": "Lily Tsui",
       "agency": "Elite Real Property",
-      "cover_image": "https://rimh2.domainstatic.com.au/3ai7qr8tWt83E04O1Bth5FlS5QI=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020094347_1_1_250724_055602-w1101-h741",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020094347_1_1_250724_055602-w1101-h741",
       "open_homes": [],
       "auction": null,
       "description": "Property DescriptionStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkStunning 3 Bedroom 2 Bath 1 Car Apartment For Sale- North Aspect Facing To ParkThis exquisite north-facing 3-bedroom penthouse located in 'Mezzo' has it all. With its one-of-a-kind central location, it's perfectly positioned on the verge between Glebe & Pyrmont. Overlooking Wentworth Park, it captures stunning views to Sydney's CBD while still enjoying the peace and tranquility of the suburb ofRead more",
@@ -542,7 +542,7 @@
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "lat": -33.881512,
       "lon": 151.1924243,
@@ -576,7 +576,19 @@
       "note": "",
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-01",
-      "status_check_failures": 2
+      "area_basis": "page data: building/floor area",
+      "area_checked_on": "2026-10-16",
+      "outgoings_unstated": {
+        "strata": 3400.0,
+        "council": 300.0
+      },
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata Levy: $3400/Quarter Council Rate: $300/Quarter Water Bi",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "url": "https://www.domain.com.au/706-3-cary-street-drummoyne-nsw-2047-2020765918",
@@ -1050,16 +1062,16 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
-      "cover_image": "https://rimh2.domainstatic.com.au/d8Zl_9w1xDjM0emAFfn5Otxek8g=/1680x720/filters:format(webp):quality(85)/2020928696_1_1_260619_032942-w4600-h3067",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020928696_1_1_260619_032942-w4600-h3067",
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionTimeless Elegance in a Landmark Sydney BuildingRecognised as one of Sydney's most distinguished apartment buildings, Ravenscourt blends timeless heritage character with refined contemporary design. This beautifully restored, strata-titled studio apartment offers a rare opportunity to secure a residence within this iconic landmark.Showcasing a master-crafted restoration, the apartment features elegant period detailing paired seamlessly withRead more",
       "beds": 3,
       "baths": 1,
       "parking": 1,
-      "price_guide_text": "$1,900,000",
+      "price_guide_text": "$1,150,000",
       "price_min": 620000,
       "price_max": 620000,
       "status": "",
@@ -1070,7 +1082,21 @@
       },
       "status_checked_on": "2026-10-16",
       "flag_cleared_on": "2026-10-01",
-      "status_check_failures": 2
+      "area_checked_on": "2026-10-16",
+      "council_pq": 256.0,
+      "water_pq": 213.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water rates: $213 per quarter, approximately Council rates: $256 per quarter, approx",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_pa": 1876,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "115 Sydenham Road",
@@ -2398,22 +2424,22 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -2432,12 +2458,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 11,
       "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/9-metters-street-erskineville-nsw-2043-2020352243",
-      "status_check_failures": 2
+      "beds": 1,
+      "baths": 1,
+      "property_type": "new apartments / off the plan",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020352243_1_1_260426_014459-w1600-h1200",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "4/18 Leichhardt Street",
@@ -28779,10 +28812,10 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": null,
         "supplies": null,
         "location": true,
@@ -28790,21 +28823,18 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
-          "floor_area",
           "transport",
           "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
+        "score": 26,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 0,
@@ -28818,9 +28848,34 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "internal_m2": 171,
+      "land_m2": 676,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "townhouse",
+      "area_checked_on": "2026-10-16",
+      "strata_pq": 1528.0,
+      "council_pq": 330.0,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council $330pq, Water $226pq, Strata $1,528pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-16",
+      "strata_pa": 6112,
+      "outgoings_pa": 8336,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245785_1_1_261015_062635-w8122-h5415",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/1-33-35-burren-street-erskineville-nsw-2043-2021245785"
     },
     {
       "address": "5/31 Ness Avenue",
@@ -28841,9 +28896,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -28851,9 +28906,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -28879,9 +28932,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 85,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245633_1_1_261015_060800-w3768-h2514",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/5-31-ness-avenue-dulwich-hill-nsw-2203-2021245633"
     },
     {
       "address": "26 Malcolm Street",
@@ -28902,9 +28965,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -28912,9 +28975,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -28940,9 +29001,30 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 136,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "council_pq": 502.0,
+      "water_pq": 246.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council $502pq, Water $246pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_pa": 2992,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245275_1_1_261015_052813-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/26-malcolm-street-erskineville-nsw-2043-2021245275"
     },
     {
       "address": "17/11 Hill Street",
@@ -28963,31 +29045,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
-          "floor_area",
           "transport",
           "supplies"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
+        "score": 25,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 18.6,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 0,
@@ -29001,9 +29080,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "internal_m2": 138,
+      "area_basis": "page text: labelled internal/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244893_1_1_261015_044934-w3591-h2396",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/17-11-hill-street-marrickville-nsw-2204-2021244893"
     },
     {
       "address": "117 Lord Street",
@@ -29024,9 +29113,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29034,9 +29123,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29062,9 +29149,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 142,
+      "area_basis": "page text: labelled land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244487_1_1_261015_040354-w4600-h3067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/117-lord-street-newtown-nsw-2042-2021244487"
     },
     {
       "address": "10 Wilford Street",
@@ -29085,9 +29182,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29095,9 +29192,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29123,9 +29218,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 120,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244245_1_1_261015_033331-w3846-h2566",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/10-wilford-street-newtown-nsw-2042-2021244245"
     },
     {
       "address": "172 Denison Street",
@@ -29146,9 +29251,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29156,9 +29261,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29184,9 +29287,17 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244046_1_1_261015_030450-w1536-h1024",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/172-denison-street-newtown-nsw-2042-2021244046"
     },
     {
       "address": "401/86 Lawrence Street",
@@ -29207,9 +29318,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29217,9 +29328,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29245,9 +29354,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 177,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021243888_1_1_261015_024155-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/401-86-lawrence-street-alexandria-nsw-2015-2021243888"
     },
     {
       "address": "37 Emma Street",
@@ -29268,9 +29387,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29278,9 +29397,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29306,9 +29423,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 151,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021243738_1_1_261015_022200-w2048-h1374",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/37-emma-street-leichhardt-nsw-2040-2021243738"
     },
     {
       "address": "190 Lilyfield Road",
@@ -29329,9 +29456,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29339,9 +29466,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29367,9 +29492,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 156,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242903_1_1_261015_121758-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/190-lilyfield-road-lilyfield-nsw-2040-2021242903"
     },
     {
       "address": "19/20-34 Wyndham Street",
@@ -29451,9 +29586,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29461,9 +29596,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29489,9 +29622,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 85,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242034_1_1_261014_121021-w1448-h1086",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/301-5-joynton-avenue-zetland-nsw-2017-2021242034"
     },
     {
       "address": "10/26-28 Schwebel Street",
@@ -29512,9 +29655,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29522,9 +29665,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29550,9 +29691,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 146,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242380_1_1_261014_104734-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/10-26-28-schwebel-street-marrickville-nsw-2204-2021242380"
     },
     {
       "address": "16/520 New Canterbury Road",
@@ -29573,9 +29724,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -29583,9 +29734,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -29611,9 +29760,17 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242495_1_1_261014_110747-w1448-h1086",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/16-520-new-canterbury-road-dulwich-hill-nsw-2203-2021242495"
     },
     {
       "address": "14/252 Wardell Road",
@@ -29634,31 +29791,31 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
-          "floor_area",
+          "floor_area"
+        ],
+        "unverified": [
+          "accessibility",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 7.8,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 0,
@@ -29672,9 +29829,20 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "internal_m2": 90,
+      "land_m2": 90,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021243085_1_1_261015_124239-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/14-252-wardell-road-marrickville-nsw-2204-2021243085"
     },
     {
       "address": "1 Collins Street",
@@ -29695,24 +29863,24 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
@@ -29733,9 +29901,19 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "land_m2": 107,
+      "area_basis": "page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245447_1_1_261015_055007-w6064-h4044",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/1-collins-street-rozelle-nsw-2039-2021245447"
     },
     {
       "address": "13/1-11 Brodrick Street",
@@ -29756,31 +29934,31 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
-          "floor_area",
+          "floor_area"
+        ],
+        "unverified": [
+          "accessibility",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
-        "score": 14,
+        "score": 13,
         "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 7.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 0,
@@ -29794,9 +29972,33 @@
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
-      "status_check_failures": 1,
       "status_checked_on": "2026-10-16",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "internal_m2": 80,
+      "area_basis": "page data: building/floor area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "strata_pq": 2386.0,
+      "council_pq": 336.0,
+      "water_pq": 386.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata Levies: $2,386 per quarter Council Rates: $336 per quarter Water Rates: $386 per quarter",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-16",
+      "strata_pa": 9544,
+      "outgoings_pa": 12432,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021059214_1_1_260808_074749-w5797-h3854",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "resolved_url": "https://www.domain.com.au/13-1-11-brodrick-street-camperdown-nsw-2050-2021059214"
     }
   ]
 }
