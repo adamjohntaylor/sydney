@@ -1,0 +1,146 @@
+{
+  "generated_on": "2026-10-16",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=922+bourke+street+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "922 Bourke Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=56%2F22+buchanan+street+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "56/22 Buchanan Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=710%2F7+metters+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "710/7 Metters Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=221%2F1+phillip+street+petersham",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "221/1 Phillip Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F793-799+new+canterbury+road+dulwich+hill",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "16/793-799 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F64+arthur+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "6/64 Arthur Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=504%2F1+gantry+lane+camperdown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "504/1 Gantry Lane",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=104%2F551+darling+street+rozelle",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "104/551 Darling Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53+ferry+road+glebe",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "53 Ferry Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F12-16+terrace+road+dulwich+hill",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "4/12-16 Terrace Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F451-457+new+canterbury+road+dulwich+hill",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "14/451-457 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19+lilydale+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "19 Lilydale Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=88+constitution+road+dulwich+hill",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "88 Constitution Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F268+glebe+point+road+glebe",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "6/268 Glebe Point Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=28%2F525+illawarra+road+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "28/525 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F11+arthur+st+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "12/11 Arthur St",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=77a+hubert+street+lilyfield",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "77A Hubert Street",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2F69+allen+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "109/69 Allen Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50+macdonald+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "50 Macdonald Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=39%2F127+railway+parade+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "39/127 Railway Parade",
+      "suburb": "Erskineville"
+    }
+  ]
+}

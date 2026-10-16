@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-15T23:39:59.196651+00:00",
-  "generated_at_sydney": "2026-10-16 09:39 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-16T00:25:17.259748+00:00",
+  "generated_at_sydney": "2026-10-16 10:25 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 175,
+    "total": 174,
     "tier1_pass": 136,
     "new": 0,
     "price_changed": 0,
-    "sold": 164,
+    "sold": 165,
     "under_offer": 8,
     "withdrawn": 56
   },
@@ -13490,7 +13490,7 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
       "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "status_check_failures": 2
     },
     {
       "address": "8/124-126 Parramatta Road",
@@ -13909,7 +13909,7 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
       "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "status_check_failures": 2
     },
     {
       "address": "185A Trafalgar Lane",
@@ -14180,7 +14180,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/123-addison-road-marrickville-nsw-2204-2021011624",
@@ -14190,7 +14190,7 @@
       "beds": 3,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "council_pq": 450.0,
       "water_pq": 247.0,
       "outgoings_source": "listing page: page data (embedded description)",
@@ -14202,8 +14202,10 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021011624_1_1_260721_042007-w3754-h2504",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "175 Denison Street",
@@ -14547,17 +14549,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/2-bed-163-mitchell-rd-erskineville-nsw-2043-2021152419",
+      "resolved_url": "https://www.domain.com.au/2-bed-163-mitchell-rd-erskineville-nsw-2043-2021230617",
       "flag_cleared_on": "2026-10-01",
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2019203297_1_1_240424_060551-w1000-h563",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "186D Victoria Road",
@@ -14689,7 +14693,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "status_checked_on": "2026-10-16",
@@ -14699,7 +14703,7 @@
       "beds": 2,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "council_pq": 445.0,
       "water_pq": 247.0,
       "outgoings_source": "listing page: page data (embedded description)",
@@ -14711,8 +14715,10 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021015740_6_1_260722_060027-w3852-h2570",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "6 Park Road",
@@ -16686,7 +16692,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.9011364,
@@ -16698,9 +16704,11 @@
       "beds": 2,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021017725_1_1_260723_015541-w3000-h2000",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "307/5 Regent Street",
@@ -16757,7 +16765,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.894758,
@@ -16769,9 +16777,11 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020541315_5_1_260120_092953-w1600-h1067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "245 Enmore Road",
@@ -16828,7 +16838,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 1,
       "lat": -33.900443,
@@ -16838,9 +16848,11 @@
       "beds": 4,
       "baths": 3,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021017281_2_1_260917_093727-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "29 Laura Street",
@@ -17364,24 +17376,23 @@
         "property_type": true,
         "accessibility": null,
         "bedrooms": true,
-        "floor_area": null,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "accessibility",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -17393,7 +17404,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.9055052,
@@ -17401,13 +17412,16 @@
       "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/130-chapel-street-marrickville-nsw-2204-2020645359",
       "land_m2": 234,
-      "area_basis": "page data: land area",
+      "area_basis": "page data: land area; page text: labelled internal/floor area",
       "beds": 3,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "internal_m2": 741,
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020645359_1_1_260302_012315-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "9/162 Victoria Road",
@@ -17465,7 +17479,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
       "lat": -33.8520456,
@@ -17477,9 +17491,11 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020883813_2_1_260601_065350-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "url": "https://www.domain.com.au/203-24b-george-street-leichhardt-nsw-2040-2020935272",
@@ -17765,17 +17781,17 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/922-bourke-street-zetland-nsw-2017-2021073756",
       "land_m2": 188,
       "area_basis": "page data: land area",
       "beds": 3,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "council_pq": 375.0,
       "water_pq": 231.0,
       "outgoings_source": "listing page: page data (embedded description)",
@@ -17787,7 +17803,10 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021073756_1_1_260814_022351-w4724-h3149",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "9/91-93 Campbell Street",
@@ -17915,18 +17934,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/56-22-buchanan-street-balmain-nsw-2041-2021073631",
       "internal_m2": 109,
       "area_basis": "page data: building/floor area",
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021073631_1_1_261009_042143-w4592-h3062",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "10 Red Lion Street",
@@ -18058,16 +18080,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/710-7-metters-street-erskineville-nsw-2043-2021075088",
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021075088_1_1_260814_073603-w2000-h1488",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "221/1 Phillip Street",
@@ -18128,16 +18153,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/221-1-phillip-street-petersham-nsw-2049-2020998217",
       "beds": 0,
       "baths": 1,
       "property_type": "studio",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020998217_1_1_260715_061059-w4134-h2717",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "3/14 McDonald Street",
@@ -18555,18 +18583,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702",
       "internal_m2": 107,
       "area_basis": "page data: building/floor area",
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021190702_1_1_260928_052300-w2560-h1707",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "41/33 Euston Road",
@@ -18700,18 +18731,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841",
       "internal_m2": 65,
       "area_basis": "page data: building/floor area",
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021126841_1_1_260903_055357-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "50/274 Botany Road",
@@ -18849,9 +18883,9 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/504-1-gantry-lane-camperdown-nsw-2050-2021191573",
       "internal_m2": 106,
       "land_m2": 106,
@@ -18860,7 +18894,12 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "departed_on": "2026-10-16",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-15",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=504%2f1+gantry+lane+camperdown",
+      "sold_date": "2026-10-15"
     },
     {
       "address": "104/551 Darling Street",
@@ -18923,18 +18962,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/104-551-darling-street-rozelle-nsw-2039-2021195031",
       "internal_m2": 60,
       "area_basis": "page data: building/floor area",
       "beds": 1,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021195031_1_1_260929_073338-w6131-h4087",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "53 Ferry Road",
@@ -18995,18 +19037,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/53-ferry-road-glebe-nsw-2037-2021194758",
       "land_m2": 123,
       "area_basis": "page data: land area",
       "beds": 2,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021194758_1_1_260929_070055-w5209-h3476",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "36/12 Leicester Street",
@@ -19142,7 +19187,7 @@
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/4-12-16-terrace-road-dulwich-hill-nsw-2203-2021193842",
       "land_m2": 136,
       "area_basis": "page data: land area",
@@ -19157,7 +19202,8 @@
       "outgoings_snippet": "Strata: $1,357.95/quarter approx.",
       "outgoings_approx": true,
       "outgoings_read_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "14/451-457 New Canterbury Road",
@@ -19221,7 +19267,7 @@
       "prior_price_text": "$1,200,000",
       "change_flag": "UNCHANGED",
       "days_on_market": 13,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "internal_m2": 123,
       "area_basis": "page data: building/floor area",
       "beds": 2,
@@ -19244,7 +19290,8 @@
       ],
       "outgoings_checked_on": "2026-10-12",
       "resolved_url": "https://www.domain.com.au/14-451-457-new-canterbury-road-dulwich-hill-nsw-2203-2021151406",
-      "flag_cleared_on": "2026-10-16"
+      "flag_cleared_on": "2026-10-16",
+      "status_check_failures": 1
     },
     {
       "address": "177 St Johns Road",
@@ -19379,7 +19426,7 @@
       "days_on_market": 2,
       "lat": -33.9078861,
       "lon": 151.1538946,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/19-lilydale-street-marrickville-nsw-2204-2021160966",
       "internal_m2": 96,
       "land_m2": 211,
@@ -19388,7 +19435,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "88 Constitution Road",
@@ -19452,7 +19500,7 @@
       "days_on_market": 2,
       "lat": -33.90256189999999,
       "lon": 151.139519,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/88-constitution-road-dulwich-hill-nsw-2203-2021142696",
       "land_m2": 152,
       "area_basis": "page data: land area",
@@ -19460,7 +19508,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "6/268 Glebe Point Road",
@@ -19525,7 +19574,7 @@
       "days_on_market": 2,
       "lat": -33.8737814,
       "lon": 151.1817771,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/6-268-glebe-point-road-glebe-nsw-2037-2021028523",
       "internal_m2": 52,
       "area_basis": "page data: building/floor area",
@@ -19533,7 +19582,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "28/525 Illawarra Road",
@@ -19599,7 +19649,7 @@
       "days_on_market": 2,
       "lat": -33.9189074,
       "lon": 151.1462165,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/28-525-illawarra-road-marrickville-nsw-2204-2021195095",
       "internal_m2": 86,
       "area_basis": "page data: building/floor area",
@@ -19607,7 +19657,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "12/11 Arthur St",
@@ -19669,13 +19720,14 @@
       "days_on_market": 2,
       "lat": -33.9125263,
       "lon": 151.1520216,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/12-11-arthur-st-marrickville-nsw-2204-2021153728",
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "77A Hubert Street",
@@ -19739,13 +19791,14 @@
       "days_on_market": 2,
       "lat": -33.8744578,
       "lon": 151.1535422,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/77a-hubert-street-lilyfield-nsw-2040-2021194826",
       "beds": 2,
       "baths": 3,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "109/69 Allen Street",
@@ -19809,7 +19862,7 @@
       "days_on_market": 2,
       "lat": -33.8786058,
       "lon": 151.1541033,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/109-69-allen-street-leichhardt-nsw-2040-2021193792",
       "land_m2": 82,
       "area_basis": "page data: land area",
@@ -19817,7 +19870,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "17 Johnston Street",
@@ -19956,7 +20010,7 @@
       "days_on_market": 2,
       "lat": -33.9035228,
       "lon": 151.1836505,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/50-macdonald-street-erskineville-nsw-2043-2021194725",
       "beds": 2,
       "baths": 1,
@@ -19973,7 +20027,8 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "39/127 Railway Parade",
@@ -20037,7 +20092,7 @@
       "days_on_market": 2,
       "lat": -33.8986951,
       "lon": 151.1884274,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/39-127-railway-parade-erskineville-nsw-2043-2021193762",
       "land_m2": 67,
       "area_basis": "page data: land area",
@@ -20045,7 +20100,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "23/15-17 Fountain Street",
@@ -20108,7 +20164,7 @@
       "days_on_market": 2,
       "lat": -33.9017459,
       "lon": 151.1953177,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/23-15-17-fountain-street-alexandria-nsw-2015-2021193000",
       "internal_m2": 151,
       "area_basis": "page data: building/floor area",
@@ -20116,7 +20172,8 @@
       "baths": 2,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "207/110 Epsom Road",
@@ -20180,7 +20237,7 @@
       "days_on_market": 2,
       "lat": -33.9114015,
       "lon": 151.209378,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/207-110-epsom-road-zetland-nsw-2017-2021192911",
       "beds": 2,
       "baths": 2,
@@ -20200,7 +20257,8 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "3/331 Balmain Road",
@@ -20264,7 +20322,7 @@
       "days_on_market": 2,
       "lat": -33.8716763,
       "lon": 151.1601187,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/3-331-balmain-road-lilyfield-nsw-2040-2021177514",
       "land_m2": 97,
       "area_basis": "page data: land area",
@@ -20272,7 +20330,8 @@
       "baths": 2,
       "property_type": "townhouse",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "62 Margaret Street",
@@ -20405,7 +20464,7 @@
       "days_on_market": 2,
       "lat": -33.905083,
       "lon": 151.2040266,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/2106-6-ebsworth-street-zetland-nsw-2017-2020266256",
       "beds": 2,
       "baths": 2,
@@ -20420,7 +20479,8 @@
       "outgoings_snippet": "Strata levy: Approx. $1,674/quarter Water Rate: Approx. $179/quarter Council Rate: Approx. $320/quarter",
       "outgoings_approx": true,
       "outgoings_read_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "47 Frampton Avenue",
@@ -20718,14 +20778,15 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9171833,
       "lon": 151.1465644,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/13-9-hill-street-marrickville-nsw-2204-2021196873",
       "flag_cleared_on": "2026-10-01",
       "beds": 3,
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "9/3 Roach Street",
@@ -20788,7 +20849,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9154887,
       "lon": 151.1484506,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/9-3-roach-street-marrickville-nsw-2204-2021196648",
       "flag_cleared_on": "2026-10-01",
       "land_m2": 158,
@@ -20797,7 +20858,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "214/3 Nagurra Place",
@@ -20859,7 +20921,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8610145,
       "lon": 151.1687537,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/214-3-nagurra-place-rozelle-nsw-2039-2021184913",
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 106,
@@ -20868,7 +20930,8 @@
       "baths": 2,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "18 Ferry Road",
@@ -21002,7 +21065,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9176274,
       "lon": 151.1453055,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/9-40-42-hill-street-marrickville-nsw-2204-2021160212",
       "flag_cleared_on": "2026-10-01",
       "land_m2": 84,
@@ -21011,7 +21074,8 @@
       "baths": 1,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "26/18 Cecilia Street",
@@ -21073,7 +21137,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.9080967,
       "lon": 151.1554903,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/26-18-cecilia-street-marrickville-nsw-2204-2021157203",
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 124,
@@ -21096,7 +21160,8 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "40 Pile Street",
@@ -21232,7 +21297,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8814289,
       "lon": 151.1484569,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/74a-burfitt-street-leichhardt-nsw-2040-2021196892",
       "flag_cleared_on": "2026-10-01",
       "land_m2": 210,
@@ -21241,7 +21306,8 @@
       "baths": 3,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "222 Corunna Road",
@@ -21304,7 +21370,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8903343,
       "lon": 151.1595972,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/222-corunna-road-petersham-nsw-2049-2021106869",
       "flag_cleared_on": "2026-10-01",
       "land_m2": 132,
@@ -21313,7 +21379,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "13/16 Wolseley Street",
@@ -21374,7 +21441,7 @@
       "change_flag": "UNCHANGED",
       "lat": -33.8460162,
       "lon": 151.1543064,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/13-16-wolseley-street-drummoyne-nsw-2047-2021199827",
       "flag_cleared_on": "2026-10-01",
       "beds": 2,
@@ -21395,7 +21462,8 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "3401/2 Nassau Lane",
@@ -21455,7 +21523,7 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/3401-2-nassau-lane-erskineville-nsw-2043-2021198559",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.9049842,
@@ -21474,7 +21542,8 @@
       "outgoings_snippet": "Strata levies approx. $1980/quarter",
       "outgoings_approx": true,
       "outgoings_read_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "3 Coulson Street",
@@ -21533,7 +21602,7 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/3-coulson-street-erskineville-nsw-2043-2021197903",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.905498,
@@ -21544,7 +21613,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "2105/1 Metters Street",
@@ -21693,7 +21763,7 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/420c-39-ralph-street-alexandria-nsw-2015-2021184412",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.9182626,
@@ -21704,7 +21774,8 @@
       "baths": 2,
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "545/8 Ascot Avenue",
@@ -21765,7 +21836,7 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/545-8-ascot-avenue-zetland-nsw-2017-2021171343",
       "flag_cleared_on": "2026-10-01",
       "lat": -33.9084076,
@@ -21786,7 +21857,8 @@
         "strata",
         "council"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "01/71-91 Euston Road",
@@ -21920,7 +21992,7 @@
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/15-rowntree-street-balmain-nsw-2041-2021204127",
       "land_m2": 107,
       "area_basis": "page data: land area",
@@ -21928,7 +22000,8 @@
       "baths": 2,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "100 Silver Street",
@@ -21990,7 +22063,7 @@
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/100-silver-street-marrickville-nsw-2204-2021204040",
       "land_m2": 113,
       "area_basis": "page data: land area",
@@ -21998,7 +22071,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "16/345-357 Illawarra Road",
@@ -22062,7 +22136,7 @@
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/16-345-357-illawarra-road-marrickville-nsw-2204-2021203273",
       "beds": 2,
       "baths": 1,
@@ -22082,7 +22156,8 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "50 Hopetoun Street",
@@ -22147,7 +22222,7 @@
       "last_seen": "2026-10-12",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-10-02",
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/50-hopetoun-street-camperdown-nsw-2050-2021202682",
       "internal_m2": 79,
       "land_m2": 141,
@@ -22156,7 +22231,8 @@
       "baths": 1,
       "property_type": "house",
       "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12"
+      "outgoings_checked_on": "2026-10-12",
+      "status_check_failures": 1
     },
     {
       "address": "83 Darley Street",

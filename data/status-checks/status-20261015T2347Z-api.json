@@ -1,0 +1,146 @@
+{
+  "generated_on": "2026-10-16",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2F15-17+fountain+street+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "23/15-17 Fountain Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2F110+epsom+road+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "207/110 Epsom Road",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F331+balmain+road+lilyfield",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "3/331 Balmain Road",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2106%2F6+ebsworth+street+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "2106/6 Ebsworth Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F9+hill+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "13/9 Hill Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F3+roach+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "9/3 Roach Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=214%2F3+nagurra+place+rozelle",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "214/3 Nagurra Place",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F40-42+hill+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "9/40-42 Hill Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26%2F18+cecilia+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "26/18 Cecilia Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=74a+burfitt+street+leichhardt",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "74a Burfitt Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=222+corunna+road+petersham",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "222 Corunna Road",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F16+wolseley+street+drummoyne",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "13/16 Wolseley Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3401%2F2+nassau+lane+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "3401/2 Nassau Lane",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3+coulson+street+erskineville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "3 Coulson Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=420c%2F39+ralph+street+alexandria",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "420C/39 Ralph Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=545%2F8+ascot+avenue+zetland",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "545/8 Ascot Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=15+rowntree+street+balmain",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "15 Rowntree Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=100+silver+street+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "100 Silver Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F345-357+illawarra+road+marrickville",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "16/345-357 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50+hopetoun+street+camperdown",
+      "listing_status": "unknown",
+      "status_basis": "chrome: search page without a result count",
+      "address": "50 Hopetoun Street",
+      "suburb": "Camperdown"
+    }
+  ]
+}
