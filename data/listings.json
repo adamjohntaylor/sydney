@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T00:25:17.259748+00:00",
-  "generated_at_sydney": "2026-10-16 10:25 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-16T00:28:35.496946+00:00",
+  "generated_at_sydney": "2026-10-16 10:28 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 174,
+    "total": 172,
     "tier1_pass": 136,
     "new": 0,
     "price_changed": 0,
-    "sold": 165,
-    "under_offer": 8,
+    "sold": 166,
+    "under_offer": 9,
     "withdrawn": 56
   },
   "listings": [
@@ -19184,7 +19184,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "status_checked_on": "2026-10-16",
@@ -19194,16 +19194,18 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "outgoings_unstated": {
         "strata": 1357.95
       },
       "outgoings_source": "listing page: page data (embedded description)",
       "outgoings_snippet": "Strata: $1,357.95/quarter approx.",
       "outgoings_approx": true,
-      "outgoings_read_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021193842_1_1_260929_045521-w3874-h2581",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "14/451-457 New Canterbury Road",
@@ -19263,7 +19265,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "prior_price_text": "$1,200,000",
       "change_flag": "UNCHANGED",
       "days_on_market": 13,
@@ -19273,7 +19275,7 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "strata_pq": 2098.25,
       "council_pq": 410.88,
       "water_pq": 190.0,
@@ -19288,10 +19290,12 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
+      "outgoings_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/14-451-457-new-canterbury-road-dulwich-hill-nsw-2203-2021151406",
       "flag_cleared_on": "2026-10-16",
-      "status_check_failures": 1
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021151406_2_1_260912_082734-w3000-h2000",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "177 St Johns Road",
@@ -19421,7 +19425,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9078861,
@@ -19434,9 +19438,11 @@
       "beds": 3,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021160966_1_1_260916_055139-w3671-h2452",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "88 Constitution Road",
@@ -19495,7 +19501,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.90256189999999,
@@ -19507,9 +19513,11 @@
       "beds": 4,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021142696_1_1_260909_060825-w1200-h800",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "6/268 Glebe Point Road",
@@ -19569,7 +19577,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8737814,
@@ -19581,9 +19589,11 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/fj60sdj4t14k2_1_0_260728_020409-w2600-h1731",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "28/525 Illawarra Road",
@@ -19645,7 +19655,7 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "UNDER_OFFER",
       "days_on_market": 2,
       "lat": -33.9189074,
       "lon": 151.1462165,
@@ -19656,9 +19666,15 @@
       "beds": 1,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021195095_1_1_260929_074953-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-10-16",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: UNDER OFFER",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=28%2f525+illawarra+road+marrickville"
     },
     {
       "address": "12/11 Arthur St",
@@ -19715,7 +19731,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9125263,
@@ -19725,9 +19741,11 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021153728_2_1_260914_054631-w1620-h1080",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "77A Hubert Street",
@@ -19786,7 +19804,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8744578,
@@ -19796,9 +19814,11 @@
       "beds": 2,
       "baths": 3,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021194826_1_1_260929_065935-w4961-h3721",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "109/69 Allen Street",
@@ -19858,7 +19878,7 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "SOLD",
       "days_on_market": 2,
       "lat": -33.8786058,
       "lon": 151.1541033,
@@ -19871,7 +19891,11 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
       "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "departed_on": "2026-10-16",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-14",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109%2f69+allen+street+leichhardt",
+      "sold_date": "2026-10-14"
     },
     {
       "address": "17 Johnston Street",
@@ -20005,7 +20029,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9035228,
@@ -20015,7 +20039,7 @@
       "beds": 2,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "council_pq": 388.0,
       "water_pq": 246.0,
       "outgoings_source": "listing page: page data (embedded description)",
@@ -20027,8 +20051,10 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021194725_1_1_260929_064358-w5982-h3988",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "39/127 Railway Parade",
@@ -20087,7 +20113,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8986951,
@@ -20099,9 +20125,11 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021193762_1_1_260929_044547-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "23/15-17 Fountain Street",
@@ -20159,7 +20187,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9017459,
@@ -20171,9 +20199,11 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021193000_1_1_260929_022955-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "207/110 Epsom Road",
@@ -20232,7 +20262,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.9114015,
@@ -20242,7 +20272,7 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "strata_pq": 1235.07,
       "council_pq": 336.4,
       "water_pq": 280.0,
@@ -20257,8 +20287,10 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/18320594_20_1_260929_121509-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "3/331 Balmain Road",
@@ -20317,7 +20349,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.8716763,
@@ -20329,9 +20361,11 @@
       "beds": 2,
       "baths": 2,
       "property_type": "townhouse",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2015326255_4_1_190604_055235-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "62 Margaret Street",
@@ -20459,7 +20493,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "days_on_market": 2,
       "lat": -33.905083,
@@ -20469,7 +20503,7 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "outgoings_unstated": {
         "strata": 1674.0,
         "water": 179.0,
@@ -20478,9 +20512,11 @@
       "outgoings_source": "listing page: page data (embedded description)",
       "outgoings_snippet": "Strata levy: Approx. $1,674/quarter Water Rate: Approx. $179/quarter Council Rate: Approx. $320/quarter",
       "outgoings_approx": true,
-      "outgoings_read_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_read_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020266256_1_1_250912_041455-w1800-h1200",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "47 Frampton Avenue",
@@ -20774,7 +20810,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "lat": -33.9171833,
       "lon": 151.1465644,
@@ -20784,9 +20820,11 @@
       "beds": 3,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021196873_1_1_260930_022329-w3832-h2556",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "9/3 Roach Street",
@@ -20845,7 +20883,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "lat": -33.9154887,
       "lon": 151.1484506,
@@ -20857,9 +20895,11 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021196648_1_1_260930_014402-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "214/3 Nagurra Place",
@@ -20917,7 +20957,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "lat": -33.8610145,
       "lon": 151.1687537,
@@ -20929,9 +20969,11 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021184913_14_1_260925_011556-w2560-h1707",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "18 Ferry Road",
@@ -21061,7 +21103,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "lat": -33.9176274,
       "lon": 151.1453055,
@@ -21073,9 +21115,11 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021160212_3_1_260916_042836-w3000-h2000",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "26/18 Cecilia Street",
@@ -21133,7 +21177,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-16",
       "change_flag": "UNCHANGED",
       "lat": -33.9080967,
       "lon": 151.1554903,
@@ -21145,7 +21189,7 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-10-16",
       "strata_pq": 1822.0,
       "council_pq": 410.0,
       "water_pq": 226.0,
@@ -21160,8 +21204,10 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021157203_1_1_260915_054657-w6000-h4000",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16"
     },
     {
       "address": "40 Pile Street",
