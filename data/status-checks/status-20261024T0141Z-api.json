@@ -1,0 +1,177 @@
+{
+  "generated_on": "2026-10-24",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=128%2F8+pony+race+street+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=128%2f8+pony+race+street+zetland",
+      "resolved_url": "https://www.domain.com.au/128-8-pony-race-street-zetland-nsw-2017-2021047890",
+      "address": "128/8 Pony Race Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2215%2F6+kingsborough+way+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2215%2f6+kingsborough+way+zetland",
+      "resolved_url": "https://www.domain.com.au/2215-6-kingsborough-way-zetland-nsw-2017-2021235214",
+      "address": "2215/6 Kingsborough Way",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=208%2F110+epsom+rd+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=208%2f110+epsom+rd+zetland",
+      "resolved_url": "https://www.domain.com.au/208-110-epsom-rd-zetland-nsw-2017-2021013866",
+      "address": "208/110 Epsom Rd",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=108%2F5+regent+street+petersham",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=108%2f5+regent+street+petersham",
+      "resolved_url": "https://www.domain.com.au/108-5-regent-street-petersham-nsw-2049-2021234468",
+      "address": "108/5 Regent Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=34+edward+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/34-edward-street-marrickville-nsw-2204-2021241118",
+      "address": "34 Edward Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F12-22+newington+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f12-22+newington+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/13-12-22-newington-road-marrickville-nsw-2204-2021239697",
+      "address": "13/12-22 Newington Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2F8+water+street+birchgrove",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2f8+water+street+birchgrove",
+      "resolved_url": "https://www.domain.com.au/57-8-water-street-birchgrove-nsw-2041-2021237995",
+      "address": "57/8 Water Street",
+      "suburb": "Birchgrove"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2F5-11+pyrmont+bridge+road+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2f5-11+pyrmont+bridge+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/29-5-11-pyrmont-bridge-road-camperdown-nsw-2050-2021220386",
+      "address": "29/5-11 Pyrmont Bridge Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F11+ennis+street+balmain",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f11+ennis+street+balmain",
+      "resolved_url": "https://www.domain.com.au/1-11-ennis-street-balmain-nsw-2041-2021239021",
+      "address": "1/11 Ennis Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=234+catherine+street+leichhardt",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2017-03-23, before first seen 2026-10-16)",
+      "resolved_url": "https://www.domain.com.au/234-catherine-street-leichhardt-nsw-2040-2013424915",
+      "address": "234 Catherine Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12+william+street+leichhardt",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/12-william-street-leichhardt-nsw-2040-2021240958",
+      "address": "12 William Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F2+pearson+street+balmain",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2f2+pearson+street+balmain",
+      "resolved_url": "https://www.domain.com.au/5-2-pearson-street-balmain-east-nsw-2041-2021240843",
+      "address": "5/2 Pearson Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4+holt+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/4-holt-street-newtown-nsw-2042-2021240700",
+      "address": "4 Holt Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+albany+road+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/27-albany-road-stanmore-nsw-2048-2021240261",
+      "address": "27 Albany Road",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=20+redmond+street+leichhardt",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/20-redmond-street-leichhardt-nsw-2040-2021240233",
+      "address": "20 Redmond Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+railway+avenue+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/17-railway-avenue-stanmore-nsw-2048-2021240031",
+      "address": "17 Railway Avenue",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=229+enmore+road+enmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/229-enmore-road-enmore-nsw-2042-2021238600",
+      "address": "229 Enmore Road",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=133%2F9+rose+valley+way+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=133%2f9+rose+valley+way+zetland",
+      "resolved_url": "https://www.domain.com.au/133-9-rose-valley-way-zetland-nsw-2017-2021240219",
+      "address": "133/9 Rose Valley Way",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=302%2F50+garden+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=302%2f50+garden+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/302-50-garden-street-alexandria-nsw-2015-2021239260",
+      "address": "302/50 Garden Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=225+lilyfield+road+lilyfield",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/225-lilyfield-road-lilyfield-nsw-2040-2021240337",
+      "address": "225 Lilyfield Road",
+      "suburb": "Lilyfield"
+    }
+  ]
+}
