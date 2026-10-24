@@ -244,5 +244,14 @@
     "status": "interested",
     "note": "",
     "updated": "2026-10-15T22:44:13.192Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=67%2F57+ralph+street+alexandria": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-24T01:35:08.495Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }
