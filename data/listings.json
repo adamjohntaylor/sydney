@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T02:23:59.333737+00:00",
-  "generated_at_sydney": "2026-10-24 12:23 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-24T03:40:25.705488+00:00",
+  "generated_at_sydney": "2026-10-24 13:40 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 176,
+    "total": 175,
     "tier1_pass": 136,
-    "new": 32,
-    "price_changed": 2,
+    "new": 0,
+    "price_changed": 0,
     "sold": 194,
-    "under_offer": 10,
+    "under_offer": 11,
     "withdrawn": 64
   },
   "listings": [
@@ -2388,7 +2388,6 @@
       "warehouse_character": false,
       "first_seen": "2026-06-22",
       "last_seen": "2026-06-30",
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "beds": 1,
       "baths": 1,
       "parking": 1,
@@ -2400,7 +2399,9 @@
       "departed_on": "2026-09-29",
       "status_source": "sweep_check",
       "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
-      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "image_cleared_on": "2026-10-24",
+      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page"
     },
     {
       "address": "9 Metters Street",
@@ -4313,7 +4314,6 @@
       "warehouse_character": false,
       "first_seen": "2026-07-25",
       "last_seen": "2026-10-12",
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "beds": 1,
       "baths": 1,
       "parking": 1,
@@ -4328,7 +4328,12 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
       "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "status_check_failures": 1,
+      "image_cleared_on": "2026-10-24",
+      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
+      "cover_image": "https://rimh2.domainstatic.com.au/d6_6DPcAV9vLLFLtZl8nXgJodHc=/filters:format(png):quality(80):no_upscale()/2021121768_1_1_261002_030756-w4134-h2756",
+      "image_basis": "og:image (listing page, manual read 24 Oct 2026)",
+      "image_checked_on": "2026-10-24"
     },
     {
       "address": "3/151-153 Illawarra Road",
@@ -14315,7 +14320,6 @@
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-24",
       "change_flag": "SOLD",
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "beds": 2,
       "baths": 1,
       "price_guide_text": "Auction - No price guide offered",
@@ -14324,7 +14328,9 @@
       "status_source": "sweep_check",
       "status_basis": "chrome: Domain sold results list the address, sold 2026-08-07",
       "resolved_url": "https://www.domain.com.au/175-denison-street-newtown-nsw-2042-2021011874",
-      "sold_date": "2026-08-07"
+      "sold_date": "2026-08-07",
+      "image_cleared_on": "2026-10-24",
+      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page"
     },
     {
       "address": "9/18 Drummoyne Avenue",
@@ -17383,7 +17389,6 @@
       "last_seen": "2026-07-25",
       "change_flag": "SOLD",
       "days_on_market": 0,
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "beds": 2,
       "baths": 1,
       "parking": 1,
@@ -17394,7 +17399,9 @@
       "status_source": "sweep_check",
       "status_basis": "chrome: Domain sold results list the address, sold 2026-08-01",
       "resolved_url": "https://www.domain.com.au/2-45-henry-street-lilyfield-nsw-2040-2020995185",
-      "sold_date": "2026-08-01"
+      "sold_date": "2026-08-01",
+      "image_cleared_on": "2026-10-24",
+      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page"
     },
     {
       "address": "130 Chapel Street",
@@ -18858,7 +18865,7 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "UNDER_OFFER",
       "days_on_market": 2,
       "status_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911",
@@ -18867,22 +18874,26 @@
       "beds": 3,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-16",
-      "outgoings_checked_on": "2026-10-16",
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
       "parking": 1,
       "price_guide_text": "Guide $1,200,000",
       "price_min": 1200000,
       "price_max": 1200000,
-      "image_basis": "bookmarklet: og:image",
-      "image_checked_on": "2026-10-16",
-      "status_check_failures": 1,
       "status": "",
       "note": "",
       "accessibility": {
         "step_free": false,
         "lift": null
-      }
+      },
+      "image_cleared_on": "2026-10-24",
+      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021188911_1_1_260927_112541-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "departed_on": "2026-10-24",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: UNDER OFFER"
     },
     {
       "address": "504/1 Gantry Lane",
@@ -19580,11 +19591,11 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,400,000",
-      "flag_sweeps": 1,
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "UNCHANGED",
       "days_on_market": 25,
       "lat": -33.90256189999999,
-      "lon": 151.139519
+      "lon": 151.139519,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "6/268 Glebe Point Road",
@@ -20034,11 +20045,15 @@
       "property_type": "townhouse",
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "parking": 1,
       "status": "interested",
       "note": "",
-      "status_check_failures": 1
+      "status_check_failures": 1,
+      "image_cleared_on": "2026-10-24",
+      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021192053_1_1_260928_101227-w5800-h3867",
+      "image_basis": "og:image (listing page, manual read 24 Oct 2026)",
+      "image_checked_on": "2026-10-24"
     },
     {
       "address": "50 Macdonald Street",
@@ -22775,13 +22790,13 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$2.1m",
-      "flag_sweeps": 1,
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "UNCHANGED",
       "days_on_market": 22,
       "lat": -33.8809642,
       "lon": 151.1714982,
       "status": "rejected",
-      "note": ""
+      "note": "",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "807/13 Joynton Avenue",
@@ -25435,7 +25450,7 @@
       "beds": 2,
       "baths": 2,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-16",
+      "area_checked_on": "2026-10-24",
       "council_pq": 336.0,
       "water_pq": 226.0,
       "outgoings_source": "listing page: page data (embedded description)",
@@ -25447,13 +25462,17 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/502-75-91-macdonald-street-erskineville-nsw-2043-2021227420",
       "flag_cleared_on": "2026-10-16",
-      "cover_image": "https://s.domainstatic.com.au/domain/facebook-open-graph-plain.png",
       "parking": 1,
       "status": "interested",
-      "note": ""
+      "note": "",
+      "image_cleared_on": "2026-10-24",
+      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021227420_1_1_261009_043459-w1248-h832",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24"
     },
     {
       "address": "612/5 Joynton Avenue",
@@ -30769,8 +30788,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "beds": 2,
       "baths": 2,
@@ -30780,7 +30798,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021263006_1_1_261021_073532-w6000-h4000",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/538h-39-ralph-street-alexandria-nsw-2015-2021263006"
+      "resolved_url": "https://www.domain.com.au/538h-39-ralph-street-alexandria-nsw-2015-2021263006",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "59 Suttor Street",
@@ -30840,8 +30859,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 145,
       "area_basis": "page data: land area",
@@ -30853,7 +30871,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262814_1_1_261021_064828-w1536-h1024",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/59-suttor-street-alexandria-nsw-2015-2021262814"
+      "resolved_url": "https://www.domain.com.au/59-suttor-street-alexandria-nsw-2015-2021262814",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "316/1 Pearl Street",
@@ -30912,8 +30931,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "internal_m2": 101,
       "area_basis": "page data: building/floor area",
@@ -30925,7 +30943,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262709_1_1_261021_063625-w2000-h1333",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/316-1-pearl-street-erskineville-nsw-2043-2021262709"
+      "resolved_url": "https://www.domain.com.au/316-1-pearl-street-erskineville-nsw-2043-2021262709",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "7/52 Nelson Street",
@@ -30987,8 +31006,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "beds": 2,
       "baths": 1,
@@ -30998,7 +31016,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262546_1_1_261021_062028-w4600-h3067",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/7-52-nelson-street-annandale-nsw-2038-2021262546"
+      "resolved_url": "https://www.domain.com.au/7-52-nelson-street-annandale-nsw-2038-2021262546",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "14 Waterloo Street",
@@ -31060,8 +31079,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 151,
       "area_basis": "page data: land area",
@@ -31073,7 +31091,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262476_1_1_261021_061417-w5190-h3463",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/14-waterloo-street-rozelle-nsw-2039-2021262476"
+      "resolved_url": "https://www.domain.com.au/14-waterloo-street-rozelle-nsw-2039-2021262476",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "23/753-769 New Canterbury Road",
@@ -31135,8 +31154,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 126,
       "area_basis": "page data: land area",
@@ -31148,7 +31166,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262276_1_1_261021_055449-w6720-h4480",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/23-753-769-new-canterbury-road-dulwich-hill-nsw-2203-2021262276"
+      "resolved_url": "https://www.domain.com.au/23-753-769-new-canterbury-road-dulwich-hill-nsw-2203-2021262276",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "71 Cobar Street",
@@ -31210,8 +31229,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 347,
       "area_basis": "page data: land area",
@@ -31223,7 +31241,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262264_1_1_261021_055412-w3777-h2520",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/71-cobar-street-dulwich-hill-nsw-2203-2021262264"
+      "resolved_url": "https://www.domain.com.au/71-cobar-street-dulwich-hill-nsw-2203-2021262264",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "35 Marian Street",
@@ -31285,8 +31304,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 183,
       "area_basis": "page data: land area",
@@ -31298,7 +31316,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261787_1_1_261021_050850-w4724-h3149",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/35-marian-street-enmore-nsw-2042-2021261787"
+      "resolved_url": "https://www.domain.com.au/35-marian-street-enmore-nsw-2042-2021261787",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "22C/14 Wolseley Street",
@@ -31361,8 +31380,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "internal_m2": 89,
       "area_basis": "page data: building/floor area",
@@ -31388,7 +31406,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261462_1_1_261021_043409-w1950-h1302",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/22c-14-wolseley-street-drummoyne-nsw-2047-2021261462"
+      "resolved_url": "https://www.domain.com.au/22c-14-wolseley-street-drummoyne-nsw-2047-2021261462",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "143 Lilyfield Road",
@@ -31448,8 +31467,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.8741556,
       "lon": 151.1584245,
       "status_checked_on": "2026-10-24",
@@ -31463,7 +31481,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021210824_1_1_261005_045339-w2048-h1365",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/143-lilyfield-road-lilyfield-nsw-2040-2021210824"
+      "resolved_url": "https://www.domain.com.au/143-lilyfield-road-lilyfield-nsw-2040-2021210824",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "2012/20 Gadigal Avenue",
@@ -31522,8 +31541,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9044321,
       "lon": 151.2134108,
       "status_checked_on": "2026-10-24",
@@ -31537,7 +31555,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021152839_2_1_260914_030632-w4961-h3307",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/2012-20-gadigal-avenue-zetland-nsw-2017-2021152839"
+      "resolved_url": "https://www.domain.com.au/2012-20-gadigal-avenue-zetland-nsw-2017-2021152839",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "9/37 Iredale Street",
@@ -31599,8 +31618,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9033471,
       "lon": 151.1801921,
       "status_checked_on": "2026-10-24",
@@ -31628,7 +31646,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261809_1_1_261021_051232-w6002-h4002",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/9-37-iredale-street-newtown-nsw-2042-2021261809"
+      "resolved_url": "https://www.domain.com.au/9-37-iredale-street-newtown-nsw-2042-2021261809",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "66/155 Missenden Road",
@@ -31690,8 +31709,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.8916711,
       "lon": 151.1825767,
       "status_checked_on": "2026-10-24",
@@ -31703,7 +31721,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261549_1_1_261021_044308-w4600-h3067",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/66-155-missenden-road-newtown-nsw-2042-2021261549"
+      "resolved_url": "https://www.domain.com.au/66-155-missenden-road-newtown-nsw-2042-2021261549",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "10/9 Trade Street",
@@ -31765,8 +31784,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.8949488,
       "lon": 151.1738502,
       "status_checked_on": "2026-10-24",
@@ -31792,7 +31810,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021259319_1_1_261020_110446-w1368-h904",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/10-9-trade-street-newtown-nsw-2042-2021259319"
+      "resolved_url": "https://www.domain.com.au/10-9-trade-street-newtown-nsw-2042-2021259319",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "106/2 Barr Street",
@@ -31920,8 +31939,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.9139872,
       "lon": 151.1574513,
       "status_checked_on": "2026-10-24",
@@ -31935,7 +31953,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021267150_1_1_261022_073707-w2560-h1708",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/12-queen-street-marrickville-nsw-2204-2021267150"
+      "resolved_url": "https://www.domain.com.au/12-queen-street-marrickville-nsw-2204-2021267150",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "10 Bourne Street",
@@ -31995,8 +32014,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "lat": -33.907066,
       "lon": 151.1698832,
       "status_checked_on": "2026-10-24",
@@ -32010,7 +32028,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021267064_1_1_261022_071259-w2560-h1708",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/10-bourne-street-marrickville-nsw-2204-2021267064"
+      "resolved_url": "https://www.domain.com.au/10-bourne-street-marrickville-nsw-2204-2021267064",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "5/771-777 New Canterbury Road",
@@ -32070,8 +32089,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 100,
       "area_basis": "page data: land area",
@@ -32085,7 +32103,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/5-771-777-new-canterbury-road-dulwich-hill-nsw-2203-2021266247",
       "lat": -33.9048816,
-      "lon": 151.1319762
+      "lon": 151.1319762,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "52 Talfourd Street",
@@ -32145,8 +32164,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 113,
       "area_basis": "page data: land area",
@@ -32160,7 +32178,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/52-talfourd-street-glebe-nsw-2037-2021265834",
       "lat": -33.8789371,
-      "lon": 151.1870705
+      "lon": 151.1870705,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "14/63 Warren Road",
@@ -32218,8 +32237,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 121,
       "area_basis": "page data: land area",
@@ -32233,7 +32251,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/14-63-warren-road-marrickville-nsw-2204-2021265813",
       "lat": -33.9161342,
-      "lon": 151.1515541
+      "lon": 151.1515541,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "110/10 Pyrmont Bridge Road",
@@ -32293,8 +32312,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 134,
       "area_basis": "page data: land area",
@@ -32308,7 +32326,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/110-10-pyrmont-bridge-road-camperdown-nsw-2050-2021265626",
       "lat": -33.8840196,
-      "lon": 151.1787821
+      "lon": 151.1787821,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "35A Upward Street",
@@ -32368,8 +32387,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "beds": 2,
       "baths": 2,
@@ -32381,7 +32399,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/201-35a-upward-street-leichhardt-nsw-2040-2021265591",
       "lat": -33.888246,
-      "lon": 151.1479645
+      "lon": 151.1479645,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "421 King Street",
@@ -32441,8 +32460,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 170,
       "area_basis": "page data: land area",
@@ -32456,7 +32474,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/421-king-street-newtown-nsw-2042-2021264322",
       "lat": -33.9005781,
-      "lon": 151.1781237
+      "lon": 151.1781237,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "33 Illawarra Road",
@@ -32516,8 +32535,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 189,
       "area_basis": "page data: land area",
@@ -32531,7 +32549,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/33-illawarra-road-marrickville-nsw-2204-2021179060",
       "lat": -33.9034926,
-      "lon": 151.1627914
+      "lon": 151.1627914,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "81 Garden Street",
@@ -32591,8 +32610,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 118,
       "area_basis": "page data: land area",
@@ -32617,7 +32635,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381",
       "lat": -33.8981717,
-      "lon": 151.1976681
+      "lon": 151.1976681,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "94 Denison Street",
@@ -32677,8 +32696,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "beds": 4,
       "baths": 4,
@@ -32690,7 +32708,8 @@
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/94-denison-street-camperdown-nsw-2050-2020380679",
       "lat": -33.8920366,
-      "lon": 151.1757551
+      "lon": 151.1757551,
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "09/11 Power Avenue",
@@ -32771,13 +32790,19 @@
       "price_min": 800000,
       "price_max": 800000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 144,
+          "supermarket": 314,
+          "pool": 218,
+          "park": 53,
+          "restaurants": 340
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32785,8 +32810,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -32794,23 +32819,21 @@
         ],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32818,8 +32841,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "beds": 1,
       "baths": 1,
@@ -32829,7 +32851,10 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020838975_1_1_260513_063518-w2048-h1365",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/1-1a-thomas-street-birchgrove-nsw-2041-2020838975"
+      "resolved_url": "https://www.domain.com.au/1-1a-thomas-street-birchgrove-nsw-2041-2020838975",
+      "flag_cleared_on": "2026-10-24",
+      "lat": -33.8536392,
+      "lon": 151.1783354
     },
     {
       "address": "106A/2 Barr Street",
@@ -32840,13 +32865,19 @@
       "price_min": 840000,
       "price_max": 840000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 25,
+          "supermarket": 50,
+          "pool": 313,
+          "park": 148,
+          "restaurants": 111
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32854,8 +32885,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -32863,23 +32894,21 @@
         ],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32887,8 +32916,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "beds": 1,
       "baths": 1,
@@ -32912,7 +32940,10 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/cku1udjvjcvna_1_0_261021_112934-w2048-h1365",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/106a-2-barr-street-camperdown-nsw-2050-2021264245"
+      "resolved_url": "https://www.domain.com.au/106a-2-barr-street-camperdown-nsw-2050-2021264245",
+      "flag_cleared_on": "2026-10-24",
+      "lat": -33.8841741,
+      "lon": 151.1793786
     },
     {
       "address": "17/123 Lilyfield Road",
@@ -32923,13 +32954,19 @@
       "price_min": 1800000,
       "price_max": 1800000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 54,
+          "supermarket": 442,
+          "pool": 840,
+          "park": 557,
+          "restaurants": 275
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32937,8 +32974,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -32946,23 +32983,21 @@
         ],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32970,8 +33005,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "beds": 0,
       "baths": 1,
@@ -32981,7 +33015,10 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/16171316_2_1_221107_045757-w1600-h1067",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/17-123-lilyfield-road-lilyfield-nsw-2040-2021267121"
+      "resolved_url": "https://www.domain.com.au/17-123-lilyfield-road-lilyfield-nsw-2040-2021267121",
+      "flag_cleared_on": "2026-10-24",
+      "lat": -33.8740285,
+      "lon": 151.1598711
     },
     {
       "address": "3/208 Bridge Road",
@@ -32989,13 +33026,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F208+bridge+road+glebe",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 111,
+          "supermarket": 105,
+          "pool": 693,
+          "park": 168,
+          "restaurants": 104
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -33003,8 +33046,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -33013,23 +33056,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33040,7 +33081,9 @@
       "change_flag": "SOLD",
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
+      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin",
+      "lat": -33.8819872,
+      "lon": 151.1835873
     },
     {
       "address": "14/11 Rosebank Street",
@@ -33051,13 +33094,19 @@
       "price_min": 1300000,
       "price_max": 1300000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 81,
+          "supermarket": 185,
+          "pool": 900,
+          "park": 55,
+          "restaurants": 72
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -33065,8 +33114,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -33074,23 +33123,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33101,7 +33148,9 @@
       "change_flag": "SOLD",
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
+      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin",
+      "lat": -33.8792769,
+      "lon": 151.1856964
     },
     {
       "address": "10 Pidcock Street",
@@ -33109,13 +33158,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10+pidcock+street+camperdown",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 88,
+          "supermarket": 166,
+          "pool": 266,
+          "park": 178,
+          "restaurants": 126
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -33123,8 +33178,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -33133,23 +33188,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33160,7 +33213,9 @@
       "change_flag": "SOLD",
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
+      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin",
+      "lat": -33.8875954,
+      "lon": 151.1759684
     },
     {
       "address": "188A Darling Street",
@@ -33168,13 +33223,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=188a+darling+street+balmain",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 23,
+          "supermarket": 495,
+          "pool": 143,
+          "park": 32,
+          "restaurants": 52
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -33182,8 +33243,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -33192,23 +33253,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33219,7 +33278,9 @@
       "change_flag": "SOLD",
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
+      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin",
+      "lat": -33.8583235,
+      "lon": 151.1865274
     },
     {
       "address": "201/843 New Canterbury Road",
@@ -33227,13 +33288,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=201%2F843+new+canterbury+road+dulwich+hill",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 35,
+          "supermarket": 1034,
+          "pool": 321,
+          "park": 172,
+          "restaurants": 712
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -33241,8 +33308,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -33251,23 +33318,21 @@
         "unverified": [
           "budget",
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33275,8 +33340,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 85,
       "area_basis": "page data: land area",
@@ -33288,7 +33352,10 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270726_1_1_261023_030959-w3834-h2558",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/201-843-new-canterbury-road-dulwich-hill-nsw-2203-2021270726"
+      "resolved_url": "https://www.domain.com.au/201-843-new-canterbury-road-dulwich-hill-nsw-2203-2021270726",
+      "flag_cleared_on": "2026-10-24",
+      "lat": -33.9045225,
+      "lon": 151.1296945
     },
     {
       "address": "5306/6 Grove Street",
@@ -33296,13 +33363,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5306%2F6+grove+street+dulwich+hill",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 127,
+          "supermarket": 353,
+          "pool": 417,
+          "park": 147,
+          "restaurants": 120
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -33310,8 +33383,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -33320,23 +33393,21 @@
         "unverified": [
           "budget",
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33344,8 +33415,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 94,
       "area_basis": "page data: land area",
@@ -33357,7 +33427,10 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270724_1_1_261023_030940-w3876-h2587",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/5306-6-grove-street-dulwich-hill-nsw-2203-2021270724"
+      "resolved_url": "https://www.domain.com.au/5306-6-grove-street-dulwich-hill-nsw-2203-2021270724",
+      "flag_cleared_on": "2026-10-24",
+      "lat": -33.9011747,
+      "lon": 151.1391768
     },
     {
       "address": "25 College Street",
@@ -33368,13 +33441,19 @@
       "price_min": 1300000,
       "price_max": 1300000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 122,
+          "supermarket": 194,
+          "pool": 406,
+          "park": 76,
+          "restaurants": 131
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -33382,8 +33461,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -33391,23 +33470,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33418,7 +33495,9 @@
       "change_flag": "SOLD",
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
+      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin",
+      "lat": -33.8562094,
+      "lon": 151.1808777
     },
     {
       "address": "7 Watkin Street",
@@ -33535,8 +33614,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 58,
       "area_basis": "page data: land area",
@@ -33548,7 +33626,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270223_1_1_261023_012819-w2000-h1333",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/4-56-cambridge-street-stanmore-nsw-2048-2021270223"
+      "resolved_url": "https://www.domain.com.au/4-56-cambridge-street-stanmore-nsw-2048-2021270223",
+      "flag_cleared_on": "2026-10-24"
     },
     {
       "address": "4/28 Railway Street",
@@ -33604,8 +33683,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-24",
       "land_m2": 76,
       "area_basis": "page data: land area",
@@ -33617,7 +33695,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021256633_1_1_261020_031004-w2048-h1365",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/4-28-railway-street-petersham-nsw-2049-2021256633"
+      "resolved_url": "https://www.domain.com.au/4-28-railway-street-petersham-nsw-2049-2021256633",
+      "flag_cleared_on": "2026-10-24"
     }
   ]
 }

@@ -842,6 +842,10 @@
       if (!/^https?:\/\//i.test(u)) return false;
       if (!/(domainstatic\.com\.au|bucket-api\.domain\.com\.au\/v1\/bucket\/image\/|reastatic\.net|realestate\.com\.au\/.*\.(?:jpe?g|png|webp))/i.test(u)) return false;
       if (/logo|agent|avatar|profile|floorplan|floor-plan|staticmap|maps\.google|placeholder|icon|sprite/i.test(u)) return false;
+      // Site-generic images are not property photos: Domain's share-card fallback
+      // (s.domainstatic.com.au/domain/facebook-open-graph-plain.png) and any other
+      // s.domainstatic.com.au/domain/* asset, REA's default share images.
+      if (/s\.domainstatic\.com\.au\/domain\/|open-graph|opengraph|og-default|default-og|share-image|no-image|noimage|default\.(?:png|jpe?g)/i.test(u)) return false;
       return true;
     };
     const pick = (u, basis) => { if (isPhoto(u)) { out.cover_image = u.trim(); out.image_basis = basis; return true; } return false; };

@@ -1,0 +1,62 @@
+{
+  "generated_on": "2026-10-24",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F2+foundry+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f2+foundry+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103",
+      "address": "404/2 Foundry Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502/75-91+macdonald+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 179 m² internal",
+      "resolved_url": "https://www.domain.com.au/502-75-91-macdonald-street-erskineville-nsw-2043-2021227420",
+      "address": "502/75-91 Macdonald Street",
+      "suburb": "Erskineville",
+      "internal_m2": 179,
+      "area_basis": "page data: building/floor area",
+      "area_checked": true,
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "outgoings_checked": true,
+      "outgoings_text": "- Rates: Water $226pq, Council $336pq (All approx.)",
+      "outgoings_text_source": "page data (embedded description)",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021227420_1_1_261009_043459-w1248-h832",
+      "image_basis": "og:image",
+      "image_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50/274+botany+road+alexandria",
+      "listing_status": "under_offer",
+      "status_basis": "chrome: UNDER OFFER",
+      "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911",
+      "address": "50/274 Botany Road",
+      "suburb": "Alexandria",
+      "internal_m2": 151,
+      "area_basis": "page data: building/floor area",
+      "area_checked": true,
+      "beds": 3,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "outgoings_checked": true,
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021188911_1_1_260927_112541-w4134-h2756",
+      "image_basis": "og:image",
+      "image_checked": true
+    }
+  ]
+}

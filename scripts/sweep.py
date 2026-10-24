@@ -319,6 +319,19 @@ def apply_check_details(target, chk, today):
     return out
 
 
+# Site-generic images that readers have mistaken for the listing photo: Domain's
+# share-card fallback (s.domainstatic.com.au/domain/facebook-open-graph-plain.png)
+# was recorded as the cover for several alert-derived records in Oct 2026.
+_GENERIC_IMAGE_RE = re.compile(
+    r"s\.domainstatic\.com\.au/domain/|open-graph|opengraph|og-default|default-og|share-image|"
+    r"no-image|noimage|/default\.(?:png|jpe?g)|logo|avatar|placeholder|icon|sprite|floor-?plan|staticmap", re.I)
+
+
+def is_property_photo_url(url):
+    """True if url looks like a property photo rather than a site-generic image."""
+    return bool(url) and not _GENERIC_IMAGE_RE.search(url)
+
+
 def apply_image_check(target, chk, today):
     """Cover photo from a page read (`cover_image`, a property-photo CDN URL
     the reader already vetted). Fills a missing photo and replaces one only
@@ -328,6 +341,9 @@ def apply_image_check(target, chk, today):
     stops re-opening pages that carry no photo at all."""
     out = []
     url = (chk.get("cover_image") or "").strip()
+    if url and not is_property_photo_url(url):
+        out.append(f"cover_image: REJECTED generic/share image {url[:80]}")
+        url = ""
     if url.startswith("http") and len(url) < 1000:
         basis = str(chk.get("image_basis") or "")
         if not target.get("cover_image") or (basis.startswith("og:image") and target.get("cover_image") != url):
