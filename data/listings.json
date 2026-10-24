@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T01:47:28.420053+00:00",
-  "generated_at_sydney": "2026-10-24 11:47 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-24T02:23:59.333737+00:00",
+  "generated_at_sydney": "2026-10-24 12:23 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 177,
+    "total": 176,
     "tier1_pass": 137,
     "new": 32,
     "price_changed": 2,
     "sold": 194,
     "under_offer": 10,
-    "withdrawn": 63
+    "withdrawn": 64
   },
   "listings": [
     {
@@ -13519,7 +13519,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
       "lat": -33.9057052,
       "lon": 151.2031385,
@@ -13531,10 +13531,11 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 3,
-      "needs_manual_check": true
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2019500912_1_1_240918_024337-w1020-h729",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24"
     },
     {
       "address": "8/124-126 Parramatta Road",
@@ -13940,11 +13941,11 @@
       "warehouse_character": false,
       "first_seen": "2026-07-11",
       "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8788888,
       "lon": 151.1859923,
       "status_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/7-164-glebe-point-road-glebe-nsw-2037-2020985233",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 62,
       "area_basis": "page data: building/floor area",
@@ -13953,8 +13954,10 @@
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
       "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 3,
-      "needs_manual_check": true
+      "departed_on": "2026-10-24",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2f164+glebe+point+road+glebe"
     },
     {
       "address": "185A Trafalgar Lane",
@@ -19569,7 +19572,7 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,400,000",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 25,
       "lat": -33.90256189999999,
@@ -22764,7 +22767,7 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$2.1m",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 22,
       "lat": -33.8809642,
@@ -30693,7 +30696,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "WITHDRAWN",
-      "flag_sweeps": 0,
       "status_checked_on": "2026-10-24",
       "departed_on": "2026-10-24",
       "status_source": "sweep_check",
@@ -30760,7 +30762,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "beds": 2,
       "baths": 2,
@@ -30831,7 +30833,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 145,
       "area_basis": "page data: land area",
@@ -30903,7 +30905,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "internal_m2": 101,
       "area_basis": "page data: building/floor area",
@@ -30978,7 +30980,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "beds": 2,
       "baths": 1,
@@ -31051,7 +31053,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 151,
       "area_basis": "page data: land area",
@@ -31126,7 +31128,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 126,
       "area_basis": "page data: land area",
@@ -31201,7 +31203,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 347,
       "area_basis": "page data: land area",
@@ -31276,7 +31278,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 183,
       "area_basis": "page data: land area",
@@ -31352,7 +31354,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "internal_m2": 89,
       "area_basis": "page data: building/floor area",
@@ -31439,7 +31441,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8741556,
       "lon": 151.1584245,
       "status_checked_on": "2026-10-24",
@@ -31513,7 +31515,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9044321,
       "lon": 151.2134108,
       "status_checked_on": "2026-10-24",
@@ -31590,7 +31592,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9033471,
       "lon": 151.1801921,
       "status_checked_on": "2026-10-24",
@@ -31681,7 +31683,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8916711,
       "lon": 151.1825767,
       "status_checked_on": "2026-10-24",
@@ -31756,7 +31758,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8949488,
       "lon": 151.1738502,
       "status_checked_on": "2026-10-24",
@@ -31843,7 +31845,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "WITHDRAWN",
-      "flag_sweeps": 0,
       "lat": -33.8848816,
       "lon": 151.1794917,
       "status_checked_on": "2026-10-24",
@@ -31912,7 +31913,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9139872,
       "lon": 151.1574513,
       "status_checked_on": "2026-10-24",
@@ -31987,7 +31988,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.907066,
       "lon": 151.1698832,
       "status_checked_on": "2026-10-24",
@@ -32012,13 +32013,19 @@
       "price_min": 2200000,
       "price_max": 2200000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 40,
+          "supermarket": 828,
+          "pool": 525,
+          "park": 283,
+          "restaurants": 579
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32026,30 +32033,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32058,7 +32063,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 100,
       "area_basis": "page data: land area",
@@ -32070,7 +32075,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021266247_1_1_261022_054116-w3822-h2550",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/5-771-777-new-canterbury-road-dulwich-hill-nsw-2203-2021266247"
+      "resolved_url": "https://www.domain.com.au/5-771-777-new-canterbury-road-dulwich-hill-nsw-2203-2021266247",
+      "lat": -33.9048816,
+      "lon": 151.1319762
     },
     {
       "address": "52 Talfourd Street",
@@ -32081,13 +32088,19 @@
       "price_min": 800000,
       "price_max": 800000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 67,
+          "supermarket": 136,
+          "pool": 926,
+          "park": 139,
+          "restaurants": 47
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32095,30 +32108,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32127,7 +32138,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 113,
       "area_basis": "page data: land area",
@@ -32139,7 +32150,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265834_1_1_261022_050334-w2600-h1733",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/52-talfourd-street-glebe-nsw-2037-2021265834"
+      "resolved_url": "https://www.domain.com.au/52-talfourd-street-glebe-nsw-2037-2021265834",
+      "lat": -33.8789371,
+      "lon": 151.1870705
     },
     {
       "address": "14/63 Warren Road",
@@ -32147,13 +32160,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F63+warren+road+marrickville",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 102,
+          "supermarket": 120,
+          "pool": 691,
+          "park": 254,
+          "restaurants": 73
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -32161,31 +32180,29 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "budget",
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32194,7 +32211,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 121,
       "area_basis": "page data: land area",
@@ -32206,7 +32223,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265813_1_1_261022_050134-w2000-h1333",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/14-63-warren-road-marrickville-nsw-2204-2021265813"
+      "resolved_url": "https://www.domain.com.au/14-63-warren-road-marrickville-nsw-2204-2021265813",
+      "lat": -33.9161342,
+      "lon": 151.1515541
     },
     {
       "address": "110/10 Pyrmont Bridge Road",
@@ -32217,13 +32236,19 @@
       "price_min": 950000,
       "price_max": 950000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 36,
+          "supermarket": 42,
+          "pool": 326,
+          "park": 138,
+          "restaurants": 132
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32231,30 +32256,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32263,7 +32286,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 134,
       "area_basis": "page data: land area",
@@ -32275,7 +32298,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265626_1_1_261022_044144-w1517-h1012",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/110-10-pyrmont-bridge-road-camperdown-nsw-2050-2021265626"
+      "resolved_url": "https://www.domain.com.au/110-10-pyrmont-bridge-road-camperdown-nsw-2050-2021265626",
+      "lat": -33.8840196,
+      "lon": 151.1787821
     },
     {
       "address": "35A Upward Street",
@@ -32286,13 +32311,19 @@
       "price_min": 950000,
       "price_max": 950000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 226,
+          "supermarket": 370,
+          "pool": 544,
+          "park": 178,
+          "restaurants": 192
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32300,30 +32331,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32332,7 +32361,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "beds": 2,
       "baths": 2,
@@ -32342,7 +32371,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265591_1_1_261022_043826-w3836-h2559",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/201-35a-upward-street-leichhardt-nsw-2040-2021265591"
+      "resolved_url": "https://www.domain.com.au/201-35a-upward-street-leichhardt-nsw-2040-2021265591",
+      "lat": -33.888246,
+      "lon": 151.1479645
     },
     {
       "address": "421 King Street",
@@ -32353,13 +32384,19 @@
       "price_min": 950000,
       "price_max": 950000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 26,
+          "supermarket": 70,
+          "pool": 851,
+          "park": 58,
+          "restaurants": 47
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32367,30 +32404,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32399,7 +32434,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 170,
       "area_basis": "page data: land area",
@@ -32411,7 +32446,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021264322_1_1_261022_124931-w2650-h1768",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/421-king-street-newtown-nsw-2042-2021264322"
+      "resolved_url": "https://www.domain.com.au/421-king-street-newtown-nsw-2042-2021264322",
+      "lat": -33.9005781,
+      "lon": 151.1781237
     },
     {
       "address": "33 Illawarra Road",
@@ -32422,13 +32459,19 @@
       "price_min": 950000,
       "price_max": 950000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 161,
+          "supermarket": 375,
+          "pool": 702,
+          "park": 409,
+          "restaurants": 140
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32436,30 +32479,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32468,7 +32509,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 189,
       "area_basis": "page data: land area",
@@ -32480,7 +32521,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021179060_1_1_260923_040659-w2560-h1708",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/33-illawarra-road-marrickville-nsw-2204-2021179060"
+      "resolved_url": "https://www.domain.com.au/33-illawarra-road-marrickville-nsw-2204-2021179060",
+      "lat": -33.9034926,
+      "lon": 151.1627914
     },
     {
       "address": "81 Garden Street",
@@ -32491,13 +32534,19 @@
       "price_min": 1850000,
       "price_max": 1850000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 130,
+          "supermarket": 265,
+          "pool": 64,
+          "park": 200,
+          "restaurants": 186
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32505,30 +32554,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32537,7 +32584,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 118,
       "area_basis": "page data: land area",
@@ -32560,7 +32607,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020908381_1_1_260611_013947-w3780-h2522",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381"
+      "resolved_url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381",
+      "lat": -33.8981717,
+      "lon": 151.1976681
     },
     {
       "address": "94 Denison Street",
@@ -32571,13 +32620,19 @@
       "price_min": 1800000,
       "price_max": 1800000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 98,
+          "supermarket": 402,
+          "pool": 627,
+          "park": 79,
+          "restaurants": 193
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32585,30 +32640,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32617,7 +32670,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "beds": 4,
       "baths": 4,
@@ -32627,7 +32680,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020380679_1_1_251029_061556-w1920-h1281",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/94-denison-street-camperdown-nsw-2050-2020380679"
+      "resolved_url": "https://www.domain.com.au/94-denison-street-camperdown-nsw-2050-2020380679",
+      "lat": -33.8920366,
+      "lon": 151.1757551
     },
     {
       "address": "09/11 Power Avenue",
@@ -32638,13 +32693,19 @@
       "price_min": 1695000,
       "price_max": 1695000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 142,
+          "supermarket": 180,
+          "pool": 236,
+          "park": 109,
+          "restaurants": 28
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -32652,8 +32713,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -32661,23 +32722,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -32686,13 +32745,14 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "WITHDRAWN",
-      "flag_sweeps": 0,
       "status_checked_on": "2026-10-24",
       "departed_on": "2026-10-24",
       "status_source": "sweep_check",
       "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
       "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=09%2f11+power+avenue+alexandria",
-      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "lat": -33.9009617,
+      "lon": 151.1982476
     },
     {
       "address": "1A Thomas Street",
@@ -32751,7 +32811,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "beds": 1,
       "baths": 1,
@@ -32820,7 +32880,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "beds": 1,
       "baths": 1,
@@ -32903,7 +32963,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "beds": 0,
       "baths": 1,
@@ -32970,7 +33030,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "SOLD",
-      "flag_sweeps": 0,
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
       "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
@@ -33032,7 +33091,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "SOLD",
-      "flag_sweeps": 0,
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
       "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
@@ -33092,7 +33150,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "SOLD",
-      "flag_sweeps": 0,
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
       "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
@@ -33152,7 +33209,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "SOLD",
-      "flag_sweeps": 0,
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
       "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
@@ -33212,7 +33268,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 85,
       "area_basis": "page data: land area",
@@ -33281,7 +33337,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 94,
       "area_basis": "page data: land area",
@@ -33352,7 +33408,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "SOLD",
-      "flag_sweeps": 0,
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
       "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
@@ -33412,7 +33467,6 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "SOLD",
-      "flag_sweeps": 0,
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
       "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
@@ -33474,7 +33528,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 58,
       "area_basis": "page data: land area",
@@ -33543,7 +33597,7 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "status_checked_on": "2026-10-24",
       "land_m2": 76,
       "area_basis": "page data: land area",

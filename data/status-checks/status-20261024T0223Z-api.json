@@ -1,0 +1,52 @@
+{
+  "generated_on": "2026-10-24",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F2+foundry+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f2+foundry+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103",
+      "address": "404/2 Foundry Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1215%2F303+botany+road+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 106 m² internal",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1215%2f303+botany+road+zetland",
+      "resolved_url": "https://www.domain.com.au/1215-303-botany-road-zetland-nsw-2017-2019500912",
+      "address": "1215/303 Botany Road",
+      "suburb": "Zetland",
+      "internal_m2": 106,
+      "area_basis": "page data: building/floor area",
+      "area_checked": true,
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "outgoings_checked": true,
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2019500912_1_1_240918_024337-w1020-h729",
+      "image_basis": "og:image",
+      "image_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2F164+glebe+point+road+glebe",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2f164+glebe+point+road+glebe",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "address": "7/164 Glebe Point Road",
+      "suburb": "Glebe"
+    }
+  ]
+}
