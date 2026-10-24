@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 176,
-    "tier1_pass": 137,
+    "tier1_pass": 136,
     "new": 32,
     "price_changed": 2,
     "sold": 194,
@@ -18827,18 +18827,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -18876,7 +18876,13 @@
       "price_max": 1200000,
       "image_basis": "bookmarklet: og:image",
       "image_checked_on": "2026-10-16",
-      "status_check_failures": 1
+      "status_check_failures": 1,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "504/1 Gantry Lane",

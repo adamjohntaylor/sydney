@@ -272,5 +272,14 @@
     "status": "rejected",
     "note": "",
     "updated": "2026-10-24T02:26:45.119Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50/274+botany+road+alexandria": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-24T02:28:22.207Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }
