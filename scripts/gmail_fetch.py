@@ -48,6 +48,7 @@ DASH = os.path.join(HERE, "..")
 DATA = os.path.join(DASH, "data")
 if HERE not in sys.path:
     sys.path.insert(0, HERE)   # sibling imports (parse_alert_email, sweep, ...)
+import score as score_mod       # noqa: E402  (shared price parser)
 IMAP_CREDS_PATH = os.path.join(DATA, ".gmail_credentials.json")
 OAUTH_CREDS_PATH = os.path.join(DATA, ".gmail_oauth.json")
 TOKEN_PATH = os.path.join(DATA, ".gmail_token.json")
@@ -661,24 +662,15 @@ def extract_by_address(body, email_source="domain"):
 
         if price_match:
             price_text = price_match.group(0)
-            # Parse numeric price and validate it's reasonable for Sydney property
-            nums = re.findall(r"[\d,]+", price_text.replace(",", ""))
-            if nums:
-                try:
-                    val = int(nums[0])
-                    if "m" in price_text.lower():
-                        val = int(val * 1_000_000)
-                    elif "k" in price_text.lower():
-                        val = int(val * 1_000)
-                    elif val < 10000:  # Likely millions written as 1.5 etc
-                        val = int(val * 1_000_000)
-                    # Only accept prices in reasonable Sydney range ($800k - $10m)
-                    if 800_000 <= val <= 10_000_000:
-                        lst["price_guide_text"] = price_text
-                        lst["price_min"] = val
-                        lst["price_max"] = val
-                except ValueError:
-                    pass
+            # Parse numeric bounds with the shared parser (decimals + k/m units +
+            # ranges + $100k-$50M plausibility). The previous ad-hoc parser read
+            # "$1.3m" as 1,000,000 (first digit run only) and collapsed every
+            # "$1.1M - $1.2M" range to max == min.
+            b_min, b_max = score_mod.price_bounds_from_text(price_text)
+            if b_min is not None:
+                lst["price_guide_text"] = price_text
+                lst["price_min"] = b_min
+                lst["price_max"] = b_max
 
         listings.append(lst)
 

@@ -258,5 +258,14 @@
     "status": "rejected",
     "note": "",
     "updated": "2026-10-24T01:35:36.022Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F11+ennis+street+balmain": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-24T01:36:43.191Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }
