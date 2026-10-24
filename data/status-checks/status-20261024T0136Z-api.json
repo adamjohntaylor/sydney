@@ -1,0 +1,182 @@
+{
+  "generated_on": "2026-10-24",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=221%2F1+phillip+street+petersham",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-16",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=221%2f1+phillip+street+petersham",
+      "resolved_url": "https://www.domain.com.au/221-1-phillip-street-petersham-nsw-2049-2020998217",
+      "sold_date": "2026-10-16",
+      "address": "221/1 Phillip Street",
+      "suburb": "Petersham"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F793-799+new+canterbury+road+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f793-799+new+canterbury+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/16-793-799-new-canterbury-road-dulwich-hill-nsw-2203-2021190702",
+      "address": "16/793-799 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F64+arthur+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2f64+arthur+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/6-64-arthur-street-marrickville-nsw-2204-2021126841",
+      "address": "6/64 Arthur Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=104%2F551+darling+street+rozelle",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=104%2f551+darling+street+rozelle",
+      "resolved_url": "https://www.domain.com.au/104-551-darling-street-rozelle-nsw-2039-2021195031",
+      "address": "104/551 Darling Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53+ferry+road+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/53-ferry-road-glebe-nsw-2037-2021194758",
+      "address": "53 Ferry Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F12-16+terrace+road+dulwich+hill",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-23",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2f12-16+terrace+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/4-12-16-terrace-road-dulwich-hill-nsw-2203-2021193842",
+      "sold_date": "2026-10-23",
+      "address": "4/12-16 Terrace Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F451-457+new+canterbury+road+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2f451-457+new+canterbury+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/14-451-457-new-canterbury-road-dulwich-hill-nsw-2203-2021151406",
+      "address": "14/451-457 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19+lilydale+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/19-lilydale-street-marrickville-nsw-2204-2021160966",
+      "address": "19 Lilydale Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2F268+glebe+point+road+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=6%2f268+glebe+point+road+glebe",
+      "resolved_url": "https://www.domain.com.au/6-268-glebe-point-road-glebe-nsw-2037-2021028523",
+      "address": "6/268 Glebe Point Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2F11+arthur+st+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12%2f11+arthur+st+marrickville",
+      "resolved_url": "https://www.domain.com.au/12-11-arthur-st-marrickville-nsw-2204-2021153728",
+      "address": "12/11 Arthur St",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=77a+hubert+street+lilyfield",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/77a-hubert-street-lilyfield-nsw-2040-2021194826",
+      "address": "77A Hubert Street",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50+macdonald+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/50-macdonald-street-erskineville-nsw-2043-2021194725",
+      "address": "50 Macdonald Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=39%2F127+railway+parade+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=39%2f127+railway+parade+erskineville",
+      "resolved_url": "https://www.domain.com.au/39-127-railway-parade-erskineville-nsw-2043-2021193762",
+      "address": "39/127 Railway Parade",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2F15-17+fountain+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2f15-17+fountain+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/23-15-17-fountain-street-alexandria-nsw-2015-2021193000",
+      "address": "23/15-17 Fountain Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2F110+epsom+road+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2f110+epsom+road+zetland",
+      "resolved_url": "https://www.domain.com.au/207-110-epsom-road-zetland-nsw-2017-2021192911",
+      "address": "207/110 Epsom Road",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F331+balmain+road+lilyfield",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f331+balmain+road+lilyfield",
+      "resolved_url": "https://www.domain.com.au/3-331-balmain-road-lilyfield-nsw-2040-2021177514",
+      "address": "3/331 Balmain Road",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2106%2F6+ebsworth+street+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2106%2f6+ebsworth+street+zetland",
+      "resolved_url": "https://www.domain.com.au/2106-6-ebsworth-street-zetland-nsw-2017-2020266256",
+      "address": "2106/6 Ebsworth Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=47+frampton+avenue+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/47-frampton-avenue-marrickville-nsw-2204-2021197746",
+      "address": "47 Frampton Avenue",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=61+addison+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/61-addison-road-marrickville-nsw-2204-2021196939",
+      "address": "61 Addison Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F3+anderton+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2f3+anderton+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/2-3-anderton-street-marrickville-nsw-2204-2021196926",
+      "address": "2/3 Anderton Street",
+      "suburb": "Marrickville"
+    }
+  ]
+}

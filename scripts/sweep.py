@@ -432,8 +432,29 @@ def apply_status_checks(checks, listings, today, source=STATUS_SOURCE_CHECK):
 
         if status == "on_market":
             target["last_seen"] = today
-            if chk.get("price_guide_text"):
-                target["price_guide_text"] = chk["price_guide_text"]
+            new_text = (chk.get("price_guide_text") or "").strip()
+            if new_text:
+                if score_mod.price_text_is_plausible(new_text):
+                    b_min, b_max = score_mod.price_bounds_from_text(new_text)
+                    if (b_min, b_max) != (target.get("price_min"), target.get("price_max")):
+                        if target.get("price_min") is not None or target.get("price_max") is not None:
+                            target["prior_price_text"] = target.get("price_guide_text")
+                            if target.get("change_flag") not in GONE_FLAGS:
+                                target["change_flag"] = "PRICE_CHANGED"
+                            details.append(f"price {url}: {target.get('price_guide_text')!r} -> {new_text!r}")
+                            changed += 1
+                        target["price_min"], target["price_max"] = b_min, b_max
+                    target["price_guide_text"] = new_text
+                elif (score_mod.price_text_has_number(new_text)
+                      or not score_mod.price_text_has_number(target.get("price_guide_text"))):
+                    # Either an implausible figure (repayment estimate, strata, rent)
+                    # or a no-number placeholder; never let it overwrite a real
+                    # guide. A placeholder may fill an empty slot; an implausible
+                    # number is dropped and logged.
+                    if score_mod.price_text_has_number(new_text):
+                        details.append(f"price REJECTED {url}: {new_text!r} outside plausible window; kept {target.get('price_guide_text')!r}")
+                    elif not target.get("price_guide_text"):
+                        target["price_guide_text"] = new_text
             if chk.get("resolved_url"):
                 target["resolved_url"] = chk["resolved_url"]   # direct listing page (url kept: notes key)
             if before in GONE_FLAGS:

@@ -600,6 +600,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 # and renames its CSS classes, so the address often only resolves
                 # from the URL/JSON-LD, leaving beds/price unread on first click.
                 _pt, _pmin, _pmax = alert_mod.parse_price(item.get("price_guide_text") or "")
+                if not score_mod.price_text_is_plausible(item.get("price_guide_text") or ""):
+                    _pmin = _pmax = None      # repayment / strata figure, not a guide
                 provisional = {
                     "address": (item.get("address") or "").strip(),
                     "beds": item.get("beds"),
@@ -684,6 +686,11 @@ this page and re-drag the button (the code is baked into the link, so it does no
             new_price = item.get("price_guide_text", "")
             if new_price and ("$" in new_price or "contact" in new_price.lower() or "auction" in new_price.lower()):
                 _ptext, pmin, pmax = alert_mod.parse_price(new_price)
+                if not score_mod.price_text_is_plausible(new_price):
+                    # Implausible figure (repayment estimate, strata, rent) -
+                    # treat as carrying no number so it can never overwrite a
+                    # real guide.
+                    pmin = pmax = None
                 target_has_number = (
                     target.get("price_min") is not None
                     or target.get("price_max") is not None

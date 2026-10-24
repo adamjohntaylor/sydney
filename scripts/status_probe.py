@@ -65,6 +65,16 @@ _RE_REMOVED = re.compile(r"(?:no\s+longer\s+available|listing\s+(?:has\s+been\s+
 _RE_BLOCKED = re.compile(r"(?:<title>[^<]*(?:Access\s+Denied|Just\s+a\s+moment|Attention\s+Required|"
                          r"Pardon\s+Our\s+Interruption)[^<]*</title>|captcha|cf-challenge|"
                          r"px-captcha|_Incapsula_)", re.I)
+def _plausible_price(text):
+    """Dollar figure inside the dwelling-price window ($100k-$50M); rejects
+    repayment estimates / strata lines that also appear as "price" on a page."""
+    try:
+        import score as _score
+        return _score.price_text_is_plausible(text)
+    except Exception:
+        return True
+
+
 _RE_PRICE_TEXT = re.compile(r"\$\s?\d{1,3}(?:,\d{3}){1,2}|\$\s?\d(?:\.\d+)?\s?[mM]\b")
 # Domain titles: live = "<address> | Domain"; sold = "Sold <address> on 19 Jun 2026 - <id> | Domain"
 _RE_TITLE_SOLD_DOMAIN = re.compile(r"<title>\s*Sold\s+\S[^<]*?\bon\s+\d{1,2}\s+\w{3,9}\s+\d{4}", re.I)
@@ -254,7 +264,7 @@ def probe_url(url, timeout=TIMEOUT, first_seen=None, delay=DELAY):
         chk["final_url"] = final_url
     if chk["listing_status"] == "on_market":
         m = re.search(r'"price"\s*:\s*"([^"]{2,40})"', html or "")
-        if m and _RE_PRICE_TEXT.search(m.group(1)):
+        if m and _RE_PRICE_TEXT.search(m.group(1)) and _plausible_price(m.group(1)):
             chk["price_guide_text"] = m.group(1)
         if is_search_url(url):
             m = _RE_SEARCH_LISTING_HREF.search(html or "")

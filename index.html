@@ -221,8 +221,19 @@ const FILE_MODE = location.protocol === "file:";
 const STATIC_COPY = !IS_LOCAL && !FILE_MODE;
 const STATIC_MSG = "This is the shared, read-only copy of the dashboard — only Adam can make changes, on his home system. Tell him what you'd like noted or updated and it will appear here after his next push.";
 
+// Defence in depth: a guide text whose only dollar figure is outside the
+// plausible dwelling window ($100k-$50M) is a mis-read (repayment estimate,
+// strata line) - show the numeric bounds instead, or an honest placeholder.
+function priceTextPlausible(t){
+  if(!t) return false;
+  const re=/\$\s*([\d][\d,]*(?:\.\d+)?)\s*([kKmM]|million)?/g; let m, any=false;
+  while((m=re.exec(t))){ any=true; let v=parseFloat(m[1].replace(/,/g,"")); const u=(m[2]||"").toLowerCase();
+    if(u==="m"||u==="million") v*=1e6; else if(u==="k") v*=1e3;
+    if(v>=1e5 && v<=5e7) return true; }
+  return !any;   // no number at all ("Contact Agent", "Auction") is fine to show
+}
 function fmtPrice(l){
-  if(l.price_guide_text) return l.price_guide_text;
+  if(l.price_guide_text && priceTextPlausible(l.price_guide_text)) return l.price_guide_text;
   if(l.price_min&&l.price_max&&l.price_min!==l.price_max) return "$"+(l.price_min/1e6).toFixed(2)+"M-$"+(l.price_max/1e6).toFixed(2)+"M";
   if(l.price_min) return "$"+(l.price_min/1e6).toFixed(2)+"M";
   return "Price n/a";

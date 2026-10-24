@@ -253,5 +253,10 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=22+view+street+annandale": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-10-24T01:35:36.022Z"
   }
 }

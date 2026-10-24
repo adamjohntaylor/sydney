@@ -181,9 +181,20 @@ def _auto_accessibility(listing, apt_type):
 _PRICE_NUM_RE = re.compile(r"\$\s*([\d][\d,]*(?:\.\d+)?)\s*([kKmM]|million)?", re.I)
 
 
+# Plausibility window for a dwelling price guide. Mirrors the bookmarklet's
+# $100k-$50M guard. A listing page carries many other dollar figures (estimated
+# mortgage repayments, strata/council/water, rental appraisals) and a sweep that
+# reads the wrong one must NOT be allowed to overwrite the guide - on 11 Oct 2026
+# a Chrome status sweep wrote "$7,019" / "$6,228" over the real $1.2M / $1.25M
+# guides for 1101/89 Bay St and 120/102 Miller St.
+PRICE_PLAUSIBLE_MIN = 100_000
+PRICE_PLAUSIBLE_MAX = 50_000_000
+
+
 def price_bounds_from_text(text):
     """Return (min, max) dollar amounts parsed from a price-guide string, or
-    (None, None) if it carries no usable number (e.g. 'Auction', 'Contact Agent')."""
+    (None, None) if it carries no usable number (e.g. 'Auction', 'Contact Agent')
+    or only numbers outside the plausible dwelling-price window."""
     if not text:
         return (None, None)
     nums = []
@@ -198,11 +209,24 @@ def price_bounds_from_text(text):
         elif unit == "k":
             v *= 1_000
         v = int(v)
-        if v >= 10_000:                 # ignore stray small matches
+        if PRICE_PLAUSIBLE_MIN <= v <= PRICE_PLAUSIBLE_MAX:
             nums.append(v)
     if not nums:
         return (None, None)
     return (min(nums), max(nums))
+
+
+def price_text_is_plausible(text):
+    """True if the price-guide text carries at least one dollar figure inside the
+    plausible dwelling-price window ($100k-$50M). Use this before letting any
+    sweep / probe / enrichment overwrite price_guide_text."""
+    return price_bounds_from_text(text)[0] is not None
+
+
+def price_text_has_number(text):
+    """True if the text carries any dollar figure at all (plausible or not)."""
+    return bool(text) and any(ch.isdigit() for ch in text)
+
 
 # Outlook detection patterns - order matters (water > park > elevated > leafy > city)
 OUTLOOK_PATTERNS = [
@@ -322,13 +346,18 @@ def tier1(listing):
     # bounds are missing but a price-guide text is present (e.g. a listing whose
     # text was set before price-parsing existed), back-fill them from the text so
     # the criterion resolves on any re-score rather than staying "?".
+    #
+    # The guide TEXT is authoritative whenever it carries a plausible number: it
+    # is what the most recent sweep / enrichment actually read. Re-deriving the
+    # bounds from it on every score keeps text and numbers from drifting apart
+    # (the status-check path used to refresh the text but not the bounds, leaving
+    # "$1.75m" sitting over price_min = 1,000,000 on dozens of records).
     pmin = listing.get("price_min")
     pmax = listing.get("price_max")
-    if pmin is None and pmax is None:
-        b_min, b_max = price_bounds_from_text(listing.get("price_guide_text"))
-        if b_min is not None:
-            listing["price_min"] = pmin = b_min
-            listing["price_max"] = pmax = b_max
+    b_min, b_max = price_bounds_from_text(listing.get("price_guide_text"))
+    if b_min is not None:
+        listing["price_min"] = pmin = b_min
+        listing["price_max"] = pmax = b_max
     guide = pmin if pmin is not None else pmax
     c["budget"] = (guide is not None and guide <= BUDGET_CEILING) if guide is not None else None
 
