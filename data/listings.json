@@ -17469,7 +17469,9 @@
       "internal_m2": 741,
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020645359_1_1_260302_012315-w2000-h1333",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "status": "rejected",
+      "note": ""
     },
     {
       "address": "9/162 Victoria Road",
