@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T01:45:05.210191+00:00",
-  "generated_at_sydney": "2026-10-24 11:45 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-24T01:47:28.420053+00:00",
+  "generated_at_sydney": "2026-10-24 11:47 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 178,
-    "tier1_pass": 144,
-    "new": 33,
+    "total": 177,
+    "tier1_pass": 137,
+    "new": 32,
     "price_changed": 2,
     "sold": 194,
     "under_offer": 10,
-    "withdrawn": 62
+    "withdrawn": 63
   },
   "listings": [
     {
@@ -32157,9 +32157,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -32168,9 +32168,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -32196,7 +32194,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 121,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265813_1_1_261022_050134-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/14-63-warren-road-marrickville-nsw-2204-2021265813"
     },
     {
       "address": "110/10 Pyrmont Bridge Road",
@@ -32217,9 +32227,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -32227,9 +32237,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -32255,7 +32263,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 134,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265626_1_1_261022_044144-w1517-h1012",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/110-10-pyrmont-bridge-road-camperdown-nsw-2050-2021265626"
     },
     {
       "address": "35A Upward Street",
@@ -32276,9 +32296,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -32286,9 +32306,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -32314,7 +32332,17 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265591_1_1_261022_043826-w3836-h2559",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/201-35a-upward-street-leichhardt-nsw-2040-2021265591"
     },
     {
       "address": "421 King Street",
@@ -32335,9 +32363,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -32345,9 +32373,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -32373,7 +32399,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 170,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021264322_1_1_261022_124931-w2650-h1768",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/421-king-street-newtown-nsw-2042-2021264322"
     },
     {
       "address": "33 Illawarra Road",
@@ -32394,9 +32432,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -32404,9 +32442,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -32432,7 +32468,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 189,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021179060_1_1_260923_040659-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/33-illawarra-road-marrickville-nsw-2204-2021179060"
     },
     {
       "address": "81 Garden Street",
@@ -32453,9 +32501,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -32463,9 +32511,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -32491,7 +32537,30 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 118,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "council_pq": 392.0,
+      "water_pq": 231.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Council $392 | Water $231 p/q",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-24",
+      "outgoings_pa": 2492,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020908381_1_1_260611_013947-w3780-h2522",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381"
     },
     {
       "address": "94 Denison Street",
@@ -32512,9 +32581,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -32522,9 +32591,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -32550,7 +32617,17 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "beds": 4,
+      "baths": 4,
+      "property_type": "terrace",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020380679_1_1_251029_061556-w1920-h1281",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/94-denison-street-camperdown-nsw-2050-2020380679"
     },
     {
       "address": "09/11 Power Avenue",
@@ -32608,8 +32685,14 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "WITHDRAWN",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "departed_on": "2026-10-24",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=09%2f11+power+avenue+alexandria",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "1A Thomas Street",
@@ -32630,24 +32713,24 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
@@ -32668,7 +32751,17 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020838975_1_1_260513_063518-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/1-1a-thomas-street-birchgrove-nsw-2041-2020838975"
     },
     {
       "address": "106A/2 Barr Street",
@@ -32689,24 +32782,24 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
@@ -32727,7 +32820,31 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "strata_pq": 945.0,
+      "council_pq": 320.0,
+      "water_pq": 180.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata Levies: $945, Council Rates: $320 pq, Water Rates: $180 pq",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-24",
+      "strata_pa": 3780,
+      "outgoings_pa": 5780,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/cku1udjvjcvna_1_0_261021_112934-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/106a-2-barr-street-camperdown-nsw-2050-2021264245"
     },
     {
       "address": "17/123 Lilyfield Road",
@@ -32748,24 +32865,24 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
@@ -32786,7 +32903,17 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "beds": 0,
+      "baths": 1,
+      "property_type": "studio",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/16171316_2_1_221107_045757-w1600-h1067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/17-123-lilyfield-road-lilyfield-nsw-2040-2021267121"
     },
     {
       "address": "3/208 Bridge Road",
@@ -33046,25 +33173,25 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
@@ -33085,7 +33212,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 85,
+      "area_basis": "page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270726_1_1_261023_030959-w3834-h2558",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/201-843-new-canterbury-road-dulwich-hill-nsw-2203-2021270726"
     },
     {
       "address": "5306/6 Grove Street",
@@ -33103,25 +33242,25 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
@@ -33142,7 +33281,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 94,
+      "area_basis": "page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270724_1_1_261023_030940-w3876-h2587",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/5306-6-grove-street-dulwich-hill-nsw-2203-2021270724"
     },
     {
       "address": "25 College Street",
@@ -33285,24 +33436,24 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": null,
         "supplies": null,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 14,
@@ -33323,7 +33474,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 58,
+      "area_basis": "page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270223_1_1_261023_012819-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/4-56-cambridge-street-stanmore-nsw-2048-2021270223"
     },
     {
       "address": "4/28 Railway Street",
@@ -33344,9 +33507,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -33354,9 +33517,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -33382,7 +33543,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 76,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021256633_1_1_261020_031004-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/4-28-railway-street-petersham-nsw-2049-2021256633"
     }
   ]
 }
