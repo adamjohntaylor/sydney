@@ -1,0 +1,183 @@
+{
+  "generated_on": "2026-10-24",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1a+mandible+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/7m-1a-mandible-street-alexandria-nsw-2015-2021201277",
+      "address": "1A Mandible Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F69+tranmere+street+drummoyne",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f69+tranmere+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/8-69-tranmere-street-drummoyne-nsw-2047-2021179309",
+      "address": "8/69 Tranmere Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=109+australia+street+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/109-australia-street-camperdown-nsw-2050-2020764417",
+      "address": "109 Australia Street",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=101%2F383+darling+street+balmain",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=101%2f383+darling+street+balmain",
+      "resolved_url": "https://www.domain.com.au/101-383-darling-street-balmain-nsw-2041-2021203055",
+      "address": "101/383 Darling Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=213%2F1+sterling+circuit+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=213%2f1+sterling+circuit+camperdown",
+      "resolved_url": "https://www.domain.com.au/213-1-sterling-circuit-camperdown-nsw-2050-2021169500",
+      "address": "213/1 Sterling Circuit",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2F13+greek+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=29%2f13+greek+street+glebe",
+      "resolved_url": "https://www.domain.com.au/29-13-greek-street-glebe-nsw-2037-2021205595",
+      "address": "29/13 Greek Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26+flood+street+leichhardt",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/26-flood-street-leichhardt-nsw-2040-2021207380",
+      "address": "26 Flood Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F249+johnston+street+annandale",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-22",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f249+johnston+street+annandale",
+      "resolved_url": "https://www.domain.com.au/3-249-johnston-street-annandale-nsw-2038-2021206905",
+      "sold_date": "2026-10-22",
+      "address": "3/249 Johnston Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=106+cavendish+street+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/106-cavendish-street-stanmore-nsw-2048-2021175624",
+      "address": "106 Cavendish Street",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=42%2F49+henderson+road+alexandria",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-22",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=42%2f49+henderson+road+alexandria",
+      "resolved_url": "https://www.domain.com.au/42-49-henderson-road-alexandria-nsw-2015-2021206205",
+      "sold_date": "2026-10-22",
+      "address": "42/49 Henderson Road",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=18%2F18+wolseley+street+drummoyne",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-16",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=18%2f18+wolseley+street+drummoyne",
+      "resolved_url": "https://www.domain.com.au/18-18-wolseley-street-drummoyne-nsw-2047-2021174609",
+      "sold_date": "2026-10-16",
+      "address": "18/18 Wolseley Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=33%2F3+williams+parade+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=33%2f3+williams+parade+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/33-3-williams-parade-dulwich-hill-nsw-2203-2021228073",
+      "address": "33/3 Williams Parade",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F589-591+new+canterbury+road+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2f589-591+new+canterbury+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/5-589-591-new-canterbury-road-dulwich-hill-nsw-2203-2021227873",
+      "address": "5/589-591 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=102%2F1+gantry+lane+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=102%2f1+gantry+lane+camperdown",
+      "resolved_url": "https://www.domain.com.au/102-1-gantry-lane-camperdown-nsw-2050-2021226919",
+      "address": "102/1 Gantry Lane",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9+frazer+street+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/9-frazer-street-dulwich-hill-nsw-2203-2021226374",
+      "address": "9 Frazer Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=76%2F24+buchanan+street+balmain",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-23",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=76%2f24+buchanan+street+balmain",
+      "resolved_url": "https://www.domain.com.au/76-24-buchanan-street-balmain-nsw-2041-2021117864",
+      "sold_date": "2026-10-23",
+      "address": "76/24 Buchanan Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=35+alice+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/35-alice-street-newtown-nsw-2042-2021227669",
+      "address": "35 Alice Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=32+excelsior+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-23",
+      "resolved_url": "https://www.domain.com.au/32-excelsior-street-leichhardt-nsw-2040-2021225492",
+      "sold_date": "2026-10-23",
+      "address": "32 Excelsior Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=181+young+street+annandale",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/181-young-street-annandale-nsw-2038-2021219983",
+      "address": "181 Young Street",
+      "suburb": "Annandale"
+    }
+  ]
+}

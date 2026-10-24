@@ -146,6 +146,17 @@ is a self-contained Claude prompt that does exactly this.
    `/sold/`), add `"final_url"`. Do not skip this step because no new alerts
    arrived — the verification leg is what keeps the active list honest.
 
+   **`price_guide_text` must come from the listing's own price line only** (the
+   figure beside the address heading, or Domain/REA's "Price guide" / "Guide" /
+   "For sale" label). A listing page carries other dollar figures — estimated
+   mortgage repayments, strata / council / water, rental appraisals, "similar
+   properties" — and none of them is the guide. If the page shows no guide,
+   send `"Contact Agent"` or `"Auction - No price guide offered"`, never a
+   number read from elsewhere on the page. (On 11 Oct 2026 a sweep sent
+   `$7,019` / `$6,228` for 1101/89 Bay St and 120/102 Miller St; `sweep.py`
+   now rejects any guide outside $100k–$50M, logs it as `price REJECTED`, and
+   keeps the previous guide.)
+
 ### B. Score + merge + write (script)
 ```
 python scripts\sweep.py data\harvest-YYYYMMDD.json --incremental
