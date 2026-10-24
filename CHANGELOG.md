@@ -7,6 +7,48 @@ of how the code got to its current shape.
 
 ---
 
+## 24 October 2026 — Price guides overwritten by repayment / outgoings figures
+
+**Problem (Adam):** 120/102 Miller St (Pyrmont) showed **$6,228** and 1101/89 Bay
+St (Glebe) **$7,019** as their price. Snapshots show both were correct
+($ 1,250,000 / $1,200,000) until the extension Verify run at 11 Oct 22:22Z,
+whose status check (`status_basis: "chrome: listing page rendered"`) carried
+those figures as `price_guide_text`. Two more records (1003b/89 Bay St `$2,225`,
+Terrace 6 Wentworth St `$2,011`) had been hit the same way on 29 Sep.
+
+**Root causes (three, all fixed).**
+1. `extension/content.js` read the price as *the first `$` figure anywhere in
+   the page body* — on an REA page with no displayed guide that is the
+   repayment calculator or a strata line. Replaced by `readPriceGuideFromPage()`:
+   first figure inside the $100k–$50M window, ranges captured, otherwise no
+   price is sent at all. Manifest bumped to 1.3 (reload the extension).
+2. `sweep.apply_status_checks` accepted any `price_guide_text` unexamined and
+   never refreshed `price_min/max`, so text and numbers drifted apart. It now
+   rejects implausible figures (logged as `price REJECTED …`, previous guide
+   kept), refreshes the bounds, and flags a genuine change as PRICE_CHANGED
+   with `prior_price_text`. Same guard added to `status_probe.py` and both
+   `/api/enrich-listing` merge paths in `serve.py`.
+3. `gmail_fetch.extract_by_address` had its own parser: `re.findall(r"[\d,]+",
+   "$1.3m")` → `['1','3']` → **1,000,000**, and ranges collapsed to max == min
+   (≈60 records carried `$1.75m` over `price_min = 1,000,000`). Now uses the
+   shared `score.price_bounds_from_text`, which also gained the plausibility
+   window plus `price_text_is_plausible()` / `price_text_has_number()`.
+
+`score.tier1` now re-derives `price_min/max` from the guide text on every
+score whenever the text carries a plausible number (the text is what the most
+recent sweep actually read), so the stale-bounds class self-heals on any
+Refresh. `index.html` `fmtPrice()` additionally refuses to display an
+implausible guide (defence in depth). RUNBOOK §A gained the rule that
+`price_guide_text` comes from the listing's price line only.
+
+**Data repair:** the four records restored/cleared (`price_repaired_on`,
+`price_repair_note`); full re-score applied. Two active records whose text and
+earlier bounds disagreed by >35% are flagged `price_needs_verification`
+(802/6 Paul St Zetland `$1.07m` vs 2.05M; 11/70 Wigram Rd Glebe `$975,000` vs
+620k) — re-read those pages.
+
+---
+
 ## 16 October 2026 — Cover photo read by the Verify run (cards were blank)
 
 **Problem (Adam):** the dashboard was not showing the main photo for most

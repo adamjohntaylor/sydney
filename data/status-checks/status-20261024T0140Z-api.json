@@ -1,0 +1,178 @@
+{
+  "generated_on": "2026-10-24",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=612%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=612%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/612-5-joynton-avenue-zetland-nsw-2017-2021227129",
+      "address": "612/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=509%2F2+defries+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=509%2f2+defries+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/509-2-defries-avenue-zetland-nsw-2017-2021225569",
+      "address": "509/2 Defries Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14403%2F177+mitchell+road+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14403%2f177+mitchell+road+erskineville",
+      "resolved_url": "https://www.domain.com.au/14403-177-mitchell-road-erskineville-nsw-2043-2021164529",
+      "address": "14403/177 Mitchell Road",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F30+norton+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2f30+norton+street+glebe",
+      "resolved_url": "https://www.domain.com.au/2-30-norton-street-glebe-nsw-2037-2021150061",
+      "address": "2/30 Norton Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F1+albert+street+rozelle",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2f1+albert+street+rozelle",
+      "resolved_url": "https://www.domain.com.au/3-1-albert-street-rozelle-nsw-2039-2021229127",
+      "address": "3/1 Albert Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=710%2F27+margaret+street+rozelle",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=710%2f27+margaret+street+rozelle",
+      "resolved_url": "https://www.domain.com.au/710-27-margaret-street-rozelle-nsw-2039-2021229043",
+      "address": "710/27 Margaret Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26+tennyson+street+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/26-tennyson-street-dulwich-hill-nsw-2203-2021228857",
+      "address": "26 Tennyson Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+reserve+street+annandale",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/1-reserve-street-annandale-nsw-2038-2021215156",
+      "address": "1 Reserve Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=711%2F27+margaret+street+rozelle",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=711%2f27+margaret+street+rozelle",
+      "resolved_url": "https://www.domain.com.au/711-27-margaret-street-rozelle-nsw-2039-2021229045",
+      "address": "711/27 Margaret Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=905+south+dowling+street+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 7 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/905-south-dowling-st-zetland-nsw-2017-2021136391",
+      "address": "905 South Dowling Street",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=182+addison+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-21",
+      "resolved_url": "https://www.domain.com.au/182-addison-road-marrickville-nsw-2204-2021236454",
+      "sold_date": "2026-10-21",
+      "address": "182 Addison Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F2-6+bridge+road+stanmore",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2f2-6+bridge+road+stanmore",
+      "resolved_url": "https://www.domain.com.au/17-2-6-bridge-road-stanmore-nsw-2048-2021236006",
+      "address": "17/2-6 Bridge Road",
+      "suburb": "Stanmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53+wigram+road+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/53-wigram-road-glebe-nsw-2037-2021235771",
+      "address": "53 Wigram Road",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2a+forsyth+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/18-2a-forsyth-street-glebe-nsw-2037-2021234571",
+      "address": "2A Forsyth Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=67%2F57+ralph+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=67%2f57+ralph+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/67-57-ralph-street-alexandria-nsw-2015-2021234437",
+      "address": "67/57 Ralph Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=204+albion+street+annandale",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-22",
+      "resolved_url": "https://www.domain.com.au/204-albion-street-annandale-nsw-2038-2021219981",
+      "sold_date": "2026-10-22",
+      "address": "204 Albion Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13+bowman+street+drummoyne",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/13-bowman-street-drummoyne-nsw-2047-2021183861",
+      "address": "13 Bowman Street",
+      "suburb": "Drummoyne"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2b+defries+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/728-2b-defries-avenue-zetland-nsw-2017-2021183751",
+      "address": "2b Defries Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=27+jacques+street+balmain",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-23",
+      "resolved_url": "https://www.domain.com.au/27-jacques-street-balmain-nsw-2041-2021178588",
+      "sold_date": "2026-10-23",
+      "address": "27 Jacques Street",
+      "suburb": "Balmain"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11+westbourne+street+drummoyne",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/11-westbourne-street-drummoyne-nsw-2047-2021173241",
+      "address": "11 Westbourne Street",
+      "suburb": "Drummoyne"
+    }
+  ]
+}

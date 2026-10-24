@@ -9,6 +9,39 @@
 // not_found | on_market | unknown, plus the two search-page kinds
 // (search_count / sold_search) that background.js resolves itself.
 
+// Price guide: the FIRST dollar figure on the page inside the plausible
+// dwelling window ($100k-$50M), as a single figure or a "$a - $b" range.
+// A listing page also carries repayment estimates, strata/council/water and
+// rental appraisals - on 11 Oct 2026 the old "first $ on the page" reader sent
+// "$7,019" / "$6,228" as the guides for 1101/89 Bay St and 120/102 Miller St.
+// Returns null when the page shows no plausible guide (Contact Agent / auction).
+function readPriceGuideFromPage(body) {
+  const PRICE_MIN = 100000, PRICE_MAX = 50000000;
+  const num = /\$\s?(\d[\d,]*(?:\.\d+)?)\s?([kKmM]\b|million\b)?/g;
+  const toVal = (n, u) => {
+    let v = parseFloat(n.replace(/,/g, ""));
+    const unit = (u || "").toLowerCase();
+    if (unit === "m" || unit === "million") v *= 1e6; else if (unit === "k") v *= 1e3;
+    return v;
+  };
+  let m;
+  while ((m = num.exec(body))) {
+    const v = toVal(m[1], m[2]);
+    if (!(v >= PRICE_MIN && v <= PRICE_MAX)) continue;
+    let text = m[0].replace(/\s+/g, " ").trim();
+    // Range: "$1,100,000 - $1,200,000" / "$1.1M-$1.2M" / "$1.1M to $1.2M"
+    const tail = body.slice(num.lastIndex, num.lastIndex + 24);
+    const r = tail.match(/^\s*(?:-|–|to)\s*(\$\s?\d[\d,]*(?:\.\d+)?\s?(?:[kKmM]\b|million\b)?)/);
+    if (r) {
+      const rm = r[1].match(/\$\s?(\d[\d,]*(?:\.\d+)?)\s?([kKmM]\b|million\b)?/);
+      const hi = rm ? toVal(rm[1], rm[2]) : NaN;
+      if (hi >= v && hi <= PRICE_MAX) text += " - " + r[1].replace(/\s+/g, " ").trim();
+    }
+    return text;
+  }
+  return null;
+}
+
 function readPage() {
   const url = location.href;
   const host = location.hostname;
@@ -82,8 +115,8 @@ function readPage() {
       status = "under_offer"; basis = hasBadge(/^(under offer|under contract|deposit taken|contract exchanged)$/i);
     } else if (/"availability"\s*:\s*"(https?:\/\/schema\.org\/)?InStock"/i.test(ld) || body.length > 2000) {
       status = "on_market"; basis = "listing page rendered";
-      const p = body.match(/\$\s?\d{1,3}(?:,\d{3}){1,2}|\$\s?\d(?:\.\d+)?\s?[mM]\b/);
-      if (p) check.price_guide_text = p[0];
+      const p = readPriceGuideFromPage(body);
+      if (p) check.price_guide_text = p;
     }
     check.listing_status = status;
     check.status_basis = basis;
