@@ -1,0 +1,177 @@
+{
+  "generated_on": "2026-10-24",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=43%2F8+water+street+birchgrove",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=43%2f8+water+street+birchgrove",
+      "resolved_url": "https://www.domain.com.au/43-8-water-street-birchgrove-nsw-2041-2021242784",
+      "address": "43/8 Water Street",
+      "suburb": "Birchgrove"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=293+young+street+annandale",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/293-young-street-annandale-nsw-2038-2021243289",
+      "address": "293 Young Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=52+rochford+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/52-rochford-street-erskineville-nsw-2043-2021245803",
+      "address": "52 Rochford Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F33-35+burren+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2f33-35+burren+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/1-33-35-burren-street-erskineville-nsw-2043-2021245785",
+      "address": "1/33-35 Burren Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F31+ness+avenue+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2f31+ness+avenue+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/5-31-ness-avenue-dulwich-hill-nsw-2203-2021245633",
+      "address": "5/31 Ness Avenue",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=26+malcolm+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/26-malcolm-street-erskineville-nsw-2043-2021245275",
+      "address": "26 Malcolm Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F11+hill+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2f11+hill+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/17-11-hill-street-marrickville-nsw-2204-2021244893",
+      "address": "17/11 Hill Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=117+lord+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/117-lord-street-newtown-nsw-2042-2021244487",
+      "address": "117 Lord Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10+wilford+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/10-wilford-street-newtown-nsw-2042-2021244245",
+      "address": "10 Wilford Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=172+denison+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/172-denison-street-newtown-nsw-2042-2021244046",
+      "address": "172 Denison Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=401%2F86+lawrence+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=401%2f86+lawrence+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/401-86-lawrence-street-alexandria-nsw-2015-2021243888",
+      "address": "401/86 Lawrence Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=37+emma+street+leichhardt",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/37-emma-street-leichhardt-nsw-2040-2021243738",
+      "address": "37 Emma Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=190+lilyfield+road+lilyfield",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/190-lilyfield-road-lilyfield-nsw-2040-2021242903",
+      "address": "190 Lilyfield Road",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2F20-34+wyndham+street+alexandria",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2f20-34+wyndham+street+alexandria",
+      "resolved_url": "https://www.domain.com.au/19-20-34-wyndham-street-alexandria-nsw-2015-2021242865",
+      "address": "19/20-34 Wyndham Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=301%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=301%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/301-5-joynton-avenue-zetland-nsw-2017-2021242034",
+      "address": "301/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2F26-28+schwebel+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2f26-28+schwebel+street+marrickville",
+      "resolved_url": "https://www.domain.com.au/10-26-28-schwebel-street-marrickville-nsw-2204-2021242380",
+      "address": "10/26-28 Schwebel Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2F520+new+canterbury+road+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=16%2f520+new+canterbury+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/16-520-new-canterbury-road-dulwich-hill-nsw-2203-2021242495",
+      "address": "16/520 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F252+wardell+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2f252+wardell+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/14-252-wardell-road-marrickville-nsw-2204-2021243085",
+      "address": "14/252 Wardell Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1+collins+street+rozelle",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/1-collins-street-rozelle-nsw-2039-2021245447",
+      "address": "1 Collins Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2F1-11+brodrick+street+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=13%2f1-11+brodrick+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/13-1-11-brodrick-street-camperdown-nsw-2050-2021059214",
+      "address": "13/1-11 Brodrick Street",
+      "suburb": "Camperdown"
+    }
+  ]
+}

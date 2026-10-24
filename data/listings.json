@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T01:41:22.477922+00:00",
-  "generated_at_sydney": "2026-10-24 11:41 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-24T01:45:05.210191+00:00",
+  "generated_at_sydney": "2026-10-24 11:45 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 180,
-    "tier1_pass": 150,
-    "new": 35,
+    "total": 178,
+    "tier1_pass": 144,
+    "new": 33,
     "price_changed": 2,
     "sold": 194,
     "under_offer": 10,
-    "withdrawn": 60
+    "withdrawn": 62
   },
   "listings": [
     {
@@ -29142,9 +29142,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8525609,
       "lon": 151.1774809,
@@ -29215,9 +29215,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8783841,
       "lon": 151.1695376,
@@ -29290,9 +29290,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 158,
       "area_basis": "page data: land area",
@@ -29373,9 +29373,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "internal_m2": 171,
       "land_m2": 676,
@@ -29463,9 +29463,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 85,
       "area_basis": "page data: land area",
@@ -29538,9 +29538,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 136,
       "area_basis": "page data: land area",
@@ -29623,9 +29623,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "internal_m2": 138,
       "area_basis": "page text: labelled internal/floor area",
@@ -29698,9 +29698,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 142,
       "area_basis": "page text: labelled land area",
@@ -29773,9 +29773,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 120,
       "area_basis": "page data: land area",
@@ -29848,9 +29848,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "beds": 2,
       "baths": 1,
@@ -29921,9 +29921,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 177,
       "area_basis": "page data: land area",
@@ -29996,9 +29996,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 151,
       "area_basis": "page data: land area",
@@ -30071,9 +30071,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 156,
       "area_basis": "page data: land area",
@@ -30145,9 +30145,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "lat": -33.8959512,
       "lon": 151.1983351,
@@ -30220,9 +30220,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 85,
       "area_basis": "page data: land area",
@@ -30295,9 +30295,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 146,
       "area_basis": "page data: land area",
@@ -30370,9 +30370,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "beds": 2,
       "baths": 1,
@@ -30445,9 +30445,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "internal_m2": 90,
       "land_m2": 90,
@@ -30523,9 +30523,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "land_m2": 107,
       "area_basis": "page data: land area",
@@ -30600,9 +30600,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-10-24",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-10-24",
       "flag_cleared_on": "2026-10-16",
       "internal_m2": 80,
       "area_basis": "page data: building/floor area",
@@ -30692,8 +30692,14 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
-      "flag_sweeps": 0
+      "change_flag": "WITHDRAWN",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "departed_on": "2026-10-24",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2f1-9+terrace+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "538H/39 Ralph Street",
@@ -30719,9 +30725,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -30730,9 +30736,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -30756,7 +30760,17 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021263006_1_1_261021_073532-w6000-h4000",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/538h-39-ralph-street-alexandria-nsw-2015-2021263006"
     },
     {
       "address": "59 Suttor Street",
@@ -30782,9 +30796,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -30793,9 +30807,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -30819,7 +30831,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 145,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262814_1_1_261021_064828-w1536-h1024",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/59-suttor-street-alexandria-nsw-2015-2021262814"
     },
     {
       "address": "316/1 Pearl Street",
@@ -30845,10 +30869,10 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
@@ -30856,19 +30880,16 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 44,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 11.1,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -30882,7 +30903,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "internal_m2": 101,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262709_1_1_261021_063625-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/316-1-pearl-street-erskineville-nsw-2043-2021262709"
     },
     {
       "address": "7/52 Nelson Street",
@@ -30911,9 +30944,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -30921,9 +30954,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -30947,7 +30978,17 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262546_1_1_261021_062028-w4600-h3067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/7-52-nelson-street-annandale-nsw-2038-2021262546"
     },
     {
       "address": "14 Waterloo Street",
@@ -30976,9 +31017,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -30986,9 +31027,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -31012,7 +31051,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 151,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262476_1_1_261021_061417-w5190-h3463",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/14-waterloo-street-rozelle-nsw-2039-2021262476"
     },
     {
       "address": "23/753-769 New Canterbury Road",
@@ -31041,9 +31092,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -31051,9 +31102,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -31077,7 +31126,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 126,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262276_1_1_261021_055449-w6720-h4480",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/23-753-769-new-canterbury-road-dulwich-hill-nsw-2203-2021262276"
     },
     {
       "address": "71 Cobar Street",
@@ -31106,9 +31167,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -31116,9 +31177,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -31142,7 +31201,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 347,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 3,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021262264_1_1_261021_055412-w3777-h2520",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/71-cobar-street-dulwich-hill-nsw-2203-2021262264"
     },
     {
       "address": "35 Marian Street",
@@ -31171,9 +31242,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -31181,9 +31252,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -31207,7 +31276,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 183,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261787_1_1_261021_050850-w4724-h3149",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/35-marian-street-enmore-nsw-2042-2021261787"
     },
     {
       "address": "22C/14 Wolseley Street",
@@ -31236,29 +31317,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 41,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 7.7,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -31272,7 +31352,33 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "internal_m2": 89,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "strata_pq": 2097.3,
+      "council_pq": 420.0,
+      "water_pq": 216.5,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water rates: $866.00 p/a Council rates: $1,680.00 p/a Strata rates: $2,097.30 p/q",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-24",
+      "strata_pa": 8389,
+      "outgoings_pa": 10935,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261462_1_1_261021_043409-w1950-h1302",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/22c-14-wolseley-street-drummoyne-nsw-2047-2021261462"
     },
     {
       "address": "143 Lilyfield Road",
@@ -31299,9 +31405,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -31309,9 +31415,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -31337,7 +31441,19 @@
       "change_flag": "NEW",
       "flag_sweeps": 0,
       "lat": -33.8741556,
-      "lon": 151.1584245
+      "lon": 151.1584245,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 297,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021210824_1_1_261005_045339-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/143-lilyfield-road-lilyfield-nsw-2040-2021210824"
     },
     {
       "address": "2012/20 Gadigal Avenue",
@@ -31364,29 +31480,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -31402,7 +31515,19 @@
       "change_flag": "NEW",
       "flag_sweeps": 0,
       "lat": -33.9044321,
-      "lon": 151.2134108
+      "lon": 151.2134108,
+      "status_checked_on": "2026-10-24",
+      "internal_m2": 168,
+      "area_basis": "page data: building/floor area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021152839_2_1_260914_030632-w4961-h3307",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/2012-20-gadigal-avenue-zetland-nsw-2017-2021152839"
     },
     {
       "address": "9/37 Iredale Street",
@@ -31429,29 +31554,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 40,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 7.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -31467,7 +31592,33 @@
       "change_flag": "NEW",
       "flag_sweeps": 0,
       "lat": -33.9033471,
-      "lon": 151.1801921
+      "lon": 151.1801921,
+      "status_checked_on": "2026-10-24",
+      "internal_m2": 81,
+      "area_basis": "page data: building/floor area",
+      "beds": 0,
+      "baths": 1,
+      "property_type": "studio",
+      "area_checked_on": "2026-10-24",
+      "strata_pq": 1322.0,
+      "council_pq": 277.0,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water $226pq, Council $277pq, Strata $1,322pq (All approx.)",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-10-24",
+      "strata_pa": 5288,
+      "outgoings_pa": 7300,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261809_1_1_261021_051232-w6002-h4002",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/9-37-iredale-street-newtown-nsw-2042-2021261809"
     },
     {
       "address": "66/155 Missenden Road",
@@ -31494,22 +31645,22 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -31532,7 +31683,17 @@
       "change_flag": "NEW",
       "flag_sweeps": 0,
       "lat": -33.8916711,
-      "lon": 151.1825767
+      "lon": 151.1825767,
+      "status_checked_on": "2026-10-24",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261549_1_1_261021_044308-w4600-h3067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/66-155-missenden-road-newtown-nsw-2042-2021261549"
     },
     {
       "address": "10/9 Trade Street",
@@ -31559,22 +31720,22 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -31597,7 +31758,31 @@
       "change_flag": "NEW",
       "flag_sweeps": 0,
       "lat": -33.8949488,
-      "lon": 151.1738502
+      "lon": 151.1738502,
+      "status_checked_on": "2026-10-24",
+      "beds": 0,
+      "baths": 1,
+      "property_type": "studio",
+      "area_checked_on": "2026-10-24",
+      "strata_pq": 701.0,
+      "council_pq": 425.0,
+      "water_pq": 226.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Strata Rates $701 pq, Water Rates $904 pa, Council Rates $1,700 pa",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-10-24",
+      "strata_pa": 2804,
+      "outgoings_pa": 5408,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021259319_1_1_261020_110446-w1368-h904",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/10-9-trade-street-newtown-nsw-2042-2021259319"
     },
     {
       "address": "106/2 Barr Street",
@@ -31657,10 +31842,16 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "NEW",
+      "change_flag": "WITHDRAWN",
       "flag_sweeps": 0,
       "lat": -33.8848816,
-      "lon": 151.1794917
+      "lon": 151.1794917,
+      "status_checked_on": "2026-10-24",
+      "departed_on": "2026-10-24",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=106%2f2+barr+street+camperdown",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/"
     },
     {
       "address": "12 Queen Street",
@@ -31687,9 +31878,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -31697,9 +31888,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -31725,7 +31914,19 @@
       "change_flag": "NEW",
       "flag_sweeps": 0,
       "lat": -33.9139872,
-      "lon": 151.1574513
+      "lon": 151.1574513,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 234,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021267150_1_1_261022_073707-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/12-queen-street-marrickville-nsw-2204-2021267150"
     },
     {
       "address": "10 Bourne Street",
@@ -31752,9 +31953,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -31762,9 +31963,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -31790,7 +31989,19 @@
       "change_flag": "NEW",
       "flag_sweeps": 0,
       "lat": -33.907066,
-      "lon": 151.1698832
+      "lon": 151.1698832,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 256,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021267064_1_1_261022_071259-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/10-bourne-street-marrickville-nsw-2204-2021267064"
     },
     {
       "address": "5/771-777 New Canterbury Road",
@@ -31811,9 +32022,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -31821,9 +32032,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -31849,7 +32058,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 100,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021266247_1_1_261022_054116-w3822-h2550",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/5-771-777-new-canterbury-road-dulwich-hill-nsw-2203-2021266247"
     },
     {
       "address": "52 Talfourd Street",
@@ -31870,9 +32091,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": null,
         "supplies": null,
@@ -31880,9 +32101,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area",
           "transport",
           "supplies"
@@ -31908,7 +32127,19 @@
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-24",
+      "land_m2": 113,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-10-24",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021265834_1_1_261022_050334-w2600-h1733",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-24",
+      "resolved_url": "https://www.domain.com.au/52-talfourd-street-glebe-nsw-2037-2021265834"
     },
     {
       "address": "14/63 Warren Road",
