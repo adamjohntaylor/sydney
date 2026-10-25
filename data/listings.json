@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 176,
-    "tier1_pass": 133,
+    "tier1_pass": 129,
     "new": 1,
     "price_changed": 1,
     "sold": 194,
@@ -6016,7 +6016,9 @@
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
       "price_repaired_on": "2026-10-24",
-      "price_repair_note": "Sweep of 11 Oct / 29 Sep 2026 wrote a sub-$10k page figure (repayment/outgoings) over the guide; restored from snapshot / cleared"
+      "price_repair_note": "Sweep of 11 Oct / 29 Sep 2026 wrote a sub-$10k page figure (repayment/outgoings) over the guide; restored from snapshot / cleared",
+      "status": "rejected",
+      "note": ""
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-150824824",
@@ -19318,18 +19320,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 50,
@@ -19378,7 +19380,13 @@
       "flag_cleared_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021151406_2_1_260912_082734-w3000-h2000",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "177 St Johns Road",
@@ -20292,7 +20300,9 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021193000_1_1_260929_022955-w2560-h1708",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "status": "sold-without-us",
+      "note": ""
     },
     {
       "address": "207/110 Epsom Road",
@@ -26025,7 +26035,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021150061_1_1_260911_054817-w2560-h1708",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/2-30-norton-street-glebe-nsw-2037-2021150061"
+      "resolved_url": "https://www.domain.com.au/2-30-norton-street-glebe-nsw-2037-2021150061",
+      "status": "rejected",
+      "note": ""
     },
     {
       "address": "3/1 Albert Street",
@@ -26733,19 +26745,20 @@
       "tier1": {
         "budget": null,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [
+          "budget"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 52,
@@ -26790,7 +26803,13 @@
       "flag_cleared_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021235771_1_1_261013_050536-w5040-h3360",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "2A Forsyth Street",
@@ -27307,18 +27326,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -27354,7 +27373,13 @@
       "resolved_url": "https://www.domain.com.au/11-westbourne-street-drummoyne-nsw-2047-2021173241",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021173241_1_1_260921_062546-w2560-h1708",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "128/8 Pony Race Street",
@@ -29393,19 +29418,20 @@
       "tier1": {
         "budget": null,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [
+          "budget"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -29455,7 +29481,13 @@
       "image_checked_on": "2026-10-16",
       "resolved_url": "https://www.domain.com.au/1-33-35-burren-street-erskineville-nsw-2043-2021245785",
       "lat": -33.8978988,
-      "lon": 151.1858363
+      "lon": 151.1858363,
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "5/31 Ness Avenue",

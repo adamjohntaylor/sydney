@@ -312,5 +312,56 @@
     "status": "rejected",
     "note": "",
     "updated": "2026-10-24T03:47:34.616Z"
+  },
+  "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-10-25T01:56:55.801Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2F15-17+fountain+street+alexandria": {
+    "status": "sold-without-us",
+    "note": "",
+    "updated": "2026-10-25T01:57:51.177Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11+westbourne+street+drummoyne": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-25T01:58:09.073Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1%2F33-35+burren+street+erskineville": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-25T01:58:19.977Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=2%2F30+norton+street+glebe": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-10-25T02:02:22.089Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=53+wigram+road+glebe": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-25T02:04:58.753Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F451-457+new+canterbury+road+dulwich+hill": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-25T02:09:07.441Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }
