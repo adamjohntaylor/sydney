@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-24T03:40:25.705488+00:00",
-  "generated_at_sydney": "2026-10-24 13:40 UTC+10:00 (Sydney)",
+  "generated_at": "2026-10-25T01:49:20.436766+00:00",
+  "generated_at_sydney": "2026-10-25 11:49 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 175,
-    "tier1_pass": 136,
-    "new": 0,
-    "price_changed": 0,
+    "total": 176,
+    "tier1_pass": 133,
+    "new": 1,
+    "price_changed": 1,
     "sold": 194,
     "under_offer": 11,
     "withdrawn": 64
@@ -6972,19 +6972,20 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "accessibility"
+        ],
         "unverified": [
-          "accessibility",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -7012,7 +7013,7 @@
       "water_pq": 217.0,
       "outgoings_source": "manual: agent / contract (drawer)",
       "outgoings_approx": false,
-      "outgoings_read_on": "2026-10-11",
+      "outgoings_read_on": "2026-10-24",
       "strata_pa": 7985,
       "outgoings_pa": 10493,
       "outgoings_known": [
@@ -7022,7 +7023,11 @@
       ],
       "outgoings_checked_on": "2026-10-24",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-24"
+      "image_checked_on": "2026-10-24",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "1/19-21 Larkin Street",
@@ -12347,12 +12352,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-10-25",
       "change_flag": "UNCHANGED",
       "days_on_market": 22,
       "lat": -33.9040897,
       "lon": 151.1895377,
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-10-25",
       "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103"
     },
     {
@@ -19979,10 +19984,12 @@
       "address": "17 Johnston Street",
       "suburb": "Annandale",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+johnston+street+annandale",
-      "source": "domain",
-      "price_guide_text": "$995,000 - $1,095,000",
-      "price_min": 995000,
-      "price_max": 1095000,
+      "source": "domain_search",
+      "price_guide_text": "$719,000",
+      "price_min": 719000,
+      "price_max": 719000,
+      "lat": -33.88646,
+      "lon": 151.1686781,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -20001,18 +20008,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -20031,29 +20038,28 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 2,
-      "lat": -33.88646,
-      "lon": 151.1686781,
-      "status_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/17-johnston-street-annandale-nsw-2038-2021192053",
-      "internal_m2": 227,
-      "area_basis": "page data: building/floor area",
-      "beds": 3,
-      "baths": 2,
-      "property_type": "townhouse",
-      "area_checked_on": "2026-10-16",
-      "outgoings_checked_on": "2026-10-16",
-      "parking": 1,
-      "status": "interested",
-      "note": "",
-      "status_check_failures": 1,
-      "image_cleared_on": "2026-10-24",
-      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
+      "last_seen": "2026-10-25",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021192053_1_1_260928_101227-w5800-h3867",
       "image_basis": "og:image (listing page, manual read 24 Oct 2026)",
-      "image_checked_on": "2026-10-24"
+      "image_checked_on": "2026-10-24",
+      "beds": 3,
+      "baths": 2,
+      "parking": 1,
+      "property_type": "townhouse",
+      "internal_m2": 227,
+      "area_basis": "page data: building/floor area",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "prior_price_text": "$995,000 - $1,095,000",
+      "flag_sweeps": 0,
+      "change_flag": "PRICE_CHANGED",
+      "status": "interested",
+      "days_on_market": 26,
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "50 Macdonald Street",
@@ -24098,19 +24104,20 @@
       "tier1": {
         "budget": null,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [
+          "budget"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -24144,7 +24151,13 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021175624_1_1_260922_043124-w7008-h4672",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "42/49 Henderson Road",
@@ -24295,11 +24308,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-10-25",
       "change_flag": "UNCHANGED",
       "lat": -33.9072907,
       "lon": 151.2069994,
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-10-25",
       "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
       "flag_cleared_on": "2026-10-12"
     },
@@ -26169,7 +26182,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021229043_3_1_261010_043553-w5476-h3656",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/710-27-margaret-street-rozelle-nsw-2039-2021229043"
+      "resolved_url": "https://www.domain.com.au/710-27-margaret-street-rozelle-nsw-2039-2021229043",
+      "status": "rejected",
+      "note": ""
     },
     {
       "address": "26 Tennyson Street",
@@ -27976,18 +27991,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 53,
@@ -28022,7 +28037,13 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021237995_1_1_261014_120558-w5496-h3660",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/57-8-water-street-birchgrove-nsw-2041-2021237995"
+      "resolved_url": "https://www.domain.com.au/57-8-water-street-birchgrove-nsw-2041-2021237995",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "29/5-11 Pyrmont Bridge Road",
@@ -33505,13 +33526,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7+watkin+street+newtown",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 89,
+          "supermarket": 76,
+          "pool": 713,
+          "park": 114,
+          "restaurants": 50
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -33519,8 +33546,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -33529,23 +33556,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33556,7 +33581,9 @@
       "change_flag": "SOLD",
       "departed_on": "2026-10-24",
       "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin"
+      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Zetland NSW 2017, Alexandria NSW 2015, Erskin",
+      "lat": -33.8946592,
+      "lon": 151.1830908
     },
     {
       "address": "4/56 Cambridge street",
@@ -33567,13 +33594,19 @@
       "price_min": 1375000,
       "price_max": 1375000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 289,
+          "supermarket": 322,
+          "pool": 865,
+          "park": 123,
+          "restaurants": 269
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -33581,8 +33614,8 @@
         "accessibility": null,
         "bedrooms": false,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [
@@ -33590,23 +33623,21 @@
         ],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": false
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33627,7 +33658,9 @@
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/4-56-cambridge-street-stanmore-nsw-2048-2021270223",
-      "flag_cleared_on": "2026-10-24"
+      "flag_cleared_on": "2026-10-24",
+      "lat": -33.8968756,
+      "lon": 151.1691298
     },
     {
       "address": "4/28 Railway Street",
@@ -33638,13 +33671,19 @@
       "price_min": 850000,
       "price_max": 850000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 170,
+          "supermarket": 353,
+          "pool": 404,
+          "park": 184,
+          "restaurants": 182
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -33652,30 +33691,28 @@
         "accessibility": null,
         "bedrooms": true,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
           "accessibility",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -33696,7 +33733,82 @@
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/4-28-railway-street-petersham-nsw-2049-2021256633",
-      "flag_cleared_on": "2026-10-24"
+      "flag_cleared_on": "2026-10-24",
+      "lat": -33.8901821,
+      "lon": 151.1558455
+    },
+    {
+      "address": "9/8-10 Rayner Street",
+      "suburb": "Lilyfield",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F8-10+rayner+street+lilyfield",
+      "source": "domain_search",
+      "lat": -33.873432,
+      "lon": 151.1584899,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 166,
+          "supermarket": 580,
+          "pool": 775,
+          "park": 585,
+          "restaurants": 273
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "floor_area": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility",
+          "floor_area"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "change_flag": "NEW",
+      "flag_sweeps": 0,
+      "status_checked_on": "2026-10-25",
+      "land_m2": 114,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-25",
+      "outgoings_checked_on": "2026-10-25",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021209032_1_1_261003_051350-w4961-h3307",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-25",
+      "resolved_url": "https://www.domain.com.au/9-8-10-rayner-street-lilyfield-nsw-2040-2021209032"
     }
   ]
 }

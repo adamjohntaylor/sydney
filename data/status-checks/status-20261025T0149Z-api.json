@@ -1,0 +1,43 @@
+{
+  "generated_on": "2026-10-25",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F8-10+rayner+street+lilyfield",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: page data: land area",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f8-10+rayner+street+lilyfield",
+      "resolved_url": "https://www.domain.com.au/9-8-10-rayner-street-lilyfield-nsw-2040-2021209032",
+      "address": "9/8-10 Rayner Street",
+      "suburb": "Lilyfield",
+      "land_m2": 114,
+      "area_basis": "page data: land area",
+      "area_checked": true,
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "outgoings_checked": true,
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021209032_1_1_261003_051350-w4961-h3307",
+      "image_basis": "og:image",
+      "image_checked": true
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F2+foundry+street+erskineville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f2+foundry+street+erskineville",
+      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103",
+      "address": "404/2 Foundry Street",
+      "suburb": "Erskineville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland"
+    }
+  ]
+}

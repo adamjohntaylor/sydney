@@ -223,7 +223,11 @@
   "https://www.realestate.com.au/property-apartment-nsw-balmain-150553964": {
     "status": "",
     "note": "",
-    "updated": "2026-10-11T22:44:16.843Z",
+    "updated": "2026-10-24T03:49:17.944Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    },
     "outgoings": {
       "strata": 1996.21,
       "council": 410,
@@ -238,7 +242,11 @@
   "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17+johnston+street+annandale": {
     "status": "interested",
     "note": "",
-    "updated": "2026-10-15T22:44:00.336Z"
+    "updated": "2026-10-24T03:50:08.688Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   },
   "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502/75-91+macdonald+street+erskineville": {
     "status": "interested",
@@ -281,5 +289,28 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=106+cavendish+street+stanmore": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-24T03:45:47.152Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=57%2F8+water+street+birchgrove": {
+    "status": "",
+    "note": "",
+    "updated": "2026-10-24T03:46:32.256Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=710%2F27+margaret+street+rozelle": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-10-24T03:47:34.616Z"
   }
 }
