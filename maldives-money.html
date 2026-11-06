@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maldives money</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color-scheme: light;
+    --bg: #e9f4f2;
+    --sand: #fbf7ee;
+    --ink: #123a3c;
+    --muted: #5c7f80;
+    --lagoon: #1f8e96;
+    --line: #c9dedb;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0f2628; --sand: #15302f; --ink: #eaf6f4; --muted: #8fb3b2;
+      --lagoon: #4cc3c9; --line: #2a4a4a; --card: #173636;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0f2628; --sand: #15302f; --ink: #eaf6f4; --muted: #8fb3b2;
+    --lagoon: #4cc3c9; --line: #2a4a4a; --card: #173636;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, "Roboto", "Segoe UI", sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+  }
+  main {
+    width: 100%;
+    max-width: 30rem;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+  h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+    color: var(--muted);
+  }
+  label {
+    display: block;
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: .35rem;
+  }
+  .entry {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    background: var(--card);
+    border: 2px solid var(--lagoon);
+    border-radius: 1rem;
+    padding: .75rem 1rem;
+  }
+  .entry span {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--lagoon);
+  }
+  input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-weight: 700;
+    font-size: 2.6rem;
+    padding: 0;
+  }
+  input:focus-visible { outline: 3px solid var(--lagoon); outline-offset: 6px; border-radius: .25rem; }
+  .chips { display: flex; gap: .5rem; margin: .75rem 0 1.75rem; flex-wrap: wrap; }
+  .chips button {
+    font: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--lagoon);
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .45rem .9rem;
+    cursor: pointer;
+  }
+  .chips button:focus-visible { outline: 3px solid var(--lagoon); }
+  .result {
+    background: var(--sand);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: .75rem;
+  }
+  .result .flag { font-size: 1rem; color: var(--muted); }
+  .result .amt {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin-top: .15rem;
+    overflow-wrap: anywhere;
+  }
+  .note {
+    margin-top: 1.75rem;
+    font-size: .85rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .note p { margin: 0 0 .5rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    .amt { transition: opacity .15s; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Maldives money</h1>
+
+  <label for="mvr">Price in rufiyaa</label>
+  <div class="entry">
+    <span>Rf</span>
+    <input id="mvr" type="text" inputmode="decimal" placeholder="0" autocomplete="off" autofocus>
+  </div>
+  <div class="chips">
+    <button type="button" data-v="100">100</button>
+    <button type="button" data-v="250">250</button>
+    <button type="button" data-v="500">500</button>
+    <button type="button" data-v="1000">1 000</button>
+    <button type="button" data-v="">Clear</button>
+  </div>
+
+  <div class="result">
+    <div class="flag">American dollars</div>
+    <div class="amt" id="usd">US$0.00</div>
+  </div>
+  <div class="result">
+    <div class="flag">Australian dollars</div>
+    <div class="amt" id="aud">A$0.00</div>
+  </div>
+
+  <div class="note">
+    <p>Rough guide only. 1 US dollar is about 15.4 rufiyaa, and 1 Australian dollar is about 10.1 rufiyaa, as of 6 November 2026.</p>
+    <p>Handy rule of thumb: divide the rufiyaa price by 10 for Australian dollars, by 15 for US dollars.</p>
+  </div>
+</main>
+<script>
+  var MVR_PER_USD = 15.42;
+  var MVR_PER_AUD = 10.12;
+  var input = document.getElementById("mvr");
+  var usd = document.getElementById("usd");
+  var aud = document.getElementById("aud");
+
+  function fmt(n) {
+    return n.toLocaleString("en-AU", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function update() {
+    var raw = input.value.replace(/[^0-9.,]/g, "").replace(/,/g, "");
+    var v = parseFloat(raw);
+    if (isNaN(v) || v < 0) v = 0;
+    usd.textContent = "US$" + fmt(v / MVR_PER_USD);
+    aud.textContent = "A$" + fmt(v / MVR_PER_AUD);
+  }
+  input.addEventListener("input", update);
+  document.querySelectorAll(".chips button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      input.value = b.getAttribute("data-v");
+      update();
+      input.focus();
+    });
+  });
+  try {
+    var saved = localStorage.getItem("mvr-last");
+    if (saved) { input.value = saved; }
+  } catch (e) {}
+  input.addEventListener("input", function () {
+    try { localStorage.setItem("mvr-last", input.value); } catch (e) {}
+  });
+  update();
+</script>
+</body>
+</html>
