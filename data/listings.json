@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 207,
-    "tier1_pass": 157,
+    "total": 206,
+    "tier1_pass": 156,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 72
+    "withdrawn": 73
   },
   "listings": [
     {
@@ -23943,7 +23943,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-03",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "status_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/26-flood-street-leichhardt-nsw-2040-2021207380",
       "flag_cleared_on": "2026-10-12",
@@ -23956,7 +23956,9 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021207380_1_1_261002_055723-w2560-h1708",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "3/249 Johnston Street",
