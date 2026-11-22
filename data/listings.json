@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 206,
-    "tier1_pass": 156,
+    "total": 205,
+    "tier1_pass": 155,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 73
+    "withdrawn": 74
   },
   "listings": [
     {
@@ -26198,7 +26198,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8847873,
       "lon": 151.1685054,
       "flag_cleared_on": "2026-10-16",
@@ -26211,7 +26211,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021215156_2_1_261006_104202-w4601-h2964",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/1-reserve-street-annandale-nsw-2038-2021215156"
+      "resolved_url": "https://www.domain.com.au/1-reserve-street-annandale-nsw-2038-2021215156",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "1/30 Wrights Road",
