@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 213,
-    "tier1_pass": 165,
+    "total": 212,
+    "tier1_pass": 163,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 66
+    "withdrawn": 67
   },
   "listings": [
     {
@@ -20987,7 +20987,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "lat": -33.8610145,
       "lon": 151.1687537,
       "status_checked_on": "2026-10-24",
@@ -21002,7 +21002,9 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021184913_14_1_260925_011556-w2560-h1707",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "18 Ferry Road",
@@ -25905,18 +25907,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 46,
@@ -25960,7 +25962,13 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021229127_1_1_261010_060350-w1600-h1066",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/3-1-albert-street-rozelle-nsw-2039-2021229127"
+      "resolved_url": "https://www.domain.com.au/3-1-albert-street-rozelle-nsw-2039-2021229127",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "710/27 Margaret Street",

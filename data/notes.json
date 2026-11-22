@@ -367,5 +367,14 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=3%2F1+albert+street+rozelle": {
+    "status": "",
+    "note": "",
+    "updated": "2026-11-22T00:13:13.367Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }
