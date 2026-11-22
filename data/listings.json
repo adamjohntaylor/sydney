@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T01:58:45.093574+00:00",
-  "generated_at_sydney": "2026-11-22 11:58 UTC+10:00 (Sydney)",
+  "generated_at": "2026-11-22T02:00:58.404412+00:00",
+  "generated_at_sydney": "2026-11-22 12:00 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 150,
-    "tier1_pass": 114,
+    "total": 143,
+    "tier1_pass": 110,
     "new": 0,
     "price_changed": 7,
     "sold": 0,
@@ -1955,73 +1955,6 @@
       "image_checked_on": "2026-10-16"
     },
     {
-      "address": "404/2 Foundry Street",
-      "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F2+foundry+street+erskineville",
-      "source": "domain_search",
-      "price_guide_text": "$1,100,000 - $1,150,000",
-      "price_min": 1100000,
-      "price_max": 1150000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 68,
-          "supermarket": 37,
-          "pool": 997,
-          "park": 198,
-          "restaurants": 18
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-07-03",
-      "last_seen": "2026-10-25",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 22,
-      "lat": -33.9040897,
-      "lon": 151.1895377,
-      "status_checked_on": "2026-10-25",
-      "resolved_url": "https://www.domain.com.au/404-2-foundry-street-erskineville-nsw-2043-2020970103"
-    },
-    {
       "address": "1215/303 Botany Road",
       "suburb": "Zetland",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1215%2F303+botany+road+zetland",
@@ -3073,7 +3006,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-22",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021192053_1_1_260928_101227-w5800-h3867",
       "image_basis": "og:image (listing page, manual read 24 Oct 2026)",
       "image_checked_on": "2026-10-24",
@@ -3094,7 +3027,9 @@
         "step_free": false,
         "lift": null
       },
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/17-johnston-street-annandale-nsw-2038-2021192053"
     },
     {
       "address": "207/110 Epsom Road",
@@ -4251,11 +4186,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.9072907,
       "lon": 151.2069994,
-      "status_checked_on": "2026-10-25",
+      "status_checked_on": "2026-11-22",
       "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
       "flag_cleared_on": "2026-10-12"
     },
@@ -8267,81 +8202,6 @@
       "flag_cleared_on": "2026-10-24"
     },
     {
-      "address": "1A Thomas Street",
-      "suburb": "Birchgrove",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=1a+thomas+street+birchgrove",
-      "source": "domain_search",
-      "price_guide_text": "$800,000",
-      "price_min": 800000,
-      "price_max": 800000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 144,
-          "supermarket": 314,
-          "pool": 218,
-          "park": 53,
-          "restaurants": 340
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": false,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "bedrooms"
-        ],
-        "unverified": [
-          "accessibility",
-          "floor_area"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-24",
-      "beds": 1,
-      "baths": 1,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-24",
-      "outgoings_checked_on": "2026-10-24",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020838975_1_1_260513_063518-w2048-h1365",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/1-1a-thomas-street-birchgrove-nsw-2041-2020838975",
-      "flag_cleared_on": "2026-10-24",
-      "lat": -33.8536392,
-      "lon": 151.1783354
-    },
-    {
       "address": "106A/2 Barr Street",
       "suburb": "Camperdown",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=106a%2F2+barr+street+camperdown",
@@ -8400,9 +8260,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-11-22",
       "beds": 1,
       "baths": 1,
       "property_type": "apartment / unit / flat",
@@ -8429,81 +8289,6 @@
       "flag_cleared_on": "2026-10-24",
       "lat": -33.8841741,
       "lon": 151.1793786
-    },
-    {
-      "address": "17/123 Lilyfield Road",
-      "suburb": "Lilyfield",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=17%2F123+lilyfield+road+lilyfield",
-      "source": "domain_search",
-      "price_guide_text": "$1,800,000",
-      "price_min": 1800000,
-      "price_max": 1800000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 54,
-          "supermarket": 442,
-          "pool": 840,
-          "park": 557,
-          "restaurants": 275
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": false,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "bedrooms"
-        ],
-        "unverified": [
-          "accessibility",
-          "floor_area"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-24",
-      "beds": 0,
-      "baths": 1,
-      "property_type": "studio",
-      "area_checked_on": "2026-10-24",
-      "outgoings_checked_on": "2026-10-24",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/16171316_2_1_221107_045757-w1600-h1067",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/17-123-lilyfield-road-lilyfield-nsw-2040-2021267121",
-      "flag_cleared_on": "2026-10-24",
-      "lat": -33.8740285,
-      "lon": 151.1598711
     },
     {
       "address": "201/843 New Canterbury Road",
@@ -8562,9 +8347,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-11-22",
       "land_m2": 85,
       "area_basis": "page data: land area",
       "beds": 1,
@@ -8579,233 +8364,6 @@
       "flag_cleared_on": "2026-10-24",
       "lat": -33.9045225,
       "lon": 151.1296945
-    },
-    {
-      "address": "5306/6 Grove Street",
-      "suburb": "Dulwich Hill",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5306%2F6+grove+street+dulwich+hill",
-      "source": "domain_search",
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 127,
-          "supermarket": 353,
-          "pool": 417,
-          "park": 147,
-          "restaurants": 120
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": false,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "bedrooms"
-        ],
-        "unverified": [
-          "budget",
-          "accessibility",
-          "floor_area"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-24",
-      "land_m2": 94,
-      "area_basis": "page data: land area",
-      "beds": 1,
-      "baths": 1,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-24",
-      "outgoings_checked_on": "2026-10-24",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270724_1_1_261023_030940-w3876-h2587",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/5306-6-grove-street-dulwich-hill-nsw-2203-2021270724",
-      "flag_cleared_on": "2026-10-24",
-      "lat": -33.9011747,
-      "lon": 151.1391768
-    },
-    {
-      "address": "4/56 Cambridge street",
-      "suburb": "Stanmore",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F56+cambridge+street+stanmore",
-      "source": "domain_search",
-      "price_guide_text": "$1,375,000",
-      "price_min": 1375000,
-      "price_max": 1375000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 289,
-          "supermarket": 322,
-          "pool": 865,
-          "park": 123,
-          "restaurants": 269
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": false,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "bedrooms"
-        ],
-        "unverified": [
-          "accessibility",
-          "floor_area"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-24",
-      "land_m2": 58,
-      "area_basis": "page data: land area",
-      "beds": 1,
-      "baths": 1,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-24",
-      "outgoings_checked_on": "2026-10-24",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021270223_1_1_261023_012819-w2000-h1333",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/4-56-cambridge-street-stanmore-nsw-2048-2021270223",
-      "flag_cleared_on": "2026-10-24",
-      "lat": -33.8968756,
-      "lon": 151.1691298
-    },
-    {
-      "address": "4/28 Railway Street",
-      "suburb": "Petersham",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2F28+railway+street+petersham",
-      "source": "domain_search",
-      "price_guide_text": "$850,000",
-      "price_min": 850000,
-      "price_max": 850000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 170,
-          "supermarket": 353,
-          "pool": 404,
-          "park": 184,
-          "restaurants": 182
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "accessibility",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-24",
-      "land_m2": 76,
-      "area_basis": "page data: land area",
-      "beds": 2,
-      "baths": 1,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-24",
-      "outgoings_checked_on": "2026-10-24",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021256633_1_1_261020_031004-w2048-h1365",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/4-28-railway-street-petersham-nsw-2049-2021256633",
-      "flag_cleared_on": "2026-10-24",
-      "lat": -33.8901821,
-      "lon": 151.1558455
     },
     {
       "address": "9/8-10 Rayner Street",
@@ -8864,9 +8422,9 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "status_checked_on": "2026-10-25",
+      "status_checked_on": "2026-11-22",
       "land_m2": 114,
       "area_basis": "page data: land area",
       "beds": 2,
@@ -8878,69 +8436,6 @@
       "image_basis": "og:image",
       "image_checked_on": "2026-10-25",
       "resolved_url": "https://www.domain.com.au/9-8-10-rayner-street-lilyfield-nsw-2040-2021209032",
-      "flag_cleared_on": "2026-11-22"
-    },
-    {
-      "address": "135/69 Allen Street",
-      "suburb": "Leichhardt",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=135%2F69+allen+street+leichhardt",
-      "source": "domain_search",
-      "lat": -33.8787078,
-      "lon": 151.1537527,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 175,
-          "supermarket": 473,
-          "pool": 1200,
-          "park": 134,
-          "restaurants": 144
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22"
     },
     {
@@ -8970,9 +8465,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -8980,9 +8475,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9004,9 +8497,32 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 88,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "council_pq": 425.0,
+      "water_pq": 246.0,
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Water rates: $246 p/qtr (approx.)- Council rates: $425 p/qtrRead moreAdd n",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-11-22",
+      "outgoings_pa": 2684,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021337182_1_1_261118_123123-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/10-bishopgate-street-camperdown-nsw-2050-2021337182"
     },
     {
       "address": "71 Wells Street",
@@ -9032,9 +8548,9 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9043,9 +8559,7 @@
         "fails": [],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9067,9 +8581,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 107,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021340010_1_1_261118_064657-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/71-wells-street-newtown-nsw-2042-2021340010"
     },
     {
       "address": "9 Victoria Street",
@@ -9098,9 +8624,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9108,9 +8634,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9132,9 +8656,32 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 76,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "council_pq": 331.0,
+      "water_pq": 246.0,
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Council $331pq, Water $246pq (All approx.)Cont",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-11-22",
+      "outgoings_pa": 2308,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021339491_1_1_261118_055111-w4600-h3067",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/9-victoria-street-erskineville-nsw-2043-2021339491"
     },
     {
       "address": "1906/8 Kingsborough Way",
@@ -9163,9 +8710,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9173,9 +8720,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9197,9 +8742,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021339040_1_1_261118_050913-w1801-h1200",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/1906-8-kingsborough-way-zetland-nsw-2017-2021339040"
     },
     {
       "address": "108 Lennox Street",
@@ -9228,9 +8783,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9238,9 +8793,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9262,9 +8815,32 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 101,
+      "area_basis": "page data: land area",
+      "beds": 4,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "council_pq": 466.0,
+      "water_pq": 246.0,
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Council $466pq, Water $246pq (All approx.)Cont",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-11-22",
+      "outgoings_pa": 2848,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021316036_1_1_261110_050341-w6000-h4000",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/108-lennox-street-newtown-nsw-2042-2021316036"
     },
     {
       "address": "33 Briggs Street",
@@ -9293,9 +8869,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9303,9 +8879,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9327,9 +8901,19 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021290759_9_1_261031_034120-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/33-briggs-street-camperdown-nsw-2050-2021290759"
     },
     {
       "address": "204/227 Victoria Road",
@@ -9358,9 +8942,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9368,9 +8952,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9392,9 +8974,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 130,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021179666_1_1_260923_052608-w1534-h1025",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/204-227-victoria-road-drummoyne-nsw-2047-2021179666"
     },
     {
       "address": "10/17 Joynton Avenue",
@@ -11494,23 +11088,23 @@
       },
       "tier1": {
         "budget": null,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": false,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "bedrooms"
+        ],
         "unverified": [
           "budget",
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -11531,7 +11125,17 @@
       "first_seen": "2026-11-22",
       "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "beds": 0,
+      "baths": 1,
+      "property_type": "studio",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021313571_1_1_261109_083425-w3000-h1999",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/39-1-linthorpe-street-newtown-nsw-2042-2021313571"
     }
   ]
 }
