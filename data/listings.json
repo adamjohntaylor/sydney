@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T02:03:33.631312+00:00",
-  "generated_at_sydney": "2026-11-22 12:03 UTC+10:00 (Sydney)",
+  "generated_at": "2026-11-22T02:05:08.891981+00:00",
+  "generated_at_sydney": "2026-11-22 12:05 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 138,
-    "tier1_pass": 102,
+    "total": 136,
+    "tier1_pass": 97,
     "new": 0,
     "price_changed": 7,
     "sold": 0,
@@ -6377,7 +6377,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021245803_1_1_261015_062949-w4134-h2756",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
@@ -6404,7 +6404,9 @@
       "days_on_market": 36,
       "lat": -33.9012723,
       "lon": 151.1826758,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/52-rochford-street-erskineville-nsw-2043-2021245803"
     },
     {
       "address": "26 Malcolm Street",
@@ -6551,7 +6553,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021244245_1_1_261015_033331-w3846-h2566",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
@@ -6565,7 +6567,9 @@
       "prior_price_text": "$950,000",
       "change_flag": "UNCHANGED",
       "days_on_market": 36,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/10-wilford-street-newtown-nsw-2042-2021244245"
     },
     {
       "address": "172 Denison Street",
@@ -6852,7 +6856,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242495_1_1_261014_110747-w1448-h1086",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
@@ -6866,7 +6870,9 @@
       "days_on_market": 36,
       "lat": -33.9060095,
       "lon": 151.1366176,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/16-520-new-canterbury-road-dulwich-hill-nsw-2203-2021242495"
     },
     {
       "address": "14/252 Wardell Road",
@@ -7389,7 +7395,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021261462_1_1_261021_043409-w1950-h1302",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
@@ -7419,7 +7425,9 @@
       "days_on_market": 28,
       "lat": -33.8459006,
       "lon": 151.1545538,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/22c-14-wolseley-street-drummoyne-nsw-2047-2021261462"
     },
     {
       "address": "143 Lilyfield Road",
@@ -10143,29 +10151,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 49,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 15.3,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -10177,11 +10182,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.9057339,
-      "lon": 151.1688666
+      "lon": 151.1688666,
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 113,
+      "area_basis": "page text: unlabelled m² figure (apartment ⇒ internal)",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021345773_1_1_261120_025037-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/18-80-victoria-road-marrickville-nsw-2204-2021345773"
     },
     {
       "address": "50 Dickson Street",
@@ -10208,9 +10225,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -10218,9 +10235,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -10242,76 +10257,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.905238,
-      "lon": 151.178846
-    },
-    {
-      "address": "406/68 McEvoy Street",
-      "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=406%2F68+mcevoy+street+alexandria",
-      "source": "domain_search",
-      "price_guide_text": "$1,150,000",
-      "price_min": 1150000,
-      "price_max": 1150000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 21,
-          "supermarket": 15,
-          "pool": 112,
-          "park": 92,
-          "restaurants": 29
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22",
-      "lat": -33.9018509,
-      "lon": 151.2007232
+      "lon": 151.178846,
+      "status_checked_on": "2026-11-22",
+      "land_m2": 120,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021345735_1_1_261120_024058-w3820-h2549",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/50-dickson-street-newtown-nsw-2042-2021345735"
     },
     {
       "address": "266 Norton Street",
@@ -10338,9 +10300,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -10348,9 +10310,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -10372,11 +10332,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.8779832,
-      "lon": 151.1560381
+      "lon": 151.1560381,
+      "status_checked_on": "2026-11-22",
+      "land_m2": 145,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021345487_1_1_261120_015033-w2048-h1366",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/266-norton-street-leichhardt-nsw-2040-2021345487"
     },
     {
       "address": "5a Victoria Park Parade",
@@ -10403,29 +10375,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 51,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 17.7,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -10437,11 +10406,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.9066031,
-      "lon": 151.21004
+      "lon": 151.21004,
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 130,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021345191_1_1_261120_123703-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/106-5a-victoria-park-parade-zetland-nsw-2017-2021345191"
     },
     {
       "address": "302/34 Wentworth Street",
@@ -10468,9 +10449,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -10478,9 +10459,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -10502,76 +10481,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.8789903,
-      "lon": 151.1922176
-    },
-    {
-      "address": "43/7 Letitia Street",
-      "suburb": "Zetland",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=43%2F7+letitia+street+zetland",
-      "source": "domain_search",
-      "price_guide_text": "$950,000 - $1,045,000",
-      "price_min": 950000,
-      "price_max": 1045000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 114,
-          "supermarket": 314,
-          "pool": 248,
-          "park": 279,
-          "restaurants": 258
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22",
-      "lat": -33.9106854,
-      "lon": 151.2094717
+      "lon": 151.1922176,
+      "status_checked_on": "2026-11-22",
+      "land_m2": 70,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021345157_1_1_261120_122851-w3853-h2572",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/302-34-wentworth-street-glebe-nsw-2037-2021345157"
     },
     {
       "address": "15 Perry Street",
@@ -10598,9 +10524,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -10608,9 +10534,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -10632,11 +10556,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.8716688,
-      "lon": 151.1579502
+      "lon": 151.1579502,
+      "status_checked_on": "2026-11-22",
+      "land_m2": 221,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021321551_1_1_261111_103320-w2560-h1707",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/15-perry-street-lilyfield-nsw-2040-2021321551"
     },
     {
       "address": "16 Durham Street",
@@ -10663,29 +10599,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 39,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 5.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -10697,11 +10632,24 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.892154,
-      "lon": 151.1684494
+      "lon": 151.1684494,
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 68,
+      "land_m2": 247,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021321541_2_1_261111_072238-w1560-h1008",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/16-durham-street-stanmore-nsw-2048-2021321541"
     },
     {
       "address": "1308/20 Gadigal Avenue",
@@ -10728,9 +10676,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -10738,9 +10686,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -10762,11 +10708,35 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.9043033,
-      "lon": 151.2131631
+      "lon": 151.2131631,
+      "status_checked_on": "2026-11-22",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "strata_pq": 1370.0,
+      "council_pq": 320.0,
+      "water_pq": 192.0,
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Strata $1,370 pq- Council: $320 pq- Water: $192 pqIncome - Rent : $",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-11-22",
+      "strata_pa": 5480,
+      "outgoings_pa": 7528,
+      "outgoings_known": [
+        "strata",
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2018839466_1_1_241202_032123-w1920-h1080",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/1308-20-gadigal-avenue-zetland-nsw-2017-2018839466"
     },
     {
       "address": "11/40 Arthur Street",
@@ -10793,29 +10763,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 38,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 4.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -10827,11 +10797,24 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.8568073,
-      "lon": 151.1740462
+      "lon": 151.1740462,
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 52,
+      "land_m2": 65,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/16954678_1_1_240405_014029-w3600-h2400",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/11-40-arthur-street-balmain-nsw-2041-2021345347"
     },
     {
       "address": "106/180 Livingstone Road",
@@ -10858,29 +10841,29 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": false,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
+        "fails": [
           "bedrooms",
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 38,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 5.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -10892,11 +10875,32 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.9078053,
-      "lon": 151.1531014
+      "lon": 151.1531014,
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 58,
+      "area_basis": "page data: building/floor area",
+      "beds": 1,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "council_pq": 410.0,
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Council $410 per quarter approxW",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-11-22",
+      "outgoings_pa": 1640,
+      "outgoings_known": [
+        "council"
+      ],
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020603101_1_1_261119_100829-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/106-180-livingstone-road-marrickville-nsw-2204-2020603101"
     },
     {
       "address": "39/1 Linthorpe Street",
