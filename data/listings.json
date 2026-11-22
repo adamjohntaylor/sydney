@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T01:19:55.503034+00:00",
-  "generated_at_sydney": "2026-11-22 11:19 UTC+10:00 (Sydney)",
+  "generated_at": "2026-11-22T01:48:11.871217+00:00",
+  "generated_at_sydney": "2026-11-22 11:48 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 205,
-    "tier1_pass": 155,
-    "new": 1,
-    "price_changed": 0,
+    "total": 209,
+    "tier1_pass": 158,
+    "new": 0,
+    "price_changed": 5,
     "sold": 0,
-    "under_offer": 11,
+    "under_offer": 1,
     "withdrawn": 0
   },
   "listings": [
@@ -87,8 +87,8 @@
         "warehouse_character": false
       },
       "first_seen": "2026-06-21",
-      "last_seen": "2026-10-16",
-      "change_flag": "UNDER_OFFER",
+      "last_seen": "2026-11-22",
+      "change_flag": "UNCHANGED",
       "lat": -33.881512,
       "lon": 151.1924243,
       "features": [
@@ -119,24 +119,23 @@
       ],
       "status": "interested",
       "note": "",
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-11-22",
       "flag_cleared_on": "2026-10-01",
       "area_basis": "page data: building/floor area",
-      "area_checked_on": "2026-10-24",
+      "area_checked_on": "2026-11-22",
       "outgoings_unstated": {
-        "strata": 3400.0,
-        "council": 300.0
+        "strata": 3400.0
       },
-      "outgoings_source": "listing page: page data (embedded description)",
-      "outgoings_snippet": "Strata Levy: $3400/Quarter Council Rate: $300/Quarter Water Bi",
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Strata Levy: $3400/QuarterCouncil Rate",
       "outgoings_approx": false,
-      "outgoings_read_on": "2026-10-24",
-      "outgoings_checked_on": "2026-10-24",
+      "outgoings_read_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
-      "departed_on": "2026-10-24",
+      "image_checked_on": "2026-11-22",
       "status_source": "sweep_check",
-      "status_basis": "chrome: UNDER OFFER"
+      "status_basis": "chrome: listing page rendered",
+      "relisted_on": "2026-11-22"
     },
     {
       "address": "11/70 Wigram Road",
@@ -194,8 +193,8 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "last_seen": "2026-11-22",
+      "change_flag": "PRICE_CHANGED",
       "url": "https://www.domain.com.au/11-70-wigram-road-glebe-nsw-2037-2020928696",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020928696_1_1_260619_032942-w4600-h3067",
       "property_type": "apartment / unit / flat",
@@ -203,18 +202,18 @@
       "beds": 3,
       "baths": 1,
       "parking": 1,
-      "price_guide_text": "$975,000",
-      "price_min": 975000,
-      "price_max": 975000,
+      "price_guide_text": "$580,000 - $620,000",
+      "price_min": 580000,
+      "price_max": 620000,
       "status": "",
       "note": "",
       "accessibility": {
         "step_free": false,
         "lift": null
       },
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-11-22",
       "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-24",
+      "area_checked_on": "2026-11-22",
       "council_pq": 256.0,
       "water_pq": 213.0,
       "outgoings_source": "listing page: page data (embedded description)",
@@ -226,20 +225,21 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-24",
+      "outgoings_checked_on": "2026-11-22",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
+      "image_checked_on": "2026-11-22",
       "price_needs_verification": true,
-      "price_verification_note": "Guide text and earlier numeric bounds disagreed by >35% (24 Oct 2026 audit); re-read the listing page"
+      "price_verification_note": "Guide text and earlier numeric bounds disagreed by >35% (24 Oct 2026 audit); re-read the listing page",
+      "prior_price_text": "$975,000"
     },
     {
       "address": "802/6 Paul Street",
       "suburb": "Zetland",
       "url": "https://www.domain.com.au/802-6-paul-street-zetland-nsw-2017-2020928513",
       "source": "domain",
-      "price_guide_text": "$1.07m",
-      "price_min": 1070000,
-      "price_max": 1070000,
+      "price_guide_text": "$1.05m",
+      "price_min": 1050000,
+      "price_max": 1050000,
       "catchments": {
         "transport": true,
         "supermarket": true,
@@ -288,12 +288,12 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "last_seen": "2026-11-22",
+      "change_flag": "PRICE_CHANGED",
       "days_on_market": 0,
       "lat": -33.9082667,
       "lon": 151.2049662,
-      "cover_image": "https://rimh2.domainstatic.com.au/82PmNRw3QGHz1dZ9HuimB2sMgrk=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020928513_1_1_260619_024912-w1500-h1000",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020928513_1_1_260619_024912-w1500-h1000",
       "beds": 2,
       "baths": 2,
       "parking": 2,
@@ -305,8 +305,8 @@
         "step_free": true,
         "lift": true
       },
-      "status_checked_on": "2026-10-24",
-      "area_checked_on": "2026-10-12",
+      "status_checked_on": "2026-11-22",
+      "area_checked_on": "2026-11-22",
       "features": [
         "Balcony",
         "Secure Parking",
@@ -319,86 +319,12 @@
         "Air conditioning",
         "Ensuite"
       ],
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1,
+      "outgoings_checked_on": "2026-11-22",
       "price_needs_verification": true,
-      "price_verification_note": "Guide text and earlier numeric bounds disagreed by >35% (24 Oct 2026 audit); re-read the listing page"
-    },
-    {
-      "address": "325/4 Elger Street",
-      "suburb": "Glebe",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=325%2F4+elger+street+glebe",
-      "source": "domain_search",
-      "price_guide_text": "$1,450,000",
-      "price_min": 1450000,
-      "price_max": 1450000,
-      "lat": -33.8802979,
-      "lon": 151.1933075,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 366,
-          "supermarket": 318,
-          "pool": 609,
-          "park": 125,
-          "restaurants": 90
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "floor_area": false,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "floor_area"
-        ],
-        "unverified": [
-          "accessibility"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 43,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 10.1,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-06-22",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "days_on_market": 3,
-      "status_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/325-4-elger-street-glebe-nsw-2037-2020909701",
-      "internal_m2": 98,
-      "area_basis": "page data: building/floor area",
-      "beds": 2,
-      "baths": 2,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-16",
-      "outgoings_checked_on": "2026-10-16",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020909701_1_1_260611_050924-w1920-h1280",
+      "price_verification_note": "Guide text and earlier numeric bounds disagreed by >35% (24 Oct 2026 audit); re-read the listing page",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-11-22",
+      "prior_price_text": "$1.07m"
     },
     {
       "address": "2H Wentworth Park Road",
@@ -545,10 +471,10 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "last_seen": "2026-11-22",
+      "change_flag": "PRICE_CHANGED",
       "days_on_market": 1,
-      "cover_image": "https://rimh2.domainstatic.com.au/rdz-q4zhuqfoHJk2dXEgBcduXxs=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2016827031_1_1_260622_124345-w3240-h2160",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2016827031_1_1_260622_124345-w3240-h2160",
       "beds": 2,
       "baths": 2,
       "parking": 1,
@@ -573,18 +499,20 @@
       ],
       "lat": -33.915632,
       "lon": 151.1995559,
-      "status_checked_on": "2026-10-24",
-      "price_guide_text": "$1,170,000",
+      "status_checked_on": "2026-11-22",
+      "price_guide_text": "$1,170,000 - $1,200,000",
       "price_min": 1170000,
-      "price_max": 1170000,
+      "price_max": 1200000,
       "internal_m2": 102,
       "land_m2": 102,
-      "area_basis": "manual: floor plan / agent (drawer)",
-      "area_checked_on": "2026-10-12",
+      "area_basis": "page data: building/floor area; page data: land area",
+      "area_checked_on": "2026-11-22",
       "status": "",
       "note": "",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-11-22",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "prior_price_text": "$1,170,000"
     },
     {
       "address": "186C Victoria Road",
@@ -645,7 +573,7 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-11-22",
       "beds": 1,
       "baths": 1,
       "parking": 1,
@@ -653,14 +581,13 @@
       "days_on_market": 68,
       "lat": -33.909076,
       "lon": 151.1640187,
-      "status_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/1005-186c-victoria-road-marrickville-nsw-2204-2021121768",
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/123-186c-victoria-road-marrickville-nsw-2204-2020995791",
       "land_m2": 112,
       "area_basis": "page data: land area",
       "property_type": "apartment / unit / flat",
       "area_checked_on": "2026-10-12",
       "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1,
       "image_cleared_on": "2026-10-24",
       "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
       "cover_image": "https://rimh2.domainstatic.com.au/d6_6DPcAV9vLLFLtZl8nXgJodHc=/filters:format(png):quality(80):no_upscale()/2021121768_1_1_261002_030756-w4134-h2756",
@@ -672,19 +599,19 @@
       "address": "208/1-9 Pyrmont Bridge Road",
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "last_seen": "2026-11-22",
+      "change_flag": "PRICE_CHANGED",
       "open_homes": [],
       "postcode": "2009",
-      "cover_image": "https://rimh2.domainstatic.com.au/HznK2uqNQVF1DqAwutbdCt6xneQ=/fit-in/1920x1080/filters:format(webp):quality(85):no_upscale()/2020693826_5_1_260319_012018-w6048-h4032",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020693826_5_1_260319_012018-w6048-h4032",
       "beds": 2,
       "baths": 2,
       "parking": 1,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionNorth-West Facing Apartment with Iconic Sunset Views-Currently Leased at $1,100.00 per week until May 2027Bathed in natural light, this north-west facing two-bedroom apartment delivers an exceptional inner-city lifestyle in one of Pyrmont's most desirable pockets. Enjoy striking sunset views over the Anzac Bridge, complemented by a vibrant surrounds of waterfront parks, chic cafés and renowned dining, all just moments from your door.• Light-filled interiors enhanced by quality finishes and timelessRead more",
-      "price_guide_text": "$1,100,000",
+      "price_guide_text": "$1,100,000 - $1,150,000",
       "price_min": 1100000,
-      "price_max": 1100000,
+      "price_max": 1150000,
       "source": "domain",
       "lat": -33.8701982,
       "lon": 151.1972076,
@@ -741,27 +668,29 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-11-22",
       "flag_cleared_on": "2026-10-01",
       "internal_m2": 86,
       "land_m2": 107,
       "area_basis": "page data: building/floor area; page data: land area",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-11-22",
       "status": "rejected",
       "note": "",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-11-22",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "prior_price_text": "$1,100,000"
     },
     {
       "url": "https://www.domain.com.au/509-1-wattle-crescent-pyrmont-nsw-2009-2020804907",
       "address": "509/1 Wattle Crescent",
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "open_homes": [],
       "postcode": "2009",
-      "cover_image": "https://rimh2.domainstatic.com.au/FEjNaRxzXAMCEQN2wP-RqJtUNx4=/1680x720/filters:format(webp):quality(85)/2020804907_1_1_260430_112723-w3500-h2334",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020804907_3_1_260430_112723-w3500-h2334",
       "beds": 2,
       "baths": 2,
       "parking": 1,
@@ -822,14 +751,14 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-10-24",
+      "status_checked_on": "2026-11-22",
       "flag_cleared_on": "2026-10-01",
       "status": "rejected",
       "note": "",
       "internal_m2": 78,
       "land_m2": 97,
       "area_basis": "page data: building/floor area; page data: land area",
-      "area_checked_on": "2026-10-12",
+      "area_checked_on": "2026-11-22",
       "strata_pq": 1522.0,
       "council_pq": 308.0,
       "water_pq": 174.0,
@@ -844,25 +773,26 @@
         "council",
         "water"
       ],
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "outgoings_checked_on": "2026-11-22",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22"
     },
     {
       "url": "https://www.domain.com.au/316-1-wattle-crescent-pyrmont-nsw-2009-2020910983",
       "address": "316/1 Wattle Crescent",
       "suburb": "Pyrmont",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
+      "last_seen": "2026-11-22",
+      "change_flag": "PRICE_CHANGED",
       "open_homes": [],
       "postcode": "2009",
-      "cover_image": "https://rimh2.domainstatic.com.au/sG6GvZ1q_nsg2w2R9rqrpLdueTs=/1680x720/filters:format(webp):quality(85)/2020910983_1_1_260611_094507-w1600-h1067",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020910983_1_1_260611_094507-w1600-h1067",
       "beds": 2,
       "baths": 2,
       "parking": 1,
       "property_type": "apartment / unit / flat",
       "description": "Property DescriptionLifestyle City Living Opposite Fish MarketThis stunning 2-bedroom, 2-bathroom apartment is the perfect urban oasis for those looking for a modern and convenient city lifestyle. It is at the heart of everything and is opposite to Sydney Fish Market and Wentworth Park, over viewing the sparkling waters of Black wattle Bay and Anzac bridge. Short walk to Darling Harbour, Casino, and just minute stroll to light rail station.Located in aRead more",
-      "price_guide_text": "$1.22m",
+      "price_guide_text": "$1.2175m",
       "source": "domain",
       "lat": -33.8739413,
       "lon": 151.1931929,
@@ -915,17 +845,19 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-10-24",
-      "price_min": 1220000,
-      "price_max": 1220000,
+      "status_checked_on": "2026-11-22",
+      "price_min": 1217500,
+      "price_max": 1217500,
       "flag_cleared_on": "2026-10-01",
       "status": "rejected",
       "note": "",
       "internal_m2": 78,
       "area_basis": "page data: building/floor area",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "prior_price_text": "$1.22m"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151105324",
@@ -1030,110 +962,6 @@
       "outgoings_checked_on": "2026-10-24",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24"
-    },
-    {
-      "url": "https://www.domain.com.au/601-320-harris-street-pyrmont-nsw-2009-2020727214",
-      "address": "601/320 Harris Street",
-      "suburb": "Pyrmont",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNCHANGED",
-      "open_homes": [],
-      "postcode": "2009",
-      "cover_image": "https://rimh2.domainstatic.com.au/aFpt87MhQS1wB1BTUrLhpXjrA1g=/1680x720/filters:format(webp):quality(85)/2020727214_1_1_260401_041543-w3500-h2335",
-      "beds": 3,
-      "baths": 3,
-      "parking": 2,
-      "property_type": "apartment / unit / flat",
-      "description": "Property DescriptionStylish Top-Floor Living in M-CentralPositioned in the highly sought-after M-Central development, this stunning three-bedroom apartment delivers a perfect blend of luxury, space, and convenience. Set on the top floor, it enjoys expansive district views, abundant natural light, and exceptional indoor-outdoor living. The striking open-plan living area flows seamlessly onto an expansive sun-drenched entertainer's courtyard-ideal forRead more",
-      "features": [
-        "Air conditioning",
-        "Floorboards",
-        "Intercom",
-        "Built in wardrobes",
-        "Internal Laundry",
-        "Pets Allowed",
-        "Cable or Satellite",
-        "Gas",
-        "Broadband internet access",
-        "Bath",
-        "Dishwasher",
-        "Study",
-        "Secure Parking",
-        "Balcony / Deck",
-        "Garden / Courtyard",
-        "City Views"
-      ],
-      "price_guide_text": "$1,650,000",
-      "price_min": 1650000,
-      "price_max": 1650000,
-      "source": "domain",
-      "lat": -33.8735402,
-      "lon": 151.1965295,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 42,
-          "supermarket": 46,
-          "pool": 475,
-          "park": 247,
-          "restaurants": 53
-        },
-        "geocoded": true
-      },
-      "outlook": {
-        "class": "elevated_district",
-        "basis": "Auto-detected from description"
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": false,
-        "bedrooms": true,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "accessibility"
-        ],
-        "unverified": [
-          "floor_area"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 63,
-        "leading": "outlook: elevated_district",
-        "components": {
-          "outlook": 19.5,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 8.8,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "status": "",
-      "note": "",
-      "accessibility": {
-        "step_free": false,
-        "lift": null
-      },
-      "status_checked_on": "2026-10-24",
-      "flag_cleared_on": "2026-10-01",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "status_check_failures": 1
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-glebe-150693264",
@@ -1550,7 +1378,7 @@
       "change_flag": "UNDER_OFFER",
       "open_homes": [],
       "postcode": "2037",
-      "cover_image": "https://i2.au.reastatic.net/310x175/2fdd7559d0b5ef6dad3a93a8f1b9a2416c83b9ea6ef0bcf21b33ae479671e5cc/image.jpg",
+      "cover_image": "https://i2.au.reastatic.net/800x600/c5b3934fa480cde1911ca521f2e12fe5848b67f1656a2dbc15f39edeff73ac31/image.jpg",
       "beds": 2,
       "baths": 2,
       "parking": 1,
@@ -1612,7 +1440,7 @@
         "warehouse_character": false
       },
       "warehouse_character": false,
-      "status_checked_on": "2026-09-29",
+      "status_checked_on": "2026-11-22",
       "departed_on": "2026-09-29",
       "status_source": "sweep_check",
       "status_basis": "chrome: Under offer",
@@ -1629,7 +1457,11 @@
         "strata",
         "council",
         "water"
-      ]
+      ],
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22"
     },
     {
       "url": "https://www.realestate.com.au/property-apartment-nsw-pyrmont-151471744",
@@ -1956,23 +1788,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNDER_OFFER",
+      "last_seen": "2026-11-22",
+      "change_flag": "UNCHANGED",
       "days_on_market": 2,
-      "status_checked_on": "2026-10-16",
+      "status_checked_on": "2026-11-22",
       "resolved_url": "https://www.domain.com.au/11-47-wharf-road-birchgrove-nsw-2041-2020953012",
       "beds": 0,
       "baths": 1,
       "property_type": "studio",
-      "area_checked_on": "2026-10-16",
-      "outgoings_checked_on": "2026-10-16",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020953012_1_1_260727_020323-w1200-h800",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16",
-      "departed_on": "2026-10-16",
+      "image_checked_on": "2026-11-22",
       "status_source": "sweep_check",
-      "status_basis": "chrome: Under Contract",
-      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f47+wharf+road+birchgrove"
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no area figure found on the page",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=11%2f47+wharf+road+birchgrove",
+      "relisted_on": "2026-11-22"
     },
     {
       "address": "3/8 Dunblane Street",
@@ -2480,21 +2312,24 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNDER_OFFER",
+      "last_seen": "2026-11-22",
+      "change_flag": "UNCHANGED",
       "days_on_market": 1,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-11-22",
       "resolved_url": "https://www.domain.com.au/99-percival-road-stanmore-nsw-2048-2020977602",
       "land_m2": 198,
       "area_basis": "page data: land area",
       "beds": 4,
       "baths": 2,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "departed_on": "2026-10-12",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
       "status_source": "sweep_check",
-      "status_basis": "chrome: UNDER OFFER"
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: page data: land area",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020977602_1_1_260707_040906-w1246-h848",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "relisted_on": "2026-11-22"
     },
     {
       "address": "79 Marian Street",
@@ -2641,74 +2476,6 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020541315_5_1_260120_092953-w1600-h1067",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16"
-    },
-    {
-      "address": "25/124-126 Parramatta Road",
-      "suburb": "Camperdown",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=25%2F124-126+parramatta+road+camperdown",
-      "source": "domain_search",
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 57,
-          "supermarket": 99,
-          "pool": 110,
-          "park": 75,
-          "restaurants": 49
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-07-25",
-      "last_seen": "2026-07-25",
-      "price_guide_text": "$1,180,000",
-      "price_min": 1180000,
-      "price_max": 1180000,
-      "change_flag": "UNDER_OFFER",
-      "days_on_market": 0,
-      "departed_on": "2026-07-25",
-      "status_source": "email_alert",
-      "status_basis": "alert email: [REDIRECTED EMAIL:] Home Alert for Pyrmont NSW 2009, Glebe NSW 2037, Balmain NSW",
-      "lat": -33.8861336,
-      "lon": 151.1781408
     },
     {
       "address": "130 Chapel Street",
@@ -3151,22 +2918,25 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNDER_OFFER",
+      "last_seen": "2026-11-22",
+      "change_flag": "UNCHANGED",
       "days_on_market": 0,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-11-22",
       "resolved_url": "https://www.domain.com.au/103-383-darling-street-balmain-nsw-2041-2021042393",
       "internal_m2": 70,
       "area_basis": "page data: building/floor area",
       "beds": 1,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "departed_on": "2026-10-12",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
       "status_source": "sweep_check",
-      "status_basis": "chrome: UNDER OFFER",
-      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=103%2f383+darling+street+balmain"
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 70 m² internal",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=103%2f383+darling+street+balmain",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021042393_1_1_260803_033012-w4500-h3000",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "relisted_on": "2026-11-22"
     },
     {
       "address": "16/793-799 New Canterbury Road",
@@ -3317,92 +3087,6 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021126841_1_1_260903_055357-w2560-h1708",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16"
-    },
-    {
-      "address": "50/274 Botany Road",
-      "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50/274+botany+road+alexandria",
-      "source": "domain",
-      "lat": -33.9034127,
-      "lon": 151.2018459,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 36,
-          "supermarket": 210,
-          "pool": 92,
-          "park": 238,
-          "restaurants": 30
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": false,
-        "bedrooms": true,
-        "floor_area": true,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "accessibility"
-        ],
-        "unverified": [],
-        "pass": false
-      },
-      "tier2": {
-        "score": 53,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 20.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNDER_OFFER",
-      "days_on_market": 2,
-      "status_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/50-274-botany-road-alexandria-nsw-2015-2021188911",
-      "internal_m2": 151,
-      "area_basis": "page data: building/floor area",
-      "beds": 3,
-      "baths": 2,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-24",
-      "outgoings_checked_on": "2026-10-24",
-      "parking": 1,
-      "price_guide_text": "Guide $1,200,000",
-      "price_min": 1200000,
-      "price_max": 1200000,
-      "status": "",
-      "note": "",
-      "accessibility": {
-        "step_free": false,
-        "lift": null
-      },
-      "image_cleared_on": "2026-10-24",
-      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021188911_1_1_260927_112541-w4134-h2756",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-24",
-      "departed_on": "2026-10-24",
-      "status_source": "sweep_check",
-      "status_basis": "chrome: UNDER OFFER"
     },
     {
       "address": "104/551 Darling Street",
@@ -3804,87 +3488,6 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/fj60sdj4t14k2_1_0_260728_020409-w2600-h1731",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16"
-    },
-    {
-      "address": "28/525 Illawarra Road",
-      "suburb": "Marrickville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=28%2F525+illawarra+road+marrickville",
-      "source": "domain_search",
-      "price_guide_text": "$1,550,000",
-      "price_min": 1550000,
-      "price_max": 1550000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 19,
-          "supermarket": 462,
-          "pool": 1075,
-          "park": 97,
-          "restaurants": 126
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": false,
-        "floor_area": false,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [
-          "bedrooms",
-          "floor_area"
-        ],
-        "unverified": [
-          "accessibility"
-        ],
-        "pass": false
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 7.5,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-09-29",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNDER_OFFER",
-      "days_on_market": 2,
-      "lat": -33.9189074,
-      "lon": 151.1462165,
-      "status_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/28-525-illawarra-road-marrickville-nsw-2204-2021195095",
-      "internal_m2": 86,
-      "area_basis": "page data: building/floor area",
-      "beds": 1,
-      "baths": 1,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-16",
-      "outgoings_checked_on": "2026-10-16",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021195095_1_1_260929_074953-w2048-h1365",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-16",
-      "departed_on": "2026-10-16",
-      "status_source": "sweep_check",
-      "status_basis": "chrome: UNDER OFFER",
-      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=28%2f525+illawarra+road+marrickville"
     },
     {
       "address": "12/11 Arthur St",
@@ -4954,11 +4557,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-04",
-      "change_flag": "UNDER_OFFER",
+      "last_seen": "2026-11-22",
+      "change_flag": "UNCHANGED",
       "lat": -33.9034257,
       "lon": 151.1475564,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-11-22",
       "resolved_url": "https://www.domain.com.au/40-pile-street-dulwich-hill-nsw-2203-2021172978",
       "flag_cleared_on": "2026-10-01",
       "land_m2": 265,
@@ -4966,11 +4569,14 @@
       "beds": 3,
       "baths": 1,
       "property_type": "house",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "departed_on": "2026-10-12",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
       "status_source": "sweep_check",
-      "status_basis": "chrome: UNDER OFFER"
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: page data: land area",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021172978_3_1_260921_064642-w6020-h4032",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "relisted_on": "2026-11-22"
     },
     {
       "address": "74a Burfitt Street",
@@ -6580,11 +6186,11 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-10-03",
-      "last_seen": "2026-10-04",
-      "change_flag": "UNDER_OFFER",
+      "last_seen": "2026-11-22",
+      "change_flag": "UNCHANGED",
       "lat": -33.9076545,
       "lon": 151.2085576,
-      "status_checked_on": "2026-10-12",
+      "status_checked_on": "2026-11-22",
       "resolved_url": "https://www.domain.com.au/318-17-grandstand-parade-zetland-nsw-2017-2021205797",
       "flag_cleared_on": "2026-10-12",
       "internal_m2": 86,
@@ -6592,12 +6198,22 @@
       "beds": 2,
       "baths": 1,
       "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "departed_on": "2026-10-12",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
       "status_source": "sweep_check",
-      "status_basis": "chrome: UNDER OFFER",
-      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=318%2f17+grandstand+parade+zetland"
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page: 86 m² internal",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=318%2f17+grandstand+parade+zetland",
+      "outgoings_unstated": {
+        "strata": 1483.0
+      },
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Strata $1483 PQWater $227 PQCoun",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021205797_1_1_261002_015449-w1600-h1200",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "relisted_on": "2026-11-22"
     },
     {
       "address": "33/3 Williams Parade",
@@ -7058,80 +6674,6 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021219983_1_1_261007_071000-w5798-h3867",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16"
-    },
-    {
-      "address": "9/14 Marlborough Street",
-      "suburb": "Drummoyne",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F14+marlborough+street+drummoyne",
-      "source": "domain_search",
-      "price_guide_text": "$820,000",
-      "price_min": 820000,
-      "price_max": 820000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 57,
-          "supermarket": 110,
-          "pool": 748,
-          "park": 155,
-          "restaurants": 44
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "floor_area": true,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "accessibility"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 50,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 17.1,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-10-12",
-      "last_seen": "2026-10-12",
-      "change_flag": "UNDER_OFFER",
-      "lat": -33.8506865,
-      "lon": 151.153026,
-      "status_checked_on": "2026-10-12",
-      "internal_m2": 125,
-      "area_basis": "page data: building/floor area",
-      "beds": 2,
-      "baths": 1,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-12",
-      "outgoings_checked_on": "2026-10-12",
-      "departed_on": "2026-10-12",
-      "status_source": "sweep_check",
-      "status_basis": "chrome: Under Contract",
-      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f14+marlborough+street+drummoyne",
-      "resolved_url": "https://www.domain.com.au/9-14-marlborough-street-drummoyne-nsw-2047-2021227565"
     },
     {
       "address": "612/5 Joynton Avenue",
@@ -16261,13 +15803,19 @@
       "price_min": 1200000,
       "price_max": 1200000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 64,
+          "supermarket": 438,
+          "pool": 1112,
+          "park": 74,
+          "restaurants": 252
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -16275,8 +15823,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -16284,23 +15832,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -16309,7 +15855,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "lat": -33.892154,
+      "lon": 151.1684494
     },
     {
       "address": "1308/20 Gadigal Avenue",
@@ -16320,13 +15868,19 @@
       "price_min": 1800000,
       "price_max": 1900000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 71,
+          "supermarket": 57,
+          "pool": 309,
+          "park": 192,
+          "restaurants": 78
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -16334,8 +15888,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -16343,23 +15897,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -16368,7 +15920,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "lat": -33.9043033,
+      "lon": 151.2131631
     },
     {
       "address": "11/40 Arthur Street",
@@ -16379,13 +15933,19 @@
       "price_min": 800000,
       "price_max": 800000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 83,
+          "supermarket": 408,
+          "pool": 397,
+          "park": 213,
+          "restaurants": 129
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -16393,8 +15953,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -16402,23 +15962,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -16427,7 +15985,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "lat": -33.8568073,
+      "lon": 151.1740462
     },
     {
       "address": "106/180 Livingstone Road",
@@ -16438,13 +15998,19 @@
       "price_min": 650000,
       "price_max": 650000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 127,
+          "supermarket": 432,
+          "pool": 193,
+          "park": 151,
+          "restaurants": 105
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -16452,8 +16018,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -16461,23 +16027,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -16486,7 +16050,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "lat": -33.9078053,
+      "lon": 151.1531014
     },
     {
       "address": "39/1 Linthorpe Street",
@@ -16548,8 +16114,8 @@
       "warehouse_character": false,
       "first_seen": "2026-11-22",
       "last_seen": "2026-11-22",
-      "change_flag": "NEW",
-      "flag_sweeps": 1
+      "change_flag": "UNCHANGED",
+      "flag_cleared_on": "2026-11-22"
     }
   ]
 }
