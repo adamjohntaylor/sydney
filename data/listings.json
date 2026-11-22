@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 212,
-    "tier1_pass": 163,
+    "total": 211,
+    "tier1_pass": 162,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 67
+    "withdrawn": 68
   },
   "listings": [
     {
@@ -14169,7 +14169,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "status_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/123-addison-road-marrickville-nsw-2204-2021011624",
       "flag_cleared_on": "2026-10-01",
@@ -14193,7 +14193,9 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021011624_1_1_260721_042007-w3754-h2504",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "175 Denison Street",
