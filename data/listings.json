@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 216,
-    "tier1_pass": 169,
+    "total": 215,
+    "tier1_pass": 168,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 64
+    "withdrawn": 65
   },
   "listings": [
     {
@@ -31504,7 +31504,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-24",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "lat": -33.9044321,
       "lon": 151.2134108,
       "status_checked_on": "2026-10-24",
@@ -31519,7 +31519,9 @@
       "image_basis": "og:image",
       "image_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/2012-20-gadigal-avenue-zetland-nsw-2017-2021152839",
-      "flag_cleared_on": "2026-10-24"
+      "flag_cleared_on": "2026-10-24",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "9/37 Iredale Street",
