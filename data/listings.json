@@ -6,8 +6,8 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 214,
-    "tier1_pass": 166,
+    "total": 213,
+    "tier1_pass": 165,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
@@ -11384,78 +11384,6 @@
       "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2017-04-19, before first seen 2026-07-02)",
       "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=4%2f65-67+carlisle+street+leichhardt",
       "resolved_url": "https://www.domain.com.au/4-65-67-carlisle-street-leichhardt-nsw-2040-2013420706"
-    },
-    {
-      "address": "209/7 Church Street",
-      "suburb": "Drummoyne",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=209%2F7+church+street+drummoyne",
-      "source": "domain_search",
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 20,
-          "supermarket": 51,
-          "pool": 249,
-          "park": 243,
-          "restaurants": 270
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "floor_area": true,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "accessibility"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 48,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 15.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-07-03",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "lat": -33.8541473,
-      "lon": 151.15702,
-      "status_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/209-7-church-street-drummoyne-nsw-2047-2020966524",
-      "flag_cleared_on": "2026-10-01",
-      "internal_m2": 112,
-      "area_basis": "page data: building/floor area",
-      "beds": 2,
-      "baths": 2,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-16",
-      "outgoings_checked_on": "2026-10-16",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020966524_1_1_260702_060524-w8192-h5464",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
     },
     {
       "address": "204/1 Brightwell Lane",
