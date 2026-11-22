@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 208,
-    "tier1_pass": 159,
+    "total": 207,
+    "tier1_pass": 157,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 71
+    "withdrawn": 72
   },
   "listings": [
     {
@@ -21351,20 +21351,21 @@
       "tier1": {
         "budget": null,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
+        "fails": [
+          "accessibility"
+        ],
         "unverified": [
           "budget",
-          "accessibility",
           "floor_area"
         ],
-        "pass": true
+        "pass": false
       },
       "tier2": {
         "score": 41,
@@ -21399,7 +21400,13 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021196892_1_1_261012_025448-w1536-h1024",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "222 Corunna Road",
@@ -22101,7 +22108,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-02",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "flag_cleared_on": "2026-10-02",
       "status_checked_on": "2026-10-24",
       "resolved_url": "https://www.domain.com.au/15-rowntree-street-balmain-nsw-2041-2021204127",
@@ -22114,7 +22121,9 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021204127_1_1_261001_071348-w4500-h3000",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "100 Silver Street",
