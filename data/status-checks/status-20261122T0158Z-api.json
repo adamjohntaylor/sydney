@@ -1,0 +1,180 @@
+{
+  "generated_on": "2026-11-22",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2F52+nelson+street+annandale",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=7%2f52+nelson+street+annandale",
+      "resolved_url": "https://www.domain.com.au/7-52-nelson-street-annandale-nsw-2038-2021262546",
+      "address": "7/52 Nelson Street",
+      "suburb": "Annandale"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14+waterloo+street+rozelle",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/14-waterloo-street-rozelle-nsw-2039-2021262476",
+      "address": "14 Waterloo Street",
+      "suburb": "Rozelle"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2F753-769+new+canterbury+road+dulwich+hill",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=23%2f753-769+new+canterbury+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/23-753-769-new-canterbury-road-dulwich-hill-nsw-2203-2021262276",
+      "address": "23/753-769 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=71+cobar+street+dulwich+hill",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-11-20",
+      "resolved_url": "https://www.domain.com.au/71-cobar-street-dulwich-hill-nsw-2203-2021262264",
+      "sold_date": "2026-11-20",
+      "address": "71 Cobar Street",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=35+marian+street+enmore",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-11-14",
+      "resolved_url": "https://www.domain.com.au/35-marian-street-enmore-nsw-2042-2021261787",
+      "sold_date": "2026-11-14",
+      "address": "35 Marian Street",
+      "suburb": "Enmore"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=143+lilyfield+road+lilyfield",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/143-lilyfield-road-lilyfield-nsw-2040-2021210824",
+      "address": "143 Lilyfield Road",
+      "suburb": "Lilyfield"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2F37+iredale+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f37+iredale+street+newtown",
+      "resolved_url": "https://www.domain.com.au/9-37-iredale-street-newtown-nsw-2042-2021261809",
+      "address": "9/37 Iredale Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=66%2F155+missenden+road+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=66%2f155+missenden+road+newtown",
+      "resolved_url": "https://www.domain.com.au/66-155-missenden-road-newtown-nsw-2042-2021261549",
+      "address": "66/155 Missenden Road",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2F9+trade+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2f9+trade+street+newtown",
+      "resolved_url": "https://www.domain.com.au/10-9-trade-street-newtown-nsw-2042-2021259319",
+      "address": "10/9 Trade Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12+queen+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/12-queen-street-marrickville-nsw-2204-2021267150",
+      "address": "12 Queen Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10+bourne+street+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/10-bourne-street-marrickville-nsw-2204-2021267064",
+      "address": "10 Bourne Street",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2F771-777+new+canterbury+road+dulwich+hill",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-11-06",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=5%2f771-777+new+canterbury+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/5-771-777-new-canterbury-road-dulwich-hill-nsw-2203-2021266247",
+      "sold_date": "2026-11-06",
+      "address": "5/771-777 New Canterbury Road",
+      "suburb": "Dulwich Hill"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=52+talfourd+street+glebe",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/52-talfourd-street-glebe-nsw-2037-2021265834",
+      "address": "52 Talfourd Street",
+      "suburb": "Glebe"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2F63+warren+road+marrickville",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-11-04",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=14%2f63+warren+road+marrickville",
+      "resolved_url": "https://www.domain.com.au/14-63-warren-road-marrickville-nsw-2204-2021265813",
+      "sold_date": "2026-11-04",
+      "address": "14/63 Warren Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=110%2F10+pyrmont+bridge+road+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=110%2f10+pyrmont+bridge+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/110-10-pyrmont-bridge-road-camperdown-nsw-2050-2021265626",
+      "address": "110/10 Pyrmont Bridge Road",
+      "suburb": "Camperdown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=35a+upward+street+leichhardt",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-11-12",
+      "resolved_url": "https://www.domain.com.au/201-35a-upward-street-leichhardt-nsw-2040-2021265591",
+      "sold_date": "2026-11-12",
+      "address": "35A Upward Street",
+      "suburb": "Leichhardt"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=421+king+street+newtown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/421-king-street-newtown-nsw-2042-2021264322",
+      "address": "421 King Street",
+      "suburb": "Newtown"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=33+illawarra+road+marrickville",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address",
+      "resolved_url": "https://www.domain.com.au/33-illawarra-road-marrickville-nsw-2204-2021179060",
+      "address": "33 Illawarra Road",
+      "suburb": "Marrickville"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=81+garden+street+alexandria",
+      "listing_status": "sold",
+      "status_basis": "chrome: Domain sold results list the address, sold 2026-10-27",
+      "resolved_url": "https://www.domain.com.au/81-garden-street-alexandria-nsw-2015-2020908381",
+      "sold_date": "2026-10-27",
+      "address": "81 Garden Street",
+      "suburb": "Alexandria"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=94+denison+street+camperdown",
+      "listing_status": "withdrawn",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2025-11-09, before first seen 2026-10-24)",
+      "resolved_url": "https://www.domain.com.au/94-denison-street-camperdown-nsw-2050-2020380679",
+      "address": "94 Denison Street",
+      "suburb": "Camperdown"
+    }
+  ]
+}
