@@ -1,7 +1,7 @@
 {
   "about": "Listings taken off the dashboard because a sweep found them sold or no longer listed. Archive + tombstones; never loaded by index.html. Restore one with: python scripts/sweep.py --restore \"<address or url>\"",
   "updated_on": "2026-11-22",
-  "count": 274,
+  "count": 275,
   "removed": [
     {
       "url": "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935",
@@ -20851,6 +20851,84 @@
       "sold_date": "2026-10-13",
       "removed_on": "2026-11-22",
       "removed_as": "SOLD"
+    },
+    {
+      "address": "56/22 Buchanan Street",
+      "suburb": "Balmain",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=56%2F22+buchanan+street+balmain",
+      "source": "domain_search",
+      "lat": -33.8631922,
+      "lon": 151.1797881,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 306,
+          "supermarket": 522,
+          "pool": 246,
+          "park": 87,
+          "restaurants": 599
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": true,
+        "accessibility": null,
+        "bedrooms": true,
+        "floor_area": true,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "accessibility"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 47,
+        "leading": "living-area scale",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 13.9,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-10-24",
+      "change_flag": "WITHDRAWN",
+      "days_on_market": 0,
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "internal_m2": 109,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-10-16",
+      "outgoings_checked_on": "2026-10-16",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021073631_1_1_261009_042143-w4592-h3062",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-11-22",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=56%2f22+buchanan+street+balmain",
+      "removed_on": "2026-11-22",
+      "removed_as": "WITHDRAWN"
     }
   ]
 }
