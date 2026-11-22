@@ -1,0 +1,24 @@
+{
+  "generated_on": "2026-11-22",
+  "source": "/api/apply-status",
+  "checks": [
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F5+joynton+avenue+zetland",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f5+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/404-5-joynton-avenue-zetland-nsw-2017-2021205065",
+      "address": "404/5 Joynton Avenue",
+      "suburb": "Zetland"
+    },
+    {
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2F1+missenden+road+camperdown",
+      "listing_status": "on_market",
+      "status_basis": "chrome: 1 for-sale result(s) for the address; listing page read for area: no report",
+      "final_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=404%2f1+missenden+road+camperdown",
+      "resolved_url": "https://www.domain.com.au/404-1-missenden-road-camperdown-nsw-2050-2021342737",
+      "address": "404/1 Missenden Road",
+      "suburb": "Camperdown"
+    }
+  ]
+}
