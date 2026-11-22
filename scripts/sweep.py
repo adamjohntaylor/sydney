@@ -148,7 +148,9 @@ WITHDRAWN_EVIDENCE = ("withdrawn", "not_found", "removed", "redirected", "no_lon
 INCONCLUSIVE = ("unknown", "error", "blocked", "captcha", "timeout", "")
 
 DEFAULT_WORKLIST_CAP = 40      # pages per sweep
-DEFAULT_RECHECK_DAYS = 7       # don't re-read a page verified this recently
+DEFAULT_RECHECK_DAYS = 2       # don't re-read a page verified this recently. 2 (was 7 until
+                               # 22 Nov 2026) so EVERY sweep (Tue/Fri, 3-4 days apart) re-reads
+                               # every tracked listing, while a same-day second Refresh does not.
 MAX_INCONCLUSIVE = 3           # after this many failed reads, flag needs_manual_check
 
 
@@ -182,6 +184,150 @@ def _days_since(date_str, today):
     return (t - d).days
 
 
+# ---------------------------------------------------------------------------
+# Retirement of departed listings (added 22 Nov 2026)
+#
+# Adam's rule: once a sweep finds a listing is no longer "there" on the
+# portal - the for-sale search answers "No exact matches", the listing page
+# is dead, or the page says Sold - the listing comes OFF the dashboard
+# altogether. SOLD and WITHDRAWN records are therefore moved out of
+# listings.json into data/removed.json (an archive the dashboard never
+# loads) at every point where listings.json is written. UNDER_OFFER stays:
+# that listing is still on the portal and the deal can fall through.
+#
+# The archive doubles as a tombstone ledger so the alert-email leg cannot
+# re-inject a just-removed listing as NEW (alerts can be re-served for a few
+# days): an incoming alert record matching a tombstone is dropped for
+# RETIRE_BLOCK_DAYS after removal (always, when the numeric listing id is the
+# same - a listing id never comes back to market). After that window a fresh
+# alert for the address is a new campaign and enters as NEW. An explicit
+# on-market page read (bookmarklet click on the live page) re-adds at once.
+# ---------------------------------------------------------------------------
+
+RETIRE_FLAGS = ("SOLD", "WITHDRAWN")
+REMOVED_PATH = os.path.join(DATA, "removed.json")
+RETIRE_BLOCK_DAYS = {"SOLD": 30, "WITHDRAWN": 7}
+
+
+def load_removed(path=None):
+    """The archived (retired) listing records, oldest first. [] if none."""
+    path = path or REMOVED_PATH
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            data = json.loads(fh.read())
+    except (ValueError, OSError):
+        return []
+    return data.get("removed", []) if isinstance(data, dict) else list(data)
+
+
+def _write_removed(removed, today, path=None):
+    path = path or REMOVED_PATH
+    payload = {
+        "about": ("Listings taken off the dashboard because a sweep found them sold or no "
+                  "longer listed. Archive + tombstones; never loaded by index.html. "
+                  "Restore one with: python scripts/sweep.py --restore \"<address or url>\""),
+        "updated_on": today,
+        "count": len(removed),
+        "removed": removed,
+    }
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, indent=2, ensure_ascii=False)
+    try:
+        os.replace(tmp, path)
+    except OSError:
+        # Some mounts refuse the rename-over; fall back to a direct write.
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(payload, fh, indent=2, ensure_ascii=False)
+
+
+def retire_departed(listings, today, path=None):
+    """Split `listings` into (kept, retired): every SOLD / WITHDRAWN record is
+    appended to the removed-listings archive (full record + removed_on /
+    removed_as) and dropped from the returned `kept` list. If the archive
+    cannot be written nothing is dropped - a record is never lost.
+    Call this immediately before build_counts / writing listings.json."""
+    retired = [l for l in listings if l.get("change_flag") in RETIRE_FLAGS]
+    if not retired:
+        return listings, []
+    archive = load_removed(path)
+    index = {listing_key(r): i for i, r in enumerate(archive)}
+    for l in retired:
+        rec = dict(l)
+        rec["removed_on"] = today
+        rec["removed_as"] = l.get("change_flag")
+        k = listing_key(rec)
+        if k in index:
+            archive[index[k]] = rec          # re-retired: keep the newest record
+        else:
+            index[k] = len(archive)
+            archive.append(rec)
+    try:
+        _write_removed(archive, today, path)
+    except OSError as exc:
+        print(f"WARNING: could not write removed-listings archive ({exc}); "
+              f"{len(retired)} departed listing(s) left in place.", file=sys.stderr)
+        return listings, []
+    gone_ids = {id(l) for l in retired}
+    return [l for l in listings if id(l) not in gone_ids], retired
+
+
+def retired_block(rec, removed, today):
+    """Return the tombstone that blocks `rec` from (re-)entering the watchlist
+    via an alert email, or None. Same numeric listing id => always blocked;
+    same URL or address+suburb => blocked for RETIRE_BLOCK_DAYS after removal."""
+    if not removed:
+        return None
+    lid = _listing_id(rec.get("url"))
+    url = rec.get("url")
+    addr = _norm_addr(rec.get("address"), rec.get("suburb")) if rec.get("address") else None
+    for t in removed:
+        if lid and lid == _listing_id(t.get("url")):
+            return t
+        same = (url and url == t.get("url")) or (
+            addr and t.get("address") and addr == _norm_addr(t.get("address"), t.get("suburb")))
+        if not same:
+            continue
+        age = _days_since(t.get("removed_on"), today)
+        if age is None or age <= RETIRE_BLOCK_DAYS.get(t.get("removed_as"), 7):
+            return t
+    return None
+
+
+def restore_removed(query, listings, today, path=None):
+    """Move archived record(s) matching `query` (exact key/URL, or a
+    case-insensitive fragment of 'address, suburb') back onto the watchlist as
+    UNCHANGED. Returns the restored records. Refuses an ambiguous fragment."""
+    archive = load_removed(path)
+    q = (query or "").strip().lower()
+    hits = [r for r in archive if listing_key(r).lower() == q]
+    if not hits:
+        hits = [r for r in archive
+                if q and q in f"{r.get('address') or ''}, {r.get('suburb') or ''}".lower()]
+        if len(hits) > 1:
+            raise ValueError("ambiguous - matches: " + "; ".join(
+                f"{r.get('address')}, {r.get('suburb')}" for r in hits[:8]))
+    if not hits:
+        return []
+    have = {listing_key(l) for l in listings}
+    for r in hits:
+        archive.remove(r)
+        rec = dict(r)
+        for k in ("removed_on", "removed_as", "departed_on", "sold_date", "sold_url"):
+            rec.pop(k, None)
+        rec["change_flag"] = "UNCHANGED"
+        rec["relisted_on"] = today
+        rec["status_source"] = "manual"
+        rec["status_basis"] = "restored from removed.json"
+        rec["status_checked_on"] = today
+        if listing_key(rec) not in have:
+            listings.append(rec)
+    _write_removed(archive, today, path)
+    return hits
+
+
 def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
                           recheck_days=DEFAULT_RECHECK_DAYS, include_all=False):
     """Return [{key, url, address, suburb, reason, priority, last_seen}, ...]
@@ -201,7 +347,9 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
     instead of re-reading the same pages."""
     work = []
     for l in listings:
-        if l.get("change_flag") in GONE_FLAGS:
+        # UNDER_OFFER records ARE re-read (since 22 Nov 2026): that is how one
+        # that goes on to sell is found and taken off the dashboard.
+        if l.get("change_flag") in RETIRE_FLAGS:
             continue
         if not l.get("url"):
             continue
@@ -253,6 +401,7 @@ def build_status_worklist(listings, today, cap=DEFAULT_WORKLIST_CAP,
             "needs_area": needs_area,
             "needs_outgoings": needs_outgoings,
             "needs_image": needs_image,
+            "under_offer": l.get("change_flag") == "UNDER_OFFER",
             "property_type": l.get("property_type"),
         })
     work.sort(key=lambda w: (w["priority"], -(_days_since(w["last_seen"], today) or 10 ** 6)))
@@ -694,7 +843,7 @@ def age_change_flags(listings, today):
     return cleared
 
 
-def merge_incremental(new_scored, prior_listings, today):
+def merge_incremental(new_scored, prior_listings, today, removed=None):
     """Merge mode for email-alert ingestion (route A). Alert emails list only NEW
     matches, not the full current field, so we MUST NOT infer withdrawals from
     absence. We union the new listings onto the existing watchlist: add NEW ones,
@@ -708,10 +857,18 @@ def merge_incremental(new_scored, prior_listings, today):
     explicit listing_status='on_market' from a fresh bookmarklet page read (or
     a manual re-mark) revives it."""
     merged = {listing_key(l): l for l in prior_listings}
+    if removed is None:
+        removed = load_removed()
     stubs = []
     for l in new_scored:
         k = listing_key(l)
         old = merged.get(k)
+        if (old is None and not is_status_stub(l)
+                and (l.get("listing_status") or "").strip().lower() != "on_market"
+                and retired_block(l, removed, today) is not None):
+            # Taken off the dashboard as sold / no longer listed; a re-served
+            # alert email must not bring it back (see retire_departed).
+            continue
         if is_status_stub(l):
             # A status-only record (url + listing_status) from the sweep's
             # verification leg: route to apply_status_checks so it updates the
@@ -959,6 +1116,12 @@ def main(argv):
                          "Files dropped in data/status-checks/ are applied automatically.")
     ap.add_argument("--no-status-dir", action="store_true",
                     help="do not auto-apply pending files from data/status-checks/.")
+    ap.add_argument("--restore", metavar="QUERY",
+                    help="put a removed (sold / no-longer-listed) listing back on the "
+                         "watchlist from data/removed.json; QUERY is its URL or a fragment "
+                         "of 'address, suburb'.")
+    ap.add_argument("--list-removed", action="store_true",
+                    help="print the removed-listings archive (data/removed.json) and exit.")
     ap.add_argument("--probe", nargs="?", const=-1, type=int, metavar="N",
                     help="fetch the worklist pages (status_probe.py) and apply what they say; "
                          "N pages (default status_probe.DEFAULT_CAP).")
@@ -967,6 +1130,35 @@ def main(argv):
     syd = now_sydney()
     today = syd.date().isoformat()
     checks_dir = os.path.join(DATA, "status-checks")
+
+    if args.list_removed:
+        for r in load_removed():
+            print(f"{r.get('removed_on')}  {str(r.get('removed_as')).ljust(9)}  "
+                  f"{r.get('address') or '?'}, {r.get('suburb') or ''}  "
+                  f"[{r.get('status_basis') or r.get('status_source') or ''}]")
+        return 0
+
+    if args.restore:
+        with open(args.out, "r", encoding="utf-8") as fh:
+            data = json.loads(fh.read())
+        try:
+            hits = restore_removed(args.restore, data.setdefault("listings", []), today)
+        except ValueError as exc:
+            print(f"Not restored: {exc}", file=sys.stderr)
+            return 1
+        if not hits:
+            print("Not restored: nothing in data/removed.json matches.", file=sys.stderr)
+            return 1
+        data["counts"] = build_counts(data["listings"])
+        with open(args.out, "w", encoding="utf-8") as fh:
+            json.dump(data, fh, indent=2, ensure_ascii=False)
+        if not args.no_render:
+            with open(os.path.join(DASH, "..", "07-property-shortlist.md"), "w",
+                      encoding="utf-8") as fh:
+                fh.write(render_mod.render(data))
+        for r in hits:
+            print(f"Restored {r.get('address')}, {r.get('suburb')} (was {r.get('removed_as')}).")
+        return 0
 
     # --worklist: emit the verification worklist and stop.
     if args.worklist is not None:
@@ -1086,8 +1278,10 @@ def main(argv):
     active = [l for l in active if not is_empty_listing(l)]
     carried = [l for l in carried if not is_empty_listing(l)]
 
-    # (4) assemble + write
+    # (4) assemble + write. Sold / no-longer-listed stock comes off the
+    # dashboard altogether (archived to data/removed.json).
     all_listings = active + [c for c in carried if c.get("change_flag") in GONE_FLAGS]
+    all_listings, retired = retire_departed(all_listings, today)
     out = {
         "schema_version": 1,
         "generated_at": syd.astimezone(dt.timezone.utc).isoformat(),
@@ -1110,8 +1304,8 @@ def main(argv):
 
     c = out["counts"]
     print("Wrote " + args.out + " (" + str(c['total']) + " active, "
-          + str(c['tier1_pass']) + " Tier-1 pass; " + str(c['sold']) + " sold, "
-          + str(c['under_offer']) + " under offer, " + str(c['withdrawn']) + " withdrawn; "
+          + str(c['tier1_pass']) + " Tier-1 pass; " + str(c['under_offer']) + " under offer; "
+          + str(len(retired)) + " sold / no-longer-listed removed from the dashboard; "
           + str(status_changed) + " status change(s) from verification) and snapshot " + snap_name)
 
     # (5) regenerate 07

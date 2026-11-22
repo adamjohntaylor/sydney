@@ -695,10 +695,15 @@ def merge_new_listings(new_listings, dry_run=False):
         existing_by_addr = {}
 
     # Find truly new listings (check both URL and address+suburb)
+    import sweep as _sweep_ret
+    _removed = _sweep_ret.load_removed()
+    _today = dt.date.today().isoformat()
     truly_new = []
     for l in new_listings:
         url = l.get("url", "")
         addr_key = f"{l.get('address', '').lower()}|{l.get('suburb', '').lower()}"
+        if _sweep_ret.retired_block(l, _removed, _today) is not None:
+            continue  # taken off the dashboard as sold / no longer listed
 
         if url in existing_by_url:
             continue  # Already have this URL
@@ -815,6 +820,8 @@ def main(argv):
         applied, details = apply_departures(departures, data.get("listings", []))
         if applied:
             import sweep as sweep_mod
+            data["listings"], _retired = sweep_mod.retire_departed(
+                data.get("listings", []), dt.date.today().isoformat())
             data["counts"] = sweep_mod.build_counts(data.get("listings", []))
             with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)

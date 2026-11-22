@@ -44,7 +44,7 @@
       <button data-tab="all" class="tabBtn px-3 py-2 border-b-2 border-sky-400 text-white font-medium whitespace-nowrap">All candidates</button>
       <button data-tab="saturday" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">This Saturday's inspections</button>
       <button data-tab="auction" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Auction calendar</button>
-      <button data-tab="gone" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Sold / under offer / withdrawn</button>
+      <button data-tab="gone" class="tabBtn px-3 py-2 border-b-2 border-transparent text-slate-300 hover:text-white whitespace-nowrap">Under offer</button>
     </div>
   </div>
 </header>
@@ -178,7 +178,9 @@ const FLAG_STYLES = {
   UNDER_OFFER:"bg-orange-500 text-white",
   WITHDRAWN:"bg-slate-500 text-white", UNCHANGED:"bg-slate-200 text-slate-600"
 };
-// Flags meaning "off the market" - these listings live in the Withdrawn/sold tab.
+// Flags meaning "off the market". Since 22 Nov 2026 the server removes SOLD and
+// WITHDRAWN records from listings.json altogether (archived in data/removed.json),
+// so in practice only UNDER_OFFER reaches this page - shown in the Under offer tab.
 const GONE_FLAGS = ["SOLD","UNDER_OFFER","WITHDRAWN"];
 const T1_LABELS = {budget:"Budget &le;$2.2M", property_type:"Property type", accessibility:"Step-free / lift",
   bedrooms:"Bedrooms", floor_area:"Floor area &ge;100 m&sup2;", transport:"Transport &le;1.5km", supplies:"Daily supplies", location:"In target area", zoning:"Zoning (E1/E2/MU1)"};
@@ -497,7 +499,7 @@ function openDrawer(k){
     <span id="noteSaved" class="ml-2 text-xs text-emerald-600"></span>
 
     <h3 class="mt-5 font-semibold text-sm">Market status</h3>
-    ${GONE_FLAGS.includes(l.change_flag)?`<p class="text-[11px] text-slate-500 mt-1">Marked <b>${(l.change_flag||'').replace(/_/g,' ')}</b>${l.departed_on?(' on '+l.departed_on):''}${l.status_source?(' &middot; via '+l.status_source):''}${l.status_basis?(' &middot; '+l.status_basis):''}.</p>`:`<p class="text-[11px] text-slate-500 mt-1">On market. If this has sold or gone under offer, mark it here (or click the bookmarklet on the listing page &mdash; it reads the banner automatically).</p>`}
+    ${GONE_FLAGS.includes(l.change_flag)?`<p class="text-[11px] text-slate-500 mt-1">Marked <b>${(l.change_flag||'').replace(/_/g,' ')}</b>${l.departed_on?(' on '+l.departed_on):''}${l.status_source?(' &middot; via '+l.status_source):''}${l.status_basis?(' &middot; '+l.status_basis):''}.</p>`:`<p class="text-[11px] text-slate-500 mt-1">On market. Each sweep re-reads the listing page: once it is sold or no longer listed it is removed from the dashboard automatically. Marking Sold or Withdrawn here removes it at once (kept in data/removed.json).</p>`}
     <div class="flex gap-2 mt-2 items-center">
       <select id="marketFlag" class="border rounded px-2 py-1 text-sm">
         <option value="ON_MARKET" ${!GONE_FLAGS.includes(l.change_flag)?'selected':''}>On market</option>
@@ -533,6 +535,7 @@ async function setMarketStatus(l){
     msg.textContent="Needs the local server — run python scripts/serve.py and open http://localhost:8777/.";
     return;
   }
+  if((flag==="SOLD"||flag==="WITHDRAWN") && !confirm("Mark "+((l.address||"this listing")+(l.suburb?(", "+l.suburb):""))+" as "+flag.toLowerCase()+"? It will be removed from the dashboard (archived in data/removed.json).")) return;
   msg.textContent="Saving…";
   try{
     const r=await fetch("/api/set-market-status",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key:key(l),flag})});
@@ -670,6 +673,7 @@ document.getElementById("refreshBtn").addEventListener("click",async()=>{
         let msg = `rescored ${j.rescored}`;
         if(j.new_from_email > 0) msg += `, ${j.new_from_email} new from email`;
         if(j.departures_applied > 0) msg += `, ${j.departures_applied} flagged sold/under offer`;
+        if(j.removed > 0) msg += `, ${j.removed} sold/no longer listed removed`;
         if(j.newly_geocoded > 0) msg += `, ${j.newly_geocoded} geocoded`;
         msg += ` (${j.tier1_pass} T1 pass)`;
         st.textContent = msg;

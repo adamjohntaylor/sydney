@@ -57,3 +57,7 @@ Files: `manifest.json` (MV3), `content.js` (page reader), `background.js`
 (Verify run + posting), `dashboard-bridge.js` (lets Refresh start a run),
 `popup.html/js` (button + log). After editing any of them: `chrome://extensions`
 → reload arrow on the extension; the Version there confirms the reload.
+
+**Since 22 Nov 2026 (v1.5):** a listing reported sold or withdrawn is removed from the dashboard
+altogether (archived in `data/removed.json`); under-offer records are re-read each run and are never
+revived by a search count alone. See `CHANGELOG.md`, 22 November 2026.

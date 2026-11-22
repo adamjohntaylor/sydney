@@ -246,6 +246,17 @@ tab, with `departed_on` / `status_source` / `status_basis` provenance):
    without hammering the portals; `verification_pending` in the Refresh result
    shows how much remains.
 
+**Removal rule (22 Nov 2026).** A listing found sold or no longer listed (the
+for-sale search answers "No exact matches", the page is dead, or it reads Sold)
+is taken **off the dashboard altogether**: `sweep.retire_departed` moves `SOLD`
+/ `WITHDRAWN` records from `listings.json` to `data/removed.json` at every
+write. `UNDER_OFFER` stays and is re-read each sweep. Every sweep re-reads every
+tracked listing (re-check window 2 days). A removed listing is not re-added by a
+re-served alert email (blocked 30 days if sold, 7 if withdrawn; permanently for
+the same listing id). To see or undo: `python scripts/sweep.py --list-removed`
+/ `--restore "<url or address fragment>"`. The dashboard's departed tab is now
+"Under offer" only.
+
 Rules of the state machine: SOLD is terminal (an under-offer email or page read
 never downgrades it); a stale re-read alert email never resurrects a departed
 listing (the 3-day IMAP window re-serves pre-sale alerts); only an explicit

@@ -7,6 +7,55 @@ of how the code got to its current shape.
 
 ---
 
+## 22 November 2026 — Sold / no-longer-listed stock removed from the dashboard altogether
+
+**Instruction (Adam):** on each sweep, check every listing online; if it is no
+longer there (e.g. the portal's address search answers "No exact matches"), take
+it off the dashboard altogether rather than parking it in a departed tab.
+
+**What changed.**
+- `scripts/sweep.py` — `retire_departed(listings, today)` moves every `SOLD` /
+  `WITHDRAWN` record out of `listings.json` into the archive
+  `data/removed.json` (full record + `removed_on` / `removed_as`); nothing is
+  dropped if the archive cannot be written. Called at every write of
+  `listings.json`: `sweep.py` main, and in `serve.py` `/api/refresh` (step 9d),
+  `/api/apply-status` (the extension Verify run), `/api/verify-status`,
+  `/api/enrich-listing` (bookmarklet), `/api/set-market-status` (drawer) and
+  the start-up notes/re-score pass; also the `gmail_fetch.py` and
+  `status_probe.py` CLIs. `UNDER_OFFER` is **not** removed (still on the
+  portal; deals fall through).
+- Tombstones: `merge_incremental` (and `gmail_fetch.merge_new_listings`) drop
+  an incoming alert record that matches an archived one — always when the
+  numeric listing id is the same, otherwise for 30 days (sold) / 7 days
+  (withdrawn) after removal — so a re-served alert cannot re-add it. After the
+  window a fresh alert for the address enters as NEW; a bookmarklet click on a
+  live page re-adds at once.
+- Every sweep now re-reads every tracked listing: `DEFAULT_RECHECK_DAYS` 7 → 2,
+  and `build_status_worklist` now includes `UNDER_OFFER` records (flagged
+  `under_offer`) so one that goes on to sell is found and removed.
+  `extension/background.js` (manifest 1.5): an under-offer record is never
+  revived by a for-sale search count alone — only its own listing page can say
+  on market / sold; the run log reports how many listings were removed.
+- `index.html` — the departed tab is now "Under offer"; marking Sold or
+  Withdrawn in the drawer asks for confirmation and removes the card; Refresh
+  status reports `N sold/no longer listed removed`. `render.py` — `07` lists
+  under-offer stock only and states the removal rule.
+- Recovery: `python scripts/sweep.py --list-removed`, and
+  `python scripts/sweep.py --restore "<url or part of address, suburb>"`.
+  Notes in `notes.json` are left in place, so a restored listing regains them.
+
+**Data.** One-off purge the same day: 484 records → 216 on the dashboard (205
+active, 11 under offer); 268 archived (194 sold, 74 withdrawn), of which 17
+carried a status of Adam's (10 interested, 4 rejected, 3 sold-without-us).
+Test: `scripts/tests/test_retire.py`; `/api/apply-status` and
+`/api/set-market-status` round-tripped against a copy.
+
+**To apply:** restart `serve.py`; reload the unpacked extension at
+chrome://extensions (1.4 → 1.5). The next Refresh queues 212 pages for Verify
+(most were last read on 24 Oct).
+
+---
+
 ## 24 October 2026 — Price guides overwritten by repayment / outgoings figures
 
 **Problem (Adam):** 120/102 Miller St (Pyrmont) showed **$6,228** and 1101/89 Bay

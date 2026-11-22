@@ -93,8 +93,8 @@ def render(data):
     L.append(f"**This sweep:** {c.get('total', len(listings))} active listings; "
              f"{len(passing)} pass all determinable Tier 1 criteria; "
              f"{c.get('new', 0)} new, {c.get('price_changed', 0)} price-changed. "
-             f"Departed from the watchlist: {c.get('sold', 0)} sold, "
-             f"{c.get('under_offer', 0)} under offer, {c.get('withdrawn', 0)} withdrawn. "
+             f"{c.get('under_offer', 0)} under offer. Sold and no-longer-listed "
+             f"properties are removed at each sweep (archive: dashboard/data/removed.json). "
              f"{len(rejected)} listing(s) marked rejected are omitted from all lists below.")
     L.append("")
 
@@ -145,7 +145,7 @@ def render(data):
 
     if departed:
         departed.sort(key=lambda l: l.get("departed_on") or "", reverse=True)
-        L.append("## Departed from the watchlist (sold / under offer / withdrawn)")
+        L.append("## Under offer")
         L.append("")
         for l in departed[:30]:
             flag = (l.get("change_flag") or "").replace("_", " ").lower()

@@ -452,6 +452,13 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 if price and "auction" in price and not any(c.isdigit() for c in price):
                     l["price_guide_text"] = "Auction - No price guide offered"
 
+            # Step 9d: Sold / no-longer-listed stock comes off the dashboard
+            # altogether (archived to data/removed.json; see sweep.retire_departed).
+            all_listings, retired = sweep_mod.retire_departed(all_listings, today)
+            if retired:
+                print(f"Step 9d: Removed {len(retired)} sold / no-longer-listed listing(s)",
+                      file=sys.stderr, flush=True)
+
             # Step 10: Build output data
             print("Step 10: Building output...", file=sys.stderr, flush=True)
             out = {
@@ -514,6 +521,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "zoning_failed": zoning_fails,
                 "departures_applied": departures_applied,
                 "status_checks_applied": status_changed,
+                "removed": len(retired),
                 "status_probe": probe_summary,
                 "verification_pending": len(sweep_mod.build_status_worklist(
                     all_listings, today, cap=0)),
@@ -761,6 +769,12 @@ this page and re-drag the button (the code is baked into the link, so it does no
             for l in listings:
                 score_mod.score_listing(l, amenities)
 
+            # A page that read Sold / no longer available takes the listing off
+            # the dashboard (archived to data/removed.json).
+            listings, retired = sweep_mod.retire_departed(
+                listings, sweep_mod.now_sydney().date().isoformat())
+            data["listings"] = listings
+
             # Recompute header counts; preserve the last-sweep metadata
             # (enrichment is not a new sweep, so generated_at_* stay as-is).
             data["counts"] = sweep_mod.build_counts(listings)
@@ -795,6 +809,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 "matched": f"{target.get('address')}, {target.get('suburb')}",
                 "market_flag": target.get("change_flag"),
                 "market_status_changed": market_status_changed,
+                "removed_from_dashboard": any(r is target for r in retired),
                 "enriched": list(item.keys()),
                 "rescored": len(listings),
                 "tier1_pass": bool(after_t1.get("pass")),
@@ -991,6 +1006,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
                 f"verify-status {today}: {res['probed']} probed, {res['changed']} change(s), "
                 f"verdicts {res['verdicts']}",
                 syd.strftime("%Y%m%dT%H%M"))
+            listings, retired = sweep_mod.retire_departed(listings, today)
+            data["listings"] = listings
             data["counts"] = sweep_mod.build_counts(listings)
             data["generated_at"] = syd.astimezone(dt.timezone.utc).isoformat()
             data["generated_at_sydney"] = syd.strftime("%Y-%m-%d %H:%M %Z (Sydney)")
@@ -1012,6 +1029,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
             remaining = len(sweep_mod.build_status_worklist(listings, today, cap=0))
             return self._json(200, {"ok": True, "probed": res["probed"], "changed": res["changed"],
                                     "verdicts": res["verdicts"], "details": res["details"],
+                                    "removed": len(retired),
                                     "verification_pending": remaining, "counts": data["counts"],
                                     "snapshot": snap_name, "pushed": push_ok,
                                     "push_message": push_msg})
@@ -1064,6 +1082,10 @@ this page and re-drag the button (the code is baked into the link, so it does no
             with open(audit + ".applied", "w", encoding="utf-8") as f:
                 f.write(f"applied {today}; {changed} flag change(s)\n")
 
+            # Sold / no-longer-listed ("No exact matches", dead page) => off the
+            # dashboard altogether, archived to data/removed.json.
+            listings, retired = sweep_mod.retire_departed(listings, today)
+            data["listings"] = listings
             data["counts"] = sweep_mod.build_counts(listings)
             data["generated_at"] = syd.astimezone(dt.timezone.utc).isoformat()
             data["generated_at_sydney"] = syd.strftime("%Y-%m-%d %H:%M %Z (Sydney)")
@@ -1083,6 +1105,10 @@ this page and re-drag the button (the code is baked into the link, so it does no
             if changed:
                 push_ok, push_msg = self._commit_and_push()
             return self._json(200, {"ok": True, "checks": len(checks), "changed": changed,
+                                    "removed": len(retired),
+                                    "removed_listings": [
+                                        f"{r.get('address') or '?'}, {r.get('suburb') or ''} "
+                                        f"({r.get('change_flag')})" for r in retired],
                                     "details": details, "counts": data["counts"],
                                     "snapshot": snap_name, "pushed": push_ok,
                                     "push_message": push_msg})
@@ -1127,6 +1153,9 @@ this page and re-drag the button (the code is baked into the link, so it does no
             target["status_source"] = "manual"
             target.pop("status_basis", None)
 
+            # Marked Sold / Withdrawn by hand: off the dashboard, into the archive.
+            listings, retired = sweep_mod.retire_departed(listings, today)
+            data["listings"] = listings
             data["counts"] = sweep_mod.build_counts(listings)
             with open(LISTINGS_PATH, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
@@ -1141,6 +1170,7 @@ this page and re-drag the button (the code is baked into the link, so it does no
             return self._json(200, {
                 "ok": True,
                 "flag": target.get("change_flag"),
+                "removed_from_dashboard": bool(retired),
                 "counts": data["counts"],
                 "pushed": push_ok,
                 "push_message": push_msg,
@@ -1159,6 +1189,8 @@ this page and re-drag the button (the code is baked into the link, so it does no
         listings = data.get("listings", [])
         # Flush empty placeholder shells (no address / price / beds).
         listings = [l for l in listings if not sweep_mod.is_empty_listing(l)]
+        listings, _retired = sweep_mod.retire_departed(
+            listings, sweep_mod.now_sydney().date().isoformat())
         data["listings"] = listings
         # Carry FIRST so the accessibility override feeds scoring.
         sweep_mod.carry_notes(listings, NOTES_PATH)

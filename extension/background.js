@@ -119,7 +119,13 @@ async function verifyEntry(w) {
       // Open it once when the record has never had its area, outgoings or
       // cover photo read.
       const direct = c.resolved_url || w.resolved_url;
-      if ((w.needs_area || w.needs_outgoings || w.needs_image) && direct) {
+      // A record held as UNDER OFFER still shows in for-sale results, so the
+      // count alone must not revive it: only its own listing page can say
+      // "on market" again (or "sold", which removes it from the dashboard).
+      const keepUnderOffer = (why) => ({ ...c, listing_status: "under_offer",
+        status_basis: c.status_basis + "; under offer on record, " + why });
+      if (w.under_offer && !direct) return keepUnderOffer("no listing page to re-read");
+      if ((w.needs_area || w.needs_outgoings || w.needs_image || w.under_offer) && direct) {
         await sleep(DELAY_MS);
         const d = await openAndRead(direct);
         const facts = {};
@@ -131,6 +137,8 @@ async function verifyEntry(w) {
           // The direct page knows better than the search count.
           return { ...c, ...facts, listing_status: d.listing_status, status_basis: d.status_basis, sold_date: d.sold_date, resolved_url: direct };
         }
+        if (w.under_offer && !(d.kind === "listing" && d.listing_status === "on_market"))
+          return { ...keepUnderOffer("listing page gave no clear status"), ...facts, resolved_url: direct };
         return { ...c, ...facts, listing_status: "on_market", resolved_url: direct,
                  status_basis: c.status_basis + (facts.internal_m2 ? `; listing page: ${facts.internal_m2} m² internal` : "; listing page read for area: " + (facts.area_basis || "no report")) };
       }
@@ -177,6 +185,7 @@ async function runVerify(cap, all) {
     setState({ total: work.length });
     log(`worklist: ${work.length} of ${wl.pending_total} pending`);
     const checks = [];
+    let removedTotal = 0;
     for (const w of work) {
       const c = await verifyEntry(w);
       checks.push(stripCheck(c));
@@ -185,12 +194,14 @@ async function runVerify(cap, all) {
       await sleep(DELAY_MS);
       if (checks.length % 20 === 0) {          // apply in batches so progress survives interruption
         const res = await postChecks(checks.splice(0, checks.length));
-        log(`applied batch: ${res.changed} change(s)${res.counts ? ` - sold ${res.counts.sold}, under offer ${res.counts.under_offer}, withdrawn ${res.counts.withdrawn}` : ""}`);
+        removedTotal += res.removed || 0;
+        log(`applied batch: ${res.changed} change(s), ${res.removed || 0} removed from dashboard (sold / no longer listed)`);
       }
     }
     let res = { changed: 0 };
     if (checks.length) res = await postChecks(checks);
-    log(`applied: ${res.changed} change(s)${res.counts ? ` - sold ${res.counts.sold}, under offer ${res.counts.under_offer}, withdrawn ${res.counts.withdrawn}, active ${res.counts.total}` : ""}`);
+    removedTotal += res.removed || 0;
+    log(`applied: ${res.changed} change(s); ${removedTotal} listing(s) removed from the dashboard this run (sold / no longer listed)${res.counts ? `; under offer ${res.counts.under_offer}, active ${res.counts.total}` : ""}`);
     setState({ result: res });
   } catch (e) {
     setState({ error: e.message });

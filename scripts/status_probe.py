@@ -350,6 +350,8 @@ def main(argv):
     note = (f"probe {today}: {res['probed']} probed, {res['changed']} flag change(s), "
             f"verdicts {res['verdicts']}")
     archive_checks(res["checks"], note, syd.strftime("%Y%m%dT%H%M"))
+    listings, _retired = sweep_mod.retire_departed(listings, today)
+    data["listings"] = listings
     data["counts"] = sweep_mod.build_counts(listings)
     with open(args.listings, "w", encoding="utf-8") as fh:
         json.dump(data, fh, indent=2, ensure_ascii=False)
