@@ -6,8 +6,8 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 217,
-    "tier1_pass": 170,
+    "total": 216,
+    "tier1_pass": 169,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
@@ -25406,96 +25406,6 @@
       "status_basis": "chrome: Under Contract",
       "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=9%2f14+marlborough+street+drummoyne",
       "resolved_url": "https://www.domain.com.au/9-14-marlborough-street-drummoyne-nsw-2047-2021227565"
-    },
-    {
-      "address": "502/75-91 Macdonald Street",
-      "suburb": "Erskineville",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=502/75-91+macdonald+street+erskineville",
-      "source": "domain",
-      "price_guide_text": "$820,000",
-      "price_min": 820000,
-      "price_max": 820000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 223,
-          "supermarket": 411,
-          "pool": 1299,
-          "park": 68,
-          "restaurants": 62
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": true,
-        "accessibility": null,
-        "bedrooms": true,
-        "floor_area": true,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "accessibility"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 53,
-        "leading": "living-area scale",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 20.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-10-12",
-      "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
-      "lat": -33.9042504,
-      "lon": 151.1854778,
-      "status_checked_on": "2026-10-24",
-      "internal_m2": 179,
-      "area_basis": "page data: building/floor area",
-      "beds": 2,
-      "baths": 2,
-      "property_type": "apartment / unit / flat",
-      "area_checked_on": "2026-10-24",
-      "council_pq": 336.0,
-      "water_pq": 226.0,
-      "outgoings_source": "listing page: page data (embedded description)",
-      "outgoings_snippet": "Water $226pq, Council $336pq (All approx.)",
-      "outgoings_approx": true,
-      "outgoings_read_on": "2026-10-12",
-      "outgoings_pa": 2248,
-      "outgoings_known": [
-        "council",
-        "water"
-      ],
-      "outgoings_checked_on": "2026-10-24",
-      "resolved_url": "https://www.domain.com.au/502-75-91-macdonald-street-erskineville-nsw-2043-2021227420",
-      "flag_cleared_on": "2026-10-16",
-      "parking": 1,
-      "status": "interested",
-      "note": "",
-      "image_cleared_on": "2026-10-24",
-      "image_cleared_note": "generic Domain share-card image recorded as cover; re-read listing page",
-      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021227420_1_1_261009_043459-w1248-h832",
-      "image_basis": "og:image",
-      "image_checked_on": "2026-10-24"
     },
     {
       "address": "612/5 Joynton Avenue",
