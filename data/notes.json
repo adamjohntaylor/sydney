@@ -385,5 +385,19 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=50+portman+street+zetland": {
+    "status": "rejected",
+    "note": "",
+    "updated": "2026-11-22T03:30:46.136Z"
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=18%2F80+victoria+road+marrickville": {
+    "status": "",
+    "note": "",
+    "updated": "2026-11-22T03:32:23.149Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }

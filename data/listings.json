@@ -7,7 +7,7 @@
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
     "total": 136,
-    "tier1_pass": 97,
+    "tier1_pass": 96,
     "new": 0,
     "price_changed": 7,
     "sold": 0,
@@ -505,7 +505,7 @@
       "price_max": 1200000,
       "internal_m2": 102,
       "land_m2": 102,
-      "area_basis": "page data: building/floor area; page data: land area",
+      "area_basis": "manual: floor plan / agent (drawer)",
       "area_checked_on": "2026-11-22",
       "status": "",
       "note": "",
@@ -10124,7 +10124,9 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021346263_1_1_261120_041650-w1920-h1280",
       "image_basis": "og:image",
       "image_checked_on": "2026-11-22",
-      "resolved_url": "https://www.domain.com.au/50-portman-street-zetland-nsw-2017-2021346263"
+      "resolved_url": "https://www.domain.com.au/50-portman-street-zetland-nsw-2017-2021346263",
+      "status": "rejected",
+      "note": ""
     },
     {
       "address": "18/80 Victoria Road",
@@ -10152,18 +10154,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 49,
@@ -10198,7 +10200,13 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021345773_1_1_261120_025037-w2048-h1365",
       "image_basis": "og:image",
       "image_checked_on": "2026-11-22",
-      "resolved_url": "https://www.domain.com.au/18-80-victoria-road-marrickville-nsw-2204-2021345773"
+      "resolved_url": "https://www.domain.com.au/18-80-victoria-road-marrickville-nsw-2204-2021345773",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "50 Dickson Street",
