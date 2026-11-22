@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T02:00:58.404412+00:00",
-  "generated_at_sydney": "2026-11-22 12:00 UTC+10:00 (Sydney)",
+  "generated_at": "2026-11-22T02:03:33.631312+00:00",
+  "generated_at_sydney": "2026-11-22 12:03 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 143,
-    "tier1_pass": 110,
+    "total": 138,
+    "tier1_pass": 102,
     "new": 0,
     "price_changed": 7,
     "sold": 0,
@@ -8991,197 +8991,6 @@
       "resolved_url": "https://www.domain.com.au/204-227-victoria-road-drummoyne-nsw-2047-2021179666"
     },
     {
-      "address": "10/17 Joynton Avenue",
-      "suburb": "Zetland",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2F17+joynton+avenue+zetland",
-      "source": "domain_search",
-      "price_guide_text": "$1,299,000",
-      "price_min": 1299000,
-      "price_max": 1299000,
-      "lat": -33.903993,
-      "lon": 151.2084868,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 55,
-          "supermarket": 172,
-          "pool": 564,
-          "park": 146,
-          "restaurants": 84
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
-      "flag_cleared_on": "2026-11-22"
-    },
-    {
-      "address": "12A/26-30 Epsom Road",
-      "suburb": "Zetland",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12a%2F26-30+epsom+road+zetland",
-      "source": "domain_search",
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 92,
-          "supermarket": 242,
-          "pool": 389,
-          "park": 247,
-          "restaurants": 92
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
-      "lat": -33.9101229,
-      "lon": 151.2036803,
-      "flag_cleared_on": "2026-11-22"
-    },
-    {
-      "address": "96 Belmont Street",
-      "suburb": "Alexandria",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=96+belmont+street+alexandria",
-      "source": "domain_search",
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 52,
-          "supermarket": 149,
-          "pool": 506,
-          "park": 213,
-          "restaurants": 92
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
-      "lat": -33.9014966,
-      "lon": 151.1940646,
-      "flag_cleared_on": "2026-11-22"
-    },
-    {
       "address": "207/52 Alice Street",
       "suburb": "Newtown",
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=207%2F52+alice+street+newtown",
@@ -9206,9 +9015,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9216,9 +9025,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9240,11 +9047,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.9041211,
       "lon": 151.1772769,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 115,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021343589_1_1_261119_053703-w3839-h2561",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/207-52-alice-street-newtown-nsw-2042-2021343589"
     },
     {
       "address": "10/90 Cambridge Street",
@@ -9271,29 +9090,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
         "score": 41,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 7.9,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -9305,11 +9123,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.8958486,
       "lon": 151.1660777,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 91,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021343554_1_1_261119_053426-w2048-h1365",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/10-90-cambridge-street-stanmore-nsw-2048-2021343554"
     },
     {
       "address": "528/10 Grandstand Parade",
@@ -9336,29 +9166,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 40,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 6.6,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -9370,11 +9199,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.9077972,
       "lon": 151.2089384,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 76,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021343241_1_1_261119_045308-w1807-h1200",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/528-10-grandstand-parade-zetland-nsw-2017-2021343241"
     },
     {
       "address": "163 Booth Street",
@@ -9401,9 +9242,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9411,9 +9252,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9435,11 +9274,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.8802419,
       "lon": 151.1677956,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021342470_1_1_261119_103056-w4294-h3091",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/163-booth-street-annandale-nsw-2038-2021342470"
     },
     {
       "address": "45 Despointes Street",
@@ -9466,9 +9315,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9476,9 +9325,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9500,11 +9347,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.9081919,
       "lon": 151.1570847,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 181,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021342394_1_1_261119_023812-w2560-h1708",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/45-despointes-street-marrickville-nsw-2204-2021342394"
     },
     {
       "address": "5/480 Illawarra Road",
@@ -9531,29 +9390,28 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": false,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
+        "fails": [
           "floor_area"
         ],
-        "pass": true
+        "unverified": [
+          "accessibility"
+        ],
+        "pass": false
       },
       "tier2": {
-        "score": 41,
+        "score": 39,
         "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 5.8,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -9565,11 +9423,30 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.9180274,
       "lon": 151.146563,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 67,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_unstated": {
+        "strata": 1084.0
+      },
+      "outgoings_source": "listing page: visible description",
+      "outgoings_snippet": "Levy: $1084pqCouncil: $410pqWat",
+      "outgoings_approx": false,
+      "outgoings_read_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021341428_1_1_261119_123724-w900-h600",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/5-480-illawarra-road-marrickville-nsw-2204-2021341428"
     },
     {
       "address": "21 Rofe Street",
@@ -9596,9 +9473,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9606,9 +9483,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9630,11 +9505,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.8872646,
       "lon": 151.1552333,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "beds": 2,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021341135_1_1_261118_113657-w2000-h1333",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/21-rofe-street-leichhardt-nsw-2040-2021341135"
     },
     {
       "address": "136/8 Fuse Street",
@@ -9661,29 +9546,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -9695,11 +9577,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.910345,
       "lon": 151.2087509,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 203,
+      "area_basis": "page data: building/floor area",
+      "beds": 3,
+      "baths": 3,
+      "property_type": "townhouse",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021340535_1_1_261118_095046-w1536-h1024",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/136-8-fuse-street-zetland-nsw-2017-2021340535"
     },
     {
       "address": "168 Marrickville Road",
@@ -9726,29 +9620,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 50,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 16.5,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -9760,11 +9651,24 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.9128039,
       "lon": 151.1605637,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 119,
+      "land_m2": 209,
+      "area_basis": "page data: building/floor area; page data: land area",
+      "beds": 3,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021334454_2_1_261117_034305-w6048-h4032",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/168-marrickville-road-marrickville-nsw-2204-2021334454"
     },
     {
       "address": "73 Young Street",
@@ -9791,9 +9695,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9801,9 +9705,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9825,11 +9727,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.8856498,
       "lon": 151.1661877,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 145,
+      "area_basis": "page data: land area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021304844_1_1_261105_050118-w4800-h3469",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/73-young-street-annandale-nsw-2038-2021304844"
     },
     {
       "address": "8/10 Gow Street",
@@ -9856,9 +9770,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9866,9 +9780,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9890,11 +9802,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.85291240000001,
       "lon": 151.1755607,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "apartment / unit / flat",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2020655289_1_1_260304_074717-w4252-h2835",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/8-10-gow-street-balmain-nsw-2041-2020655289"
     },
     {
       "address": "86A Chelmsford Street",
@@ -9921,9 +9843,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -9931,9 +9853,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -9955,11 +9875,34 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.8954976,
       "lon": 151.1757356,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "land_m2": 150,
+      "area_basis": "page data: land area",
+      "beds": 3,
+      "baths": 2,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "council_pq": 523.0,
+      "water_pq": 352.0,
+      "outgoings_source": "listing page: page data (embedded description)",
+      "outgoings_snippet": "Water Rates - $352.00 per quarter approx Council Rates - $523.00 per quarter approx",
+      "outgoings_approx": true,
+      "outgoings_read_on": "2026-11-22",
+      "outgoings_pa": 3500,
+      "outgoings_known": [
+        "council",
+        "water"
+      ],
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021172066_3_1_261001_035540-w900-h600",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/86a-chelmsford-street-newtown-nsw-2042-2021172066"
     },
     {
       "address": "404/1 Missenden Road",
@@ -10020,139 +9963,13 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "lat": -33.8864806,
       "lon": 151.1788573,
-      "flag_cleared_on": "2026-11-22"
-    },
-    {
-      "address": "35B Foucart Street",
-      "suburb": "Rozelle",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=35b+foucart+street+rozelle",
-      "source": "domain_search",
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 340,
-          "supermarket": 483,
-          "pool": 883,
-          "park": 190,
-          "restaurants": 333
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": null,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "budget",
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
-      "lat": -33.8688538,
-      "lon": 151.1683929,
-      "flag_cleared_on": "2026-11-22"
-    },
-    {
-      "address": "8/1-5 Myra Road",
-      "suburb": "Dulwich Hill",
-      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F1-5+myra+road+dulwich+hill",
-      "source": "domain_search",
-      "price_guide_text": "$1,150,000",
-      "price_min": 1150000,
-      "price_max": 1150000,
-      "catchments": {
-        "transport": true,
-        "supermarket": true,
-        "pool": true,
-        "park": true,
-        "restaurants": true,
-        "nearest_m": {
-          "transport": 88,
-          "supermarket": 516,
-          "pool": 856,
-          "park": 212,
-          "restaurants": 293
-        },
-        "geocoded": true
-      },
-      "tier1": {
-        "budget": true,
-        "property_type": null,
-        "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
-        "transport": true,
-        "supplies": true,
-        "location": true,
-        "zoning": "n/a",
-        "fails": [],
-        "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
-        ],
-        "pass": true
-      },
-      "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
-        "components": {
-          "outlook": 3.0,
-          "living_area": 8.0,
-          "warehouse_character": 0,
-          "light_aspect": 3.3,
-          "pool": 9,
-          "parks": 9,
-          "restaurants": 9
-        },
-        "strata_penalty": 0.0,
-        "warehouse_character": false
-      },
-      "warehouse_character": false,
-      "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
-      "change_flag": "UNCHANGED",
-      "lat": -33.9066062,
-      "lon": 151.1362487,
-      "flag_cleared_on": "2026-11-22"
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/404-1-missenden-road-camperdown-nsw-2050-2021342737"
     },
     {
       "address": "5 Mary Street",
@@ -10179,9 +9996,9 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
+        "bedrooms": true,
         "floor_area": null,
         "transport": true,
         "supplies": true,
@@ -10189,9 +10006,7 @@
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
           "accessibility",
-          "bedrooms",
           "floor_area"
         ],
         "pass": true
@@ -10213,11 +10028,21 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.895918,
-      "lon": 151.1799609
+      "lon": 151.1799609,
+      "status_checked_on": "2026-11-22",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "house",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021346384_1_1_261120_043226-w2318-h1719",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/5-mary-street-newtown-nsw-2042-2021346384"
     },
     {
       "address": "50 Portman Street",
@@ -10244,29 +10069,26 @@
       },
       "tier1": {
         "budget": true,
-        "property_type": null,
+        "property_type": true,
         "accessibility": null,
-        "bedrooms": null,
-        "floor_area": null,
+        "bedrooms": true,
+        "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
         "unverified": [
-          "property_type",
-          "accessibility",
-          "bedrooms",
-          "floor_area"
+          "accessibility"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 41,
-        "leading": "pool within 1.5 km",
+        "score": 53,
+        "leading": "living-area scale",
         "components": {
           "outlook": 3.0,
-          "living_area": 8.0,
+          "living_area": 20.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
           "pool": 9,
@@ -10278,11 +10100,23 @@
       },
       "warehouse_character": false,
       "first_seen": "2026-11-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "change_flag": "UNCHANGED",
       "flag_cleared_on": "2026-11-22",
       "lat": -33.9057641,
-      "lon": 151.2056594
+      "lon": 151.2056594,
+      "status_checked_on": "2026-11-22",
+      "internal_m2": 156,
+      "area_basis": "page data: building/floor area",
+      "beds": 2,
+      "baths": 1,
+      "property_type": "terrace",
+      "area_checked_on": "2026-11-22",
+      "outgoings_checked_on": "2026-11-22",
+      "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021346263_1_1_261120_041650-w1920-h1280",
+      "image_basis": "og:image",
+      "image_checked_on": "2026-11-22",
+      "resolved_url": "https://www.domain.com.au/50-portman-street-zetland-nsw-2017-2021346263"
     },
     {
       "address": "18/80 Victoria Road",

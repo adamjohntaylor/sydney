@@ -1,7 +1,7 @@
 {
   "about": "Listings taken off the dashboard because a sweep found them sold or no longer listed. Archive + tombstones; never loaded by index.html. Restore one with: python scripts/sweep.py --restore \"<address or url>\"",
   "updated_on": "2026-11-22",
-  "count": 340,
+  "count": 345,
   "removed": [
     {
       "url": "https://www.domain.com.au/20-10-gow-street-balmain-nsw-2041-2020887935",
@@ -26368,6 +26368,363 @@
       "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2023-01-19, before first seen 2026-11-21)",
       "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=135%2f69+allen+street+leichhardt",
       "resolved_url": "https://www.domain.com.au/135-69-allen-street-leichhardt-nsw-2040-2018280334",
+      "removed_on": "2026-11-22",
+      "removed_as": "WITHDRAWN"
+    },
+    {
+      "address": "10/17 Joynton Avenue",
+      "suburb": "Zetland",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2F17+joynton+avenue+zetland",
+      "source": "domain_search",
+      "price_guide_text": "$1,299,000",
+      "price_min": 1299000,
+      "price_max": 1299000,
+      "lat": -33.903993,
+      "lon": 151.2084868,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 55,
+          "supermarket": 172,
+          "pool": 564,
+          "park": 146,
+          "restaurants": 84
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "floor_area": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "floor_area"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "change_flag": "WITHDRAWN",
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "departed_on": "2026-11-22",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=10%2f17+joynton+avenue+zetland",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "removed_on": "2026-11-22",
+      "removed_as": "WITHDRAWN"
+    },
+    {
+      "address": "12A/26-30 Epsom Road",
+      "suburb": "Zetland",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12a%2F26-30+epsom+road+zetland",
+      "source": "domain_search",
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 92,
+          "supermarket": 242,
+          "pool": 389,
+          "park": 247,
+          "restaurants": 92
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "floor_area": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "floor_area"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "change_flag": "WITHDRAWN",
+      "lat": -33.9101229,
+      "lon": 151.2036803,
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "departed_on": "2026-11-22",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=12a%2f26-30+epsom+road+zetland",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "removed_on": "2026-11-22",
+      "removed_as": "WITHDRAWN"
+    },
+    {
+      "address": "96 Belmont Street",
+      "suburb": "Alexandria",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=96+belmont+street+alexandria",
+      "source": "domain_search",
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 52,
+          "supermarket": 149,
+          "pool": 506,
+          "park": 213,
+          "restaurants": 92
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "floor_area": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "floor_area"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "change_flag": "WITHDRAWN",
+      "lat": -33.9014966,
+      "lon": 151.1940646,
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "departed_on": "2026-11-22",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; not in Domain sold results either",
+      "resolved_url": "https://www.domain.com.au/sale/sydney-nsw-2000/",
+      "removed_on": "2026-11-22",
+      "removed_as": "WITHDRAWN"
+    },
+    {
+      "address": "35B Foucart Street",
+      "suburb": "Rozelle",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=35b+foucart+street+rozelle",
+      "source": "domain_search",
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 340,
+          "supermarket": 483,
+          "pool": 883,
+          "park": 190,
+          "restaurants": 333
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "floor_area": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "floor_area"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "change_flag": "WITHDRAWN",
+      "lat": -33.8688538,
+      "lon": 151.1683929,
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "departed_on": "2026-11-22",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2024-06-19, before first seen 2026-11-21)",
+      "resolved_url": "https://www.domain.com.au/3-35b-foucart-street-rozelle-nsw-2039-2019275738",
+      "removed_on": "2026-11-22",
+      "removed_as": "WITHDRAWN"
+    },
+    {
+      "address": "8/1-5 Myra Road",
+      "suburb": "Dulwich Hill",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2F1-5+myra+road+dulwich+hill",
+      "source": "domain_search",
+      "price_guide_text": "$1,150,000",
+      "price_min": 1150000,
+      "price_max": 1150000,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 88,
+          "supermarket": 516,
+          "pool": 856,
+          "park": 212,
+          "restaurants": 293
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": true,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "floor_area": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "floor_area"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "change_flag": "WITHDRAWN",
+      "lat": -33.9066062,
+      "lon": 151.1362487,
+      "flag_cleared_on": "2026-11-22",
+      "status_checked_on": "2026-11-22",
+      "departed_on": "2026-11-22",
+      "status_source": "sweep_check",
+      "status_basis": "chrome: address no longer in Domain for-sale results; sold search shows only an older sale (2013-01-31, before first seen 2026-11-21)",
+      "sold_url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=8%2f1-5+myra+road+dulwich+hill",
+      "resolved_url": "https://www.domain.com.au/8-1-5-myra-road-dulwich-hill-nsw-2203-2010236179",
       "removed_on": "2026-11-22",
       "removed_as": "WITHDRAWN"
     }
