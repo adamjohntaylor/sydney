@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T06:10:21.947662+00:00",
-  "generated_at_sydney": "2026-11-21 16:10 UTC+10:00 (Sydney)",
+  "generated_at": "2026-11-22T00:05:13.769820+00:00",
+  "generated_at_sydney": "2026-11-22 10:05 UTC+10:00 (Sydney)",
   "sweep_provenance": "Refresh via local dashboard server (gmail + geocode + score).",
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 216,
-    "tier1_pass": 169,
+    "total": 217,
+    "tier1_pass": 170,
     "new": 41,
-    "price_changed": 5,
+    "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
     "withdrawn": 64
@@ -20059,15 +20059,15 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$995,000 - $1,095,000",
-      "flag_sweeps": 1,
-      "change_flag": "PRICE_CHANGED",
+      "change_flag": "UNCHANGED",
       "status": "interested",
       "days_on_market": 26,
       "note": "",
       "accessibility": {
         "step_free": false,
         "lift": null
-      }
+      },
+      "flag_cleared_on": "2026-11-22"
     },
     {
       "address": "50 Macdonald Street",
@@ -29389,7 +29389,7 @@
       "outgoings_read_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,600,000",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 36,
       "lat": -33.9012723,
@@ -29870,7 +29870,7 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$950,000",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 36
     },
@@ -30463,7 +30463,7 @@
       "area_checked_on": "2026-10-16",
       "outgoings_checked_on": "2026-10-16",
       "prior_price_text": "$1,400,000",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 36,
       "lat": -33.9060095,
@@ -31456,7 +31456,7 @@
       "outgoings_read_on": "2026-10-24",
       "outgoings_checked_on": "2026-10-24",
       "prior_price_text": "$2,200,000",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "change_flag": "PRICE_CHANGED",
       "days_on_market": 28,
       "lat": -33.8459006,
@@ -33827,8 +33827,7 @@
       "warehouse_character": false,
       "first_seen": "2026-10-25",
       "last_seen": "2026-10-25",
-      "change_flag": "NEW",
-      "flag_sweeps": 1,
+      "change_flag": "UNCHANGED",
       "status_checked_on": "2026-10-25",
       "land_m2": 114,
       "area_basis": "page data: land area",
@@ -33840,7 +33839,8 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021209032_1_1_261003_051350-w4961-h3307",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-25",
-      "resolved_url": "https://www.domain.com.au/9-8-10-rayner-street-lilyfield-nsw-2040-2021209032"
+      "resolved_url": "https://www.domain.com.au/9-8-10-rayner-street-lilyfield-nsw-2040-2021209032",
+      "flag_cleared_on": "2026-11-22"
     },
     {
       "address": "135/69 Allen Street",
@@ -33903,7 +33903,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "10 Bishopgate Street",
@@ -33968,7 +33968,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "71 Wells Street",
@@ -34031,7 +34031,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "9 Victoria Street",
@@ -34096,7 +34096,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "1906/8 Kingsborough Way",
@@ -34161,7 +34161,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "108 Lennox Street",
@@ -34226,7 +34226,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "33 Briggs Street",
@@ -34291,7 +34291,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "204/227 Victoria Road",
@@ -34356,7 +34356,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "10/17 Joynton Avenue",
@@ -34421,7 +34421,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "12A/26-30 Epsom Road",
@@ -34482,7 +34482,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9101229,
       "lon": 151.2036803
     },
@@ -34545,7 +34545,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9014966,
       "lon": 151.1940646
     },
@@ -34610,7 +34610,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9041211,
       "lon": 151.1772769
     },
@@ -34675,7 +34675,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8958486,
       "lon": 151.1660777
     },
@@ -34740,7 +34740,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9077972,
       "lon": 151.2089384
     },
@@ -34805,7 +34805,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.8802419,
       "lon": 151.1677956
     },
@@ -34870,7 +34870,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0,
+      "flag_sweeps": 1,
       "lat": -33.9081919,
       "lon": 151.1570847
     },
@@ -34883,13 +34883,19 @@
       "price_min": 1500000,
       "price_max": 1500000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 79,
+          "supermarket": 387,
+          "pool": 973,
+          "park": 63,
+          "restaurants": 222
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -34897,8 +34903,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -34906,23 +34912,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -34931,7 +34935,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.9180274,
+      "lon": 151.146563
     },
     {
       "address": "21 Rofe Street",
@@ -34942,13 +34948,19 @@
       "price_min": 1400000,
       "price_max": 1400000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 145,
+          "supermarket": 301,
+          "pool": 601,
+          "park": 267,
+          "restaurants": 166
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -34956,8 +34968,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -34965,23 +34977,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -34990,7 +35000,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8872646,
+      "lon": 151.1552333
     },
     {
       "address": "136/8 Fuse Street",
@@ -35001,13 +35013,19 @@
       "price_min": 830000,
       "price_max": 870000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 166,
+          "supermarket": 255,
+          "pool": 177,
+          "park": 253,
+          "restaurants": 195
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -35015,8 +35033,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35024,23 +35042,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35049,7 +35065,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.910345,
+      "lon": 151.2087509
     },
     {
       "address": "168 Marrickville Road",
@@ -35060,13 +35078,19 @@
       "price_min": 1700000,
       "price_max": 1700000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 20,
+          "supermarket": 91,
+          "pool": 764,
+          "park": 251,
+          "restaurants": 64
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -35074,8 +35098,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35083,23 +35107,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35108,7 +35130,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.9128039,
+      "lon": 151.1605637
     },
     {
       "address": "73 Young Street",
@@ -35119,13 +35143,19 @@
       "price_min": 1700000,
       "price_max": 1700000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 262,
+          "supermarket": 671,
+          "pool": 1169,
+          "park": 273,
+          "restaurants": 244
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -35133,8 +35163,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35142,23 +35172,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35167,7 +35195,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8856498,
+      "lon": 151.1661877
     },
     {
       "address": "8/10 Gow Street",
@@ -35178,13 +35208,19 @@
       "price_min": 1700000,
       "price_max": 1700000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 332,
+          "supermarket": 476,
+          "pool": 129,
+          "park": 203,
+          "restaurants": 479
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -35192,8 +35228,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35201,23 +35237,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35226,7 +35260,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.85291240000001,
+      "lon": 151.1755607
     },
     {
       "address": "86A Chelmsford Street",
@@ -35237,13 +35273,19 @@
       "price_min": 1300000,
       "price_max": 1400000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 341,
+          "supermarket": 17,
+          "pool": 979,
+          "park": 156,
+          "restaurants": 265
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -35251,8 +35293,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35260,23 +35302,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35285,7 +35325,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8954976,
+      "lon": 151.1757356
     },
     {
       "address": "404/1 Missenden Road",
@@ -35296,13 +35338,19 @@
       "price_min": 750000,
       "price_max": 750000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 34,
+          "supermarket": 158,
+          "pool": 53,
+          "park": 58,
+          "restaurants": 51
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -35310,8 +35358,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35319,23 +35367,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35344,7 +35390,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8864806,
+      "lon": 151.1788573
     },
     {
       "address": "35B Foucart Street",
@@ -35352,13 +35400,19 @@
       "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=35b+foucart+street+rozelle",
       "source": "domain_search",
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 340,
+          "supermarket": 483,
+          "pool": 883,
+          "park": 190,
+          "restaurants": 333
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": null,
@@ -35366,8 +35420,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35376,23 +35430,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35401,7 +35453,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.8688538,
+      "lon": 151.1683929
     },
     {
       "address": "8/1-5 Myra Road",
@@ -35412,13 +35466,19 @@
       "price_min": 1150000,
       "price_max": 1150000,
       "catchments": {
-        "transport": null,
-        "supermarket": null,
-        "pool": null,
-        "park": null,
-        "restaurants": null,
-        "nearest_m": {},
-        "geocoded": false
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 88,
+          "supermarket": 516,
+          "pool": 856,
+          "park": 212,
+          "restaurants": 293
+        },
+        "geocoded": true
       },
       "tier1": {
         "budget": true,
@@ -35426,8 +35486,8 @@
         "accessibility": null,
         "bedrooms": null,
         "floor_area": null,
-        "transport": null,
-        "supplies": null,
+        "transport": true,
+        "supplies": true,
         "location": true,
         "zoning": "n/a",
         "fails": [],
@@ -35435,23 +35495,21 @@
           "property_type",
           "accessibility",
           "bedrooms",
-          "floor_area",
-          "transport",
-          "supplies"
+          "floor_area"
         ],
         "pass": true
       },
       "tier2": {
-        "score": 14,
-        "leading": "living-area scale",
+        "score": 41,
+        "leading": "pool within 1.5 km",
         "components": {
           "outlook": 3.0,
           "living_area": 8.0,
           "warehouse_character": 0,
           "light_aspect": 3.3,
-          "pool": 0,
-          "parks": 0,
-          "restaurants": 0
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
         },
         "strata_penalty": 0.0,
         "warehouse_character": false
@@ -35460,7 +35518,9 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1,
+      "lat": -33.9066062,
+      "lon": 151.1362487
     },
     {
       "address": "5 Mary Street",
@@ -35519,7 +35579,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "50 Portman Street",
@@ -35578,7 +35638,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "18/80 Victoria Road",
@@ -35637,7 +35697,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "50 Dickson Street",
@@ -35696,7 +35756,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "406/68 McEvoy Street",
@@ -35755,7 +35815,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "266 Norton Street",
@@ -35814,7 +35874,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "5a Victoria Park Parade",
@@ -35873,7 +35933,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "302/34 Wentworth Street",
@@ -35932,7 +35992,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "43/7 Letitia Street",
@@ -35991,7 +36051,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "15 Perry Street",
@@ -36050,7 +36110,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "16 Durham Street",
@@ -36109,7 +36169,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "1308/20 Gadigal Avenue",
@@ -36168,7 +36228,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "11/40 Arthur Street",
@@ -36227,7 +36287,7 @@
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
       "change_flag": "NEW",
-      "flag_sweeps": 0
+      "flag_sweeps": 1
     },
     {
       "address": "106/180 Livingstone Road",
@@ -36285,6 +36345,69 @@
       "warehouse_character": false,
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-21",
+      "change_flag": "NEW",
+      "flag_sweeps": 1
+    },
+    {
+      "address": "39/1 Linthorpe Street",
+      "suburb": "Newtown",
+      "url": "https://www.domain.com.au/sale/?excludeunderoffer=1&street=39%2F1+linthorpe+street+newtown",
+      "source": "domain_search",
+      "lat": -33.8974998,
+      "lon": 151.1812344,
+      "catchments": {
+        "transport": true,
+        "supermarket": true,
+        "pool": true,
+        "park": true,
+        "restaurants": true,
+        "nearest_m": {
+          "transport": 150,
+          "supermarket": 129,
+          "pool": 1072,
+          "park": 89,
+          "restaurants": 69
+        },
+        "geocoded": true
+      },
+      "tier1": {
+        "budget": null,
+        "property_type": null,
+        "accessibility": null,
+        "bedrooms": null,
+        "floor_area": null,
+        "transport": true,
+        "supplies": true,
+        "location": true,
+        "zoning": "n/a",
+        "fails": [],
+        "unverified": [
+          "budget",
+          "property_type",
+          "accessibility",
+          "bedrooms",
+          "floor_area"
+        ],
+        "pass": true
+      },
+      "tier2": {
+        "score": 41,
+        "leading": "pool within 1.5 km",
+        "components": {
+          "outlook": 3.0,
+          "living_area": 8.0,
+          "warehouse_character": 0,
+          "light_aspect": 3.3,
+          "pool": 9,
+          "parks": 9,
+          "restaurants": 9
+        },
+        "strata_penalty": 0.0,
+        "warehouse_character": false
+      },
+      "warehouse_character": false,
+      "first_seen": "2026-11-22",
+      "last_seen": "2026-11-22",
       "change_flag": "NEW",
       "flag_sweeps": 0
     }
