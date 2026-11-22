@@ -358,5 +358,14 @@
       "step_free": false,
       "lift": null
     }
+  },
+  "https://www.domain.com.au/sale/?excludeunderoffer=1&street=19%2F20-34+wyndham+street+alexandria": {
+    "status": "",
+    "note": "",
+    "updated": "2026-11-22T00:09:10.325Z",
+    "accessibility": {
+      "step_free": false,
+      "lift": null
+    }
   }
 }

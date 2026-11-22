@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 215,
-    "tier1_pass": 168,
+    "total": 214,
+    "tier1_pass": 166,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 65
+    "withdrawn": 66
   },
   "listings": [
     {
@@ -20285,7 +20285,7 @@
       "warehouse_character": false,
       "first_seen": "2026-09-29",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 2,
       "lat": -33.9017459,
       "lon": 151.1953177,
@@ -20302,7 +20302,9 @@
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
       "status": "sold-without-us",
-      "note": ""
+      "note": "",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "207/110 Epsom Road",
@@ -30108,18 +30110,18 @@
       "tier1": {
         "budget": true,
         "property_type": true,
-        "accessibility": null,
+        "accessibility": false,
         "bedrooms": true,
         "floor_area": true,
         "transport": true,
         "supplies": true,
         "location": true,
         "zoning": "n/a",
-        "fails": [],
-        "unverified": [
+        "fails": [
           "accessibility"
         ],
-        "pass": true
+        "unverified": [],
+        "pass": false
       },
       "tier2": {
         "score": 52,
@@ -30154,7 +30156,13 @@
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021242865_1_1_261015_121203-w1920-h1280",
       "image_basis": "og:image",
       "image_checked_on": "2026-10-16",
-      "resolved_url": "https://www.domain.com.au/19-20-34-wyndham-street-alexandria-nsw-2015-2021242865"
+      "resolved_url": "https://www.domain.com.au/19-20-34-wyndham-street-alexandria-nsw-2015-2021242865",
+      "status": "",
+      "note": "",
+      "accessibility": {
+        "step_free": false,
+        "lift": null
+      }
     },
     {
       "address": "301/5 Joynton Avenue",
