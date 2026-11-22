@@ -6,13 +6,13 @@
   "budget_ceiling": 2200000,
   "target_area": "Inner West incl. Drummoyne north of Victoria Rd (decision #15).",
   "counts": {
-    "total": 211,
-    "tier1_pass": 162,
+    "total": 210,
+    "tier1_pass": 161,
     "new": 41,
     "price_changed": 4,
     "sold": 194,
     "under_offer": 11,
-    "withdrawn": 68
+    "withdrawn": 69
   },
   "listings": [
     {
@@ -16830,7 +16830,7 @@
       "warehouse_character": false,
       "first_seen": "2026-07-24",
       "last_seen": "2026-10-24",
-      "change_flag": "UNCHANGED",
+      "change_flag": "WITHDRAWN",
       "days_on_market": 1,
       "lat": -33.900443,
       "lon": 151.1701393,
@@ -16843,7 +16843,9 @@
       "outgoings_checked_on": "2026-10-16",
       "cover_image": "https://bucket-api.domain.com.au/v1/bucket/image/2021017281_2_1_260917_093727-w1920-h1280",
       "image_basis": "og:image",
-      "image_checked_on": "2026-10-16"
+      "image_checked_on": "2026-10-16",
+      "departed_on": "2026-11-22",
+      "status_source": "manual"
     },
     {
       "address": "29 Laura Street",
